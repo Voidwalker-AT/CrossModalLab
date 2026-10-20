@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crossmodal-lab"
+version = "0.1.0"
+description = "Mechanistic analysis of cross-modal relational reasoning and evidence insufficiency in vision-language transformers"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "CrossModalLab Contributors" }]
+keywords = ["vision-language", "mechanistic-interpretability", "reasoning"]
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# Portable core only: symbolic engine + controlled benchmark generation.
+# Deliberately excludes torch / bitsandbytes / CUDA wheels.
+# GPU/VLM dependencies: use requirements.lock (ULVO Mode A) or docs/DEPENDENCIES.md (Mode B).
+dependencies = [
+  "pillow==12.3.0",
+]
+
+[project.optional-dependencies]
+# Lightweight validation tools used by scripts/validate_artifact_schemas.py and dataset audits.
+dev = [
+  "jsonschema==4.26.0",
+  "psutil==7.2.2",
+]
+# Placeholder extra documenting GPU intent. Install torch via requirements.lock
+# or the official PyTorch index for your platform — do NOT pip install this extra
+# expecting a working CUDA stack (local version pins like torch==2.6.0+cu124
+# require https://download.pytorch.org/whl/cu124).
+gpu = [
+  "accelerate==1.15.0",
+  "bitsandbytes==0.50.2",
+  "huggingface_hub==2.2.0",
+  "safetensors==0.8.0",
+  "transformers==5.20.1",
+]
+
+[project.urls]
+Repository = "https://github.com/Voidwalker-AT/CrossModalLab"
+
+# Package layout matches runtime imports: `from src.symbolic import ...`
+# with the repository root on sys.path (scripts already do this).
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+# Editable installs are optional. For ULVO Mode A, prefer:
+#   ulvo run . -- python scripts/<script>.py
+# For Mode B symbolic CPU-only:
+#   python -m unittest discover -s tests
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

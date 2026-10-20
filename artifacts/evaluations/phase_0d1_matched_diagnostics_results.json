@@ -1,0 +1,968 @@
+{
+  "metadata": {
+    "timestamp": "2026-10-18T12:34:40Z",
+    "model_id": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+    "revision": "482adb537c021c86670beed01cd58990d01e72e4",
+    "quantization": "4-bit NF4 (bitsandbytes)",
+    "total_diagnostic_cases": 24,
+    "total_correct": 10,
+    "overall_accuracy": "10/24 (41.7%)"
+  },
+  "group_summary": {
+    "group_1_directional_duality": {
+      "total": 4,
+      "correct": 2,
+      "predictions": [
+        "Yes",
+        "No",
+        "No",
+        "Yes"
+      ]
+    },
+    "group_2_swap_controls": {
+      "total": 4,
+      "correct": 3,
+      "predictions": [
+        "Yes",
+        "Yes",
+        "Yes",
+        "No"
+      ]
+    },
+    "group_3_missing_evidence": {
+      "total": 4,
+      "correct": 1,
+      "predictions": [
+        "Yes",
+        "Yes",
+        "Yes",
+        "No"
+      ]
+    },
+    "group_4_crossmodal_triad": {
+      "total": 3,
+      "correct": 2,
+      "predictions": [
+        "Yes",
+        "No",
+        "No"
+      ]
+    },
+    "group_5_unimodal_controls": {
+      "total": 3,
+      "correct": 2,
+      "predictions": [
+        "Yes",
+        "Yes",
+        "Yes"
+      ]
+    },
+    "group_6_choice_order_spectrum": {
+      "total": 6,
+      "correct": 0,
+      "predictions": [
+        "No",
+        "No",
+        "No",
+        "No",
+        "No",
+        "No"
+      ]
+    }
+  },
+  "diagnostic_cases": [
+    {
+      "case_id": "case_01_left_direct_true",
+      "group": "group_1_directional_duality",
+      "description": "True left-of query on canonical image",
+      "ground_truth": "Yes",
+      "greedy_prediction": "Yes",
+      "completion_text": "Yes.",
+      "is_correct": true,
+      "image_hash": "dd55915c40014a2f",
+      "elapsed_sec": 55.726,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Yes",
+        "top_candidate_raw": "Yes",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.97867,
+          " No": 0.005911,
+          " Undetermined": 0.015419
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.993753,
+          " No": 0.006002,
+          " Undetermined": 0.000245
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.006373,
+          " No": -5.115788,
+          " Undetermined": -8.313883
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.006373,
+          " No": -5.115788,
+          " Undetermined": -4.156942
+        }
+      }
+    },
+    {
+      "case_id": "case_02_left_direct_false",
+      "group": "group_1_directional_duality",
+      "description": "False left-of query on canonical image",
+      "ground_truth": "No",
+      "greedy_prediction": "No",
+      "completion_text": "No.",
+      "is_correct": true,
+      "image_hash": "dd55915c40014a2f",
+      "elapsed_sec": 52.779,
+      "candidate_scores": {
+        "top_candidate_length_norm": "No",
+        "top_candidate_raw": "No",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.040007,
+          " No": 0.874274,
+          " Undetermined": 0.085719
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.04338,
+          " No": 0.947973,
+          " Undetermined": 0.008648
+        },
+        "raw_log_likelihoods": {
+          " Yes": -3.136712,
+          " No": -0.052379,
+          " Undetermined": -4.749406
+        },
+        "norm_log_likelihoods": {
+          " Yes": -3.136712,
+          " No": -0.052379,
+          " Undetermined": -2.374703
+        }
+      }
+    },
+    {
+      "case_id": "case_03_right_direct_true",
+      "group": "group_1_directional_duality",
+      "description": "Logically equivalent true right-of query on canonical image",
+      "ground_truth": "Yes",
+      "greedy_prediction": "No",
+      "completion_text": "No.",
+      "is_correct": false,
+      "image_hash": "dd55915c40014a2f",
+      "elapsed_sec": 47.932,
+      "candidate_scores": {
+        "top_candidate_length_norm": "No",
+        "top_candidate_raw": "No",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.0595,
+          " No": 0.846236,
+          " Undetermined": 0.094264
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.064995,
+          " No": 0.924399,
+          " Undetermined": 0.010606
+        },
+        "raw_log_likelihoods": {
+          " Yes": -2.733188,
+          " No": -0.078359,
+          " Undetermined": -4.546118
+        },
+        "norm_log_likelihoods": {
+          " Yes": -2.733188,
+          " No": -0.078359,
+          " Undetermined": -2.273059
+        }
+      }
+    },
+    {
+      "case_id": "case_04_right_direct_false",
+      "group": "group_1_directional_duality",
+      "description": "Logically equivalent false right-of query on canonical image",
+      "ground_truth": "No",
+      "greedy_prediction": "Yes",
+      "completion_text": "Yes.",
+      "is_correct": false,
+      "image_hash": "dd55915c40014a2f",
+      "elapsed_sec": 47.088,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Yes",
+        "top_candidate_raw": "Yes",
+        "length_rank_flip": false,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.707201,
+          " No": 0.230462,
+          " Undetermined": 0.062337
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.750917,
+          " No": 0.244708,
+          " Undetermined": 0.004375
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.28794,
+          " No": -1.409168,
+          " Undetermined": -5.433408
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.28794,
+          " No": -1.409168,
+          " Undetermined": -2.716704
+        }
+      }
+    },
+    {
+      "case_id": "case_05_position_original",
+      "group": "group_2_swap_controls",
+      "description": "Canonical image, baseline left query",
+      "ground_truth": "Yes",
+      "greedy_prediction": "Yes",
+      "completion_text": "Yes.",
+      "is_correct": true,
+      "image_hash": "dd55915c40014a2f",
+      "elapsed_sec": 47.449,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Yes",
+        "top_candidate_raw": "Yes",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.97867,
+          " No": 0.005911,
+          " Undetermined": 0.015419
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.993753,
+          " No": 0.006002,
+          " Undetermined": 0.000245
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.006373,
+          " No": -5.115788,
+          " Undetermined": -8.313883
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.006373,
+          " No": -5.115788,
+          " Undetermined": -4.156942
+        }
+      }
+    },
+    {
+      "case_id": "case_06_position_swapped",
+      "group": "group_2_swap_controls",
+      "description": "Visually swapped canvas, same prompt (evaluates visual sensitivity)",
+      "ground_truth": "No",
+      "greedy_prediction": "Yes",
+      "completion_text": "Yes.",
+      "is_correct": false,
+      "image_hash": "f91482ff8e97f6be",
+      "elapsed_sec": 47.365,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Yes",
+        "top_candidate_raw": "Yes",
+        "length_rank_flip": false,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.764641,
+          " No": 0.192705,
+          " Undetermined": 0.042653
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.797132,
+          " No": 0.200894,
+          " Undetermined": 0.001975
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.227989,
+          " No": -1.606233,
+          " Undetermined": -6.228574
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.227989,
+          " No": -1.606233,
+          " Undetermined": -3.114287
+        }
+      }
+    },
+    {
+      "case_id": "case_07_naming_original",
+      "group": "group_2_swap_controls",
+      "description": "Canonical image, baseline left query",
+      "ground_truth": "Yes",
+      "greedy_prediction": "Yes",
+      "completion_text": "Yes.",
+      "is_correct": true,
+      "image_hash": "dd55915c40014a2f",
+      "elapsed_sec": 47.961,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Yes",
+        "top_candidate_raw": "Yes",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.97867,
+          " No": 0.005911,
+          " Undetermined": 0.015419
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.993753,
+          " No": 0.006002,
+          " Undetermined": 0.000245
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.006373,
+          " No": -5.115788,
+          " Undetermined": -8.313883
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.006373,
+          " No": -5.115788,
+          " Undetermined": -4.156942
+        }
+      }
+    },
+    {
+      "case_id": "case_08_naming_reversed",
+      "group": "group_2_swap_controls",
+      "description": "Canonical image, naming inverted in prompt (evaluates linguistic sensitivity)",
+      "ground_truth": "No",
+      "greedy_prediction": "No",
+      "completion_text": "No.",
+      "is_correct": true,
+      "image_hash": "dd55915c40014a2f",
+      "elapsed_sec": 48.616,
+      "candidate_scores": {
+        "top_candidate_length_norm": "No",
+        "top_candidate_raw": "No",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.040007,
+          " No": 0.874274,
+          " Undetermined": 0.085719
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.04338,
+          " No": 0.947973,
+          " Undetermined": 0.008648
+        },
+        "raw_log_likelihoods": {
+          " Yes": -3.136712,
+          " No": -0.052379,
+          " Undetermined": -4.749406
+        },
+        "norm_log_likelihoods": {
+          " Yes": -3.136712,
+          " No": -0.052379,
+          " Undetermined": -2.374703
+        }
+      }
+    },
+    {
+      "case_id": "case_09_canonical_evidence_present",
+      "group": "group_3_missing_evidence",
+      "description": "Both objects present and observable",
+      "ground_truth": "Yes",
+      "greedy_prediction": "Yes",
+      "completion_text": "Yes.",
+      "is_correct": true,
+      "image_hash": "dd55915c40014a2f",
+      "elapsed_sec": 49.616,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Yes",
+        "top_candidate_raw": "Yes",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.97867,
+          " No": 0.005911,
+          " Undetermined": 0.015419
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.993753,
+          " No": 0.006002,
+          " Undetermined": 0.000245
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.006373,
+          " No": -5.115788,
+          " Undetermined": -8.313883
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.006373,
+          " No": -5.115788,
+          " Undetermined": -4.156942
+        }
+      }
+    },
+    {
+      "case_id": "case_10_blank_canvas",
+      "group": "group_3_missing_evidence",
+      "description": "Blank canvas (zero entities visible; task semantics: insufficient evidence)",
+      "ground_truth": "Undetermined",
+      "greedy_prediction": "Yes",
+      "completion_text": "Yes.",
+      "is_correct": false,
+      "image_hash": "2aece5ff65791e6f",
+      "elapsed_sec": 50.538,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Yes",
+        "top_candidate_raw": "Yes",
+        "length_rank_flip": false,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.517043,
+          " No": 0.282302,
+          " Undetermined": 0.200654
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.610757,
+          " No": 0.333469,
+          " Undetermined": 0.055774
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.500311,
+          " No": -1.105459,
+          " Undetermined": -2.893707
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.500311,
+          " No": -1.105459,
+          " Undetermined": -1.446854
+        }
+      }
+    },
+    {
+      "case_id": "case_11_missing_target_entity",
+      "group": "group_3_missing_evidence",
+      "description": "Target entity (green cylinder) ablated from scene",
+      "ground_truth": "Undetermined",
+      "greedy_prediction": "Yes",
+      "completion_text": "Yes.",
+      "is_correct": false,
+      "image_hash": "47e10c49efc4ab76",
+      "elapsed_sec": 50.466,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Yes",
+        "top_candidate_raw": "Yes",
+        "length_rank_flip": false,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.702346,
+          " No": 0.205693,
+          " Undetermined": 0.091961
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.765716,
+          " No": 0.224252,
+          " Undetermined": 0.010032
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.268937,
+          " No": -1.496976,
+          " Undetermined": -4.604006
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.268937,
+          " No": -1.496976,
+          " Undetermined": -2.302003
+        }
+      }
+    },
+    {
+      "case_id": "case_12_missing_source_entity",
+      "group": "group_3_missing_evidence",
+      "description": "Source entity (cyan box) ablated from scene",
+      "ground_truth": "Undetermined",
+      "greedy_prediction": "No",
+      "completion_text": "No.",
+      "is_correct": false,
+      "image_hash": "29db3b6843bd6bb0",
+      "elapsed_sec": 47.227,
+      "candidate_scores": {
+        "top_candidate_length_norm": "No",
+        "top_candidate_raw": "No",
+        "length_rank_flip": false,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.206652,
+          " No": 0.663329,
+          " Undetermined": 0.130019
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.232472,
+          " No": 0.74621,
+          " Undetermined": 0.021318
+        },
+        "raw_log_likelihoods": {
+          " Yes": -1.462492,
+          " No": -0.296256,
+          " Undetermined": -3.851696
+        },
+        "norm_log_likelihoods": {
+          " Yes": -1.462492,
+          " No": -0.296256,
+          " Undetermined": -1.925848
+        }
+      }
+    },
+    {
+      "case_id": "case_13_crossmodal_forward_chain",
+      "group": "group_4_crossmodal_triad",
+      "description": "Visual: cyan_box < green_cylinder, Text: green_cylinder < magenta_prism. Query: cyan_box < magenta_prism?",
+      "ground_truth": "Yes",
+      "greedy_prediction": "Yes",
+      "completion_text": "Yes.",
+      "is_correct": true,
+      "image_hash": "dd55915c40014a2f",
+      "elapsed_sec": 55.622,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Yes",
+        "top_candidate_raw": "Yes",
+        "length_rank_flip": false,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.687929,
+          " No": 0.181252,
+          " Undetermined": 0.130819
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.774429,
+          " No": 0.204043,
+          " Undetermined": 0.021528
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.263001,
+          " No": -1.596798,
+          " Undetermined": -3.845751
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.263001,
+          " No": -1.596798,
+          " Undetermined": -1.922875
+        }
+      }
+    },
+    {
+      "case_id": "case_14_crossmodal_reverse_chain",
+      "group": "group_4_crossmodal_triad",
+      "description": "Visual: magenta_prism < green_cylinder, Text: green_cylinder < cyan_box. Query: cyan_box < magenta_prism?",
+      "ground_truth": "No",
+      "greedy_prediction": "No",
+      "completion_text": "No.",
+      "is_correct": true,
+      "image_hash": "23396cdc3c300e4e",
+      "elapsed_sec": 54.545,
+      "candidate_scores": {
+        "top_candidate_length_norm": "No",
+        "top_candidate_raw": "No",
+        "length_rank_flip": false,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.320004,
+          " No": 0.483246,
+          " Undetermined": 0.196749
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.377281,
+          " No": 0.569742,
+          " Undetermined": 0.052977
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.990318,
+          " No": -0.578125,
+          " Undetermined": -2.953442
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.990318,
+          " No": -0.578125,
+          " Undetermined": -1.476721
+        }
+      }
+    },
+    {
+      "case_id": "case_15_crossmodal_underdetermined_fork",
+      "group": "group_4_crossmodal_triad",
+      "description": "Visual: cyan_box < green_cylinder, Text: orange_torus < green_cylinder. Query: cyan_box < orange_torus?",
+      "ground_truth": "Undetermined",
+      "greedy_prediction": "No",
+      "completion_text": "No.",
+      "is_correct": false,
+      "image_hash": "dfeb6ced05377d0b",
+      "elapsed_sec": 56.462,
+      "candidate_scores": {
+        "top_candidate_length_norm": "No",
+        "top_candidate_raw": "No",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.114965,
+          " No": 0.688993,
+          " Undetermined": 0.196042
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.135461,
+          " No": 0.811824,
+          " Undetermined": 0.052715
+        },
+        "raw_log_likelihoods": {
+          " Yes": -2.011172,
+          " No": -0.220573,
+          " Undetermined": -2.954954
+        },
+        "norm_log_likelihoods": {
+          " Yes": -2.011172,
+          " No": -0.220573,
+          " Undetermined": -1.477477
+        }
+      }
+    },
+    {
+      "case_id": "case_16_unimodal_visual_transitive",
+      "group": "group_5_unimodal_controls",
+      "description": "Image shows magenta < yellow < orange. Query: magenta < orange? (0 text premises)",
+      "ground_truth": "Yes",
+      "greedy_prediction": "Yes",
+      "completion_text": "Yes.",
+      "is_correct": true,
+      "image_hash": "3f3715bb43e037c8",
+      "elapsed_sec": 48.016,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Yes",
+        "top_candidate_raw": "Yes",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.770193,
+          " No": 0.070676,
+          " Undetermined": 0.159131
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.885447,
+          " No": 0.081252,
+          " Undetermined": 0.033301
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.126685,
+          " No": -2.515222,
+          " Undetermined": -3.407193
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.126685,
+          " No": -2.515222,
+          " Undetermined": -1.703596
+        }
+      }
+    },
+    {
+      "case_id": "case_17_unimodal_visual_contradicted",
+      "group": "group_5_unimodal_controls",
+      "description": "Image shows magenta < yellow < orange. Query: orange < magenta? (0 text premises)",
+      "ground_truth": "No",
+      "greedy_prediction": "Yes",
+      "completion_text": "Yes.",
+      "is_correct": false,
+      "image_hash": "3f3715bb43e037c8",
+      "elapsed_sec": 47.884,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Yes",
+        "top_candidate_raw": "Yes",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.363926,
+          " No": 0.313556,
+          " Undetermined": 0.322518
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.452681,
+          " No": 0.390028,
+          " Undetermined": 0.157291
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.815513,
+          " No": -0.964483,
+          " Undetermined": -1.872605
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.815513,
+          " No": -0.964483,
+          " Undetermined": -0.936303
+        }
+      }
+    },
+    {
+      "case_id": "case_18_unimodal_text_transitive",
+      "group": "group_5_unimodal_controls",
+      "description": "Text: cyan < green, green < magenta. Query: cyan < magenta? (0 images)",
+      "ground_truth": "Yes",
+      "greedy_prediction": "Yes",
+      "completion_text": "Yes.\n\nThe statement \"The cyan box is to the left of the green cylinder\" implies",
+      "is_correct": true,
+      "image_hash": "None (Text-Only)",
+      "elapsed_sec": 1.422,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Yes",
+        "top_candidate_raw": "Yes",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.472908,
+          " No": 0.156284,
+          " Undetermined": 0.370808
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.614581,
+          " No": 0.203103,
+          " Undetermined": 0.182316
+        },
+        "raw_log_likelihoods": {
+          " Yes": -0.728772,
+          " No": -1.835999,
+          " Undetermined": -1.943974
+        },
+        "norm_log_likelihoods": {
+          " Yes": -0.728772,
+          " No": -1.835999,
+          " Undetermined": -0.971987
+        }
+      }
+    },
+    {
+      "case_id": "case_19_order_YNU",
+      "group": "group_6_choice_order_spectrum",
+      "description": "Underdetermined fork with candidate order: [YNU] Yes, No, or Undetermined",
+      "ground_truth": "Undetermined",
+      "greedy_prediction": "No",
+      "completion_text": "No.",
+      "is_correct": false,
+      "image_hash": "dfeb6ced05377d0b",
+      "elapsed_sec": 55.891,
+      "candidate_scores": {
+        "top_candidate_length_norm": "No",
+        "top_candidate_raw": "No",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.114965,
+          " No": 0.688993,
+          " Undetermined": 0.196042
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.135461,
+          " No": 0.811824,
+          " Undetermined": 0.052715
+        },
+        "raw_log_likelihoods": {
+          " Yes": -2.011172,
+          " No": -0.220573,
+          " Undetermined": -2.954954
+        },
+        "norm_log_likelihoods": {
+          " Yes": -2.011172,
+          " No": -0.220573,
+          " Undetermined": -1.477477
+        }
+      }
+    },
+    {
+      "case_id": "case_20_order_YUN",
+      "group": "group_6_choice_order_spectrum",
+      "description": "Underdetermined fork with candidate order: [YUN] Yes, Undetermined, or No",
+      "ground_truth": "Undetermined",
+      "greedy_prediction": "No",
+      "completion_text": "No.",
+      "is_correct": false,
+      "image_hash": "dfeb6ced05377d0b",
+      "elapsed_sec": 52.736,
+      "candidate_scores": {
+        "top_candidate_length_norm": "No",
+        "top_candidate_raw": "No",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.084507,
+          " No": 0.819935,
+          " Undetermined": 0.095557
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.092421,
+          " No": 0.89672,
+          " Undetermined": 0.010859
+        },
+        "raw_log_likelihoods": {
+          " Yes": -2.387149,
+          " No": -0.114763,
+          " Undetermined": -4.528524
+        },
+        "norm_log_likelihoods": {
+          " Yes": -2.387149,
+          " No": -0.114763,
+          " Undetermined": -2.264262
+        }
+      }
+    },
+    {
+      "case_id": "case_21_order_NYU",
+      "group": "group_6_choice_order_spectrum",
+      "description": "Underdetermined fork with candidate order: [NYU] No, Yes, or Undetermined",
+      "ground_truth": "Undetermined",
+      "greedy_prediction": "No",
+      "completion_text": "No.",
+      "is_correct": false,
+      "image_hash": "dfeb6ced05377d0b",
+      "elapsed_sec": 53.587,
+      "candidate_scores": {
+        "top_candidate_length_norm": "No",
+        "top_candidate_raw": "No",
+        "length_rank_flip": false,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.086441,
+          " No": 0.58618,
+          " Undetermined": 0.327379
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.107193,
+          " No": 0.726905,
+          " Undetermined": 0.165902
+        },
+        "raw_log_likelihoods": {
+          " Yes": -2.22655,
+          " No": -0.312381,
+          " Undetermined": -1.78978
+        },
+        "norm_log_likelihoods": {
+          " Yes": -2.22655,
+          " No": -0.312381,
+          " Undetermined": -0.89489
+        }
+      }
+    },
+    {
+      "case_id": "case_22_order_NUY",
+      "group": "group_6_choice_order_spectrum",
+      "description": "Underdetermined fork with candidate order: [NUY] No, Undetermined, or Yes",
+      "ground_truth": "Undetermined",
+      "greedy_prediction": "No",
+      "completion_text": "No.",
+      "is_correct": false,
+      "image_hash": "dfeb6ced05377d0b",
+      "elapsed_sec": 53.892,
+      "candidate_scores": {
+        "top_candidate_length_norm": "No",
+        "top_candidate_raw": "No",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.08722,
+          " No": 0.656279,
+          " Undetermined": 0.256501
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.105915,
+          " No": 0.796945,
+          " Undetermined": 0.09714
+        },
+        "raw_log_likelihoods": {
+          " Yes": -2.243877,
+          " No": -0.225729,
+          " Undetermined": -2.330365
+        },
+        "norm_log_likelihoods": {
+          " Yes": -2.243877,
+          " No": -0.225729,
+          " Undetermined": -1.165183
+        }
+      }
+    },
+    {
+      "case_id": "case_23_order_UYN",
+      "group": "group_6_choice_order_spectrum",
+      "description": "Underdetermined fork with candidate order: [UYN] Undetermined, Yes, or No",
+      "ground_truth": "Undetermined",
+      "greedy_prediction": "No",
+      "completion_text": "No.",
+      "is_correct": false,
+      "image_hash": "dfeb6ced05377d0b",
+      "elapsed_sec": 52.733,
+      "candidate_scores": {
+        "top_candidate_length_norm": "No",
+        "top_candidate_raw": "No",
+        "length_rank_flip": false,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.024741,
+          " No": 0.802426,
+          " Undetermined": 0.172833
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.02872,
+          " No": 0.931469,
+          " Undetermined": 0.039812
+        },
+        "raw_log_likelihoods": {
+          " Yes": -3.561151,
+          " No": -0.081977,
+          " Undetermined": -3.234583
+        },
+        "norm_log_likelihoods": {
+          " Yes": -3.561151,
+          " No": -0.081977,
+          " Undetermined": -1.617292
+        }
+      }
+    },
+    {
+      "case_id": "case_24_order_UNY",
+      "group": "group_6_choice_order_spectrum",
+      "description": "Underdetermined fork with candidate order: [UNY] Undetermined, No, or Yes",
+      "ground_truth": "Undetermined",
+      "greedy_prediction": "No",
+      "completion_text": "No.",
+      "is_correct": false,
+      "image_hash": "dfeb6ced05377d0b",
+      "elapsed_sec": 52.768,
+      "candidate_scores": {
+        "top_candidate_length_norm": "Undetermined",
+        "top_candidate_raw": "No",
+        "length_rank_flip": true,
+        "candidate_probabilities_length_norm": {
+          " Yes": 0.065012,
+          " No": 0.391085,
+          " Undetermined": 0.543903
+        },
+        "candidate_probabilities_raw": {
+          " Yes": 0.079893,
+          " No": 0.480598,
+          " Undetermined": 0.439509
+        },
+        "raw_log_likelihoods": {
+          " Yes": -2.543413,
+          " No": -0.749066,
+          " Undetermined": -0.83844
+        },
+        "norm_log_likelihoods": {
+          " Yes": -2.543413,
+          " No": -0.749066,
+          " Undetermined": -0.41922
+        }
+      }
+    }
+  ],
+  "instrumentation_validation": {
+    "target_module": "model.model.text_model.layers[12]",
+    "passive_hook": {
+      "tensor_shape": [
+        1,
+        1467,
+        2048
+      ],
+      "raw_gpu_dtype": "torch.float32",
+      "cpu_transferred_dtype": "torch.float32",
+      "mean": 0.0475,
+      "std": 8.8755,
+      "has_nan": false,
+      "has_inf": false,
+      "max_logit_difference_vs_unhooked": 0.0,
+      "logits_identical": true
+    },
+    "noop_replacement_hook": {
+      "max_logit_difference_vs_unhooked": 0.0,
+      "logits_identical": true
+    },
+    "controlled_perturbation_hook": {
+      "perturbation_description": "Added delta = +0.5 to token[-1], coordinate 0 at Layer 12",
+      "max_logit_difference": 0.11164045333862305,
+      "controllability_confirmed": true,
+      "epistemic_qualification": "ENGINEERING CONTROLLABILITY ONLY: Confirms in-flight tensor modification path; does NOT constitute causal attribution of reasoning circuits."
+    },
+    "status": "PASS"
+  }
+}

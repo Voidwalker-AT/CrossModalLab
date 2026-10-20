@@ -1,0 +1,109 @@
+{
+  "timestamp": "2026-10-18T10:52:39Z",
+  "model_id": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+  "revision": "482adb537c021c86670beed01cd58990d01e72e4",
+  "license": "Apache 2.0",
+  "cache_directory": "E:\\cache\\huggingface\\models--HuggingFaceTB--SmolVLM2-2.2B-Instruct\\snapshots\\482adb537c021c86670beed01cd58990d01e72e4",
+  "total_files": 16,
+  "total_size_bytes": 8992155310,
+  "total_size_gb": 8.375,
+  "download_duration_seconds": 1071.48,
+  "files": [
+    {
+      "filename": ".gitattributes",
+      "size_bytes": 1519,
+      "size_mb": 0.0,
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+    },
+    {
+      "filename": "added_tokens.json",
+      "size_bytes": 4739,
+      "size_mb": 0.0,
+      "sha256": "74135b8664b56088c0006f1c8e848d79a8eba003411f72ebf1dc2ee96227be3a"
+    },
+    {
+      "filename": "chat_template.json",
+      "size_bytes": 430,
+      "size_mb": 0.0,
+      "sha256": "b585e3598909a5687f9f9d738d35223724dedef256b9b274e1cbfb32b13c74bf"
+    },
+    {
+      "filename": "config.json",
+      "size_bytes": 3642,
+      "size_mb": 0.0,
+      "sha256": "ec1f7e45deeafba7601f8dd0b6ca9ba75985dffc2f053e82341d12d06e2d9d46"
+    },
+    {
+      "filename": "generation_config.json",
+      "size_bytes": 136,
+      "size_mb": 0.0,
+      "sha256": "34835060c9f0f74d1acb456cc72ca32746d3843d9eb5f578f9cbffac1d2eb840"
+    },
+    {
+      "filename": "merges.txt",
+      "size_bytes": 466391,
+      "size_mb": 0.44,
+      "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510"
+    },
+    {
+      "filename": "model-00001-of-00002.safetensors",
+      "size_bytes": 4959390584,
+      "size_mb": 4729.64,
+      "sha256": "7c88a90e78f567460b2369a0369cc4dafbfda5607c9cb090b30fa4437b0282f2"
+    },
+    {
+      "filename": "model-00002-of-00002.safetensors",
+      "size_bytes": 4027833472,
+      "size_mb": 3841.24,
+      "sha256": "cf3d0958a8240f71054a6812038f2a6bfbe2e5124573a3b363f6b120c9a52657"
+    },
+    {
+      "filename": "model.safetensors.index.json",
+      "size_bytes": 63881,
+      "size_mb": 0.06,
+      "sha256": "d7c4b7a36f51bc15755cb11938c76f66be56e7c0d2bf3606335a8f77f90a551d"
+    },
+    {
+      "filename": "preprocessor_config.json",
+      "size_bytes": 599,
+      "size_mb": 0.0,
+      "sha256": "70d935393e28a5b77b8f46cbd3e3cb74a336e4814bd43983858215bd0be388e7"
+    },
+    {
+      "filename": "processor_config.json",
+      "size_bytes": 67,
+      "size_mb": 0.0,
+      "sha256": "55fb18f99dcce2694a011d46addf50a8114e6458d1847f6da9a0af22c6695a95"
+    },
+    {
+      "filename": "README.md",
+      "size_bytes": 11437,
+      "size_mb": 0.01,
+      "sha256": "8e46e92a3a40643b85a6df905b1a2014bcb7a01daaf6566588c89a95c5c6e700"
+    },
+    {
+      "filename": "special_tokens_map.json",
+      "size_bytes": 868,
+      "size_mb": 0.0,
+      "sha256": "2dfea2a426162316ff1567c82bc6d36d9690cd9f90455f075c77daca78b45c60"
+    },
+    {
+      "filename": "tokenizer.json",
+      "size_bytes": 3548256,
+      "size_mb": 3.38,
+      "sha256": "5ece781dc8d2b2f3e2f289ca0ae50b17cfc27dd27bfe7971bb8241e0b964331a"
+    },
+    {
+      "filename": "tokenizer_config.json",
+      "size_bytes": 28627,
+      "size_mb": 0.03,
+      "sha256": "30d7854334f3f96e9dc8e5210777ba030d55257de0d9c9b5ce65387f2ab73773"
+    },
+    {
+      "filename": "vocab.json",
+      "size_bytes": 800662,
+      "size_mb": 0.76,
+      "sha256": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79"
+    }
+  ]
+}

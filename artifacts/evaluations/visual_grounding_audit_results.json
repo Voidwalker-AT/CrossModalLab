@@ -1,0 +1,1528 @@
+{
+  "timestamp": "2026-10-18T09:31:36Z",
+  "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+  "battery_tests": {
+    "entity_identity": [
+      {
+        "id": "b1_color_left",
+        "prompt": "What color is the shape on the left? Answer with just the color name.",
+        "expected": "cyan",
+        "prompt_length_tokens": 1151,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          4910,
+          30,
+          49279
+        ],
+        "decoded_completion": "Green.",
+        "elapsed_seconds": 10.975,
+        "top5_first_tokens": [
+          {
+            "token_id": 4910,
+            "token_str": " Green",
+            "prob": 0.9701,
+            "logit": 19.75
+          },
+          {
+            "token_id": 7105,
+            "token_str": " Cy",
+            "prob": 0.0167,
+            "logit": 15.688
+          },
+          {
+            "token_id": 1931,
+            "token_str": " Te",
+            "prob": 0.0058,
+            "logit": 14.625
+          },
+          {
+            "token_id": 19684,
+            "token_str": " Gray",
+            "prob": 0.002,
+            "logit": 13.562
+          },
+          {
+            "token_id": 2654,
+            "token_str": " green",
+            "prob": 0.0012,
+            "logit": 13.062
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 6.344,
+            "prob": 1e-06
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": -2.328,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 5.125,
+            "prob": 0.0
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": -4.562,
+            "prob": 0.0
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 2.375,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -2.844,
+            "prob": 0.0
+          }
+        }
+      },
+      {
+        "id": "b1_shape_left",
+        "prompt": "What shape is on the left? Answer with just the shape name.",
+        "expected": "box / square / rectangle",
+        "prompt_length_tokens": 1149,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          16331,
+          30,
+          49279
+        ],
+        "decoded_completion": "Square.",
+        "elapsed_seconds": 9.291,
+        "top5_first_tokens": [
+          {
+            "token_id": 16331,
+            "token_str": " Square",
+            "prob": 0.813,
+            "logit": 21.375
+          },
+          {
+            "token_id": 37087,
+            "token_str": " Rect",
+            "prob": 0.1814,
+            "logit": 19.875
+          },
+          {
+            "token_id": 39575,
+            "token_str": " Cube",
+            "prob": 0.002,
+            "logit": 15.375
+          },
+          {
+            "token_id": 5222,
+            "token_str": " square",
+            "prob": 0.0013,
+            "logit": 14.938
+          },
+          {
+            "token_id": 10382,
+            "token_str": " Squ",
+            "prob": 0.0007,
+            "logit": 14.375
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 4.906,
+            "prob": 0.0
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": -3.375,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 5.5,
+            "prob": 0.0
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": -4.625,
+            "prob": 0.0
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 2.016,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -3.422,
+            "prob": 0.0
+          }
+        }
+      },
+      {
+        "id": "b1_color_right",
+        "prompt": "What color is the shape on the right? Answer with just the color name.",
+        "expected": "green",
+        "prompt_length_tokens": 1151,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          4910,
+          30,
+          49279
+        ],
+        "decoded_completion": "Green.",
+        "elapsed_seconds": 9.269,
+        "top5_first_tokens": [
+          {
+            "token_id": 4910,
+            "token_str": " Green",
+            "prob": 0.9985,
+            "logit": 22.0
+          },
+          {
+            "token_id": 7105,
+            "token_str": " Cy",
+            "prob": 0.0004,
+            "logit": 14.188
+          },
+          {
+            "token_id": 2654,
+            "token_str": " green",
+            "prob": 0.0004,
+            "logit": 14.188
+          },
+          {
+            "token_id": 15420,
+            "token_str": "Green",
+            "prob": 0.0002,
+            "logit": 13.562
+          },
+          {
+            "token_id": 1931,
+            "token_str": " Te",
+            "prob": 0.0001,
+            "logit": 13.125
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 6.219,
+            "prob": 0.0
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": -2.547,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 5.5,
+            "prob": 0.0
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": -4.656,
+            "prob": 0.0
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 2.844,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -3.078,
+            "prob": 0.0
+          }
+        }
+      },
+      {
+        "id": "b1_shape_right",
+        "prompt": "What shape is on the right? Answer with just the shape name.",
+        "expected": "cylinder / pill / oval",
+        "prompt_length_tokens": 1149,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          16331,
+          30,
+          49279
+        ],
+        "decoded_completion": "Square.",
+        "elapsed_seconds": 9.167,
+        "top5_first_tokens": [
+          {
+            "token_id": 16331,
+            "token_str": " Square",
+            "prob": 0.8472,
+            "logit": 19.125
+          },
+          {
+            "token_id": 37087,
+            "token_str": " Rect",
+            "prob": 0.1147,
+            "logit": 17.125
+          },
+          {
+            "token_id": 39575,
+            "token_str": " Cube",
+            "prob": 0.0272,
+            "logit": 15.688
+          },
+          {
+            "token_id": 10382,
+            "token_str": " Squ",
+            "prob": 0.0061,
+            "logit": 14.188
+          },
+          {
+            "token_id": 5222,
+            "token_str": " square",
+            "prob": 0.0011,
+            "logit": 12.5
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 4.375,
+            "prob": 0.0
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": -3.984,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 6.156,
+            "prob": 2e-06
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": -3.953,
+            "prob": 0.0
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 1.75,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -3.406,
+            "prob": 0.0
+          }
+        }
+      }
+    ],
+    "pairwise_spatial": [
+      {
+        "id": "b2_left_direct_true",
+        "prompt": "Is the cyan box to the left of the green cylinder? Answer directly with: Yes or No.",
+        "ground_truth": "Yes",
+        "prompt_length_tokens": 1155,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.231,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.7058,
+            "logit": 30.25
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.2942,
+            "logit": 29.375
+          },
+          {
+            "token_id": 5230,
+            "token_str": "No",
+            "prob": 0.0,
+            "logit": 16.75
+          },
+          {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "prob": 0.0,
+            "logit": 15.75
+          },
+          {
+            "token_id": 9805,
+            "token_str": " yes",
+            "prob": 0.0,
+            "logit": 15.75
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 29.375,
+            "prob": 0.294214
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 15.75,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 30.25,
+            "prob": 0.705783
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 16.75,
+            "prob": 1e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 3.281,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -2.734,
+            "prob": 0.0
+          }
+        }
+      },
+      {
+        "id": "b2_left_direct_false",
+        "prompt": "Is the green cylinder to the left of the cyan box? Answer directly with: Yes or No.",
+        "ground_truth": "No",
+        "prompt_length_tokens": 1155,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.175,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.9149,
+            "logit": 29.375
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.0851,
+            "logit": 27.0
+          },
+          {
+            "token_id": 5230,
+            "token_str": "No",
+            "prob": 0.0,
+            "logit": 15.25
+          },
+          {
+            "token_id": 787,
+            "token_str": " no",
+            "prob": 0.0,
+            "logit": 14.812
+          },
+          {
+            "token_id": 10921,
+            "token_str": " NO",
+            "prob": 0.0,
+            "logit": 14.5
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 27.0,
+            "prob": 0.085099
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 13.188,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 29.375,
+            "prob": 0.914899
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 15.25,
+            "prob": 1e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 4.25,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -2.484,
+            "prob": 0.0
+          }
+        }
+      },
+      {
+        "id": "b2_right_direct_true",
+        "prompt": "Is the green cylinder to the right of the cyan box? Answer directly with: Yes or No.",
+        "ground_truth": "Yes",
+        "prompt_length_tokens": 1155,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.15,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.6225,
+            "logit": 29.875
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.3775,
+            "logit": 29.375
+          },
+          {
+            "token_id": 5230,
+            "token_str": "No",
+            "prob": 0.0,
+            "logit": 16.125
+          },
+          {
+            "token_id": 9805,
+            "token_str": " yes",
+            "prob": 0.0,
+            "logit": 15.375
+          },
+          {
+            "token_id": 787,
+            "token_str": " no",
+            "prob": 0.0,
+            "logit": 15.125
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 29.375,
+            "prob": 0.37754
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 15.062,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 29.875,
+            "prob": 0.622458
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 16.125,
+            "prob": 1e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 4.812,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -1.992,
+            "prob": 0.0
+          }
+        }
+      },
+      {
+        "id": "b2_right_direct_false",
+        "prompt": "Is the cyan box to the right of the green cylinder? Answer directly with: Yes or No.",
+        "ground_truth": "No",
+        "prompt_length_tokens": 1155,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.32,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.7982,
+            "logit": 29.5
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.2018,
+            "logit": 28.125
+          },
+          {
+            "token_id": 5230,
+            "token_str": "No",
+            "prob": 0.0,
+            "logit": 15.938
+          },
+          {
+            "token_id": 787,
+            "token_str": " no",
+            "prob": 0.0,
+            "logit": 15.062
+          },
+          {
+            "token_id": 9805,
+            "token_str": " yes",
+            "prob": 0.0,
+            "logit": 14.75
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 28.125,
+            "prob": 0.201813
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 14.0,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 29.5,
+            "prob": 0.798185
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 15.938,
+            "prob": 1e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 3.672,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -2.812,
+            "prob": 0.0
+          }
+        }
+      }
+    ],
+    "image_swap_control": {
+      "query": "Is the cyan box to the left of the green cylinder? Answer directly with: Yes or No.",
+      "original_image": {
+        "layout": "cyan_box(left) < green_cylinder(right)",
+        "ground_truth": "Yes",
+        "prompt_length_tokens": 1155,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.265,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.7058,
+            "logit": 30.25
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.2942,
+            "logit": 29.375
+          },
+          {
+            "token_id": 5230,
+            "token_str": "No",
+            "prob": 0.0,
+            "logit": 16.75
+          },
+          {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "prob": 0.0,
+            "logit": 15.75
+          },
+          {
+            "token_id": 9805,
+            "token_str": " yes",
+            "prob": 0.0,
+            "logit": 15.75
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 29.375,
+            "prob": 0.294214
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 15.75,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 30.25,
+            "prob": 0.705783
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 16.75,
+            "prob": 1e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 3.281,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -2.734,
+            "prob": 0.0
+          }
+        }
+      },
+      "swapped_image": {
+        "layout": "green_cylinder(left) < cyan_box(right)",
+        "ground_truth": "No",
+        "prompt_length_tokens": 1155,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.14,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.8808,
+            "logit": 28.875
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.1192,
+            "logit": 26.875
+          },
+          {
+            "token_id": 5230,
+            "token_str": "No",
+            "prob": 0.0,
+            "logit": 15.25
+          },
+          {
+            "token_id": 787,
+            "token_str": " no",
+            "prob": 0.0,
+            "logit": 14.562
+          },
+          {
+            "token_id": 10921,
+            "token_str": " NO",
+            "prob": 0.0,
+            "logit": 14.0
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 26.875,
+            "prob": 0.119203
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 13.0,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 28.875,
+            "prob": 0.880795
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 15.25,
+            "prob": 1e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 3.469,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -2.484,
+            "prob": 0.0
+          }
+        }
+      },
+      "sensitivity_confirmed": false
+    },
+    "triplet_unimodal_visual": [
+      {
+        "id": "b4_with_preamble",
+        "prompt": "No additional statement is provided.\n\nQuestion: Based on the image, is the magenta prism to the left of the orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+        "ground_truth": "Yes",
+        "prompt_length_tokens": 1205,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.227,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.8176,
+            "logit": 26.25
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.1824,
+            "logit": 24.75
+          },
+          {
+            "token_id": 5230,
+            "token_str": "No",
+            "prob": 0.0,
+            "logit": 13.188
+          },
+          {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "prob": 0.0,
+            "logit": 12.312
+          },
+          {
+            "token_id": 10921,
+            "token_str": " NO",
+            "prob": 0.0,
+            "logit": 12.25
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 24.75,
+            "prob": 0.182424
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 12.312,
+            "prob": 1e-06
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 26.25,
+            "prob": 0.817569
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 13.188,
+            "prob": 2e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 11.062,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": 3.672,
+            "prob": 0.0
+          }
+        }
+      },
+      {
+        "id": "b4_without_preamble",
+        "prompt": "Question: Based on the image, is the magenta prism to the left of the orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+        "ground_truth": "Yes",
+        "prompt_length_tokens": 1197,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.198,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.7549,
+            "logit": 26.375
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.2451,
+            "logit": 25.25
+          },
+          {
+            "token_id": 5230,
+            "token_str": "No",
+            "prob": 0.0,
+            "logit": 12.938
+          },
+          {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "prob": 0.0,
+            "logit": 12.5
+          },
+          {
+            "token_id": 787,
+            "token_str": " no",
+            "prob": 0.0,
+            "logit": 12.5
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 25.25,
+            "prob": 0.245084
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 12.5,
+            "prob": 1e-06
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 26.375,
+            "prob": 0.754911
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 12.938,
+            "prob": 1e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 8.5,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": 1.398,
+            "prob": 0.0
+          }
+        }
+      },
+      {
+        "id": "b4_adjacent_ab",
+        "prompt": "Based on the image, is the magenta prism to the left of the yellow cone? Answer directly with: Yes or No.",
+        "ground_truth": "Yes",
+        "prompt_length_tokens": 1161,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.528,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.9627,
+            "logit": 29.5
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.0373,
+            "logit": 26.25
+          },
+          {
+            "token_id": 787,
+            "token_str": " no",
+            "prob": 0.0,
+            "logit": 15.625
+          },
+          {
+            "token_id": 5230,
+            "token_str": "No",
+            "prob": 0.0,
+            "logit": 15.188
+          },
+          {
+            "token_id": 10921,
+            "token_str": " NO",
+            "prob": 0.0,
+            "logit": 15.0
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 26.25,
+            "prob": 0.037327
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 12.5,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 29.5,
+            "prob": 0.962671
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 15.188,
+            "prob": 1e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 4.875,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -1.609,
+            "prob": 0.0
+          }
+        }
+      },
+      {
+        "id": "b4_adjacent_bc",
+        "prompt": "Based on the image, is the yellow cone to the left of the orange torus? Answer directly with: Yes or No.",
+        "ground_truth": "Yes",
+        "prompt_length_tokens": 1161,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.167,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.9149,
+            "logit": 27.875
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.0851,
+            "logit": 25.5
+          },
+          {
+            "token_id": 787,
+            "token_str": " no",
+            "prob": 0.0,
+            "logit": 14.375
+          },
+          {
+            "token_id": 10921,
+            "token_str": " NO",
+            "prob": 0.0,
+            "logit": 14.125
+          },
+          {
+            "token_id": 5230,
+            "token_str": "No",
+            "prob": 0.0,
+            "logit": 13.625
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 25.5,
+            "prob": 0.085099
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 11.625,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 27.875,
+            "prob": 0.914897
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 13.625,
+            "prob": 1e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 5.844,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -1.258,
+            "prob": 0.0
+          }
+        }
+      },
+      {
+        "id": "b4_distant_ac_binary",
+        "prompt": "Based on the image, is the magenta prism to the left of the orange torus? Answer directly with: Yes or No.",
+        "ground_truth": "Yes",
+        "prompt_length_tokens": 1162,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.144,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.9325,
+            "logit": 29.5
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.0675,
+            "logit": 26.875
+          },
+          {
+            "token_id": 787,
+            "token_str": " no",
+            "prob": 0.0,
+            "logit": 15.562
+          },
+          {
+            "token_id": 5230,
+            "token_str": "No",
+            "prob": 0.0,
+            "logit": 15.375
+          },
+          {
+            "token_id": 10921,
+            "token_str": " NO",
+            "prob": 0.0,
+            "logit": 14.812
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 26.875,
+            "prob": 0.067547
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 13.125,
+            "prob": 0.0
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 29.5,
+            "prob": 0.932451
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 15.375,
+            "prob": 1e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 4.75,
+            "prob": 0.0
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": -1.422,
+            "prob": 0.0
+          }
+        }
+      }
+    ],
+    "choice_order_sensitivity": [
+      {
+        "id": "b5_order_yes_no_und",
+        "order": "Yes, No, or Undetermined",
+        "prompt": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+        "prompt_length_tokens": 1212,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "decoded_completion": "Yes.",
+        "elapsed_seconds": 9.059,
+        "top5_first_tokens": [
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.5926,
+            "logit": 24.75
+          },
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.4073,
+            "logit": 24.375
+          },
+          {
+            "token_id": 19842,
+            "token_str": " Answer",
+            "prob": 0.0,
+            "logit": 15.312
+          },
+          {
+            "token_id": 9805,
+            "token_str": " yes",
+            "prob": 0.0,
+            "logit": 12.562
+          },
+          {
+            "token_id": 3635,
+            "token_str": " True",
+            "prob": 0.0,
+            "logit": 12.5
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 24.75,
+            "prob": 0.592623
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 12.438,
+            "prob": 3e-06
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 24.375,
+            "prob": 0.407303
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 12.25,
+            "prob": 2e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 12.25,
+            "prob": 2e-06
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": 4.062,
+            "prob": 0.0
+          }
+        }
+      },
+      {
+        "id": "b5_order_und_no_yes",
+        "order": "Undetermined, No, or Yes",
+        "prompt": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is underdetermined (Undetermined), contradicted (No), or entailed (Yes).\nAnswer directly with: Undetermined, No, or Yes.",
+        "prompt_length_tokens": 1209,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.19,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.5867,
+            "logit": 18.0
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.4033,
+            "logit": 17.625
+          },
+          {
+            "token_id": 27589,
+            "token_str": " Und",
+            "prob": 0.0042,
+            "logit": 13.062
+          },
+          {
+            "token_id": 19842,
+            "token_str": " Answer",
+            "prob": 0.0018,
+            "logit": 12.188
+          },
+          {
+            "token_id": 10369,
+            "token_str": " Ent",
+            "prob": 0.0003,
+            "logit": 10.312
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 17.625,
+            "prob": 0.403254
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 7.094,
+            "prob": 1.1e-05
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 18.0,
+            "prob": 0.586731
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 7.438,
+            "prob": 1.5e-05
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 13.062,
+            "prob": 0.004208
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": 4.875,
+            "prob": 1e-06
+          }
+        }
+      },
+      {
+        "id": "b5_order_no_yes_und",
+        "order": "No, Yes, or Undetermined",
+        "prompt": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is contradicted (No), entailed (Yes), or underdetermined from the evidence (Undetermined).\nAnswer directly with: No, Yes, or Undetermined.",
+        "prompt_length_tokens": 1212,
+        "completion_length_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "elapsed_seconds": 9.152,
+        "top5_first_tokens": [
+          {
+            "token_id": 2838,
+            "token_str": " No",
+            "prob": 0.5925,
+            "logit": 24.5
+          },
+          {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "prob": 0.4072,
+            "logit": 24.125
+          },
+          {
+            "token_id": 19842,
+            "token_str": " Answer",
+            "prob": 0.0002,
+            "logit": 16.375
+          },
+          {
+            "token_id": 27589,
+            "token_str": " Und",
+            "prob": 0.0,
+            "logit": 14.188
+          },
+          {
+            "token_id": 5230,
+            "token_str": "No",
+            "prob": 0.0,
+            "logit": 12.875
+          }
+        ],
+        "candidate_stats": {
+          "yes_space": {
+            "token_id": 9230,
+            "token_str": " Yes",
+            "logit": 24.125,
+            "prob": 0.407245
+          },
+          "yes_nospace": {
+            "token_id": 10539,
+            "token_str": "Yes",
+            "logit": 11.688,
+            "prob": 2e-06
+          },
+          "no_space": {
+            "token_id": 2838,
+            "token_str": " No",
+            "logit": 24.5,
+            "prob": 0.592537
+          },
+          "no_nospace": {
+            "token_id": 5230,
+            "token_str": "No",
+            "logit": 12.875,
+            "prob": 5e-06
+          },
+          "und_space": {
+            "token_id": 27589,
+            "token_str": " Und",
+            "logit": 14.188,
+            "prob": 2e-05
+          },
+          "und_nospace": {
+            "token_id": 37319,
+            "token_str": "Und",
+            "logit": 6.938,
+            "prob": 0.0
+          }
+        }
+      }
+    ]
+  }
+}

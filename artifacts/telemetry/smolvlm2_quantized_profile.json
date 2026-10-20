@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-10-18T11:01:15Z",
+  "model_id": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+  "revision": "482adb537c021c86670beed01cd58990d01e72e4",
+  "snapshot_path": "E:\\cache\\huggingface\\models--HuggingFaceTB--SmolVLM2-2.2B-Instruct\\snapshots\\482adb537c021c86670beed01cd58990d01e72e4",
+  "device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 2050",
+  "total_dedicated_vram_mib": 4095.5,
+  "quantization_config": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_use_double_quant": true
+  },
+  "stages": {
+    "baseline": {
+      "vram_allocated_mib": 0.0,
+      "vram_reserved_mib": 0.0,
+      "host_ram_rss_mib": 501.36
+    },
+    "processor_init": {
+      "duration_sec": 0.259
+    },
+    "model_loading": {
+      "duration_sec": 15.972,
+      "vram_allocated_mib": 1784.51,
+      "vram_reserved_mib": 1856.0,
+      "peak_vram_mib": 1801.36,
+      "host_ram_rss_mib": 726.38,
+      "component_quantization": {
+        "total_modules": 654,
+        "linear4bit_modules": 331,
+        "standard_linear_modules": 1
+      }
+    },
+    "inference_1": {
+      "prompt_tokens": 1502,
+      "completion_tokens": 3,
+      "completion_token_ids": [
+        9230,
+        30,
+        49279
+      ],
+      "completion_text": "Yes.",
+      "duration_sec": 22.62,
+      "peak_vram_mib": 3319.05
+    },
+    "inference_2": {
+      "duration_sec": 22.292,
+      "peak_vram_mib": 3318.6,
+      "output_identical": true,
+      "completion_text": "Yes."
+    }
+  },
+  "hardware_verdict": {
+    "fits_under_4gb_ceiling": true,
+    "peak_overall_vram_mib": 3319.05,
+    "vram_headroom_mib": 776.45,
+    "repeatability_pass": true,
+    "status": "PASS"
+  }
+}

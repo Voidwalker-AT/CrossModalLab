@@ -1,0 +1,316 @@
+{
+  "dataset_name": "HallusionBench Evaluation Subset",
+  "official_source": "https://github.com/tianyi-lab/HallusionBench",
+  "conference": "CVPR 2024",
+  "license": "Apache 2.0",
+  "total_benchmark_questions": 1129,
+  "spatial_questions_count": 58,
+  "visual_stimuli_downloaded": 19,
+  "total_bytes": 10059025,
+  "total_mib": 9.59,
+  "sample_spatial_questions": [
+    {
+      "category": "VD",
+      "subcategory": "illusion",
+      "visual_input": "1",
+      "set_id": "0",
+      "figure_id": "0",
+      "sample_note": "circle",
+      "question_id": "0",
+      "question": "Is the right orange circle the same size as the left orange circle?",
+      "gt_answer_details": "The right orange circle is the same size as the left orange circle.",
+      "gt_answer": "1",
+      "filename": "./VD/illusion/0_0.png"
+    },
+    {
+      "category": "VD",
+      "subcategory": "illusion",
+      "visual_input": "1",
+      "set_id": "0",
+      "figure_id": "0",
+      "sample_note": "circle",
+      "question_id": "1",
+      "question": "Is the right orange circle larger than the left orange circle?",
+      "gt_answer_details": "The right orange circle is the same size as the left orange circle.",
+      "gt_answer": "0",
+      "filename": "./VD/illusion/0_0.png"
+    },
+    {
+      "category": "VD",
+      "subcategory": "illusion",
+      "visual_input": "1",
+      "set_id": "0",
+      "figure_id": "0",
+      "sample_note": "circle",
+      "question_id": "2",
+      "question": "Is the right orange circle smaller than the left orange circle?",
+      "gt_answer_details": "The right orange circle is the same size as the left orange circle.",
+      "gt_answer": "0",
+      "filename": "./VD/illusion/0_0.png"
+    },
+    {
+      "category": "VD",
+      "subcategory": "illusion",
+      "visual_input": "2",
+      "set_id": "0",
+      "figure_id": "1",
+      "sample_note": "circle",
+      "question_id": "0",
+      "question": "Is the right orange circle the same size as the left orange circle?",
+      "gt_answer_details": "The right orange circle is larger than the left orange circle.",
+      "gt_answer": "0",
+      "filename": "./VD/illusion/0_1.png"
+    },
+    {
+      "category": "VD",
+      "subcategory": "illusion",
+      "visual_input": "2",
+      "set_id": "0",
+      "figure_id": "1",
+      "sample_note": "circle",
+      "question_id": "1",
+      "question": "Is the right orange circle larger than the left orange circle?",
+      "gt_answer_details": "The right orange circle is larger than the left orange circle.",
+      "gt_answer": "1",
+      "filename": "./VD/illusion/0_1.png"
+    },
+    {
+      "category": "VD",
+      "subcategory": "illusion",
+      "visual_input": "2",
+      "set_id": "0",
+      "figure_id": "1",
+      "sample_note": "circle",
+      "question_id": "2",
+      "question": "Is the right orange circle smaller than the left orange circle?",
+      "gt_answer_details": "The right orange circle is larger than the left orange circle.",
+      "gt_answer": "0",
+      "filename": "./VD/illusion/0_1.png"
+    },
+    {
+      "category": "VD",
+      "subcategory": "illusion",
+      "visual_input": "1",
+      "set_id": "1",
+      "figure_id": "0",
+      "sample_note": "box",
+      "question_id": "0",
+      "question": "Is the right grey box larger than the left grey box?",
+      "gt_answer_details": "The right grey box is the same size as the left grey box.",
+      "gt_answer": "0",
+      "filename": "./VD/illusion/1_0.png"
+    },
+    {
+      "category": "VD",
+      "subcategory": "illusion",
+      "visual_input": "1",
+      "set_id": "1",
+      "figure_id": "0",
+      "sample_note": "box",
+      "question_id": "1",
+      "question": "Is the right grey box smaller than the left grey box?",
+      "gt_answer_details": "The right grey box is the same size as the left grey box.",
+      "gt_answer": "0",
+      "filename": "./VD/illusion/1_0.png"
+    },
+    {
+      "category": "VD",
+      "subcategory": "illusion",
+      "visual_input": "1",
+      "set_id": "1",
+      "figure_id": "0",
+      "sample_note": "box",
+      "question_id": "2",
+      "question": "Is the right grey box the same size as the left grey box?",
+      "gt_answer_details": "The right grey box is the same size as the left grey box.",
+      "gt_answer": "1",
+      "filename": "./VD/illusion/1_0.png"
+    },
+    {
+      "category": "VD",
+      "subcategory": "illusion",
+      "visual_input": "2",
+      "set_id": "1",
+      "figure_id": "1",
+      "sample_note": "box",
+      "question_id": "0",
+      "question": "Is the right grey box larger than the left grey box?",
+      "gt_answer_details": "The right grey box is smaller than the left grey box.",
+      "gt_answer": "0",
+      "filename": "./VD/illusion/1_1.png"
+    }
+  ],
+  "downloaded_images": [
+    {
+      "filename": "1_1.png",
+      "size_bytes": 271735,
+      "dimensions": [
+        1916,
+        474
+      ],
+      "sha256": "95b57ae306ba3e0ab2c56964d18cf05c8df0b8a16f069ce46c8a7714dbbcefa6"
+    },
+    {
+      "filename": "f-01.png",
+      "size_bytes": 775605,
+      "dimensions": [
+        1700,
+        1884
+      ],
+      "sha256": "cab033aa11dce9619742575a1ab7e4a45773c4b08466e5de4fa5410d2955f29b"
+    },
+    {
+      "filename": "f-02.png",
+      "size_bytes": 650449,
+      "dimensions": [
+        1700,
+        1996
+      ],
+      "sha256": "04bc61967cde5f397cb69685e5eca5ab4c37335e21bdd83bfeb35650ee030ef0"
+    },
+    {
+      "filename": "f-03.png",
+      "size_bytes": 319519,
+      "dimensions": [
+        1700,
+        2200
+      ],
+      "sha256": "bdc943889810ffcfb19596bcf727f71b1496e5488596c9093fc27bf5f785d3a3"
+    },
+    {
+      "filename": "f-04.png",
+      "size_bytes": 588509,
+      "dimensions": [
+        1700,
+        1614
+      ],
+      "sha256": "6f48b94ea213d61757c53c22aaf559a792b57cb7bb7ad7f40223bbe0163d562a"
+    },
+    {
+      "filename": "f-05.png",
+      "size_bytes": 423783,
+      "dimensions": [
+        1700,
+        1422
+      ],
+      "sha256": "fe73b945012b00a08871cb2551e7844b791d4e006d4069f12cae290b166368bf"
+    },
+    {
+      "filename": "f-06.png",
+      "size_bytes": 768247,
+      "dimensions": [
+        1700,
+        2200
+      ],
+      "sha256": "a0eeb3ee97e8bac14a859189e94fa5e08902d899e291451412166e59042afab0"
+    },
+    {
+      "filename": "f-07.png",
+      "size_bytes": 324046,
+      "dimensions": [
+        1700,
+        2200
+      ],
+      "sha256": "db428234dec426cc020e57cdc40b073a181856c49f97e6f5ed9f3434df8a4ff7"
+    },
+    {
+      "filename": "f-08.png",
+      "size_bytes": 908746,
+      "dimensions": [
+        1700,
+        1535
+      ],
+      "sha256": "befda4ff6985f540a48659dc86c827cf3685508759d32030b1f5c49c2fde4480"
+    },
+    {
+      "filename": "f-09.png",
+      "size_bytes": 378911,
+      "dimensions": [
+        1700,
+        2200
+      ],
+      "sha256": "e9d394fca799c3726d6d71de9bb25b0dc84a973e3bec6f0003632a5715e466c1"
+    },
+    {
+      "filename": "f-10.png",
+      "size_bytes": 721804,
+      "dimensions": [
+        1700,
+        1454
+      ],
+      "sha256": "74b673273e7a368c59bd7f095d497fd77235e701b0b8604a4152260cf2af6367"
+    },
+    {
+      "filename": "f-11.png",
+      "size_bytes": 293976,
+      "dimensions": [
+        1700,
+        2200
+      ],
+      "sha256": "1e5bace655896d4673ab2dd3c9a3625f7fb0d7f2404079975f441f2a027fc59e"
+    },
+    {
+      "filename": "f-12.png",
+      "size_bytes": 617934,
+      "dimensions": [
+        1700,
+        1408
+      ],
+      "sha256": "872d710dbced17e38d7cc905f410852a77889b84cd47158db5271f482169d41e"
+    },
+    {
+      "filename": "f-13.png",
+      "size_bytes": 440408,
+      "dimensions": [
+        1700,
+        2200
+      ],
+      "sha256": "bf0d0f50e7eb54d46735ff05ab5f3bbe53147f90b0a8b7026dfcdb47b51d1e6e"
+    },
+    {
+      "filename": "f-14.png",
+      "size_bytes": 218652,
+      "dimensions": [
+        1700,
+        2200
+      ],
+      "sha256": "a3922ad535c414e25f1c9a335d6cd79f2482811da237aa453c60889639822a3d"
+    },
+    {
+      "filename": "f-15.png",
+      "size_bytes": 615894,
+      "dimensions": [
+        1700,
+        1051
+      ],
+      "sha256": "d44a26087e20dbbf7685eb97a01a88181743fcebc8a0dcdb9bc84efb942b0abb"
+    },
+    {
+      "filename": "f-16.png",
+      "size_bytes": 274296,
+      "dimensions": [
+        1700,
+        2200
+      ],
+      "sha256": "355053b5acf6f7ac7c582586b6d3693a8b99c7ec63b3877ff14e78c9da6f6362"
+    },
+    {
+      "filename": "f-17.png",
+      "size_bytes": 771875,
+      "dimensions": [
+        1700,
+        1458
+      ],
+      "sha256": "42973356fd4bb563b30545211be0f5c2fa616b1165c9a8047db69e3957da8b11"
+    },
+    {
+      "filename": "f-18.png",
+      "size_bytes": 262649,
+      "dimensions": [
+        1700,
+        2200
+      ],
+      "sha256": "633ea7e0ff97acbe4adeebb4365bab48b33679472cca2659d72f06c5f6451dab"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "dataset_name": "R-Bench: Benchmarking Relationship Hallucination in Large Vision-Language Models",
+  "official_paper": "https://proceedings.mlr.press/v235/wu24l.html",
+  "conference": "ICML 2024",
+  "authors": [
+    "Mingrui Wu",
+    "Jiayi Ji",
+    "Oucheng Huang",
+    "Jiale Li",
+    "Yuhang Wu",
+    "Xiaoshuai Sun",
+    "Rongrong Ji"
+  ],
+  "repository": "https://github.com/mrwu-mac/R-Bench",
+  "license": "Apache 2.0",
+  "distribution_format": "Single Google Drive archive (image-level_filterd.json, instance-level_filterd.json)",
+  "acquisition_decision": "METADATA_PRESERVED_ARCHIVE_SKIPPED",
+  "rationale": "Per Stage 7 acquisition rules: R-Bench distributes its full dataset as a multi-GB Google Drive archive. Full archive download is skipped to strictly adhere to the local storage ceiling and avoid unapproved large downloads."
+}

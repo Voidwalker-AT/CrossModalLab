@@ -1,0 +1,424 @@
+{
+  "timestamp": "2026-10-18T08:59:18Z",
+  "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+  "revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+  "total_evaluated": 15,
+  "total_conforming": 8,
+  "overall_accuracy": 0.5333,
+  "abstention_failures": 3,
+  "deductive_errors": 4,
+  "by_topology": {
+    "forward_chain": {
+      "n": 3,
+      "conforming": 3,
+      "accuracy": 1.0,
+      "decisions": [
+        "Yes",
+        "Yes",
+        "Yes"
+      ]
+    },
+    "reverse_chain": {
+      "n": 3,
+      "conforming": 1,
+      "accuracy": 0.333,
+      "decisions": [
+        "Yes",
+        "No",
+        "Yes"
+      ]
+    },
+    "underdetermined_fork": {
+      "n": 3,
+      "conforming": 0,
+      "accuracy": 0.0,
+      "decisions": [
+        "Yes",
+        "Yes",
+        "Yes"
+      ]
+    },
+    "unimodal_visual": {
+      "n": 3,
+      "conforming": 1,
+      "accuracy": 0.333,
+      "decisions": [
+        "No",
+        "No",
+        "No"
+      ]
+    },
+    "unimodal_text": {
+      "n": 3,
+      "conforming": 3,
+      "accuracy": 1.0,
+      "decisions": [
+        "Yes",
+        "No",
+        "Yes"
+      ]
+    }
+  },
+  "records": [
+    {
+      "test_index": 1,
+      "sample_id": "ctrl_forward_chain_0001",
+      "topology": "forward_chain",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_forward_chain_0001.png",
+      "image_sha256": "58ba2e491acf33e07ae1ea879e86ea4cc4474f9c04f13a16cbbe2abda13804e6",
+      "text_premise": "The green cylinder is to the left of the magenta prism.",
+      "query": "Based on the image and statement, is the cyan box to the left of the magenta prism?",
+      "prompt_user_text": "The green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 3.394,
+      "peak_vram_mib": 3336.59,
+      "raw_output": "User:\n\n\n\n\nThe green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+      "parsed_decision": "Yes",
+      "conforms_to_ground_truth": true,
+      "failure_category": "none"
+    },
+    {
+      "test_index": 2,
+      "sample_id": "ctrl_forward_chain_0002",
+      "topology": "forward_chain",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_forward_chain_0002.png",
+      "image_sha256": "726b22198877bfd800e08e0ce8c159ab9119ef291d7b7832a95421c9ecc7b109",
+      "text_premise": "The purple pyramid is to the left of the blue cube.",
+      "query": "Based on the image and statement, is the green cylinder to the left of the blue cube?",
+      "prompt_user_text": "The purple pyramid is to the left of the blue cube.\n\nQuestion: Based on the image and statement, is the green cylinder to the left of the blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.693,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nThe purple pyramid is to the left of the blue cube.\n\nQuestion: Based on the image and statement, is the green cylinder to the left of the blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+      "parsed_decision": "Yes",
+      "conforms_to_ground_truth": true,
+      "failure_category": "none"
+    },
+    {
+      "test_index": 3,
+      "sample_id": "ctrl_forward_chain_0003",
+      "topology": "forward_chain",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_forward_chain_0003.png",
+      "image_sha256": "6fbab5991c0b364de696080f0fd0ed912a1f4366f32728c5575105bd342f3e51",
+      "text_premise": "The yellow cone is to the left of the red sphere.",
+      "query": "Based on the image and statement, is the orange torus to the left of the red sphere?",
+      "prompt_user_text": "The yellow cone is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the red sphere?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.628,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nThe yellow cone is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the red sphere?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+      "parsed_decision": "Yes",
+      "conforms_to_ground_truth": true,
+      "failure_category": "none"
+    },
+    {
+      "test_index": 4,
+      "sample_id": "ctrl_reverse_chain_0037",
+      "topology": "reverse_chain",
+      "ground_truth_decision": "No",
+      "epistemic_status": "contradicted",
+      "image_file": "ctrl_reverse_chain_0037.png",
+      "image_sha256": "a0f1ea243dcd775b0f30508530490e491901787c3f15ef1f6fc532295cc3797b",
+      "text_premise": "The cyan box is to the left of the yellow cone.",
+      "query": "Based on the image and statement, is the blue cube to the left of the cyan box?",
+      "prompt_user_text": "The cyan box is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the blue cube to the left of the cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.661,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nThe cyan box is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the blue cube to the left of the cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+      "parsed_decision": "Yes",
+      "conforms_to_ground_truth": false,
+      "failure_category": "deductive_error"
+    },
+    {
+      "test_index": 5,
+      "sample_id": "ctrl_reverse_chain_0038",
+      "topology": "reverse_chain",
+      "ground_truth_decision": "No",
+      "epistemic_status": "contradicted",
+      "image_file": "ctrl_reverse_chain_0038.png",
+      "image_sha256": "7c23eae1adca7d808630a5732f7f3ed9fbc7d8ab578e2f8e78ea78dd3decfd43",
+      "text_premise": "The green cylinder is to the left of the yellow cone.",
+      "query": "Based on the image and statement, is the red sphere to the left of the green cylinder?",
+      "prompt_user_text": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.679,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nThe green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: No.",
+      "parsed_decision": "No",
+      "conforms_to_ground_truth": true,
+      "failure_category": "none"
+    },
+    {
+      "test_index": 6,
+      "sample_id": "ctrl_reverse_chain_0039",
+      "topology": "reverse_chain",
+      "ground_truth_decision": "No",
+      "epistemic_status": "contradicted",
+      "image_file": "ctrl_reverse_chain_0039.png",
+      "image_sha256": "674570b73ae4d925248be9c61cb6ede040455f563a756d8d18a6fb0d03e4832b",
+      "text_premise": "The yellow cone is to the left of the green cylinder.",
+      "query": "Based on the image and statement, is the cyan box to the left of the yellow cone?",
+      "prompt_user_text": "The yellow cone is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.643,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nThe yellow cone is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+      "parsed_decision": "Yes",
+      "conforms_to_ground_truth": false,
+      "failure_category": "deductive_error"
+    },
+    {
+      "test_index": 7,
+      "sample_id": "ctrl_underdetermined_fork_0073",
+      "topology": "underdetermined_fork",
+      "ground_truth_decision": "Undetermined",
+      "epistemic_status": "underdetermined",
+      "image_file": "ctrl_underdetermined_fork_0073.png",
+      "image_sha256": "f18709fd3d9d5fdbe730a4e73730206ec255d80732989556b3e207f0b1cdbc1c",
+      "text_premise": "The cyan box is to the left of the green cylinder.",
+      "query": "Based on the image and statement, is the orange torus to the left of the cyan box?",
+      "prompt_user_text": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.618,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nThe cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+      "parsed_decision": "Yes",
+      "conforms_to_ground_truth": false,
+      "failure_category": "abstention_failure"
+    },
+    {
+      "test_index": 8,
+      "sample_id": "ctrl_underdetermined_fork_0074",
+      "topology": "underdetermined_fork",
+      "ground_truth_decision": "Undetermined",
+      "epistemic_status": "underdetermined",
+      "image_file": "ctrl_underdetermined_fork_0074.png",
+      "image_sha256": "c3701892dd0547f14c643fd9c3fe5e13e86bb66f1c5205d4b129f3951df4b35f",
+      "text_premise": "The orange torus is to the left of the blue cube.",
+      "query": "Based on the image and statement, is the yellow cone to the left of the blue cube?",
+      "prompt_user_text": "The orange torus is to the left of the blue cube.\n\nQuestion: Based on the image and statement, is the yellow cone to the left of the blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.576,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nThe orange torus is to the left of the blue cube.\n\nQuestion: Based on the image and statement, is the yellow cone to the left of the blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+      "parsed_decision": "Yes",
+      "conforms_to_ground_truth": false,
+      "failure_category": "abstention_failure"
+    },
+    {
+      "test_index": 9,
+      "sample_id": "ctrl_underdetermined_fork_0075",
+      "topology": "underdetermined_fork",
+      "ground_truth_decision": "Undetermined",
+      "epistemic_status": "underdetermined",
+      "image_file": "ctrl_underdetermined_fork_0075.png",
+      "image_sha256": "7ad23f25abc5dad98ead533af0f40a37e9ef272f73f79711467f45c07e960f11",
+      "text_premise": "The yellow cone is to the left of the purple pyramid.",
+      "query": "Based on the image and statement, is the orange torus to the left of the yellow cone?",
+      "prompt_user_text": "The yellow cone is to the left of the purple pyramid.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.552,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nThe yellow cone is to the left of the purple pyramid.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+      "parsed_decision": "Yes",
+      "conforms_to_ground_truth": false,
+      "failure_category": "abstention_failure"
+    },
+    {
+      "test_index": 10,
+      "sample_id": "ctrl_unimodal_visual_0109",
+      "topology": "unimodal_visual",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_unimodal_visual_0109.png",
+      "image_sha256": "fd0a69d3af8e1ae881f54b3ef174000cd583312fa05292280290b589c454c24a",
+      "text_premise": "No additional statement is provided.",
+      "query": "Based on the image, is the magenta prism to the left of the orange torus?",
+      "prompt_user_text": "No additional statement is provided.\n\nQuestion: Based on the image, is the magenta prism to the left of the orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.627,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nNo additional statement is provided.\n\nQuestion: Based on the image, is the magenta prism to the left of the orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: No.",
+      "parsed_decision": "No",
+      "conforms_to_ground_truth": false,
+      "failure_category": "deductive_error"
+    },
+    {
+      "test_index": 11,
+      "sample_id": "ctrl_unimodal_visual_0110",
+      "topology": "unimodal_visual",
+      "ground_truth_decision": "No",
+      "epistemic_status": "contradicted",
+      "image_file": "ctrl_unimodal_visual_0110.png",
+      "image_sha256": "313b0cf586a1b81832cd0c609bc1b8c366bad2b04127946be5455037fa6ce544",
+      "text_premise": "No additional statement is provided.",
+      "query": "Based on the image, is the red sphere to the left of the blue cube?",
+      "prompt_user_text": "No additional statement is provided.\n\nQuestion: Based on the image, is the red sphere to the left of the blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.578,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nNo additional statement is provided.\n\nQuestion: Based on the image, is the red sphere to the left of the blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: No.",
+      "parsed_decision": "No",
+      "conforms_to_ground_truth": true,
+      "failure_category": "none"
+    },
+    {
+      "test_index": 12,
+      "sample_id": "ctrl_unimodal_visual_0111",
+      "topology": "unimodal_visual",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_unimodal_visual_0111.png",
+      "image_sha256": "5d5c1e5233b797fe4b27ce6420004907e774a0bd8ede21b2b80c7f70b799efbe",
+      "text_premise": "No additional statement is provided.",
+      "query": "Based on the image, is the red sphere to the left of the green cylinder?",
+      "prompt_user_text": "No additional statement is provided.\n\nQuestion: Based on the image, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.557,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nNo additional statement is provided.\n\nQuestion: Based on the image, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: No.",
+      "parsed_decision": "No",
+      "conforms_to_ground_truth": false,
+      "failure_category": "deductive_error"
+    },
+    {
+      "test_index": 13,
+      "sample_id": "ctrl_unimodal_text_0145",
+      "topology": "unimodal_text",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_unimodal_text_0145.png",
+      "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+      "text_premise": "The orange torus is to the left of the blue cube. The blue cube is to the left of the cyan box.",
+      "query": "Based on the statements, is the orange torus to the left of the cyan box?",
+      "prompt_user_text": "The orange torus is to the left of the blue cube. The blue cube is to the left of the cyan box.\n\nQuestion: Based on the statements, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.594,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nThe orange torus is to the left of the blue cube. The blue cube is to the left of the cyan box.\n\nQuestion: Based on the statements, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+      "parsed_decision": "Yes",
+      "conforms_to_ground_truth": true,
+      "failure_category": "none"
+    },
+    {
+      "test_index": 14,
+      "sample_id": "ctrl_unimodal_text_0146",
+      "topology": "unimodal_text",
+      "ground_truth_decision": "No",
+      "epistemic_status": "contradicted",
+      "image_file": "ctrl_unimodal_text_0146.png",
+      "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+      "text_premise": "The yellow cone is to the left of the blue cube. The blue cube is to the left of the red sphere.",
+      "query": "Based on the statements, is the red sphere to the left of the yellow cone?",
+      "prompt_user_text": "The yellow cone is to the left of the blue cube. The blue cube is to the left of the red sphere.\n\nQuestion: Based on the statements, is the red sphere to the left of the yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.601,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nThe yellow cone is to the left of the blue cube. The blue cube is to the left of the red sphere.\n\nQuestion: Based on the statements, is the red sphere to the left of the yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: No.",
+      "parsed_decision": "No",
+      "conforms_to_ground_truth": true,
+      "failure_category": "none"
+    },
+    {
+      "test_index": 15,
+      "sample_id": "ctrl_unimodal_text_0147",
+      "topology": "unimodal_text",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_unimodal_text_0147.png",
+      "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+      "text_premise": "The red sphere is to the left of the yellow cone. The yellow cone is to the left of the blue cube.",
+      "query": "Based on the statements, is the red sphere to the left of the blue cube?",
+      "prompt_user_text": "The red sphere is to the left of the yellow cone. The yellow cone is to the left of the blue cube.\n\nQuestion: Based on the statements, is the red sphere to the left of the blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "decoding_config": {
+        "max_new_tokens": 30,
+        "do_sample": false,
+        "temperature": null,
+        "top_p": null
+      },
+      "latency_seconds": 2.639,
+      "peak_vram_mib": 3336.6,
+      "raw_output": "User:\n\n\n\n\nThe red sphere is to the left of the yellow cone. The yellow cone is to the left of the blue cube.\n\nQuestion: Based on the statements, is the red sphere to the left of the blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+      "parsed_decision": "Yes",
+      "conforms_to_ground_truth": true,
+      "failure_category": "none"
+    }
+  ]
+}

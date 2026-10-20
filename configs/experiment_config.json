@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "description": "Shared CrossModalLab experiment configuration. ULVO and standard-Python contributors must use these pinned values for comparable scientific runs. Do not change model revision or quantization without an approved protocol amendment.",
+  "seed": 42,
+  "model": {
+    "model_id": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+    "revision": "482adb537c021c86670beed01cd58990d01e72e4",
+    "license": "Apache 2.0",
+    "local_files_only_default": true,
+    "notes": "Primary research model. Weights are external assets; see datasets/metadata/smolvlm2_acquisition_manifest.json and docs/ASSET_MANIFEST.md."
+  },
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_use_double_quant": true,
+    "backend": "bitsandbytes",
+    "notes": "Pinned on the primary RTX 2050 (4 GB VRAM) workflow. Not assumed portable to every contributor GPU."
+  },
+  "prompt_template": {
+    "style": "smolvlm_chat_template",
+    "relation": "left-of",
+    "candidate_answer_tokens": [" Yes", " No", " Undetermined"],
+    "notes": "Exact spacing of candidate answers is part of the scoring protocol."
+  },
+  "candidate_answers": {
+    "strings": [" Yes", " No", " Undetermined"],
+    "scoring_uses_leading_space": true
+  },
+  "scoring": {
+    "methods": [
+      "first_token_logprobs",
+      "full_sequence_log_likelihood",
+      "length_normalized_log_likelihood",
+      "greedy_decode_label_parse"
+    ],
+    "primary_ranking": "length_normalized_log_likelihood",
+    "notes": "Candidate-normalized softmax scores are not calibrated correctness probabilities."
+  },
+  "datasets": {
+    "controlled_benchmark": {
+      "path": "datasets/controlled",
+      "manifest": "datasets/controlled/manifests/controlled_180_manifest.json",
+      "jsonl": "datasets/controlled/controlled_benchmark_180.jsonl",
+      "status": "source_generated"
+    },
+    "diagnostic_controls": {
+      "path": "datasets/controlled",
+      "manifest": "datasets/controlled/manifests/diagnostic_controls_manifest.json",
+      "status": "source_generated"
+    },
+    "splits": {
+      "in_distribution": "controlled_benchmark_180.jsonl#split=in_distribution",
+      "note": "Holdout/out-of-distribution splits remain symbolic-generator controlled; do not edit ground-truth JSONL by hand."
+    }
+  },
+  "artifacts": {
+    "evaluations_dir": "artifacts/evaluations",
+    "reports_dir": "artifacts/reports",
+    "telemetry_dir": "artifacts/telemetry",
+    "activations_dir": "artifacts/activations"
+  },
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens_default": 20,
+    "attn_implementation": "eager",
+    "inputs_merger_patch": "smolvlm_masked_scatter_canonical"
+  }
+}

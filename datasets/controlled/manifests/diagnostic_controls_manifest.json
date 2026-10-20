@@ -1,0 +1,78 @@
+{
+  "original": {
+    "file": "diag_orig_cyan_left_green_right.png",
+    "path": "datasets\\controlled\\diagnostic_images\\diag_orig_cyan_left_green_right.png",
+    "sha256": "58ba2e491acf33e07ae1ea879e86ea4cc4474f9c04f13a16cbbe2abda13804e6",
+    "entities": {
+      "cyan_box": {
+        "bbox": [
+          106,
+          179,
+          170,
+          243
+        ],
+        "role": "left"
+      },
+      "green_cylinder": {
+        "bbox": [
+          223,
+          152,
+          287,
+          216
+        ],
+        "role": "right"
+      }
+    },
+    "description": "Original pairwise layout: cyan_box on left, green_cylinder on right"
+  },
+  "reversed": {
+    "file": "diag_rev_green_left_cyan_right.png",
+    "path": "datasets\\controlled\\diagnostic_images\\diag_rev_green_left_cyan_right.png",
+    "sha256": "ac1dfc8fc27c7c963c79a05456a3c4ca7fd8751388154311c56cae0ad43f04b4",
+    "entities": {
+      "green_cylinder": {
+        "bbox": [
+          106,
+          179,
+          170,
+          243
+        ],
+        "role": "left"
+      },
+      "cyan_box": {
+        "bbox": [
+          223,
+          152,
+          287,
+          216
+        ],
+        "role": "right"
+      }
+    },
+    "description": "Counterfactual swapped layout: green_cylinder on left, cyan_box on right"
+  },
+  "object_removed": {
+    "file": "diag_ablation_cyan_only.png",
+    "path": "datasets\\controlled\\diagnostic_images\\diag_ablation_cyan_only.png",
+    "sha256": "81925f1bc4796de5075f7ae4a21df42616bd2a5c3763ef291789e9dce4b9d863",
+    "entities": {
+      "cyan_box": {
+        "bbox": [
+          106,
+          179,
+          170,
+          243
+        ],
+        "role": "left"
+      }
+    },
+    "description": "Ablated layout: green_cylinder removed, only cyan_box present"
+  },
+  "blank": {
+    "file": "diag_blank_canvas.png",
+    "path": "datasets\\controlled\\diagnostic_images\\diag_blank_canvas.png",
+    "sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+    "entities": {},
+    "description": "Visual erasure: blank background canvas with no objects"
+  }
+}

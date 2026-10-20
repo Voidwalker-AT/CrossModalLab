@@ -218,3 +218,55 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# CrossModalLab dataset artifacts and model weights
+# Default: keep bulky or externally licensed raw assets out of Git.
+datasets/*/*.jsonl
+datasets/test_scratch/
+datasets/controlled/images/
+datasets/real_world/**/*.jpg
+datasets/real_world/**/*.jpeg
+datasets/real_world/**/*.png
+datasets/benchmarks/**/*.jpg
+datasets/benchmarks/**/*.jpeg
+datasets/benchmarks/**/*.png
+# External full/subset question dumps (re-acquire via scripts; do not republish bulk files)
+datasets/benchmarks/hallusionbench/HallusionBench.json
+*.safetensors
+*.bin
+*.pt
+*.npy
+*.npz
+
+# Publish small project-generated symbolic ground truth (required for CPU reproducibility)
+!datasets/controlled/controlled_benchmark_180.jsonl
+!datasets/relational_benchmark_v1_id.jsonl
+!datasets/relational_benchmark_v1_ho.jsonl
+
+# Activation tensors and caches
+artifacts/activations/
+.cache_activations/
+.cache/
+
+# Local contributor configuration and secrets
+.env
+.env.*
+!.env.example
+configs/local.env
+*.local.env
+
+# ULVO thin connector only (never vault/env contents)
+# .ulvo/ is intentionally tracked as a thin connector (manifest only).
+.ulvo/**
+!.ulvo/manifest.toml
+
+# Temporary migration helpers
+_tmp_*.py
+
+# Keep metadata manifests and reports trackable
+!datasets/**/manifest.json
+!datasets/**/manifests/*.json
+!datasets/metadata/*.json
+!datasets/metadata/*.md
+!artifacts/reports/*.md
+!artifacts/telemetry/*.json

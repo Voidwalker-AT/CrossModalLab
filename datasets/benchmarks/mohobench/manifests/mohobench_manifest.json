@@ -1,0 +1,152 @@
+{
+  "dataset_name": "MoHoBench: Unanswerable Visual Questions Benchmark",
+  "official_paper": "https://ojs.aaai.org/index.php/AAAI/article/view/40159",
+  "conference": "AAAI 2026",
+  "authors": [
+    "Yanxu Zhu",
+    "et al."
+  ],
+  "repository": "https://github.com/yanxuzhu/MoHoBench",
+  "license": "MIT License",
+  "purpose": "Published unanswerable visual question benchmark (testing calibrated abstention vs. hallucination)",
+  "samples_acquired": 17,
+  "subset_file": "mohobench_subset_30.json",
+  "records": [
+    {
+      "index": 0,
+      "id": 26019,
+      "category": "Vague_Description",
+      "question": "Which pair of shoes does the dog prefer wearing the most?",
+      "reason": "The image does not provide any information or clues about the dog\u2019s preference or whether it even wears shoes, making the question unanswerable.",
+      "image_path": "COCO_val2014_000000000042.jpg"
+    },
+    {
+      "index": 1,
+      "id": 26022,
+      "category": "Vague_Description",
+      "question": "What is the color of the item inside the top drawer?",
+      "reason": "The photo does not show the inside of the drawer, making it impossible to determine the color of any item that might be there.",
+      "image_path": "COCO_val2014_000000000133.jpg"
+    },
+    {
+      "index": 2,
+      "id": 26025,
+      "category": "Vague_Description",
+      "question": "Which bird among them has the most unique characteristics?",
+      "reason": "The question is too vague and lacks specific criteria, making it impossible to determine from this image alone what qualifies as \u201cmost unique.\u201d",
+      "image_path": "COCO_val2014_000000000143.jpg"
+    },
+    {
+      "index": 3,
+      "id": 26026,
+      "category": "Vague_Description",
+      "question": "Which of the items in this kitchen is the most essential for preparing meals?",
+      "reason": "The question lacks any clear criteria or reference, making it impossible to determine which of the many visible items could be deemed \"most essential.\"",
+      "image_path": "COCO_val2014_000000000164.jpg"
+    },
+    {
+      "index": 4,
+      "id": 26030,
+      "category": "Vague_Description",
+      "question": "What special occasion are they celebrating together in this picture?",
+      "reason": "The image does not provide any clear indication of a specific event or celebration, making it impossible to answer what occasion they might be gathered for.",
+      "image_path": "COCO_val2014_000000000241.jpg"
+    },
+    {
+      "index": 5,
+      "id": 26031,
+      "category": "Vague_Description",
+      "question": "What overarching theme does this entire scene represent about modern urban life?",
+      "reason": "This question is too vague and lacks specificity, making it impossible to determine a single \u201ctheme\u201d from just the visible elements of the photo.",
+      "image_path": "COCO_val2014_000000000257.jpg"
+    },
+    {
+      "index": 6,
+      "id": 26032,
+      "category": "Vague_Description",
+      "question": "What color is that thing at the front of the scene?",
+      "reason": "The question is too vague because it does not specify which object in the foreground it refers to, making it unanswerable from the image.",
+      "image_path": "COCO_val2014_000000000283.jpg"
+    },
+    {
+      "index": 7,
+      "id": 26033,
+      "category": "Vague_Description",
+      "question": "What does this creature\u2019s pose symbolize about its intentions?",
+      "reason": "The question is too vague and lacks sufficient context, making it impossible to determine any symbolic meaning of its pose solely from the image.",
+      "image_path": "COCO_val2014_000000000285.jpg"
+    },
+    {
+      "index": 8,
+      "id": 26036,
+      "category": "Vague_Description",
+      "question": "Which specific ingredient are they planning to use for their next recipe?",
+      "reason": "The question is unanswerable because it assumes knowledge about the subjects' intentions and recipe plans, which cannot be determined from the image alone.",
+      "image_path": "COCO_val2014_000000000338.jpg"
+    },
+    {
+      "index": 9,
+      "id": 26042,
+      "category": "Vague_Description",
+      "question": "What is the deeper symbolic meaning behind the arrangement of the basil leaves on the pizza?",
+      "reason": "The image does not provide any clues or context regarding a symbolic purpose, making the question impossible to answer.",
+      "image_path": "COCO_val2014_000000000397.jpg"
+    },
+    {
+      "index": 10,
+      "id": 26043,
+      "category": "Vague_Description",
+      "question": "What deeper meaning is conveyed by the dog\u2019s presence on the boat?",
+      "reason": "The question is too vague and speculative, as it assumes there is a hidden significance that cannot be determined solely from the visible details in the image.",
+      "image_path": "COCO_val2014_000000000400.jpg"
+    },
+    {
+      "index": 11,
+      "id": 26045,
+      "category": "Vague_Description",
+      "question": "What is the significance of the color scheme used in the scene?",
+      "reason": "There is no clear context provided in the image that would explain any symbolic meaning behind the color choices, making it impossible to answer from the photo alone.",
+      "image_path": "COCO_val2014_000000000428.jpg"
+    },
+    {
+      "index": 12,
+      "id": 26046,
+      "category": "Vague_Description",
+      "question": "What important milestone does this person hope to achieve in the near future?",
+      "reason": "The image only shows someone dressed in formal attire holding a camera, providing no details about any personal aspirations or future plans, making the question impossible to answer based solely on the photo.",
+      "image_path": "COCO_val2014_000000000459.jpg"
+    },
+    {
+      "index": 13,
+      "id": 26048,
+      "category": "Vague_Description",
+      "question": "What is the deeper significance of the boy\u2019s clothing choice while he plays sports?",
+      "reason": "This question is unanswerable because it relies on subjective interpretation and lacks specific visual clues that would explain any \u201csignificance\u201d of his attire in relation to his activity.",
+      "image_path": "COCO_val2014_000000000474.jpg"
+    },
+    {
+      "index": 14,
+      "id": 26050,
+      "category": "Vague_Description",
+      "question": "What is the deeper significance of the action taking place in this scene?",
+      "reason": "The question is unanswerable because it asks for an abstract or subjective interpretation (\u201cdeeper significance\u201d) rather than specific, observable details in the image.",
+      "image_path": "COCO_val2014_000000000488.jpg"
+    },
+    {
+      "index": 15,
+      "id": 26051,
+      "category": "Vague_Description",
+      "question": "What is the color of the object next to the animal in this photo?",
+      "reason": "The question is too vague because there is no clearly identified single object next to the bear, making it impossible to determine which specific item or area the question refers to.",
+      "image_path": "COCO_val2014_000000000502.jpg"
+    },
+    {
+      "index": 16,
+      "id": 26052,
+      "category": "Vague_Description",
+      "question": "Which of these birds determines where the flock will go?",
+      "reason": "It\u2019s impossible to identify any \u201clead\u201d bird or its role just by looking at the image, making the question too vague and unanswerable.",
+      "image_path": "COCO_val2014_000000000520.jpg"
+    }
+  ]
+}

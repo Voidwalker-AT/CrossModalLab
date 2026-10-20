@@ -1,0 +1,16 @@
+# CrossModalLab portable core requirements (Mode B / standard Python).
+# Pins match requirements.lock where the package is platform-independent.
+#
+# Install (CPU-only symbolic + controlled image generation):
+#   python -m pip install -r requirements-core.txt
+#
+# This file intentionally omits:
+#   - torch / torchvision (CUDA-specific; install per docs/DEPENDENCIES.md)
+#   - bitsandbytes (GPU quantization)
+#   - transformers / accelerate (VLM inference)
+#
+# Do not regenerate or replace requirements.lock with this file.
+
+pillow==12.3.0
+jsonschema==4.26.0
+psutil==7.2.2

@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-10-18T08:47:43Z",
+  "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+  "revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+  "device": "cuda:0",
+  "device_name": "NVIDIA GeForce RTX 2050",
+  "total_vram_mib": 4095.5,
+  "torch_version": "2.6.0+cu124",
+  "cuda_version": "12.4",
+  "bf16_supported": true,
+  "stages": {
+    "baseline": {
+      "vram_allocated_mib": 0.0,
+      "vram_reserved_mib": 0.0,
+      "host_ram_mib": 501.92
+    },
+    "processor_init": {
+      "duration_sec": 0.364
+    },
+    "model_loading": {
+      "duration_sec": 2.202,
+      "vram_allocated_mib": 988.42,
+      "vram_reserved_mib": 1012.0,
+      "peak_vram_mib": 988.42,
+      "host_ram_mib": 630.14
+    },
+    "inference_1": {
+      "prompt": "Is the red square to the left of the blue square? Answer Yes or No.",
+      "duration_sec": 4.741,
+      "peak_vram_mib": 3336.59,
+      "generated_tokens": 1155,
+      "raw_output": "User:\n\n\n\n\nIs the red square to the left of the blue square? Answer Yes or No.\nAssistant: Yes."
+    },
+    "inference_2": {
+      "duration_sec": 3.091,
+      "peak_vram_mib": 3336.6,
+      "output_identical": true,
+      "raw_output": "User:\n\n\n\n\nIs the red square to the left of the blue square? Answer Yes or No.\nAssistant: Yes."
+    }
+  },
+  "hardware_verdict": {
+    "fits_under_4gb_ceiling": true,
+    "peak_overall_vram_mib": 3336.6,
+    "vram_headroom_mib": 758.9,
+    "repeatability_pass": true,
+    "status": "PASS"
+  }
+}

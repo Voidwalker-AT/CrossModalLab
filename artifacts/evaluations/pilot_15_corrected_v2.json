@@ -1,0 +1,1211 @@
+{
+  "timestamp": "2026-10-18T09:42:43Z",
+  "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+  "revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+  "total_evaluated": 15,
+  "v1_total_conforming": 8,
+  "v2_total_conforming": 8,
+  "v2_overall_accuracy": 0.5333,
+  "abstention_failures": 3,
+  "deductive_errors": 4,
+  "total_order_flipped_cases": 8,
+  "by_topology": {
+    "forward_chain": {
+      "n": 3,
+      "v1_conforming": 3,
+      "v2_canon_conforming": 3,
+      "v2_canon_accuracy": 1.0,
+      "decisions_canon": [
+        "Yes",
+        "Yes",
+        "Yes"
+      ],
+      "decisions_perm": [
+        "No",
+        "Yes",
+        "Yes"
+      ],
+      "order_flipped_count": 1,
+      "mean_p_yes": 0.797,
+      "mean_p_no": 0.2021,
+      "mean_p_und": 1.2e-05
+    },
+    "reverse_chain": {
+      "n": 3,
+      "v1_conforming": 1,
+      "v2_canon_conforming": 1,
+      "v2_canon_accuracy": 0.333,
+      "decisions_canon": [
+        "Yes",
+        "No",
+        "Yes"
+      ],
+      "decisions_perm": [
+        "No",
+        "No",
+        "Yes"
+      ],
+      "order_flipped_count": 1,
+      "mean_p_yes": 0.5188,
+      "mean_p_no": 0.4778,
+      "mean_p_und": 0.002006
+    },
+    "underdetermined_fork": {
+      "n": 3,
+      "v1_conforming": 0,
+      "v2_canon_conforming": 0,
+      "v2_canon_accuracy": 0.0,
+      "decisions_canon": [
+        "Yes",
+        "Yes",
+        "Yes"
+      ],
+      "decisions_perm": [
+        "No",
+        "Yes",
+        "No"
+      ],
+      "order_flipped_count": 2,
+      "mean_p_yes": 0.6661,
+      "mean_p_no": 0.3336,
+      "mean_p_und": 1.5e-05
+    },
+    "unimodal_visual": {
+      "n": 3,
+      "v1_conforming": 1,
+      "v2_canon_conforming": 1,
+      "v2_canon_accuracy": 0.333,
+      "decisions_canon": [
+        "No",
+        "No",
+        "No"
+      ],
+      "decisions_perm": [
+        "Yes",
+        "Yes",
+        "No"
+      ],
+      "order_flipped_count": 2,
+      "mean_p_yes": 0.1545,
+      "mean_p_no": 0.8455,
+      "mean_p_und": 0.0
+    },
+    "unimodal_text": {
+      "n": 3,
+      "v1_conforming": 3,
+      "v2_canon_conforming": 3,
+      "v2_canon_accuracy": 1.0,
+      "decisions_canon": [
+        "Yes",
+        "No",
+        "Yes"
+      ],
+      "decisions_perm": [
+        "No",
+        "No",
+        "No"
+      ],
+      "order_flipped_count": 2,
+      "mean_p_yes": 0.5393,
+      "mean_p_no": 0.403,
+      "mean_p_und": 0.018264
+    }
+  },
+  "records": [
+    {
+      "test_index": 1,
+      "sample_id": "ctrl_forward_chain_0001",
+      "topology": "forward_chain",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_forward_chain_0001.png",
+      "image_sha256": "58ba2e491acf33e07ae1ea879e86ea4cc4474f9c04f13a16cbbe2abda13804e6",
+      "text_premise": "The green cylinder is to the left of the magenta prism.",
+      "query": "Based on the image and statement, is the cyan box to the left of the magenta prism?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nThe green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1213,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true,
+        "failure_category": "none",
+        "latency_sec": 9.369,
+        "peak_vram_mib": 3500.38,
+        "first_token_probabilities": {
+          "P(Yes)": 0.7057,
+          "P(No)": 0.29418,
+          "P(Undetermined)": 5e-06
+        },
+        "first_token_logits": {
+          "logit(Yes)": 25.0,
+          "logit(No)": 24.125,
+          "logit(Undetermined)": 13.062,
+          "margin_yes_minus_no": 0.875,
+          "margin_yes_minus_und": 11.938
+        },
+        "top3_tokens": [
+          {
+            "token_str": " Yes",
+            "prob": 0.7057
+          },
+          {
+            "token_str": " No",
+            "prob": 0.2942
+          },
+          {
+            "token_str": " Answer",
+            "prob": 0.0001
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": false,
+        "first_token_probabilities": {
+          "P(Yes)": 0.34855,
+          "P(No)": 0.65118,
+          "P(Undetermined)": 9e-06
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": true,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 2,
+      "sample_id": "ctrl_forward_chain_0002",
+      "topology": "forward_chain",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_forward_chain_0002.png",
+      "image_sha256": "726b22198877bfd800e08e0ce8c159ab9119ef291d7b7832a95421c9ecc7b109",
+      "text_premise": "The purple pyramid is to the left of the blue cube.",
+      "query": "Based on the image and statement, is the green cylinder to the left of the blue cube?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nThe purple pyramid is to the left of the blue cube.\n\nQuestion: Based on the image and statement, is the green cylinder to the left of the blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1211,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true,
+        "failure_category": "none",
+        "latency_sec": 11.445,
+        "peak_vram_mib": 3751.41,
+        "first_token_probabilities": {
+          "P(Yes)": 0.8519,
+          "P(No)": 0.14804,
+          "P(Undetermined)": 2e-06
+        },
+        "first_token_logits": {
+          "logit(Yes)": 26.125,
+          "logit(No)": 24.375,
+          "logit(Undetermined)": 12.875,
+          "margin_yes_minus_no": 1.75,
+          "margin_yes_minus_und": 13.25
+        },
+        "top3_tokens": [
+          {
+            "token_str": " Yes",
+            "prob": 0.8519
+          },
+          {
+            "token_str": " No",
+            "prob": 0.148
+          },
+          {
+            "token_str": " Answer",
+            "prob": 0.0
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true,
+        "first_token_probabilities": {
+          "P(Yes)": 0.56209,
+          "P(No)": 0.43776,
+          "P(Undetermined)": 3e-06
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": false,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 3,
+      "sample_id": "ctrl_forward_chain_0003",
+      "topology": "forward_chain",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_forward_chain_0003.png",
+      "image_sha256": "6fbab5991c0b364de696080f0fd0ed912a1f4366f32728c5575105bd342f3e51",
+      "text_premise": "The yellow cone is to the left of the red sphere.",
+      "query": "Based on the image and statement, is the orange torus to the left of the red sphere?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nThe yellow cone is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the red sphere?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1212,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true,
+        "failure_category": "none",
+        "latency_sec": 11.183,
+        "peak_vram_mib": 3751.04,
+        "first_token_probabilities": {
+          "P(Yes)": 0.83339,
+          "P(No)": 0.16411,
+          "P(Undetermined)": 2.8e-05
+        },
+        "first_token_logits": {
+          "logit(Yes)": 23.125,
+          "logit(No)": 21.5,
+          "logit(Undetermined)": 12.812,
+          "margin_yes_minus_no": 1.625,
+          "margin_yes_minus_und": 10.312
+        },
+        "top3_tokens": [
+          {
+            "token_str": " Yes",
+            "prob": 0.8334
+          },
+          {
+            "token_str": " No",
+            "prob": 0.1641
+          },
+          {
+            "token_str": " Answer",
+            "prob": 0.0023
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true,
+        "first_token_probabilities": {
+          "P(Yes)": 0.52842,
+          "P(No)": 0.46634,
+          "P(Undetermined)": 2.4e-05
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": false,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 4,
+      "sample_id": "ctrl_reverse_chain_0037",
+      "topology": "reverse_chain",
+      "ground_truth_decision": "No",
+      "epistemic_status": "contradicted",
+      "image_file": "ctrl_reverse_chain_0037.png",
+      "image_sha256": "a0f1ea243dcd775b0f30508530490e491901787c3f15ef1f6fc532295cc3797b",
+      "text_premise": "The cyan box is to the left of the yellow cone.",
+      "query": "Based on the image and statement, is the blue cube to the left of the cyan box?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nThe cyan box is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the blue cube to the left of the cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1211,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false,
+        "failure_category": "deductive_error",
+        "latency_sec": 11.365,
+        "peak_vram_mib": 3751.19,
+        "first_token_probabilities": {
+          "P(Yes)": 0.52605,
+          "P(No)": 0.46424,
+          "P(Undetermined)": 0.005845
+        },
+        "first_token_logits": {
+          "logit(Yes)": 20.875,
+          "logit(No)": 20.75,
+          "logit(Undetermined)": 16.375,
+          "margin_yes_minus_no": 0.125,
+          "margin_yes_minus_und": 4.5
+        },
+        "top3_tokens": [
+          {
+            "token_str": " Yes",
+            "prob": 0.526
+          },
+          {
+            "token_str": " No",
+            "prob": 0.4642
+          },
+          {
+            "token_str": " Und",
+            "prob": 0.0058
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": true,
+        "first_token_probabilities": {
+          "P(Yes)": 0.34823,
+          "P(No)": 0.65059,
+          "P(Undetermined)": 4.6e-05
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": true,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 5,
+      "sample_id": "ctrl_reverse_chain_0038",
+      "topology": "reverse_chain",
+      "ground_truth_decision": "No",
+      "epistemic_status": "contradicted",
+      "image_file": "ctrl_reverse_chain_0038.png",
+      "image_sha256": "7c23eae1adca7d808630a5732f7f3ed9fbc7d8ab578e2f8e78ea78dd3decfd43",
+      "text_premise": "The green cylinder is to the left of the yellow cone.",
+      "query": "Based on the image and statement, is the red sphere to the left of the green cylinder?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nThe green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: No.",
+        "parsed_decision": "No",
+        "conforms": true
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1211,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": true,
+        "failure_category": "none",
+        "latency_sec": 11.642,
+        "peak_vram_mib": 3751.04,
+        "first_token_probabilities": {
+          "P(Yes)": 0.43773,
+          "P(No)": 0.56206,
+          "P(Undetermined)": 8.9e-05
+        },
+        "first_token_logits": {
+          "logit(Yes)": 23.875,
+          "logit(No)": 24.125,
+          "logit(Undetermined)": 15.375,
+          "margin_yes_minus_no": -0.25,
+          "margin_yes_minus_und": 8.5
+        },
+        "top3_tokens": [
+          {
+            "token_str": " No",
+            "prob": 0.562
+          },
+          {
+            "token_str": " Yes",
+            "prob": 0.4377
+          },
+          {
+            "token_str": " Und",
+            "prob": 0.0001
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": true,
+        "first_token_probabilities": {
+          "P(Yes)": 0.4071,
+          "P(No)": 0.59234,
+          "P(Undetermined)": 7e-06
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": false,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 6,
+      "sample_id": "ctrl_reverse_chain_0039",
+      "topology": "reverse_chain",
+      "ground_truth_decision": "No",
+      "epistemic_status": "contradicted",
+      "image_file": "ctrl_reverse_chain_0039.png",
+      "image_sha256": "674570b73ae4d925248be9c61cb6ede040455f563a756d8d18a6fb0d03e4832b",
+      "text_premise": "The yellow cone is to the left of the green cylinder.",
+      "query": "Based on the image and statement, is the cyan box to the left of the yellow cone?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nThe yellow cone is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1211,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false,
+        "failure_category": "deductive_error",
+        "latency_sec": 11.521,
+        "peak_vram_mib": 3751.23,
+        "first_token_probabilities": {
+          "P(Yes)": 0.59255,
+          "P(No)": 0.40725,
+          "P(Undetermined)": 8.3e-05
+        },
+        "first_token_logits": {
+          "logit(Yes)": 23.875,
+          "logit(No)": 23.5,
+          "logit(Undetermined)": 15.0,
+          "margin_yes_minus_no": 0.375,
+          "margin_yes_minus_und": 8.875
+        },
+        "top3_tokens": [
+          {
+            "token_str": " Yes",
+            "prob": 0.5925
+          },
+          {
+            "token_str": " No",
+            "prob": 0.4072
+          },
+          {
+            "token_str": " Und",
+            "prob": 0.0001
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false,
+        "first_token_probabilities": {
+          "P(Yes)": 0.56199,
+          "P(No)": 0.43768,
+          "P(Undetermined)": 0.000147
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": false,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 7,
+      "sample_id": "ctrl_underdetermined_fork_0073",
+      "topology": "underdetermined_fork",
+      "ground_truth_decision": "Undetermined",
+      "epistemic_status": "underdetermined",
+      "image_file": "ctrl_underdetermined_fork_0073.png",
+      "image_sha256": "f18709fd3d9d5fdbe730a4e73730206ec255d80732989556b3e207f0b1cdbc1c",
+      "text_premise": "The cyan box is to the left of the green cylinder.",
+      "query": "Based on the image and statement, is the orange torus to the left of the cyan box?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nThe cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1212,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false,
+        "failure_category": "abstention_failure",
+        "latency_sec": 11.176,
+        "peak_vram_mib": 3751.04,
+        "first_token_probabilities": {
+          "P(Yes)": 0.59263,
+          "P(No)": 0.40731,
+          "P(Undetermined)": 2e-06
+        },
+        "first_token_logits": {
+          "logit(Yes)": 24.75,
+          "logit(No)": 24.375,
+          "logit(Undetermined)": 12.25,
+          "margin_yes_minus_no": 0.375,
+          "margin_yes_minus_und": 12.5
+        },
+        "top3_tokens": [
+          {
+            "token_str": " Yes",
+            "prob": 0.5926
+          },
+          {
+            "token_str": " No",
+            "prob": 0.4073
+          },
+          {
+            "token_str": " Answer",
+            "prob": 0.0
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": false,
+        "first_token_probabilities": {
+          "P(Yes)": 0.40725,
+          "P(No)": 0.59254,
+          "P(Undetermined)": 2e-05
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": true,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 8,
+      "sample_id": "ctrl_underdetermined_fork_0074",
+      "topology": "underdetermined_fork",
+      "ground_truth_decision": "Undetermined",
+      "epistemic_status": "underdetermined",
+      "image_file": "ctrl_underdetermined_fork_0074.png",
+      "image_sha256": "c3701892dd0547f14c643fd9c3fe5e13e86bb66f1c5205d4b129f3951df4b35f",
+      "text_premise": "The orange torus is to the left of the blue cube.",
+      "query": "Based on the image and statement, is the yellow cone to the left of the blue cube?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nThe orange torus is to the left of the blue cube.\n\nQuestion: Based on the image and statement, is the yellow cone to the left of the blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1212,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false,
+        "failure_category": "abstention_failure",
+        "latency_sec": 11.392,
+        "peak_vram_mib": 3751.19,
+        "first_token_probabilities": {
+          "P(Yes)": 0.65092,
+          "P(No)": 0.34841,
+          "P(Undetermined)": 2.6e-05
+        },
+        "first_token_logits": {
+          "logit(Yes)": 24.0,
+          "logit(No)": 23.375,
+          "logit(Undetermined)": 13.875,
+          "margin_yes_minus_no": 0.625,
+          "margin_yes_minus_und": 10.125
+        },
+        "top3_tokens": [
+          {
+            "token_str": " Yes",
+            "prob": 0.6509
+          },
+          {
+            "token_str": " No",
+            "prob": 0.3484
+          },
+          {
+            "token_str": " Answer",
+            "prob": 0.0006
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false,
+        "first_token_probabilities": {
+          "P(Yes)": 0.62213,
+          "P(No)": 0.37735,
+          "P(Undetermined)": 1.2e-05
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": false,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 9,
+      "sample_id": "ctrl_underdetermined_fork_0075",
+      "topology": "underdetermined_fork",
+      "ground_truth_decision": "Undetermined",
+      "epistemic_status": "underdetermined",
+      "image_file": "ctrl_underdetermined_fork_0075.png",
+      "image_sha256": "7ad23f25abc5dad98ead533af0f40a37e9ef272f73f79711467f45c07e960f11",
+      "text_premise": "The yellow cone is to the left of the purple pyramid.",
+      "query": "Based on the image and statement, is the orange torus to the left of the yellow cone?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nThe yellow cone is to the left of the purple pyramid.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1212,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false,
+        "failure_category": "abstention_failure",
+        "latency_sec": 11.296,
+        "peak_vram_mib": 3751.39,
+        "first_token_probabilities": {
+          "P(Yes)": 0.75478,
+          "P(No)": 0.24504,
+          "P(Undetermined)": 1.6e-05
+        },
+        "first_token_logits": {
+          "logit(Yes)": 24.125,
+          "logit(No)": 23.0,
+          "logit(Undetermined)": 13.375,
+          "margin_yes_minus_no": 1.125,
+          "margin_yes_minus_und": 10.75
+        },
+        "top3_tokens": [
+          {
+            "token_str": " Yes",
+            "prob": 0.7548
+          },
+          {
+            "token_str": " No",
+            "prob": 0.245
+          },
+          {
+            "token_str": " Answer",
+            "prob": 0.0001
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": false,
+        "first_token_probabilities": {
+          "P(Yes)": 0.43772,
+          "P(No)": 0.56205,
+          "P(Undetermined)": 3.1e-05
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": true,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 10,
+      "sample_id": "ctrl_unimodal_visual_0109",
+      "topology": "unimodal_visual",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_unimodal_visual_0109.png",
+      "image_sha256": "fd0a69d3af8e1ae881f54b3ef174000cd583312fa05292280290b589c454c24a",
+      "text_premise": "No additional statement is provided.",
+      "query": "Based on the image, is the magenta prism to the left of the orange torus?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nNo additional statement is provided.\n\nQuestion: Based on the image, is the magenta prism to the left of the orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: No.",
+        "parsed_decision": "No",
+        "conforms": false
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1205,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": false,
+        "failure_category": "deductive_error",
+        "latency_sec": 11.322,
+        "peak_vram_mib": 3751.28,
+        "first_token_probabilities": {
+          "P(Yes)": 0.18243,
+          "P(No)": 0.81757,
+          "P(Undetermined)": 0.0
+        },
+        "first_token_logits": {
+          "logit(Yes)": 24.75,
+          "logit(No)": 26.25,
+          "logit(Undetermined)": 11.062,
+          "margin_yes_minus_no": -1.5,
+          "margin_yes_minus_und": 13.688
+        },
+        "top3_tokens": [
+          {
+            "token_str": " No",
+            "prob": 0.8176
+          },
+          {
+            "token_str": " Yes",
+            "prob": 0.1824
+          },
+          {
+            "token_str": "No",
+            "prob": 0.0
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true,
+        "first_token_probabilities": {
+          "P(Yes)": 0.62245,
+          "P(No)": 0.37753,
+          "P(Undetermined)": 3e-06
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": true,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 11,
+      "sample_id": "ctrl_unimodal_visual_0110",
+      "topology": "unimodal_visual",
+      "ground_truth_decision": "No",
+      "epistemic_status": "contradicted",
+      "image_file": "ctrl_unimodal_visual_0110.png",
+      "image_sha256": "313b0cf586a1b81832cd0c609bc1b8c366bad2b04127946be5455037fa6ce544",
+      "text_premise": "No additional statement is provided.",
+      "query": "Based on the image, is the red sphere to the left of the blue cube?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nNo additional statement is provided.\n\nQuestion: Based on the image, is the red sphere to the left of the blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: No.",
+        "parsed_decision": "No",
+        "conforms": true
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1203,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": true,
+        "failure_category": "none",
+        "latency_sec": 11.505,
+        "peak_vram_mib": 3750.02,
+        "first_token_probabilities": {
+          "P(Yes)": 0.14805,
+          "P(No)": 0.85195,
+          "P(Undetermined)": 0.0
+        },
+        "first_token_logits": {
+          "logit(Yes)": 26.375,
+          "logit(No)": 28.125,
+          "logit(Undetermined)": 13.188,
+          "margin_yes_minus_no": -1.75,
+          "margin_yes_minus_und": 13.188
+        },
+        "top3_tokens": [
+          {
+            "token_str": " No",
+            "prob": 0.8519
+          },
+          {
+            "token_str": " Yes",
+            "prob": 0.148
+          },
+          {
+            "token_str": "No",
+            "prob": 0.0
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": false,
+        "first_token_probabilities": {
+          "P(Yes)": 0.59266,
+          "P(No)": 0.40733,
+          "P(Undetermined)": 1e-06
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": true,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 12,
+      "sample_id": "ctrl_unimodal_visual_0111",
+      "topology": "unimodal_visual",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_unimodal_visual_0111.png",
+      "image_sha256": "5d5c1e5233b797fe4b27ce6420004907e774a0bd8ede21b2b80c7f70b799efbe",
+      "text_premise": "No additional statement is provided.",
+      "query": "Based on the image, is the red sphere to the left of the green cylinder?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nNo additional statement is provided.\n\nQuestion: Based on the image, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: No.",
+        "parsed_decision": "No",
+        "conforms": false
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1203,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": false,
+        "failure_category": "deductive_error",
+        "latency_sec": 11.349,
+        "peak_vram_mib": 3750.69,
+        "first_token_probabilities": {
+          "P(Yes)": 0.13296,
+          "P(No)": 0.86703,
+          "P(Undetermined)": 0.0
+        },
+        "first_token_logits": {
+          "logit(Yes)": 26.5,
+          "logit(No)": 28.375,
+          "logit(Undetermined)": 12.125,
+          "margin_yes_minus_no": -1.875,
+          "margin_yes_minus_und": 14.375
+        },
+        "top3_tokens": [
+          {
+            "token_str": " No",
+            "prob": 0.867
+          },
+          {
+            "token_str": " Yes",
+            "prob": 0.133
+          },
+          {
+            "token_str": "No",
+            "prob": 0.0
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": false,
+        "first_token_probabilities": {
+          "P(Yes)": 0.29421,
+          "P(No)": 0.70578,
+          "P(Undetermined)": 1e-06
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": false,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 13,
+      "sample_id": "ctrl_unimodal_text_0145",
+      "topology": "unimodal_text",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_unimodal_text_0145.png",
+      "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+      "text_premise": "The orange torus is to the left of the blue cube. The blue cube is to the left of the cyan box.",
+      "query": "Based on the statements, is the orange torus to the left of the cyan box?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nThe orange torus is to the left of the blue cube. The blue cube is to the left of the cyan box.\n\nQuestion: Based on the statements, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1223,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true,
+        "failure_category": "none",
+        "latency_sec": 11.518,
+        "peak_vram_mib": 3750.22,
+        "first_token_probabilities": {
+          "P(Yes)": 0.59993,
+          "P(No)": 0.36387,
+          "P(Undetermined)": 0.009698
+        },
+        "first_token_logits": {
+          "logit(Yes)": 19.125,
+          "logit(No)": 18.625,
+          "logit(Undetermined)": 15.0,
+          "margin_yes_minus_no": 0.5,
+          "margin_yes_minus_und": 4.125
+        },
+        "top3_tokens": [
+          {
+            "token_str": " Yes",
+            "prob": 0.5999
+          },
+          {
+            "token_str": " No",
+            "prob": 0.3639
+          },
+          {
+            "token_str": " Under",
+            "prob": 0.0219
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": false,
+        "first_token_probabilities": {
+          "P(Yes)": 0.37526,
+          "P(No)": 0.6187,
+          "P(Undetermined)": 0.004725
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": true,
+        "undetermined_suppressed": true
+      }
+    },
+    {
+      "test_index": 14,
+      "sample_id": "ctrl_unimodal_text_0146",
+      "topology": "unimodal_text",
+      "ground_truth_decision": "No",
+      "epistemic_status": "contradicted",
+      "image_file": "ctrl_unimodal_text_0146.png",
+      "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+      "text_premise": "The yellow cone is to the left of the blue cube. The blue cube is to the left of the red sphere.",
+      "query": "Based on the statements, is the red sphere to the left of the yellow cone?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nThe yellow cone is to the left of the blue cube. The blue cube is to the left of the red sphere.\n\nQuestion: Based on the statements, is the red sphere to the left of the yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: No.",
+        "parsed_decision": "No",
+        "conforms": true
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1221,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": true,
+        "failure_category": "none",
+        "latency_sec": 11.35,
+        "peak_vram_mib": 3754.07,
+        "first_token_probabilities": {
+          "P(Yes)": 0.43238,
+          "P(No)": 0.48994,
+          "P(Undetermined)": 0.031324
+        },
+        "first_token_logits": {
+          "logit(Yes)": 17.875,
+          "logit(No)": 18.0,
+          "logit(Undetermined)": 15.25,
+          "margin_yes_minus_no": -0.125,
+          "margin_yes_minus_und": 2.625
+        },
+        "top3_tokens": [
+          {
+            "token_str": " No",
+            "prob": 0.4899
+          },
+          {
+            "token_str": " Yes",
+            "prob": 0.4324
+          },
+          {
+            "token_str": " Under",
+            "prob": 0.0355
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": true,
+        "first_token_probabilities": {
+          "P(Yes)": 0.43219,
+          "P(No)": 0.55493,
+          "P(Undetermined)": 0.010166
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": false,
+        "undetermined_suppressed": false
+      }
+    },
+    {
+      "test_index": 15,
+      "sample_id": "ctrl_unimodal_text_0147",
+      "topology": "unimodal_text",
+      "ground_truth_decision": "Yes",
+      "epistemic_status": "entailed",
+      "image_file": "ctrl_unimodal_text_0147.png",
+      "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+      "text_premise": "The red sphere is to the left of the yellow cone. The yellow cone is to the left of the blue cube.",
+      "query": "Based on the statements, is the red sphere to the left of the blue cube?",
+      "v1_baseline": {
+        "raw_output": "User:\n\n\n\n\nThe red sphere is to the left of the yellow cone. The yellow cone is to the left of the blue cube.\n\nQuestion: Based on the statements, is the red sphere to the left of the blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.\nAssistant: Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true
+      },
+      "v2_canonical": {
+        "prompt_tokens": 1221,
+        "completion_tokens": 3,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "decoded_completion": "Yes.",
+        "parsed_decision": "Yes",
+        "conforms": true,
+        "failure_category": "none",
+        "latency_sec": 11.489,
+        "peak_vram_mib": 3753.76,
+        "first_token_probabilities": {
+          "P(Yes)": 0.58551,
+          "P(No)": 0.35513,
+          "P(Undetermined)": 0.013771
+        },
+        "first_token_logits": {
+          "logit(Yes)": 18.625,
+          "logit(No)": 18.125,
+          "logit(Undetermined)": 14.875,
+          "margin_yes_minus_no": 0.5,
+          "margin_yes_minus_und": 3.75
+        },
+        "top3_tokens": [
+          {
+            "token_str": " Yes",
+            "prob": 0.5855
+          },
+          {
+            "token_str": " No",
+            "prob": 0.3551
+          },
+          {
+            "token_str": " Under",
+            "prob": 0.0374
+          }
+        ]
+      },
+      "v2_permuted_order": {
+        "prompt_order": "No, Yes, or Undetermined",
+        "decoded_completion": "No.",
+        "parsed_decision": "No",
+        "conforms": false,
+        "first_token_probabilities": {
+          "P(Yes)": 0.34605,
+          "P(No)": 0.64651,
+          "P(Undetermined)": 0.005595
+        }
+      },
+      "diagnostic_flags": {
+        "v1_v2_canonical_identical": true,
+        "choice_order_sensitive": true,
+        "undetermined_suppressed": false
+      }
+    }
+  ]
+}

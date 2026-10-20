@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-10-18T11:25:45Z",
+  "stage_5_ablation_control": {
+    "condition": "single_object_present_cyan_box_only",
+    "prompt": "Is the cyan box to the left of the green cylinder? Answer directly with: Yes, No, or Undetermined.",
+    "completion": "Yes.",
+    "top5_tokens": [
+      {
+        "token_id": 9230,
+        "token_str": " Yes",
+        "prob": 0.7503,
+        "logit": 18.296
+      },
+      {
+        "token_id": 2838,
+        "token_str": " No",
+        "prob": 0.2371,
+        "logit": 17.144
+      },
+      {
+        "token_id": 27589,
+        "token_str": " Und",
+        "prob": 0.0111,
+        "logit": 14.082
+      },
+      {
+        "token_id": 34695,
+        "token_str": " Unknown",
+        "prob": 0.0002,
+        "logit": 9.817
+      },
+      {
+        "token_id": 810,
+        "token_str": " Un",
+        "prob": 0.0001,
+        "logit": 9.317
+      }
+    ]
+  },
+  "stage_6_individual_premise_controls": {
+    "unimodal_visual": {
+      "prompt": "Question: Based on the image, is the magenta prism to the left of the orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "ground_truth": "Yes",
+      "completion": "Yes.",
+      "top1_token": " Yes",
+      "top1_prob": 0.8794,
+      "candidate_probabilities_length_norm": {
+        " Yes": 0.770193,
+        " No": 0.070676,
+        " Undetermined": 0.159131
+      },
+      "top_candidate": "Yes"
+    },
+    "text_only": {
+      "prompt": "The cyan box is to the left of the green cylinder.\nThe green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the statements, is the cyan box to the left of the magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "ground_truth": "Yes",
+      "completion": "Yes.\n\nThe statement \"The cyan box is to the left of the green cylinder\" implies that the cyan box is",
+      "top1_token": " Yes",
+      "top1_prob": 0.4825,
+      "candidate_probabilities_length_norm": {
+        " Yes": 0.472908,
+        " No": 0.156284,
+        " Undetermined": 0.370808
+      },
+      "top_candidate": "Yes"
+    }
+  },
+  "stage_7_activation_replacement_hook": {
+    "target_layer": "model.model.text_model.layers[12]",
+    "intercepted_shape": [
+      1,
+      1463,
+      2048
+    ],
+    "intercepted_dtype": "torch.float32",
+    "logits_match": true,
+    "max_logit_diff": 0.0,
+    "status": "PASS"
+  }
+}

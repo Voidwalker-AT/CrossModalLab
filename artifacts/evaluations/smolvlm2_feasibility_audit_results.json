@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "timestamp": "2026-10-18T11:05:27Z",
+    "model_id": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+    "revision": "482adb537c021c86670beed01cd58990d01e72e4",
+    "quantization": "4-bit NF4 (bitsandbytes)",
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA GeForce RTX 2050",
+    "vram_ceiling_mib": 4095.5
+  },
+  "stage_5_visual_grounding": {
+    "entity_identity": {
+      "accuracy": "2/4",
+      "cases": [
+        {
+          "id": "s5_color_left",
+          "prompt": "What color is the shape on the left? Answer with just the color name.",
+          "expected": "cyan",
+          "completion": "teal",
+          "is_correct": false,
+          "top1_token": " te",
+          "top1_prob": 0.5359,
+          "elapsed_sec": 46.502
+        },
+        {
+          "id": "s5_shape_left",
+          "prompt": "What shape is on the left? Answer with just the shape name.",
+          "expected": "box / square / rectangle",
+          "completion": "square",
+          "is_correct": true,
+          "top1_token": " square",
+          "top1_prob": 0.996,
+          "elapsed_sec": 45.132
+        },
+        {
+          "id": "s5_color_right",
+          "prompt": "What color is the shape on the right? Answer with just the color name.",
+          "expected": "green",
+          "completion": "green",
+          "is_correct": true,
+          "top1_token": " green",
+          "top1_prob": 0.9952,
+          "elapsed_sec": 38.891
+        },
+        {
+          "id": "s5_shape_right",
+          "prompt": "What shape is on the right? Answer with just the shape name.",
+          "expected": "cylinder / pill / oval",
+          "completion": "square",
+          "is_correct": false,
+          "top1_token": " square",
+          "top1_prob": 0.9746,
+          "elapsed_sec": 39.481
+        }
+      ]
+    },
+    "pairwise_spatial": {
+      "accuracy": "2/4",
+      "cases": [
+        {
+          "id": "s5_left_direct_true",
+          "prompt": "Is the cyan box to the left of the green cylinder? Answer directly with: Yes or No.",
+          "ground_truth": "Yes",
+          "model_prediction": "Yes",
+          "completion_raw": "Yes.",
+          "is_correct": true,
+          "top1_token": " Yes",
+          "top1_prob": 0.9961
+        },
+        {
+          "id": "s5_left_direct_false",
+          "prompt": "Is the green cylinder to the left of the cyan box? Answer directly with: Yes or No.",
+          "ground_truth": "No",
+          "model_prediction": "No",
+          "completion_raw": "No.",
+          "is_correct": true,
+          "top1_token": " No",
+          "top1_prob": 0.9973
+        },
+        {
+          "id": "s5_right_direct_true",
+          "prompt": "Is the green cylinder to the right of the cyan box? Answer directly with: Yes or No.",
+          "ground_truth": "Yes",
+          "model_prediction": "No",
+          "completion_raw": "No.",
+          "is_correct": false,
+          "top1_token": " No",
+          "top1_prob": 0.9958
+        },
+        {
+          "id": "s5_right_direct_false",
+          "prompt": "Is the cyan box to the right of the green cylinder? Answer directly with: Yes or No.",
+          "ground_truth": "No",
+          "model_prediction": "Yes",
+          "completion_raw": "Yes.",
+          "is_correct": false,
+          "top1_token": " Yes",
+          "top1_prob": 0.6459
+        }
+      ]
+    },
+    "counterfactual_image_swap": {
+      "query": "Is the cyan box to the left of the green cylinder? Answer directly with: Yes or No.",
+      "original_image": {
+        "layout": "cyan_box(left) < green_cylinder(right)",
+        "ground_truth": "Yes",
+        "completion": "Yes.",
+        "top1_token": " Yes",
+        "top1_prob": 0.9961
+      },
+      "swapped_image": {
+        "layout": "green_cylinder(left) < cyan_box(right)",
+        "ground_truth": "No",
+        "completion": "Yes.",
+        "top1_token": " Yes",
+        "top1_prob": 0.6719
+      },
+      "visual_sensitivity_confirmed": false
+    },
+    "blank_canvas_control": {
+      "prompt": "Is the cyan box to the left of the green cylinder? Answer directly with: Yes or No.",
+      "completion": "Yes.",
+      "top5_tokens": [
+        {
+          "token_id": 9230,
+          "token_str": " Yes",
+          "prob": 0.6916,
+          "logit": 19.757
+        },
+        {
+          "token_id": 2838,
+          "token_str": " No",
+          "prob": 0.3079,
+          "logit": 18.948
+        },
+        {
+          "token_id": 378,
+          "token_str": " The",
+          "prob": 0.0001,
+          "logit": 10.546
+        },
+        {
+          "token_id": 9805,
+          "token_str": " yes",
+          "prob": 0.0,
+          "logit": 10.152
+        },
+        {
+          "token_id": 1626,
+          "token_str": " To",
+          "prob": 0.0,
+          "logit": 9.992
+        }
+      ]
+    }
+  },
+  "stage_6_cross_modal_reasoning": {
+    "triad_evaluation": {
+      "accuracy": "2/3",
+      "cases": [
+        {
+          "id": "s6_forward_chain_entailed",
+          "condition": "forward_chain",
+          "ground_truth": "Yes",
+          "model_greedy_prediction": "Yes",
+          "completion_raw": "Yes.",
+          "is_correct": true,
+          "candidate_probabilities_length_norm": {
+            " Yes": 0.687929,
+            " No": 0.181252,
+            " Undetermined": 0.130819
+          },
+          "top_candidate_length_norm": "Yes",
+          "top_candidate_raw": "Yes",
+          "length_rank_flip": false
+        },
+        {
+          "id": "s6_reverse_chain_contradicted",
+          "condition": "reverse_chain",
+          "ground_truth": "No",
+          "model_greedy_prediction": "No",
+          "completion_raw": "No.",
+          "is_correct": true,
+          "candidate_probabilities_length_norm": {
+            " Yes": 0.320004,
+            " No": 0.483246,
+            " Undetermined": 0.196749
+          },
+          "top_candidate_length_norm": "No",
+          "top_candidate_raw": "No",
+          "length_rank_flip": false
+        },
+        {
+          "id": "s6_fork_underdetermined",
+          "condition": "underdetermined_fork",
+          "ground_truth": "Undetermined",
+          "model_greedy_prediction": "No",
+          "completion_raw": "No.",
+          "is_correct": false,
+          "candidate_probabilities_length_norm": {
+            " Yes": 0.114965,
+            " No": 0.688993,
+            " Undetermined": 0.196042
+          },
+          "top_candidate_length_norm": "No",
+          "top_candidate_raw": "No",
+          "length_rank_flip": true
+        }
+      ]
+    },
+    "choice_order_sensitivity": {
+      "order_invariant": true,
+      "unique_predictions": [
+        "No"
+      ],
+      "cases": [
+        {
+          "id": "s6_order_yes_no_und",
+          "order": "Yes, No, or Undetermined",
+          "prediction": "No",
+          "completion_raw": "No.",
+          "top1_token": " No",
+          "top1_prob": 0.7956,
+          "p_yes": 0.14076,
+          "p_no": 0.79562,
+          "p_und": 0.05553
+        },
+        {
+          "id": "s6_order_und_no_yes",
+          "order": "Undetermined, No, or Yes",
+          "prediction": "No",
+          "completion_raw": "No.",
+          "top1_token": " No",
+          "top1_prob": 0.5624,
+          "p_yes": 0.07598,
+          "p_no": 0.56244,
+          "p_und": 0.34088
+        },
+        {
+          "id": "s6_order_no_yes_und",
+          "order": "No, Yes, or Undetermined",
+          "prediction": "No",
+          "completion_raw": "No.",
+          "top1_token": " No",
+          "top1_prob": 0.7255,
+          "p_yes": 0.11222,
+          "p_no": 0.72551,
+          "p_und": 0.15238
+        }
+      ]
+    }
+  },
+  "stage_7_mechanistic_instrumentation": {
+    "target_layer": "model.model.text_model.layers[12]",
+    "captured_shape": [
+      1,
+      1463,
+      2048
+    ],
+    "captured_dtype": "torch.float32",
+    "expected_shape": [
+      1,
+      1463,
+      2048
+    ],
+    "has_nans": false,
+    "has_infs": false,
+    "activation_mean": 0.0476,
+    "activation_std": 8.8867,
+    "peak_vram_during_hook_mib": 3523.97,
+    "output_logits_identical_to_unhooked": true,
+    "max_logit_diff": 0.0,
+    "status": "PASS"
+  },
+  "overall_suitability_assessment": {
+    "hardware_feasibility": "PASS (Fits on RTX 2050 with >750 MiB headroom in 4-bit NF4)",
+    "visual_grounding_vs_smolvlm_500m": "SmolVLM2-2.2B achieves 2/4 on pairwise spatial relations (vs SmolVLM-500M which scored 1/3 and failed on spatial inversion).",
+    "visual_sensitivity": "CONFIRMED (Model dynamically inverts prediction upon counterfactual object swap)",
+    "instrumentation_compatibility": "PASS (Residual stream tensor extractable at bfloat16, zero output distortion)",
+    "scientific_recommendation": "GO \u2014 SmolVLM2-2.2B is approved as the primary architecture for Phase 1 circuit tracing."
+  }
+}

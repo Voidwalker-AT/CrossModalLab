@@ -1,0 +1,22 @@
+schema_version = 1
+
+[project]
+name = "CrossModalLab"
+version = "0.1.0"
+ecosystem = "python"
+
+[runtimes]
+python = ">=3.11"
+
+[package_manager]
+name = "uv"
+requirements = [
+    "requirements.lock",
+]
+
+[gpu]
+required = true
+
+[lifecycle]
+policy = "persistent"
+allow_reclaim_on_quiescence = false

@@ -1,0 +1,4938 @@
+{
+  "timestamp": "2026-10-18T10:03:56Z",
+  "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+  "revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+  "device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 2050",
+  "experiments": {
+    "part1_candidate_scoring_15_pilot": {
+      "total_evaluated": 15,
+      "total_length_rank_flips": 0,
+      "records": [
+        {
+          "test_index": 1,
+          "sample_id": "ctrl_forward_chain_0001",
+          "topology": "forward_chain",
+          "ground_truth": "Yes",
+          "epistemic_status": "entailed",
+          "image_file": "ctrl_forward_chain_0001.png",
+          "image_sha256": "58ba2e491acf33e07ae1ea879e86ea4cc4474f9c04f13a16cbbe2abda13804e6",
+          "prompt_length_tokens": 1213,
+          "completion_token_ids": [
+            9230,
+            30,
+            49279
+          ],
+          "completion_text": "Yes.",
+          "parsed_decision": "Yes",
+          "generation_latency_sec": 3.325,
+          "scoring_latency_sec": 8.84,
+          "peak_vram_mib": 3338.83,
+          "candidate_scoring": {
+            "prompt_token_length": 1213,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -0.313412
+                ],
+                "token_probs": [
+                  0.730949
+                ],
+                "total_log_likelihood": -0.313412,
+                "length_normalized_log_likelihood": -0.313412,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -1.313412
+                ],
+                "token_probs": [
+                  0.268901
+                ],
+                "total_log_likelihood": -1.313412,
+                "length_normalized_log_likelihood": -1.313412,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -11.875918,
+                  -0.00024
+                ],
+                "token_probs": [
+                  7e-06,
+                  0.99976
+                ],
+                "total_log_likelihood": -11.876158,
+                "length_normalized_log_likelihood": -5.938079,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.731053,
+              " No": 0.26894,
+              " Undetermined": 7e-06
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.729135,
+              " No": 0.268234,
+              " Undetermined": 0.002631
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 2,
+          "sample_id": "ctrl_forward_chain_0002",
+          "topology": "forward_chain",
+          "ground_truth": "Yes",
+          "epistemic_status": "entailed",
+          "image_file": "ctrl_forward_chain_0002.png",
+          "image_sha256": "726b22198877bfd800e08e0ce8c159ab9119ef291d7b7832a95421c9ecc7b109",
+          "prompt_length_tokens": 1211,
+          "completion_token_ids": [
+            9230,
+            30,
+            49279
+          ],
+          "completion_text": "Yes.",
+          "parsed_decision": "Yes",
+          "generation_latency_sec": 2.913,
+          "scoring_latency_sec": 8.538,
+          "peak_vram_mib": 3338.83,
+          "candidate_scoring": {
+            "prompt_token_length": 1211,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -0.160286
+                ],
+                "token_probs": [
+                  0.8519
+                ],
+                "total_log_likelihood": -0.160286,
+                "length_normalized_log_likelihood": -0.160286,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -1.910286
+                ],
+                "token_probs": [
+                  0.148038
+                ],
+                "total_log_likelihood": -1.910286,
+                "length_normalized_log_likelihood": -1.910286,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -12.347801,
+                  -0.000354
+                ],
+                "token_probs": [
+                  4e-06,
+                  0.999646
+                ],
+                "total_log_likelihood": -12.348155,
+                "length_normalized_log_likelihood": -6.174078,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.851949,
+              " No": 0.148047,
+              " Undetermined": 4e-06
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.850182,
+              " No": 0.147739,
+              " Undetermined": 0.002079
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 3,
+          "sample_id": "ctrl_forward_chain_0003",
+          "topology": "forward_chain",
+          "ground_truth": "Yes",
+          "epistemic_status": "entailed",
+          "image_file": "ctrl_forward_chain_0003.png",
+          "image_sha256": "6fbab5991c0b364de696080f0fd0ed912a1f4366f32728c5575105bd342f3e51",
+          "prompt_length_tokens": 1212,
+          "completion_token_ids": [
+            9230,
+            30,
+            49279
+          ],
+          "completion_text": "Yes.",
+          "parsed_decision": "Yes",
+          "generation_latency_sec": 2.884,
+          "scoring_latency_sec": 8.592,
+          "peak_vram_mib": 3338.83,
+          "candidate_scoring": {
+            "prompt_token_length": 1212,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -0.162808
+                ],
+                "token_probs": [
+                  0.849755
+                ],
+                "total_log_likelihood": -0.162808,
+                "length_normalized_log_likelihood": -0.162808,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -1.912808
+                ],
+                "token_probs": [
+                  0.147665
+                ],
+                "total_log_likelihood": -1.912808,
+                "length_normalized_log_likelihood": -1.912808,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -10.350295,
+                  -0.000369
+                ],
+                "token_probs": [
+                  3.2e-05,
+                  0.999631
+                ],
+                "total_log_likelihood": -10.350664,
+                "length_normalized_log_likelihood": -5.175332,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.851925,
+              " No": 0.148042,
+              " Undetermined": 3.2e-05
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.84715,
+              " No": 0.147213,
+              " Undetermined": 0.005637
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 4,
+          "sample_id": "ctrl_reverse_chain_0037",
+          "topology": "reverse_chain",
+          "ground_truth": "No",
+          "epistemic_status": "contradicted",
+          "image_file": "ctrl_reverse_chain_0037.png",
+          "image_sha256": "a0f1ea243dcd775b0f30508530490e491901787c3f15ef1f6fc532295cc3797b",
+          "prompt_length_tokens": 1211,
+          "completion_token_ids": [
+            9230,
+            30,
+            49279
+          ],
+          "completion_text": "Yes.",
+          "parsed_decision": "Yes",
+          "generation_latency_sec": 2.927,
+          "scoring_latency_sec": 8.483,
+          "peak_vram_mib": 3338.83,
+          "candidate_scoring": {
+            "prompt_token_length": 1211,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -0.583639
+                ],
+                "token_probs": [
+                  0.557864
+                ],
+                "total_log_likelihood": -0.583639,
+                "length_normalized_log_likelihood": -0.583639,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -0.833639
+                ],
+                "token_probs": [
+                  0.434465
+                ],
+                "total_log_likelihood": -0.833639,
+                "length_normalized_log_likelihood": -0.833639,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -5.514083,
+                  -0.000186
+                ],
+                "token_probs": [
+                  0.00403,
+                  0.999814
+                ],
+                "total_log_likelihood": -5.514269,
+                "length_normalized_log_likelihood": -2.757135,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.559903,
+              " No": 0.436053,
+              " Undetermined": 0.004044
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.528379,
+              " No": 0.411502,
+              " Undetermined": 0.060119
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 5,
+          "sample_id": "ctrl_reverse_chain_0038",
+          "topology": "reverse_chain",
+          "ground_truth": "No",
+          "epistemic_status": "contradicted",
+          "image_file": "ctrl_reverse_chain_0038.png",
+          "image_sha256": "7c23eae1adca7d808630a5732f7f3ed9fbc7d8ab578e2f8e78ea78dd3decfd43",
+          "prompt_length_tokens": 1211,
+          "completion_token_ids": [
+            2838,
+            30,
+            49279
+          ],
+          "completion_text": "No.",
+          "parsed_decision": "No",
+          "generation_latency_sec": 2.936,
+          "scoring_latency_sec": 8.52,
+          "peak_vram_mib": 3338.83,
+          "candidate_scoring": {
+            "prompt_token_length": 1211,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -0.75779
+                ],
+                "token_probs": [
+                  0.468701
+                ],
+                "total_log_likelihood": -0.75779,
+                "length_normalized_log_likelihood": -0.75779,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -0.63279
+                ],
+                "token_probs": [
+                  0.531108
+                ],
+                "total_log_likelihood": -0.63279,
+                "length_normalized_log_likelihood": -0.63279,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -9.193413,
+                  -0.000238
+                ],
+                "token_probs": [
+                  0.000102,
+                  0.999762
+                ],
+                "total_log_likelihood": -9.193651,
+                "length_normalized_log_likelihood": -4.596825,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " No",
+              " Yes",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " No",
+              " Yes",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.468743,
+              " No": 0.531155,
+              " Undetermined": 0.000102
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.46411,
+              " No": 0.525905,
+              " Undetermined": 0.009985
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 6,
+          "sample_id": "ctrl_reverse_chain_0039",
+          "topology": "reverse_chain",
+          "ground_truth": "No",
+          "epistemic_status": "contradicted",
+          "image_file": "ctrl_reverse_chain_0039.png",
+          "image_sha256": "674570b73ae4d925248be9c61cb6ede040455f563a756d8d18a6fb0d03e4832b",
+          "prompt_length_tokens": 1211,
+          "completion_token_ids": [
+            9230,
+            30,
+            49279
+          ],
+          "completion_text": "Yes.",
+          "parsed_decision": "Yes",
+          "generation_latency_sec": 2.98,
+          "scoring_latency_sec": 8.872,
+          "peak_vram_mib": 3338.83,
+          "candidate_scoring": {
+            "prompt_token_length": 1211,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -0.474345
+                ],
+                "token_probs": [
+                  0.622293
+                ],
+                "total_log_likelihood": -0.474345,
+                "length_normalized_log_likelihood": -0.474345,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -0.974345
+                ],
+                "token_probs": [
+                  0.37744
+                ],
+                "total_log_likelihood": -0.974345,
+                "length_normalized_log_likelihood": -0.974345,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -8.70128,
+                  -0.000209
+                ],
+                "token_probs": [
+                  0.000166,
+                  0.999791
+                ],
+                "total_log_likelihood": -8.701489,
+                "length_normalized_log_likelihood": -4.350745,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.622356,
+              " No": 0.377478,
+              " Undetermined": 0.000166
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.614531,
+              " No": 0.372732,
+              " Undetermined": 0.012736
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 7,
+          "sample_id": "ctrl_underdetermined_fork_0073",
+          "topology": "underdetermined_fork",
+          "ground_truth": "Undetermined",
+          "epistemic_status": "underdetermined",
+          "image_file": "ctrl_underdetermined_fork_0073.png",
+          "image_sha256": "f18709fd3d9d5fdbe730a4e73730206ec255d80732989556b3e207f0b1cdbc1c",
+          "prompt_length_tokens": 1212,
+          "completion_token_ids": [
+            9230,
+            30,
+            49279
+          ],
+          "completion_text": "Yes.",
+          "parsed_decision": "Yes",
+          "generation_latency_sec": 2.86,
+          "scoring_latency_sec": 8.707,
+          "peak_vram_mib": 3338.83,
+          "candidate_scoring": {
+            "prompt_token_length": 1212,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -0.523211
+                ],
+                "token_probs": [
+                  0.592614
+                ],
+                "total_log_likelihood": -0.523211,
+                "length_normalized_log_likelihood": -0.523211,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -0.898211
+                ],
+                "token_probs": [
+                  0.407298
+                ],
+                "total_log_likelihood": -0.898211,
+                "length_normalized_log_likelihood": -0.898211,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -12.849174,
+                  -0.000234
+                ],
+                "token_probs": [
+                  3e-06,
+                  0.999766
+                ],
+                "total_log_likelihood": -12.849408,
+                "length_normalized_log_likelihood": -6.424704,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.592665,
+              " No": 0.407332,
+              " Undetermined": 3e-06
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.591707,
+              " No": 0.406674,
+              " Undetermined": 0.001619
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 8,
+          "sample_id": "ctrl_underdetermined_fork_0074",
+          "topology": "underdetermined_fork",
+          "ground_truth": "Undetermined",
+          "epistemic_status": "underdetermined",
+          "image_file": "ctrl_underdetermined_fork_0074.png",
+          "image_sha256": "c3701892dd0547f14c643fd9c3fe5e13e86bb66f1c5205d4b129f3951df4b35f",
+          "prompt_length_tokens": 1212,
+          "completion_token_ids": [
+            9230,
+            30,
+            49279
+          ],
+          "completion_text": "Yes.",
+          "parsed_decision": "Yes",
+          "generation_latency_sec": 2.854,
+          "scoring_latency_sec": 8.551,
+          "peak_vram_mib": 3338.83,
+          "candidate_scoring": {
+            "prompt_token_length": 1212,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -0.38742
+                ],
+                "token_probs": [
+                  0.678806
+                ],
+                "total_log_likelihood": -0.38742,
+                "length_normalized_log_likelihood": -0.38742,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -1.13742
+                ],
+                "token_probs": [
+                  0.320645
+                ],
+                "total_log_likelihood": -1.13742,
+                "length_normalized_log_likelihood": -1.13742,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -10.637423,
+                  -0.000279
+                ],
+                "token_probs": [
+                  2.4e-05,
+                  0.999721
+                ],
+                "total_log_likelihood": -10.637702,
+                "length_normalized_log_likelihood": -5.318851,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.679162,
+              " No": 0.320814,
+              " Undetermined": 2.4e-05
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.675866,
+              " No": 0.319257,
+              " Undetermined": 0.004877
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 9,
+          "sample_id": "ctrl_underdetermined_fork_0075",
+          "topology": "underdetermined_fork",
+          "ground_truth": "Undetermined",
+          "epistemic_status": "underdetermined",
+          "image_file": "ctrl_underdetermined_fork_0075.png",
+          "image_sha256": "7ad23f25abc5dad98ead533af0f40a37e9ef272f73f79711467f45c07e960f11",
+          "prompt_length_tokens": 1212,
+          "completion_token_ids": [
+            9230,
+            30,
+            49279
+          ],
+          "completion_text": "Yes.",
+          "parsed_decision": "Yes",
+          "generation_latency_sec": 2.851,
+          "scoring_latency_sec": 8.545,
+          "peak_vram_mib": 3338.83,
+          "candidate_scoring": {
+            "prompt_token_length": 1212,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -0.281407
+                ],
+                "token_probs": [
+                  0.754721
+                ],
+                "total_log_likelihood": -0.281407,
+                "length_normalized_log_likelihood": -0.281407,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -1.406407
+                ],
+                "token_probs": [
+                  0.245022
+                ],
+                "total_log_likelihood": -1.406407,
+                "length_normalized_log_likelihood": -1.406407,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -9.689731,
+                  -0.000416
+                ],
+                "token_probs": [
+                  6.2e-05,
+                  0.999584
+                ],
+                "total_log_likelihood": -9.690147,
+                "length_normalized_log_likelihood": -4.845073,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.754868,
+              " No": 0.24507,
+              " Undetermined": 6.2e-05
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.749021,
+              " No": 0.243171,
+              " Undetermined": 0.007808
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 10,
+          "sample_id": "ctrl_unimodal_visual_0109",
+          "topology": "unimodal_visual",
+          "ground_truth": "Yes",
+          "epistemic_status": "entailed",
+          "image_file": "ctrl_unimodal_visual_0109.png",
+          "image_sha256": "fd0a69d3af8e1ae881f54b3ef174000cd583312fa05292280290b589c454c24a",
+          "prompt_length_tokens": 1205,
+          "completion_token_ids": [
+            2838,
+            30,
+            49279
+          ],
+          "completion_text": "No.",
+          "parsed_decision": "No",
+          "generation_latency_sec": 2.916,
+          "scoring_latency_sec": 8.451,
+          "peak_vram_mib": 3338.82,
+          "candidate_scoring": {
+            "prompt_token_length": 1205,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -1.701419
+                ],
+                "token_probs": [
+                  0.182425
+                ],
+                "total_log_likelihood": -1.701419,
+                "length_normalized_log_likelihood": -1.701419,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -0.201419
+                ],
+                "token_probs": [
+                  0.81757
+                ],
+                "total_log_likelihood": -0.201419,
+                "length_normalized_log_likelihood": -0.201419,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -15.55475,
+                  -0.000692
+                ],
+                "token_probs": [
+                  0.0,
+                  0.999308
+                ],
+                "total_log_likelihood": -15.555442,
+                "length_normalized_log_likelihood": -7.777721,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " No",
+              " Yes",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " No",
+              " Yes",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.182425,
+              " No": 0.817574,
+              " Undetermined": 0.0
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.182349,
+              " No": 0.817232,
+              " Undetermined": 0.000419
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 11,
+          "sample_id": "ctrl_unimodal_visual_0110",
+          "topology": "unimodal_visual",
+          "ground_truth": "No",
+          "epistemic_status": "contradicted",
+          "image_file": "ctrl_unimodal_visual_0110.png",
+          "image_sha256": "313b0cf586a1b81832cd0c609bc1b8c366bad2b04127946be5455037fa6ce544",
+          "prompt_length_tokens": 1203,
+          "completion_token_ids": [
+            2838,
+            30,
+            49279
+          ],
+          "completion_text": "No.",
+          "parsed_decision": "No",
+          "generation_latency_sec": 2.995,
+          "scoring_latency_sec": 8.334,
+          "peak_vram_mib": 3338.81,
+          "candidate_scoring": {
+            "prompt_token_length": 1203,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -1.910228
+                ],
+                "token_probs": [
+                  0.148047
+                ],
+                "total_log_likelihood": -1.910228,
+                "length_normalized_log_likelihood": -1.910228,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -0.160228
+                ],
+                "token_probs": [
+                  0.851949
+                ],
+                "total_log_likelihood": -0.160228,
+                "length_normalized_log_likelihood": -0.160228,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -14.867249,
+                  -0.000422
+                ],
+                "token_probs": [
+                  0.0,
+                  0.999578
+                ],
+                "total_log_likelihood": -14.867671,
+                "length_normalized_log_likelihood": -7.433835,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " No",
+              " Yes",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " No",
+              " Yes",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.148047,
+              " No": 0.851953,
+              " Undetermined": 0.0
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.14796,
+              " No": 0.85145,
+              " Undetermined": 0.000591
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 12,
+          "sample_id": "ctrl_unimodal_visual_0111",
+          "topology": "unimodal_visual",
+          "ground_truth": "Yes",
+          "epistemic_status": "entailed",
+          "image_file": "ctrl_unimodal_visual_0111.png",
+          "image_sha256": "5d5c1e5233b797fe4b27ce6420004907e774a0bd8ede21b2b80c7f70b799efbe",
+          "prompt_length_tokens": 1203,
+          "completion_token_ids": [
+            2838,
+            30,
+            49279
+          ],
+          "completion_text": "No.",
+          "parsed_decision": "No",
+          "generation_latency_sec": 2.781,
+          "scoring_latency_sec": 8.135,
+          "peak_vram_mib": 3338.81,
+          "candidate_scoring": {
+            "prompt_token_length": 1203,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -2.017679
+                ],
+                "token_probs": [
+                  0.132964
+                ],
+                "total_log_likelihood": -2.017679,
+                "length_normalized_log_likelihood": -2.017679,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -0.142679
+                ],
+                "token_probs": [
+                  0.867032
+                ],
+                "total_log_likelihood": -0.142679,
+                "length_normalized_log_likelihood": -0.142679,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -16.160227,
+                  -0.000375
+                ],
+                "token_probs": [
+                  0.0,
+                  0.999625
+                ],
+                "total_log_likelihood": -16.160602,
+                "length_normalized_log_likelihood": -8.080301,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " No",
+              " Yes",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " No",
+              " Yes",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.132964,
+              " No": 0.867036,
+              " Undetermined": 0.0
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.132923,
+              " No": 0.866767,
+              " Undetermined": 0.000309
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 13,
+          "sample_id": "ctrl_unimodal_text_0145",
+          "topology": "unimodal_text",
+          "ground_truth": "Yes",
+          "epistemic_status": "entailed",
+          "image_file": "ctrl_unimodal_text_0145.png",
+          "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+          "prompt_length_tokens": 1223,
+          "completion_token_ids": [
+            9230,
+            30,
+            49279
+          ],
+          "completion_text": "Yes.",
+          "parsed_decision": "Yes",
+          "generation_latency_sec": 2.729,
+          "scoring_latency_sec": 8.021,
+          "peak_vram_mib": 3338.85,
+          "candidate_scoring": {
+            "prompt_token_length": 1223,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -0.466326
+                ],
+                "token_probs": [
+                  0.627303
+                ],
+                "total_log_likelihood": -0.466326,
+                "length_normalized_log_likelihood": -0.466326,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -1.091326
+                ],
+                "token_probs": [
+                  0.335771
+                ],
+                "total_log_likelihood": -1.091326,
+                "length_normalized_log_likelihood": -1.091326,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -4.649809,
+                  -0.000213
+                ],
+                "token_probs": [
+                  0.009563,
+                  0.999787
+                ],
+                "total_log_likelihood": -4.650022,
+                "length_normalized_log_likelihood": -2.325011,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.644952,
+              " No": 0.345218,
+              " Undetermined": 0.00983
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.591317,
+              " No": 0.316509,
+              " Undetermined": 0.092173
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 14,
+          "sample_id": "ctrl_unimodal_text_0146",
+          "topology": "unimodal_text",
+          "ground_truth": "No",
+          "epistemic_status": "contradicted",
+          "image_file": "ctrl_unimodal_text_0146.png",
+          "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+          "prompt_length_tokens": 1221,
+          "completion_token_ids": [
+            2838,
+            30,
+            49279
+          ],
+          "completion_text": "No.",
+          "parsed_decision": "No",
+          "generation_latency_sec": 2.739,
+          "scoring_latency_sec": 8.086,
+          "peak_vram_mib": 3338.85,
+          "candidate_scoring": {
+            "prompt_token_length": 1221,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -0.757371
+                ],
+                "token_probs": [
+                  0.468898
+                ],
+                "total_log_likelihood": -0.757371,
+                "length_normalized_log_likelihood": -0.757371,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -0.757371
+                ],
+                "token_probs": [
+                  0.468898
+                ],
+                "total_log_likelihood": -0.757371,
+                "length_normalized_log_likelihood": -0.757371,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -3.638494,
+                  -0.000154
+                ],
+                "token_probs": [
+                  0.026292,
+                  0.999846
+                ],
+                "total_log_likelihood": -3.638648,
+                "length_normalized_log_likelihood": -1.819324,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.486366,
+              " No": 0.486366,
+              " Undetermined": 0.027267
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.426297,
+              " No": 0.426297,
+              " Undetermined": 0.147405
+            },
+            "length_rank_flip": false
+          }
+        },
+        {
+          "test_index": 15,
+          "sample_id": "ctrl_unimodal_text_0147",
+          "topology": "unimodal_text",
+          "ground_truth": "Yes",
+          "epistemic_status": "entailed",
+          "image_file": "ctrl_unimodal_text_0147.png",
+          "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+          "prompt_length_tokens": 1221,
+          "completion_token_ids": [
+            9230,
+            30,
+            49279
+          ],
+          "completion_text": "Yes.",
+          "parsed_decision": "Yes",
+          "generation_latency_sec": 2.762,
+          "scoring_latency_sec": 8.058,
+          "peak_vram_mib": 3338.85,
+          "candidate_scoring": {
+            "prompt_token_length": 1221,
+            "candidates": {
+              " Yes": {
+                "candidate_text": " Yes",
+                "token_ids": [
+                  9230
+                ],
+                "token_strings": [
+                  " Yes"
+                ],
+                "token_log_probs": [
+                  -0.532036
+                ],
+                "token_probs": [
+                  0.587408
+                ],
+                "total_log_likelihood": -0.532036,
+                "length_normalized_log_likelihood": -0.532036,
+                "sequence_length": 1
+              },
+              " No": {
+                "candidate_text": " No",
+                "token_ids": [
+                  2838
+                ],
+                "token_strings": [
+                  " No"
+                ],
+                "token_log_probs": [
+                  -1.032036
+                ],
+                "token_probs": [
+                  0.356281
+                ],
+                "total_log_likelihood": -1.032036,
+                "length_normalized_log_likelihood": -1.032036,
+                "sequence_length": 1
+              },
+              " Undetermined": {
+                "candidate_text": " Undetermined",
+                "token_ids": [
+                  27589,
+                  24454
+                ],
+                "token_strings": [
+                  " Und",
+                  "etermined"
+                ],
+                "token_log_probs": [
+                  -4.290492,
+                  -0.000141
+                ],
+                "token_probs": [
+                  0.013698,
+                  0.999859
+                ],
+                "total_log_likelihood": -4.290633,
+                "length_normalized_log_likelihood": -2.145317,
+                "sequence_length": 2
+              }
+            },
+            "raw_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "length_normalized_ranking": [
+              " Yes",
+              " No",
+              " Undetermined"
+            ],
+            "candidate_probabilities_raw": {
+              " Yes": 0.613554,
+              " No": 0.37214,
+              " Undetermined": 0.014306
+            },
+            "candidate_probabilities_normalized": {
+              " Yes": 0.553782,
+              " No": 0.335886,
+              " Undetermined": 0.110332
+            },
+            "length_rank_flip": false
+          }
+        }
+      ]
+    },
+    "part2_prompt_order_controls": [
+      {
+        "sample_id": "ctrl_forward_chain_0001",
+        "case_name": "Forward Chain (Entailed, GT: Yes)",
+        "ground_truth": "Yes",
+        "prompts": [
+          {
+            "prompt_id": "P1_yes_no_und",
+            "prompt_desc": "Canonical order (Yes, No, Undetermined)",
+            "prompt_text": "The green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+            "prompt_length_tokens": 1213,
+            "completion_token_ids": [
+              9230,
+              30,
+              49279
+            ],
+            "completion_text": "Yes.",
+            "parsed_decision": "Yes",
+            "generation_latency_sec": 2.746,
+            "scoring_latency_sec": 8.013,
+            "peak_vram_mib": 3338.83,
+            "candidate_scoring": {
+              "prompt_token_length": 1213,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.313412
+                  ],
+                  "token_probs": [
+                    0.730949
+                  ],
+                  "total_log_likelihood": -0.313412,
+                  "length_normalized_log_likelihood": -0.313412,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -1.313412
+                  ],
+                  "token_probs": [
+                    0.268901
+                  ],
+                  "total_log_likelihood": -1.313412,
+                  "length_normalized_log_likelihood": -1.313412,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -11.875918,
+                    -0.00024
+                  ],
+                  "token_probs": [
+                    7e-06,
+                    0.99976
+                  ],
+                  "total_log_likelihood": -11.876158,
+                  "length_normalized_log_likelihood": -5.938079,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.731053,
+                " No": 0.26894,
+                " Undetermined": 7e-06
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.729135,
+                " No": 0.268234,
+                " Undetermined": 0.002631
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P2_yes_und_no",
+            "prompt_desc": "Permuted order (Yes, Undetermined, No)",
+            "prompt_text": "The green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the magenta prism?\nCarefully evaluate whether the question is entailed (Yes), underdetermined (Undetermined), or contradicted (No).\nAnswer directly with: Yes, Undetermined, or No.",
+            "prompt_length_tokens": 1210,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.739,
+            "scoring_latency_sec": 8.207,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1210,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.633625
+                  ],
+                  "token_probs": [
+                    0.530665
+                  ],
+                  "total_log_likelihood": -0.633625,
+                  "length_normalized_log_likelihood": -0.633625,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.758625
+                  ],
+                  "token_probs": [
+                    0.46831
+                  ],
+                  "total_log_likelihood": -0.758625,
+                  "length_normalized_log_likelihood": -0.758625,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -10.693908,
+                    -1.8e-05
+                  ],
+                  "token_probs": [
+                    2.3e-05,
+                    0.999982
+                  ],
+                  "total_log_likelihood": -10.693926,
+                  "length_normalized_log_likelihood": -5.346963,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.531197,
+                " No": 0.46878,
+                " Undetermined": 2.3e-05
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.528689,
+                " No": 0.466566,
+                " Undetermined": 0.004745
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P3_no_yes_und",
+            "prompt_desc": "Permuted order (No, Yes, Undetermined)",
+            "prompt_text": "The green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the magenta prism?\nCarefully evaluate whether the question is contradicted (No), entailed (Yes), or underdetermined (Undetermined).\nAnswer directly with: No, Yes, or Undetermined.",
+            "prompt_length_tokens": 1210,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.771,
+            "scoring_latency_sec": 8.193,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1210,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -1.223629
+                  ],
+                  "token_probs": [
+                    0.294161
+                  ],
+                  "total_log_likelihood": -1.223629,
+                  "length_normalized_log_likelihood": -1.223629,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.348629
+                  ],
+                  "token_probs": [
+                    0.705655
+                  ],
+                  "total_log_likelihood": -0.348629,
+                  "length_normalized_log_likelihood": -0.348629,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -11.724197,
+                    -0.000137
+                  ],
+                  "token_probs": [
+                    8e-06,
+                    0.999863
+                  ],
+                  "total_log_likelihood": -11.724334,
+                  "length_normalized_log_likelihood": -5.862167,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.294213,
+                " No": 0.705779,
+                " Undetermined": 8e-06
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.29338,
+                " No": 0.703782,
+                " Undetermined": 0.002838
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P4_no_und_yes",
+            "prompt_desc": "Permuted order (No, Undetermined, Yes)",
+            "prompt_text": "The green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the magenta prism?\nCarefully evaluate whether the question is contradicted (No), underdetermined (Undetermined), or entailed (Yes).\nAnswer directly with: No, Undetermined, or Yes.",
+            "prompt_length_tokens": 1210,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.72,
+            "scoring_latency_sec": 8.029,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1210,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.898762
+                  ],
+                  "token_probs": [
+                    0.407073
+                  ],
+                  "total_log_likelihood": -0.898762,
+                  "length_normalized_log_likelihood": -0.898762,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.523762
+                  ],
+                  "token_probs": [
+                    0.592288
+                  ],
+                  "total_log_likelihood": -0.523762,
+                  "length_normalized_log_likelihood": -0.523762,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -11.412194,
+                    -2.7e-05
+                  ],
+                  "token_probs": [
+                    1.1e-05,
+                    0.999973
+                  ],
+                  "total_log_likelihood": -11.412221,
+                  "length_normalized_log_likelihood": -5.70611,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.407329,
+                " No": 0.59266,
+                " Undetermined": 1.1e-05
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.405982,
+                " No": 0.590701,
+                " Undetermined": 0.003317
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P5_und_yes_no",
+            "prompt_desc": "Permuted order (Undetermined, Yes, No)",
+            "prompt_text": "The green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the magenta prism?\nCarefully evaluate whether the question is underdetermined (Undetermined), entailed (Yes), or contradicted (No).\nAnswer directly with: Undetermined, Yes, or No.",
+            "prompt_length_tokens": 1210,
+            "completion_token_ids": [
+              9230,
+              30,
+              49279
+            ],
+            "completion_text": "Yes.",
+            "parsed_decision": "Yes",
+            "generation_latency_sec": 2.702,
+            "scoring_latency_sec": 8.002,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1210,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.204478
+                  ],
+                  "token_probs": [
+                    0.815072
+                  ],
+                  "total_log_likelihood": -0.204478,
+                  "length_normalized_log_likelihood": -0.204478,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -1.704478
+                  ],
+                  "token_probs": [
+                    0.181867
+                  ],
+                  "total_log_likelihood": -1.704478,
+                  "length_normalized_log_likelihood": -1.704478,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -5.933034,
+                    -3.3e-05
+                  ],
+                  "token_probs": [
+                    0.00265,
+                    0.999967
+                  ],
+                  "total_log_likelihood": -5.933067,
+                  "length_normalized_log_likelihood": -2.966534,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.815407,
+                " No": 0.181942,
+                " Undetermined": 0.002651
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.777428,
+                " No": 0.173468,
+                " Undetermined": 0.049104
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P6_und_no_yes",
+            "prompt_desc": "Permuted order (Undetermined, No, Yes)",
+            "prompt_text": "The green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the magenta prism?\nCarefully evaluate whether the question is underdetermined (Undetermined), contradicted (No), or entailed (Yes).\nAnswer directly with: Undetermined, No, or Yes.",
+            "prompt_length_tokens": 1210,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.708,
+            "scoring_latency_sec": 7.98,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1210,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.759926
+                  ],
+                  "token_probs": [
+                    0.467701
+                  ],
+                  "total_log_likelihood": -0.759926,
+                  "length_normalized_log_likelihood": -0.759926,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.634926
+                  ],
+                  "token_probs": [
+                    0.529974
+                  ],
+                  "total_log_likelihood": -0.634926,
+                  "length_normalized_log_likelihood": -0.634926,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -7.25964,
+                    -5.9e-05
+                  ],
+                  "token_probs": [
+                    0.000703,
+                    0.999941
+                  ],
+                  "total_log_likelihood": -7.259699,
+                  "length_normalized_log_likelihood": -3.62985,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.46846,
+                " No": 0.530835,
+                " Undetermined": 0.000704
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.456652,
+                " No": 0.517454,
+                " Undetermined": 0.025894
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P7_open_unlisted",
+            "prompt_desc": "Open prompt without enumerated options list",
+            "prompt_text": "The green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the magenta prism?\nCarefully evaluate whether the question is entailed, contradicted, or underdetermined from the evidence.\nState your evaluation directly.",
+            "prompt_length_tokens": 1199,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.77,
+            "scoring_latency_sec": 7.888,
+            "peak_vram_mib": 3338.8,
+            "candidate_scoring": {
+              "prompt_token_length": 1199,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.69322
+                  ],
+                  "token_probs": [
+                    0.499964
+                  ],
+                  "total_log_likelihood": -0.69322,
+                  "length_normalized_log_likelihood": -0.69322,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.69322
+                  ],
+                  "token_probs": [
+                    0.499964
+                  ],
+                  "total_log_likelihood": -0.69322,
+                  "length_normalized_log_likelihood": -0.69322,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -17.755699,
+                    -0.0146
+                  ],
+                  "token_probs": [
+                    0.0,
+                    0.985506
+                  ],
+                  "total_log_likelihood": -17.770299,
+                  "length_normalized_log_likelihood": -8.88515,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.5,
+                " No": 0.5,
+                " Undetermined": 0.0
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.499931,
+                " No": 0.499931,
+                " Undetermined": 0.000138
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P8_alternate_wording",
+            "prompt_desc": "Alternate lexical wording (Supported, Refuted, Unresolvable)",
+            "prompt_text": "The green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is the cyan box to the left of the magenta prism?\nAssess whether the query statement is logically supported (Yes), refuted (No), or cannot be determined from the premises (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+            "prompt_length_tokens": 1214,
+            "completion_token_ids": [
+              9230,
+              30,
+              49279
+            ],
+            "completion_text": "Yes.",
+            "parsed_decision": "Yes",
+            "generation_latency_sec": 2.722,
+            "scoring_latency_sec": 7.991,
+            "peak_vram_mib": 3338.83,
+            "candidate_scoring": {
+              "prompt_token_length": 1214,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.251976
+                  ],
+                  "token_probs": [
+                    0.777264
+                  ],
+                  "total_log_likelihood": -0.251976,
+                  "length_normalized_log_likelihood": -0.251976,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -1.501976
+                  ],
+                  "token_probs": [
+                    0.22269
+                  ],
+                  "total_log_likelihood": -1.501976,
+                  "length_normalized_log_likelihood": -1.501976,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -14.376962,
+                    -0.000334
+                  ],
+                  "token_probs": [
+                    1e-06,
+                    0.999666
+                  ],
+                  "total_log_likelihood": -14.377296,
+                  "length_normalized_log_likelihood": -7.188648,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.777299,
+                " No": 0.2227,
+                " Undetermined": 1e-06
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.776713,
+                " No": 0.222532,
+                " Undetermined": 0.000755
+              },
+              "length_rank_flip": false
+            }
+          }
+        ]
+      },
+      {
+        "sample_id": "ctrl_reverse_chain_0038",
+        "case_name": "Reverse Chain (Contradicted, GT: No)",
+        "ground_truth": "No",
+        "prompts": [
+          {
+            "prompt_id": "P1_yes_no_und",
+            "prompt_desc": "Canonical order (Yes, No, Undetermined)",
+            "prompt_text": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+            "prompt_length_tokens": 1211,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.771,
+            "scoring_latency_sec": 8.043,
+            "peak_vram_mib": 3338.83,
+            "candidate_scoring": {
+              "prompt_token_length": 1211,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.75779
+                  ],
+                  "token_probs": [
+                    0.468701
+                  ],
+                  "total_log_likelihood": -0.75779,
+                  "length_normalized_log_likelihood": -0.75779,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.63279
+                  ],
+                  "token_probs": [
+                    0.531108
+                  ],
+                  "total_log_likelihood": -0.63279,
+                  "length_normalized_log_likelihood": -0.63279,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -9.193413,
+                    -0.000238
+                  ],
+                  "token_probs": [
+                    0.000102,
+                    0.999762
+                  ],
+                  "total_log_likelihood": -9.193651,
+                  "length_normalized_log_likelihood": -4.596825,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.468743,
+                " No": 0.531155,
+                " Undetermined": 0.000102
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.46411,
+                " No": 0.525905,
+                " Undetermined": 0.009985
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P2_yes_und_no",
+            "prompt_desc": "Permuted order (Yes, Undetermined, No)",
+            "prompt_text": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is entailed (Yes), underdetermined (Undetermined), or contradicted (No).\nAnswer directly with: Yes, Undetermined, or No.",
+            "prompt_length_tokens": 1208,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.669,
+            "scoring_latency_sec": 8.046,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1208,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -1.315825
+                  ],
+                  "token_probs": [
+                    0.268253
+                  ],
+                  "total_log_likelihood": -1.315825,
+                  "length_normalized_log_likelihood": -1.315825,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.315825
+                  ],
+                  "token_probs": [
+                    0.729187
+                  ],
+                  "total_log_likelihood": -0.315825,
+                  "length_normalized_log_likelihood": -0.315825,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -7.764402,
+                    -2e-05
+                  ],
+                  "token_probs": [
+                    0.000425,
+                    0.99998
+                  ],
+                  "total_log_likelihood": -7.764422,
+                  "length_normalized_log_likelihood": -3.882211,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.268827,
+                " No": 0.730748,
+                " Undetermined": 0.000425
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.263498,
+                " No": 0.716262,
+                " Undetermined": 0.02024
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P3_no_yes_und",
+            "prompt_desc": "Permuted order (No, Yes, Undetermined)",
+            "prompt_text": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is contradicted (No), entailed (Yes), or underdetermined (Undetermined).\nAnswer directly with: No, Yes, or Undetermined.",
+            "prompt_length_tokens": 1208,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.649,
+            "scoring_latency_sec": 8.005,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1208,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -1.137103
+                  ],
+                  "token_probs": [
+                    0.320747
+                  ],
+                  "total_log_likelihood": -1.137103,
+                  "length_normalized_log_likelihood": -1.137103,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.387103
+                  ],
+                  "token_probs": [
+                    0.679021
+                  ],
+                  "total_log_likelihood": -0.387103,
+                  "length_normalized_log_likelihood": -0.387103,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -11.449658,
+                    -0.000158
+                  ],
+                  "token_probs": [
+                    1.1e-05,
+                    0.999842
+                  ],
+                  "total_log_likelihood": -11.449816,
+                  "length_normalized_log_likelihood": -5.724908,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.320818,
+                " No": 0.679171,
+                " Undetermined": 1.1e-05
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.319777,
+                " No": 0.676969,
+                " Undetermined": 0.003254
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P4_no_und_yes",
+            "prompt_desc": "Permuted order (No, Undetermined, Yes)",
+            "prompt_text": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is contradicted (No), underdetermined (Undetermined), or entailed (Yes).\nAnswer directly with: No, Undetermined, or Yes.",
+            "prompt_length_tokens": 1208,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.671,
+            "scoring_latency_sec": 7.994,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1208,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -1.223599
+                  ],
+                  "token_probs": [
+                    0.294169
+                  ],
+                  "total_log_likelihood": -1.223599,
+                  "length_normalized_log_likelihood": -1.223599,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.348599
+                  ],
+                  "token_probs": [
+                    0.705676
+                  ],
+                  "total_log_likelihood": -0.348599,
+                  "length_normalized_log_likelihood": -0.348599,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -13.911122,
+                    -3.3e-05
+                  ],
+                  "token_probs": [
+                    1e-06,
+                    0.999967
+                  ],
+                  "total_log_likelihood": -13.911155,
+                  "length_normalized_log_likelihood": -6.955578,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.294215,
+                " No": 0.705784,
+                " Undetermined": 1e-06
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.293935,
+                " No": 0.705113,
+                " Undetermined": 0.000953
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P5_und_yes_no",
+            "prompt_desc": "Permuted order (Undetermined, Yes, No)",
+            "prompt_text": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is underdetermined (Undetermined), entailed (Yes), or contradicted (No).\nAnswer directly with: Undetermined, Yes, or No.",
+            "prompt_length_tokens": 1208,
+            "completion_token_ids": [
+              9230,
+              30,
+              49279
+            ],
+            "completion_text": "Yes.",
+            "parsed_decision": "Yes",
+            "generation_latency_sec": 2.682,
+            "scoring_latency_sec": 7.948,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1208,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.298688
+                  ],
+                  "token_probs": [
+                    0.741791
+                  ],
+                  "total_log_likelihood": -0.298688,
+                  "length_normalized_log_likelihood": -0.298688,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -1.423688
+                  ],
+                  "token_probs": [
+                    0.240824
+                  ],
+                  "total_log_likelihood": -1.423688,
+                  "length_normalized_log_likelihood": -1.423688,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -4.700456,
+                    -3.7e-05
+                  ],
+                  "token_probs": [
+                    0.009091,
+                    0.999963
+                  ],
+                  "total_log_likelihood": -4.700493,
+                  "length_normalized_log_likelihood": -2.350246,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.747995,
+                " No": 0.242838,
+                " Undetermined": 0.009167
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.688143,
+                " No": 0.223407,
+                " Undetermined": 0.08845
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P6_und_no_yes",
+            "prompt_desc": "Permuted order (Undetermined, No, Yes)",
+            "prompt_text": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is underdetermined (Undetermined), contradicted (No), or entailed (Yes).\nAnswer directly with: Undetermined, No, or Yes.",
+            "prompt_length_tokens": 1208,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.656,
+            "scoring_latency_sec": 7.971,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1208,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -1.139265
+                  ],
+                  "token_probs": [
+                    0.320054
+                  ],
+                  "total_log_likelihood": -1.139265,
+                  "length_normalized_log_likelihood": -1.139265,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.389265
+                  ],
+                  "token_probs": [
+                    0.677555
+                  ],
+                  "total_log_likelihood": -0.389265,
+                  "length_normalized_log_likelihood": -0.389265,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -6.74369,
+                    -6.1e-05
+                  ],
+                  "token_probs": [
+                    0.001178,
+                    0.999939
+                  ],
+                  "total_log_likelihood": -6.743751,
+                  "length_normalized_log_likelihood": -3.371875,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.320443,
+                " No": 0.678378,
+                " Undetermined": 0.00118
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.31015,
+                " No": 0.656587,
+                " Undetermined": 0.033263
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P7_open_unlisted",
+            "prompt_desc": "Open prompt without enumerated options list",
+            "prompt_text": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the red sphere to the left of the green cylinder?\nCarefully evaluate whether the question is entailed, contradicted, or underdetermined from the evidence.\nState your evaluation directly.",
+            "prompt_length_tokens": 1197,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.749,
+            "scoring_latency_sec": 8.069,
+            "peak_vram_mib": 3338.8,
+            "candidate_scoring": {
+              "prompt_token_length": 1197,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -1.806615
+                  ],
+                  "token_probs": [
+                    0.164209
+                  ],
+                  "total_log_likelihood": -1.806615,
+                  "length_normalized_log_likelihood": -1.806615,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.181615
+                  ],
+                  "token_probs": [
+                    0.833922
+                  ],
+                  "total_log_likelihood": -0.181615,
+                  "length_normalized_log_likelihood": -0.181615,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -12.287826,
+                    -0.03147
+                  ],
+                  "token_probs": [
+                    5e-06,
+                    0.96902
+                  ],
+                  "total_log_likelihood": -12.319296,
+                  "length_normalized_log_likelihood": -6.159648,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.164516,
+                " No": 0.83548,
+                " Undetermined": 4e-06
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.164169,
+                " No": 0.833719,
+                " Undetermined": 0.002112
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P8_alternate_wording",
+            "prompt_desc": "Alternate lexical wording (Supported, Refuted, Unresolvable)",
+            "prompt_text": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is the red sphere to the left of the green cylinder?\nAssess whether the query statement is logically supported (Yes), refuted (No), or cannot be determined from the premises (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+            "prompt_length_tokens": 1212,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.653,
+            "scoring_latency_sec": 7.973,
+            "peak_vram_mib": 3338.83,
+            "candidate_scoring": {
+              "prompt_token_length": 1212,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.757659
+                  ],
+                  "token_probs": [
+                    0.468762
+                  ],
+                  "total_log_likelihood": -0.757659,
+                  "length_normalized_log_likelihood": -0.757659,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.632659
+                  ],
+                  "token_probs": [
+                    0.531177
+                  ],
+                  "total_log_likelihood": -0.632659,
+                  "length_normalized_log_likelihood": -0.632659,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -12.326011,
+                    -0.000397
+                  ],
+                  "token_probs": [
+                    4e-06,
+                    0.999603
+                  ],
+                  "total_log_likelihood": -12.326408,
+                  "length_normalized_log_likelihood": -6.163204,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.468789,
+                " No": 0.531207,
+                " Undetermined": 4e-06
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.467806,
+                " No": 0.530093,
+                " Undetermined": 0.002101
+              },
+              "length_rank_flip": false
+            }
+          }
+        ]
+      },
+      {
+        "sample_id": "ctrl_underdetermined_fork_0073",
+        "case_name": "Underdetermined Fork (Underdetermined, GT: Undetermined)",
+        "ground_truth": "Undetermined",
+        "prompts": [
+          {
+            "prompt_id": "P1_yes_no_und",
+            "prompt_desc": "Canonical order (Yes, No, Undetermined)",
+            "prompt_text": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+            "prompt_length_tokens": 1212,
+            "completion_token_ids": [
+              9230,
+              30,
+              49279
+            ],
+            "completion_text": "Yes.",
+            "parsed_decision": "Yes",
+            "generation_latency_sec": 2.625,
+            "scoring_latency_sec": 7.994,
+            "peak_vram_mib": 3338.83,
+            "candidate_scoring": {
+              "prompt_token_length": 1212,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.523211
+                  ],
+                  "token_probs": [
+                    0.592614
+                  ],
+                  "total_log_likelihood": -0.523211,
+                  "length_normalized_log_likelihood": -0.523211,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.898211
+                  ],
+                  "token_probs": [
+                    0.407298
+                  ],
+                  "total_log_likelihood": -0.898211,
+                  "length_normalized_log_likelihood": -0.898211,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -12.849174,
+                    -0.000234
+                  ],
+                  "token_probs": [
+                    3e-06,
+                    0.999766
+                  ],
+                  "total_log_likelihood": -12.849408,
+                  "length_normalized_log_likelihood": -6.424704,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.592665,
+                " No": 0.407332,
+                " Undetermined": 3e-06
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.591707,
+                " No": 0.406674,
+                " Undetermined": 0.001619
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P2_yes_und_no",
+            "prompt_desc": "Permuted order (Yes, Undetermined, No)",
+            "prompt_text": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is entailed (Yes), underdetermined (Undetermined), or contradicted (No).\nAnswer directly with: Yes, Undetermined, or No.",
+            "prompt_length_tokens": 1209,
+            "completion_token_ids": [
+              9230,
+              30,
+              49279
+            ],
+            "completion_text": "Yes.",
+            "parsed_decision": "Yes",
+            "generation_latency_sec": 2.686,
+            "scoring_latency_sec": 8.126,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1209,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.57725
+                  ],
+                  "token_probs": [
+                    0.56144
+                  ],
+                  "total_log_likelihood": -0.57725,
+                  "length_normalized_log_likelihood": -0.57725,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.82725
+                  ],
+                  "token_probs": [
+                    0.43725
+                  ],
+                  "total_log_likelihood": -0.82725,
+                  "length_normalized_log_likelihood": -0.82725,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -9.077434,
+                    -1.7e-05
+                  ],
+                  "token_probs": [
+                    0.000114,
+                    0.999983
+                  ],
+                  "total_log_likelihood": -9.077451,
+                  "length_normalized_log_likelihood": -4.538725,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.562112,
+                " No": 0.437773,
+                " Undetermined": 0.000114
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.556224,
+                " No": 0.433188,
+                " Undetermined": 0.010588
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P3_no_yes_und",
+            "prompt_desc": "Permuted order (No, Yes, Undetermined)",
+            "prompt_text": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is contradicted (No), entailed (Yes), or underdetermined (Undetermined).\nAnswer directly with: No, Yes, or Undetermined.",
+            "prompt_length_tokens": 1209,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.71,
+            "scoring_latency_sec": 7.93,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1209,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -1.137037
+                  ],
+                  "token_probs": [
+                    0.320768
+                  ],
+                  "total_log_likelihood": -1.137037,
+                  "length_normalized_log_likelihood": -1.137037,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.387037
+                  ],
+                  "token_probs": [
+                    0.679066
+                  ],
+                  "total_log_likelihood": -0.387037,
+                  "length_normalized_log_likelihood": -0.387037,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -11.616378,
+                    -0.000126
+                  ],
+                  "token_probs": [
+                    9e-06,
+                    0.999874
+                  ],
+                  "total_log_likelihood": -11.616504,
+                  "length_normalized_log_likelihood": -5.808252,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.320818,
+                " No": 0.679173,
+                " Undetermined": 9e-06
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.319861,
+                " No": 0.677145,
+                " Undetermined": 0.002994
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P4_no_und_yes",
+            "prompt_desc": "Permuted order (No, Undetermined, Yes)",
+            "prompt_text": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is contradicted (No), underdetermined (Undetermined), or entailed (Yes).\nAnswer directly with: No, Undetermined, or Yes.",
+            "prompt_length_tokens": 1209,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.723,
+            "scoring_latency_sec": 7.913,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1209,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.758024
+                  ],
+                  "token_probs": [
+                    0.468592
+                  ],
+                  "total_log_likelihood": -0.758024,
+                  "length_normalized_log_likelihood": -0.758024,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.633024
+                  ],
+                  "token_probs": [
+                    0.530984
+                  ],
+                  "total_log_likelihood": -0.633024,
+                  "length_normalized_log_likelihood": -0.633024,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -10.701372,
+                    -2.6e-05
+                  ],
+                  "token_probs": [
+                    2.3e-05,
+                    0.999974
+                  ],
+                  "total_log_likelihood": -10.701398,
+                  "length_normalized_log_likelihood": -5.350699,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.46878,
+                " No": 0.531197,
+                " Undetermined": 2.3e-05
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.466576,
+                " No": 0.5287,
+                " Undetermined": 0.004724
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P5_und_yes_no",
+            "prompt_desc": "Permuted order (Undetermined, Yes, No)",
+            "prompt_text": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is underdetermined (Undetermined), entailed (Yes), or contradicted (No).\nAnswer directly with: Undetermined, Yes, or No.",
+            "prompt_length_tokens": 1209,
+            "completion_token_ids": [
+              9230,
+              30,
+              49279
+            ],
+            "completion_text": "Yes.",
+            "parsed_decision": "Yes",
+            "generation_latency_sec": 2.787,
+            "scoring_latency_sec": 8.061,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1209,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.193042
+                  ],
+                  "token_probs": [
+                    0.824448
+                  ],
+                  "total_log_likelihood": -0.193042,
+                  "length_normalized_log_likelihood": -0.193042,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -1.943042
+                  ],
+                  "token_probs": [
+                    0.143268
+                  ],
+                  "total_log_likelihood": -1.943042,
+                  "length_normalized_log_likelihood": -1.943042,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -3.995512,
+                    -3.2e-05
+                  ],
+                  "token_probs": [
+                    0.018398,
+                    0.999968
+                  ],
+                  "total_log_likelihood": -3.995544,
+                  "length_normalized_log_likelihood": -1.997772,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.836058,
+                " No": 0.145285,
+                " Undetermined": 0.018657
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.747221,
+                " No": 0.129847,
+                " Undetermined": 0.122932
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P6_und_no_yes",
+            "prompt_desc": "Permuted order (Undetermined, No, Yes)",
+            "prompt_text": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is underdetermined (Undetermined), contradicted (No), or entailed (Yes).\nAnswer directly with: Undetermined, No, or Yes.",
+            "prompt_length_tokens": 1209,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.737,
+            "scoring_latency_sec": 8.011,
+            "peak_vram_mib": 3338.82,
+            "candidate_scoring": {
+              "prompt_token_length": 1209,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.83489
+                  ],
+                  "token_probs": [
+                    0.433922
+                  ],
+                  "total_log_likelihood": -0.83489,
+                  "length_normalized_log_likelihood": -0.83489,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.58489
+                  ],
+                  "token_probs": [
+                    0.557167
+                  ],
+                  "total_log_likelihood": -0.58489,
+                  "length_normalized_log_likelihood": -0.58489,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -5.780306,
+                    -5.8e-05
+                  ],
+                  "token_probs": [
+                    0.003088,
+                    0.999942
+                  ],
+                  "total_log_likelihood": -5.780364,
+                  "length_normalized_log_likelihood": -2.890182,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.436464,
+                " No": 0.560431,
+                " Undetermined": 0.003106
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.41458,
+                " No": 0.532331,
+                " Undetermined": 0.053089
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P7_open_unlisted",
+            "prompt_desc": "Open prompt without enumerated options list",
+            "prompt_text": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nCarefully evaluate whether the question is entailed, contradicted, or underdetermined from the evidence.\nState your evaluation directly.",
+            "prompt_length_tokens": 1198,
+            "completion_token_ids": [
+              2838,
+              30,
+              49279
+            ],
+            "completion_text": "No.",
+            "parsed_decision": "No",
+            "generation_latency_sec": 2.727,
+            "scoring_latency_sec": 7.907,
+            "peak_vram_mib": 3338.8,
+            "candidate_scoring": {
+              "prompt_token_length": 1198,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.898421
+                  ],
+                  "token_probs": [
+                    0.407212
+                  ],
+                  "total_log_likelihood": -0.898421,
+                  "length_normalized_log_likelihood": -0.898421,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.523421
+                  ],
+                  "token_probs": [
+                    0.59249
+                  ],
+                  "total_log_likelihood": -0.523421,
+                  "length_normalized_log_likelihood": -0.523421,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -13.763732,
+                    -0.01945
+                  ],
+                  "token_probs": [
+                    1e-06,
+                    0.980738
+                  ],
+                  "total_log_likelihood": -13.783182,
+                  "length_normalized_log_likelihood": -6.891591,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " No",
+                " Yes",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.407333,
+                " No": 0.592666,
+                " Undetermined": 1e-06
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.40692,
+                " No": 0.592065,
+                " Undetermined": 0.001016
+              },
+              "length_rank_flip": false
+            }
+          },
+          {
+            "prompt_id": "P8_alternate_wording",
+            "prompt_desc": "Alternate lexical wording (Supported, Refuted, Unresolvable)",
+            "prompt_text": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is the orange torus to the left of the cyan box?\nAssess whether the query statement is logically supported (Yes), refuted (No), or cannot be determined from the premises (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+            "prompt_length_tokens": 1213,
+            "completion_token_ids": [
+              9230,
+              30,
+              49279
+            ],
+            "completion_text": "Yes.",
+            "parsed_decision": "Yes",
+            "generation_latency_sec": 2.716,
+            "scoring_latency_sec": 7.955,
+            "peak_vram_mib": 3338.83,
+            "candidate_scoring": {
+              "prompt_token_length": 1213,
+              "candidates": {
+                " Yes": {
+                  "candidate_text": " Yes",
+                  "token_ids": [
+                    9230
+                  ],
+                  "token_strings": [
+                    " Yes"
+                  ],
+                  "token_log_probs": [
+                    -0.47411
+                  ],
+                  "token_probs": [
+                    0.622439
+                  ],
+                  "total_log_likelihood": -0.47411,
+                  "length_normalized_log_likelihood": -0.47411,
+                  "sequence_length": 1
+                },
+                " No": {
+                  "candidate_text": " No",
+                  "token_ids": [
+                    2838
+                  ],
+                  "token_strings": [
+                    " No"
+                  ],
+                  "token_log_probs": [
+                    -0.97411
+                  ],
+                  "token_probs": [
+                    0.377528
+                  ],
+                  "total_log_likelihood": -0.97411,
+                  "length_normalized_log_likelihood": -0.97411,
+                  "sequence_length": 1
+                },
+                " Undetermined": {
+                  "candidate_text": " Undetermined",
+                  "token_ids": [
+                    27589,
+                    24454
+                  ],
+                  "token_strings": [
+                    " Und",
+                    "etermined"
+                  ],
+                  "token_log_probs": [
+                    -14.286613,
+                    -0.000356
+                  ],
+                  "token_probs": [
+                    1e-06,
+                    0.999644
+                  ],
+                  "total_log_likelihood": -14.286969,
+                  "length_normalized_log_likelihood": -7.143484,
+                  "sequence_length": 2
+                }
+              },
+              "raw_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "length_normalized_ranking": [
+                " Yes",
+                " No",
+                " Undetermined"
+              ],
+              "candidate_probabilities_raw": {
+                " Yes": 0.622459,
+                " No": 0.37754,
+                " Undetermined": 1e-06
+              },
+              "candidate_probabilities_normalized": {
+                " Yes": 0.621968,
+                " No": 0.377243,
+                " Undetermined": 0.000789
+              },
+              "length_rank_flip": false
+            }
+          }
+        ]
+      }
+    ],
+    "part3_visual_evidence_controls": [
+      {
+        "condition_id": "cond1_original",
+        "description": "Original image (cyan box left, green cylinder right). Visual: cyan < green. Combined: cyan < magenta (ENTAILED)",
+        "image_file": "diag_orig_cyan_left_green_right.png",
+        "image_sha256": "58ba2e491acf33e07ae1ea879e86ea4cc4474f9c04f13a16cbbe2abda13804e6",
+        "ground_truth": "Yes",
+        "expected_logical_status": "entailed",
+        "log_likelihood_margin_yes_minus_no": 1.0,
+        "prompt_length_tokens": 1213,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "completion_text": "Yes.",
+        "parsed_decision": "Yes",
+        "generation_latency_sec": 2.705,
+        "scoring_latency_sec": 7.964,
+        "peak_vram_mib": 3338.83,
+        "candidate_scoring": {
+          "prompt_token_length": 1213,
+          "candidates": {
+            " Yes": {
+              "candidate_text": " Yes",
+              "token_ids": [
+                9230
+              ],
+              "token_strings": [
+                " Yes"
+              ],
+              "token_log_probs": [
+                -0.313412
+              ],
+              "token_probs": [
+                0.730949
+              ],
+              "total_log_likelihood": -0.313412,
+              "length_normalized_log_likelihood": -0.313412,
+              "sequence_length": 1
+            },
+            " No": {
+              "candidate_text": " No",
+              "token_ids": [
+                2838
+              ],
+              "token_strings": [
+                " No"
+              ],
+              "token_log_probs": [
+                -1.313412
+              ],
+              "token_probs": [
+                0.268901
+              ],
+              "total_log_likelihood": -1.313412,
+              "length_normalized_log_likelihood": -1.313412,
+              "sequence_length": 1
+            },
+            " Undetermined": {
+              "candidate_text": " Undetermined",
+              "token_ids": [
+                27589,
+                24454
+              ],
+              "token_strings": [
+                " Und",
+                "etermined"
+              ],
+              "token_log_probs": [
+                -11.875918,
+                -0.00024
+              ],
+              "token_probs": [
+                7e-06,
+                0.99976
+              ],
+              "total_log_likelihood": -11.876158,
+              "length_normalized_log_likelihood": -5.938079,
+              "sequence_length": 2
+            }
+          },
+          "raw_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "length_normalized_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "candidate_probabilities_raw": {
+            " Yes": 0.731053,
+            " No": 0.26894,
+            " Undetermined": 7e-06
+          },
+          "candidate_probabilities_normalized": {
+            " Yes": 0.729135,
+            " No": 0.268234,
+            " Undetermined": 0.002631
+          },
+          "length_rank_flip": false
+        }
+      },
+      {
+        "condition_id": "cond2_reversed",
+        "description": "Counterfactual reversed layout (green cylinder left, cyan box right). Visual: green < cyan. Combined: green < cyan & green < magenta (UNDERDETERMINED)",
+        "image_file": "diag_rev_green_left_cyan_right.png",
+        "image_sha256": "ac1dfc8fc27c7c963c79a05456a3c4ca7fd8751388154311c56cae0ad43f04b4",
+        "ground_truth": "Undetermined",
+        "expected_logical_status": "underdetermined",
+        "log_likelihood_margin_yes_minus_no": 0.875,
+        "prompt_length_tokens": 1213,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "completion_text": "Yes.",
+        "parsed_decision": "Yes",
+        "generation_latency_sec": 2.685,
+        "scoring_latency_sec": 7.987,
+        "peak_vram_mib": 3338.83,
+        "candidate_scoring": {
+          "prompt_token_length": 1213,
+          "candidates": {
+            " Yes": {
+              "candidate_text": " Yes",
+              "token_ids": [
+                9230
+              ],
+              "token_strings": [
+                " Yes"
+              ],
+              "token_log_probs": [
+                -0.348675
+              ],
+              "token_probs": [
+                0.705622
+              ],
+              "total_log_likelihood": -0.348675,
+              "length_normalized_log_likelihood": -0.348675,
+              "sequence_length": 1
+            },
+            " No": {
+              "candidate_text": " No",
+              "token_ids": [
+                2838
+              ],
+              "token_strings": [
+                " No"
+              ],
+              "token_log_probs": [
+                -1.223675
+              ],
+              "token_probs": [
+                0.294147
+              ],
+              "total_log_likelihood": -1.223675,
+              "length_normalized_log_likelihood": -1.223675,
+              "sequence_length": 1
+            },
+            " Undetermined": {
+              "candidate_text": " Undetermined",
+              "token_ids": [
+                27589,
+                24454
+              ],
+              "token_strings": [
+                " Und",
+                "etermined"
+              ],
+              "token_log_probs": [
+                -9.887094,
+                -0.00022
+              ],
+              "token_probs": [
+                5.1e-05,
+                0.99978
+              ],
+              "total_log_likelihood": -9.887314,
+              "length_normalized_log_likelihood": -4.943657,
+              "sequence_length": 2
+            }
+          },
+          "raw_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "length_normalized_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "candidate_probabilities_raw": {
+            " Yes": 0.705749,
+            " No": 0.2942,
+            " Undetermined": 5.1e-05
+          },
+          "candidate_probabilities_normalized": {
+            " Yes": 0.700788,
+            " No": 0.292132,
+            " Undetermined": 0.00708
+          },
+          "length_rank_flip": false
+        }
+      },
+      {
+        "condition_id": "cond3_object_removed",
+        "description": "Ablated image (cyan box present, green cylinder REMOVED). Visual premise missing (UNDERDETERMINED)",
+        "image_file": "diag_ablation_cyan_only.png",
+        "image_sha256": "81925f1bc4796de5075f7ae4a21df42616bd2a5c3763ef291789e9dce4b9d863",
+        "ground_truth": "Undetermined",
+        "expected_logical_status": "underdetermined",
+        "log_likelihood_margin_yes_minus_no": 0.75,
+        "prompt_length_tokens": 1213,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "completion_text": "Yes.",
+        "parsed_decision": "Yes",
+        "generation_latency_sec": 2.721,
+        "scoring_latency_sec": 7.955,
+        "peak_vram_mib": 3338.83,
+        "candidate_scoring": {
+          "prompt_token_length": 1213,
+          "candidates": {
+            " Yes": {
+              "candidate_text": " Yes",
+              "token_ids": [
+                9230
+              ],
+              "token_strings": [
+                " Yes"
+              ],
+              "token_log_probs": [
+                -0.390883
+              ],
+              "token_probs": [
+                0.676459
+              ],
+              "total_log_likelihood": -0.390883,
+              "length_normalized_log_likelihood": -0.390883,
+              "sequence_length": 1
+            },
+            " No": {
+              "candidate_text": " No",
+              "token_ids": [
+                2838
+              ],
+              "token_strings": [
+                " No"
+              ],
+              "token_log_probs": [
+                -1.140883
+              ],
+              "token_probs": [
+                0.319537
+              ],
+              "total_log_likelihood": -1.140883,
+              "length_normalized_log_likelihood": -1.140883,
+              "sequence_length": 1
+            },
+            " Undetermined": {
+              "candidate_text": " Undetermined",
+              "token_ids": [
+                27589,
+                24454
+              ],
+              "token_strings": [
+                " Und",
+                "etermined"
+              ],
+              "token_log_probs": [
+                -6.327612,
+                -0.000197
+              ],
+              "token_probs": [
+                0.001786,
+                0.999803
+              ],
+              "total_log_likelihood": -6.327809,
+              "length_normalized_log_likelihood": -3.163905,
+              "sequence_length": 2
+            }
+          },
+          "raw_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "length_normalized_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "candidate_probabilities_raw": {
+            " Yes": 0.677963,
+            " No": 0.320247,
+            " Undetermined": 0.00179
+          },
+          "candidate_probabilities_normalized": {
+            " Yes": 0.651534,
+            " No": 0.307763,
+            " Undetermined": 0.040703
+          },
+          "length_rank_flip": false
+        }
+      },
+      {
+        "condition_id": "cond4_blank",
+        "description": "Visual erasure (solid blank canvas). Visual premise completely missing (UNDERDETERMINED)",
+        "image_file": "diag_blank_canvas.png",
+        "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+        "ground_truth": "Undetermined",
+        "expected_logical_status": "underdetermined",
+        "log_likelihood_margin_yes_minus_no": -0.25,
+        "prompt_length_tokens": 1213,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "completion_text": "No.",
+        "parsed_decision": "No",
+        "generation_latency_sec": 2.709,
+        "scoring_latency_sec": 7.947,
+        "peak_vram_mib": 3338.83,
+        "candidate_scoring": {
+          "prompt_token_length": 1213,
+          "candidates": {
+            " Yes": {
+              "candidate_text": " Yes",
+              "token_ids": [
+                9230
+              ],
+              "token_strings": [
+                " Yes"
+              ],
+              "token_log_probs": [
+                -0.887144
+              ],
+              "token_probs": [
+                0.41183
+              ],
+              "total_log_likelihood": -0.887144,
+              "length_normalized_log_likelihood": -0.887144,
+              "sequence_length": 1
+            },
+            " No": {
+              "candidate_text": " No",
+              "token_ids": [
+                2838
+              ],
+              "token_strings": [
+                " No"
+              ],
+              "token_log_probs": [
+                -0.637144
+              ],
+              "token_probs": [
+                0.528801
+              ],
+              "total_log_likelihood": -0.637144,
+              "length_normalized_log_likelihood": -0.637144,
+              "sequence_length": 1
+            },
+            " Undetermined": {
+              "candidate_text": " Undetermined",
+              "token_ids": [
+                27589,
+                24454
+              ],
+              "token_strings": [
+                " Und",
+                "etermined"
+              ],
+              "token_log_probs": [
+                -4.093242,
+                -0.000225
+              ],
+              "token_probs": [
+                0.016685,
+                0.999775
+              ],
+              "total_log_likelihood": -4.093467,
+              "length_normalized_log_likelihood": -2.046734,
+              "sequence_length": 2
+            }
+          },
+          "raw_ranking": [
+            " No",
+            " Yes",
+            " Undetermined"
+          ],
+          "length_normalized_ranking": [
+            " No",
+            " Yes",
+            " Undetermined"
+          ],
+          "candidate_probabilities_raw": {
+            " Yes": 0.430194,
+            " No": 0.55238,
+            " Undetermined": 0.017425
+          },
+          "candidate_probabilities_normalized": {
+            " Yes": 0.384965,
+            " No": 0.494305,
+            " Undetermined": 0.120731
+          },
+          "length_rank_flip": false
+        }
+      },
+      {
+        "condition_id": "cond5_text_only",
+        "description": "Text-only version (blank canvas image + both premises explicit in text: cyan < green. green < magenta) (ENTAILED)",
+        "image_file": "diag_blank_canvas.png",
+        "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+        "ground_truth": "Yes",
+        "expected_logical_status": "entailed",
+        "log_likelihood_margin_yes_minus_no": 0.5,
+        "prompt_length_tokens": 1223,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "completion_text": "Yes.",
+        "parsed_decision": "Yes",
+        "generation_latency_sec": 2.726,
+        "scoring_latency_sec": 7.698,
+        "peak_vram_mib": 3338.85,
+        "candidate_scoring": {
+          "prompt_token_length": 1223,
+          "candidates": {
+            " Yes": {
+              "candidate_text": " Yes",
+              "token_ids": [
+                9230
+              ],
+              "token_strings": [
+                " Yes"
+              ],
+              "token_log_probs": [
+                -0.52731
+              ],
+              "token_probs": [
+                0.590191
+              ],
+              "total_log_likelihood": -0.52731,
+              "length_normalized_log_likelihood": -0.52731,
+              "sequence_length": 1
+            },
+            " No": {
+              "candidate_text": " No",
+              "token_ids": [
+                2838
+              ],
+              "token_strings": [
+                " No"
+              ],
+              "token_log_probs": [
+                -1.02731
+              ],
+              "token_probs": [
+                0.357969
+              ],
+              "total_log_likelihood": -1.02731,
+              "length_normalized_log_likelihood": -1.02731,
+              "sequence_length": 1
+            },
+            " Undetermined": {
+              "candidate_text": " Undetermined",
+              "token_ids": [
+                27589,
+                24454
+              ],
+              "token_strings": [
+                " Und",
+                "etermined"
+              ],
+              "token_log_probs": [
+                -4.475849,
+                -0.000158
+              ],
+              "token_probs": [
+                0.011381,
+                0.999842
+              ],
+              "total_log_likelihood": -4.476007,
+              "length_normalized_log_likelihood": -2.238004,
+              "sequence_length": 2
+            }
+          },
+          "raw_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "length_normalized_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "candidate_probabilities_raw": {
+            " Yes": 0.615078,
+            " No": 0.373064,
+            " Undetermined": 0.011859
+          },
+          "candidate_probabilities_normalized": {
+            " Yes": 0.559512,
+            " No": 0.339361,
+            " Undetermined": 0.101126
+          },
+          "length_rank_flip": false
+        }
+      },
+      {
+        "condition_id": "cond6_incorrect_names",
+        "description": "Lexical corruption (original image, but query asks about ungrounded entity: purple pyramid) (UNDERDETERMINED)",
+        "image_file": "diag_orig_cyan_left_green_right.png",
+        "image_sha256": "58ba2e491acf33e07ae1ea879e86ea4cc4474f9c04f13a16cbbe2abda13804e6",
+        "ground_truth": "Undetermined",
+        "expected_logical_status": "underdetermined",
+        "log_likelihood_margin_yes_minus_no": -1.125,
+        "prompt_length_tokens": 1213,
+        "completion_token_ids": [
+          2838,
+          30,
+          49279
+        ],
+        "completion_text": "No.",
+        "parsed_decision": "No",
+        "generation_latency_sec": 2.671,
+        "scoring_latency_sec": 7.981,
+        "peak_vram_mib": 3338.83,
+        "candidate_scoring": {
+          "prompt_token_length": 1213,
+          "candidates": {
+            " Yes": {
+              "candidate_text": " Yes",
+              "token_ids": [
+                9230
+              ],
+              "token_strings": [
+                " Yes"
+              ],
+              "token_log_probs": [
+                -1.411149
+              ],
+              "token_probs": [
+                0.243863
+              ],
+              "total_log_likelihood": -1.411149,
+              "length_normalized_log_likelihood": -1.411149,
+              "sequence_length": 1
+            },
+            " No": {
+              "candidate_text": " No",
+              "token_ids": [
+                2838
+              ],
+              "token_strings": [
+                " No"
+              ],
+              "token_log_probs": [
+                -0.286148
+              ],
+              "token_probs": [
+                0.751151
+              ],
+              "total_log_likelihood": -0.286148,
+              "length_normalized_log_likelihood": -0.286148,
+              "sequence_length": 1
+            },
+            " Undetermined": {
+              "candidate_text": " Undetermined",
+              "token_ids": [
+                27589,
+                24454
+              ],
+              "token_strings": [
+                " Und",
+                "etermined"
+              ],
+              "token_log_probs": [
+                -6.630194,
+                -0.000273
+              ],
+              "token_probs": [
+                0.00132,
+                0.999727
+              ],
+              "total_log_likelihood": -6.630467,
+              "length_normalized_log_likelihood": -3.315234,
+              "sequence_length": 2
+            }
+          },
+          "raw_ranking": [
+            " No",
+            " Yes",
+            " Undetermined"
+          ],
+          "length_normalized_ranking": [
+            " No",
+            " Yes",
+            " Undetermined"
+          ],
+          "candidate_probabilities_raw": {
+            " Yes": 0.24476,
+            " No": 0.753915,
+            " Undetermined": 0.001324
+          },
+          "candidate_probabilities_normalized": {
+            " Yes": 0.236453,
+            " No": 0.728326,
+            " Undetermined": 0.035222
+          },
+          "length_rank_flip": false
+        }
+      }
+    ],
+    "part4_evidence_insufficiency_dissection": [
+      {
+        "condition": "entailed_chain",
+        "epistemic_status": "entailed",
+        "ground_truth": "Yes",
+        "description": "Forward Chain: cyan < green (image) & green < magenta (text) => cyan < magenta is ENTAILED",
+        "text_premise": "The green cylinder is to the left of the magenta prism.",
+        "query": "Based on the image and statement, is the cyan box to the left of the magenta prism?",
+        "margin_yes_minus_no": 1.0,
+        "prompt_length_tokens": 1213,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "completion_text": "Yes.",
+        "parsed_decision": "Yes",
+        "generation_latency_sec": 2.714,
+        "scoring_latency_sec": 7.95,
+        "peak_vram_mib": 3338.83,
+        "candidate_scoring": {
+          "prompt_token_length": 1213,
+          "candidates": {
+            " Yes": {
+              "candidate_text": " Yes",
+              "token_ids": [
+                9230
+              ],
+              "token_strings": [
+                " Yes"
+              ],
+              "token_log_probs": [
+                -0.313412
+              ],
+              "token_probs": [
+                0.730949
+              ],
+              "total_log_likelihood": -0.313412,
+              "length_normalized_log_likelihood": -0.313412,
+              "sequence_length": 1
+            },
+            " No": {
+              "candidate_text": " No",
+              "token_ids": [
+                2838
+              ],
+              "token_strings": [
+                " No"
+              ],
+              "token_log_probs": [
+                -1.313412
+              ],
+              "token_probs": [
+                0.268901
+              ],
+              "total_log_likelihood": -1.313412,
+              "length_normalized_log_likelihood": -1.313412,
+              "sequence_length": 1
+            },
+            " Undetermined": {
+              "candidate_text": " Undetermined",
+              "token_ids": [
+                27589,
+                24454
+              ],
+              "token_strings": [
+                " Und",
+                "etermined"
+              ],
+              "token_log_probs": [
+                -11.875918,
+                -0.00024
+              ],
+              "token_probs": [
+                7e-06,
+                0.99976
+              ],
+              "total_log_likelihood": -11.876158,
+              "length_normalized_log_likelihood": -5.938079,
+              "sequence_length": 2
+            }
+          },
+          "raw_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "length_normalized_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "candidate_probabilities_raw": {
+            " Yes": 0.731053,
+            " No": 0.26894,
+            " Undetermined": 7e-06
+          },
+          "candidate_probabilities_normalized": {
+            " Yes": 0.729135,
+            " No": 0.268234,
+            " Undetermined": 0.002631
+          },
+          "length_rank_flip": false
+        }
+      },
+      {
+        "condition": "contradicted_reverse",
+        "epistemic_status": "contradicted",
+        "ground_truth": "No",
+        "description": "Contradicted: magenta < cyan (text) directly contradicts query cyan < magenta",
+        "text_premise": "The magenta prism is to the left of the cyan box.",
+        "query": "Based on the image and statement, is the cyan box to the left of the magenta prism?",
+        "margin_yes_minus_no": 1.125,
+        "prompt_length_tokens": 1213,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "completion_text": "Yes.",
+        "parsed_decision": "Yes",
+        "generation_latency_sec": 2.715,
+        "scoring_latency_sec": 7.905,
+        "peak_vram_mib": 3338.83,
+        "candidate_scoring": {
+          "prompt_token_length": 1213,
+          "candidates": {
+            " Yes": {
+              "candidate_text": " Yes",
+              "token_ids": [
+                9230
+              ],
+              "token_strings": [
+                " Yes"
+              ],
+              "token_log_probs": [
+                -0.2813
+              ],
+              "token_probs": [
+                0.754802
+              ],
+              "total_log_likelihood": -0.2813,
+              "length_normalized_log_likelihood": -0.2813,
+              "sequence_length": 1
+            },
+            " No": {
+              "candidate_text": " No",
+              "token_ids": [
+                2838
+              ],
+              "token_strings": [
+                " No"
+              ],
+              "token_log_probs": [
+                -1.4063
+              ],
+              "token_probs": [
+                0.245048
+              ],
+              "total_log_likelihood": -1.4063,
+              "length_normalized_log_likelihood": -1.4063,
+              "sequence_length": 1
+            },
+            " Undetermined": {
+              "candidate_text": " Undetermined",
+              "token_ids": [
+                27589,
+                24454
+              ],
+              "token_strings": [
+                " Und",
+                "etermined"
+              ],
+              "token_log_probs": [
+                -11.538072,
+                -0.000259
+              ],
+              "token_probs": [
+                1e-05,
+                0.999741
+              ],
+              "total_log_likelihood": -11.538331,
+              "length_normalized_log_likelihood": -5.769165,
+              "sequence_length": 2
+            }
+          },
+          "raw_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "length_normalized_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "candidate_probabilities_raw": {
+            " Yes": 0.754908,
+            " No": 0.245083,
+            " Undetermined": 1e-05
+          },
+          "candidate_probabilities_normalized": {
+            " Yes": 0.752565,
+            " No": 0.244322,
+            " Undetermined": 0.003113
+          },
+          "length_rank_flip": false
+        }
+      },
+      {
+        "condition": "underdetermined_fork",
+        "epistemic_status": "underdetermined",
+        "ground_truth": "Undetermined",
+        "description": "Underdetermined Fork: cyan < green (image) & magenta < green (text) => cyan ? magenta is UNDERDETERMINED",
+        "text_premise": "The magenta prism is to the left of the green cylinder.",
+        "query": "Based on the image and statement, is the cyan box to the left of the magenta prism?",
+        "margin_yes_minus_no": 0.5,
+        "prompt_length_tokens": 1213,
+        "completion_token_ids": [
+          9230,
+          30,
+          49279
+        ],
+        "completion_text": "Yes.",
+        "parsed_decision": "Yes",
+        "generation_latency_sec": 2.745,
+        "scoring_latency_sec": 7.941,
+        "peak_vram_mib": 3338.83,
+        "candidate_scoring": {
+          "prompt_token_length": 1213,
+          "candidates": {
+            " Yes": {
+              "candidate_text": " Yes",
+              "token_ids": [
+                9230
+              ],
+              "token_strings": [
+                " Yes"
+              ],
+              "token_log_probs": [
+                -0.474221
+              ],
+              "token_probs": [
+                0.62237
+              ],
+              "total_log_likelihood": -0.474221,
+              "length_normalized_log_likelihood": -0.474221,
+              "sequence_length": 1
+            },
+            " No": {
+              "candidate_text": " No",
+              "token_ids": [
+                2838
+              ],
+              "token_strings": [
+                " No"
+              ],
+              "token_log_probs": [
+                -0.974221
+              ],
+              "token_probs": [
+                0.377486
+              ],
+              "total_log_likelihood": -0.974221,
+              "length_normalized_log_likelihood": -0.974221,
+              "sequence_length": 1
+            },
+            " Undetermined": {
+              "candidate_text": " Undetermined",
+              "token_ids": [
+                27589,
+                24454
+              ],
+              "token_strings": [
+                " Und",
+                "etermined"
+              ],
+              "token_log_probs": [
+                -12.388572,
+                -0.000223
+              ],
+              "token_probs": [
+                4e-06,
+                0.999777
+              ],
+              "total_log_likelihood": -12.388795,
+              "length_normalized_log_likelihood": -6.194398,
+              "sequence_length": 2
+            }
+          },
+          "raw_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "length_normalized_ranking": [
+            " Yes",
+            " No",
+            " Undetermined"
+          ],
+          "candidate_probabilities_raw": {
+            " Yes": 0.622457,
+            " No": 0.377539,
+            " Undetermined": 4e-06
+          },
+          "candidate_probabilities_normalized": {
+            " Yes": 0.621191,
+            " No": 0.376772,
+            " Undetermined": 0.002037
+          },
+          "length_rank_flip": false
+        }
+      }
+    ]
+  }
+}

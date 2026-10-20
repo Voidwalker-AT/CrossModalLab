@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-10-18T08:56:58Z",
+  "acquisition_budget_mib": 5120.0,
+  "datasets": {
+    "controlled_benchmark_180": {
+      "source": "Local Symbolic Engine (Pillow rendered)",
+      "total_samples": 180,
+      "topologies": 5,
+      "storage_path": "datasets/controlled",
+      "status": "VERIFIED_GROUND_TRUTH_BENCHMARK"
+    },
+    "gqa_candidate_subset_30": {
+      "source": "Stanford GQA / Visual Genome",
+      "total_samples": 30,
+      "storage_path": "datasets/real_world/gqa",
+      "status": "CANDIDATE_UNANNOTATED_REALISTIC",
+      "license": "CC BY 4.0"
+    },
+    "coco_candidate_subset_30": {
+      "source": "COCO val2017",
+      "total_samples": 30,
+      "storage_path": "datasets/real_world/coco",
+      "status": "CANDIDATE_UNANNOTATED_REALISTIC",
+      "license": "CC BY 4.0"
+    },
+    "r_bench": {
+      "source": "PMLR / GitHub (mrwu-mac/R-Bench)",
+      "conference": "ICML 2024",
+      "license": "Apache 2.0",
+      "storage_path": "datasets/benchmarks/r_bench",
+      "status": "METADATA_ACQUIRED_ARCHIVE_SKIPPED"
+    },
+    "hallusionbench": {
+      "source": "CVPR 2024 (tianyi-lab/HallusionBench)",
+      "license": "Apache 2.0",
+      "total_questions": 1129,
+      "visual_stimuli": 19,
+      "storage_path": "datasets/benchmarks/hallusionbench",
+      "status": "SUBSET_ACQUIRED"
+    },
+    "mohobench": {
+      "source": "AAAI 2026 (yanxuzhu/MoHoBench)",
+      "license": "MIT",
+      "unanswerable_samples": 30,
+      "storage_path": "datasets/benchmarks/mohobench",
+      "status": "SUBSET_ACQUIRED"
+    }
+  }
+}
