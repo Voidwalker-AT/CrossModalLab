@@ -270,6 +270,7 @@ artifacts/probes/phase_1f/features/
 
 # Exact-pair canvases stay local (JSONL labels tracked)
 datasets/exact_pairs_v1/images/
+!datasets/exact_pairs_v1/exact_pairs_v1.jsonl
 
 # Local contributor configuration and secrets
 .env
