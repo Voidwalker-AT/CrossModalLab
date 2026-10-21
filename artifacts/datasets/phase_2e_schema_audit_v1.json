@@ -1,0 +1,29 @@
+{
+  "n": 720,
+  "schema_ok": true,
+  "schema_issues": [],
+  "split": {
+    "n_families": 240,
+    "leaking_families": {},
+    "ok": true
+  },
+  "balance": {
+    "counts": {
+      "Yes": 240,
+      "No": 240,
+      "Undetermined": 240
+    },
+    "fractions": {
+      "Yes": 0.3333333333333333,
+      "No": 0.3333333333333333,
+      "Undetermined": 0.3333333333333333
+    },
+    "balanced": true
+  },
+  "counterfactual": {
+    "n_families": 240,
+    "incomplete_families": {},
+    "ok": true
+  },
+  "holdout_disjoint": true
+}
