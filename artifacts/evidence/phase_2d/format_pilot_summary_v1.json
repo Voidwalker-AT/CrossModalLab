@@ -1,0 +1,132 @@
+{
+  "phase": "2D",
+  "n_unique": 48,
+  "per_model": {
+    "smolvlm2": {
+      "n": 24,
+      "overall": {
+        "n": 24,
+        "support": {
+          "Undetermined": 24
+        },
+        "per_class_recall": {
+          "Yes": 0.0,
+          "No": 0.0,
+          "Undetermined": 0.4583333333333333
+        },
+        "per_class_precision": {
+          "Yes": 0.0,
+          "No": 0.0,
+          "Undetermined": 1.0
+        },
+        "per_class_f1": {
+          "Yes": 0.0,
+          "No": 0.0,
+          "Undetermined": 0.6285714285714286
+        },
+        "balanced_accuracy": 0.458333,
+        "macro_f1": 0.628571
+      },
+      "format_sensitivity": {
+        "n": 18,
+        "mean_latency": 17.881800000000005,
+        "undetermined_n": 18,
+        "abstention_rate": 0.277778,
+        "pred_dist": {
+          "Yes": 12,
+          "No": 1,
+          "Undetermined": 5
+        }
+      },
+      "text_only_insufficient": {
+        "n": 6,
+        "mean_latency": 1.3249,
+        "undetermined_n": 6,
+        "abstention_rate": 1.0,
+        "pred_dist": {
+          "Undetermined": 6
+        }
+      }
+    },
+    "qwen3vl2": {
+      "n": 24,
+      "overall": {
+        "n": 24,
+        "support": {
+          "Undetermined": 24
+        },
+        "per_class_recall": {
+          "Yes": 0.0,
+          "No": 0.0,
+          "Undetermined": 0.375
+        },
+        "per_class_precision": {
+          "Yes": 0.0,
+          "No": 0.0,
+          "Undetermined": 1.0
+        },
+        "per_class_f1": {
+          "Yes": 0.0,
+          "No": 0.0,
+          "Undetermined": 0.5454545454545454
+        },
+        "balanced_accuracy": 0.375,
+        "macro_f1": 0.545455
+      },
+      "format_sensitivity": {
+        "n": 18,
+        "mean_latency": 0.5246444444444446,
+        "undetermined_n": 18,
+        "abstention_rate": 0.166667,
+        "pred_dist": {
+          "Undetermined": 3,
+          "No": 13,
+          "Invalid": 1,
+          "Yes": 1
+        }
+      },
+      "text_only_insufficient": {
+        "n": 6,
+        "mean_latency": 0.27443333333333336,
+        "undetermined_n": 6,
+        "abstention_rate": 1.0,
+        "pred_dist": {
+          "Undetermined": 6
+        }
+      }
+    }
+  },
+  "format_abstention": {
+    "smolvlm2": {
+      "fmt_entailed_contradicted_insufficient": {
+        "n": 6,
+        "abstention_rate": 0.0
+      },
+      "fmt_true_false_cannot": {
+        "n": 6,
+        "abstention_rate": 0.0
+      },
+      "fmt_neutral_abstain_permitted": {
+        "n": 6,
+        "abstention_rate": 0.8333333333333334
+      }
+    },
+    "qwen3vl2": {
+      "fmt_entailed_contradicted_insufficient": {
+        "n": 6,
+        "abstention_rate": 0.5
+      },
+      "fmt_true_false_cannot": {
+        "n": 6,
+        "abstention_rate": 0.0
+      },
+      "fmt_neutral_abstain_permitted": {
+        "n": 6,
+        "abstention_rate": 0.0
+      }
+    }
+  },
+  "final_holdout_touched": false,
+  "causal_patching": false,
+  "timing_note": "latency uses torch.cuda.synchronize before/after generate"
+}
