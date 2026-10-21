@@ -1,0 +1,16 @@
+{
+  "phase": "2C-A",
+  "deleted_path": "E:\\cache\\huggingface\\hub\\models--HuggingFaceTB--SmolVLM-500M-Instruct",
+  "eligible_bytes": 1019893574,
+  "eligible_files": 13,
+  "reclaimed_bytes": 1019920384,
+  "reclaimed_mib": 972.67,
+  "free_before": 46711316480,
+  "free_after": 47731236864,
+  "smolvlm2_intact": true,
+  "smolvlm2_snapshot_ok": true,
+  "method": "rename_to_pending_delete_then_rmtree",
+  "timestamp_utc": "2026-10-21T16:55:18Z",
+  "historical_metadata_preserved": true,
+  "historical_manifest": "datasets/metadata/model_acquisition_manifest.json"
+}

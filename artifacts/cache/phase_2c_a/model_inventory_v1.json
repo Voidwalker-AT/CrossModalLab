@@ -1,0 +1,71 @@
+{
+  "phase": "2C-A",
+  "candidates": [
+    {
+      "label": "e_cache_hub_500m",
+      "path": "E:\\cache\\huggingface\\hub\\models--HuggingFaceTB--SmolVLM-500M-Instruct",
+      "total_bytes": 1019893574,
+      "total_mib": 972.65,
+      "n_files": 13,
+      "newest_mtime": "2026-10-18T08:46:17Z",
+      "oldest_mtime": "2026-10-18T08:41:56Z",
+      "refs": {},
+      "snapshots": [
+        "a7da5b986cb59b408707209984f360a5f4ad7e47"
+      ],
+      "blobs": [],
+      "blob_total_bytes": 0
+    },
+    {
+      "label": "user_cache_500m",
+      "path": "C:\\Users\\hp\\.cache\\huggingface\\hub\\models--HuggingFaceTB--SmolVLM-500M-Instruct",
+      "total_bytes": 7379,
+      "total_mib": 0.01,
+      "n_files": 2,
+      "newest_mtime": "2026-10-01T09:41:33Z",
+      "oldest_mtime": "2026-10-01T09:41:33Z",
+      "refs": {
+        "main": "a7da5b986cb59b408707209984f360a5f4ad7e47"
+      },
+      "snapshots": [
+        "a7da5b986cb59b408707209984f360a5f4ad7e47"
+      ],
+      "blobs": [],
+      "blob_total_bytes": 0
+    }
+  ],
+  "smolvlm2_2_2b_present": true,
+  "smolvlm2_2_2b_total_bytes": 9248157527,
+  "smolvlm2_2_2b_total_mib": 8819.73,
+  "shared_filenames_with_2_2b": [
+    "README.md",
+    "added_tokens.json",
+    "chat_template.json",
+    "config.json",
+    "generation_config.json",
+    "merges.txt",
+    "preprocessor_config.json",
+    "processor_config.json",
+    "special_tokens_map.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "vocab.json"
+  ],
+  "shared_filename_count": 12,
+  "scripts_mentioning_500m": [
+    "audit_smolvlm2_feasibility.py",
+    "audit_visual_grounding.py",
+    "download_primary_model.py",
+    "inventory_legacy_500m_cache.py",
+    "profile_model_gpu.py",
+    "run_corrected_pilot_v2.py",
+    "run_initial_pilot.py",
+    "run_phase_0c2_experiments.py"
+  ],
+  "historical_manifest": "datasets/metadata/model_acquisition_manifest.json",
+  "notes": [
+    "Never delete SmolVLM2-2.2B.",
+    "500M historical results remain valid via pinned repo id/revision in manifests.",
+    "Shared blob risk assessed by filename overlap and hub layout."
+  ]
+}
