@@ -265,6 +265,9 @@ artifacts/probes/phase_1d/features/
 datasets/cross_modal_contrast_v2/images/
 artifacts/probes/phase_1e/features/
 
+# Phase 1F feature arrays stay local (summaries tracked)
+artifacts/probes/phase_1f/features/
+
 # Local contributor configuration and secrets
 .env
 .env.*

@@ -1,0 +1,1189 @@
+{
+  "phase": "1F",
+  "spec_version_hash": "5044b7e0dd982ae4206c210719fecb31cf28568142b16bee99efc687f7a7f2d2",
+  "meta_jsonl": "artifacts\\probes\\phase_1f\\features_meta_v1.jsonl",
+  "n_features": 108,
+  "n_train_families": 27,
+  "n_val_families": 9,
+  "train_families": [
+    "xc_ho_0000",
+    "xc_ho_0001",
+    "xc_ho_0003",
+    "xc_ho_0005",
+    "xc_ho_0006",
+    "xc_ho_0007",
+    "xc_ho_0008",
+    "xc_ho_0009",
+    "xc_ho_0011",
+    "xc_ho_0014",
+    "xc_ho_0015",
+    "xc_ho_0017",
+    "xc_ho_0019",
+    "xc_ho_0020",
+    "xc_ho_0021",
+    "xc_ho_0022",
+    "xc_ho_0023",
+    "xc_ho_0025",
+    "xc_ho_0026",
+    "xc_ho_0030",
+    "xc_ho_0031",
+    "xc_ho_0034",
+    "xc_ho_0035",
+    "xc_ho_0036",
+    "xc_ho_0037",
+    "xc_id_0189",
+    "xc_id_0190"
+  ],
+  "val_families": [
+    "xc_ho_0013",
+    "xc_ho_0016",
+    "xc_ho_0024",
+    "xc_ho_0028",
+    "xc_ho_0029",
+    "xc_ho_0032",
+    "xc_ho_0033",
+    "xc_ho_0040",
+    "xc_id_0191"
+  ],
+  "final_holdout_touched": false,
+  "probe_results": [
+    {
+      "spec": {
+        "layer": 3,
+        "token_selector": "last",
+        "use_pca": false,
+        "pca_dim": 64
+      },
+      "spec_key": "L3_last",
+      "best_l2": 0.1,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.296296,
+          "macro_f1": 0.277056
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.296296,
+          "macro_f1": 0.277056
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.333333,
+          "macro_f1": 0.273148
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.259259,
+          "macro_f1": 0.217094
+        }
+      ],
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.273148,
+      "per_class_recall": {
+        "Yes": 0.0,
+        "No": 0.3333333333333333,
+        "Undetermined": 0.6666666666666666
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 0,
+          "No": 2,
+          "Undetermined": 7
+        },
+        "No": {
+          "Yes": 1,
+          "No": 3,
+          "Undetermined": 5
+        },
+        "Undetermined": {
+          "Yes": 1,
+          "No": 2,
+          "Undetermined": 6
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.333333,
+        "ci_low": 0.222222,
+        "ci_high": 0.444444,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 2048,
+      "feature_dim_used": 2048,
+      "probe_parameter_count": 6147,
+      "effective_sample_size_groups": 9
+    },
+    {
+      "spec": {
+        "layer": 3,
+        "token_selector": "last_text_non_image",
+        "use_pca": false,
+        "pca_dim": 64
+      },
+      "spec_key": "L3_last_text_non_image",
+      "best_l2": 0.1,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.296296,
+          "macro_f1": 0.277056
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.296296,
+          "macro_f1": 0.277056
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.333333,
+          "macro_f1": 0.273148
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.259259,
+          "macro_f1": 0.217094
+        }
+      ],
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.273148,
+      "per_class_recall": {
+        "Yes": 0.0,
+        "No": 0.3333333333333333,
+        "Undetermined": 0.6666666666666666
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 0,
+          "No": 2,
+          "Undetermined": 7
+        },
+        "No": {
+          "Yes": 1,
+          "No": 3,
+          "Undetermined": 5
+        },
+        "Undetermined": {
+          "Yes": 1,
+          "No": 2,
+          "Undetermined": 6
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.333333,
+        "ci_low": 0.222222,
+        "ci_high": 0.444444,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 2048,
+      "feature_dim_used": 2048,
+      "probe_parameter_count": 6147,
+      "effective_sample_size_groups": 9
+    },
+    {
+      "spec": {
+        "layer": 3,
+        "token_selector": "mean_image",
+        "use_pca": false,
+        "pca_dim": 64
+      },
+      "spec_key": "L3_mean_image",
+      "best_l2": 1.0,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.185185,
+          "macro_f1": 0.164983
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.148148,
+          "macro_f1": 0.133333
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.296296,
+          "macro_f1": 0.268602
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.407407,
+          "macro_f1": 0.329285
+        }
+      ],
+      "balanced_accuracy": 0.407407,
+      "macro_f1": 0.329285,
+      "per_class_recall": {
+        "Yes": 0.6666666666666666,
+        "No": 0.5555555555555556,
+        "Undetermined": 0.0
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 6,
+          "No": 3,
+          "Undetermined": 0
+        },
+        "No": {
+          "Yes": 4,
+          "No": 5,
+          "Undetermined": 0
+        },
+        "Undetermined": {
+          "Yes": 7,
+          "No": 2,
+          "Undetermined": 0
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.407407,
+        "ci_low": 0.222222,
+        "ci_high": 0.555556,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 2048,
+      "feature_dim_used": 2048,
+      "probe_parameter_count": 6147,
+      "effective_sample_size_groups": 9
+    },
+    {
+      "spec": {
+        "layer": 12,
+        "token_selector": "last",
+        "use_pca": false,
+        "pca_dim": 64
+      },
+      "spec_key": "L12_last",
+      "best_l2": 0.01,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.444444,
+          "macro_f1": 0.427513
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.518519,
+          "macro_f1": 0.491453
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.444444,
+          "macro_f1": 0.427974
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.333333,
+          "macro_f1": 0.244444
+        }
+      ],
+      "balanced_accuracy": 0.518519,
+      "macro_f1": 0.491453,
+      "per_class_recall": {
+        "Yes": 0.5555555555555556,
+        "No": 0.7777777777777778,
+        "Undetermined": 0.2222222222222222
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 5,
+          "No": 2,
+          "Undetermined": 2
+        },
+        "No": {
+          "Yes": 2,
+          "No": 7,
+          "Undetermined": 0
+        },
+        "Undetermined": {
+          "Yes": 4,
+          "No": 3,
+          "Undetermined": 2
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.518519,
+        "ci_low": 0.37037,
+        "ci_high": 0.666667,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 2048,
+      "feature_dim_used": 2048,
+      "probe_parameter_count": 6147,
+      "effective_sample_size_groups": 9
+    },
+    {
+      "spec": {
+        "layer": 12,
+        "token_selector": "last_text_non_image",
+        "use_pca": false,
+        "pca_dim": 64
+      },
+      "spec_key": "L12_last_text_non_image",
+      "best_l2": 0.01,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.444444,
+          "macro_f1": 0.427513
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.518519,
+          "macro_f1": 0.491453
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.444444,
+          "macro_f1": 0.427974
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.333333,
+          "macro_f1": 0.244444
+        }
+      ],
+      "balanced_accuracy": 0.518519,
+      "macro_f1": 0.491453,
+      "per_class_recall": {
+        "Yes": 0.5555555555555556,
+        "No": 0.7777777777777778,
+        "Undetermined": 0.2222222222222222
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 5,
+          "No": 2,
+          "Undetermined": 2
+        },
+        "No": {
+          "Yes": 2,
+          "No": 7,
+          "Undetermined": 0
+        },
+        "Undetermined": {
+          "Yes": 4,
+          "No": 3,
+          "Undetermined": 2
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.518519,
+        "ci_low": 0.37037,
+        "ci_high": 0.666667,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 2048,
+      "feature_dim_used": 2048,
+      "probe_parameter_count": 6147,
+      "effective_sample_size_groups": 9
+    },
+    {
+      "spec": {
+        "layer": 12,
+        "token_selector": "mean_image",
+        "use_pca": false,
+        "pca_dim": 64
+      },
+      "spec_key": "L12_mean_image",
+      "best_l2": 1.0,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.222222,
+          "macro_f1": 0.215909
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.259259,
+          "macro_f1": 0.249708
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.222222,
+          "macro_f1": 0.201609
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.296296,
+          "macro_f1": 0.221264
+        }
+      ],
+      "balanced_accuracy": 0.296296,
+      "macro_f1": 0.221264,
+      "per_class_recall": {
+        "Yes": 0.0,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.2222222222222222
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 0,
+          "No": 7,
+          "Undetermined": 2
+        },
+        "No": {
+          "Yes": 0,
+          "No": 6,
+          "Undetermined": 3
+        },
+        "Undetermined": {
+          "Yes": 0,
+          "No": 7,
+          "Undetermined": 2
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.296296,
+        "ci_low": 0.148148,
+        "ci_high": 0.444444,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 2048,
+      "feature_dim_used": 2048,
+      "probe_parameter_count": 6147,
+      "effective_sample_size_groups": 9
+    },
+    {
+      "spec": {
+        "layer": 18,
+        "token_selector": "last",
+        "use_pca": false,
+        "pca_dim": 64
+      },
+      "spec_key": "L18_last",
+      "best_l2": 0.1,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.740741,
+          "macro_f1": 0.728488
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.740741,
+          "macro_f1": 0.728488
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.777778,
+          "macro_f1": 0.779383
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.555556,
+          "macro_f1": 0.448413
+        }
+      ],
+      "balanced_accuracy": 0.777778,
+      "macro_f1": 0.779383,
+      "per_class_recall": {
+        "Yes": 0.7777777777777778,
+        "No": 0.7777777777777778,
+        "Undetermined": 0.7777777777777778
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 7,
+          "No": 0,
+          "Undetermined": 2
+        },
+        "No": {
+          "Yes": 2,
+          "No": 7,
+          "Undetermined": 0
+        },
+        "Undetermined": {
+          "Yes": 1,
+          "No": 1,
+          "Undetermined": 7
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.777778,
+        "ci_low": 0.592593,
+        "ci_high": 0.962963,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 2048,
+      "feature_dim_used": 2048,
+      "probe_parameter_count": 6147,
+      "effective_sample_size_groups": 9
+    },
+    {
+      "spec": {
+        "layer": 18,
+        "token_selector": "last_text_non_image",
+        "use_pca": false,
+        "pca_dim": 64
+      },
+      "spec_key": "L18_last_text_non_image",
+      "best_l2": 0.1,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.740741,
+          "macro_f1": 0.728488
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.740741,
+          "macro_f1": 0.728488
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.777778,
+          "macro_f1": 0.779383
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.555556,
+          "macro_f1": 0.448413
+        }
+      ],
+      "balanced_accuracy": 0.777778,
+      "macro_f1": 0.779383,
+      "per_class_recall": {
+        "Yes": 0.7777777777777778,
+        "No": 0.7777777777777778,
+        "Undetermined": 0.7777777777777778
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 7,
+          "No": 0,
+          "Undetermined": 2
+        },
+        "No": {
+          "Yes": 2,
+          "No": 7,
+          "Undetermined": 0
+        },
+        "Undetermined": {
+          "Yes": 1,
+          "No": 1,
+          "Undetermined": 7
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.777778,
+        "ci_low": 0.592593,
+        "ci_high": 0.962963,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 2048,
+      "feature_dim_used": 2048,
+      "probe_parameter_count": 6147,
+      "effective_sample_size_groups": 9
+    },
+    {
+      "spec": {
+        "layer": 18,
+        "token_selector": "mean_image",
+        "use_pca": false,
+        "pca_dim": 64
+      },
+      "spec_key": "L18_mean_image",
+      "best_l2": 0.1,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.296296,
+          "macro_f1": 0.296078
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.259259,
+          "macro_f1": 0.246498
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.333333,
+          "macro_f1": 0.293987
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.333333,
+          "macro_f1": 0.298331
+        }
+      ],
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.293987,
+      "per_class_recall": {
+        "Yes": 0.1111111111111111,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.2222222222222222
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 1,
+          "No": 5,
+          "Undetermined": 3
+        },
+        "No": {
+          "Yes": 0,
+          "No": 6,
+          "Undetermined": 3
+        },
+        "Undetermined": {
+          "Yes": 2,
+          "No": 5,
+          "Undetermined": 2
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.333333,
+        "ci_low": 0.148148,
+        "ci_high": 0.518519,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 2048,
+      "feature_dim_used": 2048,
+      "probe_parameter_count": 6147,
+      "effective_sample_size_groups": 9
+    },
+    {
+      "spec": {
+        "layer": 23,
+        "token_selector": "last",
+        "use_pca": false,
+        "pca_dim": 64
+      },
+      "spec_key": "L23_last",
+      "best_l2": 0.01,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.62963,
+          "macro_f1": 0.59304
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.740741,
+          "macro_f1": 0.72381
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.555556,
+          "macro_f1": 0.566132
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.481481,
+          "macro_f1": 0.47451
+        }
+      ],
+      "balanced_accuracy": 0.740741,
+      "macro_f1": 0.72381,
+      "per_class_recall": {
+        "Yes": 0.7777777777777778,
+        "No": 1.0,
+        "Undetermined": 0.4444444444444444
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 7,
+          "No": 1,
+          "Undetermined": 1
+        },
+        "No": {
+          "Yes": 0,
+          "No": 9,
+          "Undetermined": 0
+        },
+        "Undetermined": {
+          "Yes": 4,
+          "No": 1,
+          "Undetermined": 4
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.740741,
+        "ci_low": 0.592593,
+        "ci_high": 0.888889,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 2048,
+      "feature_dim_used": 2048,
+      "probe_parameter_count": 6147,
+      "effective_sample_size_groups": 9
+    },
+    {
+      "spec": {
+        "layer": 23,
+        "token_selector": "last_text_non_image",
+        "use_pca": false,
+        "pca_dim": 64
+      },
+      "spec_key": "L23_last_text_non_image",
+      "best_l2": 0.01,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.62963,
+          "macro_f1": 0.59304
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.740741,
+          "macro_f1": 0.72381
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.555556,
+          "macro_f1": 0.566132
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.481481,
+          "macro_f1": 0.47451
+        }
+      ],
+      "balanced_accuracy": 0.740741,
+      "macro_f1": 0.72381,
+      "per_class_recall": {
+        "Yes": 0.7777777777777778,
+        "No": 1.0,
+        "Undetermined": 0.4444444444444444
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 7,
+          "No": 1,
+          "Undetermined": 1
+        },
+        "No": {
+          "Yes": 0,
+          "No": 9,
+          "Undetermined": 0
+        },
+        "Undetermined": {
+          "Yes": 4,
+          "No": 1,
+          "Undetermined": 4
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.740741,
+        "ci_low": 0.592593,
+        "ci_high": 0.888889,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 2048,
+      "feature_dim_used": 2048,
+      "probe_parameter_count": 6147,
+      "effective_sample_size_groups": 9
+    },
+    {
+      "spec": {
+        "layer": 23,
+        "token_selector": "mean_image",
+        "use_pca": false,
+        "pca_dim": 64
+      },
+      "spec_key": "L23_mean_image",
+      "best_l2": 1.0,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.259259,
+          "macro_f1": 0.247082
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.222222,
+          "macro_f1": 0.213785
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.296296,
+          "macro_f1": 0.25098
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.333333,
+          "macro_f1": 0.27619
+        }
+      ],
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.27619,
+      "per_class_recall": {
+        "Yes": 0.6666666666666666,
+        "No": 0.3333333333333333,
+        "Undetermined": 0.0
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 6,
+          "No": 1,
+          "Undetermined": 2
+        },
+        "No": {
+          "Yes": 6,
+          "No": 3,
+          "Undetermined": 0
+        },
+        "Undetermined": {
+          "Yes": 7,
+          "No": 2,
+          "Undetermined": 0
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.333333,
+        "ci_low": 0.185185,
+        "ci_high": 0.481481,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 2048,
+      "feature_dim_used": 2048,
+      "probe_parameter_count": 6147,
+      "effective_sample_size_groups": 9
+    },
+    {
+      "spec": {
+        "layer": 12,
+        "token_selector": "last",
+        "use_pca": true,
+        "pca_dim": 64
+      },
+      "spec_key": "L12_last",
+      "best_l2": 0.001,
+      "l2_grid": [
+        {
+          "l2": 0.001,
+          "balanced_accuracy": 0.481481,
+          "macro_f1": 0.436508
+        },
+        {
+          "l2": 0.01,
+          "balanced_accuracy": 0.444444,
+          "macro_f1": 0.408425
+        },
+        {
+          "l2": 0.1,
+          "balanced_accuracy": 0.481481,
+          "macro_f1": 0.459821
+        },
+        {
+          "l2": 1.0,
+          "balanced_accuracy": 0.407407,
+          "macro_f1": 0.391457
+        }
+      ],
+      "balanced_accuracy": 0.481481,
+      "macro_f1": 0.436508,
+      "per_class_recall": {
+        "Yes": 0.6666666666666666,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.1111111111111111
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 6,
+          "No": 2,
+          "Undetermined": 1
+        },
+        "No": {
+          "Yes": 2,
+          "No": 6,
+          "Undetermined": 1
+        },
+        "Undetermined": {
+          "Yes": 4,
+          "No": 4,
+          "Undetermined": 1
+        }
+      },
+      "group_bootstrap_ci": {
+        "point": 0.481481,
+        "ci_low": 0.37037,
+        "ci_high": 0.62963,
+        "n_boot": 2000,
+        "n_groups": 9,
+        "seed": 20261101
+      },
+      "n_train": 81,
+      "n_val": 27,
+      "n_train_groups": 27,
+      "n_val_groups": 9,
+      "feature_dim_raw": 64,
+      "feature_dim_used": 64,
+      "probe_parameter_count": 195,
+      "effective_sample_size_groups": 9
+    }
+  ],
+  "baselines": {
+    "majority_train_default": {
+      "n": 27,
+      "support": {
+        "Yes": 9,
+        "No": 9,
+        "Undetermined": 9
+      },
+      "per_class_recall": {
+        "Yes": 1.0,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_precision": {
+        "Yes": 0.3333333333333333,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_f1": {
+        "Yes": 0.5,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.166667
+    },
+    "condition_only_single_id": {
+      "n": 27,
+      "support": {
+        "Yes": 9,
+        "No": 9,
+        "Undetermined": 9
+      },
+      "per_class_recall": {
+        "Yes": 1.0,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_precision": {
+        "Yes": 0.3333333333333333,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_f1": {
+        "Yes": 0.5,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.166667
+    },
+    "random_label_seed0": {
+      "n": 27,
+      "support": {
+        "Yes": 9,
+        "No": 9,
+        "Undetermined": 9
+      },
+      "per_class_recall": {
+        "Yes": 0.2222222222222222,
+        "No": 0.3333333333333333,
+        "Undetermined": 0.4444444444444444
+      },
+      "per_class_precision": {
+        "Yes": 0.25,
+        "No": 0.375,
+        "Undetermined": 0.36363636363636365
+      },
+      "per_class_f1": {
+        "Yes": 0.23529411764705882,
+        "No": 0.35294117647058826,
+        "Undetermined": 0.39999999999999997
+      },
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.329412
+    },
+    "text_lexical": {
+      "n": 27,
+      "support": {
+        "Yes": 9,
+        "No": 9,
+        "Undetermined": 9
+      },
+      "per_class_recall": {
+        "Yes": 0.8888888888888888,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_precision": {
+        "Yes": 0.32,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_f1": {
+        "Yes": 0.47058823529411764,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "balanced_accuracy": 0.296296,
+      "macro_f1": 0.156863
+    },
+    "entity_identity": {
+      "n": 27,
+      "support": {
+        "Yes": 9,
+        "No": 9,
+        "Undetermined": 9
+      },
+      "per_class_recall": {
+        "Yes": 1.0,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_precision": {
+        "Yes": 0.3333333333333333,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_f1": {
+        "Yes": 0.5,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.166667
+    },
+    "relation_direction": {
+      "n": 27,
+      "support": {
+        "Yes": 9,
+        "No": 9,
+        "Undetermined": 9
+      },
+      "per_class_recall": {
+        "Yes": 1.0,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_precision": {
+        "Yes": 0.3333333333333333,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_f1": {
+        "Yes": 0.5,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.166667
+    },
+    "image_layout": {
+      "n": 27,
+      "support": {
+        "Yes": 9,
+        "No": 9,
+        "Undetermined": 9
+      },
+      "per_class_recall": {
+        "Yes": 0.5555555555555556,
+        "No": 0.4444444444444444,
+        "Undetermined": 0.0
+      },
+      "per_class_precision": {
+        "Yes": 0.35714285714285715,
+        "No": 0.36363636363636365,
+        "Undetermined": 0.0
+      },
+      "per_class_f1": {
+        "Yes": 0.43478260869565216,
+        "No": 0.39999999999999997,
+        "Undetermined": 0.0
+      },
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.278261
+    }
+  },
+  "interpretation": {
+    "best_spec": "L18_last",
+    "best_ba": 0.777778,
+    "best_group_bootstrap_ci": {
+      "point": 0.777778,
+      "ci_low": 0.592593,
+      "ci_high": 0.962963,
+      "n_boot": 2000,
+      "n_groups": 9,
+      "seed": 20261101
+    },
+    "max_shortcut_baseline_ba": 0.333333,
+    "exceeds_baselines_by_gt_0.05": true,
+    "ci_low_above_chance": true,
+    "n_val_families": 9,
+    "scientific_status": "EXPLORATORY_POSITIVE_DECODE",
+    "causal_claim": false,
+    "notes": [
+      "Linear decodability is not causal model usage.",
+      "Validation families are development-only; not final holdout.",
+      "Group bootstrap resamples families.",
+      "Best-spec selection uses development validation (not holdout)."
+    ]
+  },
+  "runtime_note": "See separate latency artifact if present."
+}

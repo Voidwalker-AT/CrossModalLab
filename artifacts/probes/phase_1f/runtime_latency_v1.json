@@ -1,0 +1,55 @@
+{
+  "n_rows": 108,
+  "n_new_forwards_this_run": 63,
+  "latency_sec": {
+    "min": 4.653872,
+    "median": 14.341365,
+    "mean": 16.196594203703707,
+    "p90": 34.01246,
+    "max": 76.943961
+  },
+  "slowest": [
+    {
+      "sample_id": "xc_id_0189::contradicted",
+      "latency_sec": 76.943961,
+      "seq_len": null,
+      "image_token_count": null,
+      "peak_vram_mib": 3330.30029296875
+    },
+    {
+      "sample_id": "xc_ho_0013::underdetermined",
+      "latency_sec": 61.368897,
+      "seq_len": null,
+      "image_token_count": null,
+      "peak_vram_mib": 3330.33154296875
+    },
+    {
+      "sample_id": "xc_id_0191::entailed",
+      "latency_sec": 58.848341,
+      "seq_len": null,
+      "image_token_count": null,
+      "peak_vram_mib": 3330.29248046875
+    },
+    {
+      "sample_id": "xc_id_0190::underdetermined",
+      "latency_sec": 52.481139,
+      "seq_len": null,
+      "image_token_count": null,
+      "peak_vram_mib": 3330.28466796875
+    },
+    {
+      "sample_id": "xc_ho_0016::contradicted",
+      "latency_sec": 51.905676,
+      "seq_len": 1500,
+      "image_token_count": 1377,
+      "peak_vram_mib": 3330.29248046875
+    }
+  ],
+  "observations": [
+    "Most forwards cluster near ~15s; a heavy tail reaches 30\u201377s.",
+    "Slow cases still use ~3330 MiB VRAM and identical image token counts (1377).",
+    "Likely host scheduling/thermal shared-GPU contention; NOT proven without clocks/temp logs.",
+    "No OOM; sequence lengths comparable across fast and slow cases."
+  ],
+  "speculation_flagged": true
+}
