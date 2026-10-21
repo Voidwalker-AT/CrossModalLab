@@ -92,7 +92,51 @@ class TestTelemetrySchema(unittest.TestCase):
         self.assertTrue(out["stop"])
 
 
-class TestScoringHook(unittest.TestCase):
+class TestScoringEquivalence(unittest.TestCase):
+    @unittest.skipUnless(_TORCH_OK, "torch required")
+    def test_full_and_hybrid_match_reference(self):
+        import torch
+        import torch.nn as nn
+        from src.causal.scoring import score_candidates_hybrid, score_complete_candidates
+        from src.evaluation.candidate_scorer import score_candidate_answers
+
+        class TinyTok:
+            def encode(self, text, add_special_tokens=False):
+                return [ord(c) + 1 for c in text]
+
+            def decode(self, ids, skip_special_tokens=False):
+                return "".join(chr(i - 1) for i in ids)
+
+        class TinyProc:
+            def __init__(self):
+                self.tokenizer = TinyTok()
+
+        class TinyModel(nn.Module):
+            def __init__(self):
+                super().__init__()
+                self.embed = nn.Embedding(300, 16)
+                self.proj = nn.Linear(16, 300, bias=False)
+                nn.init.normal_(self.embed.weight, mean=0.0, std=0.5)
+                nn.init.eye_(self.proj.weight)
+
+            def forward(self, input_ids=None, attention_mask=None, **kwargs):
+                h = self.embed(input_ids)
+                last = h[:, -1:, :]
+                full = self.proj(last).expand(input_ids.shape[0], input_ids.shape[1], -1).contiguous()
+                return type("O", (), {"logits": full})()
+
+        torch.manual_seed(0)
+        model = TinyModel().eval()
+        proc = TinyProc()
+        base = {"input_ids": torch.tensor([[10, 11, 12, 13]], dtype=torch.long)}
+        cands = [" A", " B", " CD"]
+        ref = score_candidate_answers(model, proc, base, cands, device="cpu")
+        ref_lp = {k: v.total_log_likelihood for k, v in ref.candidates.items()}
+        full = score_complete_candidates(model, proc, base, cands, device="cpu")
+        hyb = score_candidates_hybrid(model, proc, base, cands, device="cpu")
+        for k in cands:
+            self.assertAlmostEqual(ref_lp[k], full["logprobs"][k], places=9)
+            self.assertAlmostEqual(ref_lp[k], hyb["logprobs"][k], places=9)
     @unittest.skipUnless(_TORCH_OK, "torch required")
     def test_prompt_position_guard(self):
         class Block(torch.nn.Module):
