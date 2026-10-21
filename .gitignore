@@ -247,6 +247,9 @@ datasets/benchmarks/hallusionbench/HallusionBench.json
 artifacts/activations/
 .cache_activations/
 .cache/
+# Phase 1A full vector dumps remain local; small summaries are tracked
+artifacts/instrumentation/phase_1a/vectors/
+artifacts/instrumentation/phase_1a/true_text_only_tt_only_*.json
 
 # Local contributor configuration and secrets
 .env

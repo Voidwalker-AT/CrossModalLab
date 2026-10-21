@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "phase": "1A",
+  "description": "Frozen activation-collection case set for Phase 1A. Selected from Phase 0D.2 + Phase 0E matched cases. DESCRIPTIVE / NON-CAUSAL subset — not statistically representative.",
+  "source_phase_0d2_manifest": "configs/phase_0d2/behavioral_manifest_v1.json",
+  "source_phase_0e_selection": "configs/phase_0e/matched_case_selection.json",
+  "layers": [3, 12, 18, 23],
+  "token_selectors": ["last", "first_image", "last_image", "mean_image", "last_text_non_image"],
+  "control_taxonomy": {
+    "BLANK_IMAGE_MULTIMODAL": {
+      "definition": "Prompt text with blank canvas image; vision tower still runs; 1377 image tokens present.",
+      "phase_0d2_conditions": ["text_premise_control"],
+      "do_not_label_as": "TRUE_TEXT_ONLY"
+    },
+    "TRUE_TEXT_ONLY": {
+      "definition": "No image content and no image placeholder tokens; no pixel_values.",
+      "phase_0d2_conditions": [],
+      "status": "NEW_DIAGNOSTIC_PATH_IN_1A"
+    },
+    "IMAGE_MULTIMODAL": {
+      "definition": "Controlled geometric canvas with relational visual premise.",
+      "phase_0d2_conditions": [
+        "forward_chain",
+        "reverse_chain",
+        "underdetermined_fork",
+        "directional_reversal_control",
+        "visual_premise_control"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "sample_id": "p0d2_ctrl_forward_chain_0019_forward_chain",
+      "role": "correct_forward",
+      "reason": "Correct composition; part of true matched pair mg_ctrl_forward_chain_0019",
+      "genuinely_paired": true,
+      "matched_group_id": "mg_ctrl_forward_chain_0019"
+    },
+    {
+      "sample_id": "p0d2_revctl_ctrl_forward_chain_0019",
+      "role": "incorrect_reversal",
+      "reason": "Same image as 0019 forward; inverted query; incorrect definite Yes",
+      "genuinely_paired": true,
+      "matched_group_id": "mg_ctrl_forward_chain_0019"
+    },
+    {
+      "sample_id": "p0d2_ctrl_forward_chain_0010_forward_chain",
+      "role": "correct_forward",
+      "reason": "Correct composition; true matched pair 0010",
+      "genuinely_paired": true,
+      "matched_group_id": "mg_ctrl_forward_chain_0010"
+    },
+    {
+      "sample_id": "p0d2_revctl_ctrl_forward_chain_0010",
+      "role": "incorrect_reversal",
+      "reason": "Same image as 0010; incorrect reversal",
+      "genuinely_paired": true,
+      "matched_group_id": "mg_ctrl_forward_chain_0010"
+    },
+    {
+      "sample_id": "p0d2_ctrl_forward_chain_0004_forward_chain",
+      "role": "incorrect_forward",
+      "reason": "Composition error (predicted No on entailed Yes)",
+      "genuinely_paired": true,
+      "matched_group_id": "mg_ctrl_forward_chain_0004"
+    },
+    {
+      "sample_id": "p0d2_revctl_ctrl_forward_chain_0004",
+      "role": "correct_reversal",
+      "reason": "Paired reversal that was correct; contrast with incorrect parent",
+      "genuinely_paired": true,
+      "matched_group_id": "mg_ctrl_forward_chain_0004"
+    },
+    {
+      "sample_id": "p0d2_ctrl_underdetermined_fork_0073_underdetermined_fork",
+      "role": "incorrect_fork",
+      "reason": "Abstention failure: definite Yes on underdetermined fork",
+      "genuinely_paired": false,
+      "matched_group_id": null
+    },
+    {
+      "sample_id": "p0d2_ctrl_underdetermined_fork_0083_underdetermined_fork",
+      "role": "incorrect_fork",
+      "reason": "Second abstention failure for descriptive fork norms",
+      "genuinely_paired": false,
+      "matched_group_id": null
+    },
+    {
+      "sample_id": "p0d2_ctrl_unimodal_visual_0122_visual_premise_control",
+      "role": "correct_visual_control",
+      "reason": "Single-premise visual competence baseline",
+      "genuinely_paired": false,
+      "matched_group_id": null
+    },
+    {
+      "sample_id": "p0d2_ctrl_unimodal_text_0164_text_premise_control",
+      "role": "blank_image_multimodal_control",
+      "reason": "Phase 0D.2 text_premise_control is blank-image multimodal (NOT true text-only)",
+      "genuinely_paired": false,
+      "matched_group_id": null,
+      "analytical_label": "BLANK_IMAGE_MULTIMODAL"
+    }
+  ],
+  "true_text_only_diagnostic": {
+    "enabled": true,
+    "note": "Separate pure-text diagnostic prompts (no image tokens) run only if processor path verified.",
+    "prompts": [
+      {
+        "id": "tt_only_entailed_chain",
+        "text": "The cyan box is to the left of the green cylinder.\nThe green cylinder is to the left of the magenta prism.\n\nQuestion: Based on the statements, is cyan box to the left of magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+        "expected_logic_label": "Yes"
+      },
+      {
+        "id": "tt_only_underdetermined_fork",
+        "text": "The cyan box is to the left of the green cylinder.\nThe magenta prism is to the left of the green cylinder.\n\nQuestion: Based on the statements, is cyan box to the left of magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+        "expected_logic_label": "Undetermined"
+      }
+    ]
+  },
+  "notes": [
+    "Approximately 10 multimodal cases + optional true-text diagnostics.",
+    "Not statistically representative of VLM failures.",
+    "Captures are DESCRIPTIVE / NON-CAUSAL.",
+    "Mean image vectors are aggregates, not individual neurons."
+  ]
+}

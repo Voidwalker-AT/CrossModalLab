@@ -22,4 +22,12 @@ def __getattr__(name: str):
         from src.instrumentation.passive_capture import capture_passive_residual
 
         return capture_passive_residual
+    if name == "MultiLayerCaptureSpec":
+        from src.instrumentation.multi_layer_capture import MultiLayerCaptureSpec
+
+        return MultiLayerCaptureSpec
+    if name == "capture_multi_layer_passive":
+        from src.instrumentation.multi_layer_capture import capture_multi_layer_passive
+
+        return capture_multi_layer_passive
     raise AttributeError(name)

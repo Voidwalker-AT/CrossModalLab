@@ -1,0 +1,31 @@
+{
+  "run_id": "phase_1a_20261021T101852Z",
+  "timestamp_utc": "2026-10-21T10:19:53Z",
+  "model": {
+    "model_id": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+    "revision": "482adb537c021c86670beed01cd58990d01e72e4",
+    "snapshot_dir": "E:\\cache\\huggingface\\models--HuggingFaceTB--SmolVLM2-2.2B-Instruct\\snapshots\\482adb537c021c86670beed01cd58990d01e72e4",
+    "quantization": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_use_double_quant": true
+    },
+    "device": "cuda:0",
+    "inputs_merger_patch": "smolvlm_masked_scatter_canonical",
+    "torch_version": "2.6.0+cu124",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 2050"
+  },
+  "layers": [
+    3,
+    12,
+    18,
+    23
+  ],
+  "n_captured": 2,
+  "all_passivity_ok": true,
+  "passive_logit_tolerance": 1e-05,
+  "artifact_jsonl": "E:\\Workspace\\Active\\CrossModalLab\\artifacts\\instrumentation\\phase_1a\\activations_meta_v1.jsonl",
+  "descriptive_non_causal": true
+}

@@ -1,0 +1,320 @@
+[
+  {
+    "run_id": "phase_1a_20261021T101852Z",
+    "phase": "1A",
+    "sample_id": "true_text_only::tt_only_entailed_chain",
+    "status": "ok",
+    "role": "true_text_only_diagnostic",
+    "analytical_input_condition": "TRUE_TEXT_ONLY",
+    "expected_logic_label": "Yes",
+    "image_token_count": 0,
+    "sequence_length": 95,
+    "logits_max_abs_diff": 0.0,
+    "has_nonfinite": false,
+    "peak_vram_mib": 1828.60546875,
+    "vectors_file": null,
+    "descriptive_non_causal": true,
+    "summary": {
+      "sequence_length": 95,
+      "image_token_count": 0,
+      "input_condition": "TRUE_TEXT_ONLY",
+      "layers": {
+        "3": {
+          "native_dtype": "torch.float32",
+          "tokens": {
+            "last": {
+              "selector": "last",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 33.660717,
+              "mean": -0.014045,
+              "std": 0.743671,
+              "finite": true
+            },
+            "last_text_non_image": {
+              "selector": "last_text_non_image",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 33.660717,
+              "mean": -0.014045,
+              "std": 0.743671,
+              "finite": true
+            }
+          }
+        },
+        "12": {
+          "native_dtype": "torch.float32",
+          "tokens": {
+            "last": {
+              "selector": "last",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 98.471535,
+              "mean": 0.033627,
+              "std": 2.175674,
+              "finite": true
+            },
+            "last_text_non_image": {
+              "selector": "last_text_non_image",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 98.471535,
+              "mean": 0.033627,
+              "std": 2.175674,
+              "finite": true
+            }
+          }
+        },
+        "18": {
+          "native_dtype": "torch.float32",
+          "tokens": {
+            "last": {
+              "selector": "last",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 307.197601,
+              "mean": 0.115155,
+              "std": 6.787196,
+              "finite": true
+            },
+            "last_text_non_image": {
+              "selector": "last_text_non_image",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 307.197601,
+              "mean": 0.115155,
+              "std": 6.787196,
+              "finite": true
+            }
+          }
+        },
+        "23": {
+          "native_dtype": "torch.float32",
+          "tokens": {
+            "last": {
+              "selector": "last",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 1184.64563,
+              "mean": -0.452565,
+              "std": 26.173304,
+              "finite": true
+            },
+            "last_text_non_image": {
+              "selector": "last_text_non_image",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 1184.64563,
+              "mean": -0.452565,
+              "std": 26.173304,
+              "finite": true
+            }
+          }
+        }
+      },
+      "logits_max_abs_diff": 0.0,
+      "logits_identical": true,
+      "has_nonfinite": false,
+      "peak_vram_mib": 1828.60546875,
+      "host_ram_used_mib": 1468.54296875,
+      "metadata": {
+        "layer_indices": [
+          3,
+          12,
+          18,
+          23
+        ],
+        "token_positions": [
+          "last",
+          "last_text_non_image"
+        ],
+        "passive_only": true,
+        "causal_intervention": false,
+        "notes": ""
+      }
+    }
+  },
+  {
+    "run_id": "phase_1a_20261021T101852Z",
+    "phase": "1A",
+    "sample_id": "true_text_only::tt_only_underdetermined_fork",
+    "status": "ok",
+    "role": "true_text_only_diagnostic",
+    "analytical_input_condition": "TRUE_TEXT_ONLY",
+    "expected_logic_label": "Undetermined",
+    "image_token_count": 0,
+    "sequence_length": 95,
+    "logits_max_abs_diff": 0.0,
+    "has_nonfinite": false,
+    "peak_vram_mib": 1828.60546875,
+    "vectors_file": null,
+    "descriptive_non_causal": true,
+    "summary": {
+      "sequence_length": 95,
+      "image_token_count": 0,
+      "input_condition": "TRUE_TEXT_ONLY",
+      "layers": {
+        "3": {
+          "native_dtype": "torch.float32",
+          "tokens": {
+            "last": {
+              "selector": "last",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 33.61935,
+              "mean": -0.014051,
+              "std": 0.742757,
+              "finite": true
+            },
+            "last_text_non_image": {
+              "selector": "last_text_non_image",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 33.61935,
+              "mean": -0.014051,
+              "std": 0.742757,
+              "finite": true
+            }
+          }
+        },
+        "12": {
+          "native_dtype": "torch.float32",
+          "tokens": {
+            "last": {
+              "selector": "last",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 98.566002,
+              "mean": 0.033509,
+              "std": 2.177764,
+              "finite": true
+            },
+            "last_text_non_image": {
+              "selector": "last_text_non_image",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 98.566002,
+              "mean": 0.033509,
+              "std": 2.177764,
+              "finite": true
+            }
+          }
+        },
+        "18": {
+          "native_dtype": "torch.float32",
+          "tokens": {
+            "last": {
+              "selector": "last",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 304.344025,
+              "mean": 0.125216,
+              "std": 6.723951,
+              "finite": true
+            },
+            "last_text_non_image": {
+              "selector": "last_text_non_image",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 304.344025,
+              "mean": 0.125216,
+              "std": 6.723951,
+              "finite": true
+            }
+          }
+        },
+        "23": {
+          "native_dtype": "torch.float32",
+          "tokens": {
+            "last": {
+              "selector": "last",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 1175.229614,
+              "mean": -0.404764,
+              "std": 25.965996,
+              "finite": true
+            },
+            "last_text_non_image": {
+              "selector": "last_text_non_image",
+              "token_index": 94,
+              "native_dtype": "torch.float32",
+              "shape": [
+                2048
+              ],
+              "l2_norm": 1175.229614,
+              "mean": -0.404764,
+              "std": 25.965996,
+              "finite": true
+            }
+          }
+        }
+      },
+      "logits_max_abs_diff": 0.0,
+      "logits_identical": true,
+      "has_nonfinite": false,
+      "peak_vram_mib": 1828.60546875,
+      "host_ram_used_mib": 1468.55078125,
+      "metadata": {
+        "layer_indices": [
+          3,
+          12,
+          18,
+          23
+        ],
+        "token_positions": [
+          "last",
+          "last_text_non_image"
+        ],
+        "passive_only": true,
+        "causal_intervention": false,
+        "notes": ""
+      }
+    }
+  }
+]
