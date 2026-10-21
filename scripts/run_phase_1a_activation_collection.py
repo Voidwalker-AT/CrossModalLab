@@ -30,6 +30,11 @@ from PIL import Image
 from src.config.experiment import get_experiment_config
 from src.config.paths import apply_default_cache_environment, get_artifacts_dir
 from src.evaluation.behavioral_metrics import build_prompt
+from src.instrumentation.capture_integrity import (
+    annotate_identity_dict,
+    build_capture_identity,
+    should_skip_capture,
+)
 from src.instrumentation.multi_layer_capture import (
     MultiLayerCaptureSpec,
     capture_multi_layer_passive,
@@ -41,6 +46,7 @@ from src.models.model_loader import load_pinned_smolvlm2
 apply_default_cache_environment()
 
 PASSIVE_LOGIT_TOL = 1e-5  # documented numerical tolerance for multi-hook path
+CAPTURE_SCHEMA = "phase_1a_capture_v2"
 
 
 def load_manifest_and_preds():
@@ -99,25 +105,46 @@ def main() -> int:
     vectors_dir = out_dir / "vectors"
     vectors_dir.mkdir(exist_ok=True)
 
-    # resume: skip completed sample_ids with ok status
-    done = set()
+    # Resume uses specification-aware identity (sample+image+prompt+model+layers+selectors).
+    existing_rows: List[Dict[str, Any]] = []
     if jsonl_path.is_file():
         for line in jsonl_path.read_text(encoding="utf-8").splitlines():
             if line.strip():
-                row = json.loads(line)
-                if row.get("status") == "ok":
-                    done.add(row["sample_id"])
+                existing_rows.append(json.loads(line))
+
+    def _vectors_path(row: Dict[str, Any]) -> Path | None:
+        vf = row.get("vectors_file")
+        return (REPO_ROOT / vf) if vf else None
 
     records: List[Dict[str, Any]] = []
     smoke_ok = True
 
     for case in cases:
         sid = case["sample_id"]
-        if sid in done:
-            print(f"SKIP already ok: {sid}")
-            continue
         sample = man_by[sid]
         pred = preds[sid]
+        required_id = build_capture_identity(
+            sample_id=sid,
+            image_sha256=sample.get("image_sha256", ""),
+            prompt=sample["prompt"],
+            model_id=model_meta["model_id"],
+            model_revision=model_meta["revision"],
+            quantization=model_meta["quantization"],
+            layer_indices=layers,
+            token_selectors=tuple(sel["token_selectors"]),
+            capture_schema_version=CAPTURE_SCHEMA,
+        )
+        decision = should_skip_capture(
+            existing_rows=existing_rows,
+            required_identity=required_id,
+            vectors_file_for_row=_vectors_path,
+            verify_vectors=True,
+        )
+        if decision.skip:
+            print(f"SKIP complete matching capture: {sid}")
+            continue
+        if decision.issues:
+            print(f"RECAPTURE {sid}: {decision.reason}; issues={decision.issues[:3]}")
         print(f"\n=== CAPTURE {sid} layers={layers} ===", flush=True)
 
         inputs = build_image_inputs(processor, sample).to(device)
@@ -188,6 +215,10 @@ def main() -> int:
             "peak_vram_mib": result.peak_vram_mib,
             "host_ram_used_mib": result.host_ram_used_mib,
             "vectors_file": str(vec_path.relative_to(REPO_ROOT)),
+            "token_selectors": list(spec.token_positions),
+            "capture_schema_version": CAPTURE_SCHEMA,
+            "prompt_sha256": required_id.prompt_sha256,
+            "capture_identity": annotate_identity_dict(required_id),
             "descriptive_non_causal": True,
             "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         }

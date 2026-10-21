@@ -251,6 +251,9 @@ artifacts/activations/
 artifacts/instrumentation/phase_1a/vectors/
 artifacts/instrumentation/phase_1a/true_text_only_tt_only_*.json
 
+# Phase 1B expanded rendered images stay local (metadata + jsonl tracked)
+datasets/cross_modal_dependency_v1/images/
+
 # Local contributor configuration and secrets
 .env
 .env.*

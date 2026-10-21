@@ -1,0 +1,25 @@
+{
+  "run_id": "phase_1b_20261021T103543Z",
+  "n_predictions": 36,
+  "n_families": 12,
+  "accuracy_by_condition": {
+    "both_premises": {
+      "n": 12,
+      "acc": 0.75
+    },
+    "text_removed": {
+      "n": 12,
+      "acc": 0.0
+    },
+    "visual_removed": {
+      "n": 12,
+      "acc": 0.0
+    }
+  },
+  "output_jsonl": "E:\\Workspace\\Active\\CrossModalLab\\artifacts\\evaluations\\phase_1b\\phase_1b_pilot_predictions_v1.jsonl",
+  "descriptive_behavioral": true,
+  "notes": [
+    "Bounded pilot; not publication performance.",
+    "Answer changes alone do not prove internal cross-modal composition."
+  ]
+}

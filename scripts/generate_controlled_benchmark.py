@@ -46,6 +46,15 @@ ENTITY_PALETTE = {
     "orange_torus": {"color": (230, 126, 34), "shape": "ring"},
     "cyan_box": {"color": (26, 188, 156), "shape": "box"},
     "magenta_prism": {"color": (232, 67, 147), "shape": "hexagon"},
+    # Held-out entity visualizations (Phase 1B expansion; distinct color/shape pairs)
+    "silver_hexagon": {"color": (144, 164, 174), "shape": "hexagon"},
+    "amber_ring": {"color": (255, 193, 7), "shape": "ring"},
+    "teal_wedge": {"color": (0, 150, 136), "shape": "triangle"},
+    "violet_star": {"color": (123, 31, 162), "shape": "diamond"},
+    "crimson_block": {"color": (183, 28, 28), "shape": "box"},
+    "emerald_oval": {"color": (0, 200, 83), "shape": "circle"},
+    "golden_disc": {"color": (255, 215, 64), "shape": "circle"},
+    "indigo_capsule": {"color": (57, 73, 171), "shape": "pill"},
 }
 
 CANVAS_SIZE = (384, 384)
