@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "phase": "0E",
+  "description": "Matched-case selection for mechanistic instrumentation pilots. Selected from frozen Phase 0D.2 results; not a representative sample of real-world VLM failures.",
+  "source_manifest": "configs/phase_0d2/behavioral_manifest_v1.json",
+  "source_predictions": "artifacts/evaluations/phase_0d2/behavioral_predictions_v1.jsonl",
+  "selection_principles": [
+    "Prefer true matched counterfactual pairs that share image_sha256.",
+    "Include correct and incorrect examples; do not only cherry-pick failures.",
+    "Distinguish composition failures from single-premise competence.",
+    "Treat probe evaluation on these cases as insufficient for independent accuracy claims."
+  ],
+  "cases": {
+    "correct_forward_chain": [
+      "p0d2_ctrl_forward_chain_0019_forward_chain",
+      "p0d2_ctrl_forward_chain_0010_forward_chain"
+    ],
+    "incorrect_forward_chain": [
+      "p0d2_ctrl_forward_chain_0004_forward_chain",
+      "p0d2_ctrl_forward_chain_0009_forward_chain"
+    ],
+    "incorrect_underdetermined_fork": [
+      "p0d2_ctrl_underdetermined_fork_0073_underdetermined_fork",
+      "p0d2_ctrl_underdetermined_fork_0083_underdetermined_fork",
+      "p0d2_ctrl_underdetermined_fork_0093_underdetermined_fork"
+    ],
+    "incorrect_directional_reversal_control": [
+      "p0d2_revctl_ctrl_forward_chain_0019",
+      "p0d2_revctl_ctrl_forward_chain_0010",
+      "p0d2_revctl_ctrl_forward_chain_0003"
+    ],
+    "correct_visual_premise_control": [
+      "p0d2_ctrl_unimodal_visual_0122_visual_premise_control",
+      "p0d2_ctrl_unimodal_visual_0117_visual_premise_control"
+    ],
+    "text_premise_control_blank_canvas": [
+      "p0d2_ctrl_unimodal_text_0164_text_premise_control",
+      "p0d2_ctrl_unimodal_text_0151_text_premise_control"
+    ],
+    "true_matched_pairs": [
+      {
+        "matched_group_id": "mg_ctrl_forward_chain_0019",
+        "forward": "p0d2_ctrl_forward_chain_0019_forward_chain",
+        "reversal": "p0d2_revctl_ctrl_forward_chain_0019",
+        "relationship": "same_image_sha256; inverted query entities; true counterfactual pair"
+      },
+      {
+        "matched_group_id": "mg_ctrl_forward_chain_0010",
+        "forward": "p0d2_ctrl_forward_chain_0010_forward_chain",
+        "reversal": "p0d2_revctl_ctrl_forward_chain_0010",
+        "relationship": "same_image_sha256; inverted query entities; true counterfactual pair"
+      },
+      {
+        "matched_group_id": "mg_ctrl_forward_chain_0009",
+        "forward": "p0d2_ctrl_forward_chain_0009_forward_chain",
+        "reversal": "p0d2_revctl_ctrl_forward_chain_0009",
+        "relationship": "same_image_sha256; both incorrect in complementary definite answers"
+      }
+    ],
+    "not_matched_merely_similar": [
+      "Any two fork cases with different entities/images are similar failures, not counterfactual pairs.",
+      "Visual-premise controls are single-premise competence checks, not matched to chain composition cases."
+    ]
+  },
+  "smoke_test_case": "p0d2_ctrl_forward_chain_0019_forward_chain",
+  "notes": [
+    "Selection is for instrumentation pilots only.",
+    "Probe train/test splits must expand beyond these IDs (see mechanistic design doc).",
+    "No causal patching authorized in Phase 0E."
+  ]
+}
