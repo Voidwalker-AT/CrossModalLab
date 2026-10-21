@@ -4,6 +4,9 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
+import os
+import tempfile
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
@@ -16,9 +19,19 @@ def _stable_hash(payload: Dict[str, Any]) -> str:
     return hashlib.sha256(blob).hexdigest()
 
 
+def _finite_number(x: Any) -> bool:
+    if isinstance(x, bool) or not isinstance(x, (int, float)):
+        return False
+    return math.isfinite(float(x))
+
+
 @dataclass(frozen=True)
 class CaptureIdentity:
-    """Identity of a single-sample multi-layer capture specification."""
+    """Identity of a single-sample multi-layer capture specification.
+
+    ``identity_hash`` is always recomputed from canonical fields only;
+    it is never an input to its own hash.
+    """
 
     sample_id: str
     image_sha256: str
@@ -30,14 +43,24 @@ class CaptureIdentity:
     token_selectors: Tuple[str, ...]
     capture_schema_version: str = CAPTURE_SCHEMA_VERSION
 
+    def canonical_fields(self) -> Dict[str, Any]:
+        return {
+            "sample_id": self.sample_id,
+            "image_sha256": self.image_sha256,
+            "prompt_sha256": self.prompt_sha256,
+            "model_id": self.model_id,
+            "model_revision": self.model_revision,
+            "quantization": dict(self.quantization),
+            "layer_indices": [int(x) for x in self.layer_indices],
+            "token_selectors": list(self.token_selectors),
+            "capture_schema_version": self.capture_schema_version,
+        }
+
     def to_dict(self) -> Dict[str, Any]:
-        d = asdict(self)
-        d["layer_indices"] = list(self.layer_indices)
-        d["token_selectors"] = list(self.token_selectors)
-        return d
+        return self.canonical_fields()
 
     def identity_hash(self) -> str:
-        return _stable_hash(self.to_dict())
+        return _stable_hash(self.canonical_fields())
 
 
 def build_capture_identity(
@@ -66,51 +89,32 @@ def build_capture_identity(
     )
 
 
-def identity_from_meta_row(row: Dict[str, Any], prompt: Optional[str] = None) -> Optional[CaptureIdentity]:
-    """Reconstruct identity from a stored metadata row when fields are present."""
-    if "capture_identity" in row and isinstance(row["capture_identity"], dict):
-        c = row["capture_identity"]
-        try:
-            return CaptureIdentity(
-                sample_id=c["sample_id"],
-                image_sha256=c.get("image_sha256", ""),
-                prompt_sha256=c.get("prompt_sha256", ""),
-                model_id=c["model_id"],
-                model_revision=c["model_revision"],
-                quantization=c["quantization"],
-                layer_indices=tuple(c["layer_indices"]),
-                token_selectors=tuple(c["token_selectors"]),
-                capture_schema_version=c.get("capture_schema_version", CAPTURE_SCHEMA_VERSION),
-            )
-        except Exception:
-            return None
-
-    # Legacy Phase 1A rows: reconstruct from top-level fields + optional prompt
+def identity_from_stored_fields(row: Dict[str, Any]) -> Optional[CaptureIdentity]:
+    """Rebuild identity from stored metadata fields only (never trusts stored hash)."""
     if row.get("status") != "ok":
         return None
-    required = ("sample_id", "image_sha256", "layers", "model")
-    if any(k not in row for k in required):
+    if "sample_id" not in row or "model" not in row:
         return None
-    model = row["model"]
-    quant = model.get("quantization") or {}
-    if prompt is None:
-        # Without prompt we cannot form a complete identity; mark incomplete via empty prompt hash only if caller supplies
+    model = row.get("model") or {}
+    ci = row.get("capture_identity") or {}
+    prompt_sha = row.get("prompt_sha256") or ci.get("prompt_sha256")
+    if not prompt_sha:
         return None
-    return build_capture_identity(
+    layers = row.get("layers") or ci.get("layer_indices")
+    selectors = row.get("token_selectors") or ci.get("token_selectors")
+    if not layers or not selectors:
+        return None
+    return CaptureIdentity(
         sample_id=row["sample_id"],
-        image_sha256=row.get("image_sha256", ""),
-        prompt=prompt,
-        model_id=model.get("model_id", ""),
-        model_revision=model.get("revision", ""),
-        quantization=quant,
-        layer_indices=row.get("layers", []),
-        token_selectors=row.get("token_selectors") or (
-            "last",
-            "first_image",
-            "last_image",
-            "mean_image",
-            "last_text_non_image",
-        ),
+        image_sha256=row.get("image_sha256", ci.get("image_sha256", "")),
+        prompt_sha256=prompt_sha,
+        model_id=model.get("model_id", ci.get("model_id", "")),
+        model_revision=model.get("revision", ci.get("model_revision", "")),
+        quantization=model.get("quantization", ci.get("quantization", {})),
+        layer_indices=tuple(int(x) for x in layers),
+        token_selectors=tuple(selectors),
+        capture_schema_version=row.get("capture_schema_version")
+        or ci.get("capture_schema_version", CAPTURE_SCHEMA_VERSION),
     )
 
 
@@ -127,6 +131,7 @@ def verify_vector_artifact(
     vectors_file: Path,
     expected_layers: Sequence[int],
     expected_selectors: Sequence[str],
+    reject_nonfinite: bool = True,
 ) -> List[str]:
     issues: List[str] = []
     if not vectors_file.is_file():
@@ -148,8 +153,12 @@ def verify_vector_artifact(
             vec = tokens[sel].get("vector")
             if not isinstance(vec, list) or len(vec) == 0:
                 issues.append(f"empty vector {sel}@L{li}")
-            elif any((x is None) or (isinstance(x, float) and (x != x)) for x in vec[:3]):
-                issues.append(f"non-finite-like vector head {sel}@L{li}")
+                continue
+            if reject_nonfinite:
+                for idx, x in enumerate(vec):
+                    if not _finite_number(x):
+                        issues.append(f"non-finite value at {sel}@L{li}[{idx}]")
+                        break
     return issues
 
 
@@ -160,84 +169,71 @@ def should_skip_capture(
     vectors_file_for_row=None,
     verify_vectors: bool = True,
 ) -> ResumeDecision:
-    """Decide whether a capture can be skipped for resume.
+    """Skip only if a complete capture matches the required identity.
 
-    Skips only if a *complete* capture with matching identity exists and
-    optional vector integrity checks pass.
+    Stored ``identity_hash`` values are ignored for trust; identity is
+    recomputed from canonical stored fields and compared to the required hash.
+    Forged hashes cannot bypass metadata verification.
     """
     required_hash = required_identity.identity_hash()
-    candidates: List[Dict[str, Any]] = []
-    for row in existing_rows:
-        if row.get("sample_id") != required_identity.sample_id:
-            continue
-        if row.get("status") != "ok":
-            continue
-        candidates.append(row)
-
-    if not candidates:
-        return ResumeDecision(skip=False, reason="no_ok_capture")
-
     issues_all: List[str] = []
-    for row in candidates:
-        # Prefer stored identity hash
-        stored_hash = None
-        if isinstance(row.get("capture_identity"), dict):
-            stored_hash = _stable_hash(
-                {
-                    **row["capture_identity"],
-                    "layer_indices": list(row["capture_identity"].get("layer_indices", [])),
-                    "token_selectors": list(row["capture_identity"].get("token_selectors", [])),
-                }
-            )
-            # identity_hash stored field is authoritative if present
-            if row["capture_identity"].get("identity_hash"):
-                stored_hash = row["capture_identity"]["identity_hash"]
 
-        layers = tuple(row.get("layers") or [])
-        selectors = tuple(row.get("token_selectors") or required_identity.token_selectors)
-        model = row.get("model") or {}
-        layer_ok = set(layers) == set(required_identity.layer_indices)
-        selector_ok = set(selectors) == set(required_identity.token_selectors)
-        model_ok = (
-            model.get("model_id") == required_identity.model_id
-            and model.get("revision") == required_identity.model_revision
-        )
-        quant_ok = (model.get("quantization") or {}) == required_identity.quantization
-        image_ok = (row.get("image_sha256") or "") == required_identity.image_sha256
+    for row in existing_rows:
+        if row.get("sample_id") != required_identity.sample_id or row.get("status") != "ok":
+            continue
+
+        rebuilt = identity_from_stored_fields(row)
+        if rebuilt is None:
+            issues_all.append("incomplete stored identity fields")
+            continue
+
+        rebuilt_hash = rebuilt.identity_hash()
+        stored_hash = (row.get("capture_identity") or {}).get("identity_hash")
 
         row_issues: List[str] = []
-        if not layer_ok:
-            row_issues.append(f"layer set mismatch: stored={layers} required={required_identity.layer_indices}")
-        if not selector_ok:
-            row_issues.append("token selector mismatch")
-        if not model_ok:
-            row_issues.append("model id/revision mismatch")
-        if not quant_ok:
-            row_issues.append("quantization mismatch")
-        if not image_ok:
-            row_issues.append("image_sha256 mismatch")
+        if rebuilt_hash != required_hash:
+            row_issues.append("rebuilt identity hash mismatch vs required")
         if stored_hash is not None and stored_hash != required_hash:
-            row_issues.append("capture identity hash mismatch")
-        if row.get("prompt_sha256") and row.get("prompt_sha256") != required_identity.prompt_sha256:
-            row_issues.append("prompt_sha256 mismatch")
-        if row.get("capture_schema_version") and row.get("capture_schema_version") != required_identity.capture_schema_version:
-            row_issues.append("schema version mismatch")
+            # Informational: stored hash disagrees with required (even if fields match)
+            row_issues.append("stored identity_hash field mismatch (ignored for trust)")
+        # Prefer field-based equality; if fields match required, ignore bogus stored hash alone
+        field_match = rebuilt.canonical_fields() == required_identity.canonical_fields()
+        if not field_match:
+            # already captured via rebuilt_hash mismatch; keep detailed field diffs
+            if set(rebuilt.layer_indices) != set(required_identity.layer_indices):
+                row_issues.append("layer set mismatch")
+            if set(rebuilt.token_selectors) != set(required_identity.token_selectors):
+                row_issues.append("token selector mismatch")
+            if rebuilt.model_revision != required_identity.model_revision:
+                row_issues.append("model revision mismatch")
+            if rebuilt.image_sha256 != required_identity.image_sha256:
+                row_issues.append("image_sha256 mismatch")
+            if rebuilt.prompt_sha256 != required_identity.prompt_sha256:
+                row_issues.append("prompt_sha256 mismatch")
 
-        if verify_vectors and vectors_file_for_row is not None:
-            vpath = vectors_file_for_row(row)
-            if vpath is not None:
-                row_issues.extend(
-                    verify_vector_artifact(
-                        vectors_file=vpath,
-                        expected_layers=required_identity.layer_indices,
-                        expected_selectors=required_identity.token_selectors,
+        # If fields fully match required, forged stored hash alone must not block;
+        # but we require rebuilt==required (already checked). Clear noise issues when field_match.
+        if field_match:
+            row_issues = [i for i in row_issues if "stored identity_hash field mismatch" not in i]
+            if verify_vectors and vectors_file_for_row is not None:
+                vpath = vectors_file_for_row(row)
+                if vpath is not None:
+                    row_issues.extend(
+                        verify_vector_artifact(
+                            vectors_file=vpath,
+                            expected_layers=required_identity.layer_indices,
+                            expected_selectors=required_identity.token_selectors,
+                            reject_nonfinite=True,
+                        )
                     )
+            if not row_issues:
+                return ResumeDecision(
+                    skip=True, reason="complete_matching_capture", identity_hash=required_hash
                 )
-
-        if not row_issues:
-            return ResumeDecision(skip=True, reason="complete_matching_capture", identity_hash=required_hash)
         issues_all.extend(row_issues)
 
+    if not issues_all:
+        return ResumeDecision(skip=False, reason="no_ok_capture", identity_hash=required_hash)
     return ResumeDecision(
         skip=False,
         reason="incomplete_or_mismatched_capture",
@@ -247,6 +243,57 @@ def should_skip_capture(
 
 
 def annotate_identity_dict(identity: CaptureIdentity) -> Dict[str, Any]:
-    d = identity.to_dict()
+    d = identity.canonical_fields()
     d["identity_hash"] = identity.identity_hash()
     return d
+
+
+def atomic_write_json(path: Path, payload: Any) -> None:
+    """Write JSON atomically via temp file + replace."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp_name = tempfile.mkstemp(prefix=path.name + ".", suffix=".tmp", dir=str(path.parent))
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as fh:
+            json.dump(payload, fh, indent=2, ensure_ascii=False)
+            fh.flush()
+            os.fsync(fh.fileno())
+        os.replace(tmp_name, path)
+    finally:
+        if os.path.exists(tmp_name):
+            try:
+                os.remove(tmp_name)
+            except OSError:
+                pass
+
+
+def compute_probe_metrics(y_true: Sequence[str], y_pred: Sequence[str], labels: Sequence[str]) -> Dict[str, Any]:
+    """Balanced accuracy, macro-F1, per-class recall (pure Python)."""
+    from collections import Counter
+
+    support = Counter(y_true)
+    recalls = {}
+    precisions = {}
+    f1s = {}
+    for lab in labels:
+        tp = sum(1 for t, p in zip(y_true, y_pred) if t == lab and p == lab)
+        fn = sum(1 for t, p in zip(y_true, y_pred) if t == lab and p != lab)
+        fp = sum(1 for t, p in zip(y_true, y_pred) if t != lab and p == lab)
+        recalls[lab] = tp / (tp + fn) if (tp + fn) else 0.0
+        precisions[lab] = tp / (tp + fp) if (tp + fp) else 0.0
+        f1s[lab] = (
+            2 * precisions[lab] * recalls[lab] / (precisions[lab] + recalls[lab])
+            if (precisions[lab] + recalls[lab])
+            else 0.0
+        )
+    present = [lab for lab in labels if support.get(lab, 0) > 0]
+    balanced = sum(recalls[lab] for lab in present) / len(present) if present else 0.0
+    macro_f1 = sum(f1s[lab] for lab in present) / len(present) if present else 0.0
+    return {
+        "n": len(y_true),
+        "support": dict(support),
+        "per_class_recall": recalls,
+        "per_class_precision": precisions,
+        "per_class_f1": f1s,
+        "balanced_accuracy": round(balanced, 6),
+        "macro_f1": round(macro_f1, 6),
+    }

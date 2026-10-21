@@ -1,0 +1,7 @@
+{
+  "balanced_development_v1.jsonl": "8e564cebcee330d824661fb07616648b121d2dc77063c149620bd1f36ef5fae7",
+  "balanced_final_holdout_v1.jsonl": "a93852d1d47870441271c1da6e15785049930679c138184e9b64c5395ced9bc3",
+  "development_family_ids.txt": "3f124741c288cf3903c4a38e3ae63714143e73f953fe3ca424f58534a7948edc",
+  "final_holdout_family_ids.txt": "10b5cb5db1bf2fac7593c623350ca7ae248a48749c77ccf2a08930c326834c84",
+  "frozen_split_manifest_v1.json": "1ee4386cef8bce24b83b82cf2cf32bc439db0d97672339dcd2db4dc61e9c93d8"
+}

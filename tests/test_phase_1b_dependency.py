@@ -64,6 +64,8 @@ class TestCaptureIntegrity(unittest.TestCase):
             "layers": [3, 12],
             "token_selectors": ["last", "mean_image"],
             "image_sha256": "abc",
+            "prompt_sha256": self._identity().prompt_sha256,
+            "capture_schema_version": self._identity().capture_schema_version,
             "model": {"model_id": "m", "revision": "rev", "quantization": {"load_in_4bit": True}},
         }
         d = should_skip_capture(existing_rows=[row], required_identity=ident, verify_vectors=False)
@@ -78,6 +80,8 @@ class TestCaptureIntegrity(unittest.TestCase):
             "layers": [3, 12],
             "token_selectors": ["last", "mean_image"],
             "image_sha256": "abc",
+            "prompt_sha256": self._identity().prompt_sha256,
+            "capture_schema_version": self._identity().capture_schema_version,
             "model": {"model_id": "m", "revision": "rev", "quantization": {"load_in_4bit": True}},
         }
         d = should_skip_capture(existing_rows=[row], required_identity=ident, verify_vectors=False)
