@@ -1,0 +1,41 @@
+{
+  "schema_version": "phase_2b_r_pilot_exec_spec_v1",
+  "status": "DESIGN_ONLY_NOT_EXECUTED",
+  "amends": [
+    "configs/phase_2b/causal_pilot_exec_spec_v1.json",
+    "configs/phase_2a/causal_preregistration_v1.json"
+  ],
+  "rationale": [
+    "Replace multi-factor / jittered pairs with EXACT_IMAGE_CHANGED_TEXT pairs.",
+    "Cap pilot to one family and three non-identity conditions.",
+    "Use corrected memory telemetry and hook-during-scoring semantics.",
+    "No GPU execution in Phase 2B-R."
+  ],
+  "family": "xc_ho_0013",
+  "pair": {
+    "type": "EXACT_IMAGE_CHANGED_TEXT",
+    "source_variant": "entailed",
+    "target_variant": "underdetermined",
+    "image_hash_must_match": true
+  },
+  "intervention": {
+    "layer": 18,
+    "token": "prompt_final_index",
+    "conditions": ["source_baseline", "target_baseline", "no_op", "source_to_target", "same_label", "negative_unrelated_token"]
+  },
+  "primary_metric": {
+    "name": "delta_m",
+    "definition": "m_patched - m_target_baseline; m=logP(source_label)-logP(target_label) on complete candidates",
+    "candidates": [" Yes", " No", " Undetermined"]
+  },
+  "caps": {
+    "max_families": 1,
+    "max_non_identity_conditions": 3,
+    "max_forwards_estimate": 12,
+    "max_runtime_minutes": 20,
+    "stop_torch_allocated_mib": 3800,
+    "stop_host_available_mib": 1500
+  },
+  "execution_authorized": false,
+  "final_holdout_touched": false
+}

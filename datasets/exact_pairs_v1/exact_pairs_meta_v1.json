@@ -1,0 +1,12 @@
+{
+  "schema_version": "exact_pairs_v1",
+  "n_families": 3,
+  "n_records": 6,
+  "pair_bucket": "exact_image_changed_text",
+  "labels": {
+    "Yes": 3,
+    "Undetermined": 3
+  },
+  "image_hash_shared_per_family": true,
+  "jsonl": "datasets/exact_pairs_v1/exact_pairs_v1.jsonl"
+}
