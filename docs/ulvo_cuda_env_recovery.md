@@ -61,3 +61,20 @@ Doctor PASSED; env RECLAIMABLE/READY; no process leases during recovery.
 5. Document plan in a resolution note before execution.
 
 **Do not auto-resume QLoRA training.**
+
+---
+
+## Storage cleanup (same session, after CUDA verification)
+
+| Item | Action | Reclaim |
+|---|---|---:|
+| `E:\cache\wheels\torch-2.6.0+cu124-...whl` | Removed (torch already installed & verified) | **2,532,350,702 bytes (~2.42 GB)** on E: |
+| uv cache (`C:\...\uv\cache`) | `uv cache prune` (targeted, not full wipe) | **~20.4 GiB** on C: |
+| ULVO vault / environments | **Not deleted** (active authority) | — |
+| HF SmolVLM2-2.2B / Qwen3-VL-2B | **Preserved** | — |
+| Scientific datasets/artifacts | **Preserved** | — |
+
+**Free space after cleanup:** C: **~25.5 GB** · E: **~36.0 GB**  
+(Pre-cleanup measured: C: 5.36 GB · E: 33.65 GB)
+
+`ulvo cache prune --dry-run` was inspected first; vault packages not manually deleted.
