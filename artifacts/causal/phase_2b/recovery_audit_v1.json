@@ -1,0 +1,147 @@
+{
+  "phase": "2B_recovery",
+  "status": "AUDIT_COMPLETE_NO_GPU",
+  "process_state": "no_phase_2b_python_process_running",
+  "evidence_file": {
+    "path": "E:\\Workspace\\Active\\CrossModalLab\\artifacts\\causal\\phase_2b\\intervention_records_v1.jsonl",
+    "byte_length": 24054,
+    "n_lines": 16,
+    "n_valid": 16,
+    "n_bad_lines": 0,
+    "bad_lines": [],
+    "duplicate_ids": [],
+    "model_revision_mismatches": [],
+    "last_intervention_id": "xc_ho_0016:entailed_vs_underdetermined::baseline_target",
+    "roles": {
+      "baseline_source": 3,
+      "baseline_target": 3,
+      "intervention": 10
+    },
+    "directions": {
+      "source_to_target": 2,
+      "target_to_source": 2,
+      "same_label": 2,
+      "unrelated_token": 2,
+      "random_source": 2
+    },
+    "families": {
+      "xc_ho_0013": 14,
+      "xc_ho_0016": 2
+    },
+    "pairs": {
+      "xc_ho_0013:entailed_vs_underdetermined": 7,
+      "xc_ho_0013:contradicted_vs_underdetermined": 7,
+      "xc_ho_0016:entailed_vs_underdetermined": 2
+    },
+    "ok": true
+  },
+  "missing_intervention_count": 26,
+  "missing_interventions_sample": [
+    "xc_ho_0016:entailed_vs_underdetermined::source_to_target",
+    "xc_ho_0016:entailed_vs_underdetermined::target_to_source",
+    "xc_ho_0016:entailed_vs_underdetermined::same_label",
+    "xc_ho_0016:entailed_vs_underdetermined::unrelated_token",
+    "xc_ho_0016:entailed_vs_underdetermined::random_source",
+    "xc_ho_0016:contradicted_vs_underdetermined::baseline_source",
+    "xc_ho_0016:contradicted_vs_underdetermined::baseline_target",
+    "xc_ho_0016:contradicted_vs_underdetermined::source_to_target",
+    "xc_ho_0016:contradicted_vs_underdetermined::target_to_source",
+    "xc_ho_0016:contradicted_vs_underdetermined::same_label",
+    "xc_ho_0016:contradicted_vs_underdetermined::unrelated_token",
+    "xc_ho_0016:contradicted_vs_underdetermined::random_source",
+    "xc_ho_0024:entailed_vs_underdetermined::baseline_source",
+    "xc_ho_0024:entailed_vs_underdetermined::baseline_target",
+    "xc_ho_0024:entailed_vs_underdetermined::source_to_target",
+    "xc_ho_0024:entailed_vs_underdetermined::target_to_source",
+    "xc_ho_0024:entailed_vs_underdetermined::same_label",
+    "xc_ho_0024:entailed_vs_underdetermined::unrelated_token",
+    "xc_ho_0024:entailed_vs_underdetermined::random_source",
+    "xc_ho_0024:contradicted_vs_underdetermined::baseline_source"
+  ],
+  "effect_audit": {
+    "mean_delta_m_by_direction": {
+      "source_to_target": -0.4227609999999996,
+      "target_to_source": 0.46350400000000025,
+      "same_label": 0.031086000000000058,
+      "unrelated_token": -3.7282824999999997,
+      "random_source": -1.9151049999999987
+    },
+    "mean_abs_delta_m_by_direction": {
+      "source_to_target": 0.7318460000000001,
+      "target_to_source": 0.711723,
+      "same_label": 0.031086000000000058,
+      "unrelated_token": 3.7282824999999997,
+      "random_source": 3.3299400000000006
+    },
+    "max_control_abs_mean": 3.7282824999999997,
+    "targeted_abs_mean": 0.7318460000000001,
+    "targeted_exceeds_controls": false,
+    "scientific_flag": "GENERIC_INTERVENTION_SENSITIVITY",
+    "note": "N is tiny; do not treat as inferential statistics."
+  },
+  "engineering_validation": {
+    "status": "PASS",
+    "pair_id": "xc_ho_0013:entailed_vs_underdetermined",
+    "layer": 18,
+    "noop_max_abs_logits_diff": 0.0,
+    "noop_tolerance": 0.0001,
+    "nonidentity_max_abs_logits_diff": 1.042708396911621,
+    "source_capture_meta": {
+      "layer_index": 18,
+      "native_dtype": "torch.float32",
+      "stored_dtype": "float32",
+      "shape": [
+        2048
+      ],
+      "seq_len": 1505,
+      "device": "cuda:0"
+    },
+    "noop_meta": {
+      "layer_index": 18,
+      "token_position": 1504,
+      "no_op": true,
+      "hook_applied": 0,
+      "hidden_shape_during_hook": null,
+      "hidden_dtype_during_hook": null
+    },
+    "patch_meta": {
+      "layer_index": 18,
+      "token_position": 1504,
+      "no_op": false,
+      "hook_applied": 1,
+      "hidden_shape_during_hook": [
+        1,
+        1505,
+        2048
+      ],
+      "hidden_dtype_during_hook": "torch.float32"
+    },
+    "token_positions": {
+      "source_last": 1504,
+      "target_last": 1504
+    }
+  },
+  "memory_telemetry": {
+    "field": "peak_vram_mib",
+    "intended_semantics": "torch.cuda.max_memory_allocated(0) since last reset, in MiB",
+    "observed_issue": "Phase 2B runner did not call reset_peak_memory_stats before each intervention; values ~5076–5142 MiB are process-lifetime peaks and may include shared/system spill accounting.",
+    "nvidia_dedicated_typical": "RTX 2050 dedicated=4096 MiB; values above 4096 indicate allocator accounting including shared GPU memory on Windows WDDM, not fabricated numbers.",
+    "recommendation": "Future runs must reset peak stats per intervention and record torch.cuda.memory_allocated, memory_reserved, and nvidia-smi dedicated separately."
+  },
+  "historical_limitations": [
+    "Earlier session used Remove-Item on partial intervention_records_v1.jsonl before a scoring-hook fix; those discarded lines are unrecoverable.",
+    "Current file (sha256 in evidence_file) is the surviving post-fix record set and must be preserved byte-for-byte.",
+    "Pair 'same image' in contrast_v2 is same visual *structure* with independent canvas jitter; image_sha256 differs across variants."
+  ],
+  "scientific_flags": [
+    "EXPLORATORY / POST-HOC MODIFIED: scoring hook lifetime fixed after first zero-delta run was discarded.",
+    "Negative controls (unrelated_token, random_source) currently show larger |Δm| than targeted patches on completed pairs.",
+    "Do not interpret current deltas as confirmatory causal evidence."
+  ],
+  "safe_reduced_cost_strategy": [
+    "Do not resume full 6-pair × 5-direction matrix on GPU in this recovery task.",
+    "If later authorized: only source_to_target + no-op baseline on 3 families × 1 pair type (≤12 forwards), with per-forward peak reset and dual VRAM telemetry.",
+    "Require identical image_sha256 for 'same image' pairs or relabel as same_visual_structure."
+  ],
+  "recommendation": "REDESIGN_BEFORE_RESUME"
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "phase_2b_exec_spec_v1",
+  "status": "EXPLORATORY_EXECUTION_AUTHORIZED_BOUNDED",
+  "amends_preregistration": "configs/phase_2a/causal_preregistration_v1.json",
+  "amendments": [
+    {
+      "id": "AM-1",
+      "rationale": "User authorized bounded 3-family exploratory causal pilot; not confirmatory.",
+      "change": "Fix first block to first 3 audited development-validation families; cap 24 patched forwards."
+    },
+    {
+      "id": "AM-2",
+      "rationale": "Safety gate before scientific patching.",
+      "change": "Require engineering no-op equivalence (max|Δlogits|<=1e-4) on one aligned pair before multi-family pilot."
+    },
+    {
+      "id": "AM-3",
+      "rationale": "Stability of normalized effects.",
+      "change": "Raise NIE denominator gate from 1e-6 to 1e-3 for this pilot; raw delta_m remains primary."
+    }
+  ],
+  "model": {
+    "model_id": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+    "revision": "482adb537c021c86670beed01cd58990d01e72e4",
+    "quantization": "4-bit NF4"
+  },
+  "families": ["xc_ho_0013", "xc_ho_0016", "xc_ho_0024"],
+  "pair_priority": [
+    "same_image_changed_text:entailed_vs_underdetermined",
+    "same_text_changed_image:contradicted_vs_underdetermined"
+  ],
+  "intervention": {
+    "layer": 18,
+    "token": "last_prompt_token",
+    "hook": "post_block_decoder_layer_output",
+    "directions": [
+      "noop",
+      "source_to_target",
+      "target_to_source",
+      "same_label",
+      "unrelated_token",
+      "random_source"
+    ]
+  },
+  "primary_metric": {
+    "name": "delta_m",
+    "definition": "m_patched - m_baseline where m = logP(source_label)-logP(target_label)",
+    "candidates": [" Yes", " No", " Undetermined"],
+    "nie_gate_abs_baseline_margin": 0.001
+  },
+  "caps": {
+    "max_families": 3,
+    "max_patched_forwards": 24,
+    "batch_size": 1,
+    "single_model_copy": true
+  },
+  "stop_conditions": [
+    "engineering_noop_failed",
+    "cuda_oom",
+    "token_length_mismatch_for_last_token_claim",
+    "shape_mismatch",
+    "nonfinite_logits"
+  ],
+  "final_holdout_touched": false,
+  "execution_authorized": true,
+  "scientific_claims_allowed": [
+    "software_intervention_success",
+    "exploratory_causal_logit_influence"
+  ],
+  "scientific_claims_forbidden": [
+    "unique_circuit_identified",
+    "confirmatory_statistical_significance",
+    "restored_logical_reasoning"
+  ]
+}
