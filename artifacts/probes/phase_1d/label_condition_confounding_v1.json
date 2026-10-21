@@ -1,0 +1,46 @@
+{
+  "n_records": 576,
+  "condition_counts": {
+    "both_premises": 192,
+    "both_modified": 192,
+    "underdetermined_fork": 192
+  },
+  "label_counts": {
+    "Yes": 192,
+    "No": 192,
+    "Undetermined": 192
+  },
+  "condition_label_pairs": {
+    "both_premises|Yes": 192,
+    "both_modified|No": 192,
+    "underdetermined_fork|Undetermined": 192
+  },
+  "condition_label_purity": {
+    "both_premises": {
+      "n": 192,
+      "majority_label": "Yes",
+      "purity": 1.0
+    },
+    "both_modified": {
+      "n": 192,
+      "majority_label": "No",
+      "purity": 1.0
+    },
+    "underdetermined_fork": {
+      "n": 192,
+      "majority_label": "Undetermined",
+      "purity": 1.0
+    }
+  },
+  "condition_label_lookup_accuracy": 1.0,
+  "condition_label_bijective": true,
+  "verdict": "CONDITION-CONFOUNDED",
+  "interpretation": "On the Phase 1C balanced three-way sample, ground-truth labels are a deterministic function of condition templates (both_premises/both_modified/underdetermined_fork). A three-way probe accuracy cannot distinguish logical representation from condition identity.",
+  "smallest_defensible_extension": [
+    "Add multiple logical realizations per label with different surface templates and premise structures.",
+    "E.g. include underdetermined_fork AND visual_removed AND text_removed as Undetermined under distinct prompts.",
+    "Include multiple contradicted constructions (both_modified AND visual_reversed if solver says contradicted).",
+    "Evaluate composition probes on contrast sets where condition text is held constant but entity order changes.",
+    "Minimum: 2+ independent condition templates per 3-way label with family-disjoint evaluation."
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "phase": "1D",
+  "run_id": "phase_1d_20261021T113104Z",
+  "n_features_total": 45,
+  "n_train": 36,
+  "n_val": 9,
+  "train_families": [
+    "xm_ho_0001",
+    "xm_ho_0002",
+    "xm_ho_0003",
+    "xm_ho_0005",
+    "xm_ho_0006",
+    "xm_ho_0007",
+    "xm_ho_0008",
+    "xm_ho_0009",
+    "xm_ho_0010",
+    "xm_ho_0011",
+    "xm_ho_0012",
+    "xm_ho_0016"
+  ],
+  "val_families": [
+    "xm_ho_0017",
+    "xm_ho_0018",
+    "xm_ho_0019"
+  ],
+  "final_holdout_touched": false,
+  "best_l2": 0.001,
+  "l2_grid": [
+    {
+      "l2": 0.001,
+      "balanced_accuracy": 0.666667,
+      "macro_f1": 0.655556
+    },
+    {
+      "l2": 0.01,
+      "balanced_accuracy": 0.555556,
+      "macro_f1": 0.533333
+    },
+    {
+      "l2": 0.1,
+      "balanced_accuracy": 0.666667,
+      "macro_f1": 0.655556
+    },
+    {
+      "l2": 1.0,
+      "balanced_accuracy": 0.444444,
+      "macro_f1": 0.433333
+    }
+  ],
+  "probe_metrics_multilayer": {
+    "n": 9,
+    "support": {
+      "Yes": 3,
+      "No": 3,
+      "Undetermined": 3
+    },
+    "per_class_recall": {
+      "Yes": 0.3333333333333333,
+      "No": 1.0,
+      "Undetermined": 0.6666666666666666
+    },
+    "per_class_precision": {
+      "Yes": 1.0,
+      "No": 0.5,
+      "Undetermined": 1.0
+    },
+    "per_class_f1": {
+      "Yes": 0.5,
+      "No": 0.6666666666666666,
+      "Undetermined": 0.8
+    },
+    "balanced_accuracy": 0.666667,
+    "macro_f1": 0.655556,
+    "confusion_matrix": {
+      "Yes": {
+        "Yes": 1,
+        "No": 2,
+        "Undetermined": 0
+      },
+      "No": {
+        "Yes": 0,
+        "No": 3,
+        "Undetermined": 0
+      },
+      "Undetermined": {
+        "Yes": 0,
+        "No": 1,
+        "Undetermined": 2
+      }
+    }
+  },
+  "baselines": {
+    "majority": {
+      "n": 9,
+      "support": {
+        "Yes": 3,
+        "No": 3,
+        "Undetermined": 3
+      },
+      "per_class_recall": {
+        "Yes": 1.0,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_precision": {
+        "Yes": 0.3333333333333333,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_f1": {
+        "Yes": 0.5,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.166667
+    },
+    "condition_lookup": {
+      "n": 9,
+      "support": {
+        "Yes": 3,
+        "No": 3,
+        "Undetermined": 3
+      },
+      "per_class_recall": {
+        "Yes": 1.0,
+        "No": 1.0,
+        "Undetermined": 1.0
+      },
+      "per_class_precision": {
+        "Yes": 1.0,
+        "No": 1.0,
+        "Undetermined": 1.0
+      },
+      "per_class_f1": {
+        "Yes": 1.0,
+        "No": 1.0,
+        "Undetermined": 1.0
+      },
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "probe_layerwise_note": "single concatenated multi-layer feature vector for pilot"
+  },
+  "layerwise_last_token": {
+    "L3_last": {
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.259259
+    },
+    "L12_last": {
+      "balanced_accuracy": 0.444444,
+      "macro_f1": 0.333333
+    },
+    "L18_last": {
+      "balanced_accuracy": 0.777778,
+      "macro_f1": 0.783333
+    },
+    "L23_last": {
+      "balanced_accuracy": 0.666667,
+      "macro_f1": 0.638889
+    }
+  },
+  "permutation_train": {
+    "observed_balanced_accuracy": 0.666667,
+    "null_mean": 0.33619046000000014,
+    "null_p95": 0.566667,
+    "permutation_p_value": 0.0297029702970297,
+    "n_perm": 100,
+    "seed": 0
+  },
+  "label_condition_confounded": true,
+  "scientific_verdict": "BLOCKED_FOR_GENUINE_RELATIONAL_INTERPRETATION",
+  "interpretation_notes": [
+    "Linear decodability is not causal usage.",
+    "Condition-label lookup perfect accuracy means 3-way labels are template-confounded.",
+    "Small development pilot; not final holdout; not publication metrics."
+  ],
+  "peak_vram_mib_max": 3330.77197265625,
+  "mean_latency_sec": 15.448780000000003,
+  "forwards_completed_this_run": 45
+}
