@@ -1,0 +1,1715 @@
+{
+  "manifest_version": "phase_0d2_v1",
+  "phase": "0D.2",
+  "seed": 42,
+  "source_jsonl": "datasets/controlled/controlled_benchmark_180.jsonl",
+  "source_jsonl_sha256": "e75908881b6ce5a9fae446cfb68d54b8d3e0f50930f13af2600d9811003c0ab5",
+  "n_samples": 36,
+  "condition_counts": {
+    "forward_chain": 6,
+    "directional_reversal_control": 6,
+    "reverse_chain": 6,
+    "underdetermined_fork": 6,
+    "visual_premise_control": 6,
+    "text_premise_control": 6
+  },
+  "entity_reuse_counts": {
+    "blue_cube": 8,
+    "cyan_box": 8,
+    "green_cylinder": 8,
+    "magenta_prism": 6,
+    "orange_torus": 11,
+    "purple_pyramid": 8,
+    "red_sphere": 5,
+    "yellow_cone": 12
+  },
+  "notes": [
+    "Fixed before inference; do not regenerate during a run.",
+    "36-case pilot is NOT a representative real-world benchmark.",
+    "Matched reversal controls share visual entities with parent forward-chain cases.",
+    "Directional-reversal GT is constructed (No/contradicted) for the inverted query on the same canvas."
+  ],
+  "samples": [
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_forward_chain_0004_forward_chain",
+      "source_sample_id": "ctrl_forward_chain_0004",
+      "condition": "forward_chain",
+      "topology": "forward_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_forward_chain_0004",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The yellow cone is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is green cylinder to the left of magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The yellow cone is to the left of the magenta prism.",
+      "query": "green cylinder to the left of magenta prism?",
+      "ground_truth_label": "Yes",
+      "symbolic_epistemic_status": "entailed",
+      "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0004.png",
+      "image_sha256": "93dedd4719d06f7999fbfcb7d8f8c3d00f94b1a9b9f96b0139a6683f546918e0",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "green_cylinder": {
+          "bbox": [
+            74,
+            160,
+            138,
+            224
+          ],
+          "role": "left"
+        },
+        "yellow_cone": {
+          "bbox": [
+            254,
+            169,
+            318,
+            233
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_revctl_ctrl_forward_chain_0004",
+      "source_sample_id": "ctrl_forward_chain_0004",
+      "condition": "directional_reversal_control",
+      "topology": "forward_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_forward_chain_0004",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The yellow cone is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is magenta prism to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The yellow cone is to the left of the magenta prism.",
+      "query": "magenta prism to the left of green cylinder?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0004.png",
+      "image_sha256": "93dedd4719d06f7999fbfcb7d8f8c3d00f94b1a9b9f96b0139a6683f546918e0",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "green_cylinder": {
+          "bbox": [
+            74,
+            160,
+            138,
+            224
+          ],
+          "role": "left"
+        },
+        "yellow_cone": {
+          "bbox": [
+            254,
+            169,
+            318,
+            233
+          ],
+          "role": "right"
+        }
+      },
+      "reversal_parent_sample_id": "ctrl_forward_chain_0004",
+      "reversal_note": "Matched control: same visual canvas as parent forward-chain case; query entities swapped. GT=No (contradicted) under left-of semantics."
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_forward_chain_0019_forward_chain",
+      "source_sample_id": "ctrl_forward_chain_0019",
+      "condition": "forward_chain",
+      "topology": "forward_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_forward_chain_0019",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The blue cube is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is magenta prism to the left of red sphere?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The blue cube is to the left of the red sphere.",
+      "query": "magenta prism to the left of red sphere?",
+      "ground_truth_label": "Yes",
+      "symbolic_epistemic_status": "entailed",
+      "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0019.png",
+      "image_sha256": "db0192fa375eb6b31cb536d90e6af4f826a0b93c93e2f9e3a9778b17e338daba",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "magenta_prism": {
+          "bbox": [
+            75,
+            168,
+            139,
+            232
+          ],
+          "role": "left"
+        },
+        "blue_cube": {
+          "bbox": [
+            263,
+            176,
+            327,
+            240
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_revctl_ctrl_forward_chain_0019",
+      "source_sample_id": "ctrl_forward_chain_0019",
+      "condition": "directional_reversal_control",
+      "topology": "forward_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_forward_chain_0019",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The blue cube is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is red sphere to the left of magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The blue cube is to the left of the red sphere.",
+      "query": "red sphere to the left of magenta prism?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0019.png",
+      "image_sha256": "db0192fa375eb6b31cb536d90e6af4f826a0b93c93e2f9e3a9778b17e338daba",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "magenta_prism": {
+          "bbox": [
+            75,
+            168,
+            139,
+            232
+          ],
+          "role": "left"
+        },
+        "blue_cube": {
+          "bbox": [
+            263,
+            176,
+            327,
+            240
+          ],
+          "role": "right"
+        }
+      },
+      "reversal_parent_sample_id": "ctrl_forward_chain_0019",
+      "reversal_note": "Matched control: same visual canvas as parent forward-chain case; query entities swapped. GT=No (contradicted) under left-of semantics."
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_forward_chain_0010_forward_chain",
+      "source_sample_id": "ctrl_forward_chain_0010",
+      "condition": "forward_chain",
+      "topology": "forward_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_forward_chain_0010",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The yellow cone is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is orange torus to the left of magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The yellow cone is to the left of the magenta prism.",
+      "query": "orange torus to the left of magenta prism?",
+      "ground_truth_label": "Yes",
+      "symbolic_epistemic_status": "entailed",
+      "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0010.png",
+      "image_sha256": "0a74bb076063fdcd3775ddce4e2833130aeb2a5a53c680bc0cf773b7a70e0497",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "orange_torus": {
+          "bbox": [
+            120,
+            157,
+            184,
+            221
+          ],
+          "role": "left"
+        },
+        "yellow_cone": {
+          "bbox": [
+            268,
+            144,
+            332,
+            208
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_revctl_ctrl_forward_chain_0010",
+      "source_sample_id": "ctrl_forward_chain_0010",
+      "condition": "directional_reversal_control",
+      "topology": "forward_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_forward_chain_0010",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The yellow cone is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is magenta prism to the left of orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The yellow cone is to the left of the magenta prism.",
+      "query": "magenta prism to the left of orange torus?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0010.png",
+      "image_sha256": "0a74bb076063fdcd3775ddce4e2833130aeb2a5a53c680bc0cf773b7a70e0497",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "orange_torus": {
+          "bbox": [
+            120,
+            157,
+            184,
+            221
+          ],
+          "role": "left"
+        },
+        "yellow_cone": {
+          "bbox": [
+            268,
+            144,
+            332,
+            208
+          ],
+          "role": "right"
+        }
+      },
+      "reversal_parent_sample_id": "ctrl_forward_chain_0010",
+      "reversal_note": "Matched control: same visual canvas as parent forward-chain case; query entities swapped. GT=No (contradicted) under left-of semantics."
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_forward_chain_0003_forward_chain",
+      "source_sample_id": "ctrl_forward_chain_0003",
+      "condition": "forward_chain",
+      "topology": "forward_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_forward_chain_0003",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The yellow cone is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is orange torus to the left of red sphere?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The yellow cone is to the left of the red sphere.",
+      "query": "orange torus to the left of red sphere?",
+      "ground_truth_label": "Yes",
+      "symbolic_epistemic_status": "entailed",
+      "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0003.png",
+      "image_sha256": "6fbab5991c0b364de696080f0fd0ed912a1f4366f32728c5575105bd342f3e51",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "orange_torus": {
+          "bbox": [
+            56,
+            161,
+            120,
+            225
+          ],
+          "role": "left"
+        },
+        "yellow_cone": {
+          "bbox": [
+            254,
+            174,
+            318,
+            238
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_revctl_ctrl_forward_chain_0003",
+      "source_sample_id": "ctrl_forward_chain_0003",
+      "condition": "directional_reversal_control",
+      "topology": "forward_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_forward_chain_0003",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The yellow cone is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is red sphere to the left of orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The yellow cone is to the left of the red sphere.",
+      "query": "red sphere to the left of orange torus?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0003.png",
+      "image_sha256": "6fbab5991c0b364de696080f0fd0ed912a1f4366f32728c5575105bd342f3e51",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "orange_torus": {
+          "bbox": [
+            56,
+            161,
+            120,
+            225
+          ],
+          "role": "left"
+        },
+        "yellow_cone": {
+          "bbox": [
+            254,
+            174,
+            318,
+            238
+          ],
+          "role": "right"
+        }
+      },
+      "reversal_parent_sample_id": "ctrl_forward_chain_0003",
+      "reversal_note": "Matched control: same visual canvas as parent forward-chain case; query entities swapped. GT=No (contradicted) under left-of semantics."
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_forward_chain_0021_forward_chain",
+      "source_sample_id": "ctrl_forward_chain_0021",
+      "condition": "forward_chain",
+      "topology": "forward_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_forward_chain_0021",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The cyan box is to the left of the orange torus.\n\nQuestion: Based on the image and statement, is yellow cone to the left of orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The cyan box is to the left of the orange torus.",
+      "query": "yellow cone to the left of orange torus?",
+      "ground_truth_label": "Yes",
+      "symbolic_epistemic_status": "entailed",
+      "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0021.png",
+      "image_sha256": "d5292ad477ca9e1536172de6b9d7571b677fb3c04e7e727ec300b61f60c0d0a6",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "yellow_cone": {
+          "bbox": [
+            46,
+            180,
+            110,
+            244
+          ],
+          "role": "left"
+        },
+        "cyan_box": {
+          "bbox": [
+            257,
+            179,
+            321,
+            243
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_revctl_ctrl_forward_chain_0021",
+      "source_sample_id": "ctrl_forward_chain_0021",
+      "condition": "directional_reversal_control",
+      "topology": "forward_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_forward_chain_0021",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The cyan box is to the left of the orange torus.\n\nQuestion: Based on the image and statement, is orange torus to the left of yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The cyan box is to the left of the orange torus.",
+      "query": "orange torus to the left of yellow cone?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0021.png",
+      "image_sha256": "d5292ad477ca9e1536172de6b9d7571b677fb3c04e7e727ec300b61f60c0d0a6",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "yellow_cone": {
+          "bbox": [
+            46,
+            180,
+            110,
+            244
+          ],
+          "role": "left"
+        },
+        "cyan_box": {
+          "bbox": [
+            257,
+            179,
+            321,
+            243
+          ],
+          "role": "right"
+        }
+      },
+      "reversal_parent_sample_id": "ctrl_forward_chain_0021",
+      "reversal_note": "Matched control: same visual canvas as parent forward-chain case; query entities swapped. GT=No (contradicted) under left-of semantics."
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_forward_chain_0009_forward_chain",
+      "source_sample_id": "ctrl_forward_chain_0009",
+      "condition": "forward_chain",
+      "topology": "forward_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_forward_chain_0009",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The purple pyramid is to the left of the cyan box.\n\nQuestion: Based on the image and statement, is green cylinder to the left of cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The purple pyramid is to the left of the cyan box.",
+      "query": "green cylinder to the left of cyan box?",
+      "ground_truth_label": "Yes",
+      "symbolic_epistemic_status": "entailed",
+      "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0009.png",
+      "image_sha256": "d4b59d25af11e3bb0677145b8f92652ffa42c1836ebe58d8c4dc22bb6f4f4f8a",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "green_cylinder": {
+          "bbox": [
+            52,
+            173,
+            116,
+            237
+          ],
+          "role": "left"
+        },
+        "purple_pyramid": {
+          "bbox": [
+            228,
+            163,
+            292,
+            227
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_revctl_ctrl_forward_chain_0009",
+      "source_sample_id": "ctrl_forward_chain_0009",
+      "condition": "directional_reversal_control",
+      "topology": "forward_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_forward_chain_0009",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The purple pyramid is to the left of the cyan box.\n\nQuestion: Based on the image and statement, is cyan box to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The purple pyramid is to the left of the cyan box.",
+      "query": "cyan box to the left of green cylinder?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0009.png",
+      "image_sha256": "d4b59d25af11e3bb0677145b8f92652ffa42c1836ebe58d8c4dc22bb6f4f4f8a",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "green_cylinder": {
+          "bbox": [
+            52,
+            173,
+            116,
+            237
+          ],
+          "role": "left"
+        },
+        "purple_pyramid": {
+          "bbox": [
+            228,
+            163,
+            292,
+            227
+          ],
+          "role": "right"
+        }
+      },
+      "reversal_parent_sample_id": "ctrl_forward_chain_0009",
+      "reversal_note": "Matched control: same visual canvas as parent forward-chain case; query entities swapped. GT=No (contradicted) under left-of semantics."
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_reverse_chain_0069_reverse_chain",
+      "source_sample_id": "ctrl_reverse_chain_0069",
+      "condition": "reverse_chain",
+      "topology": "reverse_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_reverse_chain_0069",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The cyan box is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is blue cube to the left of cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The cyan box is to the left of the red sphere.",
+      "query": "blue cube to the left of cyan box?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_reverse_chain_0069.png",
+      "image_sha256": "73aa3c06f7313121166ea5989c71669486d63af26b03f3db1d8234a63c13c567",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "contradicted",
+        "declared_status": "contradicted",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "red_sphere": {
+          "bbox": [
+            79,
+            143,
+            143,
+            207
+          ],
+          "role": "left"
+        },
+        "blue_cube": {
+          "bbox": [
+            232,
+            167,
+            296,
+            231
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_reverse_chain_0052_reverse_chain",
+      "source_sample_id": "ctrl_reverse_chain_0052",
+      "condition": "reverse_chain",
+      "topology": "reverse_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_reverse_chain_0052",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is purple pyramid to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The green cylinder is to the left of the yellow cone.",
+      "query": "purple pyramid to the left of green cylinder?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_reverse_chain_0052.png",
+      "image_sha256": "f5240f0a546eefd17c8572a9fd73f4ea3aa371b705f55d68d32510e4a2932be9",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "contradicted",
+        "declared_status": "contradicted",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "yellow_cone": {
+          "bbox": [
+            114,
+            160,
+            178,
+            224
+          ],
+          "role": "left"
+        },
+        "purple_pyramid": {
+          "bbox": [
+            267,
+            158,
+            331,
+            222
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_reverse_chain_0045_reverse_chain",
+      "source_sample_id": "ctrl_reverse_chain_0045",
+      "condition": "reverse_chain",
+      "topology": "reverse_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_reverse_chain_0045",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The green cylinder is to the left of the orange torus.\n\nQuestion: Based on the image and statement, is cyan box to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The green cylinder is to the left of the orange torus.",
+      "query": "cyan box to the left of green cylinder?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_reverse_chain_0045.png",
+      "image_sha256": "908e64c3eba86e2c135d5fbcafe6df533773ef21962f92abfbce441b2bd1f842",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "contradicted",
+        "declared_status": "contradicted",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "orange_torus": {
+          "bbox": [
+            92,
+            153,
+            156,
+            217
+          ],
+          "role": "left"
+        },
+        "cyan_box": {
+          "bbox": [
+            246,
+            144,
+            310,
+            208
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_reverse_chain_0060_reverse_chain",
+      "source_sample_id": "ctrl_reverse_chain_0060",
+      "condition": "reverse_chain",
+      "topology": "reverse_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_reverse_chain_0060",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The green cylinder is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is blue cube to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The green cylinder is to the left of the red sphere.",
+      "query": "blue cube to the left of green cylinder?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_reverse_chain_0060.png",
+      "image_sha256": "9519d6abd20cf39341913a6f989f852d39d3236ab9d3520f3bb3f08cd6659080",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "contradicted",
+        "declared_status": "contradicted",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "red_sphere": {
+          "bbox": [
+            53,
+            155,
+            117,
+            219
+          ],
+          "role": "left"
+        },
+        "blue_cube": {
+          "bbox": [
+            240,
+            176,
+            304,
+            240
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_reverse_chain_0065_reverse_chain",
+      "source_sample_id": "ctrl_reverse_chain_0065",
+      "condition": "reverse_chain",
+      "topology": "reverse_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_reverse_chain_0065",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is orange torus to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The green cylinder is to the left of the yellow cone.",
+      "query": "orange torus to the left of green cylinder?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_reverse_chain_0065.png",
+      "image_sha256": "ff09202a86362371ae9d31f317e2a1940dd43b5c9d99765f8e9e46c9d92feac6",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "contradicted",
+        "declared_status": "contradicted",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "yellow_cone": {
+          "bbox": [
+            68,
+            144,
+            132,
+            208
+          ],
+          "role": "left"
+        },
+        "orange_torus": {
+          "bbox": [
+            257,
+            151,
+            321,
+            215
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_reverse_chain_0046_reverse_chain",
+      "source_sample_id": "ctrl_reverse_chain_0046",
+      "condition": "reverse_chain",
+      "topology": "reverse_chain",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_reverse_chain_0046",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The cyan box is to the left of the orange torus.\n\nQuestion: Based on the image and statement, is magenta prism to the left of cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The cyan box is to the left of the orange torus.",
+      "query": "magenta prism to the left of cyan box?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_reverse_chain_0046.png",
+      "image_sha256": "033e2897e3b04c74f5581ec4dffeec06cfdc00347376935611b974fd04ad0177",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "contradicted",
+        "declared_status": "contradicted",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "orange_torus": {
+          "bbox": [
+            95,
+            153,
+            159,
+            217
+          ],
+          "role": "left"
+        },
+        "magenta_prism": {
+          "bbox": [
+            265,
+            168,
+            329,
+            232
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_underdetermined_fork_0083_underdetermined_fork",
+      "source_sample_id": "ctrl_underdetermined_fork_0083",
+      "condition": "underdetermined_fork",
+      "topology": "underdetermined_fork",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_underdetermined_fork_0083",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The purple pyramid is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is cyan box to the left of purple pyramid?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The purple pyramid is to the left of the green cylinder.",
+      "query": "cyan box to the left of purple pyramid?",
+      "ground_truth_label": "Undetermined",
+      "symbolic_epistemic_status": "underdetermined",
+      "image_file": "datasets\\controlled\\images\\ctrl_underdetermined_fork_0083.png",
+      "image_sha256": "1455006f8ed6d5cef0c6faa9efe08148cf7a164d6b4e3b8e0291629529c6350c",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "underdetermined",
+        "declared_status": "underdetermined",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "cyan_box": {
+          "bbox": [
+            109,
+            152,
+            173,
+            216
+          ],
+          "role": "left"
+        },
+        "green_cylinder": {
+          "bbox": [
+            276,
+            148,
+            340,
+            212
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_underdetermined_fork_0093_underdetermined_fork",
+      "source_sample_id": "ctrl_underdetermined_fork_0093",
+      "condition": "underdetermined_fork",
+      "topology": "underdetermined_fork",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_underdetermined_fork_0093",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The green cylinder is to the left of the cyan box.\n\nQuestion: Based on the image and statement, is red sphere to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The green cylinder is to the left of the cyan box.",
+      "query": "red sphere to the left of green cylinder?",
+      "ground_truth_label": "Undetermined",
+      "symbolic_epistemic_status": "underdetermined",
+      "image_file": "datasets\\controlled\\images\\ctrl_underdetermined_fork_0093.png",
+      "image_sha256": "e4d008736c821f8eee27707c04187f41fa5d2d58575ff579287e7866dff40f99",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "underdetermined",
+        "declared_status": "underdetermined",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "red_sphere": {
+          "bbox": [
+            73,
+            171,
+            137,
+            235
+          ],
+          "role": "left"
+        },
+        "cyan_box": {
+          "bbox": [
+            242,
+            163,
+            306,
+            227
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_underdetermined_fork_0073_underdetermined_fork",
+      "source_sample_id": "ctrl_underdetermined_fork_0073",
+      "condition": "underdetermined_fork",
+      "topology": "underdetermined_fork",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_underdetermined_fork_0073",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is orange torus to the left of cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The cyan box is to the left of the green cylinder.",
+      "query": "orange torus to the left of cyan box?",
+      "ground_truth_label": "Undetermined",
+      "symbolic_epistemic_status": "underdetermined",
+      "image_file": "datasets\\controlled\\images\\ctrl_underdetermined_fork_0073.png",
+      "image_sha256": "f18709fd3d9d5fdbe730a4e73730206ec255d80732989556b3e207f0b1cdbc1c",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "underdetermined",
+        "declared_status": "underdetermined",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "orange_torus": {
+          "bbox": [
+            105,
+            157,
+            169,
+            221
+          ],
+          "role": "left"
+        },
+        "green_cylinder": {
+          "bbox": [
+            280,
+            160,
+            344,
+            224
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_underdetermined_fork_0096_underdetermined_fork",
+      "source_sample_id": "ctrl_underdetermined_fork_0096",
+      "condition": "underdetermined_fork",
+      "topology": "underdetermined_fork",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_underdetermined_fork_0096",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The blue cube is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is cyan box to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The blue cube is to the left of the green cylinder.",
+      "query": "cyan box to the left of green cylinder?",
+      "ground_truth_label": "Undetermined",
+      "symbolic_epistemic_status": "underdetermined",
+      "image_file": "datasets\\controlled\\images\\ctrl_underdetermined_fork_0096.png",
+      "image_sha256": "bac57e808469119e12d00d50d3a82cd662eab98455063c0f2c72b6bc0dca6971",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "underdetermined",
+        "declared_status": "underdetermined",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "blue_cube": {
+          "bbox": [
+            60,
+            144,
+            124,
+            208
+          ],
+          "role": "left"
+        },
+        "cyan_box": {
+          "bbox": [
+            274,
+            169,
+            338,
+            233
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_underdetermined_fork_0081_underdetermined_fork",
+      "source_sample_id": "ctrl_underdetermined_fork_0081",
+      "condition": "underdetermined_fork",
+      "topology": "underdetermined_fork",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_underdetermined_fork_0081",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The green cylinder is to the left of the purple pyramid.\n\nQuestion: Based on the image and statement, is orange torus to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The green cylinder is to the left of the purple pyramid.",
+      "query": "orange torus to the left of green cylinder?",
+      "ground_truth_label": "Undetermined",
+      "symbolic_epistemic_status": "underdetermined",
+      "image_file": "datasets\\controlled\\images\\ctrl_underdetermined_fork_0081.png",
+      "image_sha256": "831c6f7f0cd26cbf42cee5aa4d02abe66751a6cf395484953560bb424b336ed2",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "underdetermined",
+        "declared_status": "underdetermined",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "orange_torus": {
+          "bbox": [
+            120,
+            146,
+            184,
+            210
+          ],
+          "role": "left"
+        },
+        "purple_pyramid": {
+          "bbox": [
+            229,
+            167,
+            293,
+            231
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_underdetermined_fork_0087_underdetermined_fork",
+      "source_sample_id": "ctrl_underdetermined_fork_0087",
+      "condition": "underdetermined_fork",
+      "topology": "underdetermined_fork",
+      "modality": "cross_modal",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_underdetermined_fork_0087",
+      "seed": 42,
+      "prompt_template_id": "controlled_cross_modal_v1",
+      "prompt": "The yellow cone is to the left of the purple pyramid.\n\nQuestion: Based on the image and statement, is blue cube to the left of yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The yellow cone is to the left of the purple pyramid.",
+      "query": "blue cube to the left of yellow cone?",
+      "ground_truth_label": "Undetermined",
+      "symbolic_epistemic_status": "underdetermined",
+      "image_file": "datasets\\controlled\\images\\ctrl_underdetermined_fork_0087.png",
+      "image_sha256": "ad1a328c17ac1177b299904799d38593042255379a7d8685fff0c98ec13497c6",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "underdetermined",
+        "declared_status": "underdetermined",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "blue_cube": {
+          "bbox": [
+            51,
+            153,
+            115,
+            217
+          ],
+          "role": "left"
+        },
+        "purple_pyramid": {
+          "bbox": [
+            279,
+            171,
+            343,
+            235
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_unimodal_visual_0122_visual_premise_control",
+      "source_sample_id": "ctrl_unimodal_visual_0122",
+      "condition": "visual_premise_control",
+      "topology": "unimodal_visual",
+      "modality": "visual",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_unimodal_visual_0122",
+      "seed": 42,
+      "prompt_template_id": "controlled_visual_v1",
+      "prompt": "No additional statement is provided.\n\nQuestion: Based on the image and statement, is purple pyramid to the left of orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "No additional statement is provided.",
+      "query": "purple pyramid to the left of orange torus?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_unimodal_visual_0122.png",
+      "image_sha256": "d23f0d1572db0a2ee26225605f8720b1ef6ed5c940cd9b87f79ea333aabed2e0",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "contradicted",
+        "declared_status": "contradicted",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "orange_torus": {
+          "bbox": [
+            50,
+            161,
+            106,
+            217
+          ],
+          "role": "left"
+        },
+        "green_cylinder": {
+          "bbox": [
+            156,
+            149,
+            212,
+            205
+          ],
+          "role": "middle"
+        },
+        "purple_pyramid": {
+          "bbox": [
+            290,
+            152,
+            346,
+            208
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_unimodal_visual_0117_visual_premise_control",
+      "source_sample_id": "ctrl_unimodal_visual_0117",
+      "condition": "visual_premise_control",
+      "topology": "unimodal_visual",
+      "modality": "visual",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_unimodal_visual_0117",
+      "seed": 42,
+      "prompt_template_id": "controlled_visual_v1",
+      "prompt": "No additional statement is provided.\n\nQuestion: Based on the image and statement, is yellow cone to the left of blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "No additional statement is provided.",
+      "query": "yellow cone to the left of blue cube?",
+      "ground_truth_label": "Yes",
+      "symbolic_epistemic_status": "entailed",
+      "image_file": "datasets\\controlled\\images\\ctrl_unimodal_visual_0117.png",
+      "image_sha256": "6cbf70884fd23c246a41d6ac63818886d902c5c334a29b6523fdbca86aa5751e",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "yellow_cone": {
+          "bbox": [
+            41,
+            147,
+            97,
+            203
+          ],
+          "role": "left"
+        },
+        "magenta_prism": {
+          "bbox": [
+            170,
+            176,
+            226,
+            232
+          ],
+          "role": "middle"
+        },
+        "blue_cube": {
+          "bbox": [
+            275,
+            152,
+            331,
+            208
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_unimodal_visual_0141_visual_premise_control",
+      "source_sample_id": "ctrl_unimodal_visual_0141",
+      "condition": "visual_premise_control",
+      "topology": "unimodal_visual",
+      "modality": "visual",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_unimodal_visual_0141",
+      "seed": 42,
+      "prompt_template_id": "controlled_visual_v1",
+      "prompt": "No additional statement is provided.\n\nQuestion: Based on the image and statement, is red sphere to the left of yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "No additional statement is provided.",
+      "query": "red sphere to the left of yellow cone?",
+      "ground_truth_label": "Yes",
+      "symbolic_epistemic_status": "entailed",
+      "image_file": "datasets\\controlled\\images\\ctrl_unimodal_visual_0141.png",
+      "image_sha256": "d2a712306a7ace8fd9d631a2969ef9745d96ce067d366d6d1e2054f51f4c6f76",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "red_sphere": {
+          "bbox": [
+            50,
+            156,
+            106,
+            212
+          ],
+          "role": "left"
+        },
+        "orange_torus": {
+          "bbox": [
+            161,
+            171,
+            217,
+            227
+          ],
+          "role": "middle"
+        },
+        "yellow_cone": {
+          "bbox": [
+            275,
+            172,
+            331,
+            228
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_unimodal_visual_0130_visual_premise_control",
+      "source_sample_id": "ctrl_unimodal_visual_0130",
+      "condition": "visual_premise_control",
+      "topology": "unimodal_visual",
+      "modality": "visual",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_unimodal_visual_0130",
+      "seed": 42,
+      "prompt_template_id": "controlled_visual_v1",
+      "prompt": "No additional statement is provided.\n\nQuestion: Based on the image and statement, is red sphere to the left of purple pyramid?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "No additional statement is provided.",
+      "query": "red sphere to the left of purple pyramid?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_unimodal_visual_0130.png",
+      "image_sha256": "da4fd28d56a703839abd3427661fc472bdc109ee451214b48d5a0ff1ecab35e8",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "contradicted",
+        "declared_status": "contradicted",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "purple_pyramid": {
+          "bbox": [
+            34,
+            184,
+            90,
+            240
+          ],
+          "role": "left"
+        },
+        "green_cylinder": {
+          "bbox": [
+            156,
+            156,
+            212,
+            212
+          ],
+          "role": "middle"
+        },
+        "red_sphere": {
+          "bbox": [
+            286,
+            148,
+            342,
+            204
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_unimodal_visual_0134_visual_premise_control",
+      "source_sample_id": "ctrl_unimodal_visual_0134",
+      "condition": "visual_premise_control",
+      "topology": "unimodal_visual",
+      "modality": "visual",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_unimodal_visual_0134",
+      "seed": 42,
+      "prompt_template_id": "controlled_visual_v1",
+      "prompt": "No additional statement is provided.\n\nQuestion: Based on the image and statement, is cyan box to the left of magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "No additional statement is provided.",
+      "query": "cyan box to the left of magenta prism?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_unimodal_visual_0134.png",
+      "image_sha256": "3114399e2812085198d3831c74384c9296a1569b918a17bb8a919c68dd1c4b15",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "contradicted",
+        "declared_status": "contradicted",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "magenta_prism": {
+          "bbox": [
+            30,
+            174,
+            86,
+            230
+          ],
+          "role": "left"
+        },
+        "blue_cube": {
+          "bbox": [
+            181,
+            162,
+            237,
+            218
+          ],
+          "role": "middle"
+        },
+        "cyan_box": {
+          "bbox": [
+            302,
+            171,
+            358,
+            227
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_unimodal_visual_0143_visual_premise_control",
+      "source_sample_id": "ctrl_unimodal_visual_0143",
+      "condition": "visual_premise_control",
+      "topology": "unimodal_visual",
+      "modality": "visual",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_unimodal_visual_0143",
+      "seed": 42,
+      "prompt_template_id": "controlled_visual_v1",
+      "prompt": "No additional statement is provided.\n\nQuestion: Based on the image and statement, is magenta prism to the left of cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "No additional statement is provided.",
+      "query": "magenta prism to the left of cyan box?",
+      "ground_truth_label": "Yes",
+      "symbolic_epistemic_status": "entailed",
+      "image_file": "datasets\\controlled\\images\\ctrl_unimodal_visual_0143.png",
+      "image_sha256": "bec6437cc1e278c19d6be0cc46915bbba27686a6bbec753d928d762acd570b66",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {
+        "magenta_prism": {
+          "bbox": [
+            49,
+            170,
+            105,
+            226
+          ],
+          "role": "left"
+        },
+        "purple_pyramid": {
+          "bbox": [
+            170,
+            152,
+            226,
+            208
+          ],
+          "role": "middle"
+        },
+        "cyan_box": {
+          "bbox": [
+            283,
+            182,
+            339,
+            238
+          ],
+          "role": "right"
+        }
+      }
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_unimodal_text_0164_text_premise_control",
+      "source_sample_id": "ctrl_unimodal_text_0164",
+      "condition": "text_premise_control",
+      "topology": "unimodal_text",
+      "modality": "text_only",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_unimodal_text_0164",
+      "seed": 42,
+      "prompt_template_id": "controlled_text_only_v1",
+      "prompt": "The red sphere is to the left of the green cylinder. The green cylinder is to the left of the orange torus.\n\nQuestion: Based on the statements, is orange torus to the left of red sphere?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The red sphere is to the left of the green cylinder. The green cylinder is to the left of the orange torus.",
+      "query": "orange torus to the left of red sphere?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_unimodal_text_0164.png",
+      "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "contradicted",
+        "declared_status": "contradicted",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {}
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_unimodal_text_0151_text_premise_control",
+      "source_sample_id": "ctrl_unimodal_text_0151",
+      "condition": "text_premise_control",
+      "topology": "unimodal_text",
+      "modality": "text_only",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_unimodal_text_0151",
+      "seed": 42,
+      "prompt_template_id": "controlled_text_only_v1",
+      "prompt": "The cyan box is to the left of the red sphere. The red sphere is to the left of the magenta prism.\n\nQuestion: Based on the statements, is cyan box to the left of magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The cyan box is to the left of the red sphere. The red sphere is to the left of the magenta prism.",
+      "query": "cyan box to the left of magenta prism?",
+      "ground_truth_label": "Yes",
+      "symbolic_epistemic_status": "entailed",
+      "image_file": "datasets\\controlled\\images\\ctrl_unimodal_text_0151.png",
+      "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {}
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_unimodal_text_0165_text_premise_control",
+      "source_sample_id": "ctrl_unimodal_text_0165",
+      "condition": "text_premise_control",
+      "topology": "unimodal_text",
+      "modality": "text_only",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_unimodal_text_0165",
+      "seed": 42,
+      "prompt_template_id": "controlled_text_only_v1",
+      "prompt": "The orange torus is to the left of the yellow cone. The yellow cone is to the left of the cyan box.\n\nQuestion: Based on the statements, is orange torus to the left of cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The orange torus is to the left of the yellow cone. The yellow cone is to the left of the cyan box.",
+      "query": "orange torus to the left of cyan box?",
+      "ground_truth_label": "Yes",
+      "symbolic_epistemic_status": "entailed",
+      "image_file": "datasets\\controlled\\images\\ctrl_unimodal_text_0165.png",
+      "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {}
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_unimodal_text_0156_text_premise_control",
+      "source_sample_id": "ctrl_unimodal_text_0156",
+      "condition": "text_premise_control",
+      "topology": "unimodal_text",
+      "modality": "text_only",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_unimodal_text_0156",
+      "seed": 42,
+      "prompt_template_id": "controlled_text_only_v1",
+      "prompt": "The yellow cone is to the left of the purple pyramid. The purple pyramid is to the left of the cyan box.\n\nQuestion: Based on the statements, is cyan box to the left of yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The yellow cone is to the left of the purple pyramid. The purple pyramid is to the left of the cyan box.",
+      "query": "cyan box to the left of yellow cone?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_unimodal_text_0156.png",
+      "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "contradicted",
+        "declared_status": "contradicted",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {}
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_unimodal_text_0146_text_premise_control",
+      "source_sample_id": "ctrl_unimodal_text_0146",
+      "condition": "text_premise_control",
+      "topology": "unimodal_text",
+      "modality": "text_only",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_unimodal_text_0146",
+      "seed": 42,
+      "prompt_template_id": "controlled_text_only_v1",
+      "prompt": "The yellow cone is to the left of the blue cube. The blue cube is to the left of the red sphere.\n\nQuestion: Based on the statements, is red sphere to the left of yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The yellow cone is to the left of the blue cube. The blue cube is to the left of the red sphere.",
+      "query": "red sphere to the left of yellow cone?",
+      "ground_truth_label": "No",
+      "symbolic_epistemic_status": "contradicted",
+      "image_file": "datasets\\controlled\\images\\ctrl_unimodal_text_0146.png",
+      "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "contradicted",
+        "declared_status": "contradicted",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {}
+    },
+    {
+      "manifest_version": "phase_0d2_v1",
+      "sample_id": "p0d2_ctrl_unimodal_text_0163_text_premise_control",
+      "source_sample_id": "ctrl_unimodal_text_0163",
+      "condition": "text_premise_control",
+      "topology": "unimodal_text",
+      "modality": "text_only",
+      "relation": "left_of",
+      "matched_group_id": "mg_ctrl_unimodal_text_0163",
+      "seed": 42,
+      "prompt_template_id": "controlled_text_only_v1",
+      "prompt": "The orange torus is to the left of the magenta prism. The magenta prism is to the left of the purple pyramid.\n\nQuestion: Based on the statements, is orange torus to the left of purple pyramid?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "text_premise": "The orange torus is to the left of the magenta prism. The magenta prism is to the left of the purple pyramid.",
+      "query": "orange torus to the left of purple pyramid?",
+      "ground_truth_label": "Yes",
+      "symbolic_epistemic_status": "entailed",
+      "image_file": "datasets\\controlled\\images\\ctrl_unimodal_text_0163.png",
+      "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+      "image_exists": true,
+      "is_synthetic_demo": false,
+      "symbolic_verification": {
+        "verified": true,
+        "recomputed_status": "entailed",
+        "declared_status": "entailed",
+        "reason": "solver_recompute",
+        "algorithm_agreement": true
+      },
+      "entity_roles": {}
+    }
+  ],
+  "samples_sha256": "06898d49d205c7d9e59455cd1d75070cae5889aa0389122abab012c63c11119f"
+}

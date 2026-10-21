@@ -1,0 +1,141 @@
+{
+  "n_scored": 3,
+  "n_failed_or_missing": 0,
+  "overall_accuracy": {
+    "mean": 0.666667,
+    "ci_low": 0.0,
+    "ci_high": 1.0,
+    "n": 3,
+    "n_boot": 2000,
+    "seed": 42
+  },
+  "balanced_accuracy": 0.75,
+  "confusion_matrix": {
+    "Yes": {
+      "Yes": 1,
+      "No": 1,
+      "Undetermined": 0,
+      "Invalid": 0,
+      "Missing": 0
+    },
+    "No": {
+      "Yes": 0,
+      "No": 1,
+      "Undetermined": 0,
+      "Invalid": 0,
+      "Missing": 0
+    },
+    "Undetermined": {
+      "Yes": 0,
+      "No": 0,
+      "Undetermined": 0,
+      "Invalid": 0,
+      "Missing": 0
+    }
+  },
+  "accuracy_by_condition": {
+    "directional_reversal_control": {
+      "n": 1,
+      "n_correct": 1,
+      "accuracy": 1.0,
+      "ci": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "n": 1,
+        "n_boot": 2000,
+        "seed": 42
+      }
+    },
+    "forward_chain": {
+      "n": 2,
+      "n_correct": 1,
+      "accuracy": 0.5,
+      "ci": {
+        "mean": 0.5,
+        "ci_low": 0.0,
+        "ci_high": 1.0,
+        "n": 2,
+        "n_boot": 2000,
+        "seed": 42
+      }
+    }
+  },
+  "entailed_accuracy": {
+    "mean": 0.5,
+    "ci_low": 0.0,
+    "ci_high": 1.0,
+    "n": 2,
+    "n_boot": 2000,
+    "seed": 42
+  },
+  "contradicted_accuracy": {
+    "mean": 1.0,
+    "ci_low": 1.0,
+    "ci_high": 1.0,
+    "n": 1,
+    "n_boot": 2000,
+    "seed": 42
+  },
+  "underdetermined_abstention_accuracy": {
+    "mean": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 0,
+    "n_boot": 2000
+  },
+  "underdetermined_definite_answer_rate": {
+    "rate": 0.0,
+    "n_underdetermined": 0,
+    "n_definite": 0
+  },
+  "matched_counterfactual_consistency": {
+    "n_groups": 1,
+    "n_groups_all_correct": 0,
+    "rate": 0.0,
+    "note": "Group-level joint correctness; not independent Bernoulli trials."
+  },
+  "relation_breakdown": {
+    "left_of_n": 3,
+    "left_of_accuracy": 0.666667,
+    "right_of_n": 0,
+    "right_of_accuracy": 0.0
+  },
+  "modality_breakdown": {
+    "visual_n": 0,
+    "visual_accuracy": 0.0,
+    "text_only_n": 0,
+    "text_only_accuracy": 0.0
+  },
+  "latency_sec": {
+    "n": 3,
+    "mean": 19.602504,
+    "max": 22.44615,
+    "min": 17.738127
+  },
+  "peak_vram_mib": {
+    "n": 3,
+    "max": 3330.344,
+    "mean": 3330.341
+  },
+  "label_distribution": {
+    "true": {
+      "Yes": 2,
+      "No": 1
+    },
+    "pred": {
+      "No": 2,
+      "Yes": 1
+    }
+  },
+  "epistemic_notes": [
+    "Candidate-normalized scores are uncalibrated ranking scores, not confidence.",
+    "Behavioral errors do not establish internal neural mechanisms.",
+    "Bootstrap CIs treat scored cases as the resampling unit; matched pairs share entities."
+  ],
+  "run_id": "phase_0d2_20261021T084406Z",
+  "manifest_path": "E:\\Workspace\\Active\\CrossModalLab\\configs\\phase_0d2\\behavioral_manifest_v1.json",
+  "manifest_sha256": "b13c4bccb560d830c822409703ba272e1cded9665dd826810da710453a8a46da",
+  "n_failure_records": 0,
+  "candidate_score_semantics": "uncalibrated_candidate_normalized_softmax"
+}

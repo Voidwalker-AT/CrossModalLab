@@ -1,0 +1,195 @@
+{
+  "n_scored": 36,
+  "n_failed_or_missing": 0,
+  "overall_accuracy": {
+    "mean": 0.5,
+    "ci_low": 0.333333,
+    "ci_high": 0.666667,
+    "n": 36,
+    "n_boot": 2000,
+    "seed": 42
+  },
+  "balanced_accuracy": 0.425926,
+  "confusion_matrix": {
+    "Yes": {
+      "Yes": 10,
+      "No": 2,
+      "Undetermined": 0,
+      "Invalid": 0,
+      "Missing": 0
+    },
+    "No": {
+      "Yes": 10,
+      "No": 8,
+      "Undetermined": 0,
+      "Invalid": 0,
+      "Missing": 0
+    },
+    "Undetermined": {
+      "Yes": 5,
+      "No": 1,
+      "Undetermined": 0,
+      "Invalid": 0,
+      "Missing": 0
+    }
+  },
+  "accuracy_by_condition": {
+    "directional_reversal_control": {
+      "n": 6,
+      "n_correct": 2,
+      "accuracy": 0.333333,
+      "ci": {
+        "mean": 0.333333,
+        "ci_low": 0.0,
+        "ci_high": 0.666667,
+        "n": 6,
+        "n_boot": 2000,
+        "seed": 42
+      }
+    },
+    "forward_chain": {
+      "n": 6,
+      "n_correct": 4,
+      "accuracy": 0.666667,
+      "ci": {
+        "mean": 0.666667,
+        "ci_low": 0.333333,
+        "ci_high": 1.0,
+        "n": 6,
+        "n_boot": 2000,
+        "seed": 42
+      }
+    },
+    "reverse_chain": {
+      "n": 6,
+      "n_correct": 3,
+      "accuracy": 0.5,
+      "ci": {
+        "mean": 0.5,
+        "ci_low": 0.166667,
+        "ci_high": 0.833333,
+        "n": 6,
+        "n_boot": 2000,
+        "seed": 42
+      }
+    },
+    "text_premise_control": {
+      "n": 6,
+      "n_correct": 3,
+      "accuracy": 0.5,
+      "ci": {
+        "mean": 0.5,
+        "ci_low": 0.166667,
+        "ci_high": 0.833333,
+        "n": 6,
+        "n_boot": 2000,
+        "seed": 42
+      }
+    },
+    "underdetermined_fork": {
+      "n": 6,
+      "n_correct": 0,
+      "accuracy": 0.0,
+      "ci": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "n": 6,
+        "n_boot": 2000,
+        "seed": 42
+      }
+    },
+    "visual_premise_control": {
+      "n": 6,
+      "n_correct": 6,
+      "accuracy": 1.0,
+      "ci": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "n": 6,
+        "n_boot": 2000,
+        "seed": 42
+      }
+    }
+  },
+  "entailed_accuracy": {
+    "mean": 0.833333,
+    "ci_low": 0.583333,
+    "ci_high": 1.0,
+    "n": 12,
+    "n_boot": 2000,
+    "seed": 42
+  },
+  "contradicted_accuracy": {
+    "mean": 0.444444,
+    "ci_low": 0.222222,
+    "ci_high": 0.666667,
+    "n": 18,
+    "n_boot": 2000,
+    "seed": 42
+  },
+  "underdetermined_abstention_accuracy": {
+    "mean": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 6,
+    "n_boot": 2000,
+    "seed": 42
+  },
+  "underdetermined_definite_answer_rate": {
+    "rate": 1.0,
+    "n_underdetermined": 6,
+    "n_definite": 6
+  },
+  "matched_counterfactual_consistency": {
+    "n_groups": 6,
+    "n_groups_all_correct": 0,
+    "rate": 0.0,
+    "note": "Group-level joint correctness; not independent Bernoulli trials."
+  },
+  "relation_breakdown": {
+    "left_of_n": 36,
+    "left_of_accuracy": 0.5,
+    "right_of_n": 0,
+    "right_of_accuracy": 0.0
+  },
+  "modality_breakdown": {
+    "visual_n": 6,
+    "visual_accuracy": 1.0,
+    "text_only_n": 6,
+    "text_only_accuracy": 0.5
+  },
+  "latency_sec": {
+    "n": 36,
+    "mean": 14.922788,
+    "max": 22.429956,
+    "min": 0.183931
+  },
+  "peak_vram_mib": {
+    "n": 36,
+    "max": 3330.352,
+    "mean": 3081.96
+  },
+  "label_distribution": {
+    "true": {
+      "Yes": 12,
+      "No": 18,
+      "Undetermined": 6
+    },
+    "pred": {
+      "No": 11,
+      "Yes": 25
+    }
+  },
+  "epistemic_notes": [
+    "Candidate-normalized scores are uncalibrated ranking scores, not confidence.",
+    "Behavioral errors do not establish internal neural mechanisms.",
+    "Bootstrap CIs treat scored cases as the resampling unit; matched pairs share entities."
+  ],
+  "run_id": "phase_0d2_20261021T093146Z",
+  "manifest_path": "E:\\Workspace\\Active\\CrossModalLab\\configs\\phase_0d2\\behavioral_manifest_v1.json",
+  "manifest_sha256": "b13c4bccb560d830c822409703ba272e1cded9665dd826810da710453a8a46da",
+  "n_failure_records": 0,
+  "candidate_score_semantics": "uncalibrated_candidate_normalized_softmax"
+}

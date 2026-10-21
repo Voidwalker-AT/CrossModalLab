@@ -1,0 +1,16 @@
+{
+  "run_id": "phase_0d2_20261021T084406Z",
+  "timestamp_utc": "2026-10-21T08:47:58Z",
+  "manifest_sha256": "b13c4bccb560d830c822409703ba272e1cded9665dd826810da710453a8a46da",
+  "n_samples_in_manifest": 36,
+  "n_evaluated_ok": 3,
+  "n_failed_or_missing": 0,
+  "smoke": true,
+  "sample_ids": [
+    "p0d2_ctrl_forward_chain_0004_forward_chain",
+    "p0d2_revctl_ctrl_forward_chain_0004",
+    "p0d2_ctrl_forward_chain_0019_forward_chain"
+  ],
+  "output_jsonl": "artifacts\\evaluations\\phase_0d2_smoke\\behavioral_predictions_v1.jsonl",
+  "output_metrics": "artifacts\\evaluations\\phase_0d2_smoke\\behavioral_metrics_v1.json"
+}
