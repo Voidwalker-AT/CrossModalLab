@@ -1,0 +1,232 @@
+{
+  "phase": "2C-B",
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "load_meta": {
+    "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+    "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+    "snapshot_dir": "E:\\cache\\huggingface\\models--Qwen--Qwen3-VL-2B-Instruct\\snapshots\\89644892e4d85e24eaac8bacfd4f463576704203",
+    "load_sec": 12.86,
+    "device": "cuda:0",
+    "quantization": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_use_double_quant": true
+    },
+    "attn_implementation": "sdpa",
+    "torch_allocated_mib": 1505.48,
+    "torch_reserved_mib": 1566.0,
+    "text_num_layers": 28,
+    "text_hidden_size": 2048,
+    "image_token_id": 151655,
+    "model_class": "Qwen3VLForConditionalGeneration"
+  },
+  "load_memory": {
+    "torch_allocated_mib": 1505.481,
+    "torch_reserved_mib": 1566.0,
+    "torch_max_allocated_mib": 1527.841,
+    "torch_max_reserved_mib": 1566.0,
+    "nvidia_smi_used_mib": 2102.0,
+    "nvidia_smi_total_mib": 4096.0,
+    "host_available_mib": 4332.793,
+    "warnings": []
+  },
+  "visual_smoke": [
+    {
+      "id": "object_identity",
+      "image_sha256": "58ba2e491acf33e07ae1ea879e86ea4cc4474f9c04f13a16cbbe2abda13804e6",
+      "prompt": "Is there a colored geometric shape in the image? Answer with Yes or No.",
+      "raw_completion": "Yes",
+      "parsed_answer": "Yes",
+      "expected_loose": null,
+      "seq_len": 170,
+      "n_image_tokens": 144,
+      "latency_sec": 3.2089,
+      "memory": {
+        "torch_allocated_mib": 1516.988,
+        "torch_reserved_mib": 1626.0,
+        "torch_max_allocated_mib": 1575.142,
+        "torch_max_reserved_mib": 1626.0,
+        "nvidia_smi_used_mib": 2180.0,
+        "nvidia_smi_total_mib": 4096.0,
+        "host_available_mib": 3555.254,
+        "warnings": []
+      },
+      "revision": "89644892e4d85e24eaac8bacfd4f463576704203"
+    },
+    {
+      "id": "left_of",
+      "image_sha256": "58ba2e491acf33e07ae1ea879e86ea4cc4474f9c04f13a16cbbe2abda13804e6",
+      "prompt": "The cyan box is to the left of the green cylinder. Based on the image, is the cyan box to the left of the green cylinder? Answer with: Yes, No, or Undetermined.",
+      "raw_completion": "Yes",
+      "parsed_answer": "Yes",
+      "expected_loose": "Yes",
+      "seq_len": 194,
+      "n_image_tokens": 144,
+      "latency_sec": 0.7231,
+      "memory": {
+        "torch_allocated_mib": 1516.99,
+        "torch_reserved_mib": 1630.0,
+        "torch_max_allocated_mib": 1578.157,
+        "torch_max_reserved_mib": 1630.0,
+        "nvidia_smi_used_mib": 2184.0,
+        "nvidia_smi_total_mib": 4096.0,
+        "host_available_mib": 3559.32,
+        "warnings": []
+      },
+      "revision": "89644892e4d85e24eaac8bacfd4f463576704203"
+    },
+    {
+      "id": "right_of_reversed",
+      "image_sha256": "58ba2e491acf33e07ae1ea879e86ea4cc4474f9c04f13a16cbbe2abda13804e6",
+      "prompt": "Based on the image, is the green cylinder to the left of the cyan box? Answer with: Yes, No, or Undetermined.",
+      "raw_completion": "No",
+      "parsed_answer": "No",
+      "expected_loose": "No",
+      "seq_len": 182,
+      "n_image_tokens": 144,
+      "latency_sec": 0.7674,
+      "memory": {
+        "torch_allocated_mib": 1516.988,
+        "torch_reserved_mib": 1630.0,
+        "torch_max_allocated_mib": 1576.648,
+        "torch_max_reserved_mib": 1630.0,
+        "nvidia_smi_used_mib": 2184.0,
+        "nvidia_smi_total_mib": 4096.0,
+        "host_available_mib": 3550.711,
+        "warnings": []
+      },
+      "revision": "89644892e4d85e24eaac8bacfd4f463576704203"
+    },
+    {
+      "id": "missing_visual_text_only",
+      "image_sha256": null,
+      "prompt": "There is no image provided. Is the cyan box to the left of the green cylinder? Answer with: Yes, No, or Undetermined.",
+      "raw_completion": "No",
+      "parsed_answer": "No",
+      "expected_loose": "Undetermined",
+      "seq_len": 37,
+      "n_image_tokens": 0,
+      "latency_sec": 0.4944,
+      "memory": {
+        "torch_allocated_mib": 1513.609,
+        "torch_reserved_mib": 1572.0,
+        "torch_max_allocated_mib": 1523.006,
+        "torch_max_reserved_mib": 1572.0,
+        "nvidia_smi_used_mib": 2126.0,
+        "nvidia_smi_total_mib": 4096.0,
+        "host_available_mib": 3554.785,
+        "warnings": []
+      },
+      "revision": "89644892e4d85e24eaac8bacfd4f463576704203"
+    }
+  ],
+  "cross_modal_smoke": [
+    {
+      "variant_id": "entailed",
+      "sample_id": "xc_id_0001::entailed",
+      "ground_truth_label": "Yes",
+      "raw_completion": "Yes",
+      "parsed_answer": "Yes",
+      "is_correct": true,
+      "image_sha256": "9c4200b92d7d93b8f53181086060ad64bb1ca56657c105b16aa858c02585d1e3",
+      "prompt_sha256": "590cf1cfdf9cd088555a1d40773a35ecedd897a8ca0e6dc12af398940aa9de99",
+      "logprobs": {
+        "error": "'NoneType' object has no attribute 'device'"
+      },
+      "latency_sec": 0.6102,
+      "memory": {
+        "torch_allocated_mib": 1516.99,
+        "torch_reserved_mib": 1638.0,
+        "torch_max_allocated_mib": 1582.297,
+        "torch_max_reserved_mib": 1638.0,
+        "nvidia_smi_used_mib": 2192.0,
+        "nvidia_smi_total_mib": 4096.0,
+        "host_available_mib": 3554.438,
+        "warnings": []
+      },
+      "n_image_tokens": 144
+    },
+    {
+      "variant_id": "contradicted",
+      "sample_id": "xc_id_0001::contradicted",
+      "ground_truth_label": "No",
+      "raw_completion": "No",
+      "parsed_answer": "No",
+      "is_correct": true,
+      "image_sha256": "08dcb186040c0f1670294d1fdeff82224ee8c20a3ad6daf87a2c5177a812ad9b",
+      "prompt_sha256": "84dec5e58b9c8c879a48954ff3537d1d1ed2225e064e9fc526e5818ad0db7bc4",
+      "logprobs": {
+        "error": "'NoneType' object has no attribute 'device'"
+      },
+      "latency_sec": 0.5879,
+      "memory": {
+        "torch_allocated_mib": 1516.99,
+        "torch_reserved_mib": 1638.0,
+        "torch_max_allocated_mib": 1582.447,
+        "torch_max_reserved_mib": 1638.0,
+        "nvidia_smi_used_mib": 2192.0,
+        "nvidia_smi_total_mib": 4096.0,
+        "host_available_mib": 3552.586,
+        "warnings": []
+      },
+      "n_image_tokens": 144
+    },
+    {
+      "variant_id": "underdetermined",
+      "sample_id": "xc_id_0001::underdetermined",
+      "ground_truth_label": "Undetermined",
+      "raw_completion": "No",
+      "parsed_answer": "No",
+      "is_correct": false,
+      "image_sha256": "3b0acd8bb26fe0a5164ced18590415e0f6160b7cfab2a5a9bd86a67e08ad2524",
+      "prompt_sha256": "4bfd7bde2fa85b20b95a74195ddb395c4cdb78be0985276cc755c70d2ae71e1a",
+      "logprobs": {
+        "error": "'NoneType' object has no attribute 'device'"
+      },
+      "latency_sec": 0.6072,
+      "memory": {
+        "torch_allocated_mib": 1516.99,
+        "torch_reserved_mib": 1638.0,
+        "torch_max_allocated_mib": 1582.447,
+        "torch_max_reserved_mib": 1638.0,
+        "nvidia_smi_used_mib": 2192.0,
+        "nvidia_smi_total_mib": 4096.0,
+        "host_available_mib": 3554.73,
+        "warnings": []
+      },
+      "n_image_tokens": 144
+    }
+  ],
+  "hook_test": {
+    "skipped": false,
+    "layer_index": 12,
+    "module_path": "text_model.layers[12]",
+    "shape": [
+      1,
+      224,
+      2048
+    ],
+    "dtype": "torch.bfloat16",
+    "logits_max_abs_diff": 0.0,
+    "finite": true,
+    "memory": {
+      "torch_allocated_mib": 1518.147,
+      "torch_reserved_mib": 1704.0,
+      "torch_max_allocated_mib": 1607.857,
+      "torch_max_reserved_mib": 1704.0,
+      "nvidia_smi_used_mib": 2258.0,
+      "nvidia_smi_total_mib": 4096.0,
+      "host_available_mib": 3553.547,
+      "warnings": []
+    }
+  },
+  "final_holdout_touched": false,
+  "causal_patching": false,
+  "limitations": [
+    "Smoke only; not general accuracy.",
+    "Different tokenization from SmolVLM2; logits not cross-calibrated.",
+    "NF4 load measured; not BF16."
+  ]
+}
