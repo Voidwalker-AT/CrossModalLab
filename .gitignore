@@ -244,6 +244,8 @@ datasets/benchmarks/hallusionbench/HallusionBench.json
 !datasets/relational_benchmark_v1_ho.jsonl
 # Phase 1B cross-modal dependency labels (metadata-bearing JSONL; images stay local)
 !datasets/cross_modal_dependency_v1/cross_modal_dependency_v1.jsonl
+# Phase 1E confound-controlled contrast labels
+!datasets/cross_modal_contrast_v2/cross_modal_contrast_v2.jsonl
 
 # Activation tensors and caches
 artifacts/activations/
