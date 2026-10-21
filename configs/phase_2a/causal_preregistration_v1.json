@@ -1,0 +1,148 @@
+{
+  "schema_version": "phase_2a_prereg_v1",
+  "status": "DESIGN_ONLY_NOT_EXECUTED",
+  "created_utc": "2026-10-21",
+  "model": {
+    "model_id": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+    "revision": "482adb537c021c86670beed01cd58990d01e72e4",
+    "quantization": "4-bit NF4 bitsandbytes"
+  },
+  "probe_context": {
+    "source_phase": "1F",
+    "selected_spec_exploratory": "L18_last",
+    "development_val_ba": 0.777778,
+    "group_bootstrap_ci": [0.592593, 0.962963],
+    "n_val_families": 9,
+    "n_probe_specs_evaluated": 13,
+    "n_l2_grid_evals": 52,
+    "total_selection_events": 65,
+    "selection_optimism_risk": "HIGH",
+    "multiple_comparison_note": "Best-spec choice among 13 layer×token specs (×4 L2) inflates apparent BA; treat as exploratory only.",
+    "final_holdout_touched": false,
+    "not_a_proven_logical_representation": true
+  },
+  "research_questions": {
+    "RQ-C1": {
+      "question": "Does a selected residual-stream intervention causally influence answers to cross-modal relational queries?",
+      "null": "Mean primary margin change vs no-op is zero (family-level).",
+      "alternative": "Mean primary margin change vs no-op is non-zero in the pre-registered direction.",
+      "outcome": "raw_margin_change (target vs alternative candidate log-likelihood)",
+      "controls": ["no_op", "random_source", "unrelated_token", "same_label"],
+      "falsification": "CI for mean change includes 0 and is indistinguishable from random_source null.",
+      "limitations": ["Patching does not prove unique circuitry.", "NF4 noise present."]
+    },
+    "RQ-C2": {
+      "question": "Is the effect specific to logical relation information rather than generic disruption?",
+      "null": "clean→cf patch effect equals random_source effect.",
+      "alternative": "clean→cf effect differs from random_source and unrelated_token controls.",
+      "outcome": "difference of raw_margin_change distributions",
+      "controls": ["random_source", "unrelated_token", "no_op"],
+      "falsification": "Targeted patch not larger than disruption controls.",
+      "limitations": ["Random controls may still be informative if high-norm."]
+    },
+    "RQ-C3": {
+      "question": "Do middle/late layers differ from early layers?",
+      "null": "Layer 3 and Layer 18/23 effects equal.",
+      "alternative": "Layer 18/23 effects exceed Layer 3 on primary margin change.",
+      "outcome": "layer-wise raw_margin_change",
+      "controls": ["layer_3", "layer_12", "layer_18", "layer_23"],
+      "falsification": "No ordered layer trend and early layers equal late.",
+      "limitations": ["Not a uniqueness claim for L18."]
+    },
+    "RQ-C4": {
+      "question": "Can intervention improve evidence-sufficiency without damaging correct entailed/contradicted?",
+      "null": "Fork abstention gain ≤ 0 and/or entailed/contradicted damage ≥ abstention gain.",
+      "alternative": "Fork primary metric improves without reducing entailed/contradicted accuracy below pre-registered non-inferiority margin.",
+      "outcome": "condition-stratified raw_margin_change and label flip rates",
+      "controls": ["no_op", "same_label"],
+      "falsification": "Any gain accompanied by equal or larger damage on correct definite answers.",
+      "limitations": ["Behavioral flips ≠ calibrated abstention."]
+    }
+  },
+  "development_family_selection": {
+    "rule": "Use Phase 1F frozen validation families only for confirmatory causal pilot design dry-run; final confirmatory causal eval requires separate sealed list.",
+    "validation_families": [
+      "xc_ho_0013",
+      "xc_ho_0016",
+      "xc_ho_0024",
+      "xc_ho_0028",
+      "xc_ho_0029",
+      "xc_ho_0032",
+      "xc_ho_0033",
+      "xc_ho_0040",
+      "xc_id_0191"
+    ],
+    "exclude_final_holdout": true,
+    "min_independent_families_confirmatory": 30,
+    "current_n_families": 9
+  },
+  "interventions": {
+    "primary_layer_token": {"layer": 18, "token": "last"},
+    "comparators": [
+      {"layer": 3, "token": "last"},
+      {"layer": 12, "token": "last"},
+      {"layer": 23, "token": "last"}
+    ],
+    "directions": [
+      "clean_to_cf",
+      "cf_to_clean",
+      "no_op",
+      "random_source",
+      "same_label",
+      "unrelated_token"
+    ],
+    "hook_semantics": "Replace residual stream row at end of decoder layer ℓ (post-block output) before layer ℓ+1; document in execution plan.",
+    "token_alignment_rule": "Patch absolute last position only after verifying both runs have identical prompt_token_length; otherwise abort pair.",
+    "do_not_assume_unique_circuit": true
+  },
+  "primary_metric": {
+    "name": "raw_margin_change",
+    "definition": "(LL_target - LL_alternative)_patched - (LL_target - LL_alternative)_baseline",
+    "candidates": [" Yes", " No", " Undetermined"],
+    "target_alternative_by_condition": {
+      "entailed": {"target": " Yes", "alternative": " Undetermined"},
+      "contradicted": {"target": " No", "alternative": " Undetermined"},
+      "underdetermined": {"target": " Undetermined", "alternative": " Yes"}
+    },
+    "do_not_use_first_token_as_full_answer_prob": true,
+    "candidate_scores_not_calibrated_confidence": true
+  },
+  "secondary_metrics": [
+    "raw_target_log_likelihood_change",
+    "generated_answer_change",
+    "counterfactual_directional_consistency",
+    "negative_control_effect",
+    "damage_rate_on_previously_correct"
+  ],
+  "statistics": {
+    "independent_unit": "counterfactual_family",
+    "matched_pair_analysis": true,
+    "family_bootstrap_B": 2000,
+    "sign_flip_permutations": true,
+    "multiple_comparison": "BH across layer×direction family if >1 confirmatory contrast",
+    "exploratory_vs_confirmatory": "Phase 2A is design; any future run on 9 val families is exploratory; confirmatory needs ≥30 sealed families",
+    "holdout_sealed": true
+  },
+  "resources": {
+    "observed_vram_mib": 3331,
+    "est_forwards_per_family_pairs": 8,
+    "est_max_families_bounded_pilot": 9,
+    "est_max_forwards_bounded_pilot": 72,
+    "single_model_copy": true,
+    "full_layer_cache": false,
+    "cpu_offload_selected_rows": true
+  },
+  "stop_conditions": [
+    "CUDA OOM",
+    "severe host paging",
+    "activation shape mismatch",
+    "prompt_token_length mismatch between clean and counterfactual",
+    "non-finite activations"
+  ],
+  "interpretation_boundaries": [
+    "Activation patching shows causal mediation along tested path, not unique necessity/sufficiency.",
+    "Probe decodability is not causal usage.",
+    "Do not claim publication novelty from design alone."
+  ],
+  "execution_authorized": false
+}

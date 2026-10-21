@@ -1,0 +1,1094 @@
+{
+  "n_families_audited": 9,
+  "n_families_ok": 9,
+  "n_single_variable_pairs": 9,
+  "single_variable_pairs": [
+    {
+      "pair_id": "xc_ho_0013:contradicted_vs_underdetermined",
+      "pair_type": "same_text_changed_image",
+      "clean_sample_id": "xc_ho_0013::contradicted",
+      "counterfactual_sample_id": "xc_ho_0013::underdetermined",
+      "clean_label": "No",
+      "counterfactual_label": "Undetermined",
+      "evidence_change": "visual left/right order of A,B flipped",
+      "visual_consistent": false,
+      "text_consistent": true,
+      "single_variable": true
+    },
+    {
+      "pair_id": "xc_ho_0016:contradicted_vs_underdetermined",
+      "pair_type": "same_text_changed_image",
+      "clean_sample_id": "xc_ho_0016::contradicted",
+      "counterfactual_sample_id": "xc_ho_0016::underdetermined",
+      "clean_label": "No",
+      "counterfactual_label": "Undetermined",
+      "evidence_change": "visual left/right order of A,B flipped",
+      "visual_consistent": false,
+      "text_consistent": true,
+      "single_variable": true
+    },
+    {
+      "pair_id": "xc_ho_0024:contradicted_vs_underdetermined",
+      "pair_type": "same_text_changed_image",
+      "clean_sample_id": "xc_ho_0024::contradicted",
+      "counterfactual_sample_id": "xc_ho_0024::underdetermined",
+      "clean_label": "No",
+      "counterfactual_label": "Undetermined",
+      "evidence_change": "visual left/right order of A,B flipped",
+      "visual_consistent": false,
+      "text_consistent": true,
+      "single_variable": true
+    },
+    {
+      "pair_id": "xc_ho_0028:contradicted_vs_underdetermined",
+      "pair_type": "same_text_changed_image",
+      "clean_sample_id": "xc_ho_0028::contradicted",
+      "counterfactual_sample_id": "xc_ho_0028::underdetermined",
+      "clean_label": "No",
+      "counterfactual_label": "Undetermined",
+      "evidence_change": "visual left/right order of A,B flipped",
+      "visual_consistent": false,
+      "text_consistent": true,
+      "single_variable": true
+    },
+    {
+      "pair_id": "xc_ho_0029:contradicted_vs_underdetermined",
+      "pair_type": "same_text_changed_image",
+      "clean_sample_id": "xc_ho_0029::contradicted",
+      "counterfactual_sample_id": "xc_ho_0029::underdetermined",
+      "clean_label": "No",
+      "counterfactual_label": "Undetermined",
+      "evidence_change": "visual left/right order of A,B flipped",
+      "visual_consistent": false,
+      "text_consistent": true,
+      "single_variable": true
+    },
+    {
+      "pair_id": "xc_ho_0032:contradicted_vs_underdetermined",
+      "pair_type": "same_text_changed_image",
+      "clean_sample_id": "xc_ho_0032::contradicted",
+      "counterfactual_sample_id": "xc_ho_0032::underdetermined",
+      "clean_label": "No",
+      "counterfactual_label": "Undetermined",
+      "evidence_change": "visual left/right order of A,B flipped",
+      "visual_consistent": false,
+      "text_consistent": true,
+      "single_variable": true
+    },
+    {
+      "pair_id": "xc_ho_0033:contradicted_vs_underdetermined",
+      "pair_type": "same_text_changed_image",
+      "clean_sample_id": "xc_ho_0033::contradicted",
+      "counterfactual_sample_id": "xc_ho_0033::underdetermined",
+      "clean_label": "No",
+      "counterfactual_label": "Undetermined",
+      "evidence_change": "visual left/right order of A,B flipped",
+      "visual_consistent": false,
+      "text_consistent": true,
+      "single_variable": true
+    },
+    {
+      "pair_id": "xc_ho_0040:contradicted_vs_underdetermined",
+      "pair_type": "same_text_changed_image",
+      "clean_sample_id": "xc_ho_0040::contradicted",
+      "counterfactual_sample_id": "xc_ho_0040::underdetermined",
+      "clean_label": "No",
+      "counterfactual_label": "Undetermined",
+      "evidence_change": "visual left/right order of A,B flipped",
+      "visual_consistent": false,
+      "text_consistent": true,
+      "single_variable": true
+    },
+    {
+      "pair_id": "xc_id_0191:contradicted_vs_underdetermined",
+      "pair_type": "same_text_changed_image",
+      "clean_sample_id": "xc_id_0191::contradicted",
+      "counterfactual_sample_id": "xc_id_0191::underdetermined",
+      "clean_label": "No",
+      "counterfactual_label": "Undetermined",
+      "evidence_change": "visual left/right order of A,B flipped",
+      "visual_consistent": false,
+      "text_consistent": true,
+      "single_variable": true
+    }
+  ],
+  "families": [
+    {
+      "family_id": "xc_ho_0013",
+      "ok": true,
+      "entities": {
+        "A": "teal_wedge",
+        "B": "silver_hexagon",
+        "C": "emerald_oval"
+      },
+      "split": "train",
+      "samples": {
+        "entailed": {
+          "sample_id": "xc_ho_0013::entailed",
+          "prompt_sha256": "f47e14f1dc2dd5935b9a9b5b562a7c14f6ff6612f7da56713c6f396a481aa576",
+          "image_sha256": "c8661367111f9c98f288b9eda57e76ba2cf17839a7c87912aae3984e1c2a8829",
+          "entities": {
+            "A": "teal_wedge",
+            "B": "silver_hexagon",
+            "C": "emerald_oval"
+          },
+          "ground_truth_label": "Yes",
+          "premises": [
+            {
+              "subject": "teal_wedge",
+              "object": "silver_hexagon",
+              "modality": "visual"
+            },
+            {
+              "subject": "silver_hexagon",
+              "object": "emerald_oval",
+              "modality": "textual"
+            }
+          ]
+        },
+        "underdetermined": {
+          "sample_id": "xc_ho_0013::underdetermined",
+          "prompt_sha256": "420cd20735093f2e4a501abf7c8a1842f02c38f7265f9cc09c6bdec0930cc7c7",
+          "image_sha256": "86b4b145a8050a5fd6a4563eb17efbc6e7abafb464be4d07e70a09444012b811",
+          "entities": {
+            "A": "teal_wedge",
+            "B": "silver_hexagon",
+            "C": "emerald_oval"
+          },
+          "ground_truth_label": "Undetermined",
+          "premises": [
+            {
+              "subject": "teal_wedge",
+              "object": "silver_hexagon",
+              "modality": "visual"
+            },
+            {
+              "subject": "emerald_oval",
+              "object": "silver_hexagon",
+              "modality": "textual"
+            }
+          ]
+        },
+        "contradicted": {
+          "sample_id": "xc_ho_0013::contradicted",
+          "prompt_sha256": "3be3730061c8b5878545f8db090f394769ce5700848ef663e42c5100558addc7",
+          "image_sha256": "7693ac091c23596b77b88c07d2e861ef561bd2bc487769e2eed908732dd071f1",
+          "entities": {
+            "A": "teal_wedge",
+            "B": "silver_hexagon",
+            "C": "emerald_oval"
+          },
+          "ground_truth_label": "No",
+          "premises": [
+            {
+              "subject": "silver_hexagon",
+              "object": "teal_wedge",
+              "modality": "visual"
+            },
+            {
+              "subject": "emerald_oval",
+              "object": "silver_hexagon",
+              "modality": "textual"
+            }
+          ]
+        }
+      },
+      "pairs": [
+        {
+          "pair_id": "xc_ho_0013:contradicted_vs_underdetermined",
+          "pair_type": "same_text_changed_image",
+          "clean_sample_id": "xc_ho_0013::contradicted",
+          "counterfactual_sample_id": "xc_ho_0013::underdetermined",
+          "clean_label": "No",
+          "counterfactual_label": "Undetermined",
+          "evidence_change": "visual left/right order of A,B flipped",
+          "visual_consistent": false,
+          "text_consistent": true,
+          "single_variable": true
+        },
+        {
+          "pair_id": "xc_ho_0013:entailed_vs_contradicted",
+          "pair_type": "multi_factor",
+          "clean_sample_id": "xc_ho_0013::entailed",
+          "counterfactual_sample_id": "xc_ho_0013::contradicted",
+          "clean_label": "Yes",
+          "counterfactual_label": "No",
+          "evidence_change": "both visual order and text premise differ",
+          "visual_consistent": false,
+          "text_consistent": false,
+          "single_variable": false,
+          "warning": "NOT a single-variable intervention pair"
+        }
+      ]
+    },
+    {
+      "family_id": "xc_ho_0016",
+      "ok": true,
+      "entities": {
+        "A": "emerald_oval",
+        "B": "crimson_block",
+        "C": "golden_disc"
+      },
+      "split": "train",
+      "samples": {
+        "entailed": {
+          "sample_id": "xc_ho_0016::entailed",
+          "prompt_sha256": "ee8ded4ce614fc3de636b633745e4c87f183dd2083203a7775d240bca978cb54",
+          "image_sha256": "99442e9da8cef183660b6ab1320646e4995b3403acf603ddf3d7905aee7a772d",
+          "entities": {
+            "A": "emerald_oval",
+            "B": "crimson_block",
+            "C": "golden_disc"
+          },
+          "ground_truth_label": "Yes",
+          "premises": [
+            {
+              "subject": "emerald_oval",
+              "object": "crimson_block",
+              "modality": "visual"
+            },
+            {
+              "subject": "crimson_block",
+              "object": "golden_disc",
+              "modality": "textual"
+            }
+          ]
+        },
+        "underdetermined": {
+          "sample_id": "xc_ho_0016::underdetermined",
+          "prompt_sha256": "9e8e8bf0435baa73f7855ae4fbac334df65b31d1ded6a3373088fa3196e1cf48",
+          "image_sha256": "d0317c286811a62149fce1df92beac27ff5b09588a98a90c287abbef08bc8bf3",
+          "entities": {
+            "A": "emerald_oval",
+            "B": "crimson_block",
+            "C": "golden_disc"
+          },
+          "ground_truth_label": "Undetermined",
+          "premises": [
+            {
+              "subject": "emerald_oval",
+              "object": "crimson_block",
+              "modality": "visual"
+            },
+            {
+              "subject": "golden_disc",
+              "object": "crimson_block",
+              "modality": "textual"
+            }
+          ]
+        },
+        "contradicted": {
+          "sample_id": "xc_ho_0016::contradicted",
+          "prompt_sha256": "d0571261e6a0c406e1bb77d6d930b89600162529ac3a60d675708a9150a39be8",
+          "image_sha256": "bc3ebb476df67e5847cec215f71e6f1a159e56e70114719c13c5aad58c6963c9",
+          "entities": {
+            "A": "emerald_oval",
+            "B": "crimson_block",
+            "C": "golden_disc"
+          },
+          "ground_truth_label": "No",
+          "premises": [
+            {
+              "subject": "crimson_block",
+              "object": "emerald_oval",
+              "modality": "visual"
+            },
+            {
+              "subject": "golden_disc",
+              "object": "crimson_block",
+              "modality": "textual"
+            }
+          ]
+        }
+      },
+      "pairs": [
+        {
+          "pair_id": "xc_ho_0016:contradicted_vs_underdetermined",
+          "pair_type": "same_text_changed_image",
+          "clean_sample_id": "xc_ho_0016::contradicted",
+          "counterfactual_sample_id": "xc_ho_0016::underdetermined",
+          "clean_label": "No",
+          "counterfactual_label": "Undetermined",
+          "evidence_change": "visual left/right order of A,B flipped",
+          "visual_consistent": false,
+          "text_consistent": true,
+          "single_variable": true
+        },
+        {
+          "pair_id": "xc_ho_0016:entailed_vs_contradicted",
+          "pair_type": "multi_factor",
+          "clean_sample_id": "xc_ho_0016::entailed",
+          "counterfactual_sample_id": "xc_ho_0016::contradicted",
+          "clean_label": "Yes",
+          "counterfactual_label": "No",
+          "evidence_change": "both visual order and text premise differ",
+          "visual_consistent": false,
+          "text_consistent": false,
+          "single_variable": false,
+          "warning": "NOT a single-variable intervention pair"
+        }
+      ]
+    },
+    {
+      "family_id": "xc_ho_0024",
+      "ok": true,
+      "entities": {
+        "A": "violet_star",
+        "B": "amber_ring",
+        "C": "golden_disc"
+      },
+      "split": "train",
+      "samples": {
+        "entailed": {
+          "sample_id": "xc_ho_0024::entailed",
+          "prompt_sha256": "2deb553b02ce4828081f6b2ef0da04ea2f9b72158425a1c5c3b0630159f18a1b",
+          "image_sha256": "76bd2df14844fd7024bf7ebbf29a5229f06920cb99526baf98eadb48710849a4",
+          "entities": {
+            "A": "violet_star",
+            "B": "amber_ring",
+            "C": "golden_disc"
+          },
+          "ground_truth_label": "Yes",
+          "premises": [
+            {
+              "subject": "violet_star",
+              "object": "amber_ring",
+              "modality": "visual"
+            },
+            {
+              "subject": "amber_ring",
+              "object": "golden_disc",
+              "modality": "textual"
+            }
+          ]
+        },
+        "underdetermined": {
+          "sample_id": "xc_ho_0024::underdetermined",
+          "prompt_sha256": "6a0d14c5fe780903a2f237aaecc34e8b37213c8094dec9dd344882cdd7fff18b",
+          "image_sha256": "c0cde913c1d02c02885ddda276938643550e20d11e0424e72a1b264677c735b9",
+          "entities": {
+            "A": "violet_star",
+            "B": "amber_ring",
+            "C": "golden_disc"
+          },
+          "ground_truth_label": "Undetermined",
+          "premises": [
+            {
+              "subject": "violet_star",
+              "object": "amber_ring",
+              "modality": "visual"
+            },
+            {
+              "subject": "golden_disc",
+              "object": "amber_ring",
+              "modality": "textual"
+            }
+          ]
+        },
+        "contradicted": {
+          "sample_id": "xc_ho_0024::contradicted",
+          "prompt_sha256": "89e59e9a389bb77d5e746b82c65c63b1d8da4fbe48f006c48d4a51503ed660ec",
+          "image_sha256": "eda3871f28c39452cb322bda19ebda25ff22ff5b3dd144638a215a88a68d254e",
+          "entities": {
+            "A": "violet_star",
+            "B": "amber_ring",
+            "C": "golden_disc"
+          },
+          "ground_truth_label": "No",
+          "premises": [
+            {
+              "subject": "amber_ring",
+              "object": "violet_star",
+              "modality": "visual"
+            },
+            {
+              "subject": "golden_disc",
+              "object": "amber_ring",
+              "modality": "textual"
+            }
+          ]
+        }
+      },
+      "pairs": [
+        {
+          "pair_id": "xc_ho_0024:contradicted_vs_underdetermined",
+          "pair_type": "same_text_changed_image",
+          "clean_sample_id": "xc_ho_0024::contradicted",
+          "counterfactual_sample_id": "xc_ho_0024::underdetermined",
+          "clean_label": "No",
+          "counterfactual_label": "Undetermined",
+          "evidence_change": "visual left/right order of A,B flipped",
+          "visual_consistent": false,
+          "text_consistent": true,
+          "single_variable": true
+        },
+        {
+          "pair_id": "xc_ho_0024:entailed_vs_contradicted",
+          "pair_type": "multi_factor",
+          "clean_sample_id": "xc_ho_0024::entailed",
+          "counterfactual_sample_id": "xc_ho_0024::contradicted",
+          "clean_label": "Yes",
+          "counterfactual_label": "No",
+          "evidence_change": "both visual order and text premise differ",
+          "visual_consistent": false,
+          "text_consistent": false,
+          "single_variable": false,
+          "warning": "NOT a single-variable intervention pair"
+        }
+      ]
+    },
+    {
+      "family_id": "xc_ho_0028",
+      "ok": true,
+      "entities": {
+        "A": "silver_hexagon",
+        "B": "golden_disc",
+        "C": "violet_star"
+      },
+      "split": "train",
+      "samples": {
+        "entailed": {
+          "sample_id": "xc_ho_0028::entailed",
+          "prompt_sha256": "ca448f5892f23558d863c8580acc0d8e4e0b6ac6b8018f7b7e5badfec523fb97",
+          "image_sha256": "b64b23ae4f9992ddeadeeec91b60f837666efab451641a298e81daeecc4ab7af",
+          "entities": {
+            "A": "silver_hexagon",
+            "B": "golden_disc",
+            "C": "violet_star"
+          },
+          "ground_truth_label": "Yes",
+          "premises": [
+            {
+              "subject": "silver_hexagon",
+              "object": "golden_disc",
+              "modality": "visual"
+            },
+            {
+              "subject": "golden_disc",
+              "object": "violet_star",
+              "modality": "textual"
+            }
+          ]
+        },
+        "underdetermined": {
+          "sample_id": "xc_ho_0028::underdetermined",
+          "prompt_sha256": "35f0261deb06e93410428602d99311a1e5d08cd250d77628ffecdab42f7d96eb",
+          "image_sha256": "d6137c668979e70723ed62e49e7f1222869b11e880d2780484d6b19bf8f2ddb0",
+          "entities": {
+            "A": "silver_hexagon",
+            "B": "golden_disc",
+            "C": "violet_star"
+          },
+          "ground_truth_label": "Undetermined",
+          "premises": [
+            {
+              "subject": "silver_hexagon",
+              "object": "golden_disc",
+              "modality": "visual"
+            },
+            {
+              "subject": "violet_star",
+              "object": "golden_disc",
+              "modality": "textual"
+            }
+          ]
+        },
+        "contradicted": {
+          "sample_id": "xc_ho_0028::contradicted",
+          "prompt_sha256": "21573441551d2f3682b277b0a7d171d5fd2591a281eb56c9c938bc8f8c2c6e0a",
+          "image_sha256": "8468bc228324c944cee4031493ac735b7e5d4bfbab0e6a280349d731b0d556e3",
+          "entities": {
+            "A": "silver_hexagon",
+            "B": "golden_disc",
+            "C": "violet_star"
+          },
+          "ground_truth_label": "No",
+          "premises": [
+            {
+              "subject": "golden_disc",
+              "object": "silver_hexagon",
+              "modality": "visual"
+            },
+            {
+              "subject": "violet_star",
+              "object": "golden_disc",
+              "modality": "textual"
+            }
+          ]
+        }
+      },
+      "pairs": [
+        {
+          "pair_id": "xc_ho_0028:contradicted_vs_underdetermined",
+          "pair_type": "same_text_changed_image",
+          "clean_sample_id": "xc_ho_0028::contradicted",
+          "counterfactual_sample_id": "xc_ho_0028::underdetermined",
+          "clean_label": "No",
+          "counterfactual_label": "Undetermined",
+          "evidence_change": "visual left/right order of A,B flipped",
+          "visual_consistent": false,
+          "text_consistent": true,
+          "single_variable": true
+        },
+        {
+          "pair_id": "xc_ho_0028:entailed_vs_contradicted",
+          "pair_type": "multi_factor",
+          "clean_sample_id": "xc_ho_0028::entailed",
+          "counterfactual_sample_id": "xc_ho_0028::contradicted",
+          "clean_label": "Yes",
+          "counterfactual_label": "No",
+          "evidence_change": "both visual order and text premise differ",
+          "visual_consistent": false,
+          "text_consistent": false,
+          "single_variable": false,
+          "warning": "NOT a single-variable intervention pair"
+        }
+      ]
+    },
+    {
+      "family_id": "xc_ho_0029",
+      "ok": true,
+      "entities": {
+        "A": "emerald_oval",
+        "B": "amber_ring",
+        "C": "golden_disc"
+      },
+      "split": "train",
+      "samples": {
+        "entailed": {
+          "sample_id": "xc_ho_0029::entailed",
+          "prompt_sha256": "62522f983ca903cd04e46ea6ee2407194510d2ef838e8d98602ca0d56f8f801d",
+          "image_sha256": "99654fd1da98c1ed1b20a9aca727ee5fd04d65fcc71b31b8fb4d26de882cfdfb",
+          "entities": {
+            "A": "emerald_oval",
+            "B": "amber_ring",
+            "C": "golden_disc"
+          },
+          "ground_truth_label": "Yes",
+          "premises": [
+            {
+              "subject": "emerald_oval",
+              "object": "amber_ring",
+              "modality": "visual"
+            },
+            {
+              "subject": "amber_ring",
+              "object": "golden_disc",
+              "modality": "textual"
+            }
+          ]
+        },
+        "underdetermined": {
+          "sample_id": "xc_ho_0029::underdetermined",
+          "prompt_sha256": "d49cffaaf7657701e1b146b3b59097ffddf053d94e354ac41521c231dd8f2a6b",
+          "image_sha256": "452883b05389ea9ae1e8088794d572616390055fa3d608047be385763eb980e4",
+          "entities": {
+            "A": "emerald_oval",
+            "B": "amber_ring",
+            "C": "golden_disc"
+          },
+          "ground_truth_label": "Undetermined",
+          "premises": [
+            {
+              "subject": "emerald_oval",
+              "object": "amber_ring",
+              "modality": "visual"
+            },
+            {
+              "subject": "golden_disc",
+              "object": "amber_ring",
+              "modality": "textual"
+            }
+          ]
+        },
+        "contradicted": {
+          "sample_id": "xc_ho_0029::contradicted",
+          "prompt_sha256": "27e4707d5888cc3e7aaa92894aedbca692a6ba457acfea04b7c86773f88c5f8b",
+          "image_sha256": "b836e2c9b6bb434582c02fbd9821d31723dcdd13a15d70c4c297a680ef89af85",
+          "entities": {
+            "A": "emerald_oval",
+            "B": "amber_ring",
+            "C": "golden_disc"
+          },
+          "ground_truth_label": "No",
+          "premises": [
+            {
+              "subject": "amber_ring",
+              "object": "emerald_oval",
+              "modality": "visual"
+            },
+            {
+              "subject": "golden_disc",
+              "object": "amber_ring",
+              "modality": "textual"
+            }
+          ]
+        }
+      },
+      "pairs": [
+        {
+          "pair_id": "xc_ho_0029:contradicted_vs_underdetermined",
+          "pair_type": "same_text_changed_image",
+          "clean_sample_id": "xc_ho_0029::contradicted",
+          "counterfactual_sample_id": "xc_ho_0029::underdetermined",
+          "clean_label": "No",
+          "counterfactual_label": "Undetermined",
+          "evidence_change": "visual left/right order of A,B flipped",
+          "visual_consistent": false,
+          "text_consistent": true,
+          "single_variable": true
+        },
+        {
+          "pair_id": "xc_ho_0029:entailed_vs_contradicted",
+          "pair_type": "multi_factor",
+          "clean_sample_id": "xc_ho_0029::entailed",
+          "counterfactual_sample_id": "xc_ho_0029::contradicted",
+          "clean_label": "Yes",
+          "counterfactual_label": "No",
+          "evidence_change": "both visual order and text premise differ",
+          "visual_consistent": false,
+          "text_consistent": false,
+          "single_variable": false,
+          "warning": "NOT a single-variable intervention pair"
+        }
+      ]
+    },
+    {
+      "family_id": "xc_ho_0032",
+      "ok": true,
+      "entities": {
+        "A": "emerald_oval",
+        "B": "violet_star",
+        "C": "golden_disc"
+      },
+      "split": "train",
+      "samples": {
+        "entailed": {
+          "sample_id": "xc_ho_0032::entailed",
+          "prompt_sha256": "e12b80718cb6fcdc1458dbc2568a3f9cedc1a0ed03f52ba4821e99efbe31f2b1",
+          "image_sha256": "183164be690c848de3940bc40c3cae4bca50443dce676afc360426790590e766",
+          "entities": {
+            "A": "emerald_oval",
+            "B": "violet_star",
+            "C": "golden_disc"
+          },
+          "ground_truth_label": "Yes",
+          "premises": [
+            {
+              "subject": "emerald_oval",
+              "object": "violet_star",
+              "modality": "visual"
+            },
+            {
+              "subject": "violet_star",
+              "object": "golden_disc",
+              "modality": "textual"
+            }
+          ]
+        },
+        "underdetermined": {
+          "sample_id": "xc_ho_0032::underdetermined",
+          "prompt_sha256": "e358f7c5f0235d0124af59006bcafb4912dd4bda9dce8560f73e9444ed142564",
+          "image_sha256": "91c461d032f27a7210bfce2bb0691f11177a6bb967fa064053ecdc430625d9a8",
+          "entities": {
+            "A": "emerald_oval",
+            "B": "violet_star",
+            "C": "golden_disc"
+          },
+          "ground_truth_label": "Undetermined",
+          "premises": [
+            {
+              "subject": "emerald_oval",
+              "object": "violet_star",
+              "modality": "visual"
+            },
+            {
+              "subject": "golden_disc",
+              "object": "violet_star",
+              "modality": "textual"
+            }
+          ]
+        },
+        "contradicted": {
+          "sample_id": "xc_ho_0032::contradicted",
+          "prompt_sha256": "571fd66d64c7d52e63fc2ed6be6eb8dc3fc4d1b914c551405037daefb04536d1",
+          "image_sha256": "5c4655b62a38ac2c9ac8a41855563df4fe4c807594dbd921c201dc139397e718",
+          "entities": {
+            "A": "emerald_oval",
+            "B": "violet_star",
+            "C": "golden_disc"
+          },
+          "ground_truth_label": "No",
+          "premises": [
+            {
+              "subject": "violet_star",
+              "object": "emerald_oval",
+              "modality": "visual"
+            },
+            {
+              "subject": "golden_disc",
+              "object": "violet_star",
+              "modality": "textual"
+            }
+          ]
+        }
+      },
+      "pairs": [
+        {
+          "pair_id": "xc_ho_0032:contradicted_vs_underdetermined",
+          "pair_type": "same_text_changed_image",
+          "clean_sample_id": "xc_ho_0032::contradicted",
+          "counterfactual_sample_id": "xc_ho_0032::underdetermined",
+          "clean_label": "No",
+          "counterfactual_label": "Undetermined",
+          "evidence_change": "visual left/right order of A,B flipped",
+          "visual_consistent": false,
+          "text_consistent": true,
+          "single_variable": true
+        },
+        {
+          "pair_id": "xc_ho_0032:entailed_vs_contradicted",
+          "pair_type": "multi_factor",
+          "clean_sample_id": "xc_ho_0032::entailed",
+          "counterfactual_sample_id": "xc_ho_0032::contradicted",
+          "clean_label": "Yes",
+          "counterfactual_label": "No",
+          "evidence_change": "both visual order and text premise differ",
+          "visual_consistent": false,
+          "text_consistent": false,
+          "single_variable": false,
+          "warning": "NOT a single-variable intervention pair"
+        }
+      ]
+    },
+    {
+      "family_id": "xc_ho_0033",
+      "ok": true,
+      "entities": {
+        "A": "teal_wedge",
+        "B": "silver_hexagon",
+        "C": "amber_ring"
+      },
+      "split": "train",
+      "samples": {
+        "entailed": {
+          "sample_id": "xc_ho_0033::entailed",
+          "prompt_sha256": "b6df161998c13a04a9d40f4ce055b0bd66b5a57071839cfcfcb75316a43ce89b",
+          "image_sha256": "d0b3570f6229ecb784c6ad8b8559d6e42f5f3f459e7c8ec22d3581771dde7a1d",
+          "entities": {
+            "A": "teal_wedge",
+            "B": "silver_hexagon",
+            "C": "amber_ring"
+          },
+          "ground_truth_label": "Yes",
+          "premises": [
+            {
+              "subject": "teal_wedge",
+              "object": "silver_hexagon",
+              "modality": "visual"
+            },
+            {
+              "subject": "silver_hexagon",
+              "object": "amber_ring",
+              "modality": "textual"
+            }
+          ]
+        },
+        "underdetermined": {
+          "sample_id": "xc_ho_0033::underdetermined",
+          "prompt_sha256": "15ebefe59fe7a0196e43e35e9ecd21a67d1c69735422c0aecb4edb5a9fc10568",
+          "image_sha256": "c875d0d89466f90a3417d58ac6096559cb964784163009599c2a35020b7dbd73",
+          "entities": {
+            "A": "teal_wedge",
+            "B": "silver_hexagon",
+            "C": "amber_ring"
+          },
+          "ground_truth_label": "Undetermined",
+          "premises": [
+            {
+              "subject": "teal_wedge",
+              "object": "silver_hexagon",
+              "modality": "visual"
+            },
+            {
+              "subject": "amber_ring",
+              "object": "silver_hexagon",
+              "modality": "textual"
+            }
+          ]
+        },
+        "contradicted": {
+          "sample_id": "xc_ho_0033::contradicted",
+          "prompt_sha256": "17eadac8859320ba874a5cd39fc8e0e412df325d89f3b914dcc2786e28386181",
+          "image_sha256": "7d4323db2144694238ae123e0d0d2349dccde02e20cc69a9e70236a9e38c3567",
+          "entities": {
+            "A": "teal_wedge",
+            "B": "silver_hexagon",
+            "C": "amber_ring"
+          },
+          "ground_truth_label": "No",
+          "premises": [
+            {
+              "subject": "silver_hexagon",
+              "object": "teal_wedge",
+              "modality": "visual"
+            },
+            {
+              "subject": "amber_ring",
+              "object": "silver_hexagon",
+              "modality": "textual"
+            }
+          ]
+        }
+      },
+      "pairs": [
+        {
+          "pair_id": "xc_ho_0033:contradicted_vs_underdetermined",
+          "pair_type": "same_text_changed_image",
+          "clean_sample_id": "xc_ho_0033::contradicted",
+          "counterfactual_sample_id": "xc_ho_0033::underdetermined",
+          "clean_label": "No",
+          "counterfactual_label": "Undetermined",
+          "evidence_change": "visual left/right order of A,B flipped",
+          "visual_consistent": false,
+          "text_consistent": true,
+          "single_variable": true
+        },
+        {
+          "pair_id": "xc_ho_0033:entailed_vs_contradicted",
+          "pair_type": "multi_factor",
+          "clean_sample_id": "xc_ho_0033::entailed",
+          "counterfactual_sample_id": "xc_ho_0033::contradicted",
+          "clean_label": "Yes",
+          "counterfactual_label": "No",
+          "evidence_change": "both visual order and text premise differ",
+          "visual_consistent": false,
+          "text_consistent": false,
+          "single_variable": false,
+          "warning": "NOT a single-variable intervention pair"
+        }
+      ]
+    },
+    {
+      "family_id": "xc_ho_0040",
+      "ok": true,
+      "entities": {
+        "A": "indigo_capsule",
+        "B": "emerald_oval",
+        "C": "violet_star"
+      },
+      "split": "train",
+      "samples": {
+        "entailed": {
+          "sample_id": "xc_ho_0040::entailed",
+          "prompt_sha256": "edfda26433dc2711121195f3a134a68e52ae5588ba75b83f83297e5918626599",
+          "image_sha256": "47e0c47dfe331b1de821f900d085d9c72b35df12f40b04ef48c83e073f5eb76f",
+          "entities": {
+            "A": "indigo_capsule",
+            "B": "emerald_oval",
+            "C": "violet_star"
+          },
+          "ground_truth_label": "Yes",
+          "premises": [
+            {
+              "subject": "indigo_capsule",
+              "object": "emerald_oval",
+              "modality": "visual"
+            },
+            {
+              "subject": "emerald_oval",
+              "object": "violet_star",
+              "modality": "textual"
+            }
+          ]
+        },
+        "underdetermined": {
+          "sample_id": "xc_ho_0040::underdetermined",
+          "prompt_sha256": "9ae9b217b94b73c4e4d9b02c384d3c154a82ded308d687f36d283b758dca422c",
+          "image_sha256": "2918a11afab01619667597033625dc56dd81aaa5f3a04fdfc0505e753715b4f0",
+          "entities": {
+            "A": "indigo_capsule",
+            "B": "emerald_oval",
+            "C": "violet_star"
+          },
+          "ground_truth_label": "Undetermined",
+          "premises": [
+            {
+              "subject": "indigo_capsule",
+              "object": "emerald_oval",
+              "modality": "visual"
+            },
+            {
+              "subject": "violet_star",
+              "object": "emerald_oval",
+              "modality": "textual"
+            }
+          ]
+        },
+        "contradicted": {
+          "sample_id": "xc_ho_0040::contradicted",
+          "prompt_sha256": "75a04ce8fa0f89ba4ca7aec2aad1d85b6f41fe12b34e8d8c86c3bed2afb6be14",
+          "image_sha256": "6d5868131b152467f14c4930e3c92a7f722c8b450c701eecc327d1a6940755ad",
+          "entities": {
+            "A": "indigo_capsule",
+            "B": "emerald_oval",
+            "C": "violet_star"
+          },
+          "ground_truth_label": "No",
+          "premises": [
+            {
+              "subject": "emerald_oval",
+              "object": "indigo_capsule",
+              "modality": "visual"
+            },
+            {
+              "subject": "violet_star",
+              "object": "emerald_oval",
+              "modality": "textual"
+            }
+          ]
+        }
+      },
+      "pairs": [
+        {
+          "pair_id": "xc_ho_0040:contradicted_vs_underdetermined",
+          "pair_type": "same_text_changed_image",
+          "clean_sample_id": "xc_ho_0040::contradicted",
+          "counterfactual_sample_id": "xc_ho_0040::underdetermined",
+          "clean_label": "No",
+          "counterfactual_label": "Undetermined",
+          "evidence_change": "visual left/right order of A,B flipped",
+          "visual_consistent": false,
+          "text_consistent": true,
+          "single_variable": true
+        },
+        {
+          "pair_id": "xc_ho_0040:entailed_vs_contradicted",
+          "pair_type": "multi_factor",
+          "clean_sample_id": "xc_ho_0040::entailed",
+          "counterfactual_sample_id": "xc_ho_0040::contradicted",
+          "clean_label": "Yes",
+          "counterfactual_label": "No",
+          "evidence_change": "both visual order and text premise differ",
+          "visual_consistent": false,
+          "text_consistent": false,
+          "single_variable": false,
+          "warning": "NOT a single-variable intervention pair"
+        }
+      ]
+    },
+    {
+      "family_id": "xc_id_0191",
+      "ok": true,
+      "entities": {
+        "A": "green_cylinder",
+        "B": "yellow_cone",
+        "C": "magenta_prism"
+      },
+      "split": "train",
+      "samples": {
+        "entailed": {
+          "sample_id": "xc_id_0191::entailed",
+          "prompt_sha256": "e1aa514fc7e0b44c519bc161a294309fe21cde37cca7e7d1e9bf893ca9f40cb5",
+          "image_sha256": "072cbbc874506e3b12183e01f60f17eb8bfb2a6eb4140ccbf9c9c1f44450cc19",
+          "entities": {
+            "A": "green_cylinder",
+            "B": "yellow_cone",
+            "C": "magenta_prism"
+          },
+          "ground_truth_label": "Yes",
+          "premises": [
+            {
+              "subject": "green_cylinder",
+              "object": "yellow_cone",
+              "modality": "visual"
+            },
+            {
+              "subject": "yellow_cone",
+              "object": "magenta_prism",
+              "modality": "textual"
+            }
+          ]
+        },
+        "underdetermined": {
+          "sample_id": "xc_id_0191::underdetermined",
+          "prompt_sha256": "29100a8f1434b2cf1098d11e987945df7a47f305ad458a71b71aac126083c5d0",
+          "image_sha256": "fee997e65282a5bf6d3625dfa63f84ce666e05b862a23873dacb2ea4277f3598",
+          "entities": {
+            "A": "green_cylinder",
+            "B": "yellow_cone",
+            "C": "magenta_prism"
+          },
+          "ground_truth_label": "Undetermined",
+          "premises": [
+            {
+              "subject": "green_cylinder",
+              "object": "yellow_cone",
+              "modality": "visual"
+            },
+            {
+              "subject": "magenta_prism",
+              "object": "yellow_cone",
+              "modality": "textual"
+            }
+          ]
+        },
+        "contradicted": {
+          "sample_id": "xc_id_0191::contradicted",
+          "prompt_sha256": "7e3b8757d89b87d7a02cbde5ebff952de8529ce697cd9ca41b2dbb88e9243c38",
+          "image_sha256": "27dadff913943839f0c1f0a017c9bae03abdd4428efa1b0aabc3603a3cc7c517",
+          "entities": {
+            "A": "green_cylinder",
+            "B": "yellow_cone",
+            "C": "magenta_prism"
+          },
+          "ground_truth_label": "No",
+          "premises": [
+            {
+              "subject": "yellow_cone",
+              "object": "green_cylinder",
+              "modality": "visual"
+            },
+            {
+              "subject": "magenta_prism",
+              "object": "yellow_cone",
+              "modality": "textual"
+            }
+          ]
+        }
+      },
+      "pairs": [
+        {
+          "pair_id": "xc_id_0191:contradicted_vs_underdetermined",
+          "pair_type": "same_text_changed_image",
+          "clean_sample_id": "xc_id_0191::contradicted",
+          "counterfactual_sample_id": "xc_id_0191::underdetermined",
+          "clean_label": "No",
+          "counterfactual_label": "Undetermined",
+          "evidence_change": "visual left/right order of A,B flipped",
+          "visual_consistent": false,
+          "text_consistent": true,
+          "single_variable": true
+        },
+        {
+          "pair_id": "xc_id_0191:entailed_vs_contradicted",
+          "pair_type": "multi_factor",
+          "clean_sample_id": "xc_id_0191::entailed",
+          "counterfactual_sample_id": "xc_id_0191::contradicted",
+          "clean_label": "Yes",
+          "counterfactual_label": "No",
+          "evidence_change": "both visual order and text premise differ",
+          "visual_consistent": false,
+          "text_consistent": false,
+          "single_variable": false,
+          "warning": "NOT a single-variable intervention pair"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Only development families; final holdout sealed.",
+    "Multi-factor pairs excluded from single-variable causal claims.",
+    "Token alignment: same image \u21d2 same visual token count; text length may differ \u2014 patch last token only after independent forward alignment check at execution time."
+  ]
+}
