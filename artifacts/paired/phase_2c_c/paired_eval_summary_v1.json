@@ -1,0 +1,345 @@
+{
+  "phase": "2C-C",
+  "manifest": "configs/phase_2c_c/paired_eval_manifest_v1.json",
+  "n_smolvlm2": 18,
+  "n_qwen3vl2": 18,
+  "n_paired": 18,
+  "smolvlm2_metrics": {
+    "n": 18,
+    "support": {
+      "Yes": 6,
+      "No": 6,
+      "Undetermined": 6
+    },
+    "per_class_recall": {
+      "Yes": 0.6666666666666666,
+      "No": 0.6666666666666666,
+      "Undetermined": 0.0
+    },
+    "per_class_precision": {
+      "Yes": 0.4,
+      "No": 0.5,
+      "Undetermined": 0.0
+    },
+    "per_class_f1": {
+      "Yes": 0.5,
+      "No": 0.5714285714285715,
+      "Undetermined": 0.0
+    },
+    "balanced_accuracy": 0.444444,
+    "macro_f1": 0.357143,
+    "underdetermined_n": 6,
+    "underdetermined_abstention": 0.0,
+    "unsupported_definite_rate": 1.0,
+    "mean_latency_sec": 20.8062,
+    "max_memory_torch_alloc": 1839.991,
+    "max_nvidia_smi": 3873.0
+  },
+  "qwen3vl2_metrics": {
+    "n": 18,
+    "support": {
+      "Yes": 6,
+      "No": 6,
+      "Undetermined": 6
+    },
+    "per_class_recall": {
+      "Yes": 0.6666666666666666,
+      "No": 1.0,
+      "Undetermined": 0.0
+    },
+    "per_class_precision": {
+      "Yes": 0.8,
+      "No": 0.46153846153846156,
+      "Undetermined": 0.0
+    },
+    "per_class_f1": {
+      "Yes": 0.7272727272727272,
+      "No": 0.631578947368421,
+      "Undetermined": 0.0
+    },
+    "balanced_accuracy": 0.555556,
+    "macro_f1": 0.452951,
+    "underdetermined_n": 6,
+    "underdetermined_abstention": 0.0,
+    "unsupported_definite_rate": 1.0,
+    "mean_latency_sec": 0.4253,
+    "max_memory_torch_alloc": 2527.408,
+    "max_nvidia_smi": 3092.0
+  },
+  "paired_comparison": {
+    "both_correct": 7,
+    "both_incorrect": 7,
+    "only_smol_correct": 1,
+    "only_qwen_correct": 3,
+    "shared_undetermined_failure": 6,
+    "disagreement": 7
+  },
+  "paired_examples": {
+    "both_correct": [
+      {
+        "sample_id": "xc_ho_0017::contradicted",
+        "family_id": "xc_ho_0017",
+        "variant_id": "contradicted",
+        "gt": "No",
+        "smol_pred": "No",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0019::entailed",
+        "family_id": "xc_ho_0019",
+        "variant_id": "entailed",
+        "gt": "Yes",
+        "smol_pred": "Yes",
+        "qwen_pred": "Yes"
+      },
+      {
+        "sample_id": "xc_ho_0020::entailed",
+        "family_id": "xc_ho_0020",
+        "variant_id": "entailed",
+        "gt": "Yes",
+        "smol_pred": "Yes",
+        "qwen_pred": "Yes"
+      },
+      {
+        "sample_id": "xc_ho_0021::contradicted",
+        "family_id": "xc_ho_0021",
+        "variant_id": "contradicted",
+        "gt": "No",
+        "smol_pred": "No",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0021::entailed",
+        "family_id": "xc_ho_0021",
+        "variant_id": "entailed",
+        "gt": "Yes",
+        "smol_pred": "Yes",
+        "qwen_pred": "Yes"
+      },
+      {
+        "sample_id": "xc_ho_0022::contradicted",
+        "family_id": "xc_ho_0022",
+        "variant_id": "contradicted",
+        "gt": "No",
+        "smol_pred": "No",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0023::contradicted",
+        "family_id": "xc_ho_0023",
+        "variant_id": "contradicted",
+        "gt": "No",
+        "smol_pred": "No",
+        "qwen_pred": "No"
+      }
+    ],
+    "both_incorrect": [
+      {
+        "sample_id": "xc_ho_0017::underdetermined",
+        "family_id": "xc_ho_0017",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "No",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0019::underdetermined",
+        "family_id": "xc_ho_0019",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0020::underdetermined",
+        "family_id": "xc_ho_0020",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0021::underdetermined",
+        "family_id": "xc_ho_0021",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "Yes",
+        "qwen_pred": "Yes"
+      },
+      {
+        "sample_id": "xc_ho_0022::entailed",
+        "family_id": "xc_ho_0022",
+        "variant_id": "entailed",
+        "gt": "Yes",
+        "smol_pred": "No",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0022::underdetermined",
+        "family_id": "xc_ho_0022",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "No",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0023::underdetermined",
+        "family_id": "xc_ho_0023",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      }
+    ],
+    "only_smol_correct": [
+      {
+        "sample_id": "xc_ho_0023::entailed",
+        "family_id": "xc_ho_0023",
+        "variant_id": "entailed",
+        "gt": "Yes",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      }
+    ],
+    "only_qwen_correct": [
+      {
+        "sample_id": "xc_ho_0017::entailed",
+        "family_id": "xc_ho_0017",
+        "variant_id": "entailed",
+        "gt": "Yes",
+        "smol_pred": "No",
+        "qwen_pred": "Yes"
+      },
+      {
+        "sample_id": "xc_ho_0019::contradicted",
+        "family_id": "xc_ho_0019",
+        "variant_id": "contradicted",
+        "gt": "No",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0020::contradicted",
+        "family_id": "xc_ho_0020",
+        "variant_id": "contradicted",
+        "gt": "No",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      }
+    ],
+    "shared_undetermined_failure": [
+      {
+        "sample_id": "xc_ho_0017::underdetermined",
+        "family_id": "xc_ho_0017",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "No",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0019::underdetermined",
+        "family_id": "xc_ho_0019",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0020::underdetermined",
+        "family_id": "xc_ho_0020",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0021::underdetermined",
+        "family_id": "xc_ho_0021",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "Yes",
+        "qwen_pred": "Yes"
+      },
+      {
+        "sample_id": "xc_ho_0022::underdetermined",
+        "family_id": "xc_ho_0022",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "No",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0023::underdetermined",
+        "family_id": "xc_ho_0023",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      }
+    ],
+    "disagreement": [
+      {
+        "sample_id": "xc_ho_0017::entailed",
+        "family_id": "xc_ho_0017",
+        "variant_id": "entailed",
+        "gt": "Yes",
+        "smol_pred": "No",
+        "qwen_pred": "Yes"
+      },
+      {
+        "sample_id": "xc_ho_0019::contradicted",
+        "family_id": "xc_ho_0019",
+        "variant_id": "contradicted",
+        "gt": "No",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0019::underdetermined",
+        "family_id": "xc_ho_0019",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0020::contradicted",
+        "family_id": "xc_ho_0020",
+        "variant_id": "contradicted",
+        "gt": "No",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0020::underdetermined",
+        "family_id": "xc_ho_0020",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0023::entailed",
+        "family_id": "xc_ho_0023",
+        "variant_id": "entailed",
+        "gt": "Yes",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      },
+      {
+        "sample_id": "xc_ho_0023::underdetermined",
+        "family_id": "xc_ho_0023",
+        "variant_id": "underdetermined",
+        "gt": "Undetermined",
+        "smol_pred": "Yes",
+        "qwen_pred": "No"
+      }
+    ]
+  },
+  "final_holdout_touched": false,
+  "notes": [
+    "Behavioral only; not mechanistic.",
+    "Different architectures; logits not cross-calibrated.",
+    "Small pilot; family is independent unit."
+  ]
+}

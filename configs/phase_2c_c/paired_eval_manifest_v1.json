@@ -1,0 +1,433 @@
+{
+  "schema_version": "phase_2c_c_manifest_v1",
+  "n_families": 6,
+  "n_cases": 18,
+  "n_evaluations_planned": 36,
+  "models": {
+    "smolvlm2": {
+      "model_id": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+      "revision": "482adb537c021c86670beed01cd58990d01e72e4"
+    },
+    "qwen3vl2": {
+      "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+      "revision": "89644892e4d85e24eaac8bacfd4f463576704203"
+    }
+  },
+  "final_holdout_touched": false,
+  "families": [
+    {
+      "family_id": "xc_ho_0017",
+      "split": "train",
+      "development_exposed": false,
+      "holdout": false,
+      "cases": [
+        {
+          "sample_id": "xc_ho_0017::entailed",
+          "variant_id": "entailed",
+          "ground_truth_label": "Yes",
+          "symbolic_status": "entailed",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0017__entailed.png",
+          "image_sha256": "45533320a593710201de070a8a4709c3aa6c9655a7f89ba0cb3cb8a811b3ff50",
+          "prompt": "The emerald oval is to the right of the silver hexagon.\n\nQuestion: Based on the image and statement, Is indigo capsule to the left of emerald oval?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "4e0cb04a14bed114b8e1808e062c7cd9858e852829127140880c8e2c68f4cae9",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "entailed",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        },
+        {
+          "sample_id": "xc_ho_0017::contradicted",
+          "variant_id": "contradicted",
+          "ground_truth_label": "No",
+          "symbolic_status": "contradicted",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0017__contradicted.png",
+          "image_sha256": "5221a50b9fc15618a0ba775fda3b38c3457b1032fbdc1b87012062643cb40c0c",
+          "prompt": "Notice that the emerald oval appears left of the silver hexagon.\n\nQuestion: Based on the image and statement, Is indigo capsule to the left of emerald oval?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "9f4a516ef02ab5ca4e81be375cafd3f14fc02ab01c69cd2492ffb7143e9fa713",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "contradicted",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        },
+        {
+          "sample_id": "xc_ho_0017::underdetermined",
+          "variant_id": "underdetermined",
+          "ground_truth_label": "Undetermined",
+          "symbolic_status": "underdetermined",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0017__underdetermined.png",
+          "image_sha256": "7433ea204943665654b5ee162261661114a0c6ec8508302101bb1787591e1950",
+          "prompt": "Spatially, emerald oval is left of silver hexagon.\n\nQuestion: Based on the image and statement, Is indigo capsule to the left of emerald oval?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "b325c2377aa60a9797fe6de61de1b414cd6403218dbf175bea271992afcff3f2",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "underdetermined",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "xc_ho_0019",
+      "split": "train",
+      "development_exposed": false,
+      "holdout": false,
+      "cases": [
+        {
+          "sample_id": "xc_ho_0019::entailed",
+          "variant_id": "entailed",
+          "ground_truth_label": "Yes",
+          "symbolic_status": "entailed",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0019__entailed.png",
+          "image_sha256": "196d2ff684b549465c2ed1f6104c549dafc9e4adbc9b492d7f0c2d1ccd74befa",
+          "prompt": "The amber ring is to the left of the emerald oval.\n\nQuestion: Based on the image and statement, Is the teal wedge left of the emerald oval?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "6d6e4d782eb693010e38d7ee9de42f77547312f2a8fe375800289490cf941e72",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "entailed",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        },
+        {
+          "sample_id": "xc_ho_0019::contradicted",
+          "variant_id": "contradicted",
+          "ground_truth_label": "No",
+          "symbolic_status": "contradicted",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0019__contradicted.png",
+          "image_sha256": "3dda02fd9cd2839628218cd4c61622867a8940dddc4c1216ca047a5e2a6b1383",
+          "prompt": "The amber ring is to the right of the emerald oval.\n\nQuestion: Based on the image and statement, Is the teal wedge left of the emerald oval?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "baab4f68cc814cde88e96cb8f1ae3faf10af9c890f4ab7abbe27f7fe0b109d78",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "contradicted",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        },
+        {
+          "sample_id": "xc_ho_0019::underdetermined",
+          "variant_id": "underdetermined",
+          "ground_truth_label": "Undetermined",
+          "symbolic_status": "underdetermined",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0019__underdetermined.png",
+          "image_sha256": "75d3854b93e5d3e9be50f6ed9b0075f8db52c3cd572074326f08532da19058a5",
+          "prompt": "Notice that the emerald oval appears left of the amber ring.\n\nQuestion: Based on the image and statement, Is the teal wedge left of the emerald oval?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "2bee0ac10c56497a7a0c6c9e84bcc13f6b1b6c2e3cd43b74ceffe84bf66870c6",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "underdetermined",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "xc_ho_0020",
+      "split": "train",
+      "development_exposed": false,
+      "holdout": false,
+      "cases": [
+        {
+          "sample_id": "xc_ho_0020::entailed",
+          "variant_id": "entailed",
+          "ground_truth_label": "Yes",
+          "symbolic_status": "entailed",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0020__entailed.png",
+          "image_sha256": "80c3e50863b2a98c5cad29231ff7613ff69c6e4cddfd2a9b5571f2d55c63dc6b",
+          "prompt": "The emerald oval is to the left of the golden disc.\n\nQuestion: Based on the image and statement, Is the crimson block left of the golden disc?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "b6a4b5c1d92cfa2f61594ae7858f3e32b99d1d8036e7c7adb5ad5c3cff6b759c",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "entailed",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        },
+        {
+          "sample_id": "xc_ho_0020::contradicted",
+          "variant_id": "contradicted",
+          "ground_truth_label": "No",
+          "symbolic_status": "contradicted",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0020__contradicted.png",
+          "image_sha256": "f6d57b473bf79195707320afc0e31f2377720267168ed3458539f5082550ab5d",
+          "prompt": "The emerald oval is to the right of the golden disc.\n\nQuestion: Based on the image and statement, Is the crimson block left of the golden disc?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "7d131aa2cd0440288496e91b259c604fade13b213965e91b5e23a30665b26f50",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "contradicted",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        },
+        {
+          "sample_id": "xc_ho_0020::underdetermined",
+          "variant_id": "underdetermined",
+          "ground_truth_label": "Undetermined",
+          "symbolic_status": "underdetermined",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0020__underdetermined.png",
+          "image_sha256": "9928f2f5fd59f51596706aa773547f33d0d08f9eac910f5c5c9e83818aa6f669",
+          "prompt": "Notice that the golden disc appears left of the emerald oval.\n\nQuestion: Based on the image and statement, Is the crimson block left of the golden disc?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "399f5d75da9a3464d88a61cb64cb8fc3b01f31585fd6eb153e9ffc9a9ad21a61",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "underdetermined",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "xc_ho_0021",
+      "split": "train",
+      "development_exposed": false,
+      "holdout": false,
+      "cases": [
+        {
+          "sample_id": "xc_ho_0021::entailed",
+          "variant_id": "entailed",
+          "ground_truth_label": "Yes",
+          "symbolic_status": "entailed",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0021__entailed.png",
+          "image_sha256": "08198824b77f9037bfa5ccb085c9697a489eb081aed9d868ee4a4dc3754f5704",
+          "prompt": "Spatially, indigo capsule is left of teal wedge.\n\nQuestion: Based on the image and statement, Is silver hexagon to the left of teal wedge?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "d6ab19f7bd525a980da365352c59a36246e7e4d3f5875579a619ea94f54626eb",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "entailed",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        },
+        {
+          "sample_id": "xc_ho_0021::contradicted",
+          "variant_id": "contradicted",
+          "ground_truth_label": "No",
+          "symbolic_status": "contradicted",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0021__contradicted.png",
+          "image_sha256": "b6fd84b64e8d001893aa4f0e8e2bf179c9a676dc6aa7acfce8f9562824b9bc71",
+          "prompt": "The teal wedge is to the left of the indigo capsule.\n\nQuestion: Based on the image and statement, Is silver hexagon to the left of teal wedge?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "2e794b9b9db1ebf4fc9a791f0fb0845f68e59484788dc4d59cc93349b0018f0e",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "contradicted",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        },
+        {
+          "sample_id": "xc_ho_0021::underdetermined",
+          "variant_id": "underdetermined",
+          "ground_truth_label": "Undetermined",
+          "symbolic_status": "underdetermined",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0021__underdetermined.png",
+          "image_sha256": "5def8b71ff5aeb51b04a6a0040e1b5b90ef74e75e153681f1f1791f74c9e11eb",
+          "prompt": "The indigo capsule is to the right of the teal wedge.\n\nQuestion: Based on the image and statement, Is silver hexagon to the left of teal wedge?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "5490c0d17b3ea815680a83b570eb92d89d274e4101270b6e29c68d4dc4e49307",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "underdetermined",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "xc_ho_0022",
+      "split": "train",
+      "development_exposed": false,
+      "holdout": false,
+      "cases": [
+        {
+          "sample_id": "xc_ho_0022::entailed",
+          "variant_id": "entailed",
+          "ground_truth_label": "Yes",
+          "symbolic_status": "entailed",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0022__entailed.png",
+          "image_sha256": "31c46aeaba6b38b3eeea169b988cb884ae865b79ce9e788f1a6a61b7253ffbf5",
+          "prompt": "The crimson block is to the left of the teal wedge.\n\nQuestion: Based on the image and statement, Is the indigo capsule left of the teal wedge?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "3f94ea9cbe4730a966928ce93de239aa4dc6ed1df800bc2e75e526b8d4671084",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "entailed",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        },
+        {
+          "sample_id": "xc_ho_0022::contradicted",
+          "variant_id": "contradicted",
+          "ground_truth_label": "No",
+          "symbolic_status": "contradicted",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0022__contradicted.png",
+          "image_sha256": "113477d664ffdd1b16e21fbce5aef91840db22227fecf12d7f96f12c45ef069b",
+          "prompt": "The crimson block is to the right of the teal wedge.\n\nQuestion: Based on the image and statement, Is the indigo capsule left of the teal wedge?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "ff5397fd6fcc3c04a2a8e68f607a0463b7ae0d45207f3b496a2e5da71bcc9306",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "contradicted",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        },
+        {
+          "sample_id": "xc_ho_0022::underdetermined",
+          "variant_id": "underdetermined",
+          "ground_truth_label": "Undetermined",
+          "symbolic_status": "underdetermined",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0022__underdetermined.png",
+          "image_sha256": "a824e357c275363b44760ea6b381f47471daca2397ed24c19cf8bd4fcfd46093",
+          "prompt": "Notice that the teal wedge appears left of the crimson block.\n\nQuestion: Based on the image and statement, Is the indigo capsule left of the teal wedge?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "b5fbd61ef4b65b57ef10f6233840059e454079f53140bdd0a5580800cdd84a02",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "underdetermined",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "xc_ho_0023",
+      "split": "train",
+      "development_exposed": false,
+      "holdout": false,
+      "cases": [
+        {
+          "sample_id": "xc_ho_0023::entailed",
+          "variant_id": "entailed",
+          "ground_truth_label": "Yes",
+          "symbolic_status": "entailed",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0023__entailed.png",
+          "image_sha256": "a429eeda1c1cff70ebd46e3160396edc41d4b60c4bf7dc28a55ab564ed39c877",
+          "prompt": "Notice that the silver hexagon appears left of the emerald oval.\n\nQuestion: Based on the image and statement, Is the violet star left of the emerald oval?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "1900743a1b0a339c0663dc89dbb24a7094affc82986f3a1b3e84482ed92c21ed",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "entailed",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        },
+        {
+          "sample_id": "xc_ho_0023::contradicted",
+          "variant_id": "contradicted",
+          "ground_truth_label": "No",
+          "symbolic_status": "contradicted",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0023__contradicted.png",
+          "image_sha256": "b5c9de3f1ffb9537e74f1a7b4fcdb7d2ab573b64eb34ca530cc97f3aeef7a441",
+          "prompt": "Spatially, emerald oval is left of silver hexagon.\n\nQuestion: Based on the image and statement, Is the violet star left of the emerald oval?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "c4c6e8bfabab2bff0462368da2a9f1bac50d559573eb2410436195c6981eae33",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "contradicted",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        },
+        {
+          "sample_id": "xc_ho_0023::underdetermined",
+          "variant_id": "underdetermined",
+          "ground_truth_label": "Undetermined",
+          "symbolic_status": "underdetermined",
+          "image_file": "datasets/cross_modal_contrast_v2/images/xc_ho_0023__underdetermined.png",
+          "image_sha256": "8e9c2e4f9c62f73fc65d2282f31ba9656e3353fd94efa90ae4f229d1e4ee4cbe",
+          "prompt": "The emerald oval is to the left of the silver hexagon.\n\nQuestion: Based on the image and statement, Is the violet star left of the emerald oval?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+          "prompt_sha256": "1bec8b9436b27059a0c3bee522e1ec0f4a79389e4fac96d25c13a922a7041841",
+          "condition_id": "CROSS_MODAL_TWO_PREMISE",
+          "modality_audit": {
+            "solver_status": "underdetermined",
+            "oracle_agreement": true,
+            "vis_only_status": "underdetermined",
+            "txt_only_status": "underdetermined",
+            "label_match": true,
+            "third_entity_hidden": true,
+            "single_modality_sufficient": false
+          }
+        }
+      ]
+    }
+  ],
+  "source_sha256": "cda6379bc841a4dad4bf839d59c6ca4b61d7d90d014be20a599f64bf30bad1d6",
+  "notes": [
+    "Development-only; all six families marked development_exposed where prior probe use occurred.",
+    "Identical image bytes and logical prompts for both models.",
+    "Model-specific chat templates only for serialization."
+  ]
+}
