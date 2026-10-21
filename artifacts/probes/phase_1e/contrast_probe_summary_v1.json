@@ -1,0 +1,238 @@
+{
+  "phase": "1E",
+  "run_id": "phase_1e_20261021T120154Z",
+  "n": 45,
+  "n_train": 36,
+  "n_val": 9,
+  "train_families": [
+    "xc_ho_0000",
+    "xc_ho_0001",
+    "xc_ho_0003",
+    "xc_ho_0005",
+    "xc_ho_0006",
+    "xc_ho_0007",
+    "xc_ho_0008",
+    "xc_ho_0009",
+    "xc_ho_0011",
+    "xc_ho_0013",
+    "xc_ho_0014",
+    "xc_ho_0015"
+  ],
+  "val_families": [
+    "xc_id_0189",
+    "xc_id_0190",
+    "xc_id_0191"
+  ],
+  "final_holdout_1c_touched": false,
+  "condition_id": "CROSS_MODAL_TWO_PREMISE",
+  "probe_multilayer": {
+    "n": 9,
+    "support": {
+      "Yes": 3,
+      "No": 3,
+      "Undetermined": 3
+    },
+    "per_class_recall": {
+      "Yes": 1.0,
+      "No": 0.6666666666666666,
+      "Undetermined": 0.3333333333333333
+    },
+    "per_class_precision": {
+      "Yes": 0.6,
+      "No": 0.6666666666666666,
+      "Undetermined": 1.0
+    },
+    "per_class_f1": {
+      "Yes": 0.7499999999999999,
+      "No": 0.6666666666666666,
+      "Undetermined": 0.5
+    },
+    "balanced_accuracy": 0.666667,
+    "macro_f1": 0.638889,
+    "confusion_matrix": {
+      "Yes": {
+        "Yes": 3,
+        "No": 0,
+        "Undetermined": 0
+      },
+      "No": {
+        "Yes": 1,
+        "No": 2,
+        "Undetermined": 0
+      },
+      "Undetermined": {
+        "Yes": 1,
+        "No": 1,
+        "Undetermined": 1
+      }
+    }
+  },
+  "baselines": {
+    "condition_only": {
+      "n": 9,
+      "support": {
+        "Yes": 3,
+        "No": 3,
+        "Undetermined": 3
+      },
+      "per_class_recall": {
+        "Yes": 1.0,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_precision": {
+        "Yes": 0.3333333333333333,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_f1": {
+        "Yes": 0.5,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.166667
+    },
+    "majority": {
+      "n": 9,
+      "support": {
+        "Yes": 3,
+        "No": 3,
+        "Undetermined": 3
+      },
+      "per_class_recall": {
+        "Yes": 1.0,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_precision": {
+        "Yes": 0.3333333333333333,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "per_class_f1": {
+        "Yes": 0.5,
+        "No": 0.0,
+        "Undetermined": 0.0
+      },
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.166667
+    }
+  },
+  "layerwise_last_token": {
+    "L3_last": {
+      "balanced_accuracy": 0.444444,
+      "macro_f1": 0.333333,
+      "per_class_recall": {
+        "Yes": 0.0,
+        "No": 1.0,
+        "Undetermined": 0.3333333333333333
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 0,
+          "No": 2,
+          "Undetermined": 1
+        },
+        "No": {
+          "Yes": 0,
+          "No": 3,
+          "Undetermined": 0
+        },
+        "Undetermined": {
+          "Yes": 0,
+          "No": 2,
+          "Undetermined": 1
+        }
+      }
+    },
+    "L12_last": {
+      "balanced_accuracy": 0.444444,
+      "macro_f1": 0.357143,
+      "per_class_recall": {
+        "Yes": 0.0,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.6666666666666666
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 0,
+          "No": 2,
+          "Undetermined": 1
+        },
+        "No": {
+          "Yes": 0,
+          "No": 2,
+          "Undetermined": 1
+        },
+        "Undetermined": {
+          "Yes": 0,
+          "No": 1,
+          "Undetermined": 2
+        }
+      }
+    },
+    "L18_last": {
+      "balanced_accuracy": 0.555556,
+      "macro_f1": 0.516667,
+      "per_class_recall": {
+        "Yes": 0.3333333333333333,
+        "No": 1.0,
+        "Undetermined": 0.3333333333333333
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 1,
+          "No": 1,
+          "Undetermined": 1
+        },
+        "No": {
+          "Yes": 0,
+          "No": 3,
+          "Undetermined": 0
+        },
+        "Undetermined": {
+          "Yes": 1,
+          "No": 1,
+          "Undetermined": 1
+        }
+      }
+    },
+    "L23_last": {
+      "balanced_accuracy": 0.555556,
+      "macro_f1": 0.516667,
+      "per_class_recall": {
+        "Yes": 0.3333333333333333,
+        "No": 1.0,
+        "Undetermined": 0.3333333333333333
+      },
+      "confusion_matrix": {
+        "Yes": {
+          "Yes": 1,
+          "No": 1,
+          "Undetermined": 1
+        },
+        "No": {
+          "Yes": 0,
+          "No": 3,
+          "Undetermined": 0
+        },
+        "Undetermined": {
+          "Yes": 1,
+          "No": 1,
+          "Undetermined": 1
+        }
+      }
+    }
+  },
+  "best_l2": 0.001,
+  "forwards_this_run": 45,
+  "peak_vram_mib_max": 3330.77978515625,
+  "mean_latency_sec": 24.487907866666664,
+  "scientific_notes": [
+    "Decodability is not causal usage.",
+    "Small development pilot; exploratory metrics only.",
+    "Single condition_id; labels balanced within family.",
+    "Not final holdout evaluation."
+  ]
+}

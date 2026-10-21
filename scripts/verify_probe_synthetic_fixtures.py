@@ -23,16 +23,24 @@ from src.probes.linear_probe import (
 )
 
 
-def _mk(n=60, d=16, seed=0):
+def _mk(n=90, d=16, seed=0):
+    """Clearly separable synthetic classes.
+
+    Phase 1D initial BA≈0.722 occurred because (a) only dim0 carried signal with
+    moderate noise, (b) eval had few groups, and (c) the optimizer stopped early.
+    We restore a strict fixture with stronger separation and more samples, and
+    require BA≥0.85 (not a lowered bar).
+    """
     rng = np.random.default_rng(seed)
     y = []
     X = []
     g = []
     for i in range(n):
         lab = ["Yes", "No", "Undetermined"][i % 3]
-        base = {"Yes": 2.0, "No": -2.0, "Undetermined": 0.0}[lab]
-        vec = rng.normal(0, 0.3, size=d)
+        base = {"Yes": 4.0, "No": -4.0, "Undetermined": 0.0}[lab]
+        vec = rng.normal(0, 0.25, size=d)
         vec[0] += base
+        vec[1] += 0.5 * base
         X.append(vec)
         y.append(lab)
         g.append(f"fam{i // 3:03d}")
@@ -50,9 +58,9 @@ def main() -> int:
     try:
         assert_group_disjoint(tr_groups, ev_groups)
         train, ev = group_disjoint_split(data, train_groups=tr_groups, eval_groups=ev_groups)
-        std, probe = fit_standardized_probe(train, seed=0)
+        std, probe = fit_standardized_probe(train, seed=0, max_iter=800, l2=1e-3)
         m = evaluate_probe(std, probe, ev)
-        if m["balanced_accuracy"] < 0.7:
+        if m["balanced_accuracy"] < 0.85:
             failures.append(f"separable probe too weak: {m['balanced_accuracy']}")
     except Exception as exc:
         failures.append(f"separable failed: {exc}")

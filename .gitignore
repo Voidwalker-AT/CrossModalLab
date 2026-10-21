@@ -259,6 +259,10 @@ datasets/cross_modal_dependency_v1/images/
 # Phase 1D feature arrays stay local (summaries tracked)
 artifacts/probes/phase_1d/features/
 
+# Phase 1E contrast images and features stay local
+datasets/cross_modal_contrast_v2/images/
+artifacts/probes/phase_1e/features/
+
 # Local contributor configuration and secrets
 .env
 .env.*

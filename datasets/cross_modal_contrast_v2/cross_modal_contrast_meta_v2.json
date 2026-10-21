@@ -1,0 +1,40 @@
+{
+  "schema_version": "cross_modal_contrast_v2",
+  "seed": 20261031,
+  "n_families": 240,
+  "n_records": 720,
+  "condition_id": "CROSS_MODAL_TWO_PREMISE",
+  "labels_per_family": [
+    "Yes",
+    "No",
+    "Undetermined"
+  ],
+  "label_counts": {
+    "Yes": 240,
+    "No": 240,
+    "Undetermined": 240
+  },
+  "condition_counts": {
+    "CROSS_MODAL_TWO_PREMISE": 720
+  },
+  "split_family_counts": {
+    "test": 36,
+    "train": 168,
+    "validation": 36
+  },
+  "condition_only_majority_label": "Yes",
+  "condition_only_balanced_accuracy": 0.3333333333333333,
+  "condition_label_correlated": false,
+  "family_split_ok": true,
+  "counterfactual_complete_families": true,
+  "third_entity_leak_count": 0,
+  "single_modality_sufficient_count": 0,
+  "notes": [
+    "New version; v1 preserved unchanged.",
+    "Single condition_id for all labels.",
+    "Condition-name baseline cannot exceed chance under class balance.",
+    "C never rendered on canvas for these premises.",
+    "Inconsistent graphs excluded from three-way task."
+  ],
+  "jsonl": "datasets/cross_modal_contrast_v2/cross_modal_contrast_v2.jsonl"
+}
