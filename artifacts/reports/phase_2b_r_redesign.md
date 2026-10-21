@@ -36,9 +36,16 @@
 ## 7. Tests
 | Command | Exit |
 |---|---|
-| ULVO unittest | **161 OK** |
-| System Python | **161 OK (10 skips)** |
+| ULVO unittest | **162 OK** |
+| System Python | **162 OK (11 skips)** |
+| `verify_scorer_equivalence.py` | **PASS** (max\|Δ\|=0 ref vs full vs hybrid) |
 | doctor / portability / compileall | **0** |
+
+### Stage 4 scorer equivalence (CPU fixture)
+Tiny deterministic model; reference `score_candidate_answers` vs `score_complete_candidates` vs `score_candidates_hybrid`:
+- max\|ref−full\| = 0
+- max\|ref−hybrid\| = 0  
+KV-cache reuse was **not** adopted (semantics risk); hybrid only avoids redundant work when safe by construction. Full scorer remains the scientific default.
 
 ## 8. Git
 See SHAs below (feature push + main integration). No force-push.
