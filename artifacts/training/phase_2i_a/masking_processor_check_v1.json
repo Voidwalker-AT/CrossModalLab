@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "sample_id": "yes",
+      "answer": " Yes",
+      "decoded": " Yes",
+      "n_answer_tokens": 1,
+      "n_supervised": 1,
+      "prompt_length": 157,
+      "supervised_match": true,
+      "labels_valid": true,
+      "parser_on_gold": "Yes"
+    },
+    {
+      "sample_id": "no",
+      "answer": " No",
+      "decoded": " No",
+      "n_answer_tokens": 1,
+      "n_supervised": 1,
+      "prompt_length": 157,
+      "supervised_match": true,
+      "labels_valid": true,
+      "parser_on_gold": "No"
+    },
+    {
+      "sample_id": "und",
+      "answer": " Undetermined",
+      "decoded": " Undetermined",
+      "n_answer_tokens": 2,
+      "n_supervised": 2,
+      "prompt_length": 157,
+      "supervised_match": true,
+      "labels_valid": true,
+      "parser_on_gold": "Undetermined"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "step": 5,
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "seed": 20261111,
+  "dataset_sha256": "cda6379bc841a4dad4bf839d59c6ca4b61d7d90d014be20a599f64bf30bad1d6",
+  "protocol_sha": "2f48c53a796a306900dd92a263be9db4fe20ff6d4b700dca47f86744f412c71e",
+  "trainable_params": 802816,
+  "objective": "ce_only"
+}

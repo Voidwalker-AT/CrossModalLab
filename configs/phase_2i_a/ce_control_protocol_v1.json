@@ -1,0 +1,49 @@
+{
+  "schema_version": "phase_2i_a_ce_control_v1",
+  "status": "FROZEN_CONTROL_CE_ONLY",
+  "purpose": "Fair standard CE-QLoRA control before evidence-aware losses",
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_use_double_quant": true
+  },
+  "lora": {
+    "r": 2,
+    "lora_alpha": 4,
+    "bias": "none",
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"],
+    "vision_frozen": true,
+    "projector_frozen": true
+  },
+  "training": {
+    "objective": "standard_cross_entropy_only",
+    "batch_size": 1,
+    "grad_accum": 1,
+    "max_steps": 50,
+    "sanity_steps": 5,
+    "learning_rate": 1e-4,
+    "optimizer": "AdamW",
+    "gradient_checkpointing": true,
+    "use_cache": false,
+    "seed": 20261111,
+    "sampling": "maximize_family_coverage_balanced_classes",
+    "masking": "gold_answer_span_suffix",
+    "custom_losses": false
+  },
+  "data": {
+    "dataset": "datasets/cross_modal_contrast_v2/cross_modal_contrast_v2.jsonl",
+    "train_split": "train",
+    "eval_split": "validation",
+    "holdout_allowed": false
+  },
+  "evaluation": {
+    "parser": "strict_answer_v1",
+    "store_raw_completions": true,
+    "invalid_not_coerced": true,
+    "checkpoints": [0, 5, 20, 50],
+    "same_prompts_pre_post": true
+  }
+}
