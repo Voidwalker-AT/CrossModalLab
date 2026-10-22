@@ -1,0 +1,211 @@
+{
+  "phase": "2F",
+  "experiment": "qlora_single_step_feasibility",
+  "scientific_claims": "NONE_hardware_feasibility_only",
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "synthetic_fixture_text_only": true,
+  "load_meta": {
+    "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+    "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+    "snapshot_dir": "E:\\cache\\huggingface\\models--Qwen--Qwen3-VL-2B-Instruct\\snapshots\\89644892e4d85e24eaac8bacfd4f463576704203",
+    "load_sec": 14.11,
+    "device": "cuda:0",
+    "quantization": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_use_double_quant": true
+    },
+    "attn_implementation": "sdpa",
+    "torch_allocated_mib": 1505.48,
+    "torch_reserved_mib": 1566.0,
+    "text_num_layers": 28,
+    "text_hidden_size": 2048,
+    "image_token_id": 151655,
+    "model_class": "Qwen3VLForConditionalGeneration"
+  },
+  "load_sec": 26.19,
+  "lora_target_modules": [
+    "k_proj",
+    "o_proj",
+    "q_proj",
+    "v_proj"
+  ],
+  "prepared_for_kbit": true,
+  "use_cache": false,
+  "lora_config": {
+    "r": 2,
+    "lora_alpha": 4,
+    "target_modules": [
+      "k_proj",
+      "o_proj",
+      "q_proj",
+      "v_proj"
+    ],
+    "bias": "none",
+    "vision_frozen": true,
+    "projector_frozen": true,
+    "optimizer": "AdamW(lr=1e-4, betas=(0.9,0.999))",
+    "batch_size": 1,
+    "grad_accum": 1,
+    "gradient_checkpointing": true,
+    "kv_cache_during_training": false
+  },
+  "parameter_counts": {
+    "total": 1222365184,
+    "trainable": 802816,
+    "frozen": 1221562368
+  },
+  "trainable_param_names_sample": [
+    "base_model.model.model.language_model.layers.0.self_attn.q_proj.lora_A.default.weight",
+    "base_model.model.model.language_model.layers.0.self_attn.q_proj.lora_B.default.weight",
+    "base_model.model.model.language_model.layers.0.self_attn.k_proj.lora_A.default.weight",
+    "base_model.model.model.language_model.layers.0.self_attn.k_proj.lora_B.default.weight",
+    "base_model.model.model.language_model.layers.0.self_attn.v_proj.lora_A.default.weight",
+    "base_model.model.model.language_model.layers.0.self_attn.v_proj.lora_B.default.weight",
+    "base_model.model.model.language_model.layers.0.self_attn.o_proj.lora_A.default.weight",
+    "base_model.model.model.language_model.layers.0.self_attn.o_proj.lora_B.default.weight",
+    "base_model.model.model.language_model.layers.1.self_attn.q_proj.lora_A.default.weight",
+    "base_model.model.model.language_model.layers.1.self_attn.q_proj.lora_B.default.weight",
+    "base_model.model.model.language_model.layers.1.self_attn.k_proj.lora_A.default.weight",
+    "base_model.model.model.language_model.layers.1.self_attn.k_proj.lora_B.default.weight",
+    "base_model.model.model.language_model.layers.1.self_attn.v_proj.lora_A.default.weight",
+    "base_model.model.model.language_model.layers.1.self_attn.v_proj.lora_B.default.weight",
+    "base_model.model.model.language_model.layers.1.self_attn.o_proj.lora_A.default.weight",
+    "base_model.model.model.language_model.layers.1.self_attn.o_proj.lora_B.default.weight",
+    "base_model.model.model.language_model.layers.2.self_attn.q_proj.lora_A.default.weight",
+    "base_model.model.model.language_model.layers.2.self_attn.q_proj.lora_B.default.weight",
+    "base_model.model.model.language_model.layers.2.self_attn.k_proj.lora_A.default.weight",
+    "base_model.model.model.language_model.layers.2.self_attn.k_proj.lora_B.default.weight"
+  ],
+  "n_trainable_tensors": 224,
+  "gradient_checkpointing_enabled": true,
+  "text_only": {
+    "stage": "text_only",
+    "loss": 4.890890121459961,
+    "grad_tensors": 224,
+    "grad_global_l2": 24.251565716157508,
+    "duration_sec": 3.6485,
+    "forward_sec": 1.7733,
+    "backward_sec": 1.4197,
+    "optimizer_sec": 0.1478,
+    "memory_forward": {
+      "torch_allocated_mib": 2112.478,
+      "torch_reserved_mib": 2756.0,
+      "torch_max_allocated_mib": 2112.478,
+      "torch_max_reserved_mib": 2756.0,
+      "nvidia_smi_used_mib": 3176.0,
+      "nvidia_smi_total_mib": 4096.0,
+      "host_available_mib": 1963.988,
+      "warnings": []
+    },
+    "memory_before_backward": {
+      "torch_allocated_mib": 2178.847,
+      "torch_reserved_mib": 2770.0,
+      "torch_max_allocated_mib": 2179.175,
+      "torch_max_reserved_mib": 2770.0,
+      "nvidia_smi_used_mib": 3215.0,
+      "nvidia_smi_total_mib": 4096.0,
+      "host_available_mib": 1379.078,
+      "warnings": []
+    },
+    "memory_after_backward": {
+      "torch_allocated_mib": 2156.79,
+      "torch_reserved_mib": 2776.0,
+      "torch_max_allocated_mib": 2227.532,
+      "torch_max_reserved_mib": 2776.0,
+      "nvidia_smi_used_mib": 3229.0,
+      "nvidia_smi_total_mib": 4096.0,
+      "host_available_mib": 1336.895,
+      "warnings": []
+    },
+    "memory_after_optimizer": {
+      "torch_allocated_mib": 2162.915,
+      "torch_reserved_mib": 2776.0,
+      "torch_max_allocated_mib": 2227.532,
+      "torch_max_reserved_mib": 2776.0,
+      "nvidia_smi_used_mib": 3229.0,
+      "nvidia_smi_total_mib": 4096.0,
+      "host_available_mib": 1231.809,
+      "warnings": []
+    },
+    "loss_is_finite": true,
+    "lora_tensors_changed": 224,
+    "lora_tensors_total": 224,
+    "adapter_weights_changed": true,
+    "frozen_base_sample_changed": [],
+    "frozen_base_ok": true
+  },
+  "multimodal_meta": {
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0001.png",
+    "n_image_tokens": 144,
+    "seq_len": 191,
+    "genuinely_multimodal": true
+  },
+  "multimodal": {
+    "stage": "multimodal",
+    "loss": 5.189084053039551,
+    "grad_tensors": 224,
+    "grad_global_l2": 18.075541474711457,
+    "duration_sec": 3.4959,
+    "forward_sec": 1.8846,
+    "backward_sec": 1.333,
+    "optimizer_sec": 0.0242,
+    "memory_forward": {
+      "torch_allocated_mib": 2138.734,
+      "torch_reserved_mib": 2776.0,
+      "torch_max_allocated_mib": 2138.734,
+      "torch_max_reserved_mib": 2776.0,
+      "nvidia_smi_used_mib": 3234.0,
+      "nvidia_smi_total_mib": 4096.0,
+      "host_available_mib": 5068.824,
+      "warnings": []
+    },
+    "memory_before_backward": {
+      "torch_allocated_mib": 2405.046,
+      "torch_reserved_mib": 2776.0,
+      "torch_max_allocated_mib": 2406.538,
+      "torch_max_reserved_mib": 2776.0,
+      "nvidia_smi_used_mib": 3236.0,
+      "nvidia_smi_total_mib": 4096.0,
+      "host_available_mib": 5257.574,
+      "warnings": []
+    },
+    "memory_after_backward": {
+      "torch_allocated_mib": 2255.015,
+      "torch_reserved_mib": 2776.0,
+      "torch_max_allocated_mib": 2626.448,
+      "torch_max_reserved_mib": 2776.0,
+      "nvidia_smi_used_mib": 3231.0,
+      "nvidia_smi_total_mib": 4096.0,
+      "host_available_mib": 5431.668,
+      "warnings": []
+    },
+    "memory_after_optimizer": {
+      "torch_allocated_mib": 2255.015,
+      "torch_reserved_mib": 2776.0,
+      "torch_max_allocated_mib": 2626.448,
+      "torch_max_reserved_mib": 2776.0,
+      "nvidia_smi_used_mib": 3231.0,
+      "nvidia_smi_total_mib": 4096.0,
+      "host_available_mib": 5454.113,
+      "warnings": []
+    },
+    "loss_is_finite": true,
+    "n_image_tokens": 144
+  },
+  "final_memory": {
+    "torch_allocated_mib": 2141.328,
+    "torch_reserved_mib": 2776.0,
+    "torch_max_allocated_mib": 2626.448,
+    "torch_max_reserved_mib": 2776.0,
+    "nvidia_smi_used_mib": 3231.0,
+    "nvidia_smi_total_mib": 4096.0,
+    "host_available_mib": 5471.988,
+    "warnings": []
+  },
+  "status": "OK",
+  "adapter_saved": false,
+  "adapter_policy": "one-step adapter discarded; not a research model"
+}
