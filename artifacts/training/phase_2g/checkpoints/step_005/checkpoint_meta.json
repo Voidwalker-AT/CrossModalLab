@@ -1,0 +1,11 @@
+{
+  "step": 5,
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "config_hash": "9e790e262262472d76228d7e765e8a51fc200e80ce82eab8fe70c034d61ffebb",
+  "seed": 20261103,
+  "dataset_sha256": "cda6379bc841a4dad4bf839d59c6ca4b61d7d90d014be20a599f64bf30bad1d6",
+  "torch": "2.6.0+cu124",
+  "trainable_params": 802816,
+  "optimizer_saved": true
+}

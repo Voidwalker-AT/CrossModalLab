@@ -324,27 +324,50 @@ def main() -> int:
             state["optimizer_saved"] = True
         atomic_write_json(d / "checkpoint_meta.json", state)
 
-    # Sanity 5
-    print("=== SANITY 5 STEPS ===")
-    train_steps(model, processor, schedule, start_step=0, end_step=args.sanity_steps, optimizer=optimizer, metrics_path=metrics_path)
-    snapshot_adapter(args.sanity_steps, with_opt=True)
-    # quick val
-    val_mid = [eval_one(processor, model, r, abstention_prompt=False) for r in val_cases]
-    report["val_step_5"] = summarize_eval(val_mid)
-    print("VAL@5 BA", report["val_step_5"]["metrics"]["balanced_accuracy"])
+    # Resume-aware: if metrics already have completed steps, continue from there
+    # (adapter must have been checkpointed; otherwise reset metrics for clean restart)
+    done = completed_steps(metrics_path)
+    ckpt_last = out_dir / "checkpoints" / f"step_{done:03d}"
+    if done > 0 and not (ckpt_last / "checkpoint_meta.json").is_file():
+        print(f"WARNING: metrics show step {done} but checkpoint missing — clearing metrics for clean restart")
+        metrics_path.write_text("", encoding="utf-8")
+        done = 0
+    elif done >= args.max_steps:
+        print(f"Already at step {done}; evaluating only")
+        done = args.max_steps
+
+    # Sanity 5 (or skip if already past)
+    sanity_end = min(args.sanity_steps, args.max_steps)
+    if done < sanity_end:
+        print(f"=== SANITY steps {done}→{sanity_end} ===")
+        train_steps(
+            model, processor, schedule, start_step=done, end_step=sanity_end,
+            optimizer=optimizer, metrics_path=metrics_path,
+        )
+        snapshot_adapter(sanity_end, with_opt=True)
+        done = sanity_end
+
+    if done >= args.sanity_steps and (out_dir / "checkpoints" / f"step_{args.sanity_steps:03d}" / "checkpoint_meta.json").is_file() or done == args.sanity_steps:
+        if done >= args.sanity_steps:
+            val_mid = [eval_one(processor, model, r, abstention_prompt=False) for r in val_cases]
+            report["val_step_5"] = summarize_eval(val_mid)
+            print("VAL@5 BA", report["val_step_5"]["metrics"]["balanced_accuracy"])
 
     # Continue to max
-    print(f"=== CONTINUE to {args.max_steps} ===")
-    train_steps(
-        model,
-        processor,
-        schedule,
-        start_step=args.sanity_steps,
-        end_step=args.max_steps,
-        optimizer=optimizer,
-        metrics_path=metrics_path,
-    )
-    snapshot_adapter(args.max_steps, with_opt=True)
+    if done < args.max_steps:
+        print(f"=== CONTINUE {done} → {args.max_steps} ===")
+        train_steps(
+            model,
+            processor,
+            schedule,
+            start_step=done,
+            end_step=args.max_steps,
+            optimizer=optimizer,
+            metrics_path=metrics_path,
+        )
+        snapshot_adapter(args.max_steps, with_opt=True)
+        done = args.max_steps
+    report["total_steps"] = done
 
     # Final val
     val_final = [eval_one(processor, model, r, abstention_prompt=False) for r in val_cases]
@@ -388,11 +411,24 @@ def main() -> int:
 def hashlib_sha(path: Path) -> str:
     import hashlib
 
+    if isinstance(path, dict):
+        blob = json.dumps(path, sort_keys=True, separators=(",", ":")).encode("utf-8")
+        return hashlib.sha256(blob).hexdigest()
     h = hashlib.sha256()
-    with path.open("rb") as fh:
+    with Path(path).open("rb") as fh:
         while chunk := fh.read(1 << 20):
             h.update(chunk)
     return h.hexdigest()
+
+
+def completed_steps(metrics_path: Path) -> int:
+    if not metrics_path.is_file():
+        return 0
+    steps = []
+    for line in metrics_path.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            steps.append(json.loads(line)["step"])
+    return max(steps) if steps else 0
 
 
 if __name__ == "__main__":

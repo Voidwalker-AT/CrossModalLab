@@ -1,0 +1,505 @@
+{
+  "phase": "2G",
+  "config": {
+    "schema_version": "phase_2g_qlora_train_config_v1",
+    "status": "FROZEN_FOR_EXPLORATORY_TRAINING",
+    "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+    "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+    "quantization": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_use_double_quant": true
+    },
+    "lora": {
+      "r": 2,
+      "lora_alpha": 4,
+      "lora_dropout": 0.0,
+      "bias": "none",
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj"
+      ],
+      "vision_frozen": true,
+      "projector_frozen": true
+    },
+    "training": {
+      "batch_size": 1,
+      "grad_accum": 1,
+      "max_steps": 50,
+      "sanity_steps": 5,
+      "checkpoint_steps": [
+        0,
+        5,
+        20,
+        50
+      ],
+      "learning_rate": 0.0001,
+      "optimizer": "AdamW",
+      "gradient_checkpointing": true,
+      "use_cache": false,
+      "seed": 20261103,
+      "loss": "supervised_cross_entropy_completion_only",
+      "answer_vocabulary": [
+        " Yes",
+        " No",
+        " Undetermined"
+      ],
+      "no_custom_losses": true
+    },
+    "data": {
+      "dataset": "datasets/cross_modal_contrast_v2/cross_modal_contrast_v2.jsonl",
+      "train_split": "train",
+      "eval_split": "validation",
+      "holdout_split": "test",
+      "holdout_allowed": false,
+      "require_three_classes": true
+    },
+    "prompts": {
+      "standard": "match_contrast_v2_prompt",
+      "abstention_baseline": "neutral_abstain_permitted_from_phase_2d",
+      "eval_identical_pre_post": true
+    },
+    "checkpoints": {
+      "dir": "artifacts/training/phase_2g/checkpoints",
+      "save_optimizer": true,
+      "commit_binaries_to_git": false
+    }
+  },
+  "dataset_sha256": "cda6379bc841a4dad4bf839d59c6ca4b61d7d90d014be20a599f64bf30bad1d6",
+  "n_train_records": 504,
+  "train_label_counts": {
+    "Yes": 168,
+    "No": 168,
+    "Undetermined": 168
+  },
+  "val": {
+    "n_families": 6,
+    "n_cases": 18
+  },
+  "holdout_used": false,
+  "steps": [],
+  "load_meta": {
+    "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+    "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+    "snapshot_dir": "E:\\cache\\huggingface\\models--Qwen--Qwen3-VL-2B-Instruct\\snapshots\\89644892e4d85e24eaac8bacfd4f463576704203",
+    "load_sec": 6.51,
+    "device": "cuda:0",
+    "quantization": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_use_double_quant": true
+    },
+    "attn_implementation": "sdpa",
+    "torch_allocated_mib": 1505.48,
+    "torch_reserved_mib": 1566.0,
+    "text_num_layers": 28,
+    "text_hidden_size": 2048,
+    "image_token_id": 151655,
+    "model_class": "Qwen3VLForConditionalGeneration"
+  },
+  "lora_targets": [
+    "k_proj",
+    "o_proj",
+    "q_proj",
+    "v_proj"
+  ],
+  "params": 802816,
+  "baseline_standard": {
+    "n": 18,
+    "n_families": 6,
+    "families": [
+      "xc_ho_0011",
+      "xc_ho_0045",
+      "xc_id_0008",
+      "xc_id_0014",
+      "xc_id_0019",
+      "xc_id_0023"
+    ],
+    "sample_ids": [
+      "xc_ho_0011::contradicted",
+      "xc_ho_0011::entailed",
+      "xc_ho_0011::underdetermined",
+      "xc_ho_0045::contradicted",
+      "xc_ho_0045::entailed",
+      "xc_ho_0045::underdetermined",
+      "xc_id_0008::contradicted",
+      "xc_id_0008::entailed",
+      "xc_id_0008::underdetermined",
+      "xc_id_0014::contradicted",
+      "xc_id_0014::entailed",
+      "xc_id_0014::underdetermined",
+      "xc_id_0019::contradicted",
+      "xc_id_0019::entailed",
+      "xc_id_0019::underdetermined",
+      "xc_id_0023::contradicted",
+      "xc_id_0023::entailed",
+      "xc_id_0023::underdetermined"
+    ],
+    "metrics": {
+      "n": 18,
+      "support": {
+        "No": 6,
+        "Yes": 6,
+        "Undetermined": 6
+      },
+      "per_class_recall": {
+        "Yes": 0.16666666666666666,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.3333333333333333
+      },
+      "per_class_precision": {
+        "Yes": 1.0,
+        "No": 0.36363636363636365,
+        "Undetermined": 0.3333333333333333
+      },
+      "per_class_f1": {
+        "Yes": 0.2857142857142857,
+        "No": 0.4705882352941177,
+        "Undetermined": 0.3333333333333333
+      },
+      "balanced_accuracy": 0.388889,
+      "macro_f1": 0.363212,
+      "unsupported_definite_rate": 0.666667,
+      "over_abstention_rate": 0.333333
+    },
+    "confusion": {
+      "Yes": {
+        "Yes": 1,
+        "No": 3,
+        "Undetermined": 2
+      },
+      "No": {
+        "No": 4,
+        "Undetermined": 2
+      },
+      "Undetermined": {
+        "No": 4,
+        "Undetermined": 2
+      }
+    }
+  },
+  "baseline_abstention_prompt": {
+    "n": 18,
+    "n_families": 6,
+    "families": [
+      "xc_ho_0011",
+      "xc_ho_0045",
+      "xc_id_0008",
+      "xc_id_0014",
+      "xc_id_0019",
+      "xc_id_0023"
+    ],
+    "sample_ids": [
+      "xc_ho_0011::contradicted",
+      "xc_ho_0011::entailed",
+      "xc_ho_0011::underdetermined",
+      "xc_ho_0045::contradicted",
+      "xc_ho_0045::entailed",
+      "xc_ho_0045::underdetermined",
+      "xc_id_0008::contradicted",
+      "xc_id_0008::entailed",
+      "xc_id_0008::underdetermined",
+      "xc_id_0014::contradicted",
+      "xc_id_0014::entailed",
+      "xc_id_0014::underdetermined",
+      "xc_id_0019::contradicted",
+      "xc_id_0019::entailed",
+      "xc_id_0019::underdetermined",
+      "xc_id_0023::contradicted",
+      "xc_id_0023::entailed",
+      "xc_id_0023::underdetermined"
+    ],
+    "metrics": {
+      "n": 18,
+      "support": {
+        "No": 6,
+        "Yes": 6,
+        "Undetermined": 6
+      },
+      "per_class_recall": {
+        "Yes": 0.16666666666666666,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.3333333333333333
+      },
+      "per_class_precision": {
+        "Yes": 1.0,
+        "No": 0.36363636363636365,
+        "Undetermined": 0.3333333333333333
+      },
+      "per_class_f1": {
+        "Yes": 0.2857142857142857,
+        "No": 0.4705882352941177,
+        "Undetermined": 0.3333333333333333
+      },
+      "balanced_accuracy": 0.388889,
+      "macro_f1": 0.363212,
+      "unsupported_definite_rate": 0.666667,
+      "over_abstention_rate": 0.333333
+    },
+    "confusion": {
+      "Yes": {
+        "Yes": 1,
+        "No": 3,
+        "Undetermined": 2
+      },
+      "No": {
+        "No": 4,
+        "Undetermined": 2
+      },
+      "Undetermined": {
+        "No": 4,
+        "Undetermined": 2
+      }
+    }
+  },
+  "val_step_5": {
+    "n": 18,
+    "n_families": 6,
+    "families": [
+      "xc_ho_0011",
+      "xc_ho_0045",
+      "xc_id_0008",
+      "xc_id_0014",
+      "xc_id_0019",
+      "xc_id_0023"
+    ],
+    "sample_ids": [
+      "xc_ho_0011::contradicted",
+      "xc_ho_0011::entailed",
+      "xc_ho_0011::underdetermined",
+      "xc_ho_0045::contradicted",
+      "xc_ho_0045::entailed",
+      "xc_ho_0045::underdetermined",
+      "xc_id_0008::contradicted",
+      "xc_id_0008::entailed",
+      "xc_id_0008::underdetermined",
+      "xc_id_0014::contradicted",
+      "xc_id_0014::entailed",
+      "xc_id_0014::underdetermined",
+      "xc_id_0019::contradicted",
+      "xc_id_0019::entailed",
+      "xc_id_0019::underdetermined",
+      "xc_id_0023::contradicted",
+      "xc_id_0023::entailed",
+      "xc_id_0023::underdetermined"
+    ],
+    "metrics": {
+      "n": 18,
+      "support": {
+        "No": 6,
+        "Yes": 6,
+        "Undetermined": 6
+      },
+      "per_class_recall": {
+        "Yes": 0.3333333333333333,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.0
+      },
+      "per_class_precision": {
+        "Yes": 1.0,
+        "No": 0.4,
+        "Undetermined": 0.0
+      },
+      "per_class_f1": {
+        "Yes": 0.5,
+        "No": 0.5,
+        "Undetermined": 0.0
+      },
+      "balanced_accuracy": 0.333333,
+      "macro_f1": 0.333333,
+      "unsupported_definite_rate": 0.666667,
+      "over_abstention_rate": 0.0
+    },
+    "confusion": {
+      "Yes": {
+        "Yes": 2,
+        "No": 2,
+        "Invalid": 2
+      },
+      "No": {
+        "No": 4,
+        "Invalid": 2
+      },
+      "Undetermined": {
+        "No": 4,
+        "Invalid": 2
+      }
+    }
+  },
+  "total_steps": 50,
+  "val_step_final": {
+    "n": 18,
+    "n_families": 6,
+    "families": [
+      "xc_ho_0011",
+      "xc_ho_0045",
+      "xc_id_0008",
+      "xc_id_0014",
+      "xc_id_0019",
+      "xc_id_0023"
+    ],
+    "sample_ids": [
+      "xc_ho_0011::contradicted",
+      "xc_ho_0011::entailed",
+      "xc_ho_0011::underdetermined",
+      "xc_ho_0045::contradicted",
+      "xc_ho_0045::entailed",
+      "xc_ho_0045::underdetermined",
+      "xc_id_0008::contradicted",
+      "xc_id_0008::entailed",
+      "xc_id_0008::underdetermined",
+      "xc_id_0014::contradicted",
+      "xc_id_0014::entailed",
+      "xc_id_0014::underdetermined",
+      "xc_id_0019::contradicted",
+      "xc_id_0019::entailed",
+      "xc_id_0019::underdetermined",
+      "xc_id_0023::contradicted",
+      "xc_id_0023::entailed",
+      "xc_id_0023::underdetermined"
+    ],
+    "metrics": {
+      "n": 18,
+      "support": {
+        "No": 6,
+        "Yes": 6,
+        "Undetermined": 6
+      },
+      "per_class_recall": {
+        "Yes": 0.3333333333333333,
+        "No": 0.3333333333333333,
+        "Undetermined": 0.0
+      },
+      "per_class_precision": {
+        "Yes": 1.0,
+        "No": 0.3333333333333333,
+        "Undetermined": 0.0
+      },
+      "per_class_f1": {
+        "Yes": 0.5,
+        "No": 0.3333333333333333,
+        "Undetermined": 0.0
+      },
+      "balanced_accuracy": 0.222222,
+      "macro_f1": 0.277778,
+      "unsupported_definite_rate": 0.5,
+      "over_abstention_rate": 0.0
+    },
+    "confusion": {
+      "Yes": {
+        "Yes": 2,
+        "Invalid": 3,
+        "No": 1
+      },
+      "No": {
+        "No": 2,
+        "Invalid": 4
+      },
+      "Undetermined": {
+        "No": 3,
+        "Invalid": 3
+      }
+    }
+  },
+  "val_step_final_abstention_prompt": {
+    "n": 18,
+    "n_families": 6,
+    "families": [
+      "xc_ho_0011",
+      "xc_ho_0045",
+      "xc_id_0008",
+      "xc_id_0014",
+      "xc_id_0019",
+      "xc_id_0023"
+    ],
+    "sample_ids": [
+      "xc_ho_0011::contradicted",
+      "xc_ho_0011::entailed",
+      "xc_ho_0011::underdetermined",
+      "xc_ho_0045::contradicted",
+      "xc_ho_0045::entailed",
+      "xc_ho_0045::underdetermined",
+      "xc_id_0008::contradicted",
+      "xc_id_0008::entailed",
+      "xc_id_0008::underdetermined",
+      "xc_id_0014::contradicted",
+      "xc_id_0014::entailed",
+      "xc_id_0014::underdetermined",
+      "xc_id_0019::contradicted",
+      "xc_id_0019::entailed",
+      "xc_id_0019::underdetermined",
+      "xc_id_0023::contradicted",
+      "xc_id_0023::entailed",
+      "xc_id_0023::underdetermined"
+    ],
+    "metrics": {
+      "n": 18,
+      "support": {
+        "No": 6,
+        "Yes": 6,
+        "Undetermined": 6
+      },
+      "per_class_recall": {
+        "Yes": 0.3333333333333333,
+        "No": 0.3333333333333333,
+        "Undetermined": 0.0
+      },
+      "per_class_precision": {
+        "Yes": 1.0,
+        "No": 0.3333333333333333,
+        "Undetermined": 0.0
+      },
+      "per_class_f1": {
+        "Yes": 0.5,
+        "No": 0.3333333333333333,
+        "Undetermined": 0.0
+      },
+      "balanced_accuracy": 0.222222,
+      "macro_f1": 0.277778,
+      "unsupported_definite_rate": 0.5,
+      "over_abstention_rate": 0.0
+    },
+    "confusion": {
+      "Yes": {
+        "Yes": 2,
+        "Invalid": 3,
+        "No": 1
+      },
+      "No": {
+        "No": 2,
+        "Invalid": 4
+      },
+      "Undetermined": {
+        "No": 3,
+        "Invalid": 3
+      }
+    }
+  },
+  "final_memory": {
+    "torch_allocated_mib": 2137.445,
+    "torch_reserved_mib": 2772.0,
+    "torch_max_allocated_mib": 2715.954,
+    "torch_max_reserved_mib": 2772.0,
+    "nvidia_smi_used_mib": 3148.0,
+    "nvidia_smi_total_mib": 4096.0,
+    "host_available_mib": 5597.707,
+    "warnings": []
+  },
+  "status": "OK",
+  "paired_ba": {
+    "standard_vs_final": {
+      "baseline": 0.388889,
+      "final": 0.222222,
+      "delta": -0.16666699999999998
+    },
+    "abstention_prompt_vs_final_abstention": {
+      "baseline": 0.388889,
+      "final": 0.222222,
+      "delta": -0.16666699999999998
+    }
+  }
+}

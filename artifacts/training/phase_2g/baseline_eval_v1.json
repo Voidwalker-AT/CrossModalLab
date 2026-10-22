@@ -1,0 +1,152 @@
+{
+  "standard": {
+    "n": 18,
+    "n_families": 6,
+    "families": [
+      "xc_ho_0011",
+      "xc_ho_0045",
+      "xc_id_0008",
+      "xc_id_0014",
+      "xc_id_0019",
+      "xc_id_0023"
+    ],
+    "sample_ids": [
+      "xc_ho_0011::contradicted",
+      "xc_ho_0011::entailed",
+      "xc_ho_0011::underdetermined",
+      "xc_ho_0045::contradicted",
+      "xc_ho_0045::entailed",
+      "xc_ho_0045::underdetermined",
+      "xc_id_0008::contradicted",
+      "xc_id_0008::entailed",
+      "xc_id_0008::underdetermined",
+      "xc_id_0014::contradicted",
+      "xc_id_0014::entailed",
+      "xc_id_0014::underdetermined",
+      "xc_id_0019::contradicted",
+      "xc_id_0019::entailed",
+      "xc_id_0019::underdetermined",
+      "xc_id_0023::contradicted",
+      "xc_id_0023::entailed",
+      "xc_id_0023::underdetermined"
+    ],
+    "metrics": {
+      "n": 18,
+      "support": {
+        "No": 6,
+        "Yes": 6,
+        "Undetermined": 6
+      },
+      "per_class_recall": {
+        "Yes": 0.16666666666666666,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.3333333333333333
+      },
+      "per_class_precision": {
+        "Yes": 1.0,
+        "No": 0.36363636363636365,
+        "Undetermined": 0.3333333333333333
+      },
+      "per_class_f1": {
+        "Yes": 0.2857142857142857,
+        "No": 0.4705882352941177,
+        "Undetermined": 0.3333333333333333
+      },
+      "balanced_accuracy": 0.388889,
+      "macro_f1": 0.363212,
+      "unsupported_definite_rate": 0.666667,
+      "over_abstention_rate": 0.333333
+    },
+    "confusion": {
+      "Yes": {
+        "Yes": 1,
+        "No": 3,
+        "Undetermined": 2
+      },
+      "No": {
+        "No": 4,
+        "Undetermined": 2
+      },
+      "Undetermined": {
+        "No": 4,
+        "Undetermined": 2
+      }
+    }
+  },
+  "abstention": {
+    "n": 18,
+    "n_families": 6,
+    "families": [
+      "xc_ho_0011",
+      "xc_ho_0045",
+      "xc_id_0008",
+      "xc_id_0014",
+      "xc_id_0019",
+      "xc_id_0023"
+    ],
+    "sample_ids": [
+      "xc_ho_0011::contradicted",
+      "xc_ho_0011::entailed",
+      "xc_ho_0011::underdetermined",
+      "xc_ho_0045::contradicted",
+      "xc_ho_0045::entailed",
+      "xc_ho_0045::underdetermined",
+      "xc_id_0008::contradicted",
+      "xc_id_0008::entailed",
+      "xc_id_0008::underdetermined",
+      "xc_id_0014::contradicted",
+      "xc_id_0014::entailed",
+      "xc_id_0014::underdetermined",
+      "xc_id_0019::contradicted",
+      "xc_id_0019::entailed",
+      "xc_id_0019::underdetermined",
+      "xc_id_0023::contradicted",
+      "xc_id_0023::entailed",
+      "xc_id_0023::underdetermined"
+    ],
+    "metrics": {
+      "n": 18,
+      "support": {
+        "No": 6,
+        "Yes": 6,
+        "Undetermined": 6
+      },
+      "per_class_recall": {
+        "Yes": 0.16666666666666666,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.3333333333333333
+      },
+      "per_class_precision": {
+        "Yes": 1.0,
+        "No": 0.36363636363636365,
+        "Undetermined": 0.3333333333333333
+      },
+      "per_class_f1": {
+        "Yes": 0.2857142857142857,
+        "No": 0.4705882352941177,
+        "Undetermined": 0.3333333333333333
+      },
+      "balanced_accuracy": 0.388889,
+      "macro_f1": 0.363212,
+      "unsupported_definite_rate": 0.666667,
+      "over_abstention_rate": 0.333333
+    },
+    "confusion": {
+      "Yes": {
+        "Yes": 1,
+        "No": 3,
+        "Undetermined": 2
+      },
+      "No": {
+        "No": 4,
+        "Undetermined": 2
+      },
+      "Undetermined": {
+        "No": 4,
+        "Undetermined": 2
+      }
+    }
+  },
+  "model_revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "holdout_used": false
+}

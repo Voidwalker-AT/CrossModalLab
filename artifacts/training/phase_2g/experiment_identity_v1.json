@@ -1,0 +1,75 @@
+{
+  "experiment_id": "phase_2g_qlora_train_v1",
+  "frozen_utc": "2026-10-22T11:41:04Z",
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_use_double_quant": true
+  },
+  "lora": {
+    "r": 2,
+    "lora_alpha": 4,
+    "lora_dropout": 0.0,
+    "bias": "none",
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ],
+    "vision_frozen": true,
+    "projector_frozen": true
+  },
+  "training": {
+    "batch_size": 1,
+    "grad_accum": 1,
+    "max_steps": 50,
+    "sanity_steps": 5,
+    "checkpoint_steps": [
+      0,
+      5,
+      20,
+      50
+    ],
+    "learning_rate": 0.0001,
+    "optimizer": "AdamW",
+    "gradient_checkpointing": true,
+    "use_cache": false,
+    "seed": 20261103,
+    "loss": "supervised_cross_entropy_completion_only",
+    "answer_vocabulary": [
+      " Yes",
+      " No",
+      " Undetermined"
+    ],
+    "no_custom_losses": true
+  },
+  "dataset_sha256": "cda6379bc841a4dad4bf839d59c6ca4b61d7d90d014be20a599f64bf30bad1d6",
+  "train_family_count": 168,
+  "validation_family_count": 36,
+  "eval_val_families": [
+    "xc_ho_0011",
+    "xc_ho_0045",
+    "xc_id_0008",
+    "xc_id_0014",
+    "xc_id_0019",
+    "xc_id_0023"
+  ],
+  "eval_n_cases": 18,
+  "git_commit": "0f9d67dd90fc20160f9a9ed7cad413318dfafbd1",
+  "software": {
+    "python": "3.11.16",
+    "torch": "2.6.0+cu124",
+    "peft": "0.21.2",
+    "transformers": "5.20.1",
+    "bitsandbytes": "0.50.2"
+  },
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "ram_available_gib": 5.939
+  },
+  "holdout_allowed": false
+}
