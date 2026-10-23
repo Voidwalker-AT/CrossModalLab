@@ -1,0 +1,410 @@
+#!/usr/bin/env python3
+"""Phase 2I-B — Matched CE+ES QLoRA ablation vs Phase 2I-A CE control.
+
+Adds evidence-sufficiency hinge on differentiable candidate sequence
+log-likelihoods. Same schedule/seed/steps as 2I-A. ES mu/margin pre-registered.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import random
+import sys
+import time
+from pathlib import Path
+from typing import Any, Dict, List
+
+os.environ.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "1")
+os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+import torch
+
+from src.causal.telemetry import reset_torch_peaks, snapshot_memory
+from src.config.paths import apply_default_cache_environment, get_artifacts_dir
+from src.instrumentation.capture_integrity import atomic_write_json
+from src.models.qwen3vl2_loader import QWEN_REVISION, load_qwen3vl2_nf4
+from src.training.answer_parser import evaluation_accounting, strict_parse_answer
+from src.training.differentiable_scoring import (
+    ABSTAIN_INDEX,
+    CANDIDATES,
+    candidate_class_loglikelihoods,
+    encode_candidates,
+    evidence_sufficiency_from_class_scores,
+    total_loss,
+)
+from src.training.eval_freeze import freeze_val_ids
+from src.training.lora_config import apply_lora, build_lora_config
+from src.training.sampling_and_masking import (
+    build_supervised_example,
+    maximize_family_coverage_schedule,
+)
+
+apply_default_cache_environment()
+
+
+def attach_lora(model, r: int = 2):
+    from peft import prepare_model_for_kbit_training
+
+    names = set()
+    for name, _ in model.named_modules():
+        leaf = name.split(".")[-1]
+        lname = name.lower()
+        if leaf in {"q_proj", "k_proj", "v_proj", "o_proj"} and not any(
+            x in lname for x in ("vision", "visual", "image")
+        ):
+            names.add(leaf)
+    cfg = build_lora_config(r=r, lora_alpha=r * 2, target_modules=tuple(sorted(names)))
+    model = prepare_model_for_kbit_training(
+        model, use_gradient_checkpointing=True, gradient_checkpointing_kwargs={"use_reentrant": False}
+    )
+    model = apply_lora(model, cfg)
+    for n, p in model.named_parameters():
+        p.requires_grad = "lora_" in n
+    if hasattr(model, "enable_input_require_grads"):
+        model.enable_input_require_grads()
+    if hasattr(model, "config"):
+        model.config.use_cache = False
+    return model, sorted(names)
+
+
+def eval_one(processor, model, rec, *, abstention_prompt: bool, device="cuda:0"):
+    from PIL import Image
+
+    prompt = rec["prompt"]
+    if abstention_prompt and "You may answer Undetermined" not in prompt:
+        prompt = (
+            prompt.rstrip()
+            + "\nYou may answer Undetermined when evidence is insufficient."
+            + "\nAnswer directly with: Yes, No, or Undetermined."
+        )
+    image = Image.open(REPO_ROOT / rec["image_file"]).convert("RGB")
+    messages = [
+        {
+            "role": "user",
+            "content": [{"type": "image", "image": image}, {"type": "text", "text": prompt}],
+        }
+    ]
+    inputs = processor.apply_chat_template(
+        messages, add_generation_prompt=True, tokenize=True, return_dict=True, return_tensors="pt"
+    ).to(device)
+    t0 = time.perf_counter()
+    with torch.inference_mode():
+        out = model.generate(**inputs, max_new_tokens=16, do_sample=False)
+    lat = time.perf_counter() - t0
+    raw = processor.tokenizer.decode(out[0, inputs["input_ids"].shape[1] :].tolist(), skip_special_tokens=True)
+    parsed = strict_parse_answer(raw)
+    return {
+        "sample_id": rec["sample_id"],
+        "family_id": rec["family_id"],
+        "ground_truth_label": rec["ground_truth_label"],
+        "raw_completion": raw,
+        "parsed_answer": parsed["parsed_label"],
+        "parse_status": parsed["parse_status"],
+        "is_correct": parsed["parsed_label"] == rec["ground_truth_label"],
+        "latency_sec": round(lat, 4),
+        "abstention_prompt": abstention_prompt,
+        "prompt_sha256": rec["prompt_sha256"],
+        "image_sha256": rec["image_sha256"],
+    }
+
+
+def build_prompt_only_inputs(processor, rec, device="cuda:0"):
+    """Prompt-only inputs (assistant generation prefix) for candidate scoring."""
+    from PIL import Image
+
+    image = Image.open(REPO_ROOT / rec["image_file"]).convert("RGB")
+    messages = [
+        {
+            "role": "user",
+            "content": [{"type": "image", "image": image}, {"type": "text", "text": rec["prompt"]}],
+        }
+    ]
+    return processor.apply_chat_template(
+        messages, add_generation_prompt=True, tokenize=True, return_dict=True, return_tensors="pt"
+    ).to(device)
+
+
+def train_step_es(
+    model,
+    processor,
+    rec,
+    optimizer,
+    metrics_path,
+    *,
+    step: int,
+    cand_ids,
+    es_cfg: Dict[str, Any],
+) -> Dict[str, Any]:
+    model.train()
+    inputs, labels, span_meta = build_supervised_example(
+        processor, rec, abstention_prompt=False, device="cuda:0"
+    )
+    # prompt-only view for candidate scoring (same images/prompt prefix)
+    prompt_inputs = build_prompt_only_inputs(processor, rec, device="cuda:0")
+
+    reset_torch_peaks()
+    if torch.cuda.is_available():
+        torch.cuda.synchronize()
+    t0 = time.perf_counter()
+    optimizer.zero_grad(set_to_none=True)
+
+    # CE on gold answer span
+    outputs = model(**inputs, labels=labels)
+    ce = outputs.loss
+
+    # Differentiable candidate class LLs on prompt-only prefix
+    t_sc0 = time.perf_counter()
+    class_ll = candidate_class_loglikelihoods(model, prompt_inputs, cand_ids, candidates=list(CANDIDATES))
+    score_sec = time.perf_counter() - t_sc0
+
+    gold_idx = {"Yes": 0, "No": 1, "Undetermined": 2}[rec["ground_truth_label"]]
+    sufficiency = torch.tensor(
+        [0 if rec["ground_truth_label"] == "Undetermined" else 1],
+        dtype=torch.long,
+        device=class_ll.device,
+    )
+    es = evidence_sufficiency_from_class_scores(
+        class_ll,
+        torch.tensor([gold_idx], device=class_ll.device),
+        sufficiency=sufficiency,
+        margin=float(es_cfg["margin"]),
+    )
+    loss = total_loss(ce, es, mu_es=float(es_cfg["mu_es"]), ce_weight=float(es_cfg.get("ce_weight", 1.0)))
+
+    if not (torch.isfinite(ce) and torch.isfinite(es) and torch.isfinite(loss)):
+        raise RuntimeError(f"non-finite loss ce={ce} es={es} total={loss}")
+
+    loss.backward()
+    gnorm = 0.0
+    n_g = 0
+    for p in model.parameters():
+        if p.requires_grad and p.grad is not None:
+            n_g += 1
+            gnorm += float(p.grad.detach().float().norm(2) ** 2)
+    gnorm = gnorm ** 0.5
+    if n_g == 0:
+        raise RuntimeError("no LoRA gradients")
+    optimizer.step()
+    if torch.cuda.is_available():
+        torch.cuda.synchronize()
+    dur = time.perf_counter() - t0
+    mem = snapshot_memory()
+
+    row = {
+        "step": step,
+        "sample_id": rec["sample_id"],
+        "family_id": rec["family_id"],
+        "label": rec["ground_truth_label"],
+        "ce_loss": float(ce.detach().cpu()),
+        "es_loss": float(es.detach().cpu()),
+        "total_loss": float(loss.detach().cpu()),
+        "grad_l2": gnorm,
+        "grad_tensors": n_g,
+        "n_supervised": span_meta["n_supervised"],
+        "candidate_score_sec": round(score_sec, 4),
+        "duration_sec": round(dur, 4),
+        "memory": mem.to_dict(),
+        "class_ll": [float(x) for x in class_ll.detach().cpu().reshape(-1)],
+    }
+    with metrics_path.open("a", encoding="utf-8") as fh:
+        fh.write(json.dumps(row) + "\n")
+        fh.flush()
+        os.fsync(fh.fileno())
+    print(
+        f"  step {step} fam={row['family_id']} label={row['label']} "
+        f"ce={row['ce_loss']:.4f} es={row['es_loss']:.4f} tot={row['total_loss']:.4f} "
+        f"t={row['duration_sec']:.2f}s",
+        flush=True,
+    )
+    del inputs, labels, prompt_inputs, outputs, class_ll, es, loss
+    torch.cuda.empty_cache()
+    return row
+
+
+def completed_steps(metrics_path: Path) -> int:
+    if not metrics_path.is_file():
+        return 0
+    steps = [json.loads(l)["step"] for l in metrics_path.read_text(encoding="utf-8").splitlines() if l.strip()]
+    return max(steps) if steps else 0
+
+
+def main() -> int:
+    p = argparse.ArgumentParser()
+    p.add_argument("--max-steps", type=int, default=50)
+    p.add_argument("--sanity-steps", type=int, default=5)
+    p.add_argument("--out-dir", type=Path, default=None)
+    args = p.parse_args()
+
+    cfg = json.loads((REPO_ROOT / "configs/phase_2i_b/es_ablation_config_v1.json").read_text(encoding="utf-8"))
+    es_cfg = cfg["es_objective"]
+    assert cfg["matched_to_2i_a"]["holdout_allowed"] is False
+    assert cfg["no_tuning_on_val"] is True
+
+    try:
+        import psutil
+
+        free = psutil.virtual_memory().available / (1024**3)
+        if free < 4.0:
+            print(f"RAM_GATE_FAIL {free:.2f}")
+            return 4
+        print(f"RAM_GATE_OK {free:.2f}")
+    except Exception as exc:
+        print("RAM_GATE_WARN", exc)
+
+    out_dir = args.out_dir or (get_artifacts_dir() / "training" / "phase_2i_b")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    metrics_path = out_dir / "train_metrics_append.jsonl"
+
+    seed = cfg["matched_to_2i_a"]["seed"]
+    torch.manual_seed(seed)
+    random.seed(seed)
+
+    ds = REPO_ROOT / "datasets/cross_modal_contrast_v2/cross_modal_contrast_v2.jsonl"
+    records = [json.loads(line) for line in ds.read_text(encoding="utf-8").splitlines() if line.strip()]
+    train_recs = [r for r in records if r["split"] == "train"]
+    val_pack = freeze_val_ids(ds, n_families=6)
+    val_cases = val_pack["cases"]
+
+    schedule = maximize_family_coverage_schedule(train_recs, max_steps=args.max_steps, seed=seed)
+    exp_families = sorted({r["family_id"] for r in schedule})
+    print(f"schedule_families={len(exp_families)} unique_samples={len({r['sample_id'] for r in schedule})}")
+
+    processor, model, load_meta = load_qwen3vl2_nf4(local_files_only=True)
+    model, targets = attach_lora(model, r=cfg["matched_to_2i_a"]["lora_r"])
+    cand_ids = encode_candidates(processor.tokenizer, list(CANDIDATES))
+    optimizer = torch.optim.AdamW(
+        (p for p in model.parameters() if p.requires_grad),
+        lr=cfg["matched_to_2i_a"]["learning_rate"],
+    )
+
+    def pack(rows):
+        y_t = [r["ground_truth_label"] for r in rows]
+        y_p = [r["parsed_answer"] for r in rows]
+        return {"metrics": evaluation_accounting(y_t, y_p), "raw": rows}
+
+    # Baseline with adapter disabled
+    if hasattr(model, "disable_adapter"):
+        with model.disable_adapter():
+            base_std = [eval_one(processor, model, r, abstention_prompt=False) for r in val_cases]
+    else:
+        base_std = [eval_one(processor, model, r, abstention_prompt=False) for r in val_cases]
+    base_abs = [eval_one(processor, model, r, abstention_prompt=True) for r in val_cases]
+    report: Dict[str, Any] = {
+        "phase": "2I-B",
+        "config": cfg,
+        "load_meta": load_meta,
+        "lora_targets": targets,
+        "trainable_params": sum(p.numel() for p in model.parameters() if p.requires_grad),
+        "schedule_families": exp_families,
+        "val": {"n_families": val_pack["n_val_families"], "n_cases": val_pack["n_cases"]},
+        "holdout_used": False,
+        "baseline_standard": pack(base_std),
+        "baseline_abstention_prompt": pack(base_abs),
+    }
+    print("BASELINE BA", report["baseline_standard"]["metrics"]["balanced_accuracy"])
+
+    done = completed_steps(metrics_path)
+    if done > 0 and not (out_dir / "checkpoints" / f"step_{done:03d}" / "checkpoint_meta.json").is_file():
+        metrics_path.write_text("", encoding="utf-8")
+        done = 0
+
+    def snapshot(step: int) -> None:
+        d = out_dir / "checkpoints" / f"step_{step:03d}"
+        d.mkdir(parents=True, exist_ok=True)
+        model.save_pretrained(str(d))
+        atomic_write_json(
+            d / "checkpoint_meta.json",
+            {
+                "step": step,
+                "revision": QWEN_REVISION,
+                "seed": seed,
+                "objective": "ce_plus_es",
+                "mu_es": es_cfg["mu_es"],
+                "margin": es_cfg["margin"],
+                "trainable_params": report["trainable_params"],
+            },
+        )
+        torch.save(optimizer.state_dict(), d / "optimizer.pt")
+
+    sanity_end = min(args.sanity_steps, args.max_steps)
+    if done < sanity_end:
+        print(f"=== SANITY {done}->{sanity_end} ===")
+        for i in range(done, sanity_end):
+            train_step_es(
+                model, processor, schedule[i], optimizer, metrics_path,
+                step=i + 1, cand_ids=cand_ids, es_cfg=es_cfg,
+            )
+        snapshot(sanity_end)
+        done = sanity_end
+
+    if done >= args.sanity_steps:
+        val_mid = [eval_one(processor, model, r, abstention_prompt=False) for r in val_cases]
+        report["val_step_5"] = pack(val_mid)
+        print("VAL@5 BA", report["val_step_5"]["metrics"]["balanced_accuracy"])
+
+    if done < args.max_steps:
+        print(f"=== CONTINUE {done}->{args.max_steps} ===")
+        for i in range(done, args.max_steps):
+            train_step_es(
+                model, processor, schedule[i], optimizer, metrics_path,
+                step=i + 1, cand_ids=cand_ids, es_cfg=es_cfg,
+            )
+        snapshot(args.max_steps)
+        done = args.max_steps
+    report["total_steps"] = done
+
+    val_final = [eval_one(processor, model, r, abstention_prompt=False) for r in val_cases]
+    report["val_final"] = pack(val_final)
+    val_abs = [eval_one(processor, model, r, abstention_prompt=True) for r in val_cases]
+    report["val_final_abstention_prompt"] = pack(val_abs)
+
+    # Load 2I-A CE baseline metrics for comparison
+    path_a = REPO_ROOT / "artifacts/training/phase_2i_a/phase_2i_a_report_v1.json"
+    if path_a.is_file():
+        a = json.loads(path_a.read_text(encoding="utf-8"))
+        report["comparison_ce_2i_a"] = {
+            "final_ba": a["val_final"]["metrics"]["balanced_accuracy"],
+            "final_recall": a["val_final"]["metrics"]["per_class_recall"],
+            "invalid_rate": a["val_final"]["metrics"].get("invalid_output_rate"),
+        }
+
+    def ba(block):
+        return block["metrics"]["balanced_accuracy"]
+
+    report["comparison"] = {
+        "baseline": ba(report["baseline_standard"]),
+        "ce_2i_a": report.get("comparison_ce_2i_a", {}).get("final_ba"),
+        "ce_es_2i_b": ba(report["val_final"]),
+        "ce_es_minus_ce": (
+            ba(report["val_final"]) - report["comparison_ce_2i_a"]["final_ba"]
+            if "comparison_ce_2i_a" in report
+            else None
+        ),
+    }
+    report["status"] = "OK"
+    report["final_memory"] = snapshot_memory().to_dict()
+
+    del model, processor, optimizer
+    torch.cuda.empty_cache()
+    atomic_write_json(out_dir / "phase_2i_b_report_v1.json", report)
+    atomic_write_json(out_dir / "val_final_raw_v1.json", val_final)
+    print(json.dumps({
+        "baseline_ba": report["comparison"]["baseline"],
+        "ce_2i_a": report["comparison"]["ce_2i_a"],
+        "ce_es_ba": report["comparison"]["ce_es_2i_b"],
+        "delta_vs_ce": report["comparison"]["ce_es_minus_ce"],
+        "final_undet_recall": report["val_final"]["metrics"]["per_class_recall"].get("Undetermined"),
+        "final_invalid": report["val_final"]["metrics"].get("invalid_output_rate"),
+        "steps": done,
+    }, indent=2))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
