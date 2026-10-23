@@ -1,4 +1,6 @@
-# Submission plan — internal target 2026-12-01
+# Milestones — university demo October 28; research target December 1
+
+**Priority update, 2026-10-23:** the October 28 university Deep Learning submission prioritizes the working interactive dashboard and reliable artifact-backed demonstration, with a preliminary paper. December 1 remains the longer-term publication-quality research target. No university template/page limit or specific IEEE venue is confirmed. Dashboard implementation takes precedence over manuscript polish and further training. See [the active checklist](submission_checklist.md) and [dashboard instructions](../dashboard/README.md). The five-step CE+ES run remains paused; no continuation steps were taken after this priority change.
 
 As of 2026-10-23, 39 calendar days remain. This is an internal manuscript target, **not a verified conference deadline**. No venue is selected. Venue-specific current scope, abstract/full-paper deadlines, timezone, page limits, anonymity, artifact and AI-assistance policies, preprint policy, and author eligibility must be checked on an official live call before a venue decision. Readiness is conditional; acceptance is never promised.
 

@@ -59,6 +59,19 @@ Shared experiment config: `configs/experiment_config.json`.
 
 ## 4. Quick Start
 
+### Interactive research dashboard — October 28 university demo
+
+The artifact-backed React + TypeScript dashboard has five views: Architecture Explorer, Evidence & Reasoning, Failure Investigator, Experiment Analytics, and Reproducibility. It runs without loading a model or requiring a GPU. See [dashboard setup and demo script](dashboard/README.md) and the [submission checklist](paper/submission_checklist.md).
+
+After frontend dependencies are installed from the committed lockfile:
+
+```sh
+npm --prefix dashboard/frontend run build
+python dashboard/backend/server.py
+```
+
+Open http://127.0.0.1:8765. ULVO users may prefix the Python command with `ulvo run . --`. The same real 18 development examples and their exact images are packaged for both contributors; no final-holdout data or model weights are bundled. Live instrumentation and causal interventions are outside this dashboard foundation.
+
 ### Mode A — ULVO (primary lab machine)
 
 ```powershell

@@ -1,0 +1,23 @@
+{
+  "status": "PASSED",
+  "viewport": [
+    1440,
+    1100
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "tested": [
+    "five views",
+    "error and label filters",
+    "search empty state",
+    "layer selection",
+    "checkpoint metrics",
+    "provenance download",
+    "original image",
+    "mobile containment"
+  ],
+  "page_errors": [],
+  "external_requests": []
+}
