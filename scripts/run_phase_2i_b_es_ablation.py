@@ -16,6 +16,7 @@ import random
 import sys
 import time
 import traceback
+import threading
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -336,6 +337,7 @@ def main(argv=None) -> int:
     import psutil
     import torch
     from src.training.differentiable_scoring import encode_candidates
+    from src.training.scorer_verification import ParameterAudit, assess_training_change, sample_resources
     if psutil.virtual_memory().available < 4 * 1024**3:
         raise RuntimeError("RAM_GATE_FAIL: at least 4 GiB available physical RAM required")
     if not torch.cuda.is_available():
@@ -347,9 +349,22 @@ def main(argv=None) -> int:
         raise ValueError("run files must remain inside workspace")
     store = RunStore(output, plan["identity"]) if args.resume else RunStore.fresh(output, plan["identity"])
     model = optimizer = processor = None
+    audit = None
+    samples, sampling_errors = [], []
+    monitor_stop = threading.Event()
+    started = time.perf_counter()
+    def monitor():
+        while not monitor_stop.is_set():
+            try:
+                samples.append({"elapsed_sec": time.perf_counter() - started, **sample_resources()})
+            except Exception as exc:
+                sampling_errors.append(repr(exc))
+            monitor_stop.wait(1.0)
+    monitor_thread = threading.Thread(target=monitor, daemon=True)
     execution = {"run_id": store.run_id, "identity_hash": store.identity_hash,
                  "holdout_used": False, "requested_stop_after": args.stop_after}
     with store:
+        monitor_thread.start()
         code = 1
         try:
             if args.resume:
@@ -380,6 +395,8 @@ def main(argv=None) -> int:
                 evaluate(processor, model, plan, store, 0, baseline=True)
                 store.commit(0, None, model, optimizer, lambda path: model.save_pretrained(
                     str(path), safe_serialization=True, save_embedding_layers=False))
+            audit = ParameterAudit(temp)
+            audit.capture(model)
             store.event("RUNNING", restored_step=store.step, stop_after=args.stop_after)
             for index in range(store.step, args.stop_after):
                 step = index + 1
@@ -388,6 +405,15 @@ def main(argv=None) -> int:
                 row = train_step_es(model, processor, plan["schedule"][index], optimizer,
                                     step=step, cand_ids=cand_ids, es_cfg=cfg["es_objective"])
                 guard_resources()
+                comparison = audit.compare(model)
+                acceptance = assess_training_change(comparison)
+                write_once(store.path / f"parameter_audit_step_{step:04d}.json",
+                           {"step": step, "acceptance": acceptance, **comparison})
+                if not acceptance["passed"]:
+                    raise RuntimeError(f"parameter acceptance failed: {acceptance}")
+                if sampling_errors:
+                    raise RuntimeError(f"telemetry sampling failed: {sampling_errors}")
+                row["parameter_acceptance"] = acceptance
                 store.commit(step, row, model, optimizer, lambda path: model.save_pretrained(
                     str(path), safe_serialization=True, save_embedding_layers=False))
                 if step in {cfg["matched_to_2i_a"]["sanity_steps"], args.stop_after}:
@@ -405,6 +431,13 @@ def main(argv=None) -> int:
             except Exception:
                 execution["event_write_error"] = traceback.format_exc()
         finally:
+            monitor_stop.set()
+            monitor_thread.join(timeout=5)
+            execution["resource_samples"] = samples
+            execution["sampling_errors"] = sampling_errors
+            execution["elapsed_sec"] = time.perf_counter() - started
+            if audit is not None:
+                audit.close()
             execution["memory_before_cleanup"] = snapshot_memory().to_dict()
             model = optimizer = processor = None
             gc.collect()

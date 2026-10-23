@@ -1,0 +1,279 @@
+{
+  "classification": "PRELIMINARY",
+  "split": "validation",
+  "holdout_evaluated": false,
+  "source_sha256": {
+    "artifacts\\training\\phase_2i_a\\phase_2i_a_report_v1.json": "f73c18fd3dbe65cedb60dba2f9eaa46408f378d5b5b6c5a3bb1d7b9b6f54b13b",
+    "artifacts\\training\\phase_2i_b\\runs\\56e277e421e442b08d33b107fc934494\\baseline.json": "4118d6e08345ae4cdb25471da15bb95be41b226e9646429c08df26841bd4816d",
+    "artifacts\\training\\phase_2i_b\\runs\\56e277e421e442b08d33b107fc934494\\evaluation_step_0005.json": "c56ce3152101e5f6f3207f024c6b949bbb87984f5d335bcb60be352350abb405"
+  },
+  "conditions": {
+    "ce_frozen_standard": {
+      "n": 18,
+      "families": 6,
+      "balanced_accuracy": 0.38888888888888884,
+      "per_class_recall": {
+        "Yes": 0.16666666666666666,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.3333333333333333
+      },
+      "invalid_output_rate": 0.0,
+      "abstention_rate": 0.3333333333333333,
+      "over_abstention_on_sufficient": 0.3333333333333333,
+      "false_definitive_on_underdetermined": 0.6666666666666666,
+      "exact_label_output_count": 18,
+      "prediction_counts": {
+        "No": 11,
+        "Yes": 1,
+        "Undetermined": 6
+      },
+      "family_accuracy": {
+        "xc_ho_0011": 0.6666666666666666,
+        "xc_ho_0045": 0.3333333333333333,
+        "xc_id_0008": 0.3333333333333333,
+        "xc_id_0014": 0.3333333333333333,
+        "xc_id_0019": 0.3333333333333333,
+        "xc_id_0023": 0.3333333333333333
+      },
+      "balanced_accuracy_interval": {
+        "ci_low": 0.3333333333333333,
+        "ci_high": 0.5,
+        "n_boot": 2000,
+        "seed": 20261023,
+        "independent_units": 6,
+        "interpretation": "descriptive development family-cluster percentile CI; selection bias uncorrected"
+      }
+    },
+    "ce_step5_standard": {
+      "n": 18,
+      "families": 6,
+      "balanced_accuracy": 0.38888888888888884,
+      "per_class_recall": {
+        "Yes": 0.5,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.0
+      },
+      "invalid_output_rate": 0.3333333333333333,
+      "abstention_rate": 0.0,
+      "over_abstention_on_sufficient": 0.0,
+      "false_definitive_on_underdetermined": 0.6666666666666666,
+      "exact_label_output_count": 0,
+      "prediction_counts": {
+        "No": 9,
+        "Yes": 3,
+        "Invalid": 6
+      },
+      "family_accuracy": {
+        "xc_ho_0011": 0.6666666666666666,
+        "xc_ho_0045": 0.6666666666666666,
+        "xc_id_0008": 0.0,
+        "xc_id_0014": 0.3333333333333333,
+        "xc_id_0019": 0.6666666666666666,
+        "xc_id_0023": 0.0
+      },
+      "balanced_accuracy_interval": {
+        "ci_low": 0.16666666666666666,
+        "ci_high": 0.611111111111111,
+        "n_boot": 2000,
+        "seed": 20261023,
+        "independent_units": 6,
+        "interpretation": "descriptive development family-cluster percentile CI; selection bias uncorrected"
+      }
+    },
+    "ce_step50_standard": {
+      "n": 18,
+      "families": 6,
+      "balanced_accuracy": 0.6666666666666666,
+      "per_class_recall": {
+        "Yes": 1.0,
+        "No": 1.0,
+        "Undetermined": 0.0
+      },
+      "invalid_output_rate": 0.0,
+      "abstention_rate": 0.0,
+      "over_abstention_on_sufficient": 0.0,
+      "false_definitive_on_underdetermined": 1.0,
+      "exact_label_output_count": 0,
+      "prediction_counts": {
+        "No": 12,
+        "Yes": 6
+      },
+      "family_accuracy": {
+        "xc_ho_0011": 0.6666666666666666,
+        "xc_ho_0045": 0.6666666666666666,
+        "xc_id_0008": 0.6666666666666666,
+        "xc_id_0014": 0.6666666666666666,
+        "xc_id_0019": 0.6666666666666666,
+        "xc_id_0023": 0.6666666666666666
+      },
+      "balanced_accuracy_interval": {
+        "ci_low": 0.6666666666666666,
+        "ci_high": 0.6666666666666666,
+        "n_boot": 2000,
+        "seed": 20261023,
+        "independent_units": 6,
+        "interpretation": "descriptive development family-cluster percentile CI; selection bias uncorrected"
+      }
+    },
+    "pilot_frozen_standard": {
+      "n": 18,
+      "families": 6,
+      "balanced_accuracy": 0.38888888888888884,
+      "per_class_recall": {
+        "Yes": 0.16666666666666666,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.3333333333333333
+      },
+      "invalid_output_rate": 0.0,
+      "abstention_rate": 0.3333333333333333,
+      "over_abstention_on_sufficient": 0.3333333333333333,
+      "false_definitive_on_underdetermined": 0.6666666666666666,
+      "exact_label_output_count": 18,
+      "prediction_counts": {
+        "No": 11,
+        "Yes": 1,
+        "Undetermined": 6
+      },
+      "family_accuracy": {
+        "xc_ho_0011": 0.6666666666666666,
+        "xc_ho_0045": 0.3333333333333333,
+        "xc_id_0008": 0.3333333333333333,
+        "xc_id_0014": 0.3333333333333333,
+        "xc_id_0019": 0.3333333333333333,
+        "xc_id_0023": 0.3333333333333333
+      },
+      "balanced_accuracy_interval": {
+        "ci_low": 0.3333333333333333,
+        "ci_high": 0.5,
+        "n_boot": 2000,
+        "seed": 20261023,
+        "independent_units": 6,
+        "interpretation": "descriptive development family-cluster percentile CI; selection bias uncorrected"
+      }
+    },
+    "pilot_frozen_abstention_prompt": {
+      "n": 18,
+      "families": 6,
+      "balanced_accuracy": 0.4444444444444444,
+      "per_class_recall": {
+        "Yes": 0.3333333333333333,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.3333333333333333
+      },
+      "invalid_output_rate": 0.0,
+      "abstention_rate": 0.3333333333333333,
+      "over_abstention_on_sufficient": 0.3333333333333333,
+      "false_definitive_on_underdetermined": 0.6666666666666666,
+      "exact_label_output_count": 18,
+      "prediction_counts": {
+        "No": 10,
+        "Yes": 2,
+        "Undetermined": 6
+      },
+      "family_accuracy": {
+        "xc_ho_0011": 0.6666666666666666,
+        "xc_ho_0045": 0.6666666666666666,
+        "xc_id_0008": 0.3333333333333333,
+        "xc_id_0014": 0.3333333333333333,
+        "xc_id_0019": 0.3333333333333333,
+        "xc_id_0023": 0.3333333333333333
+      },
+      "balanced_accuracy_interval": {
+        "ci_low": 0.3333333333333333,
+        "ci_high": 0.5555555555555556,
+        "n_boot": 2000,
+        "seed": 20261023,
+        "independent_units": 6,
+        "interpretation": "descriptive development family-cluster percentile CI; selection bias uncorrected"
+      }
+    },
+    "pilot_step5_standard": {
+      "n": 18,
+      "families": 6,
+      "balanced_accuracy": 0.49999999999999994,
+      "per_class_recall": {
+        "Yes": 0.5,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.3333333333333333
+      },
+      "invalid_output_rate": 0.0,
+      "abstention_rate": 0.3333333333333333,
+      "over_abstention_on_sufficient": 0.3333333333333333,
+      "false_definitive_on_underdetermined": 0.6666666666666666,
+      "exact_label_output_count": 18,
+      "prediction_counts": {
+        "No": 9,
+        "Yes": 3,
+        "Undetermined": 6
+      },
+      "family_accuracy": {
+        "xc_ho_0011": 0.6666666666666666,
+        "xc_ho_0045": 0.6666666666666666,
+        "xc_id_0008": 0.3333333333333333,
+        "xc_id_0014": 0.3333333333333333,
+        "xc_id_0019": 0.6666666666666666,
+        "xc_id_0023": 0.3333333333333333
+      },
+      "balanced_accuracy_interval": {
+        "ci_low": 0.38888888888888884,
+        "ci_high": 0.611111111111111,
+        "n_boot": 2000,
+        "seed": 20261023,
+        "independent_units": 6,
+        "interpretation": "descriptive development family-cluster percentile CI; selection bias uncorrected"
+      }
+    },
+    "pilot_step5_abstention_prompt": {
+      "n": 18,
+      "families": 6,
+      "balanced_accuracy": 0.4444444444444444,
+      "per_class_recall": {
+        "Yes": 0.3333333333333333,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.3333333333333333
+      },
+      "invalid_output_rate": 0.0,
+      "abstention_rate": 0.3333333333333333,
+      "over_abstention_on_sufficient": 0.3333333333333333,
+      "false_definitive_on_underdetermined": 0.6666666666666666,
+      "exact_label_output_count": 18,
+      "prediction_counts": {
+        "No": 10,
+        "Yes": 2,
+        "Undetermined": 6
+      },
+      "family_accuracy": {
+        "xc_ho_0011": 0.6666666666666666,
+        "xc_ho_0045": 0.6666666666666666,
+        "xc_id_0008": 0.3333333333333333,
+        "xc_id_0014": 0.3333333333333333,
+        "xc_id_0019": 0.3333333333333333,
+        "xc_id_0023": 0.3333333333333333
+      },
+      "balanced_accuracy_interval": {
+        "ci_low": 0.3333333333333333,
+        "ci_high": 0.5555555555555556,
+        "n_boot": 2000,
+        "seed": 20261023,
+        "independent_units": 6,
+        "interpretation": "descriptive development family-cluster percentile CI; selection bias uncorrected"
+      }
+    }
+  },
+  "paired_step5_delta": {
+    "point": 0.1111111111111111,
+    "ci_low": 0.0,
+    "ci_high": 0.2222222222222222,
+    "n_boot": 2000,
+    "seed": 20261023,
+    "independent_units": 6,
+    "interpretation": "descriptive development family-cluster percentile CI; selection bias uncorrected"
+  },
+  "comparability": "same 18 IDs, six families, source prompt/image hashes, strict_answer_v1, greedy 16-token generation; separate processes and minor numerical nondeterminism possible",
+  "caveats": [
+    "Repeated development-set inspection; no independent test",
+    "Historical parser accepts trailing garbage; exact-label counts shown separately",
+    "CE step-five abstention-prompt evaluation unavailable",
+    "Source prompt hashes for augmented condition identify original records only"
+  ]
+}

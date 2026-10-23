@@ -288,6 +288,7 @@ configs/local.env
 _tmp_*.py
 
 # Keep metadata manifests and reports trackable
+/artifacts/training/phase_2i_b/runs/*/.run.lock
 !datasets/**/manifest.json
 !datasets/**/manifests/*.json
 !datasets/metadata/*.json

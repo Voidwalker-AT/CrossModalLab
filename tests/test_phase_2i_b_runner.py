@@ -262,6 +262,32 @@ class TestRunState(unittest.TestCase):
 class TestObjective(unittest.TestCase):
     is_synthetic_demo = True
 
+    def test_training_parameter_acceptance_detects_updates_and_frozen_changes(self):
+        from src.training.scorer_verification import ParameterAudit, assess_training_change
+        model = torch.nn.Module()
+        model.register_parameter("lora_weight", torch.nn.Parameter(torch.tensor([1.])))
+        model.register_parameter("frozen", torch.nn.Parameter(torch.tensor([2.]), requires_grad=False))
+        with tempfile.TemporaryDirectory() as tmp, ParameterAudit(Path(tmp)) as audit:
+            audit.capture(model)
+            self.assertFalse(assess_training_change(audit.compare(model))["passed"])
+            with torch.no_grad():
+                model.lora_weight.add_(0.1)  # SYNTHETIC DEMO mutation, no optimizer step.
+            self.assertTrue(assess_training_change(audit.compare(model))["passed"])
+            with torch.no_grad():
+                model.frozen.add_(0.1)
+            self.assertFalse(assess_training_change(audit.compare(model))["passed"])
+
+    def test_nonfinite_adapter_update_is_rejected(self):
+        from src.training.scorer_verification import ParameterAudit, assess_training_change
+        model = torch.nn.Module()
+        model.register_parameter("lora_weight", torch.nn.Parameter(torch.tensor([1.])))
+        model.register_parameter("frozen", torch.nn.Parameter(torch.tensor([2.]), requires_grad=False))
+        with tempfile.TemporaryDirectory() as tmp, ParameterAudit(Path(tmp)) as audit:
+            audit.capture(model)
+            with torch.no_grad():
+                model.lora_weight.fill_(float("nan"))
+            self.assertFalse(assess_training_change(audit.compare(model))["passed"])
+
     def test_differentiable_composition_no_ce_substitution(self):
         from src.training.phase_2i_b_protocol import compose_objective
         cfg = json.loads((REPO_ROOT / "configs/phase_2i_b/es_ablation_config_v1.json").read_text())["es_objective"]

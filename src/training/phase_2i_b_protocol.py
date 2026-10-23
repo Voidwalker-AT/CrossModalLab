@@ -108,7 +108,7 @@ def build_plan(*, root=REPO_ROOT, dataset=None):
     source_names = ("scripts/run_phase_2i_b_es_ablation.py", "src/training/run_state.py",
         "src/training/phase_2i_b_protocol.py", "src/training/differentiable_scoring.py",
         "src/training/sampling_and_masking.py", "src/training/answer_parser.py", "src/training/lora_config.py",
-        "src/models/qwen3vl2_loader.py")
+        "src/models/qwen3vl2_loader.py", "src/training/scorer_verification.py")
     identity = {"model_id": QWEN_MODEL_ID, "revision": QWEN_REVISION, "quantization": base["quantization"],
         "lora": base["lora"], "config": cfg, "base_protocol": base,
         "config_sha256": file_hash(cfg_path), "base_protocol_sha256": file_hash(base_path),

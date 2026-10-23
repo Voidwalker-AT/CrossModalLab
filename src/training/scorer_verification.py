@@ -176,6 +176,24 @@ class ParameterAudit:
                 "chunk_elements": self.chunk_elements}
 
 
+def assess_training_change(comparison):
+    """Require invariant frozen weights and at least one finite LoRA update."""
+    rows = comparison["parameters"]
+    frozen = [r for r in rows if r.get("requires_grad_before") is False]
+    trainable = [r for r in rows if r.get("requires_grad_before") is True]
+    valid_trainable = bool(trainable) and all(
+        r.get("finite") and r.get("requires_grad_after") is True
+        and r.get("original_dtype") == r.get("final_dtype")
+        and r.get("classification") in {"NUMERICALLY_CHANGED", "EXACT_NUMERICALLY_UNCHANGED"}
+        and "lora_" in r["name"] for r in trainable)
+    changed = sum(r.get("numerically_equal") is False for r in trainable)
+    return {"passed": bool(frozen) and all(r["passed"] for r in frozen)
+            and valid_trainable and changed > 0
+            and len(frozen) + len(trainable) == len(rows),
+            "frozen_tensors": len(frozen), "frozen_passed": sum(r["passed"] for r in frozen),
+            "lora_tensors": len(trainable), "lora_changed": changed}
+
+
 def _host_commit():
     if os.name != "nt":
         return {"host_commit_bytes": None, "host_commit_note": "Windows API unavailable"}
