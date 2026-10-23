@@ -1,0 +1,83 @@
+
+Loading weights:   0%|          | 0/625 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/625 [00:00<08:13,  1.26it/s]
+Loading weights:   1%|          | 4/625 [00:00<01:53,  5.45it/s]
+Loading weights:   2%|▏         | 14/625 [00:01<00:28, 21.77it/s]
+Loading weights:   4%|▎         | 22/625 [00:01<00:18, 33.18it/s]
+Loading weights:   5%|▍         | 29/625 [00:01<00:14, 40.01it/s]
+Loading weights:   6%|▌         | 38/625 [00:01<00:12, 48.20it/s]
+Loading weights:   8%|▊         | 49/625 [00:01<00:09, 58.42it/s]
+Loading weights:   9%|▉         | 59/625 [00:01<00:08, 66.40it/s]
+Loading weights:  11%|█         | 69/625 [00:01<00:07, 72.20it/s]
+Loading weights:  12%|█▏        | 77/625 [00:01<00:07, 72.35it/s]
+Loading weights:  14%|█▎        | 85/625 [00:01<00:07, 70.82it/s]
+Loading weights:  15%|█▍        | 93/625 [00:02<00:07, 66.58it/s]
+Loading weights:  16%|█▋        | 103/625 [00:02<00:07, 74.48it/s]
+Loading weights:  18%|█▊        | 113/625 [00:02<00:06, 79.27it/s]
+Loading weights:  20%|█▉        | 122/625 [00:02<00:06, 80.43it/s]
+Loading weights:  21%|██        | 131/625 [00:02<00:06, 79.20it/s]
+Loading weights:  22%|██▏       | 140/625 [00:02<00:06, 71.55it/s]
+Loading weights:  24%|██▎       | 148/625 [00:02<00:07, 65.25it/s]
+Loading weights:  25%|██▌       | 157/625 [00:02<00:06, 69.69it/s]
+Loading weights:  27%|██▋       | 166/625 [00:03<00:06, 74.45it/s]
+Loading weights:  28%|██▊       | 174/625 [00:03<00:06, 72.95it/s]
+Loading weights:  29%|██▉       | 182/625 [00:03<00:06, 71.36it/s]
+Loading weights:  31%|███       | 192/625 [00:03<00:05, 72.99it/s]
+Loading weights:  32%|███▏      | 203/625 [00:03<00:05, 79.73it/s]
+Loading weights:  34%|███▍      | 214/625 [00:03<00:05, 80.97it/s]
+Loading weights:  36%|███▌      | 224/625 [00:03<00:04, 82.71it/s]
+Loading weights:  37%|███▋      | 234/625 [00:03<00:04, 85.67it/s]
+Loading weights:  39%|███▉      | 245/625 [00:04<00:04, 86.09it/s]
+Loading weights:  41%|████      | 254/625 [00:04<00:04, 81.11it/s]
+Loading weights:  42%|████▏     | 263/625 [00:04<00:04, 78.50it/s]
+Loading weights:  43%|████▎     | 271/625 [00:04<00:04, 74.57it/s]
+Loading weights:  45%|████▍     | 280/625 [00:04<00:04, 75.13it/s]
+Loading weights:  47%|████▋     | 291/625 [00:04<00:04, 80.86it/s]
+Loading weights:  48%|████▊     | 302/625 [00:04<00:03, 85.35it/s]
+Loading weights:  53%|█████▎    | 330/625 [00:04<00:02, 137.12it/s]
+Loading weights:  59%|█████▊    | 366/625 [00:04<00:01, 195.38it/s]
+Loading weights:  65%|██████▌   | 407/625 [00:05<00:00, 255.06it/s]
+Loading weights:  70%|██████▉   | 436/625 [00:05<00:00, 263.06it/s]
+Loading weights:  75%|███████▌  | 470/625 [00:05<00:00, 285.18it/s]
+Loading weights:  81%|████████▏ | 508/625 [00:05<00:00, 308.91it/s]
+Loading weights:  87%|████████▋ | 546/625 [00:05<00:00, 323.62it/s]
+Loading weights:  94%|█████████▍| 588/625 [00:05<00:00, 351.16it/s]
+Loading weights: 100%|█████████▉| 624/625 [00:05<00:00, 231.88it/s]
+Loading weights: 100%|██████████| 625/625 [00:05<00:00, 107.17it/s]
+Capturing bounded parameter baseline
+Scoring all complete candidates
+Comparing parameter values, dtypes, and gradients
+{
+  "status": "PASSED",
+  "phase": "verification_complete",
+  "complete_answer_scores": [
+    [
+      -15.145495414733887,
+      -15.751511573791504,
+      -15.693758964538574
+    ]
+  ],
+  "gradient_tensors": 224,
+  "gradient_validation": {
+    "all_finite": true,
+    "nonzero_signal": true,
+    "frozen_gradients_absent": true
+  },
+  "cleanup_status": "PASSED",
+  "elapsed_sec": 82.89792769999985,
+  "parameter_summary": {
+    "EXACT_NUMERICALLY_UNCHANGED": 745,
+    "DTYPE_CHANGED_NUMERICALLY_EQUIVALENT": 104
+  },
+  "telemetry": {
+    "sampling_errors": [],
+    "sampling_interval_sec": 1.0,
+    "peak_torch_allocated_mib": 2709.69,
+    "peak_torch_reserved_mib": 2776.0,
+    "maximum_sampled_nvidia_used_mib": 3193.0,
+    "minimum_sampled_host_available_mib": 4400.895,
+    "maximum_sampled_host_commit_bytes": 20566044672,
+    "nvidia_sampling_note": "sampled physical usage; not a measured peak"
+  }
+}
+REPORT E:\Workspace\Active\CrossModalLab\artifacts\training\phase_2i_b_recovery\gpu_1b71a5485dff4fd1a0e8a95a442f789d.json

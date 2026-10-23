@@ -1,0 +1,195 @@
+{
+  "mode": "cpu_positions_only",
+  "holdout_used": false,
+  "optimizer_steps": 0,
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "transformers": "5.20.1",
+    "peft": "0.21.2",
+    "bitsandbytes": "0.50.2"
+  },
+  "seed": 20261023,
+  "available_ram_gib": 5.461612701416016,
+  "sample_id": "xc_id_0001::entailed",
+  "split": "train",
+  "input_shapes": {
+    "input_ids": [
+      1,
+      224
+    ],
+    "attention_mask": [
+      1,
+      224
+    ],
+    "mm_token_type_ids": [
+      1,
+      224
+    ],
+    "pixel_values": [
+      576,
+      1536
+    ],
+    "image_grid_thw": [
+      1,
+      3
+    ]
+  },
+  "candidate_ids": [
+    [
+      7414
+    ],
+    [
+      2308
+    ],
+    [
+      16887,
+      46637
+    ]
+  ],
+  "candidate_lengths": [
+    1,
+    1,
+    2
+  ],
+  "image_grid_thw": [
+    [
+      1,
+      24,
+      24
+    ]
+  ],
+  "position_ids_present": false,
+  "token_type_ids_present": false,
+  "config": {
+    "spatial_merge_size": 2,
+    "image_token_id": 151655,
+    "text_hidden_size": 2048
+  },
+  "forward_shapes": [
+    {
+      "input_ids": [
+        1,
+        225
+      ],
+      "attention_mask": [
+        1,
+        225
+      ],
+      "mm_token_type_ids": [
+        1,
+        225
+      ],
+      "pixel_values": [
+        576,
+        1536
+      ],
+      "image_grid_thw": [
+        1,
+        3
+      ]
+    },
+    {
+      "input_ids": [
+        1,
+        225
+      ],
+      "attention_mask": [
+        1,
+        225
+      ],
+      "mm_token_type_ids": [
+        1,
+        225
+      ],
+      "pixel_values": [
+        576,
+        1536
+      ],
+      "image_grid_thw": [
+        1,
+        3
+      ]
+    },
+    {
+      "input_ids": [
+        1,
+        226
+      ],
+      "attention_mask": [
+        1,
+        226
+      ],
+      "mm_token_type_ids": [
+        1,
+        226
+      ],
+      "pixel_values": [
+        576,
+        1536
+      ],
+      "image_grid_thw": [
+        1,
+        3
+      ]
+    }
+  ],
+  "positional_validation": "PASSED",
+  "phase": "verification_complete",
+  "status": "PASSED",
+  "cleanup_status": "PASSED",
+  "telemetry": {
+    "samples": [
+      {
+        "elapsed_sec": 1.5000005078036338e-06,
+        "torch_allocated_mib": 0.0,
+        "torch_reserved_mib": 0.0,
+        "torch_max_allocated_mib": 0.0,
+        "torch_max_reserved_mib": 0.0,
+        "nvidia_smi_used_mib": 311.0,
+        "nvidia_smi_total_mib": 4096.0,
+        "host_available_mib": 5592.691,
+        "warnings": [],
+        "host_commit_bytes": 16027721728,
+        "host_commit_limit_bytes": 30224683008
+      },
+      {
+        "elapsed_sec": 0.5943270999996457,
+        "torch_allocated_mib": 0.0,
+        "torch_reserved_mib": 0.0,
+        "torch_max_allocated_mib": 0.0,
+        "torch_max_reserved_mib": 0.0,
+        "nvidia_smi_used_mib": 312.0,
+        "nvidia_smi_total_mib": 4096.0,
+        "host_available_mib": 5548.238,
+        "warnings": [],
+        "host_commit_bytes": 16065290240,
+        "host_commit_limit_bytes": 30224683008
+      },
+      {
+        "elapsed_sec": 0.832610499999646,
+        "torch_allocated_mib": 0.0,
+        "torch_reserved_mib": 0.0,
+        "torch_max_allocated_mib": 0.0,
+        "torch_max_reserved_mib": 0.0,
+        "nvidia_smi_used_mib": 312.0,
+        "nvidia_smi_total_mib": 4096.0,
+        "host_available_mib": 5555.934,
+        "warnings": [],
+        "host_commit_bytes": 16064954368,
+        "host_commit_limit_bytes": 30224683008
+      }
+    ],
+    "sampling_errors": [],
+    "sampling_interval_sec": 1.0,
+    "peak_torch_allocated_mib": 0.0,
+    "peak_torch_reserved_mib": 0.0,
+    "maximum_sampled_nvidia_used_mib": 312.0,
+    "minimum_sampled_host_available_mib": 5548.238,
+    "maximum_sampled_host_commit_bytes": 16065290240,
+    "nvidia_sampling_note": "sampled physical usage; not a measured peak"
+  },
+  "elapsed_sec": 0.8926883999993152
+}
