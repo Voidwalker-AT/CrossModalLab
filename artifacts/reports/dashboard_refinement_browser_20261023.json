@@ -1,0 +1,28 @@
+{
+  "status": "PASSED",
+  "desktop": [
+    1440,
+    1100
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "images_verified": 18,
+  "checks": [
+    "triptych order",
+    "keyboard node and edge inspection",
+    "query toggle",
+    "true/false countermodels",
+    "entailed/contradicted proof paths",
+    "fork missing path",
+    "format versus semantic correctness",
+    "six architecture stages",
+    "layer selection",
+    "recall and telemetry charts",
+    "provenance contract and download",
+    "five mobile views"
+  ],
+  "page_errors": [],
+  "external_requests": []
+}

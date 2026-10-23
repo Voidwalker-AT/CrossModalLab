@@ -6,7 +6,7 @@ from pathlib import Path
 from unittest.mock import patch
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
-from dashboard.backend.artifacts import ArtifactStore, metrics, sha
+from dashboard.backend.artifacts import ArtifactStore, describe_prediction, metrics, sha
 from dashboard.backend.server import make_server
 
 
@@ -63,6 +63,45 @@ class TestDashboard(unittest.TestCase):
             image = self.store.image(sample)
             self.assertIn("dashboard/assets/images/", image.as_posix())
             self.assertEqual(sha(image), self.store.cases[sample]["image_sha256"])
+
+    def test_witness_paths_use_only_recorded_premises(self):
+        for case in self.store.workspace()["cases"]:
+            trace = case["reasoning"]
+            self.assertFalse(trace["query_is_premise"])
+            if case["symbolic_status"] == "underdetermined":
+                self.assertEqual(trace["proof_edge_indices"], [])
+                self.assertEqual({o["query_holds"] for o in trace["compatible_orderings"]}, {False, True})
+            else:
+                path = [case["premises"][i] for i in trace["proof_edge_indices"]]
+                start, end = case["query"]["subject"], case["query"]["object"]
+                if case["symbolic_status"] == "contradicted":
+                    start, end = end, start
+                self.assertEqual(path[0]["subject"], start)
+                self.assertEqual(path[-1]["object"], end)
+                self.assertTrue(all(a["object"] == b["subject"] for a, b in zip(path, path[1:])))
+
+    def test_error_categories_do_not_conflate_format_and_semantics(self):
+        # SYNTHETIC DEMO unit sentinels, never included in empirical metrics.
+        for gold, answer, expected in (("Undetermined", "Yes", "Unsupported Yes"),
+                                      ("Undetermined", "No", "Unsupported No"),
+                                      ("Yes", "Undetermined", "Incorrect abstention"),
+                                      ("Yes", "Yes", "Correct response")):
+            row = describe_prediction({"ground_truth_label": gold, "parsed_answer": answer,
+                                       "raw_completion": answer, "is_synthetic_demo": True})
+            self.assertEqual(row["behavior_category"], expected)
+            self.assertTrue(row["format_compliant"])
+        for case in self.store.workspace()["cases"]:
+            row = case["predictions"]["ce50"]
+            self.assertEqual(row["format_category"], "Malformed generation")
+            self.assertEqual(row["correct"], row["parsed_answer"] == case["ground_truth_label"])
+
+    def test_reproducibility_fields_are_portable_and_complete(self):
+        payload = self.store.workspace()
+        self.assertEqual(payload["dataset"]["split"], "validation")
+        self.assertEqual(payload["evaluation"]["parser"], "strict_answer_v1")
+        self.assertEqual(payload["experiment"]["completed_steps"], 5)
+        self.assertEqual(len(payload["dataset"]["sha256"]), 64)
+        self.assertFalse(Path(payload["dataset"]["path"]).is_absolute())
 
     def test_api_is_readonly_and_contained(self):
         for method in ("POST", "PUT", "PATCH", "DELETE"):

@@ -46,6 +46,20 @@ Development hot reload: run the Python server first, then `npm --prefix dashboar
 5. Open Architecture Explorer and select a decoder layer. Architecture equations are conceptual; no measured per-neuron activations or established circuit is claimed.
 6. Open Reproducibility and export provenance/evidence JSON. Explain the six-family development limitation and absent independent final evaluation.
 
+### Refined scientific walkthrough
+
+Failure Investigator now places **supplied input → symbolic ground truth → recorded model output** side by side on desktop and stacks those same panels on mobile. The case library, model/checkpoint selector and original comparison table remain available. The output panel distinguishes semantic correctness from exact-format compliance. Unsupported Yes, unsupported No, incorrect abstention, wrong definite answers and unparseable answers are behavioral categories; malformed generation is a separate format category. A correct extracted answer can still be malformed.
+
+The graph labels the query with a dashed purple arrow explicitly marked **query only, not a premise**. Visual premises use solid green edges and textual premises dashed gold edges. Click a node or edge, or focus it with Tab and press Enter/Space, for its explanation. Toggle query visibility and logical-path highlighting. Entailed paths follow the query; contradicted paths run in the reverse direction. Forks have no proof path. Select their compatible orderings to see one world where the query is true and another where it is false. These are logical countermodels, not generated scenes or additional empirical examples.
+
+For the demonstration, start with the underdetermined case and switch between its two orderings. Then select a contradicted case with CE step 50: the extracted answer is correct, but the raw suffix makes the generation non-compliant. This demonstrates why answer correctness and instruction-format compliance are reported separately.
+
+Architecture Explorer shows six conceptual stages: vision encoder, visual-token processing, multimodal integration, language decoder, output projection and candidate scoring. It exposes attention/MLP/residual explanations and the limits of intermediate-activation evidence. Layer selection is conceptual; no measured activations are invented. Candidate scoring explains full sequence summation and the two-token Undetermined limitation.
+
+Analytics adds per-class recall and plots of actual five-step loss and allocator memory records. Hover points for recorded values. Losses belong to different training examples; they are not a fixed-input learning curve. Reproducibility adds model ID, source dataset identity/hash, split, parser, generation settings, configuration/schedule hashes, seed and explicit paused-at-five status.
+
+The refinement adds no dependency and changes no experiment result. Selected text foreground/background pairs were checked above 4.5:1 contrast, with keyboard controls, restrained interactions and no external network requests in browser verification. This is not a claim of a full accessibility certification. See [the credential/API audit](SECURITY_AUDIT.md).
+
 ## Evidence and scientific limits
 
 `assets/development_cases.json` contains only the 18 frozen validation cases, with byte-identical PNG copies under `assets/images/`. Original dataset paths/hashes remain attached. The backend checks split, demo flag, source prompt/image identities, candidate outputs, and agreement of reachability and exhaustive linear-extension solvers. It does not read the frozen final-holdout manifest or images. Controlled scientific stimuli are real benchmark artifacts (`is_synthetic_demo:false`), distinct from fabricated tutorial data.

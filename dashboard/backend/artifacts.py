@@ -17,6 +17,62 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def describe_prediction(row):
+    """Keep behavioral correctness separate from exact output-format compliance."""
+    gold, answer = row["ground_truth_label"], row["parsed_answer"]
+    exact = row["raw_completion"].strip() in LABELS
+    if answer == gold:
+        category = "Correct response"
+    elif gold == "Undetermined" and answer in ("Yes", "No"):
+        category = f"Unsupported {answer}"
+    elif answer == "Undetermined":
+        category = "Incorrect abstention"
+    elif answer not in LABELS:
+        category = "Unparseable answer"
+    else:
+        category = "Incorrect definite answer"
+    return {**row, "correct": answer == gold, "format_compliant": exact,
+            "behavior_category": category,
+            "format_category": "Exact format" if exact else "Malformed generation"}
+
+
+def reasoning_trace(row, solution):
+    """Expose a witness path made exclusively of existing premise edges.
+
+    Logical status remains the result of the existing dual-algorithm solver.
+    No query edge is inserted into the premises.
+    """
+    q = row["query"]
+    start, end = q["subject"], q["object"]
+    status = solution.epistemic_status.value
+    if status == "contradicted":
+        start, end = end, start
+    frontier = [(start, [])]
+    visited = set()
+    path = []
+    while frontier and status != "underdetermined":
+        node, edges = frontier.pop(0)
+        if node == end:
+            path = edges
+            break
+        if node in visited:
+            continue
+        visited.add(node)
+        for index, premise in enumerate(row["premises"]):
+            if premise["subject"] == node:
+                frontier.append((premise["object"], edges + [index]))
+    if status in {"entailed", "contradicted"} and not path:
+        raise ValueError("solver status lacks premise witness path")
+    orderings = [{"entities": order,
+                  "query_holds": order.index(q["subject"]) < order.index(q["object"])}
+                 for order in solution.linear_extensions]
+    if status == "underdetermined" and {o["query_holds"] for o in orderings} != {False, True}:
+        raise ValueError("fork must admit both query directions")
+    return {"status": status, "proof_edge_indices": path,
+            "proof_direction": "reverse query" if status == "contradicted" else "forward query",
+            "query_is_premise": False, "compatible_orderings": orderings}
+
+
 def metrics(rows):
     if not rows or any(r.get("is_synthetic_demo") is True for r in rows):
         raise ValueError("synthetic demonstrations excluded from empirical analytics")
@@ -80,8 +136,11 @@ class ArtifactStore:
             for row in rows:
                 if strict_parse_answer(row["raw_completion"])["parsed_label"] != row["parsed_answer"]:
                     raise ValueError("stored parser result mismatch")
-            self.rows[key] = {r["sample_id"]: r for r in rows}
+            self.rows[key] = {r["sample_id"]: describe_prediction(r) for r in rows}
             self.conditions.append({"id": key, "name": name, "step": step, "prompt": prompt,
+                                    "source_artifact": ("artifacts/training/phase_2i_a/phase_2i_a_report_v1.json"
+                                                        if key in {"frozen", "ce5", "ce50"} else
+                                                        RUN + ("/baseline.json" if key == "prompt" else "/evaluation_step_0005.json")),
                                     "evidence": "OBSERVED BEHAVIOR", "metrics": metrics(rows)})
         # Prefer a portable package containing only these 18 development cases.
         packaged = self.root / "dashboard/assets/development_cases.json"
@@ -108,7 +167,8 @@ class ArtifactStore:
             solution = SymbolicSolver.solve([Premise(**p) for p in row["premises"]], Query(**row["query"]))
             if solution.epistemic_status.value != row["symbolic_status"] or not solution.algorithm_agreement:
                 raise ValueError("symbolic oracle mismatch")
-            self.cases[row["sample_id"]] = {**row, "solver": solution.to_dict()}
+            self.cases[row["sample_id"]] = {**row, "solver": solution.to_dict(),
+                                            "reasoning": reasoning_trace(row, solution)}
         if set(self.cases) != reference:
             raise ValueError("missing allowlisted development cases")
         self.training = [json.loads(line) for line in (self.root / RUN / "train_metrics_append.jsonl").read_text().splitlines()]
@@ -140,6 +200,13 @@ class ArtifactStore:
                 "training": self.training, "run_id": Path(RUN).name, "completed_step": 5,
                 "sources": [{"path": p, "sha256": h} for p, h in sorted(self.sources.items())],
                 "runtime": self.identity["runtime"], "optimizer": self.identity["optimizer"],
+                "dataset": {"path": self.identity["dataset"], "sha256": self.identity["dataset_sha256"],
+                            "split": "validation", "cases": 18, "families": 6},
+                "evaluation": self.identity["prompt_configuration"],
+                "experiment": {"objective": "CE + 0.25 ES", "seed": self.identity["config"]["matched_to_2i_a"]["seed"],
+                               "schedule_sha256": self.identity["schedule_sha256"],
+                               "config_sha256": self.identity["config_sha256"],
+                               "training_horizon": 50, "completed_steps": 5},
                 "scoring": {"candidates": [" Yes", " No", " Undetermined"], "token_counts": [1, 1, 2],
                             "normalization": "summed, not length-normalized", "coefficient": .25, "margin": 1},
                 "limitations": ["Repeatedly inspected development data: 18 cases, 6 families; no generalization claim.",
