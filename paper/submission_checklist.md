@@ -4,6 +4,10 @@ The university Deep Learning project demonstration and preliminary-paper deadlin
 
 ## Mandatory
 
+Prepared October 23: all five dashboard views audited on desktop/mobile; five-minute exact-record script and example JSON; completed preliminary Markdown/printable HTML paper; five SVG/PNG figures and six-condition CSV; prebuilt offline archive tooling with per-file hashes. Local extracted-package startup and browser interaction passed without Torch/ULVO/model loading. Full ULVO suite: 296 passed; ordinary Python: 296 discovered, 204 passed and 92 expected Torch-dependent skips. See [verification report](../artifacts/reports/submission_verification_20261023.md).
+
+Still pending: physical partner-machine run; human five-minute/projector rehearsal; agreed author/affiliation list; university template/page/file requirements and final human submission. These are not completed by local automated verification. No final-holdout, new training or causal intervention is authorized by this checklist.
+
 - Validate the exact existing run and real adapter/AdamW/RNG restoration before any continuation. Preserve steps 0–5 and never restart silently.
 - Training continuation is deferred under the latest dashboard-first instruction. The real-model resume audit passed at step five with zero optimizer steps and unchanged run files. Preserve the historical pilot; do not launch a longer run during this dashboard sprint.
 - Produce matched stored-data analysis with strict output compliance and historical semantic extraction reported separately. Preserve negative or inconclusive results.

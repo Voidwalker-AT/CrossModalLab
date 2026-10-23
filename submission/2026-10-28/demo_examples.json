@@ -1,0 +1,319 @@
+[
+  {
+    "sample_id": "xc_ho_0011::contradicted",
+    "prompt": "Spatially, crimson block is left of teal wedge.\n\nQuestion: Based on the image and statement, Is the golden disc left of the crimson block?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "premises": [
+      {
+        "subject": "teal_wedge",
+        "object": "golden_disc",
+        "modality": "visual"
+      },
+      {
+        "subject": "crimson_block",
+        "object": "teal_wedge",
+        "modality": "textual"
+      }
+    ],
+    "query": {
+      "subject": "golden_disc",
+      "object": "crimson_block",
+      "relation": "left_of"
+    },
+    "ground_truth_label": "No",
+    "image_sha256": "d1c94c7c6ec9dfab9a6c5c0f10d3ca063e123086c2e6a4b1d37e3edd8a9f4f05",
+    "orderings": [
+      {
+        "entities": [
+          "crimson_block",
+          "teal_wedge",
+          "golden_disc"
+        ],
+        "query_holds": false
+      }
+    ],
+    "predictions": {
+      "frozen": {
+        "sample_id": "xc_ho_0011::contradicted",
+        "family_id": "xc_ho_0011",
+        "ground_truth_label": "No",
+        "prompt_sha256": "9469c9be400610000aa05fdf50e6448582433b90dbf6cc9afb51361a70ba1ef9",
+        "image_sha256": "d1c94c7c6ec9dfab9a6c5c0f10d3ca063e123086c2e6a4b1d37e3edd8a9f4f05",
+        "raw_completion": "No",
+        "parsed_answer": "No",
+        "parse_status": "parsed_strict",
+        "is_correct": true,
+        "latency_sec": 1.1091,
+        "abstention_prompt": false,
+        "correct": true,
+        "format_compliant": true,
+        "behavior_category": "Correct response",
+        "format_category": "Exact format"
+      },
+      "ce5": {
+        "sample_id": "xc_ho_0011::contradicted",
+        "family_id": "xc_ho_0011",
+        "ground_truth_label": "No",
+        "prompt_sha256": "9469c9be400610000aa05fdf50e6448582433b90dbf6cc9afb51361a70ba1ef9",
+        "image_sha256": "d1c94c7c6ec9dfab9a6c5c0f10d3ca063e123086c2e6a4b1d37e3edd8a9f4f05",
+        "raw_completion": "No���������������",
+        "parsed_answer": "No",
+        "parse_status": "parsed_strict",
+        "is_correct": true,
+        "latency_sec": 2.4076,
+        "abstention_prompt": false,
+        "correct": true,
+        "format_compliant": false,
+        "behavior_category": "Correct response",
+        "format_category": "Malformed generation"
+      },
+      "es5": {
+        "abstention_prompt": false,
+        "family_id": "xc_ho_0011",
+        "ground_truth_label": "No",
+        "image_sha256": "d1c94c7c6ec9dfab9a6c5c0f10d3ca063e123086c2e6a4b1d37e3edd8a9f4f05",
+        "is_correct": true,
+        "latency_sec": 0.7631,
+        "parse_status": "parsed_strict",
+        "parsed_answer": "No",
+        "prompt_sha256": "9469c9be400610000aa05fdf50e6448582433b90dbf6cc9afb51361a70ba1ef9",
+        "raw_completion": "No",
+        "sample_id": "xc_ho_0011::contradicted",
+        "correct": true,
+        "format_compliant": true,
+        "behavior_category": "Correct response",
+        "format_category": "Exact format"
+      },
+      "ce50": {
+        "sample_id": "xc_ho_0011::contradicted",
+        "family_id": "xc_ho_0011",
+        "ground_truth_label": "No",
+        "prompt_sha256": "9469c9be400610000aa05fdf50e6448582433b90dbf6cc9afb51361a70ba1ef9",
+        "image_sha256": "d1c94c7c6ec9dfab9a6c5c0f10d3ca063e123086c2e6a4b1d37e3edd8a9f4f05",
+        "raw_completion": " No���������������",
+        "parsed_answer": "No",
+        "parse_status": "parsed_strict",
+        "is_correct": true,
+        "latency_sec": 2.2064,
+        "abstention_prompt": false,
+        "correct": true,
+        "format_compliant": false,
+        "behavior_category": "Correct response",
+        "format_category": "Malformed generation"
+      }
+    }
+  },
+  {
+    "sample_id": "xc_ho_0011::entailed",
+    "prompt": "Notice that the teal wedge appears left of the crimson block.\n\nQuestion: Based on the image and statement, Is the golden disc left of the crimson block?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "premises": [
+      {
+        "subject": "golden_disc",
+        "object": "teal_wedge",
+        "modality": "visual"
+      },
+      {
+        "subject": "teal_wedge",
+        "object": "crimson_block",
+        "modality": "textual"
+      }
+    ],
+    "query": {
+      "subject": "golden_disc",
+      "object": "crimson_block",
+      "relation": "left_of"
+    },
+    "ground_truth_label": "Yes",
+    "image_sha256": "07765bb13c2ea439db2677e95ddabb048ae39ea197f98aafd301c1b16544a35d",
+    "orderings": [
+      {
+        "entities": [
+          "golden_disc",
+          "teal_wedge",
+          "crimson_block"
+        ],
+        "query_holds": true
+      }
+    ],
+    "predictions": {
+      "frozen": {
+        "sample_id": "xc_ho_0011::entailed",
+        "family_id": "xc_ho_0011",
+        "ground_truth_label": "Yes",
+        "prompt_sha256": "7c7d14351635c51df5d9a2c2d784890b9d2d84470cccd355a78b3bc34e8a8782",
+        "image_sha256": "07765bb13c2ea439db2677e95ddabb048ae39ea197f98aafd301c1b16544a35d",
+        "raw_completion": "Yes",
+        "parsed_answer": "Yes",
+        "parse_status": "parsed_strict",
+        "is_correct": true,
+        "latency_sec": 0.4332,
+        "abstention_prompt": false,
+        "correct": true,
+        "format_compliant": true,
+        "behavior_category": "Correct response",
+        "format_category": "Exact format"
+      },
+      "ce5": {
+        "sample_id": "xc_ho_0011::entailed",
+        "family_id": "xc_ho_0011",
+        "ground_truth_label": "Yes",
+        "prompt_sha256": "7c7d14351635c51df5d9a2c2d784890b9d2d84470cccd355a78b3bc34e8a8782",
+        "image_sha256": "07765bb13c2ea439db2677e95ddabb048ae39ea197f98aafd301c1b16544a35d",
+        "raw_completion": "Yes���������������",
+        "parsed_answer": "Yes",
+        "parse_status": "parsed_strict",
+        "is_correct": true,
+        "latency_sec": 2.3512,
+        "abstention_prompt": false,
+        "correct": true,
+        "format_compliant": false,
+        "behavior_category": "Correct response",
+        "format_category": "Malformed generation"
+      },
+      "es5": {
+        "abstention_prompt": false,
+        "family_id": "xc_ho_0011",
+        "ground_truth_label": "Yes",
+        "image_sha256": "07765bb13c2ea439db2677e95ddabb048ae39ea197f98aafd301c1b16544a35d",
+        "is_correct": true,
+        "latency_sec": 0.5098,
+        "parse_status": "parsed_strict",
+        "parsed_answer": "Yes",
+        "prompt_sha256": "7c7d14351635c51df5d9a2c2d784890b9d2d84470cccd355a78b3bc34e8a8782",
+        "raw_completion": "Yes",
+        "sample_id": "xc_ho_0011::entailed",
+        "correct": true,
+        "format_compliant": true,
+        "behavior_category": "Correct response",
+        "format_category": "Exact format"
+      },
+      "ce50": {
+        "sample_id": "xc_ho_0011::entailed",
+        "family_id": "xc_ho_0011",
+        "ground_truth_label": "Yes",
+        "prompt_sha256": "7c7d14351635c51df5d9a2c2d784890b9d2d84470cccd355a78b3bc34e8a8782",
+        "image_sha256": "07765bb13c2ea439db2677e95ddabb048ae39ea197f98aafd301c1b16544a35d",
+        "raw_completion": " Yes���������������",
+        "parsed_answer": "Yes",
+        "parse_status": "parsed_strict",
+        "is_correct": true,
+        "latency_sec": 2.2854,
+        "abstention_prompt": false,
+        "correct": true,
+        "format_compliant": false,
+        "behavior_category": "Correct response",
+        "format_category": "Malformed generation"
+      }
+    }
+  },
+  {
+    "sample_id": "xc_ho_0011::underdetermined",
+    "prompt": "The crimson block is to the left of the teal wedge.\n\nQuestion: Based on the image and statement, Is the golden disc left of the crimson block?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "premises": [
+      {
+        "subject": "golden_disc",
+        "object": "teal_wedge",
+        "modality": "visual"
+      },
+      {
+        "subject": "crimson_block",
+        "object": "teal_wedge",
+        "modality": "textual"
+      }
+    ],
+    "query": {
+      "subject": "golden_disc",
+      "object": "crimson_block",
+      "relation": "left_of"
+    },
+    "ground_truth_label": "Undetermined",
+    "image_sha256": "100944c66694a46b17306f524670ac978275e63e4852c309eb110fdd36395836",
+    "orderings": [
+      {
+        "entities": [
+          "crimson_block",
+          "golden_disc",
+          "teal_wedge"
+        ],
+        "query_holds": false
+      },
+      {
+        "entities": [
+          "golden_disc",
+          "crimson_block",
+          "teal_wedge"
+        ],
+        "query_holds": true
+      }
+    ],
+    "predictions": {
+      "frozen": {
+        "sample_id": "xc_ho_0011::underdetermined",
+        "family_id": "xc_ho_0011",
+        "ground_truth_label": "Undetermined",
+        "prompt_sha256": "386b1aaaae76b56e66288e241e8f149c763cccc46f87d69b76753c946474055d",
+        "image_sha256": "100944c66694a46b17306f524670ac978275e63e4852c309eb110fdd36395836",
+        "raw_completion": "No",
+        "parsed_answer": "No",
+        "parse_status": "parsed_strict",
+        "is_correct": false,
+        "latency_sec": 0.4277,
+        "abstention_prompt": false,
+        "correct": false,
+        "format_compliant": true,
+        "behavior_category": "Unsupported No",
+        "format_category": "Exact format"
+      },
+      "ce5": {
+        "sample_id": "xc_ho_0011::underdetermined",
+        "family_id": "xc_ho_0011",
+        "ground_truth_label": "Undetermined",
+        "prompt_sha256": "386b1aaaae76b56e66288e241e8f149c763cccc46f87d69b76753c946474055d",
+        "image_sha256": "100944c66694a46b17306f524670ac978275e63e4852c309eb110fdd36395836",
+        "raw_completion": "No���������������",
+        "parsed_answer": "No",
+        "parse_status": "parsed_strict",
+        "is_correct": false,
+        "latency_sec": 2.313,
+        "abstention_prompt": false,
+        "correct": false,
+        "format_compliant": false,
+        "behavior_category": "Unsupported No",
+        "format_category": "Malformed generation"
+      },
+      "es5": {
+        "abstention_prompt": false,
+        "family_id": "xc_ho_0011",
+        "ground_truth_label": "Undetermined",
+        "image_sha256": "100944c66694a46b17306f524670ac978275e63e4852c309eb110fdd36395836",
+        "is_correct": false,
+        "latency_sec": 0.4657,
+        "parse_status": "parsed_strict",
+        "parsed_answer": "No",
+        "prompt_sha256": "386b1aaaae76b56e66288e241e8f149c763cccc46f87d69b76753c946474055d",
+        "raw_completion": "No",
+        "sample_id": "xc_ho_0011::underdetermined",
+        "correct": false,
+        "format_compliant": true,
+        "behavior_category": "Unsupported No",
+        "format_category": "Exact format"
+      },
+      "ce50": {
+        "sample_id": "xc_ho_0011::underdetermined",
+        "family_id": "xc_ho_0011",
+        "ground_truth_label": "Undetermined",
+        "prompt_sha256": "386b1aaaae76b56e66288e241e8f149c763cccc46f87d69b76753c946474055d",
+        "image_sha256": "100944c66694a46b17306f524670ac978275e63e4852c309eb110fdd36395836",
+        "raw_completion": " No���������������",
+        "parsed_answer": "No",
+        "parse_status": "parsed_strict",
+        "is_correct": false,
+        "latency_sec": 2.2978,
+        "abstention_prompt": false,
+        "correct": false,
+        "format_compliant": false,
+        "behavior_category": "Unsupported No",
+        "format_category": "Malformed generation"
+      }
+    }
+  }
+]

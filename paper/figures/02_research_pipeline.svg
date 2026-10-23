@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="600.3pt" height="279.575225pt" viewBox="0 0 600.3 279.575225" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 279.575225
+L 600.3 279.575225
+L 600.3 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <g id="patch_2">
+     <path d="M 18.918 107.402425
+L 139.139875 107.402425
+Q 147.139875 107.402425 147.139875 99.402425
+L 147.139875 89.7243
+Q 147.139875 81.7243 139.139875 81.7243
+L 18.918 81.7243
+Q 10.918 81.7243 10.918 89.7243
+L 10.918 99.402425
+Q 10.918 107.402425 18.918 107.402425
+z
+" style="fill: #eff5ee; stroke: #267864; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="18.918" y="97.322738" transform="rotate(-0 18.918 97.322738)">Controlled image + text</text>
+   </g>
+   <g id="text_2">
+    <g id="patch_3">
+     <path d="M 218.124 107.402425
+L 316.488062 107.402425
+Q 324.488062 107.402425 324.488062 99.402425
+L 324.488062 89.7243
+Q 324.488062 81.7243 316.488062 81.7243
+L 218.124 81.7243
+Q 210.124 81.7243 210.124 89.7243
+L 210.124 99.402425
+Q 210.124 107.402425 218.124 107.402425
+z
+" style="fill: #eff5ee; stroke: #267864; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="218.124" y="97.322738" transform="rotate(-0 218.124 97.322738)">Stored VLM outputs</text>
+   </g>
+   <g id="text_3">
+    <g id="patch_4">
+     <path d="M 417.33 107.402425
+L 542.422187 107.402425
+Q 550.422187 107.402425 550.422187 99.402425
+L 550.422187 89.7243
+Q 550.422187 81.7243 542.422187 81.7243
+L 417.33 81.7243
+Q 409.33 81.7243 409.33 89.7243
+L 409.33 99.402425
+Q 409.33 107.402425 417.33 107.402425
+z
+" style="fill: #eff5ee; stroke: #267864; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="417.33" y="97.322738" transform="rotate(-0 417.33 97.322738)">Behavioral / format audit</text>
+   </g>
+   <g id="text_4">
+    <g id="patch_5">
+     <path d="M 18.918 218.282425
+L 130.807063 218.282425
+Q 138.807063 218.282425 138.807063 210.282425
+L 138.807063 200.6043
+Q 138.807063 192.6043 130.807063 192.6043
+L 18.918 192.6043
+Q 10.918 192.6043 10.918 200.6043
+L 10.918 210.282425
+Q 10.918 218.282425 18.918 218.282425
+z
+" style="fill: #eff5ee; stroke: #267864; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="18.918" y="208.202738" transform="rotate(-0 18.918 208.202738)">Symbolic ground truth</text>
+   </g>
+   <g id="text_5">
+    <g id="patch_6">
+     <path d="M 218.124 218.282425
+L 365.328688 218.282425
+Q 373.328688 218.282425 373.328688 210.282425
+L 373.328688 200.6043
+Q 373.328688 192.6043 365.328688 192.6043
+L 218.124 192.6043
+Q 210.124 192.6043 210.124 200.6043
+L 210.124 210.282425
+Q 210.124 218.282425 218.124 218.282425
+z
+" style="fill: #eff5ee; stroke: #267864; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="218.124" y="208.202738" transform="rotate(-0 218.124 208.202738)">Probes / intervention controls</text>
+   </g>
+   <g id="text_6">
+    <g id="patch_7">
+     <path d="M 417.33 218.282425
+L 573.164375 218.282425
+Q 581.164375 218.282425 581.164375 210.282425
+L 581.164375 200.6043
+Q 581.164375 192.6043 573.164375 192.6043
+L 417.33 192.6043
+Q 409.33 192.6043 409.33 200.6043
+L 409.33 210.282425
+Q 409.33 218.282425 417.33 218.282425
+z
+" style="fill: #eff5ee; stroke: #267864; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="417.33" y="208.202738" transform="rotate(-0 417.33 208.202738)">Dashboard + evidence registry</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 161.532654 92.887538
+Q 185.90022 92.887538 209.149751 92.887538
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+    <path d="M 204.749751 90.687538
+L 209.149751 92.887538
+L 204.749751 95.087538
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 360.738654 92.887538
+Q 385.10622 92.887538 408.355751 92.887538
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+    <path d="M 403.955751 90.687538
+L 408.355751 92.887538
+L 403.955751 95.087538
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 77.508 114.847787
+Q 77.508 150.544834 77.508 185.123846
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+    <path d="M 79.708 180.723846
+L 77.508 185.123846
+L 75.308 180.723846
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 149.752967 185.516733
+Q 282.575877 150.54438 414.317603 115.856703
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+    <path d="M 409.502456 114.849553
+L 414.317603 115.856703
+L 410.622794 119.104531
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 294.291 114.847787
+Q 294.291 150.544834 294.291 185.123846
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+    <path d="M 296.491 180.723846
+L 294.291 185.123846
+L 292.091 180.723846
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 487.638 114.847787
+Q 487.638 150.544834 487.638 185.123846
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+    <path d="M 489.838 180.723846
+L 487.638 185.123846
+L 485.438 180.723846
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 378.321018 203.767538
+Q 393.894469 203.767538 408.349885 203.767538
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+    <path d="M 403.949885 201.567538
+L 408.349885 203.767538
+L 403.949885 205.967538
+" style="fill: none; stroke: #267864; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="300.15" y="270.295538" transform="rotate(-0 300.15 270.295538)">External probes are correlational; surviving controls establish no relation-specific circuit.</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 13.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="300.15" y="17.229938" transform="rotate(-0 300.15 17.229938)">CrossModalLab research pipeline (conceptual)</text>
+   </g>
+  </g>
+ </g>
+</svg>

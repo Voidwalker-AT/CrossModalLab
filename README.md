@@ -63,6 +63,8 @@ Shared experiment config: `configs/experiment_config.json`.
 
 The artifact-backed React + TypeScript dashboard has five views: Architecture Explorer, Evidence & Reasoning, Failure Investigator, Experiment Analytics, and Reproducibility. It runs without loading a model or requiring a GPU. See [dashboard setup and demo script](dashboard/README.md) and the [submission checklist](paper/submission_checklist.md).
 
+The [October 28 presentation package](submission/2026-10-28/README.md) includes the exact-record five-minute script, preliminary [printable paper](paper/manuscript/draft.html), five SVG/PNG figures and reproducibility notes. Its prebuilt archive needs only ordinary Python at runtime. Physical partner-machine verification and the human timed rehearsal remain pending.
+
 After frontend dependencies are installed from the committed lockfile:
 
 ```sh

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="572.4pt" height="271.224pt" viewBox="0 0 572.4 271.224" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 271.224
+L 572.4 271.224
+L 572.4 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g clip-path="url(#pb13d2b357a)">
+    <image xlink:href="data:image/png;base64,
+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" id="image4d2d011eb6" transform="scale(1 -1) translate(0 -207.36)" x="7.2" y="-46.537046" width="207.36" height="207.36"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="110.725046" y="40.846954" transform="rotate(-0 110.725046 40.846954)">Original recorded input image</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="text_2">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(264.977365 48.864517)">xc_ho_0011::underdetermined</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(264.977365 63.37983)"/>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(264.977365 77.617017)">A: golden disc     B: teal wedge     C: crimson block</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(264.977365 91.854205)">Image: A &lt; B.     Text: C &lt; B.     Query: A &lt; C?</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(264.977365 106.091392)"/>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(264.977365 120.32858)">Compatible orders: A &lt; C &lt; B and C &lt; A &lt; B.</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(264.977365 134.565767)">Symbolic answer: Undetermined.</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(264.977365 148.802955)"/>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(264.977365 163.040142)">Frozen Qwen: raw "No" -&gt; unsupported No</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(264.977365 177.27733)">CE+ES step 5: raw "No" -&gt; unsupported No</text>
+   </g>
+  </g>
+  <g id="text_3">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="277.2" y="16.318125" transform="rotate(-0 277.2 16.318125)">Observed behavioral failure; internal cause remains unverified</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb13d2b357a">
+   <rect x="7.2" y="46.846954" width="207.050093" height="207.050093"/>
+  </clipPath>
+ </defs>
+</svg>

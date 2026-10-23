@@ -1,0 +1,43 @@
+{
+  "classification": "PRELIMINARY DEVELOPMENT; schematic figures explicitly conceptual",
+  "holdout_used": false,
+  "new_inference": false,
+  "sources": [
+    {
+      "path": "artifacts/training/phase_2i_a/phase_2i_a_report_v1.json",
+      "sha256": "f73c18fd3dbe65cedb60dba2f9eaa46408f378d5b5b6c5a3bb1d7b9b6f54b13b"
+    },
+    {
+      "path": "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/baseline.json",
+      "sha256": "4118d6e08345ae4cdb25471da15bb95be41b226e9646429c08df26841bd4816d"
+    },
+    {
+      "path": "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json",
+      "sha256": "c56ce3152101e5f6f3207f024c6b949bbb87984f5d335bcb60be352350abb405"
+    },
+    {
+      "path": "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/run.json",
+      "sha256": "8e0c5421e3357060bb35d63ef57d50bc1827f5e9c0964b21905cfbc1fe8185ee"
+    },
+    {
+      "path": "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/train_metrics_append.jsonl",
+      "sha256": "9787419be094a644bbe6e61332527dff1765a97a78389c3728cd0cf085d6ae43"
+    },
+    {
+      "path": "dashboard/assets/development_cases.json",
+      "sha256": "fac0ac9b25fc6bfb0c20275671a426216e8f4a0730686d343ca8cae442adf7b7"
+    }
+  ],
+  "files": {
+    "01_evidence_states.svg": "870fed36611557632fe2af3a27838215abf16e5bde27a13ebfc681c9daa74799",
+    "01_evidence_states.png": "067e0f0ffaeaf8f4d65026caa868f18f55f6434f1dc6c3df595b97c1350b9878",
+    "02_research_pipeline.svg": "2250ff4f8ba53bc9fa2f2f62400ece2f6d49a29c987e6fe10d3f5b2d85cd3244",
+    "02_research_pipeline.png": "27eadea6395661280ee642cebdb09ddb168a542259aaa63416e0318d273acd1d",
+    "03_checkpoint_comparison.svg": "8de83a1d11ff483613e0eee2e59d5b2c76410c050a722d87265412cec5cafaa0",
+    "03_checkpoint_comparison.png": "3659853e985e5ba2191fbf9dd37750f0a9fde962c6c723ef115f486273e4584a",
+    "04_class_recall.svg": "277f6f8baf7203c0434f88bd1110197c28528865ec08318c8eef4d3341e1f474",
+    "04_class_recall.png": "2c55075e517a4316254166a64fd5b90c5e08fb9b63c2397dace410e781d2eea8",
+    "05_recorded_failure.svg": "855165ac94bb0a47b0bc7836fa18338471c0b05f03ac39baa8718ee2969fc5e1",
+    "05_recorded_failure.png": "55c30ef4c3cc33d36ed313a855e222898b795f61eb0ff76410eb4ef621a53352"
+  }
+}
