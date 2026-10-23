@@ -1,0 +1,18 @@
+{
+  "mode": "gpu",
+  "holdout_used": false,
+  "optimizer_steps": 0,
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "transformers": "5.20.1",
+    "peft": "0.21.2",
+    "bitsandbytes": "0.50.2"
+  },
+  "available_ram_gib": 1.4265823364257812,
+  "status": "FAILED",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\Workspace\\Active\\CrossModalLab\\scripts\\verify_phase_2i_b_scorer.py\", line 53, in main\n    raise RuntimeError(\"RAM_GATE_FAIL: at least 4 GiB available host RAM required before loading\")\nRuntimeError: RAM_GATE_FAIL: at least 4 GiB available host RAM required before loading\n",
+  "elapsed_sec": 0.0003690000012284145
+}

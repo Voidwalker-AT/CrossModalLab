@@ -1,0 +1,141 @@
+{
+  "mode": "cpu_positions_only",
+  "holdout_used": false,
+  "optimizer_steps": 0,
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "transformers": "5.20.1",
+    "peft": "0.21.2",
+    "bitsandbytes": "0.50.2"
+  },
+  "available_ram_gib": 5.263454437255859,
+  "sample_id": "xc_id_0001::entailed",
+  "split": "train",
+  "input_shapes": {
+    "input_ids": [
+      1,
+      224
+    ],
+    "attention_mask": [
+      1,
+      224
+    ],
+    "mm_token_type_ids": [
+      1,
+      224
+    ],
+    "pixel_values": [
+      576,
+      1536
+    ],
+    "image_grid_thw": [
+      1,
+      3
+    ]
+  },
+  "candidate_ids": [
+    [
+      7414
+    ],
+    [
+      2308
+    ],
+    [
+      16887,
+      46637
+    ]
+  ],
+  "candidate_lengths": [
+    1,
+    1,
+    2
+  ],
+  "image_grid_thw": [
+    [
+      1,
+      24,
+      24
+    ]
+  ],
+  "position_ids_present": false,
+  "token_type_ids_present": false,
+  "config": {
+    "spatial_merge_size": 2,
+    "image_token_id": 151655,
+    "text_hidden_size": 2048
+  },
+  "forward_shapes": [
+    {
+      "input_ids": [
+        1,
+        225
+      ],
+      "attention_mask": [
+        1,
+        225
+      ],
+      "mm_token_type_ids": [
+        1,
+        225
+      ],
+      "pixel_values": [
+        576,
+        1536
+      ],
+      "image_grid_thw": [
+        1,
+        3
+      ]
+    },
+    {
+      "input_ids": [
+        1,
+        225
+      ],
+      "attention_mask": [
+        1,
+        225
+      ],
+      "mm_token_type_ids": [
+        1,
+        225
+      ],
+      "pixel_values": [
+        576,
+        1536
+      ],
+      "image_grid_thw": [
+        1,
+        3
+      ]
+    },
+    {
+      "input_ids": [
+        1,
+        226
+      ],
+      "attention_mask": [
+        1,
+        226
+      ],
+      "mm_token_type_ids": [
+        1,
+        226
+      ],
+      "pixel_values": [
+        576,
+        1536
+      ],
+      "image_grid_thw": [
+        1,
+        3
+      ]
+    }
+  ],
+  "positional_validation": "PASSED",
+  "status": "PASSED",
+  "elapsed_sec": 0.49815510000007635
+}
