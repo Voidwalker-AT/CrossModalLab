@@ -1,0 +1,25 @@
+{
+  "id": "crossmodallab",
+  "name": "CrossModalLab",
+  "path": "Active/CrossModalLab",
+  "category": "active",
+  "status": "active",
+  "languages": ["python", "typescript"],
+  "frameworks": ["react", "vite", "python-stdlib"],
+  "packageManager": "npm",
+  "environment": "ordinary Python; optional ULVO for research",
+  "gpu": "none",
+  "git": true,
+  "documentation": "Active/CrossModalLab/dashboard/README.md",
+  "commands": {
+    "dashboard": {
+      "description": "Build when necessary and launch the read-only scientific dashboard on loopback",
+      "executable": "python",
+      "args": ["-B", "scripts/launch_dashboard.py"],
+      "cwd": "Active/CrossModalLab",
+      "risk": "safe"
+    }
+  },
+  "tags": ["research", "vision-language", "dashboard"],
+  "instructions": "Active/CrossModalLab/AGENTS.md"
+}

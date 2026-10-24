@@ -40,6 +40,12 @@ def make_server(port=8765, *, store=None):
                     return self.send(200, store.workspace())
                 if path == "/api/provenance":
                     return self.send(200, store.provenance())
+                if path.startswith("/api/comparison/"):
+                    from dashboard.backend.exports import comparison_svg
+                    sample = path[len("/api/comparison/"):]
+                    if not sample.endswith(".svg") or sample[:-4] not in store.cases:
+                        return self.send(404, {"error": "comparison outside development allowlist"})
+                    return self.send(200, comparison_svg(store, sample[:-4]), "image/svg+xml; charset=utf-8")
                 if path.startswith("/api/image/"):
                     return self.send(200, store.image(path[len('/api/image/'):]).read_bytes(), "image/png")
                 if path.startswith("/api/"):

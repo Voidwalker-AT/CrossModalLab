@@ -14,3 +14,5 @@ Allowed classifications: **ESTABLISHED BY EXPERIMENT**, **PRELIMINARY**, **CORRE
 | C8 | Generalization benefit of the frozen ES margin remains untested independently (E11). | UNVERIFIED | Five steps validate the proposed scientific method. |
 
 No causal-mechanism claim is currently **CAUSALLY SUPPORTED**. Attention maps and logit-lens readouts are correlational. Probe failure would not prove information absence. Patching would not establish uniqueness without alternative-path and multi-component tests. Keep all future manuscript sentences tied to evidence IDs, revising these rows only after reading new raw evidence.
+
+**C9 / E12 — CORRELATIONAL:** Existing Smol residual-output rows and probe results can be visualized with their recorded identities and CPU validation. Neither activation-norm differences nor probe accessibility identifies the cause of a selected Qwen error. Qwen per-case neural measurements remain NOT MEASURED. No existing claim is upgraded by the export.

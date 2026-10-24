@@ -4,6 +4,10 @@ Read-only React + TypeScript research workbench with a Python standard-library b
 
 ## Run on either contributor's machine
 
+On the registered primary machine, run `wsctl run crossmodallab dashboard`. The portable equivalent is `python -B scripts/launch_dashboard.py`. Both genuinely start the server at localhost:8765, build stale frontend files using already installed locked packages and stop on Ctrl+C. Neither installs dependencies. A busy port is reported without terminating its owner; use `--port 8766` with the portable launcher. [Registration, exit-code repair and evidence-export procedures](EVIDENCE_EXPORT.md) document the local WSCTL dependency separately.
+
+Failure Investigator now adds four standard-prompt checkpoint cards and downloadable self-contained comparison SVGs. Reproducibility includes a collapsible gallery of all 18 original inputs. Architecture Explorer adds [historical Smol neural diagnostics](NEURAL_EVIDENCE.md) with measured norms and external probe curves, clearly separate from Qwen. Qwen per-case activations remain NOT MEASURED; no neural failure mechanism is inferred.
+
 Prerequisites: ordinary Python 3.11+ and an existing Node/npm installation. Vite 8.3.5 declares Node `^20.19.0 || >=22.12.0`; this machine was verified with Node 24.15.0 and npm 11.12.1. Python backend imports only standard-library/project modules. Core scientific/GPU environments are separate and unchanged.
 
 From the repository root, after the approved dependencies are installed:

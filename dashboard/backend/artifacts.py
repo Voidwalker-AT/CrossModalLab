@@ -188,10 +188,12 @@ class ArtifactStore:
         return path
 
     def workspace(self):
+        from dashboard.backend.neural import load
         cases = []
         for sample_id, row in sorted(self.cases.items()):
             cases.append({**row, "predictions": {k: v[sample_id] for k, v in self.rows.items()}})
         return {"schema": "crossmodallab_dashboard_v1", "is_synthetic_demo": False,
+                "neural": load(self.root),
                 "split": "development-validation", "holdout_used": False,
                 "conditions": self.conditions, "cases": cases,
                 "model": {"id": self.identity["model_id"], "revision": self.identity["revision"],
