@@ -45,14 +45,14 @@ Development hot reload: run the Python server first, then `npm --prefix dashboar
 
 1. Open Failure Investigator with **CE + ES · step 5**. Inspect the first recorded underdetermined fork: image, textual premise and query.
 2. Read the symbolic graph and its two consistent orderings. Explain why neither query direction follows; this is ground-truth logic, not a neural reasoning trace.
-3. Inspect the stored answers across frozen Qwen, CE step 5, CE+ES step 5 and CE step 50. Raw malformed CE output remains visible and exact format compliance is separate from historical semantic parsing.
+3. Inspect the stored answers across frozen Qwen, CE step 5, CE+ES step 5 and CE step 50. Exact malformed CE output is available in expandable details with a copy action; exact-format compliance is separate from historical semantic parsing.
 4. Filter to errors or another logical class; switch checkpoints. Open Analytics for confusion matrices, class-sensitive metrics and actual training telemetry.
 5. Open Architecture Explorer and select a decoder layer. Architecture equations are conceptual; no measured per-neuron activations or established circuit is claimed.
 6. Open Reproducibility and export provenance/evidence JSON. Explain the six-family development limitation and absent independent final evaluation.
 
 ### Refined scientific walkthrough
 
-Failure Investigator now places **supplied input → symbolic ground truth → recorded model output** side by side on desktop and stacks those same panels on mobile. The case library, model/checkpoint selector and original comparison table remain available. The output panel distinguishes semantic correctness from exact-format compliance. Unsupported Yes, unsupported No, incorrect abstention, wrong definite answers and unparseable answers are behavioral categories; malformed generation is a separate format category. A correct extracted answer can still be malformed.
+Failure Investigator now places **supplied input → symbolic ground truth → recorded model output** in a readable question → logic → answer sequence. The input and logical explanation share the desktop row; the verdict follows below. Mobile stacks the same panels. The case library, model/checkpoint selector and original comparison table remain available. The output panel distinguishes semantic correctness from exact-format compliance. Unsupported Yes, unsupported No, incorrect abstention, wrong definite answers and unparseable answers are behavioral categories; malformed generation is a separate format category. A correct extracted answer can still be malformed.
 
 The graph labels the query with a dashed purple arrow explicitly marked **query only, not a premise**. Visual premises use solid green edges and textual premises dashed gold edges. Click a node or edge, or focus it with Tab and press Enter/Space, for its explanation. Toggle query visibility and logical-path highlighting. Entailed paths follow the query; contradicted paths run in the reverse direction. Forks have no proof path. Select their compatible orderings to see one world where the query is true and another where it is false. These are logical countermodels, not generated scenes or additional empirical examples.
 
@@ -87,3 +87,11 @@ Browser verification covers five views, error/class/search filters, checkpoint m
 ## Scope and next increment
 
 This completes an artifact-backed dashboard foundation. Live model execution, general activation exploration, intervention execution, and calibrated uncertainty are not implemented. Next: partner dry run, university feedback, and incremental supported measurements. The October 28 university deliverable is the working dashboard/demo plus preliminary paper; December 1 remains the research/publication-quality target, with venue and acceptance unconfirmed.
+
+## Human-centered walkthrough (October 24 refinement)
+
+The default reading flow explains what the model saw, what the evidence establishes, what it answered and why that distinction matters. Hashes, exact raw strings and model identifiers remain in expandable verification panels. Every main chart defines the metric and its limits. Historical SmolVLM2 measurements are explicitly separate from Qwen behavior.
+
+Choose **Start the five-minute guided tour** for seven stops with Next/Previous controls. It selects `xc_ho_0011::underdetermined` and CE+ES step five; normal navigation is preserved. See [the timed script](human_centered_demo.md). Case evidence and the tour run without loading a model. Human rehearsal and independent partner-machine verification remain pending.
+
+The new offline story gallery and versioned ZIP are documented in [EVIDENCE_EXPORT.md](EVIDENCE_EXPORT.md). Older releases remain preserved.

@@ -18,9 +18,11 @@ The partner can build the frontend from its existing locked dependencies and run
 
 ## Central evidence folder
 
-`submission/CrossModalLab_Research_Evidence_Oct28/` contains a browser-openable `Gallery.html`, `README.md`, machine-readable `MANIFEST.json` and nine numbered directories. The adjacent ZIP has the same basename. Both generated payloads are Git-ignored; a small release manifest is recorded under `artifacts/reports/`. Original research files are never moved or deleted.
+Each versioned `submission/CrossModalLab_Research_Evidence_Oct28_<release>/` folder contains a browser-openable `Gallery.html`, `README.md`, machine-readable `MANIFEST.json` and nine numbered directories. The adjacent ZIP has the same basename. Both generated payloads are Git-ignored; a small release manifest is recorded under `artifacts/reports/`. Original research files are never moved or deleted.
 
-The verified October 24 release uses the versioned folder `submission/CrossModalLab_Research_Evidence_Oct28_20261024/` and the adjacent `CrossModalLab_Research_Evidence_Oct28.zip`. The first prepared candidate is preserved locally. For this release, pass `--output submission/CrossModalLab_Research_Evidence_Oct28_20261024` to both export commands and the browser capture procedure. Future exports must use a fresh folder/archive name rather than overwrite a finalized package.
+The earlier verified October 24 release remains at `submission/CrossModalLab_Research_Evidence_Oct28_20261024/`, with its original `CrossModalLab_Research_Evidence_Oct28.zip` unchanged. The human-centered refinement is `submission/CrossModalLab_Research_Evidence_Oct28_HumanCentered_20261024_r2/`, with an adjacent ZIP of the same versioned basename. Initial unfinalized candidates are also preserved. Always pass the same fresh `--output` path to preparation, browser capture and finalization. Finalization rejects an existing manifest, ZIP or report before writing anything.
+
+The primary gallery now follows a single case from problem and input to logical ground truth, recorded answers, separate historical neural evidence, results and limitations. All visuals remain in expandable collections. Each image has a descriptive title, explanation, evidence category and a local provenance-manifest link; click the image to enlarge it. Exact Qwen prompts/answers are also in `08_Reproducibility/Exact_Recorded_Answers.json`. The original PNG bytes and raw completions are preserved.
 
 The gallery contains desktop/mobile application captures; all 18 original validation PNGs; four-checkpoint input/output comparisons for every case; symbolic graph exports; all 200 activation rows and historical Smol norm/probe plots; all six condition confusion matrices; pilot telemetry; paper figures; registries, provenance and the demonstration guide. SVGs scale cleanly and PNGs work in slides. Open it without Python, Node, WSCTL or ULVO. No large tensor, model, adapter, optimizer, cache or credential file is included.
 
@@ -32,3 +34,9 @@ The gallery contains desktop/mobile application captures; all 18 original valida
 4. Run `python -B scripts/export_research_evidence.py --finalize` with the same output path. It checks the catalog, scans payloads for credential patterns, writes SHA-256/size/provenance metadata, creates the ZIP, extracts it into workspace-local scratch space and checks every payload hash and CRC. Refuse mismatches rather than silently dropping files.
 
 Interpretation rules are in [the neural audit](NEURAL_EVIDENCE.md). Smol observations must not be attached to a Qwen failure. No validated relation-specific causal mechanism or CE+ES superiority is claimed. Static plots are evidence exports, not live model execution. Human rehearsal, professor-specific file requirements and partner testing remain separate tasks.
+
+## Refinement release verification
+
+The browser capture procedure checks all five desktop/mobile views, graph proof paths, case-specific checkpoint conclusions, seven tour stages, Enter-key activation, default collapsed raw details, exact raw clipboard content and absence of external requests. The offline gallery is checked from an extracted ZIP with HTTP blocked, all images decoded, mobile overflow checked and local links validated. PNG renderings of comparisons are derived from the exact metadata-bearing SVGs. Loss exports use only five discrete measured points, not smooth learning curves.
+
+Use `python -m unittest discover -s tests -p 'test_dashboard*.py' -v` for dashboard, launcher, integrity and narrative/export regressions. Full release checks additionally include the ULVO and ordinary-Python suites, TypeScript, production build, portability and compilation. See the run-specific verification report under `artifacts/reports/`.

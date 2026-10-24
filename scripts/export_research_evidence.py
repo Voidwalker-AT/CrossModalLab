@@ -20,7 +20,8 @@ from zipfile import ZIP_DEFLATED, ZipFile
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from dashboard.backend.artifacts import ArtifactStore
-from dashboard.backend.exports import comparison_svg
+from dashboard.backend.exports import comparison_svg, logical_svg
+from dashboard.backend.gallery import render_gallery, describe_visual
 
 FOLDERS = ["01_Dashboard_Screenshots", "02_Visual_Inputs", "03_Model_Output_Comparisons",
            "04_Logical_Evidence_Graphs", "05_Neural_Activation_Analysis", "06_Experiment_Analytics",
@@ -37,7 +38,7 @@ def prepare(out):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    plt.rcParams.update({"font.size":11,"font.family":"DejaVu Sans","svg.fonttype":"none"})
+    plt.rcParams.update({"font.size":12,"font.family":"DejaVu Sans","svg.fonttype":"none"})
     out.mkdir(parents=True)
     for folder in FOLDERS:(out/folder).mkdir()
     store=ArtifactStore(); data=store.workspace(); neural=data["neural"]
@@ -49,6 +50,10 @@ def prepare(out):
         path.write_bytes(raw if isinstance(raw,bytes) else raw.encode("utf-8"))
         record(path,sources,classification,sample_id,**extra)
     def figure(fig,name,folder,sources,classification="OBSERVED",sample_id=None,**extra):
+        import textwrap
+        relative=folder+"/"+name+".png"
+        title,description,limits=describe_visual(relative,{"sample_id":sample_id,**extra},data)
+        fig.text(.08,-.30,"\n".join(textwrap.wrap(description,105))+"\n"+"\n".join(textwrap.wrap(limits,105)),fontsize=10,linespacing=1.5,va="top")
         if classification=="CORRELATED":
             import textwrap
             fig.text(.08,-.20,neural["model"]["id"]+" @ "+neural["model"]["revision"]+"\n"+
@@ -68,9 +73,10 @@ def prepare(out):
         svg=comparison_svg(store,case["sample_id"])
         sources=[c["source_artifact"] for c in data["conditions"] if c["id"] in {"frozen","ce5","ce50","es5"}]
         write(out/FOLDERS[2]/(stem+"_Input_Output.svg"),svg,sources,sample_id=case["sample_id"])
-        graph=svg.decode().replace('height="1080" viewBox="0 0 1500 1080"','height="285" viewBox="0 405 1500 285"',1)
+        graph=logical_svg(store,case['sample_id'])
         write(out/FOLDERS[3]/(stem+"_Symbolic_Graph.svg"),graph,["dashboard/assets/development_cases.json","src/symbolic/solver.py"],
               "SYMBOLICALLY DERIVED",case["sample_id"],interpretation="Logical oracle; not an internal neural trace")
+    write(out/FOLDERS[7]/"Exact_Recorded_Answers.json",json.dumps({"model":data["model"],"conditions":data["conditions"],"cases":data["cases"]},indent=2),["dashboard/assets/development_cases.json",*[c["source_artifact"]for c in data["conditions"]]])
     capture_csv=[]
     colors=["#267864","#a36d21","#72578d","#456e9c","#9e505f"]
     for capture in neural["captures"]:
@@ -112,13 +118,13 @@ def prepare(out):
         m=condition["metrics"];matrix=[[m["confusion_matrix"][gold][pred] for pred in ("Yes","No","Undetermined","Invalid")]for gold in ("Yes","No","Undetermined")]
         fig,ax=plt.subplots(figsize=(7,4.7));ax.imshow(matrix,cmap="Greens",vmin=0,vmax=6)
         for i,row in enumerate(matrix):
-            for j,value in enumerate(row):ax.text(j,i,str(value),ha="center",va="center",fontsize=15,color="#143e30")
+            for j,value in enumerate(row):ax.text(j,i,str(value),ha="center",va="center",fontsize=15,color="white" if value>=4 else "#143e30")
         ax.set(xticks=range(4),xticklabels=["Yes","No","Undetermined","Invalid"],yticks=range(3),yticklabels=["Yes","No","Undetermined"],xlabel="Parsed answer",ylabel="Gold label",title=condition["name"]+" | development confusion")
         fig.text(.10,-.01,"18 cases / 6 families; six cases per class. Historical prefix parsing; formatting reported separately.",fontsize=8)
         figure(fig,"Confusion_Matrix_"+condition["id"],FOLDERS[5],[condition["source_artifact"]],condition_id=condition["id"],model=data["model"],units="case count")
     for metric,name,unit in [("ce_loss","CE_Loss","loss"),("es_loss","Evidence_Margin_Loss","loss"),("torch_max_allocated_mib","Allocator_Peak_Memory","MiB")]:
         fig,ax=plt.subplots(figsize=(8,4.3));values=[r[metric] if metric in r else r["memory"][metric]for r in data["training"]]
-        ax.plot([r["step"]for r in data["training"]],values,"o-",color="#267864");ax.set(xticks=range(1,6),xlabel="Recorded optimizer step",ylabel=unit,title=name.replace("_"," ")+" | CE+ES five-step pilot")
+        ax.scatter([r["step"]for r in data["training"]],values,color="#267864",s=55);ax.set(xticks=range(1,6),xlabel="Recorded optimizer step",ylabel=unit,title=name.replace("_"," ")+" | CE+ES five-step pilot")
         fig.text(.09,-.03,"Different input at every step; not a fixed-input learning curve. Memory is allocator peak, not physical VRAM.",fontsize=9)
         figure(fig,name,FOLDERS[5],["artifacts/training/phase_2i_b/runs/"+data["run_id"]+"/train_metrics_append.jsonl"],model=data["model"],units=unit)
     for path in sorted((ROOT/"paper/figures").glob("0[1-5]_*.???")):
@@ -130,7 +136,7 @@ def prepare(out):
     for source in ["paper/tables/submission_metrics.csv","paper/tables/development_summary.json","paper/tables/family_predictions.csv"]:
         path=ROOT/source;write(out/FOLDERS[5]/path.name,path.read_bytes(),[source])
     write(out/FOLDERS[7]/"Recorded_Training_Telemetry.json",json.dumps(data["training"],indent=2),[p["path"] for p in data["sources"] if p["path"].endswith('train_metrics_append.jsonl')])
-    for source in ["submission/2026-10-28/five_minute_demo.md","submission/2026-10-28/demo_examples.json"]:
+    for source in ["submission/2026-10-28/five_minute_demo.md","submission/2026-10-28/demo_examples.json","dashboard/human_centered_demo.md"]:
         path=ROOT/source;write(out/FOLDERS[8]/path.name,path.read_bytes(),[source])
     html=(ROOT/"paper/manuscript/draft.html").read_text(encoding="utf-8")
     for a,b in [("../figures/","../07_Research_Figures/"),("../tables/","../06_Experiment_Analytics/"),("../references/verified_sources.md","../08_Reproducibility/verified_sources.md"),("../evidence_registry.md","../08_Reproducibility/evidence_registry.md"),("../claims_registry.md","../08_Reproducibility/claims_registry.md"),("../submission_plan.md","../08_Reproducibility/submission_plan.md"),("../../submission/2026-10-28/demo_examples.json","demo_examples.json")]:html=html.replace(a,b)
@@ -154,21 +160,16 @@ MANIFEST.json records each file's source reference, case ID where relevant, evid
 
 
 def finalize(out):
+    archive=out.parent/(out.name+'.zip')
+    target=ROOT/'artifacts/reports'/('research_evidence_manifest_'+out.name.removeprefix('CrossModalLab_Research_Evidence_Oct28_')+'.json')
+    if (out/'MANIFEST.json').exists() or archive.exists() or target.exists():
+        raise ValueError('Finalized release preserved; choose a fresh versioned output')
     catalog=json.loads((out/"08_Reproducibility/export_catalog.json").read_text(encoding="utf-8"))
     capture_log=out/"08_Reproducibility/browser_capture_log.json"
     browser=json.loads(capture_log.read_text(encoding="utf-8"))
     if browser["status"]!="PASS":raise ValueError("browser evidence did not pass")
     catalog.update(browser["files"])
-    gallery=['<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CrossModalLab Evidence Gallery</title><style>body{font:16px/1.6 Arial,sans-serif;background:#f5f7f2;color:#1d4039;margin:32px}main{max-width:1400px;margin:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}figure{margin:0;padding:16px;background:white;border:1px solid #dce5d8;border-radius:8px}img{width:100%;height:240px;object-fit:contain}figcaption{font-size:12px;overflow-wrap:anywhere}a{color:#1e6959}</style><main><h1>CrossModalLab research evidence</h1><p>Real stored development artifacts. Smol neural plots are CORRELATED — NOT CAUSAL and are separate from Qwen behavior. <a href="README.md">Read the scientific limits</a>.</p>']
-    for folder in FOLDERS:
-        gallery.append('<h2>'+escape(folder.replace('_',' '))+'</h2><div class="grid">')
-        for p in sorted((out/folder).glob('*.png')):
-            relative=p.relative_to(out).as_posix()
-            info=catalog.get(relative,{})
-            gallery.append(f'<figure><a href="{escape(relative)}"><img loading="lazy" src="{escape(relative)}" alt="{escape(p.stem)}"></a><figcaption>{escape(p.stem)}<br>{escape(info.get("classification","OBSERVED"))}</figcaption></figure>')
-        gallery.append('</div>')
-    gallery.append('<p><a href="09_Demonstration/Preliminary_Paper.html">Preliminary manuscript</a> · <a href="MANIFEST.json">Machine-readable provenance manifest</a></p></main></html>')
-    (out/"Gallery.html").write_text(''.join(gallery),encoding="utf-8")
+    (out/"Gallery.html").write_text(render_gallery(catalog,ArtifactStore().workspace()),encoding="utf-8")
     for name in ["Gallery.html","08_Reproducibility/export_catalog.json","08_Reproducibility/browser_capture_log.json"]:
         catalog[name]={"source_reference":["scripts/export_research_evidence.py"],"sample_id":None,"classification":"OBSERVED","interpretation":"Export documentation / actual capture log"}
     actual={p.relative_to(out).as_posix() for p in out.rglob('*') if p.is_file() and p.name!='MANIFEST.json'}
@@ -189,7 +190,7 @@ def finalize(out):
     manifest_path=out/'MANIFEST.json'
     if manifest_path.exists():raise ValueError('Existing finalized manifest preserved; choose a new output')
     manifest_path.write_text(json.dumps(manifest,indent=2),encoding='utf-8')
-    archive=out.parent/'CrossModalLab_Research_Evidence_Oct28.zip'
+    archive=out.parent/(out.name+'.zip')
     with ZipFile(archive,'x',compression=ZIP_DEFLATED) as zipped:
         for path in sorted(out.rglob('*')):
             if path.is_file():zipped.write(path,arcname=out.name+'/'+path.relative_to(out).as_posix())
@@ -206,7 +207,7 @@ def finalize(out):
         assert (extracted/name).stat().st_size==identity['bytes'] and sha(extracted/name)==identity['sha256'],name
     assert sha(extracted/'MANIFEST.json')==sha(manifest_path)
     report={"status":"PASS","folder":str(out),"archive":str(archive),"archive_bytes":archive.stat().st_size,"archive_sha256":sha(archive),"files_verified":len(files)+1,"extracted_to":str(extracted),"source_commit":manifest['source_commit']}
-    target=ROOT/'artifacts/reports/research_evidence_manifest_20261024.json'
+    target=ROOT/'artifacts/reports'/('research_evidence_manifest_'+out.name.removeprefix('CrossModalLab_Research_Evidence_Oct28_')+'.json')
     if target.exists():raise ValueError('Preserving existing small export manifest')
     target.write_bytes(manifest_path.read_bytes())
     (ROOT/'.cache/evidence_verification/result.json').write_text(json.dumps(report,indent=2))
@@ -215,7 +216,7 @@ def finalize(out):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output',type=Path,default=ROOT/'submission/CrossModalLab_Research_Evidence_Oct28')
+    parser.add_argument('--output',type=Path,default=ROOT/'submission/CrossModalLab_Research_Evidence_Oct28_HumanCentered_20261024')
     parser.add_argument('--finalize',action='store_true')
     args=parser.parse_args();out=args.output.resolve()
     if not out.is_relative_to(ROOT):parser.error('output must stay within the checkout')

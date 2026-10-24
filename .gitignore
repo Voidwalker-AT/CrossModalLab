@@ -291,7 +291,7 @@ _tmp_*.py
 /dashboard/frontend/node_modules/
 /dashboard/frontend/dist/
 /submission/CrossModalLab_Research_Evidence_Oct28*/
-/submission/CrossModalLab_Research_Evidence_Oct28.zip
+/submission/CrossModalLab_Research_Evidence_Oct28*.zip
 /artifacts/training/phase_2i_b/runs/*/.run.lock
 !datasets/**/manifest.json
 !datasets/**/manifests/*.json

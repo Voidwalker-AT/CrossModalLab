@@ -21,7 +21,7 @@ const fileUrl=p=>require('url').pathToFileURL(p).href;
   else await page.screenshot({path:path.join(out,relative),fullPage:true});
   const neuralSelector=page.getByRole('combobox',{name:'Neural capture',exact:true});
   const neuralCapture=await neuralSelector.count()?await neuralSelector.inputValue():null;
-  files[relative]={source_reference:source||['dashboard/frontend/src/main.tsx','dashboard/frontend/src/scientific.tsx','dashboard/frontend/src/neural.tsx',...payload.sources.map(s=>s.path)],sample_id:sample,condition_id:condition,classification,historical_neural_capture_id:neuralCapture,model:classification==='CORRELATED'?payload.neural.model:payload.model,method:'Actual installed-Edge screenshot of local artifact dashboard',viewport:page.viewportSize()};
+  files[relative]={source_reference:source||['dashboard/frontend/src/main.tsx','dashboard/frontend/src/scientific.tsx','dashboard/frontend/src/neural.tsx','dashboard/frontend/src/explanations.tsx','dashboard/frontend/src/style.css',...payload.sources.map(s=>s.path)],sample_id:sample,condition_id:condition,classification,historical_neural_capture_id:neuralCapture,model:classification==='CORRELATED'?payload.neural.model:payload.model,method:'Actual installed-Edge screenshot of local artifact dashboard',viewport:page.viewportSize()};
  }
  await capture('00_Dashboard_Landing_Failure_Investigator');
  const views=[['Architecture Explorer','01_Architecture_Explorer'],['Evidence & Reasoning','02_Evidence_Reasoning'],['Failure Investigator','03_Failure_Investigator'],['Experiment Analytics','04_Experiment_Analytics'],['Reproducibility','05_Reproducibility']];
@@ -39,11 +39,37 @@ const fileUrl=p=>require('url').pathToFileURL(p).href;
   const count=await page.locator('[data-proof-edge]').count();if(count!==(label==='Undetermined'?0:2))throw Error('Proof '+label);
   await capture('07_FailureInvestigator_'+variant+'_Qwen_ES5',{sample:'xc_ho_0011::'+variant});
  }
- if(await page.locator('.checkpoint-cards article').count()!==4)throw Error('Checkpoint cards');
+ if(await page.locator('.checkpoint-table tbody tr').count()!==4)throw Error('Checkpoint rows');
+ const summary=await page.locator('.checkpoint-comparison').innerText();if(!summary.includes('All four checkpoints answered this case incorrectly.'))throw Error('Missing case-specific takeaway');
+ if(await page.locator('.triptych-prediction details[open]').count())throw Error('Technical detail must start collapsed');
  await capture('08_Four_Checkpoint_Input_Output_Comparison',{selector:'.checkpoint-comparison',sample:'xc_ho_0011::underdetermined'});
  const download=page.waitForEvent('download');await page.getByRole('link',{name:'↓ Export comparison SVG'}).click();await download;
  await page.getByRole('combobox',{name:'Checkpoint'}).selectOption('ce50');await page.getByRole('combobox',{name:'Logical state'}).selectOption('No');
- const prediction=await page.locator('.triptych-prediction').innerText();if(!prediction.includes('Correct response')||!prediction.includes('Malformed generation'))throw Error('Format/semantic distinction');
+ const prediction=await page.locator('.triptych-prediction').innerText();if(!prediction.includes('Correct response')||!prediction.includes('Malformed generation')||!prediction.includes('15 Unicode replacement characters'))throw Error('Format/semantic distinction');
+ await page.getByRole('button',{name:'Start the five-minute guided tour',exact:true}).focus();await page.keyboard.press('Enter');
+ for(let step=0;step<7;step++){
+  if(!await page.locator('.guided-tour').innerText().then(t=>t.includes(`${step+1} of 7`)))throw Error('Guided stage '+step);
+  if(step===0){const prev=page.getByRole('button',{name:'Previous',exact:true});if(!await prev.isDisabled())throw Error('Tour start boundary')}
+  if(step<6){await page.getByRole('button',{name:'Next',exact:true}).focus();await page.keyboard.press('Enter')}
+ }
+ if(!await page.getByRole('button',{name:'Next',exact:true}).isDisabled())throw Error('Tour end boundary');
+ await page.getByRole('button',{name:'Previous',exact:true}).focus();await page.keyboard.press('Enter');
+ await capture('10_Guided_Tour_Historical_Evidence',{sample:null});
+ await page.getByRole('button',{name:'Exit guided tour',exact:true}).click();
+ await page.getByRole('button',{name:/Failure Investigator/}).click();
+ await page.getByRole('combobox',{name:'Checkpoint'}).selectOption('ce50');
+ await page.getByRole('combobox',{name:'Logical state'}).selectOption('No');
+ await page.locator('.triptych-prediction summary').filter({hasText:'Verify exact raw output and source'}).focus();await page.keyboard.press('Enter');
+ const raw=payload.cases.find(c=>c.sample_id==='xc_ho_0011::contradicted').predictions.ce50.raw_completion;
+ if(await page.locator('.triptych-prediction .raw-answer').textContent()!==raw)throw Error('Raw output changed');
+ await page.context().grantPermissions(['clipboard-read','clipboard-write']);
+ await page.getByRole('button',{name:'Copy raw output',exact:true}).click();
+ if(await page.evaluate(()=>navigator.clipboard.readText())!==raw)throw Error('Clipboard output changed');
+ await page.locator('.triptych-prediction summary').filter({hasText:'Verify exact raw output and source'}).click();
+ await page.getByRole('button',{name:/Evidence & Reasoning/}).click();
+ const node=page.locator('.interactive-node').first();await node.focus();await page.keyboard.press('Enter');
+ await page.getByText('Explore the arrows and formal reasoning',{exact:true}).click();
+ if(!(await page.locator('.graph-selection').innerText()).includes('Entity A:'))throw Error('Keyboard graph inspection');
  await page.getByRole('button',{name:/Architecture Explorer/}).click();
  await page.getByRole('combobox',{name:'Neural capture',exact:true}).selectOption('p0d2_ctrl_underdetermined_fork_0073_underdetermined_fork');
  await page.getByRole('combobox',{name:'Activation token selector',exact:true}).selectOption('mean_image');
@@ -69,7 +95,7 @@ const fileUrl=p=>require('url').pathToFileURL(p).href;
   }
  }
  if(errors.length||external.length)throw Error(JSON.stringify({errors,external}));
- const result={status:'PASS',captured_at:new Date().toISOString(),base_url:base,browser:'installed Edge via existing Playwright',five_desktop_views:true,five_mobile_views:true,original_images:18,neural_rows:200,comparison_exports:18,logical_graph_exports:18,download_checked:true,page_errors:errors,external_requests:external,files};
+ const result={status:'PASS',captured_at:new Date().toISOString(),base_url:base,browser:'installed Edge via existing Playwright',five_desktop_views:true,five_mobile_views:true,original_images:18,neural_rows:200,comparison_exports:18,logical_graph_exports:18,download_checked:true,keyboard_graph:true,keyboard_guided_tour:true,exact_raw_clipboard:true,default_details_collapsed:true,page_errors:errors,external_requests:external,files};
  fs.writeFileSync(path.join(out,'08_Reproducibility/browser_capture_log.json'),JSON.stringify(result,null,2));
  console.log(JSON.stringify({status:'PASS',browser_files:Object.keys(files).length,views:5,images:18,external_requests:0}));
 }finally{await browser.close()}})().catch(e=>{console.error(e);process.exit(1)});
