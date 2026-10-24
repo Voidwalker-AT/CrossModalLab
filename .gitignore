@@ -303,3 +303,7 @@ _tmp_*.py
 # Phase 3 reconstruction duplicates and superseded unmeasured development candidate
 /artifacts/phase3/*/reconstructed_images/
 /artifacts/phase3/20261024_v1/
+
+# Locally generated publication evidence distributions (manifest remains tracked).
+/submission/CrossModalLab_Publication_Research_*/
+/submission/CrossModalLab_Publication_Research_*.zip

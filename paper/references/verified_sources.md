@@ -32,3 +32,7 @@ W1–W13 metadata/abstracts were reopened at their primary sources in this phase
 | W17 | Nicholas Moratelli, Christopher Davis, Leonardo F. R. Ribeiro, Bill Byrne, Gonzalo Iglesias. *Benchmarking Deflection and Hallucination in Large Vision-Language Models*. ACL 2026. DOI:10.18653/v1/2026.acl-long.1307. [ACL](https://aclanthology.org/2026.acl-long.1307/). | Metadata/abstract only; conflicting and insufficient retrieved multimodal evidence. Full-method comparison pending. |
 
 The focused comparison and remaining checks are in [the Phase 3 collision audit](../../docs/phase_3_novelty_audit.md). These additions invalidate any unqualified historical statement that representation-aware abstention or evidence-margin training has no close prior art. Full methodological novelty remains UNVERIFIED.
+
+## Publication mission source update — October 25, 2026
+
+W18–W24 metadata, author order, primary links and inspection depth are recorded in the [publication collision matrix](../../docs/publication_novelty_matrix.md). These records cover ARO, HallusionBench, MoHoBench, R-Bench, SugarCrepe, the 2025 compositional-bias audit and the 2026 cross-modal-conflict CMC-Bench. Selected methods were inspected for MoHoBench and the compositional-bias audit; the remaining entries retain the narrower depths stated there. No experimental reproduction or exhaustive novelty clearance is claimed. The two unrelated CMC-Bench acronyms are explicitly disambiguated. W17's ACL metadata/abstract was rechecked; W14–W16 retain their previously disclosed inspection depths.

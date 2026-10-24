@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-25",
+  "scope": "Read-only source inspection, not external reproduction or code redistribution",
+  "sources": [
+    {
+      "repository": "tianyi-lab/HallusionBench",
+      "path": "evaluation.py",
+      "executed": false,
+      "status": "SOURCE_CACHED",
+      "url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/evaluation.py",
+      "sha256": "8b7ec49f21f42f4bd399320274590cfaf470b53838862d44dc3bd530c0431c72",
+      "bytes": 7000
+    },
+    {
+      "repository": "tianyi-lab/HallusionBench",
+      "path": "utils.py",
+      "executed": false,
+      "status": "SOURCE_CACHED",
+      "url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/utils.py",
+      "sha256": "535734ad70c8ea14253131ea59e4d2df6af4fae5341f044d226a8e78eaeb9c30",
+      "bytes": 17600
+    },
+    {
+      "repository": "mrwu-mac/R-Bench",
+      "path": "eval.py",
+      "executed": false,
+      "status": "SOURCE_CACHED",
+      "url": "https://raw.githubusercontent.com/mrwu-mac/R-Bench/main/eval.py",
+      "sha256": "b9d9973df5b5e6c0dfdac061ca9eeaee918493e527bdedc7f025ca5896ef5015",
+      "bytes": 8551
+    },
+    {
+      "repository": "yanxuzhu/MoHoBench",
+      "path": "prompts/response_evaluation_prompts.py",
+      "executed": false,
+      "status": "SOURCE_CACHED",
+      "url": "https://raw.githubusercontent.com/yanxuzhu/MoHoBench/main/prompts/response_evaluation_prompts.py",
+      "sha256": "603ca2e8ea9c6cf97ce818ed43642f2d834999293fe0270815353c7394a15c1d",
+      "bytes": 14536
+    },
+    {
+      "repository": "jaspercatapang/cmc-bench",
+      "path": "src/evaluation",
+      "executed": false,
+      "status": "DIRECTORY_LISTED",
+      "entries": [
+        {
+          "path": "src/evaluation/__init__.py",
+          "raw_url": "https://raw.githubusercontent.com/jaspercatapang/cmc-bench/main/src/evaluation/__init__.py",
+          "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "src/evaluation/azure_judge.py",
+          "raw_url": "https://raw.githubusercontent.com/jaspercatapang/cmc-bench/main/src/evaluation/azure_judge.py",
+          "git_blob_sha": "0182b544a97bb00bf418816227372223dd704e26"
+        },
+        {
+          "path": "src/evaluation/inference.py",
+          "raw_url": "https://raw.githubusercontent.com/jaspercatapang/cmc-bench/main/src/evaluation/inference.py",
+          "git_blob_sha": "04f1516d4c365e3274fa382627148d72a76b1d5a"
+        },
+        {
+          "path": "src/evaluation/judge_constants.py",
+          "raw_url": "https://raw.githubusercontent.com/jaspercatapang/cmc-bench/main/src/evaluation/judge_constants.py",
+          "git_blob_sha": "68c0a1b3e202be2127cc5861270b807826bf985e"
+        },
+        {
+          "path": "src/evaluation/judge_report.py",
+          "raw_url": "https://raw.githubusercontent.com/jaspercatapang/cmc-bench/main/src/evaluation/judge_report.py",
+          "git_blob_sha": "0bf0436460eb6fb9c86163862ed3fd0d66f399e3"
+        },
+        {
+          "path": "src/evaluation/metrics.py",
+          "raw_url": "https://raw.githubusercontent.com/jaspercatapang/cmc-bench/main/src/evaluation/metrics.py",
+          "git_blob_sha": "231198ea7435cf3ae0345c980d80cd44d67d0502"
+        },
+        {
+          "path": "src/evaluation/model_loader.py",
+          "raw_url": "https://raw.githubusercontent.com/jaspercatapang/cmc-bench/main/src/evaluation/model_loader.py",
+          "git_blob_sha": "f57f4889bc26a00b940f91161e059fc9587f4518"
+        }
+      ]
+    },
+    {
+      "repository": "mertyg/vision-language-models-are-bows",
+      "path": "main_aro.py",
+      "executed": false,
+      "status": "SOURCE_CACHED",
+      "url": "https://raw.githubusercontent.com/mertyg/vision-language-models-are-bows/main/main_aro.py",
+      "sha256": "d977669787ffb3d3ff8d24a5159b9c3a7de0e9e96cd1d1e338fc36a1feb8c599",
+      "bytes": 2408
+    },
+    {
+      "repository": "amitakamath/whatsup_vlms",
+      "path": "marginalization.py",
+      "executed": false,
+      "status": "SOURCE_CACHED",
+      "url": "https://raw.githubusercontent.com/amitakamath/whatsup_vlms/main/marginalization.py",
+      "sha256": "e51983dfaafdd00f6c907a841e9fdb70d87a2d2ba0293ce4f99a88b857619c65",
+      "bytes": 7021
+    },
+    {
+      "repository": "facebookresearch/reliable_vqa",
+      "path": "eval_scripts",
+      "executed": false,
+      "status": "DIRECTORY_LISTED",
+      "entries": [
+        {
+          "path": "eval_scripts/reliable_vqa_eval.py",
+          "raw_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/eval_scripts/reliable_vqa_eval.py",
+          "git_blob_sha": "8953893f50b6a609d20ee7c9368b4bca2b92ba26"
+        },
+        {
+          "path": "eval_scripts/run.py",
+          "raw_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/eval_scripts/run.py",
+          "git_blob_sha": "4b18660255a43f9f285d24e5e678c37ab2b4828f"
+        },
+        {
+          "path": "eval_scripts/vqa.py",
+          "raw_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/eval_scripts/vqa.py",
+          "git_blob_sha": "558a846447b1a5a95943a24a26a2954bc0c21b4f"
+        }
+      ]
+    },
+    {
+      "repository": "geifmany/SelectiveNet",
+      "path": "selectivnet_utils.py",
+      "executed": false,
+      "status": "SOURCE_CACHED",
+      "url": "https://raw.githubusercontent.com/geifmany/SelectiveNet/master/selectivnet_utils.py",
+      "sha256": "cb8aad4137469c4f5b468afee0b8398abe102ed4279b31f753503757f97fcf37",
+      "bytes": 4606
+    },
+    {
+      "repository": "yanxinzju/CSS-VQA",
+      "path": "train.py",
+      "executed": false,
+      "status": "SOURCE_CACHED",
+      "url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/train.py",
+      "sha256": "be85cb3985430abf3b63f528d8349e0e7ab07c4695c4729b5a11968b6735bbdc",
+      "bytes": 16236
+    },
+    {
+      "repository": "redwoodresearch/Easy-Transformer",
+      "path": "circuit_discovery.py",
+      "executed": false,
+      "status": "SOURCE_CACHED",
+      "url": "https://raw.githubusercontent.com/redwoodresearch/Easy-Transformer/main/circuit_discovery.py",
+      "sha256": "3faad6e09789290e90390ae627fc4c77458fc652741a50d173f3b860bb38796c",
+      "bytes": 3935
+    },
+    {
+      "repository": "RAIVNLab/sugar-crepe",
+      "path": "text_model_eval.py",
+      "executed": false,
+      "status": "SOURCE_CACHED",
+      "url": "https://raw.githubusercontent.com/RAIVNLab/sugar-crepe/main/text_model_eval.py",
+      "sha256": "548f1dbb860c7a6750e54c443b1067c58baccc7de32724d918e17f2caaa060f3",
+      "bytes": 5815
+    }
+  ]
+}

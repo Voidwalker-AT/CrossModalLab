@@ -1,0 +1,27 @@
+test_api_is_readonly_and_contained (test_dashboard.TestDashboard.test_api_is_readonly_and_contained) ... 127.0.0.1 - - [25/Oct/2026 00:59:29] "POST /api/workspace HTTP/1.1" 405 -
+127.0.0.1 - - [25/Oct/2026 00:59:29] "PUT /api/workspace HTTP/1.1" 405 -
+127.0.0.1 - - [25/Oct/2026 00:59:29] "PATCH /api/workspace HTTP/1.1" 405 -
+127.0.0.1 - - [25/Oct/2026 00:59:29] "DELETE /api/workspace HTTP/1.1" 405 -
+127.0.0.1 - - [25/Oct/2026 00:59:29] "GET /api/image/not-allowlisted HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 00:59:29] "GET /api/image/..%2f..%2fAGENTS.md HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 00:59:29] "GET /..%2f..%2fAGENTS.md HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 00:59:29] "GET /api/train HTTP/1.1" 404 -
+ok
+test_error_categories_do_not_conflate_format_and_semantics (test_dashboard.TestDashboard.test_error_categories_do_not_conflate_format_and_semantics) ... ok
+test_host_restriction_and_headers (test_dashboard.TestDashboard.test_host_restriction_and_headers) ... 127.0.0.1 - - [25/Oct/2026 00:59:29] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 00:59:29] "GET /api/health HTTP/1.1" 403 -
+ok
+test_metrics_separate_semantic_and_exact_format (test_dashboard.TestDashboard.test_metrics_separate_semantic_and_exact_format) ... ok
+test_only_real_validation_cases_and_dual_oracle (test_dashboard.TestDashboard.test_only_real_validation_cases_and_dual_oracle) ... ok
+test_partner_image_fallback_without_original_dataset_cache (test_dashboard.TestDashboard.test_partner_image_fallback_without_original_dataset_cache) ... ok
+test_reproducibility_fields_are_portable_and_complete (test_dashboard.TestDashboard.test_reproducibility_fields_are_portable_and_complete) ... ok
+test_synthetic_demo_cannot_enter_analytics (test_dashboard.TestDashboard.test_synthetic_demo_cannot_enter_analytics) ... ok
+test_witness_paths_use_only_recorded_premises (test_dashboard.TestDashboard.test_witness_paths_use_only_recorded_premises) ... ok
+test_workspace_repeats_without_mutating_evidence (test_dashboard.TestDashboard.test_workspace_repeats_without_mutating_evidence) ... 127.0.0.1 - - [25/Oct/2026 00:59:29] "GET /api/workspace HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 00:59:29] "GET /api/workspace HTTP/1.1" 200 -
+ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.655s
+
+OK

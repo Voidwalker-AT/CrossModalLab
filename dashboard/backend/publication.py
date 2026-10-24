@@ -27,6 +27,14 @@ def load(root):
                 raise ValueError('publication score identity mismatch')
         sources.append(image)
         cases.append({**case,'image_data_url':'data:image/png;base64,'+base64.b64encode(raw).decode()})
-    return {'available':True,'status':'OBSERVED BEHAVIOR','date':'2026-10-25','cases':cases,'models':data['models'],
+    screen_path=base/'screen108/execution.json'
+    screen={}
+    if screen_path.is_file():
+        failed=json.loads(screen_path.read_text(encoding='utf-8'))
+        sources.append(screen_path)
+        screen={'status':failed['status'],'attempts':failed['additional_forward_attempts'],
+                'completed_rows':sum(len(p.read_text().splitlines()) for p in (base/'screen108').glob('*/candidate_scores.jsonl')),
+                'note':'Separate approved 108-forward screen stopped at a resource gate. No retry; do not pool it with the completed two-case pilot.'}
+    return {'available':True,'status':'OBSERVED BEHAVIOR','date':'2026-10-25','cases':cases,'models':data['models'],'screen':screen,
             'scope':'Two fixed cases in one exposed development family. Complete-answer likelihood scoring, not generated answers, calibrated confidence or causal explanation. No three-class BA or independent generalization claim.',
             'new_model_forwards':12,'sources':[{'path':p.relative_to(root).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in dict.fromkeys(sources)]}

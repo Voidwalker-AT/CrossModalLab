@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "executed_source_checks": [
+    {
+      "plan": "artifacts/publication/20261025/pilot/plan.json",
+      "source": "src/evaluation/forward_budget.py",
+      "sha256": "7aef8397c83165bd012c5eaeca0f4d946083a4a6c3d010982938206300a7d6cb"
+    },
+    {
+      "plan": "artifacts/publication/20261025/pilot/plan.json",
+      "source": "src/models/model_loader.py",
+      "sha256": "abd3ea95e9cea896d64fdf48f0b11b33b87431274b57411213a77b64aeeb39a5"
+    },
+    {
+      "plan": "artifacts/publication/20261025/pilot/plan.json",
+      "source": "src/models/qwen3vl2_loader.py",
+      "sha256": "bdc5a44231131aca0fda985163b959bcee7040671e1c523cab579f32fe5f47e6"
+    },
+    {
+      "plan": "artifacts/publication/20261025/pilot/plan.json",
+      "source": "src/training/differentiable_scoring.py",
+      "sha256": "39a0c320d36cb0af1b918d174f315eb22c6eda2efc93331f21893f655bbe3c99"
+    },
+    {
+      "plan": "artifacts/publication/20261025/pilot/plan.json",
+      "source": "src/training/scorer_verification.py",
+      "sha256": "45672ca51dd6c0ec69a0f72cbbfe0891fc42870a7e0331f90b23802383c62aaf"
+    },
+    {
+      "plan": "artifacts/publication/20261025/screen108/plan.json",
+      "source": "src/evaluation/screen_budget.py",
+      "sha256": "a49481439ad1a9c7e67c565e7517bd2c9f4283b51752370cf2b068b30cace1bd"
+    },
+    {
+      "plan": "artifacts/publication/20261025/screen108/plan.json",
+      "source": "src/models/model_loader.py",
+      "sha256": "abd3ea95e9cea896d64fdf48f0b11b33b87431274b57411213a77b64aeeb39a5"
+    },
+    {
+      "plan": "artifacts/publication/20261025/screen108/plan.json",
+      "source": "src/models/qwen3vl2_loader.py",
+      "sha256": "bdc5a44231131aca0fda985163b959bcee7040671e1c523cab579f32fe5f47e6"
+    },
+    {
+      "plan": "artifacts/publication/20261025/screen108/plan.json",
+      "source": "src/training/differentiable_scoring.py",
+      "sha256": "39a0c320d36cb0af1b918d174f315eb22c6eda2efc93331f21893f655bbe3c99"
+    },
+    {
+      "plan": "artifacts/publication/20261025/screen108/plan.json",
+      "source": "src/training/scorer_verification.py",
+      "sha256": "45672ca51dd6c0ec69a0f72cbbfe0891fc42870a7e0331f90b23802383c62aaf"
+    }
+  ],
+  "pilot_source_identity": true,
+  "original_failed_screen_source_identity": true,
+  "benchmark_generator_identity": true,
+  "qwen_loader_change": "CRLF preservation only; identical decoded lines and Python AST",
+  "raw_new_evidence_index_matches_worktree": true
+}

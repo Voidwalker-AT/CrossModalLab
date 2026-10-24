@@ -1,0 +1,5 @@
+{
+  "owned_ephemeral_snapshot": ".cache/recovery-temp/parameter-audit-lo5gkxp6",
+  "absent_after_scoped_cleanup": true,
+  "scope": "Exclusive duplicate parameter audit raw copies only; inventory retained in failure_audit.json. No historical experiment/checkpoint removal."
+}

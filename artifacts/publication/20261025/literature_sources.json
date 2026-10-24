@@ -1,0 +1,195 @@
+{
+  "date": "2026-10-25",
+  "scope": "legal public-source full papers for private inspection, no PDF/text redistribution or external experiment execution",
+  "sources": [
+    {
+      "id": "hallusionbench",
+      "url": "https://arxiv.org/pdf/2310.14566",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "e36e0ac1e6ffb212f7d90399161f7d7538568f040167d38b83d838b8858463c7",
+      "pages": 45,
+      "bytes": 8201496,
+      "redistributed": false
+    },
+    {
+      "id": "rbench",
+      "url": "https://arxiv.org/pdf/2406.16449",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "2c368de9e3b98a7b67a55e544aee9d11583602d2a557c84b52d1198d375a5987",
+      "pages": 18,
+      "bytes": 2010143,
+      "redistributed": false
+    },
+    {
+      "id": "mohobench",
+      "url": "https://arxiv.org/pdf/2507.21503v4",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "d38bc56af442048b87af3815ea0d46920e968d18df9704ed516b210a02bec98e",
+      "pages": 21,
+      "bytes": 2497927,
+      "redistributed": false
+    },
+    {
+      "id": "cmc",
+      "url": "https://aclanthology.org/2026.magmar-main.3.pdf",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "96fa6f254a4bd227dab19962227d284f2f3258a43174fd0b2efb93fca5d03470",
+      "pages": 10,
+      "bytes": 1512758,
+      "redistributed": false
+    },
+    {
+      "id": "deflection",
+      "url": "https://aclanthology.org/2026.acl-long.1307.pdf",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "1963e93a890b69b441e5f162108a9698ee750182672fd07a98977d3d526b032b",
+      "pages": 23,
+      "bytes": 8873090,
+      "redistributed": false
+    },
+    {
+      "id": "winoground",
+      "url": "https://arxiv.org/pdf/2204.03162",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "ca74ebefb947d164b799b0b2db61baeb7e6055381e96cc163384afc0d1c82bbe",
+      "pages": 18,
+      "bytes": 20657720,
+      "redistributed": false
+    },
+    {
+      "id": "aro",
+      "url": "https://arxiv.org/pdf/2210.01936",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "5a71b1f5371617b20bca02b273cdcee26ed98443e7e8c7f33cf328dd9a4981a2",
+      "pages": 20,
+      "bytes": 1702294,
+      "redistributed": false
+    },
+    {
+      "id": "whatsup",
+      "url": "https://aclanthology.org/2023.emnlp-main.568.pdf",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "ac45c83976d316ca06e3df6386a74a2b1cbf1a1f470f2c8db70aaf71935a36b3",
+      "pages": 15,
+      "bytes": 4807933,
+      "redistributed": false
+    },
+    {
+      "id": "rep2act",
+      "url": "https://arxiv.org/pdf/2609.32653",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "6d56a714d110c23ee7969020aa3fd478597d8a1804d5952ca1720cae2b9cbe00",
+      "pages": 29,
+      "bytes": 2085498,
+      "redistributed": false
+    },
+    {
+      "id": "spatial_uncertain",
+      "url": "https://arxiv.org/pdf/2605.30557v2",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "ad843f5ac9245ea5fa350a99e90577dd876430568072c2f4315a034f3f4531f9",
+      "pages": 19,
+      "bytes": 15027136,
+      "redistributed": false
+    },
+    {
+      "id": "mmaqa",
+      "url": "https://arxiv.org/pdf/2604.14799",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "8bcb4b7690bcf8c21c665f7cc646dc5ac3aeebab952fc602ab3108cfcc768b16",
+      "pages": 28,
+      "bytes": 3908098,
+      "redistributed": false
+    },
+    {
+      "id": "patching",
+      "url": "https://arxiv.org/pdf/2309.16042",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "8ba9f928e321ad2f319bf0ac62ae582d8a70befbe88d0f85773302d64252d396",
+      "pages": 27,
+      "bytes": 1332169,
+      "redistributed": false
+    },
+    {
+      "id": "ioi",
+      "url": "https://arxiv.org/pdf/2211.00593",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "af0ea3ca3912f819d2cd06b0f36f5c20bfcab72fbc83816d830c286af6872c91",
+      "pages": 25,
+      "bytes": 1342518,
+      "redistributed": false
+    },
+    {
+      "id": "reliable_vqa",
+      "url": "https://arxiv.org/pdf/2204.13631",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "f3f41ab2ed7cd3dfe26477f9145ae01d73ce3839dc91d084fdc0c4a57ce5a838",
+      "pages": 32,
+      "bytes": 4330249,
+      "redistributed": false
+    },
+    {
+      "id": "selectivenet",
+      "url": "https://arxiv.org/pdf/1901.09192",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "70c911da4c620285d643f13332ba2dd5bf4743581a1f05f960ba4423cceec8d6",
+      "pages": 10,
+      "bytes": 810981,
+      "redistributed": false
+    },
+    {
+      "id": "counterfactual_vqa",
+      "url": "https://arxiv.org/pdf/2003.06576",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "2042d2a178bb6316d5941386c8ebda0eb16fc15106190d8b12b3c22abd3c3132",
+      "pages": 10,
+      "bytes": 3388263,
+      "redistributed": false
+    },
+    {
+      "id": "rtuning",
+      "url": "https://aclanthology.org/2024.naacl-long.394.pdf",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "80a77ff2da0e96e02e4f2ae860e45de16ef28fc3709db3d817c406b1bcff6119",
+      "pages": 27,
+      "bytes": 8513019,
+      "redistributed": false
+    },
+    {
+      "id": "qlora",
+      "url": "https://arxiv.org/pdf/2305.14314",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "33a4e757c19d6ea8d3cca8958fce8fe405e290272e135c99ee66065c775d5bd1",
+      "pages": 26,
+      "bytes": 1065470,
+      "redistributed": false
+    },
+    {
+      "id": "sphere",
+      "url": "https://aclanthology.org/2025.acl-long.568.pdf",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "e742e35ca9b1b358621ee3111d81648c1e95055f6198dca40dcfd566c962c4ce",
+      "pages": 19,
+      "bytes": 4892602,
+      "redistributed": false
+    },
+    {
+      "id": "sugarcrepe",
+      "url": "https://arxiv.org/pdf/2306.14610",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "2522733f4e39d9978e62a9b310ef70857b35cbf59fcebec2fd6959ea3abb3a80",
+      "pages": 19,
+      "bytes": 1741225,
+      "redistributed": false
+    },
+    {
+      "id": "crepe_bias",
+      "url": "https://arxiv.org/pdf/2506.08227",
+      "status": "FULL_TEXT_CACHED_PRIVATELY",
+      "sha256": "e2cd911a118e60cc8295010d7f22dded71e71f1e1e0b7a8aa9d549f4bd0a917a",
+      "pages": 6,
+      "bytes": 634714,
+      "redistributed": false
+    }
+  ]
+}

@@ -37,3 +37,23 @@ Derived development intervals are reproducible with `python paper/tables/build_d
 ## E16 — Fresh CPU checkpoint audit (2026-10-24)
 
 **ESTABLISHED BY EXPERIMENT, scoped engineering evidence.** `artifacts/phase3/20261024_v2/audit.json#checkpoint_audit` validates step-zero through step-five component hashes, linked metadata/journal, AdamW state/step/shape/finite values, exact CPU moment reloads and required RNG payloads. All source/config/schedule hashes pass and all historical run file hashes remain unchanged. Current full mixed-dataset hash and a fresh real-model/CUDA restoration are not claimed; the prior restoration artifact remains separate historical evidence. No optimizer step occurred.
+
+## E17 — Full-factorial development information diagnostic (2026-10-25)
+
+**ESTABLISHED BY EXPERIMENT, CPU design property.** `artifacts/publication/20261025/benchmark/manifest.json`, `benchmark/shortcut_audit.json` and `artifacts/publication/20261025/analysis.json`: 9,216 variants/six dependent families, 96 images, dual-oracle agreement. Three families fit and three evaluate lookup baselines, all exposed development. Audited nuisance-feature ceilings are BA 1/3; oracle-parsed unimodal roles BA 2/3; joint symbolic oracle BA 1. These are available-information diagnostics, not VLM modality use, comprehensive shortcut clearance or independent generalization. `selected_source_leakage.json` checks only selected historical sources, not frozen final data or model pretraining.
+
+## E18 — Successful isolated two-model matched pilot (2026-10-25)
+
+**PRELIMINARY behavior; verified execution.** `artifacts/publication/20261025/pilot/` and `analysis.json`: 12 additional candidate forwards, two exact-image No/U cases, one exposed family. Smol Yes/Yes; Qwen No/Yes. All three complete-answer LLs finite; U has two tokens. Qwen values exactly replicate E14. Exact parameter comparisons pass for 657 Smol/625 Qwen tensors; owned processes exit. Smol sampled physical peak 3,876MiB/minimum available RAM 4,748.219MiB; Qwen 1,905/4,803.25MiB. Sampling can miss transients. No generated completion, optimizer, backward or patch. No three-class BA/CI or population inference.
+
+## E19 — Causal eligibility and CPU controls (2026-10-25)
+
+**ESTABLISHED CPU engineering properties; causal claim UNVERIFIED.** `src/causal/publication_controls.py` and regression tests validate unique token anchors, shapes and no-op replacement. Both new model pairs retain positive No-minus-U margins on both cases and fail the prespecified opposed-margin screen. This is not a live neural intervention or proof of relation-specific mediation. No new causal patching occurs.
+
+## E20 — Local natural-asset inventory and objective audit (2026-10-25)
+
+**ESTABLISHED scoped CPU properties.** `analysis.json` hash-checks 30 COCO/30 GQA local images; none is an annotated independent evaluation. Individual image rights and human validation are UNVERIFIED. CPU objective tests establish analytical active-hinge gradient direction and that the existing counterfactual-consistency helper equals paired CE; no novel consistency term or method benefit follows. No natural image is redistributed in the new publication package.
+
+## E21 — Safely failed authorized screen and source audit (2026-10-25)
+
+**FAILED screen preserved; no model-effect estimate.** `screen108/execution.json`, `failure_audit.json`, `cpu_analysis.json` and original `executed_source.py`: one attempted Smol forward, zero completed scores; Qwen never starts, no retry. The original parent reports a RAM/VRAM safety failure but did not preserve the triggering sample: exact resource cause UNVERIFIED. Termination prevents final parameter comparison, also UNVERIFIED. The CPU-only telemetry repair is not GPU verified. The frozen 108-forward plan remains byte-identical; its original proposed/unauthorized field is historical, with later human approval documented in the executed plan. Separately, `prior_art_extraction.json` records 21 publicly sourced papers with selected full-text methods/results/appendix inspection, exact hashes and explicit unknown fields; no external study is reproduced. This audit narrows, rather than clears, novelty.

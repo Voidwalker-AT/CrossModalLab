@@ -1,0 +1,1 @@
+{"additional_forward_attempts":1,"error_message":"physical RAM/VRAM safety gate failed","error_type":"RuntimeError","final_resources":{"host_available_mib":4565.23046875,"nvidia_free_mib":3682,"nvidia_total_mib":4096,"nvidia_used_mib":281},"status":"FAILED","workers":[]}

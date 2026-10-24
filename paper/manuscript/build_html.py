@@ -13,7 +13,7 @@ def main():
     style = """
     @page {size:A4;margin:18mm}
     *{box-sizing:border-box}body{margin:0;color:#171d20;background:#f1f2ee;font:11pt/1.45 Georgia,'Times New Roman',serif}
-    main{max-width:1040px;margin:24px auto;background:white;padding:38px;columns:2;column-gap:32px}
+    main{max-width:940px;margin:24px auto;background:white;padding:38px;columns:1;column-gap:32px}
     h1{column-span:all;text-align:center;font:700 20pt/1.2 Georgia,serif;margin:0 0 20px}
     h2{font-size:12pt;margin:17px 0 8px;break-after:avoid}p{margin:0 0 10px;text-align:justify}
     code{font:8pt/1.4 Consolas,monospace;overflow-wrap:anywhere}a{color:#12574b;overflow-wrap:anywhere}

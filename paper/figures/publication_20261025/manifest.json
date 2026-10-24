@@ -1,0 +1,31 @@
+{
+  "01_controlled_feature_ceilings.png": {
+    "sha256": "95b989e3edee5ab6528527541241ac006280a8f91930b87d870184fa7dc83b2b",
+    "source": "artifacts/publication/20261025/analysis.json",
+    "source_sha256": "fe67c3a2a2cfc5ec62814e009f8dcce385df45fd531942c062dad123d5b97be4",
+    "caption": "*Oracle-parsed roles, not VLM inference. Exact design fractions: single modality 2/3; nuisance 1/3; joint oracle 1.\n9,216 variants / six dependent development families; three fit and three evaluate lookups.\nOnly specified feature classes audited; neither independent confirmation nor exhaustive shortcut removal."
+  },
+  "01_controlled_feature_ceilings.svg": {
+    "sha256": "fb2b1aade21ed9c0f0045ff54c8e68ac35f0b34e11e63eaf46c21829de5f07fd",
+    "source": "artifacts/publication/20261025/analysis.json",
+    "source_sha256": "fe67c3a2a2cfc5ec62814e009f8dcce385df45fd531942c062dad123d5b97be4",
+    "caption": "*Oracle-parsed roles, not VLM inference. Exact design fractions: single modality 2/3; nuisance 1/3; joint oracle 1.\n9,216 variants / six dependent development families; three fit and three evaluate lookups.\nOnly specified feature classes audited; neither independent confirmation nor exhaustive shortcut removal."
+  },
+  "02_matched_pair_margins.png": {
+    "sha256": "604f95ff7903d5553dbec2bc3ce4192b636996da7396a03ba965c7a739234183",
+    "source": "artifacts/publication/20261025/analysis.json",
+    "source_sha256": "fe67c3a2a2cfc5ec62814e009f8dcce385df45fd531942c062dad123d5b97be4",
+    "caption": "Twelve additional forwards; two fixed cases in one exposed development family.\nBoth margins remain positive in both models: the proposed opposed-margin causal screen fails.\nWithin-model score contrasts only; unequal axes and model scales are not cross-model calibrated confidence."
+  },
+  "02_matched_pair_margins.svg": {
+    "sha256": "8b6683788fe736723fc44a99448ea9bd16d5a52ba0d074822062e7baa59dbe64",
+    "source": "artifacts/publication/20261025/analysis.json",
+    "source_sha256": "fe67c3a2a2cfc5ec62814e009f8dcce385df45fd531942c062dad123d5b97be4",
+    "caption": "Twelve additional forwards; two fixed cases in one exposed development family.\nBoth margins remain positive in both models: the proposed opposed-margin causal screen fails.\nWithin-model score contrasts only; unequal axes and model scales are not cross-model calibrated confidence."
+  },
+  "candidate_scores.csv": {
+    "sha256": "cf44627a836871d776c5e6d08fd0cf7bc7aa3834b773b4e8119e34ee43004762",
+    "source": "artifacts/publication/20261025/analysis.json",
+    "source_sha256": "fe67c3a2a2cfc5ec62814e009f8dcce385df45fd531942c062dad123d5b97be4"
+  }
+}

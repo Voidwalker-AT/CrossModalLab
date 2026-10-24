@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "paper_figures": 10,
+  "paper_mobile_overflow": false,
+  "screen_failed_attempts": 1,
+  "screen_completed_rows": 0,
+  "actual_inputs": 2,
+  "model_rows": 4,
+  "additional_forwards": 12,
+  "desktop_and_mobile": true,
+  "page_errors": [],
+  "mobile_page_overflow": false
+}

@@ -1,0 +1,33 @@
+{
+  "status": "FAILED_SCREEN_PRESERVED_NO_RETRY",
+  "authorized_forwards": 108,
+  "attempted_forwards": 1,
+  "completed_score_rows": 0,
+  "qwen_started": false,
+  "specific_triggering_resource": "UNVERIFIED: original parent exception did not retain the triggering sample; RAM or physical VRAM gate failed.",
+  "raw_error": "physical RAM/VRAM safety gate failed",
+  "executed_source_sha256": "9bfd4c0849e9089cbdb61d5a8a80aa62206aba3f418221d96ba4aeadc8ca79a0",
+  "post_failure_cpu_repair": "Working runner now records triggering resource values and appends parent samples; this repaired code has NOT been GPU-executed.",
+  "observed_owned_process_chain": [
+    28964,
+    27712,
+    30612,
+    18768
+  ],
+  "all_owned_pids_absent_at_audit": true,
+  "post_failure_resources": {
+    "host_available_mib": 6290.07421875,
+    "nvidia_total_mib": 4096,
+    "nvidia_used_mib": 260,
+    "nvidia_free_mib": 3703
+  },
+  "parameter_invariance": "UNVERIFIED: worker was interrupted before after-comparison; no optimizer/backward was configured. Prior 12-forward pilot invariance remains separate.",
+  "temporary_snapshot": {
+    "path": ".cache/recovery-temp/parameter-audit-lo5gkxp6",
+    "files": 657,
+    "bytes": 1836930496,
+    "ownership": "Only exclusive ParameterAudit raw copies created between this screen admission and failure; all owning processes absent. Not a historical checkpoint.",
+    "cleanup": "Owned ephemeral copies eligible for scoped cleanup after preserving this inventory; not scientific output and never included in Git/package."
+  },
+  "next_action": "No automatic use of remaining 107 attempts. Continue CPU/literature work; any new GPU attempt needs a revised resource protocol and explicit approval."
+}

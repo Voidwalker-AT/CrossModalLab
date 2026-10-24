@@ -16,6 +16,9 @@ class PublicationDashboardTests(unittest.TestCase):
             self.assertTrue(row['image_data_url'].startswith('data:image/png;base64,'))
         self.assertEqual([r['argmax_answer'] for r in result['models']['smol']['cases']],['Yes','Yes'])
         self.assertEqual([r['argmax_answer'] for r in result['models']['qwen']['cases']],['No','Yes'])
+        self.assertEqual(result['screen']['status'],'FAILED')
+        self.assertEqual(result['screen']['attempts'],1)
+        self.assertEqual(result['screen']['completed_rows'],0)
 
     def test_missing_artifacts_are_explicit_not_synthetic_fallback(self):
         with tempfile.TemporaryDirectory(dir=REPO_ROOT/'.cache') as name:

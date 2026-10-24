@@ -1,0 +1,397 @@
+test_empty_candidate_raises_error (test_candidate_scoring.TestCandidateScorer.test_empty_candidate_raises_error)
+Empty candidate tokens must raise ValueError. ... ok
+test_length_penalty_rank_reversal (test_candidate_scoring.TestCandidateScorer.test_length_penalty_rank_reversal)
+Demonstrates that a multi-token sequence with high per-token probability ... ok
+test_multi_token_log_likelihood_exact (test_candidate_scoring.TestCandidateScorer.test_multi_token_log_likelihood_exact)
+Multi-token candidate must sum log_softmax at sequential positions. ... ok
+test_single_token_log_likelihood_exact (test_candidate_scoring.TestCandidateScorer.test_single_token_log_likelihood_exact)
+Single-token candidate must match log_softmax at prompt_len - 1. ... ok
+test_config_file_is_valid_json (test_config_portability.TestExperimentConfig.test_config_file_is_valid_json) ... ok
+test_pinned_model_identity (test_config_portability.TestExperimentConfig.test_pinned_model_identity) ... ok
+test_apply_cache_env_does_not_overwrite_existing_hf_home (test_config_portability.TestPaths.test_apply_cache_env_does_not_overwrite_existing_hf_home) ... ok
+test_env_override_hf_home (test_config_portability.TestPaths.test_env_override_hf_home) ... ok
+test_legacy_e_cache_not_forced_when_disabled (test_config_portability.TestPaths.test_legacy_e_cache_not_forced_when_disabled) ... ok
+test_repo_root_is_stable (test_config_portability.TestPaths.test_repo_root_is_stable) ... ok
+test_snapshot_resolution_uses_explicit_env (test_config_portability.TestPaths.test_snapshot_resolution_uses_explicit_env) ... ok
+test_api_is_readonly_and_contained (test_dashboard.TestDashboard.test_api_is_readonly_and_contained) ... 127.0.0.1 - - [25/Oct/2026 00:52:48] "POST /api/workspace HTTP/1.1" 405 -
+127.0.0.1 - - [25/Oct/2026 00:52:48] "PUT /api/workspace HTTP/1.1" 405 -
+127.0.0.1 - - [25/Oct/2026 00:52:48] "PATCH /api/workspace HTTP/1.1" 405 -
+127.0.0.1 - - [25/Oct/2026 00:52:48] "DELETE /api/workspace HTTP/1.1" 405 -
+127.0.0.1 - - [25/Oct/2026 00:52:48] "GET /api/image/not-allowlisted HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 00:52:48] "GET /api/image/..%2f..%2fAGENTS.md HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 00:52:48] "GET /..%2f..%2fAGENTS.md HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 00:52:48] "GET /api/train HTTP/1.1" 404 -
+ok
+test_error_categories_do_not_conflate_format_and_semantics (test_dashboard.TestDashboard.test_error_categories_do_not_conflate_format_and_semantics) ... ok
+test_host_restriction_and_headers (test_dashboard.TestDashboard.test_host_restriction_and_headers) ... 127.0.0.1 - - [25/Oct/2026 00:52:48] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 00:52:48] "GET /api/health HTTP/1.1" 403 -
+ok
+test_metrics_separate_semantic_and_exact_format (test_dashboard.TestDashboard.test_metrics_separate_semantic_and_exact_format) ... ok
+test_only_real_validation_cases_and_dual_oracle (test_dashboard.TestDashboard.test_only_real_validation_cases_and_dual_oracle) ... ok
+test_partner_image_fallback_without_original_dataset_cache (test_dashboard.TestDashboard.test_partner_image_fallback_without_original_dataset_cache) ... ok
+test_reproducibility_fields_are_portable_and_complete (test_dashboard.TestDashboard.test_reproducibility_fields_are_portable_and_complete) ... ok
+test_synthetic_demo_cannot_enter_analytics (test_dashboard.TestDashboard.test_synthetic_demo_cannot_enter_analytics) ... ok
+test_witness_paths_use_only_recorded_premises (test_dashboard.TestDashboard.test_witness_paths_use_only_recorded_premises) ... ok
+test_workspace_repeats_without_mutating_evidence (test_dashboard.TestDashboard.test_workspace_repeats_without_mutating_evidence) ... 127.0.0.1 - - [25/Oct/2026 00:52:48] "GET /api/workspace HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 00:52:48] "GET /api/workspace HTTP/1.1" 200 -
+ok
+Production frontend is current.
+test_current_production_bundle_needs_no_node (test_dashboard_launcher.DashboardLauncherTests.test_current_production_bundle_needs_no_node) ... ok
+test_missing_build_cannot_install_implicitly (test_dashboard_launcher.DashboardLauncherTests.test_missing_build_cannot_install_implicitly) ... ok
+test_missing_referenced_css_requires_rebuild (test_dashboard_launcher.DashboardLauncherTests.test_missing_referenced_css_requires_rebuild) ... ok
+test_source_change_invalidates_fingerprint (test_dashboard_launcher.DashboardLauncherTests.test_source_change_invalidates_fingerprint) ... ok
+test_all_svg_images_and_raw_predictions_are_exact (test_dashboard_neural_exports.NeuralExportTests.test_all_svg_images_and_raw_predictions_are_exact) ... ok
+test_comparison_api_is_allowlisted_and_read_only (test_dashboard_neural_exports.NeuralExportTests.test_comparison_api_is_allowlisted_and_read_only) ... 127.0.0.1 - - [25/Oct/2026 00:52:49] "GET /api/comparison/xc_ho_0011%3A%3Aunderdetermined.svg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 00:52:49] "GET /api/comparison/not-allowlisted.svg HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 00:52:49] "GET /api/comparison/..%2fREADME.md.svg HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 00:52:49] "POST /api/comparison/x.svg HTTP/1.1" 405 -
+ok
+test_misattribution_and_synthetic_rejected (test_dashboard_neural_exports.NeuralExportTests.test_misattribution_and_synthetic_rejected) ... ok
+test_nonfinite_and_causal_upgrade_rejected (test_dashboard_neural_exports.NeuralExportTests.test_nonfinite_and_causal_upgrade_rejected) ... ok
+test_registration_preserves_existing_bytes_and_objects (test_dashboard_neural_exports.NeuralExportTests.test_registration_preserves_existing_bytes_and_objects) ... ok
+test_validated_measurements_are_separate_from_qwen (test_dashboard_neural_exports.NeuralExportTests.test_validated_measurements_are_separate_from_qwen) ... ok
+test_all_logic_exports_preserve_premises_and_countermodels (test_dashboard_story.DashboardStoryTests.test_all_logic_exports_preserve_premises_and_countermodels) ... ok
+test_featured_wrong_answers_cannot_be_presented_as_improvement (test_dashboard_story.DashboardStoryTests.test_featured_wrong_answers_cannot_be_presented_as_improvement) ... ok
+test_finalized_release_rejected_before_any_write (test_dashboard_story.DashboardStoryTests.test_finalized_release_rejected_before_any_write) ... ok
+test_gallery_is_escaped_offline_and_explained (test_dashboard_story.DashboardStoryTests.test_gallery_is_escaped_offline_and_explained) ... ok
+test_complete_matched_metrics (test_matched_screen.MatchedScreenTests.test_complete_matched_metrics) ... ok
+test_failed_execution_refused_even_with_rows (test_matched_screen.MatchedScreenTests.test_failed_execution_refused_even_with_rows) ... ok
+test_input_mismatch_refused (test_matched_screen.MatchedScreenTests.test_input_mismatch_refused) ... ok
+test_missing_and_duplicate_scores_refused (test_matched_screen.MatchedScreenTests.test_missing_and_duplicate_scores_refused) ... ok
+test_nonfinite_and_wrong_argmax_refused (test_matched_screen.MatchedScreenTests.test_nonfinite_and_wrong_argmax_refused) ... ok
+test_two_label_pilot_cannot_become_three_class_result (test_matched_screen.MatchedScreenTests.test_two_label_pilot_cannot_become_three_class_result) ... ok
+test_budget_persists_attempts_and_refuses_extra_forward (test_phase3_research_audit.Phase3AuditTests.test_budget_persists_attempts_and_refuses_extra_forward) ... ok
+test_duplicates_and_group_leakage_refused (test_phase3_research_audit.Phase3AuditTests.test_duplicates_and_group_leakage_refused) ... ok
+test_factorial_counterbalances_roles_and_shares_exact_images (test_phase3_research_audit.Phase3AuditTests.test_factorial_counterbalances_roles_and_shares_exact_images) ... ok
+test_generation_preserves_existing_output (test_phase3_research_audit.Phase3AuditTests.test_generation_preserves_existing_output) ... ok
+test_recorded_failure_remains_partial_not_cross_model_success (test_phase3_research_audit.Phase3AuditTests.test_recorded_failure_remains_partial_not_cross_model_success) ... ok
+test_restricted_split_and_wrong_gold_refused (test_phase3_research_audit.Phase3AuditTests.test_restricted_split_and_wrong_gold_refused) ... ok
+test_empty (test_phase_0d2_harness.TestAnswerParsing.test_empty) ... ok
+test_invalid (test_phase_0d2_harness.TestAnswerParsing.test_invalid) ... ok
+test_missing (test_phase_0d2_harness.TestAnswerParsing.test_missing) ... ok
+test_no (test_phase_0d2_harness.TestAnswerParsing.test_no) ... ok
+test_undetermined (test_phase_0d2_harness.TestAnswerParsing.test_undetermined) ... ok
+test_yes (test_phase_0d2_harness.TestAnswerParsing.test_yes) ... ok
+test_counts (test_phase_0d2_harness.TestManifest.test_counts) ... ok
+test_determinism (test_phase_0d2_harness.TestManifest.test_determinism) ... ok
+test_images_exist_and_hash_source (test_phase_0d2_harness.TestManifest.test_images_exist_and_hash_source) ... ok
+test_label_correctness_forward_and_fork (test_phase_0d2_harness.TestManifest.test_label_correctness_forward_and_fork) ... ok
+test_source_jsonl_unchanged (test_phase_0d2_harness.TestManifest.test_source_jsonl_unchanged) ... ok
+test_unique_ids (test_phase_0d2_harness.TestManifest.test_unique_ids) ... ok
+test_bootstrap_ci (test_phase_0d2_harness.TestMetrics.test_bootstrap_ci) ... ok
+test_confusion_and_balanced_acc (test_phase_0d2_harness.TestMetrics.test_confusion_and_balanced_acc) ... ok
+test_metrics_from_fake_records (test_phase_0d2_harness.TestMetrics.test_metrics_from_fake_records) ... ok
+test_unsupported_definite_rate (test_phase_0d2_harness.TestMetrics.test_unsupported_definite_rate) ... ok
+test_text_only_prompt (test_phase_0d2_harness.TestPromptTemplate.test_text_only_prompt) ... ok
+test_visual_prompt_mentions_image (test_phase_0d2_harness.TestPromptTemplate.test_visual_prompt_mentions_image) ... ok
+test_append_and_resume (test_phase_0d2_harness.TestResumeHelpers.test_append_and_resume) ... ok
+test_resume_validation_detects_duplicate_ok (test_phase_0d2_harness.TestResumeHelpers.test_resume_validation_detects_duplicate_ok) ... ok
+test_resume_validation_detects_mismatch (test_phase_0d2_harness.TestResumeHelpers.test_resume_validation_detects_mismatch) ... ok
+test_forward_chain_entailed (test_phase_0d2_harness.TestSymbolicAgreement.test_forward_chain_entailed) ... ok
+test_frozen_spec (test_phase_0e_design.TestCaptureSpec.test_frozen_spec) ... ok
+test_design_doc_exists (test_phase_0e_design.TestDesignDocPresent.test_design_doc_exists) ... ok
+test_selection_file_valid (test_phase_0e_design.TestMatchedCaseSelection.test_selection_file_valid) ... ok
+test_optional_analysis_schema (test_phase_1a_capture.TestAnalysisArtifactIfPresent.test_optional_analysis_schema) ... ok
+test_phase_1a_selection_valid (test_phase_1a_capture.TestCaseSelection.test_phase_1a_selection_valid) ... ok
+test_blank_image_still_has_tokens (test_phase_1a_capture.TestConditionTaxonomy.test_blank_image_still_has_tokens) ... ok
+test_image_multimodal (test_phase_1a_capture.TestConditionTaxonomy.test_image_multimodal) ... ok
+test_true_text_only (test_phase_1a_capture.TestConditionTaxonomy.test_true_text_only) ... ok
+test_default_selectors (test_phase_1a_capture.TestLayerAndTokenSpec.test_default_selectors) ... ok
+test_spec_layers (test_phase_1a_capture.TestLayerAndTokenSpec.test_spec_layers) ... ok
+test_cosine_identical (test_phase_1a_capture.TestMathHelpers.test_cosine_identical) ... ok
+test_l2 (test_phase_1a_capture.TestMathHelpers.test_l2) ... ok
+test_changed_revision_blocks_skip (test_phase_1b_dependency.TestCaptureIntegrity.test_changed_revision_blocks_skip) ... ok
+test_changed_selectors_block_skip (test_phase_1b_dependency.TestCaptureIntegrity.test_changed_selectors_block_skip) ... ok
+test_corrupted_vector_blocks_skip (test_phase_1b_dependency.TestCaptureIntegrity.test_corrupted_vector_blocks_skip) ... ok
+test_missing_layer_blocks_skip (test_phase_1b_dependency.TestCaptureIntegrity.test_missing_layer_blocks_skip) ... ok
+test_missing_vector_file (test_phase_1b_dependency.TestCaptureIntegrity.test_missing_vector_file) ... ok
+test_skip_on_complete_match (test_phase_1b_dependency.TestCaptureIntegrity.test_skip_on_complete_match) ... ok
+test_both_premises_entailed (test_phase_1b_dependency.TestCrossModalLabels.test_both_premises_entailed) ... ok
+test_contradictory_inconsistent (test_phase_1b_dependency.TestCrossModalLabels.test_contradictory_inconsistent) ... ok
+test_fork_underdetermined (test_phase_1b_dependency.TestCrossModalLabels.test_fork_underdetermined) ... ok
+test_visual_removed_underdetermined (test_phase_1b_dependency.TestCrossModalLabels.test_visual_removed_underdetermined) ... ok
+test_visual_reversed_not_assumed_same_as_base (test_phase_1b_dependency.TestCrossModalLabels.test_visual_reversed_not_assumed_same_as_base) ... ok
+test_ablation_integrity (test_phase_1b_dependency.TestDatasetGeneration.test_ablation_integrity) ... ok
+test_plan_families_240 (test_phase_1b_dependency.TestDatasetGeneration.test_plan_families_240) ... ok
+test_small_dataset_determinism_and_splits (test_phase_1b_dependency.TestDatasetGeneration.test_small_dataset_determinism_and_splits) ... ok
+test_prompt_mentions_question (test_phase_1b_dependency.TestPromptBuild.test_prompt_mentions_question) ... ok
+test_atomic_write_json (test_phase_1c_readiness.TestCaptureIntegrityHardening.test_atomic_write_json) ... ok
+test_forged_stored_hash_cannot_bypass (test_phase_1c_readiness.TestCaptureIntegrityHardening.test_forged_stored_hash_cannot_bypass) ... ok
+test_hash_excludes_self_field (test_phase_1c_readiness.TestCaptureIntegrityHardening.test_hash_excludes_self_field) ... ok
+test_identity_from_stored_ignores_hash_field (test_phase_1c_readiness.TestCaptureIntegrityHardening.test_identity_from_stored_ignores_hash_field) ... ok
+test_image_change_invalidates (test_phase_1c_readiness.TestCaptureIntegrityHardening.test_image_change_invalidates) ... ok
+test_nonfinite_vector_rejected (test_phase_1c_readiness.TestCaptureIntegrityHardening.test_nonfinite_vector_rejected) ... ok
+test_prompt_change_invalidates (test_phase_1c_readiness.TestCaptureIntegrityHardening.test_prompt_change_invalidates) ... ok
+test_manifest_exists_and_disjoint (test_phase_1c_readiness.TestFrozenSplitsArtifact.test_manifest_exists_and_disjoint) ... ok
+test_balanced_accuracy_and_macro_f1 (test_phase_1c_readiness.TestProbeMetrics.test_balanced_accuracy_and_macro_f1) ... ok
+test_balanced_dev_is_condition_confounded (test_phase_1d_probes.TestConfounding.test_balanced_dev_is_condition_confounded) ... ok
+test_probe_summary_if_present_excludes_holdout (test_phase_1d_probes.TestHoldoutUntouched.test_probe_summary_if_present_excludes_holdout) ... ok
+test_group_split_and_fit (test_phase_1d_probes.TestLinearProbe.test_group_split_and_fit) ... ok
+test_leakage_rejected (test_phase_1d_probes.TestLinearProbe.test_leakage_rejected) ... ok
+test_mapping_bijective (test_phase_1d_probes.TestLinearProbe.test_mapping_bijective) ... ok
+test_nonfinite_rejected (test_phase_1d_probes.TestLinearProbe.test_nonfinite_rejected) ... ok
+test_full_meta_if_present (test_phase_1e_contrast.TestBuiltDatasetIfPresent.test_full_meta_if_present) ... ok
+test_small_generation (test_phase_1e_contrast.TestDatasetGeneration.test_small_generation) ... ok
+test_fixture_threshold_documented (test_phase_1e_contrast.TestSyntheticFixtureDesign.test_fixture_threshold_documented) ... ok
+test_solver_agreement (test_phase_1e_contrast.TestVariantLogic.test_solver_agreement) ... ok
+test_three_labels_same_condition (test_phase_1e_contrast.TestVariantLogic.test_three_labels_same_condition) ... ok
+test_bootstrap_bounds (test_phase_1f_eval.TestBootstrap.test_bootstrap_bounds) ... ok
+test_slice_layout (test_phase_1f_eval.TestFeatureSlices.test_slice_layout) ... ok
+test_no_leak (test_phase_1f_eval.TestGroupSplitSafety.test_no_leak) ... ok
+test_pca_shapes (test_phase_1f_eval.TestPCA.test_pca_shapes) ... ok
+test_hash_stable (test_phase_1f_eval.TestSpecHashStable.test_hash_stable) ... ok
+test_config_hash_stable (test_phase_2a_interventions.TestMargins.test_config_hash_stable) ... ok
+test_margin_change_and_nie_guard (test_phase_2a_interventions.TestMargins.test_margin_change_and_nie_guard) ... ok
+test_prereg_exists_and_unauthorized (test_phase_2a_interventions.TestPreregArtifact.test_prereg_exists_and_unauthorized) ... ok
+test_no_op (test_phase_2a_interventions.TestReplacement.test_no_op) ... ok
+test_nonfinite_source (test_phase_2a_interventions.TestReplacement.test_nonfinite_source) ... ok
+test_out_of_range (test_phase_2a_interventions.TestReplacement.test_out_of_range) ... ok
+test_replacement_at_position (test_phase_2a_interventions.TestReplacement.test_replacement_at_position) ... ok
+test_shape_mismatch (test_phase_2a_interventions.TestReplacement.test_shape_mismatch) ... ok
+test_directions (test_phase_2a_interventions.TestSourceResolution.test_directions) ... ok
+test_invalid_direction (test_phase_2a_interventions.TestSpecValidation.test_invalid_direction) ... ok
+test_no_op_source_kind (test_phase_2a_interventions.TestSpecValidation.test_no_op_source_kind) ... ok
+test_valid_clean_to_cf (test_phase_2a_interventions.TestSpecValidation.test_valid_clean_to_cf) ... ok
+test_spec_frozen_families_and_auth (test_phase_2b_pilot.TestExecSpec.test_spec_frozen_families_and_auth) ... ok
+test_noop_and_patch_counts (test_phase_2b_pilot.TestHookOnTinyModule.test_noop_and_patch_counts) ... ok
+test_delta_margin_stability_gate (test_phase_2b_pilot.TestMarginHelpers.test_delta_margin_stability_gate) ... ok
+test_score_margins (test_phase_2b_pilot.TestMarginHelpers.test_score_margins) ... ok
+test_dataset_if_present (test_phase_2b_r_redesign.TestExactPairsArtifact.test_dataset_if_present) ... ok
+test_phase2b_jsonl_sha_stable_if_present (test_phase_2b_r_redesign.TestHistoricalImmutable.test_phase2b_jsonl_sha_stable_if_present) ... ok
+test_exact_image_changed_text (test_phase_2b_r_redesign.TestPairClassification.test_exact_image_changed_text) ... ok
+test_multi_factor_when_both_change (test_phase_2b_r_redesign.TestPairClassification.test_multi_factor_when_both_change) ... ok
+test_full_and_hybrid_match_reference (test_phase_2b_r_redesign.TestScoringEquivalence.test_full_and_hybrid_match_reference) ... ok
+test_prompt_position_guard (test_phase_2b_r_redesign.TestScoringEquivalence.test_prompt_position_guard) ... ok
+test_stop_conditions (test_phase_2b_r_redesign.TestTelemetrySchema.test_stop_conditions) ... ok
+test_immutable_copy_detects_truncation (test_phase_2b_recovery.TestArtifactValidation.test_immutable_copy_detects_truncation) ... ok
+test_real_artifact_validates (test_phase_2b_recovery.TestArtifactValidation.test_real_artifact_validates) ... ok
+test_exec_spec_version (test_phase_2b_recovery.TestConfigVersion.test_exec_spec_version) ... ok
+test_flag_when_controls_larger (test_phase_2b_recovery.TestControlComparison.test_flag_when_controls_larger) ... ok
+test_direction_and_margin_definition (test_phase_2b_recovery.TestHookLifetime.test_direction_and_margin_definition) ... ok
+test_patch_context_counts_multiple_forwards (test_phase_2b_recovery.TestHookLifetime.test_patch_context_counts_multiple_forwards) ... ok
+test_missing_computation (test_phase_2b_recovery.TestResumeMatrix.test_missing_computation) ... ok
+test_manifest_and_2_2b (test_phase_2c_a.TestCleanupManifest.test_manifest_and_2_2b) ... ok
+test_battery_has_required_tasks (test_phase_2c_a.TestModelSpecs.test_battery_has_required_tasks) ... ok
+test_specs_distinct (test_phase_2c_a.TestModelSpecs.test_specs_distinct) ... ok
+test_manifest_complete (test_phase_2c_b.TestAcquisitionManifest.test_manifest_complete) ... ok
+test_pinned_revision_format (test_phase_2c_b.TestQwenSpec.test_pinned_revision_format) ... ok
+test_smoke_summary (test_phase_2c_b.TestSmokeArtifactIfPresent.test_smoke_summary) ... ok
+test_22b_snapshot_exists (test_phase_2c_b.TestSmolvlmUntouched.test_22b_snapshot_exists) ... ok
+test_manifest_structure (test_phase_2c_c.TestPairedManifest.test_manifest_structure) ... skipped 'Phase 3 isolation: mixed train/validation/test record file kept closed'
+test_no_duplicate_eval_ids_in_jsonl (test_phase_2c_c.TestPairedResultsIfPresent.test_no_duplicate_eval_ids_in_jsonl) ... ok
+test_results_complete_and_no_holdout (test_phase_2c_c.TestPairedResultsIfPresent.test_results_complete_and_no_holdout) ... ok
+test_manifest_budget_and_families (test_phase_2d.TestFormatManifest.test_manifest_budget_and_families) ... ok
+test_pilot_complete (test_phase_2d.TestPilotIfPresent.test_pilot_complete) ... ok
+test_repo_dataset_passes (test_phase_2e_training.TestContrastV2AuditIfPresent.test_repo_dataset_passes) ... skipped 'Phase 3 isolation: mixed train/validation/test record file kept closed'
+test_ce_stable (test_phase_2e_training.TestLosses.test_ce_stable) ... ok
+test_cf_pair (test_phase_2e_training.TestLosses.test_cf_pair) ... ok
+test_combined (test_phase_2e_training.TestLosses.test_combined) ... ok
+test_ea_ce_nonfinite_rejected (test_phase_2e_training.TestLosses.test_ea_ce_nonfinite_rejected) ... ok
+test_ea_margin_insufficient (test_phase_2e_training.TestLosses.test_ea_margin_insufficient) ... ok
+test_balance (test_phase_2e_training.TestSchema.test_balance) ... ok
+test_split_leakage_detected (test_phase_2e_training.TestSchema.test_split_leakage_detected) ... ok
+test_valid_record (test_phase_2e_training.TestSchema.test_valid_record) ... ok
+test_build_config_imports (test_phase_2f_qlora.TestLoraConfig.test_build_config_imports) ... ok
+test_empty_targets_rejected (test_phase_2f_qlora.TestLoraConfig.test_empty_targets_rejected) ... ok
+test_hw_config_frozen (test_phase_2f_qlora.TestLoraConfig.test_hw_config_frozen) ... ok
+test_invalid_rank_rejected (test_phase_2f_qlora.TestLoraConfig.test_invalid_rank_rejected) ... ok
+test_excludes_vision_paths (test_phase_2f_qlora.TestTargetModuleFilter.test_excludes_vision_paths) ... ok
+test_no_holdout (test_phase_2g_training.TestFreezeVal.test_no_holdout) ... skipped 'Phase 3 isolation: mixed train/validation/test record file kept closed'
+test_completion_only_masks_prompt (test_phase_2g_training.TestLabelMasking.test_completion_only_masks_prompt) ... ok
+test_fully_masked_rejected (test_phase_2g_training.TestLabelMasking.test_fully_masked_rejected) ... ok
+test_pad_masking (test_phase_2g_training.TestLabelMasking.test_pad_masking) ... ok
+test_over_abstention (test_phase_2g_training.TestMetrics.test_over_abstention) ... ok
+test_balanced_three_class (test_phase_2g_training.TestSchedule.test_balanced_three_class) ... ok
+test_missing_class_raises (test_phase_2g_training.TestSchedule.test_missing_class_raises) ... ok
+test_frozen_config (test_phase_2g_training.TestTrainConfig.test_frozen_config) ... ok
+test_empty_rejected (test_phase_2h_losses.TestCE.test_empty_rejected) ... ok
+test_extreme_logits_stable (test_phase_2h_losses.TestCE.test_extreme_logits_stable) ... ok
+test_known_logits_finite (test_phase_2h_losses.TestCE.test_known_logits_finite) ... ok
+test_nonfinite_rejected (test_phase_2h_losses.TestCE.test_nonfinite_rejected) ... ok
+test_deterministic (test_phase_2h_losses.TestCombined.test_deterministic) ... ok
+test_missing_cf_tensors (test_phase_2h_losses.TestCombined.test_missing_cf_tensors) ... ok
+test_negative_coeff_rejected (test_phase_2h_losses.TestCombined.test_negative_coeff_rejected) ... ok
+test_zero_coeffs_equal_ce (test_phase_2h_losses.TestCombined.test_zero_coeffs_equal_ce) ... ok
+test_bad_temperature (test_phase_2h_losses.TestCounterfactual.test_bad_temperature) ... ok
+test_pair_loss_finite_and_grad (test_phase_2h_losses.TestCounterfactual.test_pair_loss_finite_and_grad) ... ok
+test_same_label_ok (test_phase_2h_losses.TestCounterfactual.test_same_label_ok) ... ok
+test_empty_batch (test_phase_2h_losses.TestEncoding.test_empty_batch) ... ok
+test_encode_labels (test_phase_2h_losses.TestEncoding.test_encode_labels) ... ok
+test_invalid_label (test_phase_2h_losses.TestEncoding.test_invalid_label) ... ok
+test_ce_mode_finite (test_phase_2h_losses.TestEvidenceSufficiency.test_ce_mode_finite) ... ok
+test_margin_prefers_abstain_when_insufficient (test_phase_2h_losses.TestEvidenceSufficiency.test_margin_prefers_abstain_when_insufficient) ... ok
+test_margin_zero_when_sufficient_and_definite (test_phase_2h_losses.TestEvidenceSufficiency.test_margin_zero_when_sufficient_and_definite) ... ok
+test_negative_margin_rejected (test_phase_2h_losses.TestEvidenceSufficiency.test_negative_margin_rejected) ... ok
+test_phase_2g_artifacts_untouched_ids (test_phase_2h_losses.TestProvenance.test_phase_2g_artifacts_untouched_ids) ... ok
+test_invalid_rate (test_phase_2i_a_control.TestAccounting.test_invalid_rate) ... ok
+test_missing_span (test_phase_2i_a_control.TestAnswerSpan.test_missing_span) ... ok
+test_suffix_span (test_phase_2i_a_control.TestAnswerSpan.test_suffix_span) ... ok
+test_ce_only (test_phase_2i_a_control.TestProtocolFrozen.test_ce_only) ... ok
+test_coverage_maximizes_families (test_phase_2i_a_control.TestSchedule.test_coverage_maximizes_families) ... ok
+test_deterministic (test_phase_2i_a_control.TestSchedule.test_deterministic) ... ok
+test_missing_class (test_phase_2i_a_control.TestSchedule.test_missing_class) ... ok
+test_conflict (test_phase_2i_a_control.TestStrictParser.test_conflict) ... ok
+test_empty (test_phase_2i_a_control.TestStrictParser.test_empty) ... ok
+test_invalid_not_coerced (test_phase_2i_a_control.TestStrictParser.test_invalid_not_coerced) ... ok
+test_parses_exact (test_phase_2i_a_control.TestStrictParser.test_parses_exact) ... ok
+test_causal_shift_multi_token_stable (test_phase_2i_b_es.TestCandidateScoring.test_causal_shift_multi_token_stable) ... ok
+test_complete_scores_match_autoregressive_oracle (test_phase_2i_b_es.TestCandidateScoring.test_complete_scores_match_autoregressive_oracle) ... ok
+test_explicit_text_positions_extend (test_phase_2i_b_es.TestCandidateScoring.test_explicit_text_positions_extend) ... ok
+test_frozen_weights_unchanged_after_backward (test_phase_2i_b_es.TestCandidateScoring.test_frozen_weights_unchanged_after_backward) ... ok
+test_gradients_flow_to_parameters (test_phase_2i_b_es.TestCandidateScoring.test_gradients_flow_to_parameters) ... ok
+test_invalid_inputs_rejected_before_forward (test_phase_2i_b_es.TestCandidateScoring.test_invalid_inputs_rejected_before_forward) ... ok
+test_metadata_extension_and_no_duplication (test_phase_2i_b_es.TestCandidateScoring.test_metadata_extension_and_no_duplication) ... ok
+test_original_qwen_mask_mismatch_regression (test_phase_2i_b_es.TestCandidateScoring.test_original_qwen_mask_mismatch_regression) ... ok
+test_single_and_multi_token (test_phase_2i_b_es.TestCandidateScoring.test_single_and_multi_token) ... ok
+test_ablation_config (test_phase_2i_b_es.TestConfigFrozen.test_ablation_config) ... ok
+test_anti_over_abstention_when_sufficient (test_phase_2i_b_es.TestESScore.test_anti_over_abstention_when_sufficient) ... ok
+test_extreme_stable (test_phase_2i_b_es.TestESScore.test_extreme_stable) ... ok
+test_negative_mu_rejected (test_phase_2i_b_es.TestESScore.test_negative_mu_rejected) ... ok
+test_penalizes_definite_when_insufficient (test_phase_2i_b_es.TestESScore.test_penalizes_definite_when_insufficient) ... ok
+test_prefers_abstain_when_insufficient (test_phase_2i_b_es.TestESScore.test_prefers_abstain_when_insufficient) ... ok
+test_sufficient_and_correct_low_hinge (test_phase_2i_b_es.TestESScore.test_sufficient_and_correct_low_hinge) ... ok
+test_zero_mu_equals_ce (test_phase_2i_b_es.TestESScore.test_zero_mu_equals_ce) ... ok
+test_existing_adapter_is_restored_without_replacing_optimizer_parameters (test_phase_2i_b_runner.TestActualPeftSerialization.test_existing_adapter_is_restored_without_replacing_optimizer_parameters) ... ok
+test_differentiable_composition_no_ce_substitution (test_phase_2i_b_runner.TestObjective.test_differentiable_composition_no_ce_substitution) ... ok
+test_es_is_not_identical_to_ce (test_phase_2i_b_runner.TestObjective.test_es_is_not_identical_to_ce) ... ok
+test_nonfinite_adapter_update_is_rejected (test_phase_2i_b_runner.TestObjective.test_nonfinite_adapter_update_is_rejected) ... ok
+test_training_parameter_acceptance_detects_updates_and_frozen_changes (test_phase_2i_b_runner.TestObjective.test_training_parameter_acceptance_detects_updates_and_frozen_changes) ... ok
+test_cpu_only_plan_never_loads_model_or_initializes_run (test_phase_2i_b_runner.TestProtocol.test_cpu_only_plan_never_loads_model_or_initializes_run) ... ok
+test_execution_requires_explicit_mode_and_flag (test_phase_2i_b_runner.TestProtocol.test_execution_requires_explicit_mode_and_flag) ... ok
+test_frozen_objective_rejects_ce_only_and_reordered_candidates (test_phase_2i_b_runner.TestProtocol.test_frozen_objective_rejects_ce_only_and_reordered_candidates) ... ok
+test_holdout_rejected_before_model_or_image_access (test_phase_2i_b_runner.TestProtocol.test_holdout_rejected_before_model_or_image_access) ... ok
+test_corrupted_adapter_hash_is_rejected (test_phase_2i_b_runner.TestRunState.test_corrupted_adapter_hash_is_rejected) ... ok
+test_corrupted_checkpoint_metadata (test_phase_2i_b_runner.TestRunState.test_corrupted_checkpoint_metadata) ... ok
+test_duplicate_and_mixed_metrics_rejected (test_phase_2i_b_runner.TestRunState.test_duplicate_and_mixed_metrics_rejected) ... ok
+test_duplicate_commit_preserves_history (test_phase_2i_b_runner.TestRunState.test_duplicate_commit_preserves_history) ... ok
+test_duplicate_metric_steps_rejected_by_runner (test_phase_2i_b_runner.TestRunState.test_duplicate_metric_steps_rejected_by_runner) ... ok
+test_fresh_run_unique_and_identity_immutable (test_phase_2i_b_runner.TestRunState.test_fresh_run_unique_and_identity_immutable) ... ok
+test_historical_checkpoint_bytes_unchanged (test_phase_2i_b_runner.TestRunState.test_historical_checkpoint_bytes_unchanged) ... ok
+test_interrupted_checkpoint_is_not_committed_and_is_preserved (test_phase_2i_b_runner.TestRunState.test_interrupted_checkpoint_is_not_committed_and_is_preserved) ... ok
+test_missing_checkpoint_preserves_metrics (test_phase_2i_b_runner.TestRunState.test_missing_checkpoint_preserves_metrics) ... ok
+test_missing_optimizer_or_rng_component (test_phase_2i_b_runner.TestRunState.test_missing_optimizer_or_rng_component) ... ok
+test_missing_rng_state (test_phase_2i_b_runner.TestRunState.test_missing_rng_state) ... ok
+test_mixed_identity_metric_rejected_without_changes (test_phase_2i_b_runner.TestRunState.test_mixed_identity_metric_rejected_without_changes) ... ok
+test_publish_then_append_failure_explicit_recovery (test_phase_2i_b_runner.TestRunState.test_publish_then_append_failure_explicit_recovery) ... ok
+test_valid_resume_restores_adapter_optimizer_rng (test_phase_2i_b_runner.TestRunState.test_valid_resume_restores_adapter_optimizer_rng) ... ok
+test_writer_lock_excludes_second_writer (test_phase_2i_b_runner.TestRunState.test_writer_lock_excludes_second_writer) ... ok
+test_wrong_optimizer_state_and_missing_rng_keys (test_phase_2i_b_runner.TestRunState.test_wrong_optimizer_state_and_missing_rng_keys) ... ok
+test_wrong_optimizer_step (test_phase_2i_b_runner.TestRunState.test_wrong_optimizer_step) ... ok
+test_wrong_revision_dataset_and_coefficient (test_phase_2i_b_runner.TestRunState.test_wrong_revision_dataset_and_coefficient) ... ok
+test_no_op_and_single_aligned_token_replacement (test_publication_controls.PublicationControlTests.test_no_op_and_single_aligned_token_replacement) ... ok
+test_opposed_margin_screen_never_uses_unstable_normalization (test_publication_controls.PublicationControlTests.test_opposed_margin_screen_never_uses_unstable_normalization) ... ok
+test_unique_alignment_handles_shift_and_rejects_ambiguity (test_publication_controls.PublicationControlTests.test_unique_alignment_handles_shift_and_rejects_ambiguity) ... ok
+test_changed_image_refused (test_publication_dashboard.PublicationDashboardTests.test_changed_image_refused) ... ok
+test_missing_artifacts_are_explicit_not_synthetic_fallback (test_publication_dashboard.PublicationDashboardTests.test_missing_artifacts_are_explicit_not_synthetic_fallback) ... ok
+test_stored_update_has_exact_development_inputs_and_model_outputs (test_publication_dashboard.PublicationDashboardTests.test_stored_update_has_exact_development_inputs_and_model_outputs) ... ok
+test_baseline_ceilings_and_family_hash_separation (test_publication_factorial.PublicationFactorialTests.test_baseline_ceilings_and_family_hash_separation) ... ok
+test_complete_factorial_support_and_oracles (test_publication_factorial.PublicationFactorialTests.test_complete_factorial_support_and_oracles) ... ok
+test_existing_output_and_family_leakage_refused (test_publication_factorial.PublicationFactorialTests.test_existing_output_and_family_leakage_refused) ... ok
+test_query_counterfactuals_preserve_or_flip_exactly (test_publication_factorial.PublicationFactorialTests.test_query_counterfactuals_preserve_or_flip_exactly) ... ok
+test_active_hinge_gradient_directions_for_both_evidence_states (test_publication_objective.PublicationObjectiveTests.test_active_hinge_gradient_directions_for_both_evidence_states) ... ok
+test_counterfactual_objective_is_paired_ce_not_consistency_constraint (test_publication_objective.PublicationObjectiveTests.test_counterfactual_objective_is_paired_ce_not_consistency_constraint) ... ok
+test_existing_admission_refuses_reset (test_publication_pilot.IsolatedPilotTests.test_existing_admission_refuses_reset) ... ok
+test_fixed_cases_remain_development (test_publication_pilot.IsolatedPilotTests.test_fixed_cases_remain_development) ... ok
+test_resource_gates (test_publication_pilot.IsolatedPilotTests.test_resource_gates) ... ok
+test_worker_integrity_rejects_missing_rows_and_parameter_changes (test_publication_pilot.IsolatedPilotTests.test_worker_integrity_rejects_missing_rows_and_parameter_changes) ... ok
+test_exact_frozen_cases_and_content_order (test_publication_screen108.ApprovedScreenTests.test_exact_frozen_cases_and_content_order) ... ok
+test_failed_gate_retains_triggering_sample_in_exception (test_publication_screen108.ApprovedScreenTests.test_failed_gate_retains_triggering_sample_in_exception) ... ok
+test_free_vram_gate_uses_reported_free_not_total_minus_used (test_publication_screen108.ApprovedScreenTests.test_free_vram_gate_uses_reported_free_not_total_minus_used) ... ok
+test_modified_approved_plan_refused_before_loading (test_publication_screen108.ApprovedScreenTests.test_modified_approved_plan_refused_before_loading) ... ok
+test_worker_quota_is_persistent_and_exactly_54 (test_publication_screen108.ApprovedScreenTests.test_worker_quota_is_persistent_and_exactly_54) ... ok
+test_assertion_records_telemetry_and_cleanup (test_scorer_verification.TestFailureTelemetry.test_assertion_records_telemetry_and_cleanup) ... ok
+test_cleanup_and_sampler_errors_do_not_mask_original (test_scorer_verification.TestFailureTelemetry.test_cleanup_and_sampler_errors_do_not_mask_original) ... ok
+test_cleanup_and_historical_artifact_immutability (test_scorer_verification.TestParameterAudit.test_cleanup_and_historical_artifact_immutability) ... ok
+test_expected_rounding_requires_explicit_policy (test_scorer_verification.TestParameterAudit.test_expected_rounding_requires_explicit_policy) ... ok
+test_frozen_grad_fails_and_lora_grad_without_update_passes (test_scorer_verification.TestParameterAudit.test_frozen_grad_fails_and_lora_grad_without_update_passes) ... ok
+test_integer_precision_is_not_lost (test_scorer_verification.TestParameterAudit.test_integer_precision_is_not_lost) ... ok
+test_nan_inf_fail (test_scorer_verification.TestParameterAudit.test_nan_inf_fail) ... ok
+test_nonfinite_baseline_unverifiable (test_scorer_verification.TestParameterAudit.test_nonfinite_baseline_unverifiable) ... ok
+test_removed_parameter_and_shape_change_fail (test_scorer_verification.TestParameterAudit.test_removed_parameter_and_shape_change_fail) ... ok
+test_reversible_bfloat16_float32 (test_scorer_verification.TestParameterAudit.test_reversible_bfloat16_float32) ... ok
+test_rounding_policy_does_not_hide_mutation (test_scorer_verification.TestParameterAudit.test_rounding_policy_does_not_hide_mutation) ... ok
+test_same_dtype_mutation_even_tiny_fails (test_scorer_verification.TestParameterAudit.test_same_dtype_mutation_even_tiny_fails) ... ok
+test_holdout_flag_rejected (test_submission_package.SubmissionIntegrityTests.test_holdout_flag_rejected) ... ok
+test_tamper_or_missing_payload_rejected (test_submission_package.SubmissionIntegrityTests.test_tamper_or_missing_payload_rejected) ... ok
+test_unexpected_payload_rejected (test_submission_package.SubmissionIntegrityTests.test_unexpected_payload_rejected) ... ok
+test_valid_payload_and_partner_status (test_submission_package.SubmissionIntegrityTests.test_valid_payload_and_partner_status) ... ok
+test_balanced_topology_distribution (test_symbolic.test_generator.TestBenchmarkGenerator.test_balanced_topology_distribution)
+N=100 samples across 5 topologies must yield exactly 20 per topology. ... ok
+test_seed_determinism (test_symbolic.test_generator.TestBenchmarkGenerator.test_seed_determinism)
+Identical seeds must produce bitwise identical sample dictionaries. ... ok
+test_seed_divergence (test_symbolic.test_generator.TestBenchmarkGenerator.test_seed_divergence)
+Different seeds must produce different entity samples. ... ok
+test_split_vocabulary_disjointness (test_symbolic.test_generator.TestBenchmarkGenerator.test_split_vocabulary_disjointness)
+In-Distribution and Held-Out samples must never share entity vocabularies. ... ok
+test_synthetic_demo_quarantine_invariant (test_symbolic.test_generator.TestBenchmarkGenerator.test_synthetic_demo_quarantine_invariant)
+Benchmark datasets must have is_synthetic_demo: False to protect empirical metrics. ... ok
+test_topology_epistemic_invariants (test_symbolic.test_generator.TestBenchmarkGenerator.test_topology_epistemic_invariants)
+Forward chains must be entailed, reverse contradicted, forks underdetermined. ... ok
+test_asymmetry_violation (test_symbolic.test_graph.TestRelationGraph.test_asymmetry_violation)
+Adding B -> A when A -> B exists must raise InconsistentPremisesError. ... ok
+test_has_cycle_predicate (test_symbolic.test_graph.TestRelationGraph.test_has_cycle_predicate) ... ok
+test_linear_extensions_chain (test_symbolic.test_graph.TestRelationGraph.test_linear_extensions_chain)
+Linear chain A -> B -> C has exactly 1 topological ordering: [A, B, C]. ... ok
+test_linear_extensions_cyclic_graph_empty (test_symbolic.test_graph.TestRelationGraph.test_linear_extensions_cyclic_graph_empty) ... ok
+test_linear_extensions_disjoint_pairs (test_symbolic.test_graph.TestRelationGraph.test_linear_extensions_disjoint_pairs)
+Disjoint pairs A -> B and C -> D have (4! / (2! * 2!)) = 6 topological orderings. ... ok
+test_linear_extensions_fan_in_fork (test_symbolic.test_graph.TestRelationGraph.test_linear_extensions_fan_in_fork)
+Fork A -> B, C -> B has exactly 2 topological orderings: [A, C, B] and [C, A, B]. ... ok
+test_linear_extensions_fan_out_fork (test_symbolic.test_graph.TestRelationGraph.test_linear_extensions_fan_out_fork)
+Fork B -> A, B -> C has exactly 2 topological orderings: [B, A, C] and [B, C, A]. ... ok
+test_node_and_edge_addition (test_symbolic.test_graph.TestRelationGraph.test_node_and_edge_addition) ... ok
+test_reachability (test_symbolic.test_graph.TestRelationGraph.test_reachability) ... ok
+test_self_relation_rejection (test_symbolic.test_graph.TestRelationGraph.test_self_relation_rejection) ... ok
+test_transitive_closure (test_symbolic.test_graph.TestRelationGraph.test_transitive_closure) ... ok
+test_transitive_cycle_detection_3_nodes (test_symbolic.test_graph.TestRelationGraph.test_transitive_cycle_detection_3_nodes)
+A -> B -> C -> A must be flagged as a cycle. ... ok
+test_transitive_cycle_detection_4_nodes (test_symbolic.test_graph.TestRelationGraph.test_transitive_cycle_detection_4_nodes)
+A -> B -> C -> D -> A must be flagged as a cycle. ... ok
+test_epistemic_status_values (test_symbolic.test_relations.TestRelations.test_epistemic_status_values) ... ok
+test_premise_empty_subject_or_object (test_symbolic.test_relations.TestRelations.test_premise_empty_subject_or_object) ... ok
+test_premise_immutability (test_symbolic.test_relations.TestRelations.test_premise_immutability) ... ok
+test_premise_irreflexivity (test_symbolic.test_relations.TestRelations.test_premise_irreflexivity)
+Axiom: An entity cannot be left of itself. ... ok
+test_premise_string_coercion (test_symbolic.test_relations.TestRelations.test_premise_string_coercion) ... ok
+test_premise_unsupported_modality (test_symbolic.test_relations.TestRelations.test_premise_unsupported_modality) ... ok
+test_premise_unsupported_relation (test_symbolic.test_relations.TestRelations.test_premise_unsupported_relation) ... ok
+test_query_empty_subject_or_object (test_symbolic.test_relations.TestRelations.test_query_empty_subject_or_object) ... ok
+test_query_immutability (test_symbolic.test_relations.TestRelations.test_query_immutability) ... ok
+test_query_irreflexivity (test_symbolic.test_relations.TestRelations.test_query_irreflexivity) ... ok
+test_valid_premise_creation (test_symbolic.test_relations.TestRelations.test_valid_premise_creation) ... ok
+test_valid_query_creation (test_symbolic.test_relations.TestRelations.test_valid_query_creation) ... ok
+test_direct_premise_evaluation (test_symbolic.test_solver.TestSymbolicSolver.test_direct_premise_evaluation) ... ok
+test_exhaustive_3_node_sweep (test_symbolic.test_solver.TestSymbolicSolver.test_exhaustive_3_node_sweep)
+Exhaustively test all 2^6 = 64 directed subgraphs over 3 entities (A, B, C). ... ok
+test_exhaustive_4_node_linear_orders (test_symbolic.test_solver.TestSymbolicSolver.test_exhaustive_4_node_linear_orders)
+Exhaustively test all 24 linear orders of 4 entities (A, B, C, D). ... ok
+test_forward_chain_entailed (test_symbolic.test_solver.TestSymbolicSolver.test_forward_chain_entailed)
+R(A, B) and R(B, C) => R(A, C) is ENTAILED. ... ok
+test_inconsistent_premises_cycle (test_symbolic.test_solver.TestSymbolicSolver.test_inconsistent_premises_cycle)
+Contradictory premises (cycle A -> B -> C -> A) must return INCONSISTENT. ... ok
+test_reverse_chain_contradicted (test_symbolic.test_solver.TestSymbolicSolver.test_reverse_chain_contradicted)
+R(B, A) and R(C, B) => R(A, C) is CONTRADICTED (since C < B < A). ... ok
+test_solve_from_raw_dictionary (test_symbolic.test_solver.TestSymbolicSolver.test_solve_from_raw_dictionary) ... ok
+test_underdetermined_disconnected_components (test_symbolic.test_solver.TestSymbolicSolver.test_underdetermined_disconnected_components)
+R(A, B) and R(C, D) => R(A, C) is UNDERDETERMINED. ... ok
+test_underdetermined_fan_in_fork (test_symbolic.test_solver.TestSymbolicSolver.test_underdetermined_fan_in_fork)
+R(A, B) and R(C, B) => R(A, C) is UNDERDETERMINED. ... ok
+test_underdetermined_fan_out_fork (test_symbolic.test_solver.TestSymbolicSolver.test_underdetermined_fan_out_fork)
+R(B, A) and R(B, C) => R(A, C) is UNDERDETERMINED. ... ok
+test_detection_of_empty_sample_id (test_symbolic.test_verifier.TestBenchmarkVerifier.test_detection_of_empty_sample_id)
+Verifier must catch empty sample_id. ... ok
+test_detection_of_insufficient_premises (test_symbolic.test_verifier.TestBenchmarkVerifier.test_detection_of_insufficient_premises)
+Verifier must catch records with fewer than 2 premises. ... ok
+test_detection_of_nonexistent_file (test_symbolic.test_verifier.TestBenchmarkVerifier.test_detection_of_nonexistent_file) ... ok
+test_detection_of_tampered_extensions (test_symbolic.test_verifier.TestBenchmarkVerifier.test_detection_of_tampered_extensions)
+Verifier must catch mismatch in linear extensions. ... ok
+test_detection_of_tampered_status (test_symbolic.test_verifier.TestBenchmarkVerifier.test_detection_of_tampered_status)
+Verifier must catch discrepancy between recorded and re-derived status. ... ok
+test_roundtrip_1000_samples_verification (test_symbolic.test_verifier.TestBenchmarkVerifier.test_roundtrip_1000_samples_verification)
+Integration test: ... ok
+
+----------------------------------------------------------------------
+Ran 343 tests in 13.423s
+
+OK (skipped=3)
+{"status": "PASS", "tests_run": 343, "skipped": 3, "failures": 0, "errors": 0, "restricted_open_attempts": [], "scope": "per-process Python open audit; not OS-wide tracing or a custodian holdout audit"}

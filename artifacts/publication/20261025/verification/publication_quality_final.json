@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "papers_hashed": 21,
+  "extraction_entries": 21,
+  "publication_figure_pngs_pixel_identical": 2,
+  "score_csv_byte_identical": true,
+  "all_research_document_links_valid": true,
+  "oct28_archive_unchanged": true,
+  "dependency_environment_files_changed": false,
+  "scope": "Source/provenance and selected semantic checks; not human validity, external replication or novelty clearance."
+}

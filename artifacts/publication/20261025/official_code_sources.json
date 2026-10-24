@@ -1,0 +1,1025 @@
+{
+  "date": "2026-10-25",
+  "scope": "read-only official code/documentation inspection; no installs, datasets or execution",
+  "repositories": [
+    {
+      "repository": "tianyi-lab/HallusionBench",
+      "url": "https://github.com/tianyi-lab/HallusionBench",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": ".gitignore",
+          "type": "file",
+          "path": ".gitignore",
+          "git_blob_sha": "03955790d359d51be4369cd1ae44f5a2906b3d23",
+          "raw_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/.gitignore"
+        },
+        {
+          "name": "HallusionBench.json",
+          "type": "file",
+          "path": "HallusionBench.json",
+          "git_blob_sha": "a19eb17b6225c5fb6db0a0843fa460fa808319cf",
+          "raw_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/HallusionBench.json"
+        },
+        {
+          "name": "HallusionBench_result_sample.json",
+          "type": "file",
+          "path": "HallusionBench_result_sample.json",
+          "git_blob_sha": "5af7c3a96ed94fc914dbeb146b0bfa5ea259244d",
+          "raw_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/HallusionBench_result_sample.json"
+        },
+        {
+          "name": "LICENSE.md",
+          "type": "file",
+          "path": "LICENSE.md",
+          "git_blob_sha": "6af70fc6d870bbfd6f1bee84edcb9f856318def1",
+          "raw_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/LICENSE.md"
+        },
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "3198a6533c6a632dc7cfadccbe6cce606ab52b66",
+          "raw_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/README.md"
+        },
+        {
+          "name": "evaluation.py",
+          "type": "file",
+          "path": "evaluation.py",
+          "git_blob_sha": "96c0b287329635553ddb8c4c6774d632f630217b",
+          "raw_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/evaluation.py"
+        },
+        {
+          "name": "examples",
+          "type": "dir",
+          "path": "examples",
+          "git_blob_sha": "55d6743e8cc29c131339091f68be79ef09170a15",
+          "raw_url": null
+        },
+        {
+          "name": "gpt4v_benchmark.py",
+          "type": "file",
+          "path": "gpt4v_benchmark.py",
+          "git_blob_sha": "afbe38366ef54c21716b7792a9a7168f5e57fa74",
+          "raw_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/gpt4v_benchmark.py"
+        },
+        {
+          "name": "leaderboard.html",
+          "type": "file",
+          "path": "leaderboard.html",
+          "git_blob_sha": "7ef2098ca8a748e76b074df4c92d3f2597bc7856",
+          "raw_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/leaderboard.html"
+        },
+        {
+          "name": "leaderboard.json",
+          "type": "file",
+          "path": "leaderboard.json",
+          "git_blob_sha": "fe44d90675c22b5e3c929c09112216407f4c2f44",
+          "raw_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/leaderboard.json"
+        },
+        {
+          "name": "random_guess.py",
+          "type": "file",
+          "path": "random_guess.py",
+          "git_blob_sha": "65efc1f4e7f921bed4c31896dd8e67e380e848a4",
+          "raw_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/random_guess.py"
+        },
+        {
+          "name": "tsv_to_json.py",
+          "type": "file",
+          "path": "tsv_to_json.py",
+          "git_blob_sha": "64d9531712bcacca5a1c6bb8e3111f61dd3db786",
+          "raw_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/tsv_to_json.py"
+        },
+        {
+          "name": "utils.py",
+          "type": "file",
+          "path": "utils.py",
+          "git_blob_sha": "1f18b90f4645378ab928ba76a379981a43fe3da3",
+          "raw_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/utils.py"
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "63a224bf8bb52e8610dc0db0a6dec5a8f6b1693db30fea61dfdc9badc27de0e3",
+      "readme_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/main/README.md"
+    },
+    {
+      "repository": "mrwu-mac/R-Bench",
+      "url": "https://github.com/mrwu-mac/R-Bench",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": "LICENSE",
+          "type": "file",
+          "path": "LICENSE",
+          "git_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "raw_url": "https://raw.githubusercontent.com/mrwu-mac/R-Bench/main/LICENSE"
+        },
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "f805016ae2d2b04d06764298b38a2d6f74e15c31",
+          "raw_url": "https://raw.githubusercontent.com/mrwu-mac/R-Bench/main/README.md"
+        },
+        {
+          "name": "assets",
+          "type": "dir",
+          "path": "assets",
+          "git_blob_sha": "65227dd9c31ddec139c094fc736e8c8dbc6dbd2c",
+          "raw_url": null
+        },
+        {
+          "name": "demos",
+          "type": "dir",
+          "path": "demos",
+          "git_blob_sha": "25b657188442dbaef1e94ff2dbf3f741ceeb44be",
+          "raw_url": null
+        },
+        {
+          "name": "eval.py",
+          "type": "file",
+          "path": "eval.py",
+          "git_blob_sha": "2e99a13e6dac17b95d65d1de095f1813500666d5",
+          "raw_url": "https://raw.githubusercontent.com/mrwu-mac/R-Bench/main/eval.py"
+        },
+        {
+          "name": "eval.sh",
+          "type": "file",
+          "path": "eval.sh",
+          "git_blob_sha": "c2f3db143f7d42d0635e98dc4dc2faba3fc1e840",
+          "raw_url": "https://raw.githubusercontent.com/mrwu-mac/R-Bench/main/eval.sh"
+        },
+        {
+          "name": "utils.py",
+          "type": "file",
+          "path": "utils.py",
+          "git_blob_sha": "a32ea6a955ea66c18f0d2e5e24c3af5bbc6aa993",
+          "raw_url": "https://raw.githubusercontent.com/mrwu-mac/R-Bench/main/utils.py"
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "23c3f10f9637b89be4e5e672cdc2435b0093d0f77923e6bb792341e34a670390",
+      "readme_url": "https://raw.githubusercontent.com/mrwu-mac/R-Bench/main/README.md"
+    },
+    {
+      "repository": "yanxuzhu/MoHoBench",
+      "url": "https://github.com/yanxuzhu/MoHoBench",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "c03240b1b552336c3dafa037ad7db91903a06e1f",
+          "raw_url": "https://raw.githubusercontent.com/yanxuzhu/MoHoBench/main/README.md"
+        },
+        {
+          "name": "data",
+          "type": "dir",
+          "path": "data",
+          "git_blob_sha": "d05299238d9351607f39c4ffceca2f4789646213",
+          "raw_url": null
+        },
+        {
+          "name": "image",
+          "type": "dir",
+          "path": "image",
+          "git_blob_sha": "99fbc5a2b4079c023229a99b0359503a3153f78a",
+          "raw_url": null
+        },
+        {
+          "name": "openai_request.py",
+          "type": "file",
+          "path": "openai_request.py",
+          "git_blob_sha": "6d9172e28e02fcb7bdbff6e1207c83b1395e4c97",
+          "raw_url": "https://raw.githubusercontent.com/yanxuzhu/MoHoBench/main/openai_request.py"
+        },
+        {
+          "name": "prompts",
+          "type": "dir",
+          "path": "prompts",
+          "git_blob_sha": "ce60a1815fc6351a572a83201ef8d1fb9ac35543",
+          "raw_url": null
+        },
+        {
+          "name": "request_utils",
+          "type": "dir",
+          "path": "request_utils",
+          "git_blob_sha": "d8f1da9f65fd51a056a52170ae6bf21ac0501067",
+          "raw_url": null
+        },
+        {
+          "name": "runs",
+          "type": "dir",
+          "path": "runs",
+          "git_blob_sha": "5319352c90a5c778b5b5a01bfec6843889d77418",
+          "raw_url": null
+        },
+        {
+          "name": "vllm_generation.py",
+          "type": "file",
+          "path": "vllm_generation.py",
+          "git_blob_sha": "6dcefcd4da08e1e592e80b8cfa3540b6278d3360",
+          "raw_url": "https://raw.githubusercontent.com/yanxuzhu/MoHoBench/main/vllm_generation.py"
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "c82e71e16146b175d33231fc75b3e66c1c30a37baee5409200b8ca00c0aed671",
+      "readme_url": "https://raw.githubusercontent.com/yanxuzhu/MoHoBench/main/README.md"
+    },
+    {
+      "repository": "jaspercatapang/cmc-bench",
+      "url": "https://github.com/jaspercatapang/cmc-bench",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": ".gitignore",
+          "type": "file",
+          "path": ".gitignore",
+          "git_blob_sha": "173a5cce9fbb80c411687ed484494eb781d48319",
+          "raw_url": "https://raw.githubusercontent.com/jaspercatapang/cmc-bench/main/.gitignore"
+        },
+        {
+          "name": "Makefile",
+          "type": "file",
+          "path": "Makefile",
+          "git_blob_sha": "10cfc6cda23dd52a218d1bf6fdc15827ea9dc6cb",
+          "raw_url": "https://raw.githubusercontent.com/jaspercatapang/cmc-bench/main/Makefile"
+        },
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "e804208d60c5c98b097baac1f259d80f67025f05",
+          "raw_url": "https://raw.githubusercontent.com/jaspercatapang/cmc-bench/main/README.md"
+        },
+        {
+          "name": "outputs",
+          "type": "dir",
+          "path": "outputs",
+          "git_blob_sha": "cfaaa55ba4831ddacb401679a739c1cc4ccf99a9",
+          "raw_url": null
+        },
+        {
+          "name": "src",
+          "type": "dir",
+          "path": "src",
+          "git_blob_sha": "1bdeb9ee4308afb733c0d3feb9bbfd52ffe87ea3",
+          "raw_url": null
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "c0429ab8f670ab18c6929bd617c2dac41c41bf1708158560f4d249f284531e25",
+      "readme_url": "https://raw.githubusercontent.com/jaspercatapang/cmc-bench/main/README.md"
+    },
+    {
+      "repository": "mertyg/vision-language-models-are-bows",
+      "url": "https://github.com/mertyg/vision-language-models-are-bows",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": ".gitignore",
+          "type": "file",
+          "path": ".gitignore",
+          "git_blob_sha": "b6e47617de110dea7ca47e087ff1347cc2646eda",
+          "raw_url": "https://raw.githubusercontent.com/mertyg/vision-language-models-are-bows/main/.gitignore"
+        },
+        {
+          "name": "LICENSE",
+          "type": "file",
+          "path": "LICENSE",
+          "git_blob_sha": "45495473cc8c116841b6f6b3ed49f6bce7951035",
+          "raw_url": "https://raw.githubusercontent.com/mertyg/vision-language-models-are-bows/main/LICENSE"
+        },
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "9ef1315bb7114a5c6d5ffc6904ca30540d3a51b6",
+          "raw_url": "https://raw.githubusercontent.com/mertyg/vision-language-models-are-bows/main/README.md"
+        },
+        {
+          "name": "dataset_zoo",
+          "type": "dir",
+          "path": "dataset_zoo",
+          "git_blob_sha": "11affa8b17f565f1c67061c5915378d93feb31d2",
+          "raw_url": null
+        },
+        {
+          "name": "main_aro.py",
+          "type": "file",
+          "path": "main_aro.py",
+          "git_blob_sha": "72f61ca6903817e639e267356b645c0939bbde82",
+          "raw_url": "https://raw.githubusercontent.com/mertyg/vision-language-models-are-bows/main/main_aro.py"
+        },
+        {
+          "name": "main_retrieval.py",
+          "type": "file",
+          "path": "main_retrieval.py",
+          "git_blob_sha": "65049a2fdc064baf232aed7db02dfabfe82b27f8",
+          "raw_url": "https://raw.githubusercontent.com/mertyg/vision-language-models-are-bows/main/main_retrieval.py"
+        },
+        {
+          "name": "misc",
+          "type": "dir",
+          "path": "misc",
+          "git_blob_sha": "9d583db71c98debfc21cf03ee7ecc3771c33f5c9",
+          "raw_url": null
+        },
+        {
+          "name": "model_zoo",
+          "type": "dir",
+          "path": "model_zoo",
+          "git_blob_sha": "85d36fca7445a8beebcfe01506bbacf4af5d27a2",
+          "raw_url": null
+        },
+        {
+          "name": "notebooks",
+          "type": "dir",
+          "path": "notebooks",
+          "git_blob_sha": "1a56a35358971c8f28f6a26dfb655b176f4d408e",
+          "raw_url": null
+        },
+        {
+          "name": "scripts",
+          "type": "dir",
+          "path": "scripts",
+          "git_blob_sha": "69fcd9bf0a4d8f2f3cb65c383670babca683280e",
+          "raw_url": null
+        },
+        {
+          "name": "temp_data",
+          "type": "dir",
+          "path": "temp_data",
+          "git_blob_sha": "d4b2c9b8048494f3e5cb658077c55141c35d5cea",
+          "raw_url": null
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "0bbd49d3feac52f7972452122c7753ecae0390ac1cd511ec6f197cd936a3e498",
+      "readme_url": "https://raw.githubusercontent.com/mertyg/vision-language-models-are-bows/main/README.md"
+    },
+    {
+      "repository": "amitakamath/whatsup_vlms",
+      "url": "https://github.com/amitakamath/whatsup_vlms",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": "LICENSE",
+          "type": "file",
+          "path": "LICENSE",
+          "git_blob_sha": "aaf47633ffe1cf74b9edcf8d6b0eb6937bc0a7b8",
+          "raw_url": "https://raw.githubusercontent.com/amitakamath/whatsup_vlms/main/LICENSE"
+        },
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "b10e07ca4272d22b9fe2060d875a82a838f5f9a7",
+          "raw_url": "https://raw.githubusercontent.com/amitakamath/whatsup_vlms/main/README.md"
+        },
+        {
+          "name": "dataset_zoo",
+          "type": "dir",
+          "path": "dataset_zoo",
+          "git_blob_sha": "21a6509b1451f8cdcc7bf4bb151bb3b9f84fcfcb",
+          "raw_url": null
+        },
+        {
+          "name": "figures",
+          "type": "dir",
+          "path": "figures",
+          "git_blob_sha": "f3657e8850445b181ce1a9c3451521297800d98e",
+          "raw_url": null
+        },
+        {
+          "name": "main_aro.py",
+          "type": "file",
+          "path": "main_aro.py",
+          "git_blob_sha": "f41f4749444b0e66c0fb4f03421509273c98263e",
+          "raw_url": "https://raw.githubusercontent.com/amitakamath/whatsup_vlms/main/main_aro.py"
+        },
+        {
+          "name": "main_retrieval.py",
+          "type": "file",
+          "path": "main_retrieval.py",
+          "git_blob_sha": "65049a2fdc064baf232aed7db02dfabfe82b27f8",
+          "raw_url": "https://raw.githubusercontent.com/amitakamath/whatsup_vlms/main/main_retrieval.py"
+        },
+        {
+          "name": "marginalization.py",
+          "type": "file",
+          "path": "marginalization.py",
+          "git_blob_sha": "8409b81a8bb8449ba17c14856c5d22c7eac227b6",
+          "raw_url": "https://raw.githubusercontent.com/amitakamath/whatsup_vlms/main/marginalization.py"
+        },
+        {
+          "name": "misc",
+          "type": "dir",
+          "path": "misc",
+          "git_blob_sha": "57fd6d7bcc023a565f2ca64eeb3bdcc915e34e12",
+          "raw_url": null
+        },
+        {
+          "name": "model_zoo",
+          "type": "dir",
+          "path": "model_zoo",
+          "git_blob_sha": "1e8ded2a5f7d13bcffb9237ec7a5d852b6f9e410",
+          "raw_url": null
+        },
+        {
+          "name": "notebooks",
+          "type": "dir",
+          "path": "notebooks",
+          "git_blob_sha": "1a56a35358971c8f28f6a26dfb655b176f4d408e",
+          "raw_url": null
+        },
+        {
+          "name": "requirements.txt",
+          "type": "file",
+          "path": "requirements.txt",
+          "git_blob_sha": "d2937c1408f2cd80f684c090441f8aa90b19283c",
+          "raw_url": "https://raw.githubusercontent.com/amitakamath/whatsup_vlms/main/requirements.txt"
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "31a9a977ef11c16d88cc7bf73263c9998847c96acaf3f5581a098e490668ba40",
+      "readme_url": "https://raw.githubusercontent.com/amitakamath/whatsup_vlms/main/README.md"
+    },
+    {
+      "repository": "facebookresearch/reliable_vqa",
+      "url": "https://github.com/facebookresearch/reliable_vqa",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": ".gitignore",
+          "type": "file",
+          "path": ".gitignore",
+          "git_blob_sha": "ca254d9187bfb389fc6159d846d122f52b1cdd82",
+          "raw_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/.gitignore"
+        },
+        {
+          "name": "CODE_OF_CONDUCT.md",
+          "type": "file",
+          "path": "CODE_OF_CONDUCT.md",
+          "git_blob_sha": "08b500a221857ec3f451338e80b4a9ab1173a1af",
+          "raw_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/CODE_OF_CONDUCT.md"
+        },
+        {
+          "name": "CONTRIBUTING.md",
+          "type": "file",
+          "path": "CONTRIBUTING.md",
+          "git_blob_sha": "c52abe89c401177b5ddcbbc1cfbedf1b43538499",
+          "raw_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/CONTRIBUTING.md"
+        },
+        {
+          "name": "LICENSE",
+          "type": "file",
+          "path": "LICENSE",
+          "git_blob_sha": "fdd1be61996623799869b25e05046e89f4321c11",
+          "raw_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/LICENSE"
+        },
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "9cce91bd0920026f261a84ab92c8e98dec9ee1f0",
+          "raw_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/README.md"
+        },
+        {
+          "name": "__init__.py",
+          "type": "file",
+          "path": "__init__.py",
+          "git_blob_sha": "70c126d996ee94afcddc684c7260132a1992bf53",
+          "raw_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/__init__.py"
+        },
+        {
+          "name": "clipvil_anns_conversion.py",
+          "type": "file",
+          "path": "clipvil_anns_conversion.py",
+          "git_blob_sha": "6780b691a87ff58deb60c0ca1ce4ee23c3c4fb0c",
+          "raw_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/clipvil_anns_conversion.py"
+        },
+        {
+          "name": "configs",
+          "type": "dir",
+          "path": "configs",
+          "git_blob_sha": "e477d316ae742ed76710867c783f0f7189972288",
+          "raw_url": null
+        },
+        {
+          "name": "datasets",
+          "type": "dir",
+          "path": "datasets",
+          "git_blob_sha": "fe9359ba39a30f6cd8ac00f7dc231683aeba4b04",
+          "raw_url": null
+        },
+        {
+          "name": "eval_scripts",
+          "type": "dir",
+          "path": "eval_scripts",
+          "git_blob_sha": "925ca75279a41dacb88229c21a119178c8033354",
+          "raw_url": null
+        },
+        {
+          "name": "fixed_mcan_clip_grid_feature.py",
+          "type": "file",
+          "path": "fixed_mcan_clip_grid_feature.py",
+          "git_blob_sha": "709d27cf8c3742dd0b84ed08ea69e8550a79cf17",
+          "raw_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/fixed_mcan_clip_grid_feature.py"
+        },
+        {
+          "name": "models",
+          "type": "dir",
+          "path": "models",
+          "git_blob_sha": "d191c19601373e3cd1829a2eb179ef19383674b7",
+          "raw_url": null
+        },
+        {
+          "name": "modules",
+          "type": "dir",
+          "path": "modules",
+          "git_blob_sha": "9f2a7a35c9b6b906e20b5b49d4401f4013e684d4",
+          "raw_url": null
+        },
+        {
+          "name": "split_data.py",
+          "type": "file",
+          "path": "split_data.py",
+          "git_blob_sha": "9bc14193df727fab730af5be77e7c674ff3e568f",
+          "raw_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/split_data.py"
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "f12826dd86bf3f5f9afc5ce46c173d2d87f975909801e2f9e04ab0f4d07e8b6b",
+      "readme_url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/README.md"
+    },
+    {
+      "repository": "geifmany/SelectiveNet",
+      "url": "https://github.com/geifmany/SelectiveNet",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "81a5002d685a5b2da88535fb6d1b388916dec879",
+          "raw_url": "https://raw.githubusercontent.com/geifmany/selectivenet/master/README.md"
+        },
+        {
+          "name": "checkpoints",
+          "type": "dir",
+          "path": "checkpoints",
+          "git_blob_sha": "46ae1f147cf70d4df1471f0e9df46b654d11fe9c",
+          "raw_url": null
+        },
+        {
+          "name": "models",
+          "type": "dir",
+          "path": "models",
+          "git_blob_sha": "e02278f1e2656e976becd495088b4cd417d425f9",
+          "raw_url": null
+        },
+        {
+          "name": "results",
+          "type": "dir",
+          "path": "results",
+          "git_blob_sha": "46ae1f147cf70d4df1471f0e9df46b654d11fe9c",
+          "raw_url": null
+        },
+        {
+          "name": "selectivnet_utils.py",
+          "type": "file",
+          "path": "selectivnet_utils.py",
+          "git_blob_sha": "307c073303bfdd540bdf24d71ab4e5cabce126c8",
+          "raw_url": "https://raw.githubusercontent.com/geifmany/selectivenet/master/selectivnet_utils.py"
+        },
+        {
+          "name": "train.py",
+          "type": "file",
+          "path": "train.py",
+          "git_blob_sha": "57857757d32bc5b6d29de097b53cb93c011c1eca",
+          "raw_url": "https://raw.githubusercontent.com/geifmany/selectivenet/master/train.py"
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "19d3150c45835c74675541968e6a524abc302a1e706a78581610e964145128b9",
+      "readme_url": "https://raw.githubusercontent.com/geifmany/selectivenet/master/README.md"
+    },
+    {
+      "repository": "yanxinzju/CSS-VQA",
+      "url": "https://github.com/yanxinzju/CSS-VQA",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "fd28f8200d72996231bda318ca738d0b00988064",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/README.md"
+        },
+        {
+          "name": "attention.py",
+          "type": "file",
+          "path": "attention.py",
+          "git_blob_sha": "a9574b41f0fb4b878f59a3a0ea1d53beb6fcf2ac",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/attention.py"
+        },
+        {
+          "name": "base_model.py",
+          "type": "file",
+          "path": "base_model.py",
+          "git_blob_sha": "8590e963a35150aa56b0c2c52b820807c48d4226",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/base_model.py"
+        },
+        {
+          "name": "classifier.py",
+          "type": "file",
+          "path": "classifier.py",
+          "git_blob_sha": "cdcc085331d621e8ed1478e7df670a5d493c6cdc",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/classifier.py"
+        },
+        {
+          "name": "dataset.py",
+          "type": "file",
+          "path": "dataset.py",
+          "git_blob_sha": "f9d524d56311e8c04527747c06e70799bd72315d",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/dataset.py"
+        },
+        {
+          "name": "eval.py",
+          "type": "file",
+          "path": "eval.py",
+          "git_blob_sha": "bb1b96f0032c23732b397deb60dd4b6d06ee2940",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/eval.py"
+        },
+        {
+          "name": "fc.py",
+          "type": "file",
+          "path": "fc.py",
+          "git_blob_sha": "75328df002d54f3c591f17fe6b75751a2e1783ed",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/fc.py"
+        },
+        {
+          "name": "language_model.py",
+          "type": "file",
+          "path": "language_model.py",
+          "git_blob_sha": "fe08b934acdb2ab8e4c816df7fc10e3d431e3aaa",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/language_model.py"
+        },
+        {
+          "name": "main.py",
+          "type": "file",
+          "path": "main.py",
+          "git_blob_sha": "d588e3fb4fc2de40985eda39db862773f661acc5",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/main.py"
+        },
+        {
+          "name": "rubi_base_model.py",
+          "type": "file",
+          "path": "rubi_base_model.py",
+          "git_blob_sha": "4aeca4e8869de63f734a2eedc308bd44531da12c",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/rubi_base_model.py"
+        },
+        {
+          "name": "rubi_main.py",
+          "type": "file",
+          "path": "rubi_main.py",
+          "git_blob_sha": "994a42819fbba7361abe5eef550a4920c7f8031d",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/rubi_main.py"
+        },
+        {
+          "name": "rubi_train.py",
+          "type": "file",
+          "path": "rubi_train.py",
+          "git_blob_sha": "8b9568c0eef8249d530ef318c77d7ad83ae8d7a5",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/rubi_train.py"
+        },
+        {
+          "name": "tools",
+          "type": "dir",
+          "path": "tools",
+          "git_blob_sha": "dc9ddecfe0186d20ce3afa21fef4adcf9ad9840f",
+          "raw_url": null
+        },
+        {
+          "name": "train.py",
+          "type": "file",
+          "path": "train.py",
+          "git_blob_sha": "7981d30f56cb15aa63ab5326d8eff82ead0d6a97",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/train.py"
+        },
+        {
+          "name": "util",
+          "type": "dir",
+          "path": "util",
+          "git_blob_sha": "3fac58da9b51b534ab0408cab18a2046ce31d133",
+          "raw_url": null
+        },
+        {
+          "name": "utils.py",
+          "type": "file",
+          "path": "utils.py",
+          "git_blob_sha": "cb72210847f2daba5b3da9642e65398cb3abaf02",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/utils.py"
+        },
+        {
+          "name": "vqa_debias_loss_functions.py",
+          "type": "file",
+          "path": "vqa_debias_loss_functions.py",
+          "git_blob_sha": "92006f53ba82c555257d0fe89516ba979bd6ddf7",
+          "raw_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/vqa_debias_loss_functions.py"
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "6adb1b4134b1a9aa6c286381e2dc006e77527eba97d4b61097717d183b97da0f",
+      "readme_url": "https://raw.githubusercontent.com/yanxinzju/CSS-VQA/master/README.md"
+    },
+    {
+      "repository": "shizhediao/R-Tuning",
+      "url": "https://github.com/shizhediao/R-Tuning",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "004bf80a2bd3e4d13382edc88ff41f85b466a220",
+          "raw_url": "https://raw.githubusercontent.com/shizhediao/R-Tuning/main/README.md"
+        },
+        {
+          "name": "evaluation",
+          "type": "dir",
+          "path": "evaluation",
+          "git_blob_sha": "5142ccf4e3cf5eeb66852e5355894dc07589d7ed",
+          "raw_url": null
+        },
+        {
+          "name": "figures",
+          "type": "dir",
+          "path": "figures",
+          "git_blob_sha": "c233ebac833e5257305f4620287b28eecebd4f48",
+          "raw_url": null
+        },
+        {
+          "name": "training",
+          "type": "dir",
+          "path": "training",
+          "git_blob_sha": "6b712617d25114a73a0fe77a80708464cd9c6edf",
+          "raw_url": null
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "5e62e9ed0bdf8506b6816ceb2c9cd3abad681b57ff2f2d2ccdb7459b152871ed",
+      "readme_url": "https://raw.githubusercontent.com/shizhediao/R-Tuning/main/README.md"
+    },
+    {
+      "repository": "redwoodresearch/Easy-Transformer",
+      "url": "https://github.com/redwoodresearch/Easy-Transformer",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": ".gitattributes",
+          "type": "file",
+          "path": ".gitattributes",
+          "git_blob_sha": "c6997c07a61c211d2f0758c4ae87298047951833",
+          "raw_url": "https://raw.githubusercontent.com/redwoodresearch/Easy-Transformer/main/.gitattributes"
+        },
+        {
+          "name": ".gitconfig",
+          "type": "file",
+          "path": ".gitconfig",
+          "git_blob_sha": "9054574f90b84d27e89a016d7c76d5bdf7e479a4",
+          "raw_url": "https://raw.githubusercontent.com/redwoodresearch/Easy-Transformer/main/.gitconfig"
+        },
+        {
+          "name": ".gitignore",
+          "type": "file",
+          "path": ".gitignore",
+          "git_blob_sha": "732991a46449e7a159270efba995881cb84c249c",
+          "raw_url": "https://raw.githubusercontent.com/redwoodresearch/Easy-Transformer/main/.gitignore"
+        },
+        {
+          "name": ".pre-commit-config.yaml",
+          "type": "file",
+          "path": ".pre-commit-config.yaml",
+          "git_blob_sha": "fea4badaa95243b85c1e569e1a5eeb83c5c8e576",
+          "raw_url": "https://raw.githubusercontent.com/redwoodresearch/Easy-Transformer/main/.pre-commit-config.yaml"
+        },
+        {
+          "name": "LICENSE",
+          "type": "file",
+          "path": "LICENSE",
+          "git_blob_sha": "a6be6f03be204f8f6861b87b69445f5691add5cd",
+          "raw_url": "https://raw.githubusercontent.com/redwoodresearch/Easy-Transformer/main/LICENSE"
+        },
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "2c448c6bba706903aa200e2d8a066863f913c708",
+          "raw_url": "https://raw.githubusercontent.com/redwoodresearch/Easy-Transformer/main/README.md"
+        },
+        {
+          "name": "circuit_discovery.py",
+          "type": "file",
+          "path": "circuit_discovery.py",
+          "git_blob_sha": "1a134dc544341c9273fce2cf419ce7d2b7dd365d",
+          "raw_url": "https://raw.githubusercontent.com/redwoodresearch/Easy-Transformer/main/circuit_discovery.py"
+        },
+        {
+          "name": "easy_transformer",
+          "type": "dir",
+          "path": "easy_transformer",
+          "git_blob_sha": "87176d4dc7185c9cda8655ef1903e7f1795a0908",
+          "raw_url": null
+        },
+        {
+          "name": "experiments.py",
+          "type": "file",
+          "path": "experiments.py",
+          "git_blob_sha": "5c7ca1ab26eb4151e045fb31721073d8be0fb549",
+          "raw_url": "https://raw.githubusercontent.com/redwoodresearch/Easy-Transformer/main/experiments.py"
+        },
+        {
+          "name": "pts",
+          "type": "dir",
+          "path": "pts",
+          "git_blob_sha": "b8aa42100b1ae3cabe106c1b1a4fe38fefe20d1c",
+          "raw_url": null
+        },
+        {
+          "name": "requirements.txt",
+          "type": "file",
+          "path": "requirements.txt",
+          "git_blob_sha": "a96768f8bb3c4f3e6a7add2b4bd61ef80c88f3fd",
+          "raw_url": "https://raw.githubusercontent.com/redwoodresearch/Easy-Transformer/main/requirements.txt"
+        },
+        {
+          "name": "setup.py",
+          "type": "file",
+          "path": "setup.py",
+          "git_blob_sha": "7e1df5f2348ec3be9e065b8ee407cda3c6a7f858",
+          "raw_url": "https://raw.githubusercontent.com/redwoodresearch/Easy-Transformer/main/setup.py"
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "89f5f583f74b1b978d8597c092c592fed83f6e10578df25cb0c2d14b21ef0307",
+      "readme_url": "https://raw.githubusercontent.com/redwoodresearch/Easy-Transformer/main/README.md"
+    },
+    {
+      "repository": "artidoro/qlora",
+      "url": "https://github.com/artidoro/qlora",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": ".gitignore",
+          "type": "file",
+          "path": ".gitignore",
+          "git_blob_sha": "48089f0c9206711dac3881bb7f929d298c1d24eb",
+          "raw_url": "https://raw.githubusercontent.com/artidoro/qlora/main/.gitignore"
+        },
+        {
+          "name": "LICENSE",
+          "type": "file",
+          "path": "LICENSE",
+          "git_blob_sha": "2fd42c8714fb837faa4be489e281f77d80cff2a9",
+          "raw_url": "https://raw.githubusercontent.com/artidoro/qlora/main/LICENSE"
+        },
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "112ea1df536c02b12a5b8f3ed16afd62a8b25bb6",
+          "raw_url": "https://raw.githubusercontent.com/artidoro/qlora/main/README.md"
+        },
+        {
+          "name": "data",
+          "type": "dir",
+          "path": "data",
+          "git_blob_sha": "dd71094386f9ee538e8537a08ace77eb5a47e592",
+          "raw_url": null
+        },
+        {
+          "name": "eval",
+          "type": "dir",
+          "path": "eval",
+          "git_blob_sha": "af4ce4e88026490dfb5a20c06cf4462347b0acbd",
+          "raw_url": null
+        },
+        {
+          "name": "examples",
+          "type": "dir",
+          "path": "examples",
+          "git_blob_sha": "b4ced2d6a0db72d17d2c33dbc82ad780b8583377",
+          "raw_url": null
+        },
+        {
+          "name": "qlora.py",
+          "type": "file",
+          "path": "qlora.py",
+          "git_blob_sha": "23e675ee17dff6a39f129678ccdc04e50402dc6b",
+          "raw_url": "https://raw.githubusercontent.com/artidoro/qlora/main/qlora.py"
+        },
+        {
+          "name": "requirements.txt",
+          "type": "file",
+          "path": "requirements.txt",
+          "git_blob_sha": "e14f8c362353ca2839a805203eb11f9e9f61a9ad",
+          "raw_url": "https://raw.githubusercontent.com/artidoro/qlora/main/requirements.txt"
+        },
+        {
+          "name": "scripts",
+          "type": "dir",
+          "path": "scripts",
+          "git_blob_sha": "777ce87ef5b2e7694d0950b3ee8e898f45eead00",
+          "raw_url": null
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "f9205f6b2572f81b8919f523176315207806357482049c96fd6471c1c6b17472",
+      "readme_url": "https://raw.githubusercontent.com/artidoro/qlora/main/README.md"
+    },
+    {
+      "repository": "RAIVNLab/sugar-crepe",
+      "url": "https://github.com/RAIVNLab/sugar-crepe",
+      "executed": false,
+      "root_entries": [
+        {
+          "name": "LICENSE",
+          "type": "file",
+          "path": "LICENSE",
+          "git_blob_sha": "ff60db7f370319bd8bb281fba7219ef85afa84e3",
+          "raw_url": "https://raw.githubusercontent.com/RAIVNLab/sugar-crepe/main/LICENSE"
+        },
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "git_blob_sha": "166500f4a1f5e07de662e33296bc56343e6544b0",
+          "raw_url": "https://raw.githubusercontent.com/RAIVNLab/sugar-crepe/main/README.md"
+        },
+        {
+          "name": "adversarial_refine.py",
+          "type": "file",
+          "path": "adversarial_refine.py",
+          "git_blob_sha": "2cc607b54564287c3448aad17b6f2a6d5836b1a2",
+          "raw_url": "https://raw.githubusercontent.com/RAIVNLab/sugar-crepe/main/adversarial_refine.py"
+        },
+        {
+          "name": "assets",
+          "type": "dir",
+          "path": "assets",
+          "git_blob_sha": "2aa989daa0fb747f4e2ae418f7d86e1331f16b03",
+          "raw_url": null
+        },
+        {
+          "name": "data",
+          "type": "dir",
+          "path": "data",
+          "git_blob_sha": "f9117d3487ee53d346272037822bb6000b8ab8e0",
+          "raw_url": null
+        },
+        {
+          "name": "data_card.pdf",
+          "type": "file",
+          "path": "data_card.pdf",
+          "git_blob_sha": "8a4d3ac6a5eb59cef659eae2dfa88f842c2cc544",
+          "raw_url": "https://raw.githubusercontent.com/RAIVNLab/sugar-crepe/main/data_card.pdf"
+        },
+        {
+          "name": "data_unrefined",
+          "type": "dir",
+          "path": "data_unrefined",
+          "git_blob_sha": "666bcc3dd4fe2a2a738c620c0616e7818ce93517",
+          "raw_url": null
+        },
+        {
+          "name": "gpt-4v-results",
+          "type": "dir",
+          "path": "gpt-4v-results",
+          "git_blob_sha": "69355c037a2f7a417ac00ccf9b1c70a3d97d3ad7",
+          "raw_url": null
+        },
+        {
+          "name": "main_eval.py",
+          "type": "file",
+          "path": "main_eval.py",
+          "git_blob_sha": "4d5facc2c7e28bcf655dfab1c960999c238505ff",
+          "raw_url": "https://raw.githubusercontent.com/RAIVNLab/sugar-crepe/main/main_eval.py"
+        },
+        {
+          "name": "text_model_eval.py",
+          "type": "file",
+          "path": "text_model_eval.py",
+          "git_blob_sha": "0e020e4b1b3f6e689475dd8a59703a57e7de453e",
+          "raw_url": "https://raw.githubusercontent.com/RAIVNLab/sugar-crepe/main/text_model_eval.py"
+        }
+      ],
+      "status": "README_AND_ROOT_LISTING_CACHED",
+      "readme_sha256": "ef98743f145ee844a2f089f51c500dfe100741ff53ba1a0aaa573edff6f5a43e",
+      "readme_url": "https://raw.githubusercontent.com/RAIVNLab/sugar-crepe/main/README.md"
+    }
+  ]
+}

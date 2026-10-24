@@ -5,3 +5,13 @@
 /artifacts/publication/** -text
 /paper/figures/publication_20261025/** -text
 /paper/tables/publication_20261025/** -text
+
+# Exact executed bytes, including existing CRLF, are part of research identity.
+/scripts/run_publication_isolated_pilot.py -text
+/src/evaluation/forward_budget.py -text
+/src/evaluation/screen_budget.py -text
+/src/models/model_loader.py -text
+/src/models/qwen3vl2_loader.py -text
+/src/training/differentiable_scoring.py -text
+/src/training/scorer_verification.py -text
+/src/benchmark/publication_factorial.py -text

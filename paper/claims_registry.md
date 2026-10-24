@@ -27,3 +27,14 @@ No causal-mechanism claim is currently **CAUSALLY SUPPORTED**. Attention maps an
 | C13 / E15 | Historical paired models both miss six forks; their descriptive paired accuracy interval includes zero. | PRELIMINARY | Independent new replication or statistically established model superiority. |
 | C14 / E16 | Six saved boundaries validate on CPU and reload optimizer moments exactly with zero training steps and unchanged historical files. | ESTABLISHED BY EXPERIMENT, engineering | Fresh real-model/CUDA restoration, current full mixed-dataset verification or equality of resumed trajectories. |
 | C15 / W14–W17 | Targeted primary-source review identifies close overlap in representation/action abstention, spatial insufficiency and margin-based training. | Literature-supported collision assessment; novelty UNVERIFIED | First/novel mechanism, unique sufficiency loss or exhaustive prior-art clearance. |
+
+## Publication mission additions — 2026-10-25
+
+| ID | Approved wording / evidence | Classification | Prohibited interpretation |
+|---|---|---|---|
+| C16 / E17 | Audited role features have BA ceiling 2/3; joint symbolic oracle 1 on 9,216 development variants/six families. | ESTABLISHED CPU design property | 9,216 independent examples, VLM composition or bias-free benchmark. |
+| C17 / E18 | Isolated Smol/Qwen pilot completes 12 forwards; both choose a definite answer on one shared fork. | PRELIMINARY behavioral | Independent replication across families, calibrated confidence, generated abstention or model superiority. |
+| C18 / E19 | CPU replacement controls pass; both model pairs fail opposed-margin eligibility. | Engineering VERIFIED; mechanism UNVERIFIED | A causally validated circuit or permission to search adaptively for successful patches. |
+| C19 / E20 | Local image identities and CPU loss algebra verified. | Scoped engineering | Legal release of all photographs, real-world transfer, a novel consistency loss or ES superiority. |
+| C20 / E21 | Authorized 108 screen stops after one attempt/zero scores; exact resource trigger and post-stop parameters remain UNVERIFIED. | FAILED execution, preserved | Completed screen, zero errors, inferred parameter invariance or an available 107-forward retry budget. |
+| C21 / E21 | Twenty-one source extractions identify close conceptual and methodological precedents. | Literature-supported; novelty UNVERIFIED | Exhaustive systematic review, reproduced papers, universal publication checklist or guaranteed acceptance. |

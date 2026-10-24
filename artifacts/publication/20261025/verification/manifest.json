@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "fresh_commands": [
+    {
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_dashboard.py",
+        "-v"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "log": "dashboard_api_tests.txt"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check"
+      ],
+      "cwd": "dashboard/frontend",
+      "exit_code": 0,
+      "log": "typescript.txt"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "build"
+      ],
+      "cwd": "dashboard/frontend",
+      "exit_code": 0,
+      "log": "frontend_build.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests",
+        "dashboard/backend",
+        "paper/manuscript"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "log": "compile.txt"
+    },
+    {
+      "command": [
+        "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        ".cache/final_publication_quality.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "log": "document_integrity.txt"
+    }
+  ],
+  "preserved_prior_final_logs": [
+    "publication_full_ulvo_final.txt",
+    "publication_full_standard_final.txt",
+    "publication_literal_ulvo_final.txt",
+    "publication_literal_standard_final.txt",
+    "publication_doctor_final.txt",
+    "publication_portability_final.txt",
+    "publication_browser_final.txt",
+    "publication_browser_final.json",
+    "publication_quality_final.json"
+  ],
+  "files_sha256": {
+    "compile.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dashboard_api_tests.txt": "f77de5e78fe38e6ffa1408e71fb448e3d611f576656765e816c75cff92641e5a",
+    "document_integrity.txt": "21bce3c8da70facd707af5268414d7224c4c6d2fb2f93673a09df9648245f3b2",
+    "frontend_build.txt": "b7a8ba2ad63c7f19c2be5553747f284bd9d36d55f30dfbe075cee205e5548e56",
+    "publication_browser_final.json": "fda9db69c68cc90b64ebbab39f2867d37b11e9db3af0ae80806a0736d66c660b",
+    "publication_browser_final.txt": "f3da5323af2f24bd370b8df06cf2b912b63074f53b956b71039691d6a975b483",
+    "publication_doctor_final.txt": "43b73e8cc46612d3959637a4cbc7ed2f99946764b7b3cd62fd4d7ac243958794",
+    "publication_full_standard_final.txt": "9b41b864f7078b228397a769fc98e500542142a36bf6c48eaf40eea05c885235",
+    "publication_full_ulvo_final.txt": "426bf19b3c12ca5f25accd910845c9e3a0f09919081882b1ac3f15eb616fe97d",
+    "publication_literal_standard_final.txt": "942794acb57216ac9a1c083a695f53c3ccc15a30f85a131946954e553c5107e6",
+    "publication_literal_ulvo_final.txt": "7e367cf58b4d0111fa673a491f13768b6996051860023b04e48ecdc9db567bdf",
+    "publication_portability_final.txt": "366894176002ac32f337d816cea382f983e39f7770196bf80585052b825a1645",
+    "publication_quality_final.json": "40c028f323ca495d08609293584298dedc37a148178b28d112607c282fed2440",
+    "typescript.txt": "500a353a4dbb2477aa8d2eb8b04f61986b1a2150d0803cd44907e49522c3bdf4"
+  },
+  "tests": {
+    "ulvo": {
+      "run": 343,
+      "passed": 340,
+      "skipped": 3
+    },
+    "standard": {
+      "run": 343,
+      "passed": 246,
+      "skipped": 97
+    }
+  },
+  "restricted_open_attempts_guarded_runs": 0,
+  "partner_machine": "NOT VERIFIED",
+  "confidence": "High for scoped CPU/build/browser correctness; no independent scientific validation or successful screen108 claim."
+}

@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "repository": "jaspercatapang/cmc-bench",
+      "path": "src/evaluation/metrics.py",
+      "url": "https://raw.githubusercontent.com/jaspercatapang/cmc-bench/main/src/evaluation/metrics.py",
+      "sha256": "9211da319975e72c61a44c18e1d706f9e05f8a278624c206a82dc9fb9ca26ea3",
+      "executed": false
+    },
+    {
+      "repository": "facebookresearch/reliable_vqa",
+      "path": "eval_scripts/reliable_vqa_eval.py",
+      "url": "https://raw.githubusercontent.com/facebookresearch/reliable_vqa/main/eval_scripts/reliable_vqa_eval.py",
+      "sha256": "be65da22f82412b49ec5c768d52866fa5d09f9fbb56cf49d675c17ec457a8951",
+      "executed": false
+    }
+  ]
+}

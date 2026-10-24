@@ -1,0 +1,11 @@
+127.0.0.1 - - [25/Oct/2026 00:54:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 00:54:06] "GET /assets/index-DPPT0_YG.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 00:54:06] "GET /assets/index-J-uBt3KJ.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 00:54:06] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 00:54:06] "GET /api/workspace HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 00:54:06] "GET /api/provenance HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 00:54:06] "GET /api/image/xc_ho_0011%3A%3Aunderdetermined HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 00:54:06] "GET /api/publication HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 00:54:07] "GET /api/publication HTTP/1.1" 200 -
+{"status":"PASS","paper_figures":10,"paper_mobile_overflow":false,"screen_failed_attempts":1,"screen_completed_rows":0,"actual_inputs":2,"model_rows":4,"additional_forwards":12,"desktop_and_mobile":true,"page_errors":[],"mobile_page_overflow":false}
+OWNED_BROWSER_TEST_SERVER_CLOSED
