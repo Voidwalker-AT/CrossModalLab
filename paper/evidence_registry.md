@@ -40,7 +40,7 @@ Derived development intervals are reproducible with `python paper/tables/build_d
 
 ## E17 — Full-factorial development information diagnostic (2026-10-25)
 
-**ESTABLISHED BY EXPERIMENT, CPU design property.** `artifacts/publication/20261025/benchmark/manifest.json`, `benchmark/shortcut_audit.json` and `artifacts/publication/20261025/analysis.json`: 9,216 variants/six dependent families, 96 images, dual-oracle agreement. Three families fit and three evaluate lookup baselines, all exposed development. Audited nuisance-feature ceilings are BA 1/3; oracle-parsed unimodal roles BA 2/3; joint symbolic oracle BA 1. These are available-information diagnostics, not VLM modality use, comprehensive shortcut clearance or independent generalization. `selected_source_leakage.json` checks only selected historical sources, not frozen final data or model pretraining.
+**ESTABLISHED BY EXPERIMENT, CPU design property.** `artifacts/publication/20261025/benchmark/manifest.json`, `benchmark/shortcut_audit.json` and `artifacts/publication/20261025/analysis.json`: 9,216 variants/six dependent families, 72 distinct images, dual-oracle agreement. Three families fit and three evaluate lookup baselines, all exposed development. Audited nuisance-feature ceilings are BA 1/3; oracle-parsed unimodal roles BA 2/3; joint symbolic oracle BA 1. These are available-information diagnostics, not VLM modality use, comprehensive shortcut clearance or independent generalization. `selected_source_leakage.json` checks only selected historical sources, not frozen final data or model pretraining.
 
 ## E18 — Successful isolated two-model matched pilot (2026-10-25)
 

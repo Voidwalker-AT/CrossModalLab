@@ -15,3 +15,4 @@
 /src/training/differentiable_scoring.py -text
 /src/training/scorer_verification.py -text
 /src/benchmark/publication_factorial.py -text
+/scripts/prepare_publication_modality_protocol.py -text

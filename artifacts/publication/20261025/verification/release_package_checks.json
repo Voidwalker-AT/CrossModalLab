@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "package_files": 215,
+  "package_pngs_decoded": 83,
+  "package_local_manuscript_figures": 10,
+  "archive_sha256": "c0c64e3860879bc41a04433906f1317d61f7babcaee75579f50b211d6b38f525",
+  "package_source_revision": "b47c92905afaf546a8d425a13c4838f475ff4ed7",
+  "package_source_selection_dirty": false,
+  "next_proposal_inputs_checked": 54,
+  "next_proposal_forward_budget": 162,
+  "next_proposal_authorized": false,
+  "next_proposal_actual_forwards": 0,
+  "credential_pattern_matches": 0,
+  "oct28_archive_unchanged": true
+}

@@ -38,6 +38,8 @@ These are planning estimates, not measured future runtimes or execution approval
 
 ## Decision and narrowest defensible positioning
 
+A smaller, exact next diagnostic is separately frozen in [the Qwen-only 162-forward proposal](../artifacts/publication/20261025/next_gpu_protocol_162.json). It contains all 54 condition inputs, model/scoring identity, gates and a hard eleven-minute total cap. CPU oracles validate the available-evidence labels; zero inference occurred. This distinguishes full-context-label predictability from logically correct abstention after withholding a premise. It is not authorization, a replacement for the two-model controls above, or independent evaluation. Its worker/no-image handling still requires review before any approved execution.
+
 The formal partial-premise predictability diagnostic, explicit nuisance-controlled generator and exact compact-model score examples can be presented as a reproducible exploratory evaluation resource. Originality and publishable empirical benefit remain UNVERIFIED. Do not claim “first”, a discovered neural mechanism, calibrated confidence, spontaneous abstention from candidate scoring, or CE+ES superiority. A careful replication/benchmark-validity report is a legitimate outcome if stronger tests fail to differentiate the work.
 
 GO for CPU reproducibility work and the preserved university demonstration. NO-GO for an international submission claiming independent generalization, causal explanation or method superiority. A narrower descriptive submission would still require author agreement, evidence scope review and venue fit; no acceptance promise is made.
