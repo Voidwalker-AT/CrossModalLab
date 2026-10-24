@@ -1,0 +1,4 @@
+# Preserve the byte identities recorded by the Phase 3 evidence manifests.
+/artifacts/phase3/** -text
+/paper/figures/phase3_20261024/** -text
+/paper/tables/phase3_20261024/** -text

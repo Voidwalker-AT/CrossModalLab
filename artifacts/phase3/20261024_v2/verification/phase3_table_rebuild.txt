@@ -1,0 +1,39 @@
+{
+  "models": {
+    "qwen3vl2": {
+      "balanced_accuracy": 0.5555555555555555,
+      "macro_f1": 0.4529505582137161,
+      "per_class_recall": {
+        "Yes": 0.6666666666666666,
+        "No": 1.0,
+        "Undetermined": 0.0
+      },
+      "exact_label_output_count": 18
+    },
+    "smolvlm2": {
+      "balanced_accuracy": 0.4444444444444444,
+      "macro_f1": 0.35714285714285715,
+      "per_class_recall": {
+        "Yes": 0.6666666666666666,
+        "No": 0.6666666666666666,
+        "Undetermined": 0.0
+      },
+      "exact_label_output_count": 0
+    }
+  },
+  "paired_difference": {
+    "delta": 0.11111111111111112,
+    "descriptive_ci": {
+      "ci_low": -0.1111111111111111,
+      "ci_high": 0.27777777777777773,
+      "n_boot": 2000,
+      "seed": 20261023,
+      "independent_units": 6,
+      "interpretation": "descriptive development family-cluster percentile CI; selection bias uncorrected"
+    }
+  },
+  "new_pilot_rank_flips": [
+    true,
+    true
+  ]
+}

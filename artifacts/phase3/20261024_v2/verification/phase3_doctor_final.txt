@@ -1,0 +1,17 @@
+ULVO Project Doctor (\\?\E:\Workspace\Active\CrossModalLab)
+  Overall Status:          PASSED
+  Manifest Valid:          true
+  uv Available:            true (uv 0.13.1 (62faed335 2026-10-13 x86_64-pc-windows-msvc))
+  Runtime Available:       true (requested: >=3.11, resolved: E:\Workspace\Active\ULVO\vault\runtimes\python\cpython-3.11-windows-x86_64-none\python.exe)
+  Dependencies Resolvable: true
+  Environment State:       EXECUTING (2 active processes)
+
+  Diagnostic Checks:
+    [PASS]  Thin Connector Contract: COMPLIANT (Thin Connector Invariant Met): OK (total: 510 bytes across 2 files)
+    [PASS]  Manifest Syntax: Valid .ulvo/manifest.toml for project 'CrossModalLab'
+    [PASS]  uv Package Manager: Found: uv 0.13.1 (62faed335 2026-10-13 x86_64-pc-windows-msvc)
+    [PASS]  Python Runtime Resolution: Resolved '>=3.11' to: E:\Workspace\Active\ULVO\vault\runtimes\python\cpython-3.11-windows-x86_64-none\python.exe
+    [PASS]  Dependency Manifests: Found 1 requirement file(s)
+    [PASS]  Environment Lifecycle State: Current state: EXECUTING (2 active process leases)
+    [PASS]  GPU Hardware & Driver: Found NVIDIA GeForce RTX 2050 (Driver: 596.49, VRAM: 4096 MiB, Compute: sm_86)
+    [PASS]  Vault Storage Capacity: Free: 34.15 GB, Safety Reserve: 500.00 MB

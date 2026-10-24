@@ -16,3 +16,14 @@ Allowed classifications: **ESTABLISHED BY EXPERIMENT**, **PRELIMINARY**, **CORRE
 No causal-mechanism claim is currently **CAUSALLY SUPPORTED**. Attention maps and logit-lens readouts are correlational. Probe failure would not prove information absence. Patching would not establish uniqueness without alternative-path and multi-component tests. Keep all future manuscript sentences tied to evidence IDs, revising these rows only after reading new raw evidence.
 
 **C9 / E12 — CORRELATIONAL:** Existing Smol residual-output rows and probe results can be visualized with their recorded identities and CPU validation. Neither activation-norm differences nor probe accessibility identifies the cause of a selected Qwen error. Qwen per-case neural measurements remain NOT MEASURED. No existing claim is upgraded by the export.
+
+## Phase 3 additions — 2026-10-24
+
+| ID | Approved wording / evidence | Classification | Prohibited interpretation |
+|---|---|---|---|
+| C10 / E13 | On 68 exact selected records, correct logical labels coexist with deterministic single-modality role strata; a scheduled-train-fitted lookup reaches BA 2/3 on 18 validation cases. | ESTABLISHED BY EXPERIMENT, dataset diagnostic | Either VLM used this shortcut; the whole dataset or final holdout was inspected; BA alone proves joint composition. |
+| C11 / E13 | New counterbalanced development records remove deterministic role strata; partial single-modality predictability remains and all new labels pass the dual oracle. | ESTABLISHED BY EXPERIMENT, generated design property | Chance-level unimodal prediction, independent confirmation or generalization to all images. |
+| C12 / E14 | Frozen Qwen's summed-LL answer is No/Yes on the new matched No/U pair; LL/token selects U/U. The cross-model run stopped before Smol loaded. | PRELIMINARY | A completed cross-model replication, generated answers, calibrated confidence, superior normalization, a causal finding or an ES benefit. |
+| C13 / E15 | Historical paired models both miss six forks; their descriptive paired accuracy interval includes zero. | PRELIMINARY | Independent new replication or statistically established model superiority. |
+| C14 / E16 | Six saved boundaries validate on CPU and reload optimizer moments exactly with zero training steps and unchanged historical files. | ESTABLISHED BY EXPERIMENT, engineering | Fresh real-model/CUDA restoration, current full mixed-dataset verification or equality of resumed trajectories. |
+| C15 / W14–W17 | Targeted primary-source review identifies close overlap in representation/action abstention, spatial insufficiency and margin-based training. | Literature-supported collision assessment; novelty UNVERIFIED | First/novel mechanism, unique sufficiency loss or exhaustive prior-art clearance. |

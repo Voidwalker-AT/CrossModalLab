@@ -1,0 +1,1 @@
+{"status": "PASS", "neural_source_hashes_unchanged": 123, "pilot_executed_source_hashes_unchanged": 5, "tables_byte_identical": true, "figure_png_pixels_identical": true, "oct28_archive_unchanged": true, "new_document_links_valid": true, "pilot_status": "VERIFIED_PARTIAL_EVIDENCE; not complete cross-model"}

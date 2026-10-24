@@ -10,6 +10,8 @@
 
 ---
 
+> Phase 3 update (2026-10-24): this is a historical design matrix. Its descriptions of our proposed interventions are not completed findings. [The current collision review](phase_3_novelty_audit.md) adds direct recent overlap; novelty remains UNVERIFIED.
+
 ## 1. Prior-Art Collision Matrix
 
 | Prior Work / Benchmark | Core Paradigm & Focus | Target Modality & Scale | Mechanistic Method | Incomplete Evidence / Fork Treatment | Collision Risk | Key Differentiation in CrossModalLab |
@@ -59,7 +61,7 @@ To claim novel scientific contributions, CrossModalLab must strictly avoid claim
 - Observing that text priors overpower visual evidence (established by CMC-Bench, Causal Route Gating).
 - Performing attention head ablation on VLMs (established by Rudman et al., PIH-Heads).
 
-CrossModalLab's **strictly defensible novelty** rests on:
+Potential mechanistic differentiation would require the following new evidence; none is established as CrossModalLab's novelty:
 1. **The Mechanistic Locus of Transitive Composition:** Demonstrating which specific layers/modules bind $R_{\text{vis}}(A, B)$ and $R_{\text{text}}(B, C)$ into $R(A, C)$.
 2. **Double Dissociation of Representation vs. Readout:** Proving whether underdetermined forks are represented as topologically distinct states in latent space despite behavioral guessing.
 3. **Causal Mediation of Failure:** Quantifying the indirect effect of candidate attention heads on relational failure via activation patching with denominator instability controls.

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="604.8pt" height="378.10275pt" viewBox="0 0 604.8 378.10275" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-24T20:53:22.015119</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 378.10275 
+L 604.8 378.10275 
+L 604.8 0 
+L -0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 39.6 272.709937 
+L 597.6 272.709937 
+L 597.6 23.229937 
+L 39.6 23.229937 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 64.963636 272.709937 
+L 171.757895 272.709937 
+L 171.757895 147.969937 
+L 64.963636 147.969937 
+z
+" clip-path="url(#p29bb37418f)" style="fill: #a36d21"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 198.456459 272.709937 
+L 305.250718 272.709937 
+L 305.250718 147.969937 
+L 198.456459 147.969937 
+z
+" clip-path="url(#p29bb37418f)" style="fill: #a36d21"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 331.949282 272.709937 
+L 438.743541 272.709937 
+L 438.743541 272.709937 
+L 331.949282 272.709937 
+z
+" clip-path="url(#p29bb37418f)" style="fill: #267864"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 465.442105 272.709937 
+L 572.236364 272.709937 
+L 572.236364 272.709937 
+L 465.442105 272.709937 
+z
+" clip-path="url(#p29bb37418f)" style="fill: #267864"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m92b416aa55" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m92b416aa55" x="118.360766" y="272.709937" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="118.360766" y="288.068219" transform="rotate(-0 118.360766 288.068219)">v2 text roles</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m92b416aa55" x="251.853589" y="272.709937" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="251.853589" y="288.068219" transform="rotate(-0 251.853589 288.068219)">v2 image roles</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m92b416aa55" x="385.346411" y="272.709937" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="385.346411" y="288.068219" transform="rotate(-0 385.346411 288.068219)">New text roles</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m92b416aa55" x="518.839234" y="272.709937" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="518.839234" y="288.068219" transform="rotate(-0 518.839234 288.068219)">New image roles</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5">
+      <defs>
+       <path id="mdfbdaa8849" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mdfbdaa8849" x="39.6" y="272.709937" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="32.6" y="276.889078" transform="rotate(-0 32.6 276.889078)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mdfbdaa8849" x="39.6" y="147.969937" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="32.6" y="152.149078" transform="rotate(-0 32.6 152.149078)">1</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#mdfbdaa8849" x="39.6" y="23.229937" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="32.6" y="27.409078" transform="rotate(-0 32.6 27.409078)">2</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="19.313594" y="147.969937" transform="rotate(-90 19.313594 147.969937)">Role groups with only one gold label</text>
+    </g>
+   </g>
+   <g id="patch_7">
+    <path d="M 39.6 272.709937 
+L 39.6 23.229937 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 597.6 272.709937 
+L 597.6 23.229937 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 39.6 272.709937 
+L 597.6 272.709937 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 39.6 23.229937 
+L 597.6 23.229937 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="118.360766" y="137.990737" transform="rotate(-0 118.360766 137.990737)">1 of 2 groups</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="251.853589" y="137.990737" transform="rotate(-0 251.853589 137.990737)">1 of 2 groups</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="385.346411" y="262.730737" transform="rotate(-0 385.346411 262.730737)">0 of 4 groups</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="518.839234" y="262.730737" transform="rotate(-0 518.839234 262.730737)">0 of 4 groups</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 13.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="318.6" y="17.229937" transform="rotate(-0 318.6 17.229937)">A correct symbolic label does not rule out a shortcut</text>
+   </g>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(7.2 341.868375)">Historical scope: 18 validation cases; new factorial: 96 development cases / 12 families.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(7.2 355.345719)">Oracle-parsed features, not model behavior. Counterbalancing removes deterministic strata.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(7.2 368.823062)">Both single-modality lookup balanced accuracies remain 2/3: partial logical information is not full entailment.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p29bb37418f">
+   <rect x="39.6" y="23.229937" width="558" height="249.48"/>
+  </clipPath>
+ </defs>
+</svg>

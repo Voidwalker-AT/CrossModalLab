@@ -1,0 +1,40 @@
+{
+  "schema": "phase3_factorial_development_v2",
+  "seed": 2026102403,
+  "families": 12,
+  "cases": 96,
+  "status": "NEW_DEVELOPMENT_NOT_CONFIRMATORY",
+  "labels_per_family": {
+    "Yes": 2,
+    "No": 2,
+    "Undetermined": 4
+  },
+  "factors": [
+    "visual direction",
+    "text direction",
+    "query direction"
+  ],
+  "source_generator": "src/benchmark/factorial_development.py",
+  "records_sha256": "34d53f087edcfc875f65e99a8287e2ca946a52338cf7df0bd9295d22e65c8842",
+  "frozen_holdout_accessed": false,
+  "model_forwards": 0,
+  "renderer_name_mapping": {
+    "blue_cube": "blue_rectangle",
+    "red_sphere": "red_ellipse",
+    "green_cylinder": "green_rounded_rectangle",
+    "yellow_cone": "yellow_triangle",
+    "purple_pyramid": "purple_diamond",
+    "orange_torus": "orange_ring",
+    "cyan_box": "turquoise_rectangle",
+    "magenta_prism": "pink_hexagon",
+    "silver_hexagon": "gray_hexagon",
+    "amber_ring": "amber_ring",
+    "teal_wedge": "teal_triangle",
+    "violet_star": "violet_diamond",
+    "crimson_block": "crimson_rectangle",
+    "emerald_oval": "green_ellipse",
+    "golden_disc": "golden_ellipse",
+    "indigo_capsule": "indigo_rounded_rectangle"
+  },
+  "independence_limit": "New seed and mixed-pool rendered entity sets disjoint from within-pool v2 families; renderer and prompt grammar shared. Shape names corrected to literal 2D geometry. Development inspected now, never relabel as independent confirmation."
+}

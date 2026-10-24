@@ -7,6 +7,8 @@
 
 ---
 
+> Phase 3 update (2026-10-24): historical entries below retain their original inspection scope. Use [the fresh targeted collision audit](phase_3_novelty_audit.md) for current contribution decisions; proposed mechanisms and novelty are not established.
+
 ## 1. Review Structure & Verification Taxonomy
 
 To prevent citation hallucination and unfounded novelty claims, all literature entries are categorized under a four-tier verification rubric:
@@ -269,7 +271,7 @@ Existing literature has established:
 
 > [!IMPORTANT]
 > **Defensible Mechanistic Research Niche:**  
-> Prior literature establishes that models fail behaviorally on unanswerable visual questions and cross-modal conflicts. However, **no prior work has mechanistically investigated multi-hop cross-modal relational composition ($R_{\text{vis}}(A, B) \land R_{\text{text}}(B, C) \models R(A, C)$) versus topological underdetermination ($R_{\text{vis}}(A, B) \land R_{\text{text}}(C, B) \not\models R(A, C)$) inside the Transformer residual stream**.
+> Prior literature establishes that models fail behaviorally on unanswerable visual questions and cross-modal conflicts. The historical proposed gap was **mechanistically investigating multi-hop cross-modal relational composition ($R_{\text{vis}}(A, B) \land R_{\text{text}}(B, C) \models R(A, C)$) versus topological underdetermination ($R_{\text{vis}}(A, B) \land R_{\text{text}}(C, B) \not\models R(A, C)$) inside the Transformer residual stream**. An absence-of-prior-work claim is UNVERIFIED and is withdrawn; the Phase 3 collision audit identifies close representation/action, insufficiency and margin-training precedents.
 > 
 > CrossModalLab specifically investigates:
 > - **RQ1 (Locus of Relational Composition):** Where in layer depth is the composed relation $R(A, C)$ formed or lost?

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import unittest
 
 try:
@@ -78,6 +79,8 @@ class TestMetrics(unittest.TestCase):
 
 
 class TestFreezeVal(unittest.TestCase):
+    @unittest.skipIf(os.environ.get("CROSSMODAL_EXCLUDE_MIXED_DATASETS") == "1",
+                     "Phase 3 isolation: mixed train/validation/test record file kept closed")
     def test_no_holdout(self):
         path = REPO_ROOT / "datasets/cross_modal_contrast_v2/cross_modal_contrast_v2.jsonl"
         if not path.is_file():

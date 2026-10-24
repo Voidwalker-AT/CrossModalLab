@@ -21,11 +21,19 @@ def main():
     td,th{padding:4px;border-bottom:1px solid #bbc4bd;text-align:left;overflow-wrap:anywhere}
     figure{column-span:all;break-inside:avoid;margin:18px 0}figure img{width:100%;height:auto;display:block}
     figcaption{font-size:9pt;margin-top:7px}pre{white-space:pre-wrap}img{max-width:100%}
+    .wide-table{column-span:all;overflow-x:auto;margin:18px 0;break-inside:avoid}
+    .wide-table table{min-width:820px;font-size:9pt;margin:0}
+    .wide-table td{white-space:nowrap;overflow-wrap:normal}
+    .wide-table td:first-child{white-space:normal;min-width:185px;max-width:220px;word-break:break-word}
+    .wide-table th{font-size:9pt}
     @media(max-width:760px){main{columns:1;padding:20px;margin:0}body{font-size:11pt}}
     @media print{body{background:white}main{max-width:none;margin:0;padding:0}a{color:inherit}}
     """
     body = re.sub(r'<figure>(<img[^>]*alt="([^"]*)"[^>]*>)</figure>',
                   lambda m: '<figure>'+m[1]+'<figcaption>'+escape(unescape(m[2]))+'</figcaption></figure>', body)
+    body = re.sub(r'<table>.*?</table>',
+                  lambda m: '<div class="wide-table">'+m[0]+'</div>' if 'New development case' in m[0] else m[0],
+                  body, flags=re.DOTALL)
     out = directory / "draft.html"
     out.write_text('<!doctype html><html lang="en"><head><meta charset="utf-8">'
                    '<meta name="viewport" content="width=device-width,initial-scale=1">'

@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-24",
+  "scope": "post-edit CPU verification; partial failed GPU execution is preserved separately",
+  "test_environment": {
+    "CROSSMODAL_EXCLUDE_MIXED_DATASETS": "1",
+    "temporary_and_bytecode_cache": "checkout-local E: paths",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1"
+  },
+  "commands": [
+    {
+      "command": "ulvo project doctor .",
+      "exit_code": 0,
+      "output_file": "phase3_doctor_final.txt",
+      "bytes": 1291,
+      "sha256": "0879dd073be7d3385f8d4f1334f14089dacd2baa504dc77edf5b41183aee633d"
+    },
+    {
+      "command": "ulvo run . -- python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "output_file": "phase3_ulvo_tests_final.txt",
+      "bytes": 40163,
+      "sha256": "bfa237c988e1d644601436c5199c0476ee0324f875c5f72c0b1f496ace6041d4"
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "output_file": "phase3_standard_tests_final.txt",
+      "bytes": 43659,
+      "sha256": "dc7b1617897236ff8662d8176ab7f062858f3881c6304b7eece19f28e368f016"
+    },
+    {
+      "command": "ulvo run . -- python scripts/verify_phase3_integrity.py",
+      "exit_code": 0,
+      "output_file": "phase3_guarded_ulvo_final.txt",
+      "bytes": 40368,
+      "sha256": "11c8ca883e9339a8f76a0e034382e456153449285c2470287ef6f57643ad3957"
+    },
+    {
+      "command": "python scripts/verify_phase3_integrity.py",
+      "exit_code": 0,
+      "output_file": "phase3_guarded_standard_final.txt",
+      "bytes": 43864,
+      "sha256": "de603cc2ea5acb85e70761759054010e116442815e068e99854f10798faf5125"
+    },
+    {
+      "command": "ulvo run . -- python scripts/check_portability.py",
+      "exit_code": 0,
+      "output_file": "phase3_portability_final.txt",
+      "bytes": 1169,
+      "sha256": "366894176002ac32f337d816cea382f983e39f7770196bf80585052b825a1645"
+    },
+    {
+      "command": "ulvo run . -- python -m compileall -q src scripts tests dashboard paper",
+      "exit_code": 0,
+      "output_file": "phase3_compile_final.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "ulvo run . -- python paper/tables/build_phase3_tables.py --output .cache/phase3_tables_rebuild_final",
+      "exit_code": 0,
+      "output_file": "phase3_table_rebuild.txt",
+      "bytes": 1011,
+      "sha256": "4e1a60da11cc53bc67058d5537d102f66add275cfa59759e05a622f6ee05dbbe"
+    },
+    {
+      "command": "python paper/figures/build_phase3_figures.py --output .cache/phase3_figures_rebuild_final",
+      "exit_code": 0,
+      "output_file": "phase3_figure_rebuild.txt",
+      "bytes": 88,
+      "sha256": "bb625864b324bc4eb38406e74e6730b226496f725704fffa5b8fb1fea28acf7a"
+    },
+    {
+      "command": "python .cache/phase3_final_quality.py",
+      "exit_code": 0,
+      "output_file": "phase3_quality_final.txt",
+      "bytes": 310,
+      "sha256": "b5a11730e3053fad8008ff8bd60c941bd6348663c1a34d682fc90f0e39b89758"
+    },
+    {
+      "command": "ulvo run . -- python .cache/mission_quality.py; python .cache/dashboard_refinement_quality.py",
+      "exit_code": 0,
+      "output_file": "phase3_historical_final.txt",
+      "bytes": 282,
+      "sha256": "568c3f81f9a426724ddea9867b05ca90a94bf6b2af6e62810a3e62ebbbd1eb49"
+    },
+    {
+      "command": "node .cache/phase3_manuscript_check.cjs",
+      "exit_code": 0,
+      "output_file": "phase3_manuscript_browser.json",
+      "bytes": 112,
+      "sha256": "26c63026c5f72fb7f4689b89f2c7943ac4ed0242563e7522eb5ac05f98faef85"
+    }
+  ],
+  "helper_sources": [
+    {
+      "file": "phase3_final_quality.py",
+      "sha256": "9962eb1e9d3d4ca8d7e9fbd11d0a5973e29cc3c18121ee79c84eb72bbfee37ed",
+      "execution_note": "Historical .cache path is recorded above; browser helper uses the primary machine installed Playwright path, not a portable dependency requirement."
+    },
+    {
+      "file": "mission_quality.py",
+      "sha256": "79d74ca92f017693b70b6b2ec1e2b226f7a63a491997f0ccef984ef82116b5e7",
+      "execution_note": "Historical .cache path is recorded above; browser helper uses the primary machine installed Playwright path, not a portable dependency requirement."
+    },
+    {
+      "file": "dashboard_refinement_quality.py",
+      "sha256": "d075823a50fd700ceb3668c4a16598bf4cac0f06d2ec01d40393a2ff8bac21cf",
+      "execution_note": "Historical .cache path is recorded above; browser helper uses the primary machine installed Playwright path, not a portable dependency requirement."
+    },
+    {
+      "file": "phase3_manuscript_check.cjs",
+      "sha256": "ab66eac908426ba7b511070c64744148b369c65d7f37ff627c7dd798c507eb60",
+      "execution_note": "Historical .cache path is recorded above; browser helper uses the primary machine installed Playwright path, not a portable dependency requirement."
+    }
+  ],
+  "empty_output_is_successful_compileall": true
+}

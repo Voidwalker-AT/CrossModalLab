@@ -192,6 +192,14 @@ Full reports live under `artifacts/reports/` and `docs/`.
 
 ## 9. License & Citation
 
+### Phase 3 development audit (October 24, 2026)
+
+The [progress audit](docs/research_progress_audit.md), [research plan](docs/phase_3_research_plan.md), and [evaluation protocol](docs/phase_3_evaluation_protocol.md) distinguish historical results from new development diagnostics. The six-forward Qwen pilot stopped at the second-model VRAM gate; it is not a completed cross-model study. Training and causal interventions remain unapproved.
+
+With the ordinary Python environment described above, run `python scripts/verify_phase3_integrity.py` for CPU discovery with restricted dataset reads blocked. Three legacy tests that open mixed-split files are explicitly skipped; optional Torch tests also skip when Torch is absent. This requires neither ULVO nor WSCTL. Never remove those safeguards to obtain a larger passing-test count.
+
+To reproduce stored-results tables without overwriting evidence, use `python paper/tables/build_phase3_tables.py --output .cache/phase3_tables_rebuild`. Figures use `python paper/figures/build_phase3_figures.py --output .cache/phase3_figures_rebuild` with an already available Matplotlib installation. Choose a fresh directory for each repeat. No model inference is involved. Exact numerical reproduction was checked with Python 3.11; other Python versions can differ in floating-point accumulation. Partner-machine execution remains pending.
+
 Model weights: Apache-2.0 (Hugging Face model cards).  
 External datasets: see `docs/ASSET_MANIFEST.md` for licenses.  
 Cite this repository via GitHub URL and the commit hash of the release you used.

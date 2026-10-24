@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import unittest
 from pathlib import Path
 
@@ -10,6 +11,8 @@ from src.config.paths import REPO_ROOT
 
 
 class TestPairedManifest(unittest.TestCase):
+    @unittest.skipIf(os.environ.get("CROSSMODAL_EXCLUDE_MIXED_DATASETS") == "1",
+                     "Phase 3 isolation: mixed train/validation/test record file kept closed")
     def test_manifest_structure(self):
         path = REPO_ROOT / "configs/phase_2c_c/paired_eval_manifest_v1.json"
         data = json.loads(path.read_text(encoding="utf-8"))

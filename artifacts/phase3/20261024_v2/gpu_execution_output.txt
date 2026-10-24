@@ -1,0 +1,54 @@
+
+Loading weights:   0%|          | 0/625 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/625 [00:00<08:21,  1.24it/s]
+Loading weights:   0%|          | 3/625 [00:00<02:54,  3.56it/s]
+Loading weights:   2%|▏         | 14/625 [00:01<00:30, 19.90it/s]
+Loading weights:   4%|▍         | 25/625 [00:01<00:17, 34.49it/s]
+Loading weights:   5%|▌         | 33/625 [00:01<00:13, 42.89it/s]
+Loading weights:   6%|▋         | 40/625 [00:01<00:12, 48.45it/s]
+Loading weights:   8%|▊         | 49/625 [00:01<00:10, 55.77it/s]
+Loading weights:  10%|▉         | 60/625 [00:01<00:08, 65.96it/s]
+Loading weights:  11%|█▏        | 71/625 [00:01<00:07, 73.07it/s]
+Loading weights:  13%|█▎        | 81/625 [00:01<00:06, 79.02it/s]
+Loading weights:  15%|█▍        | 91/625 [00:02<00:06, 83.25it/s]
+Loading weights:  16%|█▋        | 102/625 [00:02<00:06, 84.39it/s]
+Loading weights:  18%|█▊        | 113/625 [00:02<00:05, 86.16it/s]
+Loading weights:  20%|█▉        | 124/625 [00:02<00:05, 87.49it/s]
+Loading weights:  22%|██▏       | 135/625 [00:02<00:05, 87.75it/s]
+Loading weights:  23%|██▎       | 144/625 [00:02<00:05, 87.22it/s]
+Loading weights:  24%|██▍       | 153/625 [00:02<00:05, 86.01it/s]
+Loading weights:  26%|██▌       | 162/625 [00:02<00:05, 81.76it/s]
+Loading weights:  27%|██▋       | 171/625 [00:02<00:05, 78.77it/s]
+Loading weights:  29%|██▉       | 181/625 [00:03<00:05, 79.10it/s]
+Loading weights:  31%|███       | 192/625 [00:03<00:05, 82.03it/s]
+Loading weights:  32%|███▏      | 203/625 [00:03<00:05, 81.93it/s]
+Loading weights:  34%|███▍      | 213/625 [00:03<00:04, 84.29it/s]
+Loading weights:  36%|███▌      | 223/625 [00:03<00:04, 85.82it/s]
+Loading weights:  37%|███▋      | 232/625 [00:03<00:04, 84.66it/s]
+Loading weights:  39%|███▊      | 241/625 [00:03<00:04, 80.43it/s]
+Loading weights:  40%|████      | 250/625 [00:03<00:05, 74.07it/s]
+Loading weights:  41%|████▏     | 258/625 [00:04<00:05, 69.25it/s]
+Loading weights:  43%|████▎     | 268/625 [00:04<00:04, 76.66it/s]
+Loading weights:  44%|████▍     | 278/625 [00:04<00:04, 81.78it/s]
+Loading weights:  46%|████▌     | 289/625 [00:04<00:04, 81.45it/s]
+Loading weights:  48%|████▊     | 298/625 [00:04<00:03, 82.83it/s]
+Loading weights:  49%|████▉     | 307/625 [00:04<00:04, 77.29it/s]
+Loading weights:  54%|█████▍    | 338/625 [00:04<00:02, 136.81it/s]
+Loading weights:  60%|█████▉    | 372/625 [00:04<00:01, 189.54it/s]
+Loading weights:  64%|██████▍   | 402/625 [00:04<00:01, 217.33it/s]
+Loading weights:  70%|███████   | 438/625 [00:05<00:00, 256.87it/s]
+Loading weights:  76%|███████▌  | 474/625 [00:05<00:00, 282.61it/s]
+Loading weights:  82%|████████▏ | 510/625 [00:05<00:00, 294.24it/s]
+Loading weights:  87%|████████▋ | 544/625 [00:05<00:00, 306.57it/s]
+Loading weights:  93%|█████████▎| 580/625 [00:05<00:00, 317.02it/s]
+Loading weights:  98%|█████████▊| 612/625 [00:05<00:00, 223.29it/s]
+Loading weights: 100%|██████████| 625/625 [00:05<00:00, 106.30it/s]
+FORWARD 1/12 qwen p3dev2_2026102403_000::v1t1q0
+FORWARD 2/12 qwen p3dev2_2026102403_000::v1t1q0
+FORWARD 3/12 qwen p3dev2_2026102403_000::v1t1q0
+{"model": "qwen", "sample_id": "p3dev2_2026102403_000::v1t1q0", "summed_loglikelihoods": [-15.440173149108887, -14.690173149108887, -20.440187454223633], "argmax_answer": "No", "latency_sec": 2.3576771000080043}
+FORWARD 4/12 qwen p3dev2_2026102403_000::v1t0q0
+FORWARD 5/12 qwen p3dev2_2026102403_000::v1t0q0
+FORWARD 6/12 qwen p3dev2_2026102403_000::v1t0q0
+{"model": "qwen", "sample_id": "p3dev2_2026102403_000::v1t0q0", "summed_loglikelihoods": [-14.20011043548584, -15.32511043548584, -20.32512092590332], "argmax_answer": "Yes", "latency_sec": 1.0197557999927085}
+{"status": "FAILED", "forward_attempts": 6, "report": "E:\\Workspace\\Active\\CrossModalLab\\artifacts\\phase3\\20261024_v2\\pilot\\execution.json"}

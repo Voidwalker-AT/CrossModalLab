@@ -1,0 +1,44 @@
+{
+  "selected": {
+    "cases": 68,
+    "families": 56,
+    "labels": {
+      "Undetermined": 22,
+      "Yes": 23,
+      "No": 23
+    },
+    "dual_oracle_verified": true,
+    "family_split_disjoint": true,
+    "single_modality_logically_definite_counts": {
+      "visual": 0,
+      "textual": 0
+    },
+    "unique_prompt_hashes": 68,
+    "unique_image_hashes": 68
+  },
+  "factorial": {
+    "cases": 96,
+    "families": 12,
+    "labels": {
+      "Yes": 24,
+      "No": 24,
+      "Undetermined": 48
+    },
+    "dual_oracle_verified": true,
+    "family_split_disjoint": true,
+    "single_modality_logically_definite_counts": {
+      "visual": 0,
+      "textual": 0
+    },
+    "unique_prompt_hashes": 48,
+    "unique_image_hashes": 24
+  },
+  "pilot": {
+    "status": "VERIFIED_PARTIAL_EVIDENCE",
+    "execution_status": "FAILED",
+    "forward_attempts": 6,
+    "valid_scored_rows": 2,
+    "complete_cross_model": false,
+    "limit": "This validates recorded rows and failure accounting, not successful cross-model replication."
+  }
+}

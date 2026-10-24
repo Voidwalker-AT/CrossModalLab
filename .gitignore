@@ -299,3 +299,7 @@ _tmp_*.py
 !datasets/metadata/*.md
 !artifacts/reports/*.md
 !artifacts/telemetry/*.json
+
+# Phase 3 reconstruction duplicates and superseded unmeasured development candidate
+/artifacts/phase3/*/reconstructed_images/
+/artifacts/phase3/20261024_v1/

@@ -1,0 +1,54 @@
+{
+  "01_role_shortcuts.svg": {
+    "classification": "SYMBOLICALLY DERIVED / DATASET DIAGNOSTIC",
+    "caption": "Historical scope: 18 validation cases; new factorial: 96 development cases / 12 families.\nOracle-parsed features, not model behavior. Counterbalancing removes deterministic strata.\nBoth single-modality lookup balanced accuracies remain 2/3: partial logical information is not full entailment.",
+    "source_sha256": {
+      "artifacts\\phase3\\20261024_v2\\audit.json": "fbb6c8f109039931e7c7e6a4a1bdc2e7aaafee3c9fffe254d5789e6185548171"
+    },
+    "sha256": "54d1006377d83ca26e7b5447bfe2d135e4bcb68601996714a57df73371d233cc"
+  },
+  "01_role_shortcuts.png": {
+    "classification": "SYMBOLICALLY DERIVED / DATASET DIAGNOSTIC",
+    "caption": "Historical scope: 18 validation cases; new factorial: 96 development cases / 12 families.\nOracle-parsed features, not model behavior. Counterbalancing removes deterministic strata.\nBoth single-modality lookup balanced accuracies remain 2/3: partial logical information is not full entailment.",
+    "source_sha256": {
+      "artifacts\\phase3\\20261024_v2\\audit.json": "fbb6c8f109039931e7c7e6a4a1bdc2e7aaafee3c9fffe254d5789e6185548171"
+    },
+    "sha256": "3a6e124561bbbf2147f349082a640d254e3c357deb97bfaf850df0aea0ff8fc1"
+  },
+  "02_candidate_length_sensitivity.svg": {
+    "classification": "OBSERVED",
+    "caption": "Frozen Qwen, one family / two same-image development cases; six forwards total. Higher score is less negative.\nNo generated completion or confidence estimate. Changing the scoring rule flips both choices; it does not establish a better method.\nThe cross-model pilot stopped before Smol loaded; no new Smol result is plotted.",
+    "source_sha256": {
+      "paper\\tables\\phase3_20261024\\analysis.json": "82bb5d1cdc8bd81c8422fc0a760f165b7545872d15725f4921fe2813e7fbe677",
+      "artifacts\\phase3\\20261024_v2\\pilot\\candidate_scores.jsonl": "444f37b2618960c8727128aa7526149aa94bdeef47d1df0810eb67c8d14ea451"
+    },
+    "sha256": "84c07615cd9b9127ad3b1ee68da080c7e654b6a7e3fbf9b786ecc21955b791c9"
+  },
+  "02_candidate_length_sensitivity.png": {
+    "classification": "OBSERVED",
+    "caption": "Frozen Qwen, one family / two same-image development cases; six forwards total. Higher score is less negative.\nNo generated completion or confidence estimate. Changing the scoring rule flips both choices; it does not establish a better method.\nThe cross-model pilot stopped before Smol loaded; no new Smol result is plotted.",
+    "source_sha256": {
+      "paper\\tables\\phase3_20261024\\analysis.json": "82bb5d1cdc8bd81c8422fc0a760f165b7545872d15725f4921fe2813e7fbe677",
+      "artifacts\\phase3\\20261024_v2\\pilot\\candidate_scores.jsonl": "444f37b2618960c8727128aa7526149aa94bdeef47d1df0810eb67c8d14ea451"
+    },
+    "sha256": "59a05b45b723cbddfb8493ad661e14f5a066f1eb1aa0702d7d4ac25ea8cc6209"
+  },
+  "03_historical_cross_model.svg": {
+    "classification": "OBSERVED",
+    "caption": "Stored Phase 2C-C development evidence, 18 paired cases / six families per model. Higher recall is better.\nQwen BA 55.6%; Smol BA 44.4%. Paired descriptive difference CI: -11.1 to 27.8 percentage points.\nReanalysis of old outputs, not new replication; exact-format compliance differs and model superiority is not established.",
+    "source_sha256": {
+      "paper\\tables\\phase3_20261024\\analysis.json": "82bb5d1cdc8bd81c8422fc0a760f165b7545872d15725f4921fe2813e7fbe677",
+      "artifacts\\paired\\phase_2c_c\\paired_evaluations_v1.jsonl": "3144e162def2a2d8dfd8781d258255a5d8e8fa92bde320063c750a086ab9c273"
+    },
+    "sha256": "b6744d978180c47f7ba785e30fc7e08d6caf8e898da9355bfb598118cb6ade3a"
+  },
+  "03_historical_cross_model.png": {
+    "classification": "OBSERVED",
+    "caption": "Stored Phase 2C-C development evidence, 18 paired cases / six families per model. Higher recall is better.\nQwen BA 55.6%; Smol BA 44.4%. Paired descriptive difference CI: -11.1 to 27.8 percentage points.\nReanalysis of old outputs, not new replication; exact-format compliance differs and model superiority is not established.",
+    "source_sha256": {
+      "paper\\tables\\phase3_20261024\\analysis.json": "82bb5d1cdc8bd81c8422fc0a760f165b7545872d15725f4921fe2813e7fbe677",
+      "artifacts\\paired\\phase_2c_c\\paired_evaluations_v1.jsonl": "3144e162def2a2d8dfd8781d258255a5d8e8fa92bde320063c750a086ab9c273"
+    },
+    "sha256": "f0b0d0a77c6db5ff725a6efe3c30b5f0036bab898468c1fad2a4f7f12e338e4b"
+  }
+}

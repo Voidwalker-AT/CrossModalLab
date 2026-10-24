@@ -30,4 +30,6 @@ Release small manifests, split rules, render seeds, asset hashes, source/runtime
 
 ## Collision and scope risks
 
+The October 24 Phase 3 follow-up is documented in [the progress audit](../docs/research_progress_audit.md) and [publication gap analysis](../docs/publication_gap_analysis.md). The versioned October 28 evidence archive remains unchanged. New dataset diagnostics, a partial six-forward Qwen pilot, three figures and a literature collision update supplement the preliminary manuscript; they do not close the independent-evaluation or causal-evidence gaps. The [Phase 3 roadmap](../docs/phase_3_research_plan.md) governs the next approval gates.
+
 Winoground, What’sUp, SPHERE, reliable VQA, SelectiveNet, R-Tuning, counterfactual VQA training, QLoRA, and current reporting-bias work already cover major components ([audited sources](references/verified_sources.md)). The exact combination’s novelty remains UNVERIFIED. Missing independent evaluation and missing causal evidence are the primary scientific blockers. A systems-feasibility pilot and a polished draft cannot replace them.
