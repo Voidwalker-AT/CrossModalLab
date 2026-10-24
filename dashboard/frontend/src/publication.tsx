@@ -1,0 +1,13 @@
+import {useEffect,useState} from 'react';
+
+type Score={sample_id:string;ground_truth_label:string;argmax_answer:string;summed_loglikelihoods:number[];candidate_token_ids:number[][];revision:string;length_normalized_answer:string};
+type Update={available:boolean;status:string;date:string;scope:string;new_model_forwards:number;cases:{sample_id:string;ground_truth_label:string;prompt:string;image_data_url:string}[];models:Record<string,{cases:Score[];parameter_comparisons:number}>;sources:{path:string;sha256:string}[]};
+
+export function PublicationUpdate(){
+ const [data,setData]=useState<Update|null>(null);
+ const [error,setError]=useState(false);
+ useEffect(()=>{const controller=new AbortController();fetch('/api/publication',{signal:controller.signal}).then(r=>{if(!r.ok)throw Error('Unavailable');return r.json()}).then(setData).catch(e=>{if(e.name!=='AbortError')setError(true)});return()=>controller.abort()},[]);
+ if(error)return <p className="caption">Publication update unavailable; historical evidence remains separate.</p>;
+ if(!data?.available)return null;
+ return <details className="panel"><summary>October 25 research update · matched two-model pilot</summary><h2>Observed behavior on a fixed development pair</h2><p>{data.scope}</p><p><strong>{data.new_model_forwards} additional forwards.</strong> Both model processes exited and released GPU memory. No training or causal intervention occurred.</p>{data.cases.map(c=><article key={c.sample_id} className="panel"><h3>Gold answer: {c.ground_truth_label}</h3><p className="mono wrap">{c.sample_id}</p><img src={c.image_data_url} alt="Recorded input: violet diamond left of orange ring" style={{width:220,maxWidth:'100%'}}/><p style={{whiteSpace:'pre-wrap'}}>{c.prompt}</p><div style={{overflowX:'auto'}}><table className="data-table"><thead><tr><th>Frozen model</th><th>Summed-LL answer</th><th>Yes / No / Undetermined LL</th><th>LL/token answer</th></tr></thead><tbody>{Object.entries(data.models).map(([name,m])=>{const r=m.cases.find(x=>x.sample_id===c.sample_id)!;return <tr key={name}><th>{name==='smol'?'SmolVLM2':'Qwen3-VL'}</th><td>{r.argmax_answer}</td><td>{r.summed_loglikelihoods.map(v=>v.toFixed(6)).join(' / ')}</td><td>{r.length_normalized_answer}</td></tr>})}</tbody></table></div><p className="caption">LL/token is a sensitivity diagnostic, not a validated correction. Both models select an unsupported Yes on the underdetermined case. These scores reveal behavior; they do not locate a neural cause.</p></article>)}<h3>Source identities</h3>{data.sources.map(s=><p key={s.path} className="mono wrap">{s.path}<br/>{s.sha256}</p>)}</details>;
+}

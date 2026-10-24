@@ -1,0 +1,55 @@
+{
+  "status": "PASSED",
+  "workers": [
+    {
+      "model": "smol",
+      "pid": 27908,
+      "exit_code": 0,
+      "process_exited": true,
+      "before": {
+        "host_available_mib": 6561.44921875,
+        "nvidia_total_mib": 4096,
+        "nvidia_used_mib": 159
+      },
+      "after_process_exit": {
+        "host_available_mib": 6859.87109375,
+        "nvidia_total_mib": 4096,
+        "nvidia_used_mib": 144
+      },
+      "elapsed_sec": 160.25,
+      "validation": {
+        "valid_scored_rows": 2,
+        "parameter_comparisons": 657,
+        "status": "VERIFIED_EXECUTION"
+      }
+    },
+    {
+      "model": "qwen",
+      "pid": 40248,
+      "exit_code": 0,
+      "process_exited": true,
+      "before": {
+        "host_available_mib": 6846.15234375,
+        "nvidia_total_mib": 4096,
+        "nvidia_used_mib": 144
+      },
+      "after_process_exit": {
+        "host_available_mib": 6895.76171875,
+        "nvidia_total_mib": 4096,
+        "nvidia_used_mib": 144
+      },
+      "elapsed_sec": 82.0,
+      "validation": {
+        "valid_scored_rows": 2,
+        "parameter_comparisons": 625,
+        "status": "VERIFIED_EXECUTION"
+      }
+    }
+  ],
+  "additional_forward_attempts": 12,
+  "final_resources": {
+    "host_available_mib": 6894.7265625,
+    "nvidia_total_mib": 4096,
+    "nvidia_used_mib": 144
+  }
+}

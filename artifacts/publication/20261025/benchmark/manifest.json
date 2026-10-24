@@ -1,0 +1,26 @@
+{
+  "schema": "publication_factorial_v1",
+  "seed": 2026102502,
+  "families": 6,
+  "records": 9216,
+  "images": 72,
+  "status": "EXPOSED_DEVELOPMENT_NOT_CONFIRMATORY",
+  "records_sha256": "da31199175496e66ebdcd2d7c522c5038dc136cf9700b224138aec3e2bf83e87",
+  "generator_sha256": "80a8adee2dca82c3b54d921b554e88f52275f2d82e2f7584fc898fa365d3c476",
+  "family_partitions": {
+    "pubdev_2026102502_000": "baseline_fit",
+    "pubdev_2026102502_001": "baseline_fit",
+    "pubdev_2026102502_002": "baseline_fit",
+    "pubdev_2026102502_003": "baseline_evaluation",
+    "pubdev_2026102502_004": "baseline_evaluation",
+    "pubdev_2026102502_005": "baseline_evaluation"
+  },
+  "labels": {
+    "Yes": 2304,
+    "No": 2304,
+    "Undetermined": 4608
+  },
+  "frozen_holdout_accessed": false,
+  "model_forwards": 0,
+  "independence_limit": "All variants within a triple are dependent. Shared entities/renderer/grammar remain; baseline evaluation is exposed development, never confirmatory."
+}

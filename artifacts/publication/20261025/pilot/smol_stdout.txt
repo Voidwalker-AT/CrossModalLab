@@ -1,0 +1,8 @@
+FORWARD 1/6 smol p3dev2_2026102403_000::v1t1q0
+FORWARD 2/6 smol p3dev2_2026102403_000::v1t1q0
+FORWARD 3/6 smol p3dev2_2026102403_000::v1t1q0
+{"model": "smol", "sample_id": "p3dev2_2026102403_000::v1t1q0", "argmax_answer": "Yes", "summed_loglikelihoods": [-0.6613762974739075, -0.9084723591804504, -2.633976697921753]}
+FORWARD 4/6 smol p3dev2_2026102403_000::v1t0q0
+FORWARD 5/6 smol p3dev2_2026102403_000::v1t0q0
+FORWARD 6/6 smol p3dev2_2026102403_000::v1t0q0
+{"model": "smol", "sample_id": "p3dev2_2026102403_000::v1t0q0", "argmax_answer": "Yes", "summed_loglikelihoods": [-0.1641775518655777, -2.1282622814178467, -3.627347946166992]}

@@ -40,6 +40,9 @@ def make_server(port=8765, *, store=None):
                     return self.send(200, store.workspace())
                 if path == "/api/provenance":
                     return self.send(200, store.provenance())
+                if path == "/api/publication":
+                    from dashboard.backend.publication import load
+                    return self.send(200, load(store.root))
                 if path.startswith("/api/comparison/"):
                     from dashboard.backend.exports import comparison_svg
                     sample = path[len("/api/comparison/"):]

@@ -1,0 +1,75 @@
+{
+  "baselines": {
+    "majority": {
+      "balanced_accuracy": 0.3333333333333333,
+      "correct": 2304,
+      "n": 4608,
+      "unseen_feature_rows": 0,
+      "in_sample_balanced_accuracy_ceiling": 0.3333333333333333,
+      "feature_groups": 1
+    },
+    "text_only_oracle_roles": {
+      "balanced_accuracy": 0.6666666666666666,
+      "correct": 2304,
+      "n": 4608,
+      "unseen_feature_rows": 0,
+      "in_sample_balanced_accuracy_ceiling": 0.6666666666666666,
+      "feature_groups": 4
+    },
+    "image_only_oracle_roles": {
+      "balanced_accuracy": 0.6666666666666666,
+      "correct": 2304,
+      "n": 4608,
+      "unseen_feature_rows": 0,
+      "in_sample_balanced_accuracy_ceiling": 0.6666666666666666,
+      "feature_groups": 4
+    },
+    "role_assignment": {
+      "balanced_accuracy": 0.3333333333333333,
+      "correct": 2304,
+      "n": 4608,
+      "unseen_feature_rows": 0,
+      "in_sample_balanced_accuracy_ceiling": 0.3333333333333333,
+      "feature_groups": 12
+    },
+    "prompt_template": {
+      "balanced_accuracy": 0.3333333333333333,
+      "correct": 2304,
+      "n": 4608,
+      "unseen_feature_rows": 0,
+      "in_sample_balanced_accuracy_ceiling": 0.3333333333333333,
+      "feature_groups": 8
+    },
+    "entity_identity": {
+      "balanced_accuracy": 0.3333333333333333,
+      "correct": 2304,
+      "n": 4608,
+      "unseen_feature_rows": 4608,
+      "in_sample_balanced_accuracy_ceiling": 0.3333333333333333,
+      "feature_groups": 6
+    },
+    "position_only": {
+      "balanced_accuracy": 0.3333333333333333,
+      "correct": 2304,
+      "n": 4608,
+      "unseen_feature_rows": 4608,
+      "in_sample_balanced_accuracy_ceiling": 0.3333333333333333,
+      "feature_groups": 12
+    },
+    "combined_nonsemantic": {
+      "balanced_accuracy": 0.3333333333333333,
+      "correct": 2304,
+      "n": 4608,
+      "unseen_feature_rows": 4608,
+      "in_sample_balanced_accuracy_ceiling": 0.33333333333334014,
+      "feature_groups": 1152
+    }
+  },
+  "symbolic_oracle_balanced_accuracy": 1.0,
+  "oracle_minus_best_single_modality_ba": 0.33333333333333337,
+  "fit_families": 3,
+  "evaluation_families": 3,
+  "cross_partition_image_hash_overlap": 0,
+  "cross_partition_prompt_hash_overlap": 0,
+  "interpretation": "Oracle-parsed role features are dataset diagnostics, not image/text VLM inference. Oracle gain establishes available information, not model composition. Nonsemantic ceilings diagnose predictability even when held-family lookups fall back."
+}

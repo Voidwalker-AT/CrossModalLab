@@ -1,0 +1,8 @@
+FORWARD 1/6 qwen p3dev2_2026102403_000::v1t1q0
+FORWARD 2/6 qwen p3dev2_2026102403_000::v1t1q0
+FORWARD 3/6 qwen p3dev2_2026102403_000::v1t1q0
+{"model": "qwen", "sample_id": "p3dev2_2026102403_000::v1t1q0", "argmax_answer": "No", "summed_loglikelihoods": [-15.440173149108887, -14.690173149108887, -20.440187454223633]}
+FORWARD 4/6 qwen p3dev2_2026102403_000::v1t0q0
+FORWARD 5/6 qwen p3dev2_2026102403_000::v1t0q0
+FORWARD 6/6 qwen p3dev2_2026102403_000::v1t0q0
+{"model": "qwen", "sample_id": "p3dev2_2026102403_000::v1t0q0", "argmax_answer": "Yes", "summed_loglikelihoods": [-14.20011043548584, -15.32511043548584, -20.32512092590332]}
