@@ -79,14 +79,14 @@ def prepare(out):
     write(out/FOLDERS[7]/"Exact_Recorded_Answers.json",json.dumps({"model":data["model"],"conditions":data["conditions"],"cases":data["cases"]},indent=2),["dashboard/assets/development_cases.json",*[c["source_artifact"]for c in data["conditions"]]])
     capture_csv=[]
     colors=["#267864","#a36d21","#72578d","#456e9c","#9e505f"]
-    for capture in neural["captures"]:
+    for capture_index,capture in enumerate(neural["captures"],1):
         fig,ax=plt.subplots(figsize=(9,5))
         for color,selector in zip(colors,["last","first_image","last_image","mean_image","last_text_non_image"]):
             points=sorted([p for p in capture["points"] if p["selector"]==selector],key=lambda p:p["layer"])
             ax.plot([p["layer"]for p in points],[p["l2_norm"]for p in points],"o-",label=selector,color=color)
         ax.set(xlabel="Recorded decoder layer index",ylabel="Residual-row L2 norm (activation units)",xticks=[3,12,18,23],title="Historical frozen SmolVLM2 | measured activation norms")
         ax.legend(fontsize=9,ncol=2);fig.text(.09,-.04,capture["sample_id"]+"\n"+capture["condition"]+" | CORRELATED - NOT CAUSAL; norm growth is not reasoning evidence.",fontsize=9)
-        figure(fig,"Activation_Norms_"+capture["sample_id"],FOLDERS[4],[capture["source"]],"CORRELATED",capture["sample_id"],
+        figure(fig,f"Activation_Norms_{capture_index:02d}",FOLDERS[4],[capture["source"]],"CORRELATED",capture["sample_id"],
                model=neural["model"],units="activation-vector L2",token_selectors=["last","first_image","last_image","mean_image","last_text_non_image"])
         for point in capture["points"]:capture_csv.append({"sample_id":capture["sample_id"],"source":capture["source"],**point})
     csvpath=out/FOLDERS[4]/"All_200_Activation_Rows.csv"
@@ -194,7 +194,7 @@ def finalize(out):
     with ZipFile(archive,'x',compression=ZIP_DEFLATED) as zipped:
         for path in sorted(out.rglob('*')):
             if path.is_file():zipped.write(path,arcname=out.name+'/'+path.relative_to(out).as_posix())
-    scratch=ROOT/'.cache/evidence_verification'/uuid4().hex
+    scratch=ROOT/'.cache/evidence_verification'/uuid4().hex[:8]
     scratch.mkdir(parents=True)
     with ZipFile(archive) as zipped:
         if zipped.testzip() is not None:raise ValueError('ZIP CRC failed')
