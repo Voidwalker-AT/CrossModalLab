@@ -27,6 +27,15 @@ def main():
                 selected.add(path.relative_to(ROOT))
     for path in (ROOT / 'docs').glob('publication*.md'): selected.add(path.relative_to(ROOT))
     selected.add(Path('docs/international_research_standards.md'))
+    pilot_plan = json.loads((ROOT / 'artifacts/publication/20261025/pilot/plan.json').read_text())
+    for case in pilot_plan['cases']:
+        relative = Path(case['image_file'])
+        image = (ROOT / relative).resolve()
+        if not image.is_relative_to(ROOT / 'artifacts/phase3') or image.suffix != '.png':
+            raise ValueError('pilot review image is not an owned controlled artifact')
+        if hashlib.sha256(image.read_bytes()).hexdigest() != case['image_sha256']:
+            raise ValueError('pilot review input hash mismatch')
+        selected.add(relative)
     for pattern in ('*publication*.py', 'test_matched_screen.py'):
         for directory in ('scripts', 'tests'):
             selected.update(p.relative_to(ROOT) for p in (ROOT / directory).glob(pattern))

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "source_revision": "7bcb8abb8321253553f3829c770be9bb440d343c",
+  "source_selection_dirty": true,
+  "files": 214,
+  "archive_bytes": 1526553,
+  "archive_sha256": "f897c5976f0d092122e54be93c0b53db3d8ab977aadbf7e6b73f9b5514a0fe0e",
+  "archive": "submission/CrossModalLab_Publication_Research_20261025_preflight2.zip",
+  "member_hashes_verified": true,
+  "manifest_sha256": "d2621517e3fa42f4e313afdabc067b095ad7b0baf616c0b0c81bb90542ded921"
+}
