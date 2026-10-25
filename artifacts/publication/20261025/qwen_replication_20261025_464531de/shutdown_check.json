@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-10-25T16:12:41.3555735Z",
+  "available_ram_gib": 6.325771331787109,
+  "remaining_replication_workers": 0,
+  "gpu": "4096 MiB, 180 MiB, 3783 MiB",
+  "codex_alive": true
+}

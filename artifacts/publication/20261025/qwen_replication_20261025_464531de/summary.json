@@ -1,0 +1,158 @@
+{
+  "schema": "qwen_ram_recovery_v1",
+  "timestamp_utc": "2026-10-25T16:12:40.636184+00:00",
+  "status": "VERIFIED_BOUNDED_CANDIDATE_SCORING",
+  "initial_available_ram_gib_approx": 6.06,
+  "process_inventory_available_ram_gib": 5.956447601318359,
+  "total_ram_gib": 15.648929595947266,
+  "inspected_relevant_process_count": 50,
+  "rea_candidates": [
+    {
+      "pid": 5720,
+      "parent_pid": 11280,
+      "name": "cmd.exe",
+      "executable": "C:\\windows\\system32\\cmd.exe",
+      "working_set_mib": 8.59,
+      "session_id": 1,
+      "children": [
+        12468,
+        26164
+      ],
+      "action": "RETAINED: RAM sufficient; no idle/client ownership assumption"
+    },
+    {
+      "pid": 26164,
+      "parent_pid": 5720,
+      "name": "node.exe",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "working_set_mib": 92.52,
+      "session_id": 1,
+      "children": [
+        20500
+      ],
+      "action": "RETAINED: RAM sufficient; no idle/client ownership assumption"
+    },
+    {
+      "pid": 12440,
+      "parent_pid": 11280,
+      "name": "cmd.exe",
+      "executable": "C:\\windows\\system32\\cmd.exe",
+      "working_set_mib": 8.59,
+      "session_id": 1,
+      "children": [
+        12556,
+        5400
+      ],
+      "action": "RETAINED: RAM sufficient; no idle/client ownership assumption"
+    },
+    {
+      "pid": 5400,
+      "parent_pid": 12440,
+      "name": "node.exe",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "working_set_mib": 93.61,
+      "session_id": 1,
+      "children": [
+        23944
+      ],
+      "action": "RETAINED: RAM sufficient; no idle/client ownership assumption"
+    },
+    {
+      "pid": 37688,
+      "parent_pid": 20500,
+      "name": "node.exe",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "working_set_mib": 240.8,
+      "session_id": 1,
+      "children": [],
+      "action": "RETAINED: RAM sufficient; no idle/client ownership assumption"
+    },
+    {
+      "pid": 17312,
+      "parent_pid": 23944,
+      "name": "node.exe",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "working_set_mib": 240.6,
+      "session_id": 1,
+      "children": [],
+      "action": "RETAINED: RAM sufficient; no idle/client ownership assumption"
+    }
+  ],
+  "process_inventory_local_sha256": "3f3c28d1537b528c511c775a837b321b559bcd9a721383c9442fac5317251afc",
+  "process_inventory_path": ".cache/qwen_replication_20261025_464531de/process_inventory.json",
+  "initial_gpu": {
+    "name": "NVIDIA GeForce RTX 2050",
+    "total_mib": 4096,
+    "used_mib": 182,
+    "free_mib": 3781
+  },
+  "initial_gpu_unknown_pid_resolved": {
+    "pid": 1920,
+    "name": "dwm",
+    "action": "RETAINED: Windows Desktop Window Manager"
+  },
+  "stopped_processes": [],
+  "cleanup_recovered_mib": 0,
+  "cleanup_reason": "Not required: sufficient physical RAM before any cleanup",
+  "initial_ulvo_active_leases": 0,
+  "initial_ulvo_active_processes": 0,
+  "no_competing_model_worker_observed": true,
+  "gate": "PASSED",
+  "actual_forwards": 9,
+  "authorized_cap": 12,
+  "unused_forwards": 3,
+  "additional_execution_authorized": false,
+  "model": {
+    "attn_implementation": "sdpa",
+    "device": "cuda:0",
+    "image_token_id": 151655,
+    "load_sec": 7.85,
+    "model_class": "Qwen3VLForConditionalGeneration",
+    "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+    "quantization": {
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "load_in_4bit": true
+    },
+    "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+    "snapshot_dir": "E:\\cache\\huggingface\\models--Qwen--Qwen3-VL-2B-Instruct\\snapshots\\89644892e4d85e24eaac8bacfd4f463576704203",
+    "text_hidden_size": 2048,
+    "text_num_layers": 28,
+    "torch_allocated_mib": 1505.48,
+    "torch_reserved_mib": 1566.0
+  },
+  "adapter": "none; frozen base",
+  "seed": 2026102501,
+  "planned_case_count": 3,
+  "independent_families": 1,
+  "candidate_argmax_correct": 3,
+  "generated_answer_accuracy": null,
+  "exact_format_compliance": null,
+  "reproduction_verdict": "NOT_ESTABLISHED for historical generated answers: scoring procedure differs; successful frozen candidate-scoring protocol execution",
+  "worker_elapsed_sec": 70.52397759997984,
+  "minimum_sampled_host_mib": 4213.25390625,
+  "maximum_sampled_physical_gpu_mib": 1958,
+  "peak_torch_allocated_mib": 1584.735,
+  "peak_torch_reserved_mib": 1678.0,
+  "after_worker": {
+    "host_available_mib": 6280.40234375,
+    "nvidia_total_mib": 4096,
+    "nvidia_used_mib": 165
+  },
+  "parameter_tensors_exactly_unchanged": 625,
+  "optimizer_steps": 0,
+  "backward_passes": 0,
+  "causal_patching": false,
+  "holdout_accessed": false,
+  "source_snapshot_policy": "Six files archived after execution, each byte-checked against its pre-admission hash",
+  "limitations": [
+    "Three dependent cases in one family; not a population performance estimate",
+    "Entailed Yes versus Undetermined gap is approximately 9.54e-6 summed log-likelihood; no robustness established",
+    "Physical GPU and host figures are sampled, not continuous peaks",
+    "Full model-weight content hash not measured; identity uses existing local pinned snapshot and loader metadata",
+    "No gradient or LoRA verification in this inference-only protocol",
+    "Normal process exit was exercised; emergency termination through Windows launcher descendants was not exercised",
+    "Holdout protection for tests is per-process Python auditing, not OS-wide tracing"
+  ]
+}

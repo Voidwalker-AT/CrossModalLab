@@ -1,0 +1,8 @@
+{
+  "dual_oracle_agreement": true,
+  "development_labels": {
+    "xc_ho_0011::entailed": "Yes",
+    "xc_ho_0011::contradicted": "No",
+    "xc_ho_0011::underdetermined": "Undetermined"
+  }
+}

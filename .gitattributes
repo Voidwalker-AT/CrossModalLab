@@ -22,3 +22,6 @@
 
 # Keep new paper-support evidence and its source hashes byte-identical.
 /paper/overleaf_evidence_20261025/** -text
+
+# Preserve the bounded replication worker source identity recorded at admission.
+/scripts/run_qwen_ram_recovery.py -text

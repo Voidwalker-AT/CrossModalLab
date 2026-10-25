@@ -1,0 +1,200 @@
+{
+  "checks": [
+    {
+      "name": "doctor",
+      "command": [
+        "ulvo",
+        "project",
+        "doctor",
+        "."
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 0.3174791000201367
+    },
+    {
+      "name": "recovery_tests",
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_qwen_ram_recovery.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 2.6622256000118796
+    },
+    {
+      "name": "scorer_tests",
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_phase_2i_b_es.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 81.27225420001196
+    },
+    {
+      "name": "budget_audit_tests",
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_phase3_research_audit.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 1.0692763999977615
+    },
+    {
+      "name": "guarded_integrity_suite",
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "scripts/verify_phase3_integrity.py"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 43.436636099999305
+    },
+    {
+      "name": "portability",
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "scripts/check_portability.py"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 0.22999459999846295
+    },
+    {
+      "name": "compilation",
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 0.4474046000104863
+    },
+    {
+      "name": "ordinary_python_recovery_tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_qwen_ram_recovery.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 3.2217701000045054
+    },
+    {
+      "name": "read_only_evidence_validation",
+      "command": [
+        "python",
+        "scripts/verify_qwen_ram_recovery.py",
+        "artifacts/publication/20261025/qwen_replication_20261025_464531de"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 0.7072445999947377
+    },
+    {
+      "name": "diff_check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 0.06721930002095178
+    }
+  ],
+  "guarded_integrity": {
+    "status": "PASS",
+    "tests_run": 353,
+    "skipped": 3,
+    "failures": 0,
+    "errors": 0,
+    "restricted_open_attempts": [],
+    "scope": "per-process Python open audit; not OS-wide tracing or a custodian holdout audit"
+  },
+  "protected_files_checked": 1039,
+  "protected_files_changed": [],
+  "protected_baseline_local_sha256": "aae1fcb315fe020c182c4bc892094bba02f8e568d122c74cda5d704d70aca521",
+  "immutable_overleaf_zip_sha256": "dd83fcc4b48d0d532d088ea92999a39ed7fe1c62a4ae07c0a65aa09e54141459",
+  "raw_check_logs": "Local only under .cache/qwen_replication_20261025_464531de; not staged",
+  "raw_log_hashes": {
+    "budget_audit_tests.txt": "16a4c80c1c06fcf8d8762745f17dd87dc92f94d6fca7ddf5158b9cafdcdb324b",
+    "compilation.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "diff_check.txt": "27c51123b0695a2886e7887d49f40ec1e9681190c0f62ae5e15c1e08b2c4ed22",
+    "doctor.txt": "3646b60aa639c3a37c274078b2ed4fd0132cb3815dc201ccde96cee418c2096e",
+    "guarded_integrity_suite.txt": "fe09767ddfbd027c29b5187f261c5b68525c3d04c00d7629de2cf4ec34568021",
+    "ordinary_python_recovery_tests.txt": "fed04d3bc92825bec8693ded1fdde8db61437690f32ad4ce23ce0ae8e0ecf3a0",
+    "portability.txt": "366894176002ac32f337d816cea382f983e39f7770196bf80585052b825a1645",
+    "read_only_evidence_validation.txt": "f0642ea6bfac6f368d839f98cd1b913e8764e73e48ee16faa9e20443f69f67c9",
+    "recovery_tests.txt": "73a91cfe27f942a2660d4f3a357602bde4cc21b02a5549bc1b7d9b3d230bcab7",
+    "scorer_tests.txt": "e92b4165d26ba5920d21ffe74ee6d991fa6da51995bf735a61ca5e36e5c5e1b7",
+    "stderr.txt": "999689c20762c688473636d54ef8da0d66f3675d7b4e1fb0594f5d6aec1fe0e7",
+    "stdout.txt": "40fcd5c761834ad7c13f1a4bb54674cc9151caf4eaa86f1abd9375444b42e9b3"
+  },
+  "staged_whitespace_initial": {
+    "status": "FAILED",
+    "reason": "Preserved CRLF flagged as trailing whitespace; no source bytes modified"
+  },
+  "staged_whitespace_adapted": {
+    "name": "staged_byte_preserving_whitespace_check",
+    "command": [
+      "git",
+      "-c",
+      "core.whitespace=cr-at-eol",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit_code": 0,
+    "reason": "Preserve original CRLF bytes in executed-source snapshots and raw shutdown telemetry"
+  }
+}
