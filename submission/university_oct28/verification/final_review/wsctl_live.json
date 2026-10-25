@@ -1,0 +1,10 @@
+{
+  "port": 8765,
+  "command": "python  -B scripts/launch_dashboard.py",
+  "pid": 26264,
+  "health": {
+    "status": "ok",
+    "read_only": true,
+    "gpu_loaded": false
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "starting_revision": "b1ade6a42da6bdfe7aad85f6bb18e0337ce79984",
+  "starting_tracked_count": 801,
+  "largest_tracked_files": [
+    {
+      "path": "artifacts/publication/20261025/benchmark/records.jsonl",
+      "bytes": 11648512
+    },
+    {
+      "path": "datasets/cross_modal_dependency_v1/cross_modal_dependency_v1.jsonl",
+      "bytes": 3950588
+    },
+    {
+      "path": "datasets/cross_modal_contrast_v2/cross_modal_contrast_v2.jsonl",
+      "bytes": 1275387
+    },
+    {
+      "path": "configs/phase_1c/balanced_development_v1.jsonl",
+      "bytes": 1196964
+    },
+    {
+      "path": "artifacts/training/phase_2i_b_recovery/gpu_1b71a5485dff4fd1a0e8a95a442f789d.json",
+      "bytes": 996216
+    },
+    {
+      "path": "artifacts/training/phase_2i_b_continuation_20261023/resume_validation_74fc874e242448e1b58350a72be19091.json",
+      "bytes": 786578
+    },
+    {
+      "path": "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/parameter_audit_step_0001.json",
+      "bytes": 733181
+    },
+    {
+      "path": "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/parameter_audit_step_0003.json",
+      "bytes": 732671
+    },
+    {
+      "path": "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/parameter_audit_step_0004.json",
+      "bytes": 732602
+    },
+    {
+      "path": "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/parameter_audit_step_0002.json",
+      "bytes": 732596
+    },
+    {
+      "path": "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/parameter_audit_step_0005.json",
+      "bytes": 732535
+    },
+    {
+      "path": "artifacts/publication/20261025/pilot/smol/execution.json",
+      "bytes": 633936
+    },
+    {
+      "path": "datasets/relational_benchmark_v1_id.jsonl",
+      "bytes": 609152
+    },
+    {
+      "path": "datasets/relational_benchmark_v1_ho.jsonl",
+      "bytes": 600990
+    },
+    {
+      "path": "artifacts/phase3/20261024_v2/pilot/execution.json",
+      "bytes": 566775
+    }
+  ],
+  "existing_files_changed": [
+    "dashboard/frontend/src/main.tsx",
+    "dashboard/frontend/src/neural.tsx",
+    "dashboard/frontend/src/scientific.tsx",
+    "dashboard/frontend/src/style.css"
+  ],
+  "scientific_implementation_data_outputs_manuscript_figures_registries_unchanged": true,
+  "initial_untracked_files_preserved": 12,
+  "historical_file_hashes_checked": 173,
+  "neural_source_hashes_checked": 123,
+  "frozen_archive": {
+    "path": "submission/CrossModalLab_Research_Evidence_Oct28_HumanCentered_20261024_r3.zip",
+    "sha256": "24cfd58d51640ed1baa6fb3696dbd0d6f22f4cec13e18c973b1a07f0f2ae1283"
+  },
+  "local_links_checked": 184,
+  "legacy_format_warnings": [
+    "datasets/benchmarks/mohobench/README.md: unmatched fence in preserved acquired/checkpoint metadata README"
+  ],
+  "legacy_link_warnings": [
+    {
+      "file": "datasets/benchmarks/r_bench/README.md",
+      "target": "assets/r-bench.png"
+    }
+  ],
+  "paper_figure_paths_checked": 10,
+  "screenshots_sha256": {
+    "architecture-explorer.png": "57ff7c2d8e2248501214b520ab5ad5639bb3f61054b2196fa5fc6904b8d77e45",
+    "evidence-reasoning.png": "1070229e4040f859d0b92c93af75cf3a374ed696de77a1b948237bb85f7abc73",
+    "experiment-analytics.png": "b98e79f2e28738a4405466007facb8f021ec8f2055ede85d7258a2cfbd3cd992",
+    "failure-investigator-mobile.png": "3642f5495f4cc9fc07edaa2965e13065da48509c83aaa6ecbddad8adf0543262",
+    "failure-investigator.png": "a2e18b5017e3400f1b9009bfa96a10b8221f768dcb1042d45ce13336f206fa2d",
+    "reproducibility.png": "9e686cdc6802f8510696998882c65c79e0d8e0d0a90a9ab982fcd8cc04b6e322"
+  },
+  "dashboard_case_count": 18,
+  "dashboard_family_count": 6,
+  "full_generated_benchmark": {
+    "records": 9216,
+    "families": 6,
+    "images": 72
+  },
+  "restricted_open_attempts": [],
+  "model_runtime_modules_loaded": [],
+  "semantic_assertions": "Root/results metrics and three exact demo records agree with stored dashboard; malformed strings retained; separate failed screen/pilot validated; no scientific claim upgraded."
+}

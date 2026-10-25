@@ -1,0 +1,797 @@
+{
+  "phase": "before",
+  "views": [
+    {
+      "name": "Failure Investigator",
+      "width": 1920,
+      "height": 1080,
+      "path": "submission/university_oct28/verification/final_review/before/1920-failure-investigator.png",
+      "overflow": false,
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ],
+      "smallSvgText": []
+    },
+    {
+      "name": "Evidence & Reasoning",
+      "width": 1920,
+      "height": 1080,
+      "path": "submission/university_oct28/verification/final_review/before/1920-evidence-reasoning.png",
+      "overflow": false,
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ],
+      "smallSvgText": []
+    },
+    {
+      "name": "Architecture Explorer",
+      "width": 1920,
+      "height": 1080,
+      "path": "submission/university_oct28/verification/final_review/before/1920-architecture-explorer.png",
+      "overflow": false,
+      "images": [],
+      "smallSvgText": []
+    },
+    {
+      "name": "Experiment Analytics",
+      "width": 1920,
+      "height": 1080,
+      "path": "submission/university_oct28/verification/final_review/before/1920-experiment-analytics.png",
+      "overflow": false,
+      "images": [],
+      "smallSvgText": []
+    },
+    {
+      "name": "Reproducibility",
+      "width": 1920,
+      "height": 1080,
+      "path": "submission/university_oct28/verification/final_review/before/1920-reproducibility.png",
+      "overflow": false,
+      "images": [
+        {
+          "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAIAAAArpSLoAAAIOElEQVR4nO3dbW4bVRiA0RYhJDbTdg1sAYnFsAAWg8QWWAOwGVp+8cOS5brOlz32M/fec1RVVdJkJmPnyTvXzvj95y//vQMofJdsFUCAgJIJCMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgQICA9ZiAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMt93m2Zpnz5+eP4//PX3P4/aFzLvP3/5r9s6a3kxOk8Ro1kJEE13/vzlhZ98P/3+w7dvVKLJCNBXPn384C5+v/S8GJ1XxshtNA0BuvDd4v69bXqu7s7zJXIzTUCALv+sdufeW3pOydA0BOir75mf//31jx9/O/xbg245kndKz8UMuaXG5XlAX9Xn+PctD9ks65H1Od2KW2pcq09AZ/U5MgdddyQfk56Lo5A5aERLT0BP1cccNFB9jts1B41o3QA9U5+zt7tn77k+Bxo0qBVPwU6D8lR9vj0XM+Tvtj5HzsWGs1yAXhx8LrIktP/6HGjQWNY6BbuuPk7Hnj+YO7TnfWPRAF1dn7OPcuc+tavxZ4f7w/NWCdCN9Tn7WA3a4cnXkQXpgSwRoE3qc/YZVm7QKF/7KPu5svkXoTesz9Hia9Ibjj8Xr7mx4Wde8wYayOQBukd9Fm/QJr9vcbE739pkE6vdQGOZOUD3q8/KDbpx/HnNlX22vYrQUrfOcKZdA7p3fawH3TiVHP5c/G9n733luMSI5pyAHlCfNeegW8afq+eRZKM8xoQT0CPrYw56QAgOH2UOmtJsAXpwfc625XHfO40hGjSrqQKU1Odsixp0ZtvJxRw0mUkC9Onjh7A+Z9s93ZmZ3LIWc/sqzHWfwbOid26GV0bN03N02IHDsrRX+IH5J6D91OfI6didHoSyEjSfsQO0w/ocaBBMHqDd1udAg2DaAO28PgcaBBMGaIj6HGgQTBWggepzoEEwT4COD6mcvl7Fni31y2J3fRrOni/DyCoBGqtBK9cH5gzQKA2arD63PA3n9iHous/gt+F3btQA7b9Bk9XnatueMTn/mszAAdpzg9Rn25Ugqz+zGjtA+2yQ+mzbIPWZ2CRXRNzPY/PT1+f26xO+/uDceAF8C0D7N/wEtKs5aPr63OjYkcMVS54aiM7ea91nYpNMQHuYgxapj5flYUNTBShs0CL1OfDChGxltgAlDVqqPlsNQXflVQlHMckaULgetFp9BvpKR9nPlU0YoEc2aMH67P/ihB78GsicAXpMg5atz6m9NWhv+8Nya0APWBKSntNju6uVIOPPWKadgO43CqnP2bHdz9ChPsOZP0DbNkh9dtsg9RnREgHaqkHqs9sGqc+gVgnQ7Q1Sn902SH3GNf8i9CZr0urzpmP7sGVpTzgc3UIT0NVzkPq89dg+ZhRSnwksNwG9dQ5Sn6uP7f1GodPArfwkrAksGqBXNkh99pYh6ZnMugF6sUHqs+ERvrFEZ+d0pp5pLB2gZxqkPvc4yG+K0cWFJOmZzOoButgg9bn3oX4r3ZmVAJ03SH12EiPRWYEAXf5+cO+HB1jueUBPOS2O+sBjCNC7s+6oDzyMUzAgYwICMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAgQIGA9JiAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQMC7yv9BCPqGjFyvWgAAAABJRU5ErkJggg==",
+          "loaded": true
+        },
+        {
+          "source": "data:image/png;base64,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",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Aunderdetermined",
+          "loaded": false
+        }
+      ],
+      "smallSvgText": []
+    },
+    {
+      "name": "Failure Investigator",
+      "width": 1366,
+      "height": 768,
+      "path": "submission/university_oct28/verification/final_review/before/1366-failure-investigator.png",
+      "overflow": false,
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ],
+      "smallSvgText": [
+        {
+          "text": "visual premise →",
+          "pixels": 11.65
+        },
+        {
+          "text": "textual premise →",
+          "pixels": 11.65
+        },
+        {
+          "text": "golden disc",
+          "pixels": 11.65
+        },
+        {
+          "text": "teal wedge",
+          "pixels": 11.65
+        },
+        {
+          "text": "crimson block",
+          "pixels": 11.65
+        },
+        {
+          "text": "QUERY ONLY: golden disc left of crimson block?",
+          "pixels": 10.19375
+        }
+      ]
+    },
+    {
+      "name": "Evidence & Reasoning",
+      "width": 1366,
+      "height": 768,
+      "path": "submission/university_oct28/verification/final_review/before/1366-evidence-reasoning.png",
+      "overflow": false,
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ],
+      "smallSvgText": []
+    },
+    {
+      "name": "Architecture Explorer",
+      "width": 1366,
+      "height": 768,
+      "path": "submission/university_oct28/verification/final_review/before/1366-architecture-explorer.png",
+      "overflow": false,
+      "images": [],
+      "smallSvgText": []
+    },
+    {
+      "name": "Experiment Analytics",
+      "width": 1366,
+      "height": 768,
+      "path": "submission/university_oct28/verification/final_review/before/1366-experiment-analytics.png",
+      "overflow": false,
+      "images": [],
+      "smallSvgText": [
+        {
+          "text": "0",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "10",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "19",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "1",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "2",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "3",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "4",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "5",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "loss",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "Recorded optimizer step",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "0",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "1817",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "3634",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "1",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "2",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "3",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "4",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "5",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "MiB",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "Recorded optimizer step",
+          "pixels": 9.474709302325582
+        }
+      ]
+    },
+    {
+      "name": "Reproducibility",
+      "width": 1366,
+      "height": 768,
+      "path": "submission/university_oct28/verification/final_review/before/1366-reproducibility.png",
+      "overflow": false,
+      "images": [
+        {
+          "source": "data:image/png;base64,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",
+          "loaded": true
+        },
+        {
+          "source": "data:image/png;base64,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",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Aunderdetermined",
+          "loaded": false
+        }
+      ],
+      "smallSvgText": []
+    },
+    {
+      "name": "Failure Investigator",
+      "width": 390,
+      "height": 844,
+      "path": "submission/university_oct28/verification/final_review/before/390-failure-investigator.png",
+      "overflow": false,
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ],
+      "smallSvgText": [
+        {
+          "text": "visual premise →",
+          "pixels": 9
+        },
+        {
+          "text": "textual premise →",
+          "pixels": 9
+        },
+        {
+          "text": "A",
+          "pixels": 11
+        },
+        {
+          "text": "golden disc",
+          "pixels": 9
+        },
+        {
+          "text": "B",
+          "pixels": 11
+        },
+        {
+          "text": "teal wedge",
+          "pixels": 9
+        },
+        {
+          "text": "C",
+          "pixels": 11
+        },
+        {
+          "text": "crimson block",
+          "pixels": 9
+        },
+        {
+          "text": "QUERY ONLY: golden disc left of crimson block?",
+          "pixels": 7
+        }
+      ]
+    },
+    {
+      "name": "Evidence & Reasoning",
+      "width": 390,
+      "height": 844,
+      "path": "submission/university_oct28/verification/final_review/before/390-evidence-reasoning.png",
+      "overflow": false,
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ],
+      "smallSvgText": [
+        {
+          "text": "visual premise →",
+          "pixels": 9
+        },
+        {
+          "text": "textual premise →",
+          "pixels": 9
+        },
+        {
+          "text": "A",
+          "pixels": 11
+        },
+        {
+          "text": "golden disc",
+          "pixels": 9
+        },
+        {
+          "text": "B",
+          "pixels": 11
+        },
+        {
+          "text": "teal wedge",
+          "pixels": 9
+        },
+        {
+          "text": "C",
+          "pixels": 11
+        },
+        {
+          "text": "crimson block",
+          "pixels": 9
+        },
+        {
+          "text": "QUERY ONLY: golden disc left of crimson block?",
+          "pixels": 7
+        }
+      ]
+    },
+    {
+      "name": "Architecture Explorer",
+      "width": 390,
+      "height": 844,
+      "path": "submission/university_oct28/verification/final_review/before/390-architecture-explorer.png",
+      "overflow": false,
+      "images": [],
+      "smallSvgText": [
+        {
+          "text": "0",
+          "pixels": 6
+        },
+        {
+          "text": "367",
+          "pixels": 6
+        },
+        {
+          "text": "734",
+          "pixels": 6
+        },
+        {
+          "text": "1102",
+          "pixels": 6
+        },
+        {
+          "text": "1469",
+          "pixels": 6
+        },
+        {
+          "text": "3",
+          "pixels": 6
+        },
+        {
+          "text": "12",
+          "pixels": 6
+        },
+        {
+          "text": "18",
+          "pixels": 6
+        },
+        {
+          "text": "23",
+          "pixels": 6
+        },
+        {
+          "text": "Residual-row L2 norm (activation units)",
+          "pixels": 6
+        },
+        {
+          "text": "Recorded decoder layer index",
+          "pixels": 6
+        },
+        {
+          "text": "0.00",
+          "pixels": 6
+        },
+        {
+          "text": "0.25",
+          "pixels": 6
+        },
+        {
+          "text": "0.50",
+          "pixels": 6
+        },
+        {
+          "text": "0.75",
+          "pixels": 6
+        },
+        {
+          "text": "1.00",
+          "pixels": 6
+        },
+        {
+          "text": "3",
+          "pixels": 6
+        },
+        {
+          "text": "12",
+          "pixels": 6
+        },
+        {
+          "text": "18",
+          "pixels": 6
+        },
+        {
+          "text": "23",
+          "pixels": 6
+        },
+        {
+          "text": "Probe balanced accuracy (fraction)",
+          "pixels": 6
+        },
+        {
+          "text": "Recorded decoder layer index",
+          "pixels": 6
+        }
+      ]
+    },
+    {
+      "name": "Experiment Analytics",
+      "width": 390,
+      "height": 844,
+      "path": "submission/university_oct28/verification/final_review/before/390-experiment-analytics.png",
+      "overflow": false,
+      "images": [],
+      "smallSvgText": [
+        {
+          "text": "0",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "10",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "19",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "1",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "2",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "3",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "4",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "5",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "loss",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "Recorded optimizer step",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "0",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "1817",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "3634",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "1",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "2",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "3",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "4",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "5",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "MiB",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "Recorded optimizer step",
+          "pixels": 6.1747093023255815
+        }
+      ]
+    },
+    {
+      "name": "Reproducibility",
+      "width": 390,
+      "height": 844,
+      "path": "submission/university_oct28/verification/final_review/before/390-reproducibility.png",
+      "overflow": false,
+      "images": [
+        {
+          "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAIAAAArpSLoAAAIOElEQVR4nO3dbW4bVRiA0RYhJDbTdg1sAYnFsAAWg8QWWAOwGVp+8cOS5brOlz32M/fec1RVVdJkJmPnyTvXzvj95y//vQMofJdsFUCAgJIJCMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgQICA9ZiAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMt93m2Zpnz5+eP4//PX3P4/aFzLvP3/5r9s6a3kxOk8Ro1kJEE13/vzlhZ98P/3+w7dvVKLJCNBXPn384C5+v/S8GJ1XxshtNA0BuvDd4v69bXqu7s7zJXIzTUCALv+sdufeW3pOydA0BOir75mf//31jx9/O/xbg245kndKz8UMuaXG5XlAX9Xn+PctD9ks65H1Od2KW2pcq09AZ/U5MgdddyQfk56Lo5A5aERLT0BP1cccNFB9jts1B41o3QA9U5+zt7tn77k+Bxo0qBVPwU6D8lR9vj0XM+Tvtj5HzsWGs1yAXhx8LrIktP/6HGjQWNY6BbuuPk7Hnj+YO7TnfWPRAF1dn7OPcuc+tavxZ4f7w/NWCdCN9Tn7WA3a4cnXkQXpgSwRoE3qc/YZVm7QKF/7KPu5svkXoTesz9Hia9Ibjj8Xr7mx4Wde8wYayOQBukd9Fm/QJr9vcbE739pkE6vdQGOZOUD3q8/KDbpx/HnNlX22vYrQUrfOcKZdA7p3fawH3TiVHP5c/G9n733luMSI5pyAHlCfNeegW8afq+eRZKM8xoQT0CPrYw56QAgOH2UOmtJsAXpwfc625XHfO40hGjSrqQKU1Odsixp0ZtvJxRw0mUkC9Onjh7A+Z9s93ZmZ3LIWc/sqzHWfwbOid26GV0bN03N02IHDsrRX+IH5J6D91OfI6didHoSyEjSfsQO0w/ocaBBMHqDd1udAg2DaAO28PgcaBBMGaIj6HGgQTBWggepzoEEwT4COD6mcvl7Fni31y2J3fRrOni/DyCoBGqtBK9cH5gzQKA2arD63PA3n9iHous/gt+F3btQA7b9Bk9XnatueMTn/mszAAdpzg9Rn25Ugqz+zGjtA+2yQ+mzbIPWZ2CRXRNzPY/PT1+f26xO+/uDceAF8C0D7N/wEtKs5aPr63OjYkcMVS54aiM7ea91nYpNMQHuYgxapj5flYUNTBShs0CL1OfDChGxltgAlDVqqPlsNQXflVQlHMckaULgetFp9BvpKR9nPlU0YoEc2aMH67P/ihB78GsicAXpMg5atz6m9NWhv+8Nya0APWBKSntNju6uVIOPPWKadgO43CqnP2bHdz9ChPsOZP0DbNkh9dtsg9RnREgHaqkHqs9sGqc+gVgnQ7Q1Sn902SH3GNf8i9CZr0urzpmP7sGVpTzgc3UIT0NVzkPq89dg+ZhRSnwksNwG9dQ5Sn6uP7f1GodPArfwkrAksGqBXNkh99pYh6ZnMugF6sUHqs+ERvrFEZ+d0pp5pLB2gZxqkPvc4yG+K0cWFJOmZzOoButgg9bn3oX4r3ZmVAJ03SH12EiPRWYEAXf5+cO+HB1jueUBPOS2O+sBjCNC7s+6oDzyMUzAgYwICMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAgQIGA9JiAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQEBGgICMAAEZAQIyAgRkBAjICBCQESAgI0BARoCAjAABGQECMgIEZAQIyAgQkBEgICNAQEaAgIwAARkBAjICBGQECMgIEJARICAjQMC7yv9BCPqGjFyvWgAAAABJRU5ErkJggg==",
+          "loaded": true
+        },
+        {
+          "source": "data:image/png;base64,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",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Aunderdetermined",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Acontradicted",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Aentailed",
+          "loaded": false
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Aunderdetermined",
+          "loaded": false
+        }
+      ],
+      "smallSvgText": []
+    }
+  ],
+  "errors": [],
+  "tour": [
+    {
+      "step": 1,
+      "title": "Why missing evidence matters",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "step": 2,
+      "title": "Read the image and text together",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "step": 3,
+      "title": "Try both possible orders",
+      "checkpoint": "es5",
+      "view": "Evidence & Reasoning"
+    },
+    {
+      "step": 4,
+      "title": "Inspect the recorded failure",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "step": 5,
+      "title": "Compare the checkpoints",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "step": 6,
+      "title": "Explore separate historical measurements",
+      "checkpoint": "es5",
+      "view": "Architecture Explorer"
+    },
+    {
+      "step": 7,
+      "title": "Read the results with their limits",
+      "checkpoint": "es5",
+      "view": "Experiment Analytics"
+    }
+  ],
+  "zoom_missing": true
+}

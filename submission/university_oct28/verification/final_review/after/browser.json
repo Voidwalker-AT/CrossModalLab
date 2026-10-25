@@ -1,0 +1,1072 @@
+{
+  "phase": "after",
+  "views": [
+    {
+      "name": "Failure Investigator",
+      "width": 1920,
+      "height": 1080,
+      "path": "submission/university_oct28/verification/final_review/after/1920-failure-investigator.png",
+      "overflow": false,
+      "smallSvgText": [],
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "Evidence & Reasoning",
+      "width": 1920,
+      "height": 1080,
+      "path": "submission/university_oct28/verification/final_review/after/1920-evidence-reasoning.png",
+      "overflow": false,
+      "smallSvgText": [],
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "Architecture Explorer",
+      "width": 1920,
+      "height": 1080,
+      "path": "submission/university_oct28/verification/final_review/after/1920-architecture-explorer.png",
+      "overflow": false,
+      "smallSvgText": [],
+      "images": []
+    },
+    {
+      "name": "Experiment Analytics",
+      "width": 1920,
+      "height": 1080,
+      "path": "submission/university_oct28/verification/final_review/after/1920-experiment-analytics.png",
+      "overflow": false,
+      "smallSvgText": [],
+      "images": []
+    },
+    {
+      "name": "Reproducibility",
+      "width": 1920,
+      "height": 1080,
+      "path": "submission/university_oct28/verification/final_review/after/1920-reproducibility.png",
+      "overflow": false,
+      "smallSvgText": [],
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "Failure Investigator",
+      "width": 1366,
+      "height": 768,
+      "path": "submission/university_oct28/verification/final_review/after/1366-failure-investigator.png",
+      "overflow": false,
+      "smallSvgText": [
+        {
+          "text": "visual premise →",
+          "pixels": 11.65
+        },
+        {
+          "text": "textual premise →",
+          "pixels": 11.65
+        },
+        {
+          "text": "golden disc",
+          "pixels": 11.65
+        },
+        {
+          "text": "teal wedge",
+          "pixels": 11.65
+        },
+        {
+          "text": "crimson block",
+          "pixels": 11.65
+        },
+        {
+          "text": "QUERY ONLY: golden disc left of crimson block?",
+          "pixels": 10.19375
+        }
+      ],
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "Evidence & Reasoning",
+      "width": 1366,
+      "height": 768,
+      "path": "submission/university_oct28/verification/final_review/after/1366-evidence-reasoning.png",
+      "overflow": false,
+      "smallSvgText": [],
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "Architecture Explorer",
+      "width": 1366,
+      "height": 768,
+      "path": "submission/university_oct28/verification/final_review/after/1366-architecture-explorer.png",
+      "overflow": false,
+      "smallSvgText": [],
+      "images": []
+    },
+    {
+      "name": "Experiment Analytics",
+      "width": 1366,
+      "height": 768,
+      "path": "submission/university_oct28/verification/final_review/after/1366-experiment-analytics.png",
+      "overflow": false,
+      "smallSvgText": [
+        {
+          "text": "0",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "10",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "19",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "1",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "2",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "3",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "4",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "5",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "loss",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "Recorded optimizer step",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "0",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "1817",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "3634",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "1",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "2",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "3",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "4",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "5",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "MiB",
+          "pixels": 9.474709302325582
+        },
+        {
+          "text": "Recorded optimizer step",
+          "pixels": 9.474709302325582
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Reproducibility",
+      "width": 1366,
+      "height": 768,
+      "path": "submission/university_oct28/verification/final_review/after/1366-reproducibility.png",
+      "overflow": false,
+      "smallSvgText": [],
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "Failure Investigator",
+      "width": 390,
+      "height": 844,
+      "path": "submission/university_oct28/verification/final_review/after/390-failure-investigator.png",
+      "overflow": false,
+      "smallSvgText": [
+        {
+          "text": "visual premise →",
+          "pixels": 9
+        },
+        {
+          "text": "textual premise →",
+          "pixels": 9
+        },
+        {
+          "text": "A",
+          "pixels": 11
+        },
+        {
+          "text": "golden disc",
+          "pixels": 9
+        },
+        {
+          "text": "B",
+          "pixels": 11
+        },
+        {
+          "text": "teal wedge",
+          "pixels": 9
+        },
+        {
+          "text": "C",
+          "pixels": 11
+        },
+        {
+          "text": "crimson block",
+          "pixels": 9
+        },
+        {
+          "text": "QUERY ONLY: golden disc left of crimson block?",
+          "pixels": 7
+        }
+      ],
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "Evidence & Reasoning",
+      "width": 390,
+      "height": 844,
+      "path": "submission/university_oct28/verification/final_review/after/390-evidence-reasoning.png",
+      "overflow": false,
+      "smallSvgText": [
+        {
+          "text": "visual premise →",
+          "pixels": 9
+        },
+        {
+          "text": "textual premise →",
+          "pixels": 9
+        },
+        {
+          "text": "A",
+          "pixels": 11
+        },
+        {
+          "text": "golden disc",
+          "pixels": 9
+        },
+        {
+          "text": "B",
+          "pixels": 11
+        },
+        {
+          "text": "teal wedge",
+          "pixels": 9
+        },
+        {
+          "text": "C",
+          "pixels": 11
+        },
+        {
+          "text": "crimson block",
+          "pixels": 9
+        },
+        {
+          "text": "QUERY ONLY: golden disc left of crimson block?",
+          "pixels": 7
+        }
+      ],
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "Architecture Explorer",
+      "width": 390,
+      "height": 844,
+      "path": "submission/university_oct28/verification/final_review/after/390-architecture-explorer.png",
+      "overflow": false,
+      "smallSvgText": [
+        {
+          "text": "0",
+          "pixels": 6
+        },
+        {
+          "text": "367",
+          "pixels": 6
+        },
+        {
+          "text": "734",
+          "pixels": 6
+        },
+        {
+          "text": "1102",
+          "pixels": 6
+        },
+        {
+          "text": "1469",
+          "pixels": 6
+        },
+        {
+          "text": "3",
+          "pixels": 6
+        },
+        {
+          "text": "12",
+          "pixels": 6
+        },
+        {
+          "text": "18",
+          "pixels": 6
+        },
+        {
+          "text": "23",
+          "pixels": 6
+        },
+        {
+          "text": "Residual-row L2 norm (activation units)",
+          "pixels": 6
+        },
+        {
+          "text": "Recorded decoder layer index",
+          "pixels": 6
+        },
+        {
+          "text": "0.00",
+          "pixels": 6
+        },
+        {
+          "text": "0.25",
+          "pixels": 6
+        },
+        {
+          "text": "0.50",
+          "pixels": 6
+        },
+        {
+          "text": "0.75",
+          "pixels": 6
+        },
+        {
+          "text": "1.00",
+          "pixels": 6
+        },
+        {
+          "text": "3",
+          "pixels": 6
+        },
+        {
+          "text": "12",
+          "pixels": 6
+        },
+        {
+          "text": "18",
+          "pixels": 6
+        },
+        {
+          "text": "23",
+          "pixels": 6
+        },
+        {
+          "text": "Probe balanced accuracy (fraction)",
+          "pixels": 6
+        },
+        {
+          "text": "Recorded decoder layer index",
+          "pixels": 6
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Experiment Analytics",
+      "width": 390,
+      "height": 844,
+      "path": "submission/university_oct28/verification/final_review/after/390-experiment-analytics.png",
+      "overflow": false,
+      "smallSvgText": [
+        {
+          "text": "0",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "10",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "19",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "1",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "2",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "3",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "4",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "5",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "loss",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "Recorded optimizer step",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "0",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "1817",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "3634",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "1",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "2",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "3",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "4",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "5",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "MiB",
+          "pixels": 6.1747093023255815
+        },
+        {
+          "text": "Recorded optimizer step",
+          "pixels": 6.1747093023255815
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Reproducibility",
+      "width": 390,
+      "height": 844,
+      "path": "submission/university_oct28/verification/final_review/after/390-reproducibility.png",
+      "overflow": false,
+      "smallSvgText": [],
+      "images": [
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0011%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_ho_0045%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0008%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0014%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0019%3A%3Aunderdetermined",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Acontradicted",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Aentailed",
+          "loaded": true
+        },
+        {
+          "source": "/api/image/xc_id_0023%3A%3Aunderdetermined",
+          "loaded": true
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "tour": [
+    {
+      "width": 1920,
+      "step": 1,
+      "title": "Why missing evidence matters",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "width": 1920,
+      "step": 2,
+      "title": "Read the image and text together",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "width": 1920,
+      "step": 3,
+      "title": "Try both possible orders",
+      "checkpoint": "es5",
+      "view": "Evidence & Reasoning"
+    },
+    {
+      "width": 1920,
+      "step": 4,
+      "title": "Inspect the recorded failure",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "width": 1920,
+      "step": 5,
+      "title": "Compare the checkpoints",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "width": 1920,
+      "step": 6,
+      "title": "Explore separate historical measurements",
+      "checkpoint": "es5",
+      "view": "Architecture Explorer"
+    },
+    {
+      "width": 1920,
+      "step": 7,
+      "title": "Read the results with their limits",
+      "checkpoint": "es5",
+      "view": "Experiment Analytics"
+    },
+    {
+      "width": 1366,
+      "step": 1,
+      "title": "Why missing evidence matters",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "width": 1366,
+      "step": 2,
+      "title": "Read the image and text together",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "width": 1366,
+      "step": 3,
+      "title": "Try both possible orders",
+      "checkpoint": "es5",
+      "view": "Evidence & Reasoning"
+    },
+    {
+      "width": 1366,
+      "step": 4,
+      "title": "Inspect the recorded failure",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "width": 1366,
+      "step": 5,
+      "title": "Compare the checkpoints",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "width": 1366,
+      "step": 6,
+      "title": "Explore separate historical measurements",
+      "checkpoint": "es5",
+      "view": "Architecture Explorer"
+    },
+    {
+      "width": 1366,
+      "step": 7,
+      "title": "Read the results with their limits",
+      "checkpoint": "es5",
+      "view": "Experiment Analytics"
+    },
+    {
+      "width": 390,
+      "step": 1,
+      "title": "Why missing evidence matters",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "width": 390,
+      "step": 2,
+      "title": "Read the image and text together",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "width": 390,
+      "step": 3,
+      "title": "Try both possible orders",
+      "checkpoint": "es5",
+      "view": "Evidence & Reasoning"
+    },
+    {
+      "width": 390,
+      "step": 4,
+      "title": "Inspect the recorded failure",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "width": 390,
+      "step": 5,
+      "title": "Compare the checkpoints",
+      "checkpoint": "es5",
+      "view": "Failure Investigator"
+    },
+    {
+      "width": 390,
+      "step": 6,
+      "title": "Explore separate historical measurements",
+      "checkpoint": "es5",
+      "view": "Architecture Explorer"
+    },
+    {
+      "width": 390,
+      "step": 7,
+      "title": "Read the results with their limits",
+      "checkpoint": "es5",
+      "view": "Experiment Analytics"
+    }
+  ],
+  "zoom_missing": false,
+  "zooms": [
+    {
+      "width": 1920,
+      "view": "Failure Investigator",
+      "title": "Enlarge original Qwen input",
+      "minimum_label_pixels": null,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1920,
+      "view": "Failure Investigator",
+      "title": "Enlarge symbolic evidence graph",
+      "minimum_label_pixels": 25.2,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1920,
+      "view": "Evidence & Reasoning",
+      "title": "Enlarge original benchmark input",
+      "minimum_label_pixels": null,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1920,
+      "view": "Evidence & Reasoning",
+      "title": "Enlarge symbolic evidence graph",
+      "minimum_label_pixels": 25.2,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1920,
+      "view": "Architecture Explorer",
+      "title": "Enlarge historical SmolVLM2: Residual-row L2 norm (activation units)",
+      "minimum_label_pixels": 21.6,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1920,
+      "view": "Architecture Explorer",
+      "title": "Enlarge historical SmolVLM2: Probe balanced accuracy (fraction)",
+      "minimum_label_pixels": 21.6,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1920,
+      "view": "Experiment Analytics",
+      "title": "Enlarge Qwen CE+ES step-5 pilot: CE, ES and total loss",
+      "minimum_label_pixels": 22.231031976744184,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1920,
+      "view": "Experiment Analytics",
+      "title": "Enlarge Qwen CE+ES step-5 pilot: GPU allocator memory",
+      "minimum_label_pixels": 22.231031976744184,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1366,
+      "view": "Failure Investigator",
+      "title": "Enlarge original Qwen input",
+      "minimum_label_pixels": null,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1366,
+      "view": "Failure Investigator",
+      "title": "Enlarge symbolic evidence graph",
+      "minimum_label_pixels": 25.2,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1366,
+      "view": "Evidence & Reasoning",
+      "title": "Enlarge original benchmark input",
+      "minimum_label_pixels": null,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1366,
+      "view": "Evidence & Reasoning",
+      "title": "Enlarge symbolic evidence graph",
+      "minimum_label_pixels": 25.2,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1366,
+      "view": "Architecture Explorer",
+      "title": "Enlarge historical SmolVLM2: Residual-row L2 norm (activation units)",
+      "minimum_label_pixels": 21.6,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1366,
+      "view": "Architecture Explorer",
+      "title": "Enlarge historical SmolVLM2: Probe balanced accuracy (fraction)",
+      "minimum_label_pixels": 21.6,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1366,
+      "view": "Experiment Analytics",
+      "title": "Enlarge Qwen CE+ES step-5 pilot: CE, ES and total loss",
+      "minimum_label_pixels": 22.231031976744184,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 1366,
+      "view": "Experiment Analytics",
+      "title": "Enlarge Qwen CE+ES step-5 pilot: GPU allocator memory",
+      "minimum_label_pixels": 22.231031976744184,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 390,
+      "view": "Failure Investigator",
+      "title": "Enlarge original Qwen input",
+      "minimum_label_pixels": null,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 390,
+      "view": "Failure Investigator",
+      "title": "Enlarge symbolic evidence graph",
+      "minimum_label_pixels": 16.625,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 390,
+      "view": "Evidence & Reasoning",
+      "title": "Enlarge original benchmark input",
+      "minimum_label_pixels": null,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 390,
+      "view": "Evidence & Reasoning",
+      "title": "Enlarge symbolic evidence graph",
+      "minimum_label_pixels": 16.625,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 390,
+      "view": "Architecture Explorer",
+      "title": "Enlarge historical SmolVLM2: Residual-row L2 norm (activation units)",
+      "minimum_label_pixels": 14.25,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 390,
+      "view": "Architecture Explorer",
+      "title": "Enlarge historical SmolVLM2: Probe balanced accuracy (fraction)",
+      "minimum_label_pixels": 14.25,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 390,
+      "view": "Experiment Analytics",
+      "title": "Enlarge Qwen CE+ES step-5 pilot: CE, ES and total loss",
+      "minimum_label_pixels": 14.666133720930231,
+      "escape_focus_restore": true
+    },
+    {
+      "width": 390,
+      "view": "Experiment Analytics",
+      "title": "Enlarge Qwen CE+ES step-5 pilot: GPU allocator memory",
+      "minimum_label_pixels": 14.666133720930231,
+      "escape_focus_restore": true
+    }
+  ],
+  "external_requests": [],
+  "health": {
+    "status": "ok",
+    "read_only": true,
+    "gpu_loaded": false
+  },
+  "featured_case": "xc_ho_0011::underdetermined",
+  "expected_answer": "Undetermined",
+  "recorded_answer": "No",
+  "original_image_hash_checks": 18,
+  "read_only_api_checks": "PASS",
+  "loading_and_error_fixture": "PASS (injected HTTP 503; not experimental evidence)"
+}

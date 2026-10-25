@@ -1,0 +1,7 @@
+{
+  "interactive_cancel_exit_code": 1,
+  "owned_pid": 26264,
+  "note": "Ctrl+C then Y to WSCTL batch-shim prompt; server printed stopped cleanly. Browser error-fixture closure can log client disconnects while provenance is in flight.",
+  "port_8765_released": true,
+  "process_absent": true
+}

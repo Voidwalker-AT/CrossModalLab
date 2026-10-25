@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {Enlarge} from './enlarge';
 import type {Case,Condition} from './main';
 import {RawOutput, statusName} from './explanations';
 
@@ -9,7 +10,7 @@ export type NeuralEvidence={available:boolean;model:{id:string;revision:string;c
 function Trajectory({series,unit,maximum}:{series:{name:string;color:string;points:{layer:number;value:number;low?:number;high?:number}[]}[];unit:string;maximum?:number}){
  const ceiling=maximum??Math.max(1,...series.flatMap(s=>s.points.map(p=>p.value)))*1.12;
  const x=(layer:number)=>65+(layer-3)/20*505,y=(value:number)=>240-value/ceiling*185;
- return <svg viewBox="0 0 640 310" className="neural-plot" role="img" aria-label={`${unit} at recorded layers 3, 12, 18 and 23`}>
+ return <Enlarge title={`historical SmolVLM2: ${unit}`}><svg viewBox="0 0 640 310" className="neural-plot" role="img" aria-label={`${unit} at recorded layers 3, 12, 18 and 23`}>
   {[0,.25,.5,.75,1].map(t=><g key={t}><line x1="65" x2="580" y1={y(t*ceiling)} y2={y(t*ceiling)} stroke="#dce5d8"/><text x="54" y={y(t*ceiling)+4} textAnchor="end">{(t*ceiling).toFixed(ceiling>2?0:2)}</text></g>)}
   {[3,12,18,23].map(l=><text key={l} x={x(l)} y="264" textAnchor="middle">{l}</text>)}
   <text x="65" y="30">{unit}</text><text x="320" y="288" textAnchor="middle">Recorded decoder layer index</text>
@@ -17,7 +18,7 @@ function Trajectory({series,unit,maximum}:{series:{name:string;color:string;poin
    {p.low!==undefined&&p.high!==undefined&&<path d={`M${x(p.layer)},${y(p.low)}V${y(p.high)}M${x(p.layer)-5},${y(p.low)}h10M${x(p.layer)-5},${y(p.high)}h10`} stroke={s.color}/>}
    <circle tabIndex={0} cx={x(p.layer)} cy={y(p.value)} r="5" fill={s.color}><title>{s.name}: layer {p.layer}, {unit} {p.value}{p.low!==undefined?`; descriptive 95% family CI [${p.low}, ${p.high}]`:''}</title></circle>
   </g>)}</g>)}
- </svg>
+ </svg></Enlarge>
 }
 
 export function NeuralDiagnostics({data}:{data:NeuralEvidence}){

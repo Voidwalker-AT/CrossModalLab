@@ -1,0 +1,234 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        ".cache/final-review/integrity.py"
+      ],
+      "exit_code": 0,
+      "log": "scientific_integrity.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "project",
+        "doctor",
+        "."
+      ],
+      "exit_code": 0,
+      "log": "ulvo_doctor.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_dashboard*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "dashboard_tests.txt"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "dashboard/frontend",
+        "run",
+        "check"
+      ],
+      "exit_code": 0,
+      "log": "typescript.txt"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "dashboard/frontend",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "log": "frontend_build.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "scripts/verify_phase3_integrity.py"
+      ],
+      "exit_code": 0,
+      "log": "guarded_ulvo_tests.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "literal_ulvo_tests.txt"
+    },
+    {
+      "command": [
+        "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "scripts/verify_phase3_integrity.py"
+      ],
+      "exit_code": 0,
+      "log": "standard_tests.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "scripts/check_portability.py"
+      ],
+      "exit_code": 0,
+      "log": "portability.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests",
+        "dashboard"
+      ],
+      "exit_code": 0,
+      "log": "compile.txt"
+    }
+  ],
+  "environment": "Existing runtimes/locked dependencies; no installation or scientific model execution. Closed-data exclusion enabled; guarded runs log denied-open attempts.",
+  "partner_machine": "NOT VERIFIED",
+  "human_timed_rehearsal": "NOT VERIFIED",
+  "scope": "Final dashboard review; no scientific implementation, result, manuscript, dataset or dependency changes.",
+  "files_sha256": {
+    "browser_stdout.txt": "02e52746e69e5ec0b2ea0c4a8a5a569332b3046c0b39cb9f871bacc0f58563ed",
+    "compile.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dashboard_tests.txt": "e110815637f7f77944a660e28c726abde1034ff916551de1c1d61b0b0026ff25",
+    "frontend_build.txt": "a4da960970675f1ed288fae4403e817494be6226afa6700e3e1b493479a75a75",
+    "guarded_ulvo_tests.txt": "33e9eacaca925a47d31a8f5d96ecf4b5823b0d75c9bb450e9f1cd8e4c46b0f15",
+    "literal_ulvo_tests.txt": "a056abe2a00998f20c56bf7e7e46665b1415574ea6b4dd735aab59ef2b8b947b",
+    "portability.txt": "366894176002ac32f337d816cea382f983e39f7770196bf80585052b825a1645",
+    "PROJECTOR_CHECKLIST.md": "4ed358bb4ab588362344b69839ba5b9f4f05e96466c791e6c28a7d2a224655d0",
+    "README.md": "6f660400c9ea0e89b06ba1db9169c9feb8e2876e058391fcbbd2fa304b0fd4c5",
+    "scientific_integrity.json": "01122b5971dc0a96bb24efe0887f14a3c559d60212279eb42f371c2e5ecfccae",
+    "scientific_integrity.txt": "04bfe3909626cf40e826b920b964707852b6656ed7f23f533ca37840e6c57ab6",
+    "scientific_integrity_final.txt": "3db3c703dd3ed42d2df3c1b48496fdb4547f5bca8bfb3f47d0f2a6356c4b700c",
+    "shutdown.json": "f68cfb222d2d939adffdcccd8b8c753f2bff23a3cec2e6d2054fa41bfb85ffca",
+    "standard_tests.txt": "e92f8212a6daf44054c24eb6edbec54d0179b98d8c35e8fa235adc9745db277c",
+    "typescript.txt": "500a353a4dbb2477aa8d2eb8b04f61986b1a2150d0803cd44907e49522c3bdf4",
+    "ulvo_doctor.txt": "2fa03582051fbb094e249e3ebc1f5bd23d9a15c41aada6da523406124bcf02d7",
+    "wsctl_live.json": "863647cbecf3410c06ea707c38f706eb3dddfd056f24a01efc3eabe56b5795e8",
+    "after/1366-architecture-explorer-viewport.png": "80a0118db5a339245096e16e3184bb785cdfe16061a5d5683c695bd3f07e95cc",
+    "after/1366-architecture-explorer.png": "6f4039064561fa3aa59b413d4d158b3031d769d824c64be600dc9f3ba77b7a8b",
+    "after/1366-evidence-reasoning-viewport.png": "a70e0a95eba72df86db5d963eb9ac5c942565b63ed44518cf91c6e129c2193ce",
+    "after/1366-evidence-reasoning.png": "76655f7f2ff244113651287025d8bb8fce7e3c87384a25e43875b0fb4a8a9b10",
+    "after/1366-experiment-analytics-viewport.png": "2c24f92c2eefa4486b8dcd94c253b36908e75d700768906acb26a331b0249a1e",
+    "after/1366-experiment-analytics.png": "2d0adc9414e99cb022e00a441708a1b77215681b02ad1d559031f937285ea3f2",
+    "after/1366-failure-investigator-viewport.png": "d686242af9221b21294c46cb1682d8b685523e4f0d7c30b6df47220e2a51f905",
+    "after/1366-failure-investigator.png": "ae79ffb7d9902e4c4da192e8c950c921001ec4a95e3d33b6833774456a0765c7",
+    "after/1366-reproducibility-viewport.png": "0b6e737e3552fa5b3f7604219def4690cdf72f15958645ed3e3decf59b5127f2",
+    "after/1366-reproducibility.png": "3445f584e975df8814f5249c1deaeb16d91db2a05342713da2dc946b9beb8efb",
+    "after/1920-architecture-explorer-viewport.png": "927be3b18d92e75115967ff7f80240f2e91f0d0403324c7550a0ace5a606e101",
+    "after/1920-architecture-explorer.png": "a86c99af6c8d84d5cdc3e29be6c92dafa54ee45828b3f61d50ce9af8f527774b",
+    "after/1920-evidence-reasoning-viewport.png": "d7cc267cc3c7469f5d8d789a8f17472ff8238f3d91fe38d8f13841f64ebc474d",
+    "after/1920-evidence-reasoning.png": "da41d426c77d7ce727faeab5ffb85551a777fc8193cfe2e89790f3ff656fade1",
+    "after/1920-experiment-analytics-viewport.png": "fcbbeb1315ada63d57eec9f20255b3519ffc298833405c24efae3e19ca3d321e",
+    "after/1920-experiment-analytics.png": "36708a0364890619c38f152f9fda884b509538d8eb7b784081a1741c77bb714f",
+    "after/1920-failure-investigator-viewport.png": "c4ad72f1b7e10da221022cc232cbfaef2f81212ab050f130790aa22e46ad2e9c",
+    "after/1920-failure-investigator.png": "4991b08fa79b844ab867a45952489ba5f6a70ec91f4f0b915cdd0940d92d408a",
+    "after/1920-reproducibility-viewport.png": "feeeb014f1e62dbeab613dd1791f4cb6226f52234f2475d51a80116db9de0b28",
+    "after/1920-reproducibility.png": "a64c8dd2116d2d1551eed0dfeb9ba338c3ec10d2896616f3b4af7ac266078f0b",
+    "after/390-architecture-explorer-viewport.png": "ee195987ccd7db034eefd26e95077af48f518521044d4cdedd4a3496b0136370",
+    "after/390-architecture-explorer.png": "fb58797e9c76ba2448dfb41d0dd3e60609e9d4a1483ae238943e374ad46f2674",
+    "after/390-evidence-reasoning-viewport.png": "e585fd033cfa79a46b2ddbc8ded9ec2b5063f2b4174e2194315ce7913a02d111",
+    "after/390-evidence-reasoning.png": "7bdcf4050b581b4b34c73a8b8c42263ebc2507e701fa1262d66734491d3191ad",
+    "after/390-experiment-analytics-viewport.png": "8b3e76e954b0419f3cec41c69b2aa72e77e53777e023b3fd3b56a458e9c5fb2c",
+    "after/390-experiment-analytics.png": "0d9ec7946623c89be426e3cab26d6ee1d31eed677682ea695f4dbe43afa9c54f",
+    "after/390-failure-investigator-viewport.png": "ae829595fa0e8234ab9f668a3404378ae507495322ae14a5d81487951f7c1e28",
+    "after/390-failure-investigator.png": "f95d7a4cbe7bfc15aa298e8d4841da184df6fb32f2c6da6c4d5d4525ac2903d2",
+    "after/390-reproducibility-viewport.png": "48635db3ef75e8a928981e85b8d9f82e14ad5d353961bb77b08d3aed93d3af32",
+    "after/390-reproducibility.png": "7ccdd9230e008bd6af3ad535e560fd38f8a9a7dd7823cc50770816f7f235d95b",
+    "after/browser.json": "440146712f9fb3721c041ad12bd2bfbee1e445369e8bed9545cecce185557ab1",
+    "after/mobile-enlarged-graph.png": "7f939c2a46bbf15d9b19a2890ce1cf157084b7e2592f054b0b690eb66fc5c09d",
+    "after/server-error-fixture.png": "5de3215160d9ca4ec0d25c30f4df9b2d46b9c6ca386527dfe5d0976dd00df2ef",
+    "before/1366-architecture-explorer.png": "924c2503717712bb456f30275d152b5304547719da45860f24d781a9df2950b6",
+    "before/1366-evidence-reasoning.png": "97c3c5ef349bd82995adeac385ca18bb4033cc9d8e620782b71c2ae45150a025",
+    "before/1366-experiment-analytics.png": "d4efa52d8900c4dfad737db5bdef25797a7b4478302f2cc2bc87dadc3e594e6e",
+    "before/1366-failure-investigator.png": "906c41426fb1dda09e586bb9a979a650f78a7ad752a087bd15ce8510c2b6990d",
+    "before/1366-reproducibility.png": "73b04471bd93c757f9621bb96f72e9ff24e0712fc5ac67431424774ad8f65e86",
+    "before/1920-architecture-explorer.png": "a94d2316023d996df1ebb8bb7e69d6e84384a3b429bf2f22f755ecf6034a225a",
+    "before/1920-evidence-reasoning.png": "5e8df8dd777577c65a7fe129f3525edc39b0504d86ede90d28c20c380f816ca0",
+    "before/1920-experiment-analytics.png": "3f4ec3ba7607e5fddf8ac02d038ac0347d9155534b4044413db75a978e909d4b",
+    "before/1920-failure-investigator.png": "4b954cf49757957a6e0f3a711b0e3973fcc77b2c7d1e436a7676ca2b83f751ee",
+    "before/1920-reproducibility.png": "099739c29bd716865fd7b86b5c10e13b837518bbe7ab8bc08131aea20a9d9f9f",
+    "before/390-architecture-explorer.png": "859f2f48b880e15da69826835b350e06fda1efa5dde42a3ee329da47bdf99ba9",
+    "before/390-evidence-reasoning.png": "8eca28d20f57cb35a41ca758c5840d481ee7207ec380b99b18c438dd679cca55",
+    "before/390-experiment-analytics.png": "f9748f387749b68d1ad95b568b61d658c3d38c0aee43be0f45308e54fe2c7f40",
+    "before/390-failure-investigator.png": "e05f633414de70408c2f2c983fdeb1990fbaf9dd9bdb483a8cd8ca91a038b32d",
+    "before/390-reproducibility.png": "468d68ae9432c7515631585e9a20f8a1e2bcbf43168052af4dc585d60acb460a",
+    "before/browser.json": "3f04c748bfe04e7fbd993a9f9a078106faf4d17a594a22058a22681a1095f59d"
+  },
+  "browser_regression": {
+    "script": "dashboard/tests/final_review.cjs",
+    "exit_code": 0,
+    "viewports": [
+      [
+        1920,
+        1080
+      ],
+      [
+        1366,
+        768
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "evidence": "after/browser.json"
+  },
+  "protected_archives_current_sha256": {
+    "submission/CrossModalLab_Research_Evidence_Oct28_HumanCentered_20261024_r3.zip": "24cfd58d51640ed1baa6fb3696dbd0d6f22f4cec13e18c973b1a07f0f2ae1283",
+    "submission/CrossModalLab_Publication_Research_20261025_r2.zip": "2a424f243751c4f37f0b76df22847b14093dcca2d0557c40ccff6032a297d3d7"
+  },
+  "review_source_git_blob_sha256": {
+    "dashboard/frontend/src/enlarge.tsx": "17c88448ceb4fd71d479f3515f61701c9116ea12b3479db9217aea835b9569da",
+    "dashboard/frontend/src/main.tsx": "57a0f771fad6f1cee6c6ec1e6bcba0261cead396e3d128524d6b7e0686fd1af3",
+    "dashboard/frontend/src/neural.tsx": "aef1ea49574f2f6f0a389d28d9b69c2e00bc17d23f0139d6c499acd66a447c9d",
+    "dashboard/frontend/src/scientific.tsx": "314faec3ee1ac50ea34ab142fa835e3592633a7cab2a2527590e51dcb40aa587",
+    "dashboard/frontend/src/style.css": "fc8f13c008422e6e1baa51112970dc40a3a66a56cc3976c03a3fd4ad0e70ffa9",
+    "dashboard/tests/final_review.cjs": "f2c4dfec5e9f4c077f2b6afc2b597f1941c51ba9ffb0a357e39434adc39e18c4"
+  }
+}

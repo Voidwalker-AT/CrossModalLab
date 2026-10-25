@@ -1,0 +1,37 @@
+warning: in the working copy of 'dashboard/frontend/src/style.css', LF will be replaced by CRLF the next time Git touches it
+{
+  "status": "PASS",
+  "starting_revision": "b1ade6a42da6bdfe7aad85f6bb18e0337ce79984",
+  "starting_tracked_count": 766,
+  "existing_files_changed": [
+    "dashboard/frontend/src/main.tsx",
+    "dashboard/frontend/src/neural.tsx",
+    "dashboard/frontend/src/scientific.tsx",
+    "dashboard/frontend/src/style.css"
+  ],
+  "scientific_implementation_data_outputs_manuscript_figures_registries_unchanged": true,
+  "initial_untracked_files_preserved": 12,
+  "historical_file_hashes_checked": 173,
+  "neural_source_hashes_checked": 123,
+  "local_links_checked": 144,
+  "legacy_format_warnings": [
+    "datasets/benchmarks/mohobench/README.md: unmatched fence in preserved acquired/checkpoint metadata README"
+  ],
+  "legacy_link_warnings": [
+    {
+      "file": "datasets/benchmarks/r_bench/README.md",
+      "target": "assets/r-bench.png"
+    }
+  ],
+  "paper_figure_paths_checked": 10,
+  "dashboard_case_count": 18,
+  "dashboard_family_count": 6,
+  "full_generated_benchmark": {
+    "records": 9216,
+    "families": 6,
+    "images": 72
+  },
+  "restricted_open_attempts": [],
+  "model_runtime_modules_loaded": [],
+  "semantic_assertions": "Root/results metrics and three exact demo records agree with stored dashboard; malformed strings retained; separate failed screen/pilot validated; no scientific claim upgraded."
+}
