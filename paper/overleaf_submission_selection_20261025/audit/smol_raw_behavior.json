@@ -1,0 +1,2054 @@
+[
+  {
+    "sample_id": "p0d2_ctrl_forward_chain_0004_forward_chain",
+    "matched_group_id": "mg_ctrl_forward_chain_0004",
+    "condition": "forward_chain",
+    "modality": "cross_modal",
+    "ground_truth_label": "Yes",
+    "prompt": "The yellow cone is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is green cylinder to the left of magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0004.png",
+    "image_sha256": "93dedd4719d06f7999fbfcb7d8f8c3d00f94b1a9b9f96b0139a6683f546918e0",
+    "raw_completion": " No.",
+    "parsed_answer": "No",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T08:48:56Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -1.960567,
+        "length_normalized_log_likelihood": -1.960567,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -1.960567
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.332709,
+        "length_normalized_log_likelihood": -0.332709,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.332709
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.007114,
+        "length_normalized_log_likelihood": -1.003557,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.007047,
+          -6.7e-05
+        ]
+      }
+    },
+    "prompt_sha256": "25f1f177ac360a39f3a640138a62493efe4ce0a75f23540e4ad70fc516301d81"
+  },
+  {
+    "sample_id": "p0d2_revctl_ctrl_forward_chain_0004",
+    "matched_group_id": "mg_ctrl_forward_chain_0004",
+    "condition": "directional_reversal_control",
+    "modality": "cross_modal",
+    "ground_truth_label": "No",
+    "prompt": "The yellow cone is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is magenta prism to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0004.png",
+    "image_sha256": "93dedd4719d06f7999fbfcb7d8f8c3d00f94b1a9b9f96b0139a6683f546918e0",
+    "raw_completion": " No.",
+    "parsed_answer": "No",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T08:50:04Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -1.009877,
+        "length_normalized_log_likelihood": -1.009877,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -1.009877
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.559511,
+        "length_normalized_log_likelihood": -0.559511,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.559511
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.939736,
+        "length_normalized_log_likelihood": -1.469868,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.939681,
+          -5.5e-05
+        ]
+      }
+    },
+    "prompt_sha256": "3266a3b2cd0df48c562b68b55a07b40f041a221c00a4c4e363fdf16f3e34cd9d"
+  },
+  {
+    "sample_id": "p0d2_ctrl_forward_chain_0019_forward_chain",
+    "matched_group_id": "mg_ctrl_forward_chain_0019",
+    "condition": "forward_chain",
+    "modality": "cross_modal",
+    "ground_truth_label": "Yes",
+    "prompt": "The blue cube is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is magenta prism to the left of red sphere?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0019.png",
+    "image_sha256": "db0192fa375eb6b31cb536d90e6af4f826a0b93c93e2f9e3a9778b17e338daba",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T08:51:03Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.385414,
+        "length_normalized_log_likelihood": -0.385414,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.385414
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.363773,
+        "length_normalized_log_likelihood": -1.363773,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.363773
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.908155,
+        "length_normalized_log_likelihood": -1.454077,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.908082,
+          -7.3e-05
+        ]
+      }
+    },
+    "prompt_sha256": "1ed63cac25df6ef066397fcb95e310ae48408fdbe0e5089afe104db4f6d752bc"
+  },
+  {
+    "sample_id": "p0d2_revctl_ctrl_forward_chain_0019",
+    "matched_group_id": "mg_ctrl_forward_chain_0019",
+    "condition": "directional_reversal_control",
+    "modality": "cross_modal",
+    "ground_truth_label": "No",
+    "prompt": "The blue cube is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is red sphere to the left of magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0019.png",
+    "image_sha256": "db0192fa375eb6b31cb536d90e6af4f826a0b93c93e2f9e3a9778b17e338daba",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T08:52:03Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.339402,
+        "length_normalized_log_likelihood": -0.339402,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.339402
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.393606,
+        "length_normalized_log_likelihood": -1.393606,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.393606
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.379159,
+        "length_normalized_log_likelihood": -1.68958,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.379089,
+          -7e-05
+        ]
+      }
+    },
+    "prompt_sha256": "a37a2b54dbea50f321a5daf5e0ea7af56580e77fc5bdc30d87e1ecf5ee8a6dfa"
+  },
+  {
+    "sample_id": "p0d2_ctrl_forward_chain_0010_forward_chain",
+    "matched_group_id": "mg_ctrl_forward_chain_0010",
+    "condition": "forward_chain",
+    "modality": "cross_modal",
+    "ground_truth_label": "Yes",
+    "prompt": "The yellow cone is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is orange torus to the left of magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0010.png",
+    "image_sha256": "0a74bb076063fdcd3775ddce4e2833130aeb2a5a53c680bc0cf773b7a70e0497",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T08:53:03Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.245541,
+        "length_normalized_log_likelihood": -0.245541,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.245541
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.722603,
+        "length_normalized_log_likelihood": -1.722603,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.722603
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.432728,
+        "length_normalized_log_likelihood": -1.716364,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.432645,
+          -8.3e-05
+        ]
+      }
+    },
+    "prompt_sha256": "1b2d5629b818d4101ae6087ca3c33aae313106a1d9077d597e458a4838922614"
+  },
+  {
+    "sample_id": "p0d2_revctl_ctrl_forward_chain_0010",
+    "matched_group_id": "mg_ctrl_forward_chain_0010",
+    "condition": "directional_reversal_control",
+    "modality": "cross_modal",
+    "ground_truth_label": "No",
+    "prompt": "The yellow cone is to the left of the magenta prism.\n\nQuestion: Based on the image and statement, is magenta prism to the left of orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0010.png",
+    "image_sha256": "0a74bb076063fdcd3775ddce4e2833130aeb2a5a53c680bc0cf773b7a70e0497",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T08:54:03Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.539584,
+        "length_normalized_log_likelihood": -0.539584,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.539584
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.039714,
+        "length_normalized_log_likelihood": -1.039714,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.039714
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.877108,
+        "length_normalized_log_likelihood": -1.438554,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.877034,
+          -7.4e-05
+        ]
+      }
+    },
+    "prompt_sha256": "77723e4352951c34af9e1b68f20434e0ada8d3ecf20c8422f73d0e00c8a770c2"
+  },
+  {
+    "sample_id": "p0d2_ctrl_forward_chain_0003_forward_chain",
+    "matched_group_id": "mg_ctrl_forward_chain_0003",
+    "condition": "forward_chain",
+    "modality": "cross_modal",
+    "ground_truth_label": "Yes",
+    "prompt": "The yellow cone is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is orange torus to the left of red sphere?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0003.png",
+    "image_sha256": "6fbab5991c0b364de696080f0fd0ed912a1f4366f32728c5575105bd342f3e51",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T08:55:04Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.15303,
+        "length_normalized_log_likelihood": -0.15303,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.15303
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -2.132484,
+        "length_normalized_log_likelihood": -2.132484,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -2.132484
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.934729,
+        "length_normalized_log_likelihood": -1.967364,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.934647,
+          -8.2e-05
+        ]
+      }
+    },
+    "prompt_sha256": "d4f400088d16ea422fb45f6b907e7fd30bdab06e02d355c757f9f64fef70d538"
+  },
+  {
+    "sample_id": "p0d2_revctl_ctrl_forward_chain_0003",
+    "matched_group_id": "mg_ctrl_forward_chain_0003",
+    "condition": "directional_reversal_control",
+    "modality": "cross_modal",
+    "ground_truth_label": "No",
+    "prompt": "The yellow cone is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is red sphere to the left of orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0003.png",
+    "image_sha256": "6fbab5991c0b364de696080f0fd0ed912a1f4366f32728c5575105bd342f3e51",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T08:56:04Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.345536,
+        "length_normalized_log_likelihood": -0.345536,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.345536
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.368701,
+        "length_normalized_log_likelihood": -1.368701,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.368701
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.518859,
+        "length_normalized_log_likelihood": -1.759429,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.518796,
+          -6.3e-05
+        ]
+      }
+    },
+    "prompt_sha256": "48b8265be6c91d37678702d6893d6ae66cfce5c2dad4e6871ece6c2b8ffc921c"
+  },
+  {
+    "sample_id": "p0d2_ctrl_forward_chain_0021_forward_chain",
+    "matched_group_id": "mg_ctrl_forward_chain_0021",
+    "condition": "forward_chain",
+    "modality": "cross_modal",
+    "ground_truth_label": "Yes",
+    "prompt": "The cyan box is to the left of the orange torus.\n\nQuestion: Based on the image and statement, is yellow cone to the left of orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0021.png",
+    "image_sha256": "d5292ad477ca9e1536172de6b9d7571b677fb3c04e7e727ec300b61f60c0d0a6",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T08:57:04Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.679402,
+        "length_normalized_log_likelihood": -0.679402,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.679402
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.92998,
+        "length_normalized_log_likelihood": -0.92998,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.92998
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.436259,
+        "length_normalized_log_likelihood": -1.21813,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.436195,
+          -6.4e-05
+        ]
+      }
+    },
+    "prompt_sha256": "ef89e37d09a718e6f6f6fd4e87d78caab4c5e82831474528f33e1c6a059bfedb"
+  },
+  {
+    "sample_id": "p0d2_revctl_ctrl_forward_chain_0021",
+    "matched_group_id": "mg_ctrl_forward_chain_0021",
+    "condition": "directional_reversal_control",
+    "modality": "cross_modal",
+    "ground_truth_label": "No",
+    "prompt": "The cyan box is to the left of the orange torus.\n\nQuestion: Based on the image and statement, is orange torus to the left of yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0021.png",
+    "image_sha256": "d5292ad477ca9e1536172de6b9d7571b677fb3c04e7e727ec300b61f60c0d0a6",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T08:58:04Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.557044,
+        "length_normalized_log_likelihood": -0.557044,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.557044
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.957903,
+        "length_normalized_log_likelihood": -0.957903,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.957903
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.372602,
+        "length_normalized_log_likelihood": -1.686301,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.372539,
+          -6.3e-05
+        ]
+      }
+    },
+    "prompt_sha256": "69149ccce56e6c570999aac5e50a45cdf0d8857c4cce9132473e3c93e9526be2"
+  },
+  {
+    "sample_id": "p0d2_ctrl_forward_chain_0009_forward_chain",
+    "matched_group_id": "mg_ctrl_forward_chain_0009",
+    "condition": "forward_chain",
+    "modality": "cross_modal",
+    "ground_truth_label": "Yes",
+    "prompt": "The purple pyramid is to the left of the cyan box.\n\nQuestion: Based on the image and statement, is green cylinder to the left of cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0009.png",
+    "image_sha256": "d4b59d25af11e3bb0677145b8f92652ffa42c1836ebe58d8c4dc22bb6f4f4f8a",
+    "raw_completion": " No.",
+    "parsed_answer": "No",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T08:59:04Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -1.806031,
+        "length_normalized_log_likelihood": -1.806031,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -1.806031
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.340809,
+        "length_normalized_log_likelihood": -0.340809,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.340809
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.217728,
+        "length_normalized_log_likelihood": -1.108864,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.217663,
+          -6.5e-05
+        ]
+      }
+    },
+    "prompt_sha256": "ecddd58097824870b840aafb853421d548e237a13b2e4b6f0bfc6da83e8f59c8"
+  },
+  {
+    "sample_id": "p0d2_revctl_ctrl_forward_chain_0009",
+    "matched_group_id": "mg_ctrl_forward_chain_0009",
+    "condition": "directional_reversal_control",
+    "modality": "cross_modal",
+    "ground_truth_label": "No",
+    "prompt": "The purple pyramid is to the left of the cyan box.\n\nQuestion: Based on the image and statement, is cyan box to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_forward_chain_0009.png",
+    "image_sha256": "d4b59d25af11e3bb0677145b8f92652ffa42c1836ebe58d8c4dc22bb6f4f4f8a",
+    "raw_completion": " No.",
+    "parsed_answer": "No",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T09:00:04Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -1.124135,
+        "length_normalized_log_likelihood": -1.124135,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -1.124135
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.555839,
+        "length_normalized_log_likelihood": -0.555839,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.555839
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.47412,
+        "length_normalized_log_likelihood": -1.23706,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.474068,
+          -5.2e-05
+        ]
+      }
+    },
+    "prompt_sha256": "157aaec75578e62a5974da36feb98285c6f08ba42d5229a8b2ce26ccce8dedc6"
+  },
+  {
+    "sample_id": "p0d2_ctrl_reverse_chain_0069_reverse_chain",
+    "matched_group_id": "mg_ctrl_reverse_chain_0069",
+    "condition": "reverse_chain",
+    "modality": "cross_modal",
+    "ground_truth_label": "No",
+    "prompt": "The cyan box is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is blue cube to the left of cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_reverse_chain_0069.png",
+    "image_sha256": "73aa3c06f7313121166ea5989c71669486d63af26b03f3db1d8234a63c13c567",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T09:01:04Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.464767,
+        "length_normalized_log_likelihood": -0.464767,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.464767
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.164862,
+        "length_normalized_log_likelihood": -1.164862,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.164862
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.019735,
+        "length_normalized_log_likelihood": -1.509867,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.019653,
+          -8.2e-05
+        ]
+      }
+    },
+    "prompt_sha256": "73a8789a519ba0d916c456eba40f18004b71649dd939c319edaa23e247afda75"
+  },
+  {
+    "sample_id": "p0d2_ctrl_reverse_chain_0052_reverse_chain",
+    "matched_group_id": "mg_ctrl_reverse_chain_0052",
+    "condition": "reverse_chain",
+    "modality": "cross_modal",
+    "ground_truth_label": "No",
+    "prompt": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is purple pyramid to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_reverse_chain_0052.png",
+    "image_sha256": "f5240f0a546eefd17c8572a9fd73f4ea3aa371b705f55d68d32510e4a2932be9",
+    "raw_completion": " No.",
+    "parsed_answer": "No",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T09:02:04Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -1.032074,
+        "length_normalized_log_likelihood": -1.032074,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -1.032074
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.607277,
+        "length_normalized_log_likelihood": -0.607277,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.607277
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.468146,
+        "length_normalized_log_likelihood": -1.234073,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.468089,
+          -5.7e-05
+        ]
+      }
+    },
+    "prompt_sha256": "654db9f94e6cc3a04fb8bd0746ad321a26ff85f8d0424617062b096277a2e27d"
+  },
+  {
+    "sample_id": "p0d2_ctrl_reverse_chain_0045_reverse_chain",
+    "matched_group_id": "mg_ctrl_reverse_chain_0045",
+    "condition": "reverse_chain",
+    "modality": "cross_modal",
+    "ground_truth_label": "No",
+    "prompt": "The green cylinder is to the left of the orange torus.\n\nQuestion: Based on the image and statement, is cyan box to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_reverse_chain_0045.png",
+    "image_sha256": "908e64c3eba86e2c135d5fbcafe6df533773ef21962f92abfbce441b2bd1f842",
+    "raw_completion": " No.",
+    "parsed_answer": "No",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T09:03:04Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -1.385473,
+        "length_normalized_log_likelihood": -1.385473,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -1.385473
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.460693,
+        "length_normalized_log_likelihood": -0.460693,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.460693
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.318915,
+        "length_normalized_log_likelihood": -1.159458,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.318869,
+          -4.6e-05
+        ]
+      }
+    },
+    "prompt_sha256": "0b92f49044e692f0f0e14de8ffefbbf44057c7c3f501034f2d58970ecde7f062"
+  },
+  {
+    "sample_id": "p0d2_ctrl_reverse_chain_0060_reverse_chain",
+    "matched_group_id": "mg_ctrl_reverse_chain_0060",
+    "condition": "reverse_chain",
+    "modality": "cross_modal",
+    "ground_truth_label": "No",
+    "prompt": "The green cylinder is to the left of the red sphere.\n\nQuestion: Based on the image and statement, is blue cube to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_reverse_chain_0060.png",
+    "image_sha256": "9519d6abd20cf39341913a6f989f852d39d3236ab9d3520f3bb3f08cd6659080",
+    "raw_completion": " No.",
+    "parsed_answer": "No",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T09:04:03Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.982009,
+        "length_normalized_log_likelihood": -0.982009,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.982009
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.555928,
+        "length_normalized_log_likelihood": -0.555928,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.555928
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.17706,
+        "length_normalized_log_likelihood": -1.58853,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.176995,
+          -6.5e-05
+        ]
+      }
+    },
+    "prompt_sha256": "58bbda4821e44716ea31a4bb730f931a2ad701d71e2335b0c3ba40956f8453f7"
+  },
+  {
+    "sample_id": "p0d2_ctrl_reverse_chain_0065_reverse_chain",
+    "matched_group_id": "mg_ctrl_reverse_chain_0065",
+    "condition": "reverse_chain",
+    "modality": "cross_modal",
+    "ground_truth_label": "No",
+    "prompt": "The green cylinder is to the left of the yellow cone.\n\nQuestion: Based on the image and statement, is orange torus to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_reverse_chain_0065.png",
+    "image_sha256": "ff09202a86362371ae9d31f317e2a1940dd43b5c9d99765f8e9e46c9d92feac6",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T084827Z",
+    "timestamp_utc": "2026-10-21T09:05:03Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.75375,
+        "length_normalized_log_likelihood": -0.75375,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.75375
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.857925,
+        "length_normalized_log_likelihood": -0.857925,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.857925
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.409966,
+        "length_normalized_log_likelihood": -1.204983,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.409915,
+          -5.1e-05
+        ]
+      }
+    },
+    "prompt_sha256": "fce2273ee29c6b0a59e392b91d6af01d0fe89383d0021939ced158c9720c5509"
+  },
+  {
+    "sample_id": "p0d2_ctrl_reverse_chain_0046_reverse_chain",
+    "matched_group_id": "mg_ctrl_reverse_chain_0046",
+    "condition": "reverse_chain",
+    "modality": "cross_modal",
+    "ground_truth_label": "No",
+    "prompt": "The cyan box is to the left of the orange torus.\n\nQuestion: Based on the image and statement, is magenta prism to the left of cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_reverse_chain_0046.png",
+    "image_sha256": "033e2897e3b04c74f5581ec4dffeec06cfdc00347376935611b974fd04ad0177",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T091946Z",
+    "timestamp_utc": "2026-10-21T09:21:00Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.770631,
+        "length_normalized_log_likelihood": -0.770631,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.770631
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.82222,
+        "length_normalized_log_likelihood": -0.82222,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.82222
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.408138,
+        "length_normalized_log_likelihood": -1.204069,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.408088,
+          -5e-05
+        ]
+      }
+    },
+    "prompt_sha256": "c961e02673e9ef5eeb546100dfdd6a78395a2ed39d5dba191386a706d0b01ff0"
+  },
+  {
+    "sample_id": "p0d2_ctrl_underdetermined_fork_0083_underdetermined_fork",
+    "matched_group_id": "mg_ctrl_underdetermined_fork_0083",
+    "condition": "underdetermined_fork",
+    "modality": "cross_modal",
+    "ground_truth_label": "Undetermined",
+    "prompt": "The purple pyramid is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is cyan box to the left of purple pyramid?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_underdetermined_fork_0083.png",
+    "image_sha256": "1455006f8ed6d5cef0c6faa9efe08148cf7a164d6b4e3b8e0291629529c6350c",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T091946Z",
+    "timestamp_utc": "2026-10-21T09:22:10Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.380812,
+        "length_normalized_log_likelihood": -0.380812,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.380812
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.254423,
+        "length_normalized_log_likelihood": -1.254423,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.254423
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.757231,
+        "length_normalized_log_likelihood": -1.878615,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.757141,
+          -9e-05
+        ]
+      }
+    },
+    "prompt_sha256": "179aa9537fee4a9c101f6627ed58e01589be700df6bf09ec16c4e3d76c6dbcff"
+  },
+  {
+    "sample_id": "p0d2_ctrl_underdetermined_fork_0093_underdetermined_fork",
+    "matched_group_id": "mg_ctrl_underdetermined_fork_0093",
+    "condition": "underdetermined_fork",
+    "modality": "cross_modal",
+    "ground_truth_label": "Undetermined",
+    "prompt": "The green cylinder is to the left of the cyan box.\n\nQuestion: Based on the image and statement, is red sphere to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_underdetermined_fork_0093.png",
+    "image_sha256": "e4d008736c821f8eee27707c04187f41fa5d2d58575ff579287e7866dff40f99",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T091946Z",
+    "timestamp_utc": "2026-10-21T09:23:11Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.273086,
+        "length_normalized_log_likelihood": -0.273086,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.273086
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.545474,
+        "length_normalized_log_likelihood": -1.545474,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.545474
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.89781,
+        "length_normalized_log_likelihood": -1.948905,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.897718,
+          -9.2e-05
+        ]
+      }
+    },
+    "prompt_sha256": "74ba9e908595b119107416810a0ef4bf773454b18e69b4eaa2873b939ee1feb8"
+  },
+  {
+    "sample_id": "p0d2_ctrl_underdetermined_fork_0073_underdetermined_fork",
+    "matched_group_id": "mg_ctrl_underdetermined_fork_0073",
+    "condition": "underdetermined_fork",
+    "modality": "cross_modal",
+    "ground_truth_label": "Undetermined",
+    "prompt": "The cyan box is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is orange torus to the left of cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_underdetermined_fork_0073.png",
+    "image_sha256": "f18709fd3d9d5fdbe730a4e73730206ec255d80732989556b3e207f0b1cdbc1c",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T091946Z",
+    "timestamp_utc": "2026-10-21T09:24:10Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.346799,
+        "length_normalized_log_likelihood": -0.346799,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.346799
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.354347,
+        "length_normalized_log_likelihood": -1.354347,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.354347
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.627942,
+        "length_normalized_log_likelihood": -1.813971,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.627846,
+          -9.6e-05
+        ]
+      }
+    },
+    "prompt_sha256": "934cdc92f529a7a658e45c46ba19da3852665fbcda1be2159cb5b9cdb2fb4363"
+  },
+  {
+    "sample_id": "p0d2_ctrl_underdetermined_fork_0096_underdetermined_fork",
+    "matched_group_id": "mg_ctrl_underdetermined_fork_0096",
+    "condition": "underdetermined_fork",
+    "modality": "cross_modal",
+    "ground_truth_label": "Undetermined",
+    "prompt": "The blue cube is to the left of the green cylinder.\n\nQuestion: Based on the image and statement, is cyan box to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_underdetermined_fork_0096.png",
+    "image_sha256": "bac57e808469119e12d00d50d3a82cd662eab98455063c0f2c72b6bc0dca6971",
+    "raw_completion": " No.",
+    "parsed_answer": "No",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T091946Z",
+    "timestamp_utc": "2026-10-21T09:25:09Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -1.064533,
+        "length_normalized_log_likelihood": -1.064533,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -1.064533
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.596943,
+        "length_normalized_log_likelihood": -0.596943,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.596943
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.292734,
+        "length_normalized_log_likelihood": -1.146367,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.29268,
+          -5.4e-05
+        ]
+      }
+    },
+    "prompt_sha256": "c6b25a8733324e9f733469982a740c9290b622e0bb31fc7b66b8d0fa265427a1"
+  },
+  {
+    "sample_id": "p0d2_ctrl_underdetermined_fork_0081_underdetermined_fork",
+    "matched_group_id": "mg_ctrl_underdetermined_fork_0081",
+    "condition": "underdetermined_fork",
+    "modality": "cross_modal",
+    "ground_truth_label": "Undetermined",
+    "prompt": "The green cylinder is to the left of the purple pyramid.\n\nQuestion: Based on the image and statement, is orange torus to the left of green cylinder?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_underdetermined_fork_0081.png",
+    "image_sha256": "831c6f7f0cd26cbf42cee5aa4d02abe66751a6cf395484953560bb424b336ed2",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T091946Z",
+    "timestamp_utc": "2026-10-21T09:26:08Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.396486,
+        "length_normalized_log_likelihood": -0.396486,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.396486
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.291925,
+        "length_normalized_log_likelihood": -1.291925,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.291925
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.115021,
+        "length_normalized_log_likelihood": -1.557511,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.11495,
+          -7.1e-05
+        ]
+      }
+    },
+    "prompt_sha256": "3ef734c6e81f813f4e44155bf7fdb8200c590d295bd936e14b7f9825dc3a70d2"
+  },
+  {
+    "sample_id": "p0d2_ctrl_underdetermined_fork_0087_underdetermined_fork",
+    "matched_group_id": "mg_ctrl_underdetermined_fork_0087",
+    "condition": "underdetermined_fork",
+    "modality": "cross_modal",
+    "ground_truth_label": "Undetermined",
+    "prompt": "The yellow cone is to the left of the purple pyramid.\n\nQuestion: Based on the image and statement, is blue cube to the left of yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_underdetermined_fork_0087.png",
+    "image_sha256": "ad1a328c17ac1177b299904799d38593042255379a7d8685fff0c98ec13497c6",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T091946Z",
+    "timestamp_utc": "2026-10-21T09:27:07Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.266565,
+        "length_normalized_log_likelihood": -0.266565,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.266565
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.58514,
+        "length_normalized_log_likelihood": -1.58514,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.58514
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.679571,
+        "length_normalized_log_likelihood": -1.839786,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.679469,
+          -0.000102
+        ]
+      }
+    },
+    "prompt_sha256": "18bcaa6359a438b8f606a7aa0d2186968a458f9aef4b85f49ad758b9e23da878"
+  },
+  {
+    "sample_id": "p0d2_ctrl_unimodal_visual_0122_visual_premise_control",
+    "matched_group_id": "mg_ctrl_unimodal_visual_0122",
+    "condition": "visual_premise_control",
+    "modality": "visual",
+    "ground_truth_label": "No",
+    "prompt": "No additional statement is provided.\n\nQuestion: Based on the image and statement, is purple pyramid to the left of orange torus?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_unimodal_visual_0122.png",
+    "image_sha256": "d23f0d1572db0a2ee26225605f8720b1ef6ed5c940cd9b87f79ea333aabed2e0",
+    "raw_completion": " No.",
+    "parsed_answer": "No",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T091946Z",
+    "timestamp_utc": "2026-10-21T09:28:06Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -1.235237,
+        "length_normalized_log_likelihood": -1.235237,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -1.235237
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.663399,
+        "length_normalized_log_likelihood": -0.663399,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.663399
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -1.735594,
+        "length_normalized_log_likelihood": -0.867797,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -1.735526,
+          -6.8e-05
+        ]
+      }
+    },
+    "prompt_sha256": "9486eb3d0b288283f7053605b758b89a4f77766f29d745f0c93d026168aecada"
+  },
+  {
+    "sample_id": "p0d2_ctrl_unimodal_visual_0117_visual_premise_control",
+    "matched_group_id": "mg_ctrl_unimodal_visual_0117",
+    "condition": "visual_premise_control",
+    "modality": "visual",
+    "ground_truth_label": "Yes",
+    "prompt": "No additional statement is provided.\n\nQuestion: Based on the image and statement, is yellow cone to the left of blue cube?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_unimodal_visual_0117.png",
+    "image_sha256": "6cbf70884fd23c246a41d6ac63818886d902c5c334a29b6523fdbca86aa5751e",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T091946Z",
+    "timestamp_utc": "2026-10-21T09:29:05Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.338169,
+        "length_normalized_log_likelihood": -0.338169,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.338169
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.544802,
+        "length_normalized_log_likelihood": -1.544802,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.544802
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.737539,
+        "length_normalized_log_likelihood": -1.368769,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.737418,
+          -0.000121
+        ]
+      }
+    },
+    "prompt_sha256": "a358d6d48f22d19df4b04e62c4fc9b0c410ef45d1cbccd6494da3b4ddbfe3a4f"
+  },
+  {
+    "sample_id": "p0d2_ctrl_unimodal_visual_0141_visual_premise_control",
+    "matched_group_id": "mg_ctrl_unimodal_visual_0141",
+    "condition": "visual_premise_control",
+    "modality": "visual",
+    "ground_truth_label": "Yes",
+    "prompt": "No additional statement is provided.\n\nQuestion: Based on the image and statement, is red sphere to the left of yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_unimodal_visual_0141.png",
+    "image_sha256": "d2a712306a7ace8fd9d631a2969ef9745d96ce067d366d6d1e2054f51f4c6f76",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T091946Z",
+    "timestamp_utc": "2026-10-21T09:30:05Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.21007,
+        "length_normalized_log_likelihood": -0.21007,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.21007
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.962542,
+        "length_normalized_log_likelihood": -1.962542,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.962542
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -3.249949,
+        "length_normalized_log_likelihood": -1.624974,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -3.249831,
+          -0.000118
+        ]
+      }
+    },
+    "prompt_sha256": "486c8180002237b1a743b790605f80441645e5a8a82d1509d9c9687c8cee8add"
+  },
+  {
+    "sample_id": "p0d2_ctrl_unimodal_visual_0130_visual_premise_control",
+    "matched_group_id": "mg_ctrl_unimodal_visual_0130",
+    "condition": "visual_premise_control",
+    "modality": "visual",
+    "ground_truth_label": "No",
+    "prompt": "No additional statement is provided.\n\nQuestion: Based on the image and statement, is red sphere to the left of purple pyramid?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_unimodal_visual_0130.png",
+    "image_sha256": "da4fd28d56a703839abd3427661fc472bdc109ee451214b48d5a0ff1ecab35e8",
+    "raw_completion": " No.",
+    "parsed_answer": "No",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T093146Z",
+    "timestamp_utc": "2026-10-21T09:32:14Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.855671,
+        "length_normalized_log_likelihood": -0.855671,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.855671
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.747275,
+        "length_normalized_log_likelihood": -0.747275,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.747275
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.443713,
+        "length_normalized_log_likelihood": -1.221856,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.443624,
+          -8.9e-05
+        ]
+      }
+    },
+    "prompt_sha256": "0edaeff2a063fc9b29062f810fb529a0316bffcfd1d16c918342ce7293e90f85"
+  },
+  {
+    "sample_id": "p0d2_ctrl_unimodal_visual_0134_visual_premise_control",
+    "matched_group_id": "mg_ctrl_unimodal_visual_0134",
+    "condition": "visual_premise_control",
+    "modality": "visual",
+    "ground_truth_label": "No",
+    "prompt": "No additional statement is provided.\n\nQuestion: Based on the image and statement, is cyan box to the left of magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_unimodal_visual_0134.png",
+    "image_sha256": "3114399e2812085198d3831c74384c9296a1569b918a17bb8a919c68dd1c4b15",
+    "raw_completion": " No.",
+    "parsed_answer": "No",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T093146Z",
+    "timestamp_utc": "2026-10-21T09:33:25Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -1.498451,
+        "length_normalized_log_likelihood": -1.498451,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -1.498451
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -0.463241,
+        "length_normalized_log_likelihood": -0.463241,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -0.463241
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.016575,
+        "length_normalized_log_likelihood": -1.008288,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.016524,
+          -5.1e-05
+        ]
+      }
+    },
+    "prompt_sha256": "e190e08d2fd33484cc57abf44050a55561c8b43bca3d4b78a66ec3b1fdd54be4"
+  },
+  {
+    "sample_id": "p0d2_ctrl_unimodal_visual_0143_visual_premise_control",
+    "matched_group_id": "mg_ctrl_unimodal_visual_0143",
+    "condition": "visual_premise_control",
+    "modality": "visual",
+    "ground_truth_label": "Yes",
+    "prompt": "No additional statement is provided.\n\nQuestion: Based on the image and statement, is magenta prism to the left of cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_unimodal_visual_0143.png",
+    "image_sha256": "bec6437cc1e278c19d6be0cc46915bbba27686a6bbec753d928d762acd570b66",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T093146Z",
+    "timestamp_utc": "2026-10-21T09:34:27Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.552352,
+        "length_normalized_log_likelihood": -0.552352,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.552352
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.247534,
+        "length_normalized_log_likelihood": -1.247534,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.247534
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.141101,
+        "length_normalized_log_likelihood": -1.07055,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.141012,
+          -8.9e-05
+        ]
+      }
+    },
+    "prompt_sha256": "2d3c2856ded1337723309cf891a083986804b0d4bbfd253e10bceef58f9790c7"
+  },
+  {
+    "sample_id": "p0d2_ctrl_unimodal_text_0164_text_premise_control",
+    "matched_group_id": "mg_ctrl_unimodal_text_0164",
+    "condition": "text_premise_control",
+    "modality": "text_only",
+    "ground_truth_label": "No",
+    "prompt": "The red sphere is to the left of the green cylinder. The green cylinder is to the left of the orange torus.\n\nQuestion: Based on the statements, is orange torus to the left of red sphere?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_unimodal_text_0164.png",
+    "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+    "raw_completion": " Yes.\n\nThe statement \"The red sphere is to the left of the green cylinder\" implies",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T093146Z",
+    "timestamp_utc": "2026-10-21T09:35:28Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -1.023355,
+        "length_normalized_log_likelihood": -1.023355,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -1.023355
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.217805,
+        "length_normalized_log_likelihood": -1.217805,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.217805
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -1.896457,
+        "length_normalized_log_likelihood": -0.948228,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -1.896372,
+          -8.5e-05
+        ]
+      }
+    },
+    "prompt_sha256": "d250016471d88fce53c03f4807d8a525c5089542939ea496ca3f96768da0092f"
+  },
+  {
+    "sample_id": "p0d2_ctrl_unimodal_text_0151_text_premise_control",
+    "matched_group_id": "mg_ctrl_unimodal_text_0151",
+    "condition": "text_premise_control",
+    "modality": "text_only",
+    "ground_truth_label": "Yes",
+    "prompt": "The cyan box is to the left of the red sphere. The red sphere is to the left of the magenta prism.\n\nQuestion: Based on the statements, is cyan box to the left of magenta prism?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_unimodal_text_0151.png",
+    "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+    "raw_completion": " Yes.\n\nThe statement \"The cyan box is to the left of the red sphere\" implies",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T093146Z",
+    "timestamp_utc": "2026-10-21T09:35:29Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.908861,
+        "length_normalized_log_likelihood": -0.908861,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.908861
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -2.17723,
+        "length_normalized_log_likelihood": -2.17723,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -2.17723
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -1.533982,
+        "length_normalized_log_likelihood": -0.766991,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -1.533889,
+          -9.3e-05
+        ]
+      }
+    },
+    "prompt_sha256": "079ba22c2a165548fb1da1339bc34881d8c0066defca3f593986990eb2157324"
+  },
+  {
+    "sample_id": "p0d2_ctrl_unimodal_text_0165_text_premise_control",
+    "matched_group_id": "mg_ctrl_unimodal_text_0165",
+    "condition": "text_premise_control",
+    "modality": "text_only",
+    "ground_truth_label": "Yes",
+    "prompt": "The orange torus is to the left of the yellow cone. The yellow cone is to the left of the cyan box.\n\nQuestion: Based on the statements, is orange torus to the left of cyan box?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_unimodal_text_0165.png",
+    "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+    "raw_completion": " Yes.\n\nThe statement \"The orange torus is to the left of the yellow cone\"",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T093146Z",
+    "timestamp_utc": "2026-10-21T09:35:31Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.862544,
+        "length_normalized_log_likelihood": -0.862544,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.862544
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.959388,
+        "length_normalized_log_likelihood": -1.959388,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.959388
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -1.538566,
+        "length_normalized_log_likelihood": -0.769283,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -1.53846,
+          -0.000106
+        ]
+      }
+    },
+    "prompt_sha256": "98222514a7c7443611329a60afb3448bb80dcf929ca0a99317ac3100f109c0cd"
+  },
+  {
+    "sample_id": "p0d2_ctrl_unimodal_text_0156_text_premise_control",
+    "matched_group_id": "mg_ctrl_unimodal_text_0156",
+    "condition": "text_premise_control",
+    "modality": "text_only",
+    "ground_truth_label": "No",
+    "prompt": "The yellow cone is to the left of the purple pyramid. The purple pyramid is to the left of the cyan box.\n\nQuestion: Based on the statements, is cyan box to the left of yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_unimodal_text_0156.png",
+    "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+    "raw_completion": " Yes.",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T093146Z",
+    "timestamp_utc": "2026-10-21T09:35:32Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.965273,
+        "length_normalized_log_likelihood": -0.965273,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.965273
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.557324,
+        "length_normalized_log_likelihood": -1.557324,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.557324
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -1.508298,
+        "length_normalized_log_likelihood": -0.754149,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -1.508217,
+          -8.1e-05
+        ]
+      }
+    },
+    "prompt_sha256": "30d9cd4ffcee36f9a641ec980b4f63cefe7b9ff8fb95df6553ae0c85823109db"
+  },
+  {
+    "sample_id": "p0d2_ctrl_unimodal_text_0146_text_premise_control",
+    "matched_group_id": "mg_ctrl_unimodal_text_0146",
+    "condition": "text_premise_control",
+    "modality": "text_only",
+    "ground_truth_label": "No",
+    "prompt": "The yellow cone is to the left of the blue cube. The blue cube is to the left of the red sphere.\n\nQuestion: Based on the statements, is red sphere to the left of yellow cone?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_unimodal_text_0146.png",
+    "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+    "raw_completion": " Yes.\n\nThe statement \"The red sphere is to the left of the yellow cone\" is",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T093146Z",
+    "timestamp_utc": "2026-10-21T09:35:33Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.949462,
+        "length_normalized_log_likelihood": -0.949462,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.949462
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.059364,
+        "length_normalized_log_likelihood": -1.059364,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.059364
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -2.270033,
+        "length_normalized_log_likelihood": -1.135016,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -2.269954,
+          -7.9e-05
+        ]
+      }
+    },
+    "prompt_sha256": "31fc77187bc64bbba46ec32ac854577c07ee8dc7c0f79b521df269b52e3668f9"
+  },
+  {
+    "sample_id": "p0d2_ctrl_unimodal_text_0163_text_premise_control",
+    "matched_group_id": "mg_ctrl_unimodal_text_0163",
+    "condition": "text_premise_control",
+    "modality": "text_only",
+    "ground_truth_label": "Yes",
+    "prompt": "The orange torus is to the left of the magenta prism. The magenta prism is to the left of the purple pyramid.\n\nQuestion: Based on the statements, is orange torus to the left of purple pyramid?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+    "image_file": "datasets\\controlled\\images\\ctrl_unimodal_text_0163.png",
+    "image_sha256": "f5d8d4e4464d9e6ec8babd488f0baa221f066a18382057abf1b482be39666366",
+    "raw_completion": " Yes.\n\nThe statements provided indicate that the orange torus is to the left of the mag",
+    "parsed_answer": "Yes",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 20,
+      "seed": 42
+    },
+    "run_id": "phase_0d2_20261021T093146Z",
+    "timestamp_utc": "2026-10-21T09:35:34Z",
+    "candidate_scores": {
+      " Yes": {
+        "total_log_likelihood": -0.865025,
+        "length_normalized_log_likelihood": -0.865025,
+        "sequence_length": 1,
+        "token_strings": [
+          " Yes"
+        ],
+        "token_log_probs": [
+          -0.865025
+        ]
+      },
+      " No": {
+        "total_log_likelihood": -1.710007,
+        "length_normalized_log_likelihood": -1.710007,
+        "sequence_length": 1,
+        "token_strings": [
+          " No"
+        ],
+        "token_log_probs": [
+          -1.710007
+        ]
+      },
+      " Undetermined": {
+        "total_log_likelihood": -1.65979,
+        "length_normalized_log_likelihood": -0.829895,
+        "sequence_length": 2,
+        "token_strings": [
+          " Und",
+          "etermined"
+        ],
+        "token_log_probs": [
+          -1.659703,
+          -8.7e-05
+        ]
+      }
+    },
+    "prompt_sha256": "ae47c8f16ffe5e22f813f2480fa3f4e21152a3dabc779eda59ebce823ac9f579"
+  }
+]

@@ -1,0 +1,156 @@
+{
+  "final_verification_date": "2026-10-26",
+  "task_selection_label": "20261025",
+  "checks": [
+    {
+      "name": "doctor",
+      "command": [
+        "ulvo",
+        "project",
+        "doctor",
+        "."
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 0.2396106999949552
+    },
+    {
+      "name": "targeted",
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_final_overleaf_selection.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 0.9812541999854147
+    },
+    {
+      "name": "literal_full_ulvo",
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 25.633608200005256
+    },
+    {
+      "name": "guarded_integrity",
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "scripts/verify_phase3_integrity.py"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 26.389782199985348
+    },
+    {
+      "name": "portability",
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "scripts/check_portability.py"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 0.4313851000042632
+    },
+    {
+      "name": "compilation",
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 0.5022150999866426
+    },
+    {
+      "name": "ordinary_python_targeted",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_final_overleaf_selection.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_sec": 1.5494869999820367
+    }
+  ],
+  "guarded_integrity": {
+    "status": "PASS",
+    "tests_run": 358,
+    "skipped": 3,
+    "failures": 0,
+    "errors": 0,
+    "restricted_open_attempts": [],
+    "scope": "per-process Python open audit; not OS-wide tracing or a custodian holdout audit"
+  },
+  "audit_recomputation": {
+    "status": "PASS",
+    "restricted_open_attempts": [],
+    "new_model_forwards": 0,
+    "scope": "per-process Python open guard, not OS-wide monitoring",
+    "counts": {
+      "smol_cases": 36,
+      "qwen_generations": 108,
+      "captures": 10,
+      "activation_rows": 200,
+      "features": 108
+    }
+  },
+  "protected_files_checked": 1066,
+  "changed_protected_files": [],
+  "original_overleaf_zip_sha256": "dd83fcc4b48d0d532d088ea92999a39ed7fe1c62a4ae07c0a65aa09e54141459",
+  "raw_logs": "Local only under .cache/final_selection; not distributed",
+  "raw_log_hashes": {
+    "final_v2_compilation.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_v2_doctor.txt": "09bb6139a9d4a28adf7ac717717aa65768d81df0b5e7bfaf177b10a97dd3a8cf",
+    "final_v2_guarded_integrity.txt": "0f3d4910d1044af0bfb449a71a455b3db5de83147a404e5fc9ae97129473d02a",
+    "final_v2_literal_full_ulvo.txt": "0a02d58603e3d44f6e3332c17b87aea97be5d289f3b22076437d4aaa8deb7136",
+    "final_v2_ordinary_python_targeted.txt": "ad489484479f0c2a4fd29d97cc47beee823e59ef4ccff8ba4ad0550f4fdbc464",
+    "final_v2_portability.txt": "366894176002ac32f337d816cea382f983e39f7770196bf80585052b825a1645",
+    "final_v2_targeted.txt": "f30b94997dcd0472171c64416e0f6359b7f353f59b0d105dc0147eecf2f94af5"
+  },
+  "limitations": [
+    "Three explicit closed-data skips",
+    "Probe CIs retained, not independently resampled",
+    "LaTeX structural checks only",
+    "No second-machine verification"
+  ]
+}

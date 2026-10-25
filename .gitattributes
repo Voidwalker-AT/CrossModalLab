@@ -25,3 +25,13 @@
 
 # Preserve the bounded replication worker source identity recorded at admission.
 /scripts/run_qwen_ram_recovery.py -text
+
+# Preserve final-selection source and evidence identities without changing releases.
+/paper/overleaf_submission_selection_20261025/** -text
+/scripts/audit_dual_model_evidence.py -text
+/scripts/build_final_overleaf_selection.py -text
+/scripts/verify_final_overleaf_selection.py -text
+/tests/test_final_overleaf_selection.py -text
+
+# Matplotlib SVG coordinates retain generator whitespace and exact source hashes.
+/paper/overleaf_submission_selection_20261025/figures/*.svg -whitespace

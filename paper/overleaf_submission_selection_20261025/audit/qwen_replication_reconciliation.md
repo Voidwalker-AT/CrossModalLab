@@ -1,0 +1,13 @@
+# Nine-forward Qwen reconciliation
+
+Source: `artifacts/publication/20261025/qwen_replication_20261025_464531de/`, protected separately from the earlier RAM-blocked Overleaf release. Read-only semantic verifier: `scripts/verify_qwen_ram_recovery.py`. This mission independently rechecked the saved record; it performed no additional model call.
+
+Identity: Qwen/Qwen3-VL-2B-Instruct @ 89644892e4d85e24eaac8bacfd4f463576704203; frozen base without adapter, NF4/double quant/BF16, SDPA. Cases: `xc_ho_0011::entailed`, `::contradicted`, `::underdetermined`, all allowlisted validation examples. Three candidates per case require nine entered top-level forwards, with a persisted 1-9 ledger; no retry. Undetermined has token IDs [16887, 46637] and its full two-token LL is included. All nine scores are finite.
+
+Candidate argmax is Yes / No / Undetermined for gold Yes / No / Undetermined. The entailed Yes score (-15.542109489440918) exceeds Undetermined (-15.542119026184082) by only **0.0000095367431640625**; this is a numerical near-tie, with no robustness established. Full scores and input hashes are in `dual_model_audit.json#qwen_replication`; display table `tables/s1_qwen_candidate_scores.tex` rounds to nine decimals. These are three dependent cases from one family, not a general accuracy estimate.
+
+All 625 frozen parameter tensors have identical before/after hashes. No optimizer or backward pass. Minimum sampled available host RAM across parent/worker was 4213.25390625 MiB; maximum sampled physical GPU use 1958 MiB. PyTorch peaks were 1584.735 MiB allocated / 1678 MiB reserved. Worker normal exit and GPU return to baseline were recorded. Sampling is not continuous peak monitoring, and emergency launcher-chain cancellation was not tested. Full model-weight-file content was not hashed; revision identity uses the pinned local snapshot and loader metadata.
+
+**Observed candidate preference:** argmax over three full teacher-forced answer strings. **Generated answer:** a separate autoregressive decoding endpoint, possibly containing punctuation or arbitrary continuation, then parsed under the recorded rule. **Calibrated confidence:** a probability with a verified calibration relationship to correctness; not established by either candidate softmax or a small top-two score gap. These concepts are not interchangeable. A fixed candidate set, sequence-length effect and decoding/parser differences can yield different endpoints.
+
+Keep the historical 18-case generation metrics and this optional three-case scoring supplement separate. Do not aggregate nine likelihood values as nine examples. Do not claim generated-answer replication, calibrated abstention or CE+ES improvement from this frozen-base run.

@@ -1,0 +1,7 @@
+# Recommendation: skip additional GPU execution for October 28
+
+Existing Smol records are sufficient for a truthful descriptive behavioral paragraph and exploratory representation section. A successfully completed matched two-case pilot already supplies narrow common-input observations. The university submission can be coherent without another experiment. The priority is accurate evidence selection, a compiled manuscript and a reliable demonstration.
+
+**No further GPU experiment is necessary or authorized by this audit.** No model forwards, training, optimizer updates, downloads, dependency changes, final-holdout evaluation or activation patching were performed. No experimental protocol is being represented as executed or silently approved.
+
+A future broader matched evaluation would need frozen common task prompts/images, both pinned model identities, a single output endpoint, explicit handling of native templates, multiple independent families and resource admission. It would add descriptive model coverage, not validate a causal mechanism. Smol's earlier observed 3876 MiB physical GPU use and the failed screen make a casual rerun inappropriate. A dedicated proposal with actual forward accounting, at least 4 GiB host RAM, at least 3500 MiB free dedicated VRAM before loading, sequential worker exit/baseline checks and failure preservation would require separate authorization. That future research is not a university-paper blocker.

@@ -1,0 +1,18 @@
+% Source: audit/dual_model_audit.json#qwen; #smol; audit/model_inventory.md
+\begin{table*}[t]
+\centering\small
+\caption{Distinct historical evaluation conditions; rows from different batteries are not a leaderboard.}
+\label{tab:t1_evaluation_conditions}
+\begin{tabularx}{\linewidth}{lXXXX}
+\toprule
+Condition & Model & Updates & Prompt & Cases / groups \\ \midrule
+frozen & Qwen & 0 & standard & 18 / 6 \\
+prompt & Qwen & 0 & augmented & 18 / 6 \\
+ce5 & Qwen & 5 & standard & 18 / 6 \\
+es5 & Qwen & 5 & standard & 18 / 6 \\
+ce50 & Qwen & 50 & standard & 18 / 6 \\
+es5prompt & Qwen & 5 & augmented & 18 / 6 \\
+Smol 0D2 & SmolVLM2 & 0 & separate legacy battery & 36 / 30 groups \\
+\bottomrule
+\end{tabularx}
+\end{table*}

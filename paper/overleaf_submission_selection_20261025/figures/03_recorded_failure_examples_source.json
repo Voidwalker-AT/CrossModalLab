@@ -1,0 +1,30 @@
+{
+  "plotted_artists": [
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [],
+      "matrices": []
+    },
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [],
+      "matrices": []
+    },
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [],
+      "matrices": []
+    }
+  ],
+  "original_sources": {
+    "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json": "c56ce3152101e5f6f3207f024c6b949bbb87984f5d335bcb60be352350abb405"
+  },
+  "packaged_data": {
+    "audit/raw_predictions.json": "d27439fe633147ae42fdec80080aa8ca9b590a9c8dd135bd23b6247a554ac7db",
+    "audit/development_cases.json": "fcf6d8fa7590202205f345d2e094721d2056b2624501cd70044d6ea47e2deeb2"
+  },
+  "classification": "HISTORICAL OBSERVATIONS"
+}

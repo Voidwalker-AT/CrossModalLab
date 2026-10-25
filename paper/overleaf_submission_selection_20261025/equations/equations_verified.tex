@@ -1,0 +1,54 @@
+% Verified against the copied implementation; requires amsmath, amssymb.
+% Not a complete manuscript. R is strict left-of on distinct objects.
+\begin{align}
+\mathcal W(E)&=\{w:w\text{ is a strict total order satisfying }E\},\\
+y(E,q)&=\begin{cases}
+\mathrm{Yes},&\forall w\in\mathcal W(E),\;w\models q,\\
+\mathrm{No},&\forall w\in\mathcal W(E),\;w\models\neg q,\\
+\mathrm{Undetermined},&\exists w_1,w_2\in\mathcal W(E):w_1\models q,\;w_2\models\neg q.
+\end{cases}
+\end{align}
+Inconsistent inputs ($\mathcal W(E)=\varnothing$) are rejected, not assigned a class.
+\begin{align}
+R(A,B)\land R(B,C)&\models R(A,C),\\
+R(B,A)\land R(C,B)&\models\neg R(A,C),\\
+R(A,B)\land R(C,B)&\not\models R(A,C),\quad\not\models\neg R(A,C).
+\end{align}
+For prompt/image context $x$ and complete candidate tokens $a_{c,1:T_c}$,
+\begin{align}
+s_c(x)&=\sum_{t=1}^{T_c}\log p_\theta(a_{c,t}\mid x,a_{c,<t}),\\
+\widehat c_{\rm score}&=\mathop{\rm argmax}_{c\in\{Y,N,U\}}s_c(x),\\
+\mathcal L_{\rm CE}(x,y)&=-\frac1{T_y}\sum_{t=1}^{T_y}\log p_\theta(a_{y,t}\mid x,a_{y,<t}).
+\end{align}
+CE averages over the supervised gold-answer tokens only; candidate scores sum.
+Historical generation/parser results are a different endpoint from $\widehat c_{\rm score}$.
+With $[z]_+=\max(0,z)$, $m=1$, $d=\max(s_Y,s_N)$, and sufficiency $e=\mathbf1[y\ne U]$,
+\begin{align}
+\ell_{\rm ES}(x,y,e)&=\begin{cases}
+[m+d-s_U]_+,&e=0,\\
+[m+s_U-s_y]_+,&e=1,\;y\in\{Y,N\},\\
+0,&e=1,\;y=U\quad\text{(defensive branch only)},
+\end{cases}\\
+\mathcal L_{\rm ES}&=\frac1B\sum_{i=1}^B\ell_{{\rm ES},i},\\
+\mathcal L_{\rm total}&=\mathcal L_{\rm CE}+0.25\mathcal L_{\rm ES}.
+\end{align}
+The executed batch size and gradient accumulation are both one. The sufficient branch
+compares gold with abstention only; it does not compare gold with the other definite answer.
+For LoRA, the generic adapter update is
+\begin{align}
+W'&=W+\frac\alpha r BA,\qquad r=2,\quad\alpha=4,
+\end{align}
+where the base $W$ is frozen/quantized and only adapter parameters are updated.
+For confusion counts $C_{ab}$, class support $n_a=\sum_bC_{ab}$, prediction count
+$\widehat n_a=\sum_bC_{ba}$, and $K=3$ (all classes present),
+\begin{align}
+\operatorname{Recall}_a&=\frac{C_{aa}}{n_a},&
+\operatorname{BA}&=\frac1K\sum_a\frac{C_{aa}}{n_a},\\
+\operatorname{MacroF1}&=\frac1K\sum_a\frac{2C_{aa}}{n_a+\widehat n_a},\\
+\operatorname{UDR}&=\frac{\#\{i:y_i=U,\widehat y_i\in\{Y,N\}\}}{\#\{i:y_i=U\}},\\
+\operatorname{IAR}&=\frac{\#\{i:y_i\in\{Y,N\},\widehat y_i=U\}}{\#\{i:y_i\in\{Y,N\}\}},\\
+\operatorname{InvalidRate}&=\frac{\#\{i:\widehat y_i\notin\{Y,N,U\}\}}n,\\
+\operatorname{ExactFormat}&=\frac{\#\{i:\operatorname{strip}(r_i)\in\{\texttt{Yes},\texttt{No},\texttt{Undetermined}\}\}}n.
+\end{align}
+Invalid predictions remain in the gold-class denominator and count as mistakes.
+If $n_a+\widehat n_a=0$, the implementation assigns that class F1 zero.

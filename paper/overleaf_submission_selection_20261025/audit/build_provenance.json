@@ -1,0 +1,15 @@
+{
+  "base_commit": "532e2276e585881a7d2a7f032bc32e09a31d0ec1",
+  "final_verification_date": "2026-10-26",
+  "source_sha256": {
+    "scripts/audit_dual_model_evidence.py": "69cc93259777c1803e19f5e2405b1f43602b1dcf17612c02804717298efabf02",
+    "scripts/build_final_overleaf_selection.py": "b10363b2ef31668716872d280f4b4a9992747e3cb2410653375b0eab927b2f91",
+    "scripts/verify_final_overleaf_selection.py": "3fb481f61373fe9ee7dfabeec4043c91df1f4a5f9d337b3f783caebfa5298db7",
+    "tests/test_final_overleaf_selection.py": "7cbcafd8b4f58e6557461f4f960bab377934738a4a0b3f62f217633baf3d0fb3"
+  },
+  "cpu_only": true,
+  "new_model_forwards": 0,
+  "new_optimizer_steps": 0,
+  "source_release": "paper/overleaf_evidence_20261025",
+  "release_modified": false
+}
