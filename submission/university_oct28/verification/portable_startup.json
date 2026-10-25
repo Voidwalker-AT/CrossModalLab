@@ -1,0 +1,11 @@
+{
+  "command": "python dashboard/backend/server.py --port 8765",
+  "health": {
+    "status": "ok",
+    "read_only": true,
+    "gpu_loaded": false
+  },
+  "cases": 18,
+  "families": 6,
+  "owner_pid": 35092
+}

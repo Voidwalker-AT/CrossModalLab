@@ -1,0 +1,200 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        ".cache/university_oct28/verify_organization.py"
+      ],
+      "exit_code": 0,
+      "log": "organization_integrity.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "project",
+        "doctor",
+        "."
+      ],
+      "exit_code": 0,
+      "log": "ulvo_doctor.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_dashboard*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "dashboard_tests.txt"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "dashboard/frontend",
+        "run",
+        "check"
+      ],
+      "exit_code": 0,
+      "log": "typescript.txt"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "dashboard/frontend",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "log": "frontend_build.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "scripts/verify_phase3_integrity.py"
+      ],
+      "exit_code": 0,
+      "log": "guarded_ulvo_tests.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "literal_ulvo_tests.txt"
+    },
+    {
+      "command": [
+        "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "scripts/verify_phase3_integrity.py"
+      ],
+      "exit_code": 0,
+      "log": "standard_tests.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "scripts/check_portability.py"
+      ],
+      "exit_code": 0,
+      "log": "portability.txt"
+    },
+    {
+      "command": [
+        "ulvo",
+        "run",
+        ".",
+        "--",
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests",
+        "dashboard"
+      ],
+      "exit_code": 0,
+      "log": "compile.txt"
+    },
+    {
+      "command": [
+        "python",
+        ".cache/university_oct28/verify_organization.py"
+      ],
+      "exit_code": 0,
+      "log": "organization_integrity_rechecked.txt",
+      "scope": "Final documentation/links/metric/hash recheck after all navigation edits; aggregate BA comparison bounded to two ULPs with exact class recalls."
+    }
+  ],
+  "environment": "Existing runtimes/locked dependencies; no installation or scientific model execution. Closed-data exclusion enabled; guarded runs log denied-open attempts.",
+  "partner_machine": "NOT VERIFIED",
+  "human_timed_rehearsal": "NOT VERIFIED",
+  "scope": "University organization/documentation only; no scientific implementation, result, manuscript, dataset or configuration changes.",
+  "files_sha256": {
+    "browser_check.json": "e53a699553fb0d1da7d0c2124fd02bcf21ef3ac68b3d8fce92d13d814ecde111",
+    "compile.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dashboard_tests.txt": "3ade4a0d603e0ddf3f4f78e3b8dfb066f9f1c7fff95b7fd6bde190082b0579af",
+    "frontend_build.txt": "56555d866f7edecb7bd568e2975ffeb100f1e0f9c0832cba77a828088473139f",
+    "guarded_ulvo_tests.txt": "b1b6208c441367ee561f8eed10ea28ee4f7f6b9f3c5447fdfc52b426c39d57c2",
+    "literal_ulvo_tests.txt": "676d567a2ee6fa06ffca5226209838a456e98bbbe1746ae141d1a318ebc2d75c",
+    "organization_integrity.json": "52408e6e7e8f03556ae00afe6a57c6c592f4f50e99a684f97ca07fdd14ec5182",
+    "organization_integrity.txt": "2c014aff079e06fee6b8fefdb25472d6b55816a5ddab3283a93494f9a3278d8c",
+    "organization_integrity_final.txt": "9d049b768ea88f3ff3ac0a4801ce8af6b17ca5e2267cfa71f790524868b767fb",
+    "organization_integrity_rechecked.txt": "2a8cfc750e43943d596ad69cdb17662035147d8a16ab9590be73518b99975cec",
+    "portability.txt": "366894176002ac32f337d816cea382f983e39f7770196bf80585052b825a1645",
+    "portable_shutdown.json": "4737450f71c0166b947d6e479cf7c96e5729c379a244ee93faffc538c277aaa0",
+    "portable_startup.json": "0638db3fb9ca37a670eeeb7b533ec742554b785215405765f62e25576b81a914",
+    "README.md": "83226db030a3759a0ee82e6fd913275dd12472038be4cd9e992682c2c7a5d551",
+    "standard_tests.txt": "432f3792acc00168170d15eb451127007959c8284da179eb09df5f8002d137a8",
+    "typescript.txt": "500a353a4dbb2477aa8d2eb8b04f61986b1a2150d0803cd44907e49522c3bdf4",
+    "ulvo_doctor.txt": "f969abacdd25f6f6bb3f4300080c35a1f7fa4cef636a25da7541ef0a04ff0c78",
+    "wsctl_shutdown.json": "12485b20723a031212a93eb5bfc3399d2b71e233b79d6435951ec913791d7bf5",
+    "wsctl_startup.json": "1119832969f14599e4cb8a902621fed1cab29a1ee3f3ba40a95d554111f9b471"
+  },
+  "results": {
+    "ulvo_full": {
+      "run": 343,
+      "passed": 340,
+      "skipped": 3
+    },
+    "ordinary_python": {
+      "run": 343,
+      "passed": 246,
+      "skipped": 97
+    },
+    "dashboard_targeted": {
+      "run": 24,
+      "passed": 24
+    },
+    "browser_views": 5,
+    "tour_stops": 7,
+    "screenshots": 6,
+    "guarded_restricted_open_attempts": 0,
+    "historical_run_hashes": 173,
+    "historical_neural_hashes": 123,
+    "paper_figure_paths": 10,
+    "startup_commands_verified": [
+      "wsctl run crossmodallab dashboard",
+      "python dashboard/backend/server.py --port 8765"
+    ],
+    "owned_server_shutdown_and_port_release": true,
+    "terminal_interactive_cancellation_exit_code": 1
+  },
+  "known_observations": [
+    "Historical acquired README formatting/image-link issues preserved and documented.",
+    "Initial browser verification stalled on hidden lazy images; identified test browser stopped; bounded visible-image verification passed.",
+    "An earlier exact-float helper failed on 0.49999999999999994 vs 0.5; exact recalls agree, final aggregate comparison allows two ULPs. Raw earlier helper output retained.",
+    "No paper manuscript/scientific implementation/experiment/dataset/result change; paper README navigation/layout description only."
+  ]
+}

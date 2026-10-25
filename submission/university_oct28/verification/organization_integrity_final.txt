@@ -1,0 +1,9 @@
+warning: in the working copy of '.gitattributes', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/CONTRIBUTING.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'paper/README.md', LF will be replaced by CRLF the next time Git touches it
+Traceback (most recent call last):
+  File "E:\Workspace\Active\CrossModalLab\.cache\university_oct28\verify_organization.py", line 32, in <module>
+    assert conditions[key]['metrics']['balanced_accuracy']==paper_analysis['conditions'][paper_key]['balanced_accuracy']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

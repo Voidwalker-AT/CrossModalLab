@@ -1,5 +1,7 @@
 # CrossModalLab scientific dashboard
 
+For the university assessor, start with the [October 28 overview, exact demo route, results and checklist](../submission/university_oct28/README.md). This is navigation around the existing application; historical release packages remain unchanged.
+
 Read-only React + TypeScript research workbench with a Python standard-library backend. Five functional views: Architecture Explorer, Evidence & Reasoning, Failure Investigator, Experiment Analytics, and Reproducibility. It uses recorded Qwen development results, exact benchmark images, and the existing dual-algorithm symbolic solver. No model, CUDA, PyTorch, ULVO, inference service, or external API is required to **run the dashboard**.
 
 ## Run on either contributor's machine

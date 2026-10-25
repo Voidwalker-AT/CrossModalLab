@@ -1,0 +1,11 @@
+{
+  "command": "wsctl run crossmodallab dashboard",
+  "health": {
+    "status": "ok",
+    "read_only": true,
+    "gpu_loaded": false
+  },
+  "port": 8765,
+  "owner_pid": 38288,
+  "model_modules_loaded_in_independent_artifact_check": []
+}

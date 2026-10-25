@@ -4,7 +4,7 @@ Working title: **Mechanistic Analysis of Cross-Modal Relational Reasoning and Ev
 
 This is a preliminary research draft, not a submission-ready claim of a discovered circuit or an effective new loss. Start with [the manuscript](manuscript/draft.md), [evidence registry](evidence_registry.md), [claims registry](claims_registry.md), and [submission plan](submission_plan.md). Verified literature metadata and the limits of inspection are in [references](references/verified_sources.md). [Figure inventory](figures/inventory.md) separates conceptual schematics from empirical results.
 
-The unit of independent evaluation is the family, not each related variant. Development results have been inspected repeatedly. They cannot serve as an independent test. The final holdout is excluded from this task. Uncompleted research is described explicitly in the limitations. The portable draft and printable [HTML article](manuscript/draft.html) use a conventional two-column academic layout without claiming compliance with any specific IEEE venue.
+The unit of independent evaluation is the family, not each related variant. Development results have been inspected repeatedly. They cannot serve as an independent test. The final holdout is excluded from this task. Uncompleted research is described explicitly in the limitations. The current portable draft and printable [HTML article](manuscript/draft.html) use a single-column review layout without claiming compliance with any specific IEEE venue. For the university demonstration, use the [assessment workspace](../submission/university_oct28/README.md); this navigation correction does not change the manuscript or scientific evidence.
 
 Rebuild the stored-data tables without models, CUDA, ULVO imports, or network access:
 

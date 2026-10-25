@@ -1,0 +1,28 @@
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/CONTRIBUTING.md', LF will be replaced by CRLF the next time Git touches it
+{
+  "status": "PASS",
+  "starting_revision": "28e23b98e2ad48ff8ea63cd5a028180e186eb907",
+  "starting_tracked_count": 766,
+  "existing_files_changed": [
+    "README.md",
+    "dashboard/README.md",
+    "docs/CONTRIBUTING.md"
+  ],
+  "scientific_implementation_data_outputs_and_paper_unchanged": true,
+  "initial_untracked_files_preserved": 12,
+  "historical_file_hashes_checked": 173,
+  "neural_source_hashes_checked": 123,
+  "local_links_checked": 100,
+  "paper_figure_paths_checked": 10,
+  "dashboard_case_count": 18,
+  "dashboard_family_count": 6,
+  "full_generated_benchmark": {
+    "records": 9216,
+    "families": 6,
+    "images": 72
+  },
+  "restricted_open_attempts": [],
+  "model_runtime_modules_loaded": [],
+  "semantic_assertions": "Root/results metrics and three exact demo records agree with stored dashboard; malformed strings retained; separate failed screen/pilot validated; no scientific claim upgraded."
+}

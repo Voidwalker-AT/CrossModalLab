@@ -16,3 +16,6 @@
 /src/training/scorer_verification.py -text
 /src/benchmark/publication_factorial.py -text
 /scripts/prepare_publication_modality_protocol.py -text
+
+# Preserve raw verification-log bytes and their recorded SHA256 identities.
+/submission/university_oct28/verification/** -text

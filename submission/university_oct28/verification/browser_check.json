@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "guided_tour_stops": [
+    "Why missing evidence matters",
+    "Read the image and text together",
+    "Try both possible orders",
+    "Inspect the recorded failure",
+    "Compare the checkpoints",
+    "Explore separate historical measurements",
+    "Read the results with their limits"
+  ],
+  "guided_tour_previous_next": true,
+  "views_checked": [
+    "Failure Investigator",
+    "Evidence & Reasoning",
+    "Architecture Explorer",
+    "Experiment Analytics",
+    "Reproducibility"
+  ],
+  "countermodel_controls": true,
+  "conceptual_layer_control": true,
+  "featured_case": "xc_ho_0011::underdetermined",
+  "model_raw_output": "No",
+  "gold": "Undetermined",
+  "desktop_screenshots": [
+    {
+      "view": "Failure Investigator",
+      "path": "submission/university_oct28/screenshots/failure-investigator.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "checkpoint": "es5"
+    },
+    {
+      "view": "Evidence & Reasoning",
+      "path": "submission/university_oct28/screenshots/evidence-reasoning.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "checkpoint": "es5"
+    },
+    {
+      "view": "Architecture Explorer",
+      "path": "submission/university_oct28/screenshots/architecture-explorer.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "checkpoint": "es5"
+    },
+    {
+      "view": "Experiment Analytics",
+      "path": "submission/university_oct28/screenshots/experiment-analytics.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "checkpoint": "es5"
+    },
+    {
+      "view": "Reproducibility",
+      "path": "submission/university_oct28/screenshots/reproducibility.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "checkpoint": "es5"
+    }
+  ],
+  "mobile_screenshot": "submission/university_oct28/screenshots/failure-investigator-mobile.png",
+  "mobile_overflow": false,
+  "page_errors": [],
+  "external_requests": [],
+  "scope": "Browser automation only, not a human timed/projector rehearsal."
+}

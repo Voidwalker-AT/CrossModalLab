@@ -1,205 +1,104 @@
 # CrossModalLab
 
-**Academic Project Title:**  
-*Mechanistic Analysis of Cross-Modal Relational Reasoning and Evidence Insufficiency in Vision-Language Transformers*
+**Academic title:** Mechanistic Analysis of Cross-Modal Relational Reasoning and Evidence Insufficiency in Vision-Language Transformers.
 
-[![Research Status](https://img.shields.io/badge/Status-Phase%202E%20(Behavioral%20%26%20Feasibility%20Complete)-blue.svg)]()
-[![Hardware Bound](https://img.shields.io/badge/Hardware-4GB%20VRAM%20%7C%2016GB%20RAM-orange.svg)]()
-[![Methodology](https://img.shields.io/badge/Methodology-Mechanistic%20Interpretability-purple.svg)]()
+CrossModalLab is a working research dashboard and experimental toolkit for checking whether a vision-language model's answer is justified by an image and text. It separates **Yes**, **No** and **Undetermined**, using symbolic ground truth and stored model outputs. The dashboard runs without loading models or requiring a GPU. Current findings are exploratory development results; no causal circuit, independent generalization or fine-tuning superiority has been established.
 
----
+**Professor / examiner:** start with the [October 28 workspace](submission/university_oct28/README.md), [plain-language overview](submission/university_oct28/PROJECT_OVERVIEW.md) and [five-minute demo](submission/university_oct28/DEMO_GUIDE.md). October 28, 2026 is the university demonstration/preliminary-paper deadline. December 1 is a research-quality target, with no confirmed venue or acceptance promise.
 
-## 1. Project Overview
+## One real example
 
-Compact vision-language models (VLMs) can recognize objects and answer simple visual questions, yet still fail at **compositional relational reasoning** across multimodal premises. When a model must chain a visual premise with a textual premise to infer an unstated relationship—or admit that evidence is insufficient—it often forces a definite Yes/No instead of abstaining.
+![Recorded image: golden disc left of teal wedge](dashboard/assets/images/xc_ho_0011__underdetermined.png)
 
-**CrossModalLab** studies these failures with:
+The image gives **golden disc left of teal wedge**; the text gives **crimson block left of teal wedge**. Is the disc left of the block? Either order fits, so the answer is **Undetermined**, not No. On recorded development case `xc_ho_0011::underdetermined`, Qwen CE+ES at five updates answered exactly `No`. The symbolic graph explains why this answer is unsupported; it is not a model thought trace.
 
-- A symbolic chain-vs-fork engine (entailed / contradicted / underdetermined)
-- Controlled synthetic benchmarks with solver-verified ground truth
-- Behavioral evaluation of SmolVLM2-2.2B and Qwen3-VL-2B
-- Sparse residual-stream capture and exploratory probing
-- Pre-registered causal intervention designs (execution gated)
+## Working features and architecture
 
-> [!NOTE]
-> Probe decodability ≠ causal model usage. No unique circuit has been established. Behavioral failures are observations, not proven neural mechanisms.
+- Five interactive views: Architecture Explorer, Evidence & Reasoning, Failure Investigator, Experiment Analytics and Reproducibility.
+- An existing seven-stop guided tour, original images, logical countermodels and checkpoint comparisons.
+- Dual-algorithm symbolic verification, stored VLM evaluation, historical passive instrumentation/probes and auditable training utilities.
+- Raw answers, hashes, format checks and ordinary-Python plus optional ULVO workflows.
 
----
+The scientific flow is **controlled image + text → pinned VLM evaluation → stored answers → symbolic verification/metrics → read-only dashboard**. Representation analysis and causal controls are separate research components. See the [implementation map](docs/REPOSITORY_MAP.md).
 
-## 2. Formal Setting
+## Actual dashboard screenshots
 
-Relation \(R\) is strict **left-of** on distinct entities:
+![Failure Investigator: recorded CE+ES step-five fork](submission/university_oct28/screenshots/failure-investigator.png)
 
-| Topology | Logic | Expected label |
-|---|---|---|
-| Forward chain | \(R(A,B) \land R(B,C) \models R(A,C)\) | Yes (entailed) |
-| Reverse chain | reverse chain ⇒ \(\neg R(A,C)\) | No (contradicted) |
-| Underdetermined fork | \(R(A,B) \land R(C,B)\) does not decide \(R(A,C)\) | Undetermined |
+![Experiment Analytics: the same development slice](submission/university_oct28/screenshots/experiment-analytics.png)
 
-**Underdetermined ≠ False.** Forcing a direction on a fork is an abstention / epistemic-calibration failure.
+[All five views and mobile capture](submission/university_oct28/screenshots/README.md) are actual rendered screenshots, not new inference or invented neural traces.
 
----
+## Quick start
 
-## 3. Models & Hardware
-
-| | Primary | Secondary |
-|---|---|---|
-| Model | `HuggingFaceTB/SmolVLM2-2.2B-Instruct` | `Qwen/Qwen3-VL-2B-Instruct` |
-| Revision | `482adb537c021c86670beed01cd58990d01e72e4` | `89644892e4d85e24eaac8bacfd4f463576704203` |
-| Quantization | 4-bit NF4 (bitsandbytes) | 4-bit NF4 (bitsandbytes) |
-| License | Apache-2.0 | Apache-2.0 |
-
-**Lab hardware (primary):** NVIDIA RTX 2050 (4 GB VRAM), 16 GB RAM, Windows 11.  
-Shared experiment config: `configs/experiment_config.json`.
-
-**Established:** symbolic engine, controlled benchmarks, multi-phase behavioral audits, passive activation capture, cross-model smoke tests.  
-**Not established:** causal circuits, publication-grade probe generalization, effective fine-tuning.
-
----
-
-## 4. Quick Start
-
-### Interactive research dashboard — October 28 university demo
-
-The artifact-backed React + TypeScript dashboard has five views: Architecture Explorer, Evidence & Reasoning, Failure Investigator, Experiment Analytics, and Reproducibility. It runs without loading a model or requiring a GPU. See [dashboard setup and demo script](dashboard/README.md) and the [submission checklist](paper/submission_checklist.md).
-
-Primary-machine launch: `wsctl run crossmodallab dashboard`. Portable launcher: `python -B scripts/launch_dashboard.py`. See [WSCTL registration and the visual evidence gallery](dashboard/EVIDENCE_EXPORT.md) and the separately labeled [historical neural diagnostics](dashboard/NEURAL_EVIDENCE.md). No new GPU experiment is required to view either.
-
-The [October 28 presentation package](submission/2026-10-28/README.md) includes the exact-record five-minute script, preliminary [printable paper](paper/manuscript/draft.html), five SVG/PNG figures and reproducibility notes. Its prebuilt archive needs only ordinary Python at runtime. Physical partner-machine verification and the human timed rehearsal remain pending.
-
-After frontend dependencies are installed from the committed lockfile:
+From the repository root on the registered primary machine:
 
 ```sh
+wsctl run crossmodallab dashboard
+```
+
+Portable alternative, with the production frontend already built:
+
+```sh
+python dashboard/backend/server.py --port 8765
+```
+
+Open **http://127.0.0.1:8765**, then choose **Start the five-minute guided tour**. Stop with Ctrl+C. The Python backend uses standard-library/project modules; serving stored evidence needs no model weights, CUDA, ULVO or WSCTL.
+
+**Fresh source checkout:** ordinary Python 3.11+, Node `^20.19.0 || >=22.12.0`, npm and the exact installed frontend dependencies from the committed lockfile. With those already installed:
+
+```sh
+npm --prefix dashboard/frontend run check
 npm --prefix dashboard/frontend run build
-python dashboard/backend/server.py
 ```
 
-Open http://127.0.0.1:8765. ULVO users may prefix the Python command with `ulvo run . --`. The same real 18 development examples and their exact images are packaged for both contributors; no final-holdout data or model weights are bundled. Live instrumentation and causal interventions are outside this dashboard foundation.
+The portable convenience launcher `python -B scripts/launch_dashboard.py` rebuilds stale assets using installed locked packages; it never installs them. See [dashboard setup](dashboard/README.md) for explicit first-time installation, primary-machine cache/temp redirection and port conflicts. No package installation or upgrade is performed here. The frozen prebuilt demonstration archive needs only ordinary Python at runtime.
 
-### Mode A — ULVO (primary lab machine)
+## Recorded findings
 
-```powershell
-cd E:\Workspace\Active\CrossModalLab
-ulvo project inspect .
-ulvo run . -- python -m unittest discover -s tests -v
-ulvo run . -- python scripts\check_portability.py
-```
+These standard-prompt Qwen rows use the **same 18 development cases, six families and six cases per class**, with the historical parser and repeated inspection.
 
-Uses `.ulvo/manifest.toml` + `requirements.lock` (CUDA PyTorch). Do not create a project-local `.venv` here.
+| Condition | Parsed correct | Balanced accuracy | Exact-label outputs |
+|---|---:|---:|---:|
+| Frozen | 7/18 | 38.9% | 18/18 |
+| CE, five updates | 7/18 | 38.9% | 0/18 |
+| CE+ES, five updates | 9/18 | 50.0% | 18/18 |
+| CE, 50 updates | 12/18 | 66.7% | 0/18 |
 
-### Mode B — Standard Python (no ULVO)
+The parser accepts some malformed label prefixes: semantic correctness and exact-format compliance differ. The paired CE5/CE+ES5 descriptive family interval includes zero. CE50 has a different budget and misses all six forks. No CE+ES50 result exists. [Results and identities](submission/university_oct28/RESULTS_SUMMARY.md) give exact sources and denominators.
 
-```bash
-git clone https://github.com/Voidwalker-AT/CrossModalLab.git
-cd CrossModalLab
-python3.11 -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\activate
-python -m pip install -U pip
-python -m pip install -r requirements-core.txt
-python -m unittest discover -s tests -v
+Separately, a two-case/one-family likelihood pilot completed 12 additional forwards across Smol/Qwen. A later approved 108-forward screen stopped after one attempt and zero completed score rows, without retry. The new 9,216 generated variants have only six dependent families and 72 distinct images. These evidence sets are not pooled into dashboard metrics.
+
+## Limitations
+
+Historical Smol probes are correlational and do not explain Qwen's per-case errors. Architecture diagrams are conceptual and reasoning graphs symbolic. Independent evaluation, real-world transfer, a causal mechanism, CE+ES superiority and material novelty remain unverified. Partner execution, human rehearsal, authorship and university format remain pending. Read [limitations](submission/university_oct28/LIMITATIONS.md) and the [checklist](submission/university_oct28/CHECKLIST.md). The project is **not externally submitted**.
+
+## Repository map and reproducibility
+
+| Directory | Purpose |
+|---|---|
+| `dashboard/` | React/TypeScript frontend, Python backend and selected demo assets |
+| `src/` | Symbolic reasoning, evaluation, instrumentation, probes, causal controls and training |
+| `datasets/`, `configs/` | Data/manifests, provenance and frozen experiment configurations |
+| `scripts/`, `tests/` | Execution/verification tools and regression tests; research commands have separate gates |
+| `artifacts/` | Historical results, telemetry, source identities and failed/partial runs |
+| `paper/` | Preliminary manuscript, figures, tables and evidence/claims registries |
+| `docs/` | Specifications, contributor setup and audits |
+| `submission/` | University navigation and historical release tooling; generated ZIPs stay local |
+
+See the [detailed map](docs/REPOSITORY_MAP.md) and [organization inventory](docs/university_submission_inventory.md). No historical files were moved. For CPU discovery with mixed/final record files closed:
+
+```sh
+python scripts/verify_phase3_integrity.py
 python scripts/check_portability.py
 ```
 
-Symbolic tests and controlled-image generation are **CPU-only**.  
-GPU VLM work needs torch/bitsandbytes — see `docs/DEPENDENCIES.md`. Missing CUDA raises an explicit capability error (no silent model/quantization fallback).
+Primary-machine equivalents prefix commands with `ulvo run . --`. Optional Torch tests skip if unavailable; three legacy mixed-record tests stay excluded. Core/GPU setup is in [CONTRIBUTING](docs/CONTRIBUTING.md) and [dependencies](docs/DEPENDENCIES.md). Do not remove data safeguards to increase test counts. Keep weights, optimizer binaries, caches, credentials and global WSCTL backups out of Git.
 
-### Path overrides
+## Paper, evidence and contributors
 
-| Variable | Purpose |
-|---|---|
-| `CROSSMODAL_HF_HOME` / `HF_HOME` | Hugging Face cache root |
-| `CROSSMODAL_MODEL_SNAPSHOT_DIR` | Explicit pinned snapshot path |
-| `CROSSMODAL_DATASETS_DIR` / `CROSSMODAL_ARTIFACTS_DIR` | Dataset / artifact roots |
+- [Preliminary manuscript](paper/manuscript/draft.md) and [printable HTML](paper/manuscript/draft.html).
+- [Evidence registry](paper/evidence_registry.md), [claims registry](paper/claims_registry.md), [prior-art comparison](paper/prior_art_evidence_matrix.md) and [publication gaps](paper/publication_evidence_gap_report.md).
+- [Research progress](docs/publication_progress.md) and [historical presentation release](submission/2026-10-28/README.md).
 
-Template: `configs/local.env.example`. On the primary machine, leave overrides unset to reuse existing `E:/cache/huggingface` weights.
-
-Further reading: `docs/CONTRIBUTING.md`, `docs/DEPENDENCIES.md`, `docs/ASSET_MANIFEST.md`, `docs/ulvo_cuda_env_recovery.md`.
-
----
-
-## 5. Repository Layout
-
-```text
-CrossModalLab/
-├── AGENTS.md                 # Agent operating rules (GRAVITAS)
-├── README.md
-├── .gitignore
-├── pyproject.toml
-├── requirements.lock         # CUDA/full lock (Mode A)
-├── requirements-core.txt     # Portable CPU core (Mode B)
-├── requirements-gpu.txt      # Optional GPU layer (Mode B)
-├── .ulvo/manifest.toml       # Optional ULVO connector
-├── configs/
-│   ├── experiment_config.json
-│   ├── local.env.example
-│   ├── phase_1c/ … phase_2e/ # Frozen manifests & split specs
-│   └── phase_0d2/            # Behavioral benchmark manifest
-├── docs/                     # Specs, collaboration, dependency, novelty
-├── src/
-│   ├── config/               # Portable paths + experiment config
-│   ├── symbolic/             # Chain-vs-fork solver & generator
-│   ├── evaluation/           # Behavioral harness & candidate scoring
-│   ├── instrumentation/      # Passive capture, recovery, telemetry
-│   ├── causal/               # Intervention design (CPU validators)
-│   ├── probes/               # Linear probes & confounding analysis
-│   ├── models/               # SmolVLM2 + Qwen loaders
-│   └── training/             # Loss/schema utilities (design-only)
-├── scripts/                  # Benchmarks, acquisition, audits, smoke tests
-├── tests/                    # Unit / portability tests
-├── datasets/                 # Controlled + external benchmark subsets
-└── artifacts/                # Evaluations, reports, instrumentation (small JSON)
-```
-
----
-
-## 6. What Has Been Run (summary)
-
-| Phase | Focus | Outcome |
-|---|---|---|
-| 0 | Spec, literature, 500M pilot | Foundation |
-| 0D.2 | 36-case controlled behavioral pilot | Balanced-accuracy / abstention gaps |
-| 1B–1E | Cross-modal dataset + confound controls | 240-family contrast-v2 set |
-| 1F | Linear probes | Exploratory decode (selection-biased) |
-| 2A–2B | Causal design + exploratory patching | Protocol frozen; limited pilot |
-| 2C | 500M cleanup, Qwen NF4, paired eval | Shared fork failures on both models |
-| 2D | Format / evidence-insufficiency audit | Text-only abstention OK; cross-modal forks fail |
-| 2E | Dataset & QLoRA feasibility design | No training executed |
-
-Full reports live under `artifacts/reports/` and `docs/`.
-
----
-
-## 7. Research Integrity
-
-1. **Probe decodability ≠ causal usage**  
-2. **Probe failure ≠ feature absence**  
-3. **Activation patching ≠ unique circuit**  
-4. **Attention weights ≠ causal explanation**  
-5. **No hallucinated citations** (inspection depth disclosed)  
-6. **Synthetic demos quarantined** (`is_synthetic_demo: true`)  
-7. **Historical artifacts preserved** — new runs write new files  
-
----
-
-## 8. Contributing
-
-- `main` is the integration branch; use feature branches + PRs  
-- No force-push; no credentials; no model weights in Git  
-- ULVO optional; standard Python supported  
-- See `docs/CONTRIBUTING.md`
-
----
-
-## 9. License & Citation
-
-### Phase 3 development audit (October 24, 2026)
-
-The [progress audit](docs/research_progress_audit.md), [research plan](docs/phase_3_research_plan.md), and [evaluation protocol](docs/phase_3_evaluation_protocol.md) distinguish historical results from new development diagnostics. The six-forward Qwen pilot stopped at the second-model VRAM gate; it is not a completed cross-model study. Training and causal interventions remain unapproved.
-
-With the ordinary Python environment described above, run `python scripts/verify_phase3_integrity.py` for CPU discovery with restricted dataset reads blocked. Three legacy tests that open mixed-split files are explicitly skipped; optional Torch tests also skip when Torch is absent. This requires neither ULVO nor WSCTL. Never remove those safeguards to obtain a larger passing-test count.
-
-To reproduce stored-results tables without overwriting evidence, use `python paper/tables/build_phase3_tables.py --output .cache/phase3_tables_rebuild`. Figures use `python paper/figures/build_phase3_figures.py --output .cache/phase3_figures_rebuild` with an already available Matplotlib installation. Choose a fresh directory for each repeat. No model inference is involved. Exact numerical reproduction was checked with Python 3.11; other Python versions can differ in floating-point accumulation. Partner-machine execution remains pending.
-
-Model weights: Apache-2.0 (Hugging Face model cards).  
-External datasets: see `docs/ASSET_MANIFEST.md` for licenses.  
-Cite this repository via GitHub URL and the commit hash of the release you used.
+Contributor names, author order and affiliations require agreement before submission. Git authorship does not establish paper authorship. Cite the repository and commit used. Model/data rights are separate; check them before redistribution.

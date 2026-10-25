@@ -1,5 +1,7 @@
 # Contributing to CrossModalLab
 
+For the university demonstration, begin with the [assessment workspace](../submission/university_oct28/README.md) and [repository map](REPOSITORY_MAP.md). The dashboard can serve its built frontend with ordinary Python alone; the broader core/GPU setup below is for research development. Neither WSCTL nor ULVO is mandatory for a partner.
+
 CrossModalLab supports **two execution modes** with the same scientific source code.
 
 | Mode | Environment | Typical user |

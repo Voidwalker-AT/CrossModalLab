@@ -1,0 +1,46 @@
+test_api_is_readonly_and_contained (test_dashboard.TestDashboard.test_api_is_readonly_and_contained) ... 127.0.0.1 - - [25/Oct/2026 14:41:50] "POST /api/workspace HTTP/1.1" 405 -
+127.0.0.1 - - [25/Oct/2026 14:41:50] "PUT /api/workspace HTTP/1.1" 405 -
+127.0.0.1 - - [25/Oct/2026 14:41:50] "PATCH /api/workspace HTTP/1.1" 405 -
+127.0.0.1 - - [25/Oct/2026 14:41:50] "DELETE /api/workspace HTTP/1.1" 405 -
+127.0.0.1 - - [25/Oct/2026 14:41:50] "GET /api/image/not-allowlisted HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 14:41:50] "GET /api/image/..%2f..%2fAGENTS.md HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 14:41:50] "GET /..%2f..%2fAGENTS.md HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 14:41:50] "GET /api/train HTTP/1.1" 404 -
+ok
+test_error_categories_do_not_conflate_format_and_semantics (test_dashboard.TestDashboard.test_error_categories_do_not_conflate_format_and_semantics) ... ok
+test_host_restriction_and_headers (test_dashboard.TestDashboard.test_host_restriction_and_headers) ... 127.0.0.1 - - [25/Oct/2026 14:41:50] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 14:41:50] "GET /api/health HTTP/1.1" 403 -
+ok
+test_metrics_separate_semantic_and_exact_format (test_dashboard.TestDashboard.test_metrics_separate_semantic_and_exact_format) ... ok
+test_only_real_validation_cases_and_dual_oracle (test_dashboard.TestDashboard.test_only_real_validation_cases_and_dual_oracle) ... ok
+test_partner_image_fallback_without_original_dataset_cache (test_dashboard.TestDashboard.test_partner_image_fallback_without_original_dataset_cache) ... ok
+test_reproducibility_fields_are_portable_and_complete (test_dashboard.TestDashboard.test_reproducibility_fields_are_portable_and_complete) ... ok
+test_synthetic_demo_cannot_enter_analytics (test_dashboard.TestDashboard.test_synthetic_demo_cannot_enter_analytics) ... ok
+test_witness_paths_use_only_recorded_premises (test_dashboard.TestDashboard.test_witness_paths_use_only_recorded_premises) ... ok
+test_workspace_repeats_without_mutating_evidence (test_dashboard.TestDashboard.test_workspace_repeats_without_mutating_evidence) ... 127.0.0.1 - - [25/Oct/2026 14:41:50] "GET /api/workspace HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 14:41:50] "GET /api/workspace HTTP/1.1" 200 -
+ok
+test_current_production_bundle_needs_no_node (test_dashboard_launcher.DashboardLauncherTests.test_current_production_bundle_needs_no_node) ... Production frontend is current.
+ok
+test_missing_build_cannot_install_implicitly (test_dashboard_launcher.DashboardLauncherTests.test_missing_build_cannot_install_implicitly) ... ok
+test_missing_referenced_css_requires_rebuild (test_dashboard_launcher.DashboardLauncherTests.test_missing_referenced_css_requires_rebuild) ... ok
+test_source_change_invalidates_fingerprint (test_dashboard_launcher.DashboardLauncherTests.test_source_change_invalidates_fingerprint) ... ok
+test_all_svg_images_and_raw_predictions_are_exact (test_dashboard_neural_exports.NeuralExportTests.test_all_svg_images_and_raw_predictions_are_exact) ... ok
+test_comparison_api_is_allowlisted_and_read_only (test_dashboard_neural_exports.NeuralExportTests.test_comparison_api_is_allowlisted_and_read_only) ... 127.0.0.1 - - [25/Oct/2026 14:41:51] "GET /api/comparison/xc_ho_0011%3A%3Aunderdetermined.svg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Oct/2026 14:41:51] "GET /api/comparison/not-allowlisted.svg HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 14:41:51] "GET /api/comparison/..%2fREADME.md.svg HTTP/1.1" 404 -
+127.0.0.1 - - [25/Oct/2026 14:41:51] "POST /api/comparison/x.svg HTTP/1.1" 405 -
+ok
+test_misattribution_and_synthetic_rejected (test_dashboard_neural_exports.NeuralExportTests.test_misattribution_and_synthetic_rejected) ... ok
+test_nonfinite_and_causal_upgrade_rejected (test_dashboard_neural_exports.NeuralExportTests.test_nonfinite_and_causal_upgrade_rejected) ... ok
+test_registration_preserves_existing_bytes_and_objects (test_dashboard_neural_exports.NeuralExportTests.test_registration_preserves_existing_bytes_and_objects) ... ok
+test_validated_measurements_are_separate_from_qwen (test_dashboard_neural_exports.NeuralExportTests.test_validated_measurements_are_separate_from_qwen) ... ok
+test_all_logic_exports_preserve_premises_and_countermodels (test_dashboard_story.DashboardStoryTests.test_all_logic_exports_preserve_premises_and_countermodels) ... ok
+test_featured_wrong_answers_cannot_be_presented_as_improvement (test_dashboard_story.DashboardStoryTests.test_featured_wrong_answers_cannot_be_presented_as_improvement) ... ok
+test_finalized_release_rejected_before_any_write (test_dashboard_story.DashboardStoryTests.test_finalized_release_rejected_before_any_write) ... ok
+test_gallery_is_escaped_offline_and_explained (test_dashboard_story.DashboardStoryTests.test_gallery_is_escaped_offline_and_explained) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.545s
+
+OK
