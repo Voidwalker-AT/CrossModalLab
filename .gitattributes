@@ -19,3 +19,6 @@
 
 # Preserve raw verification-log bytes and their recorded SHA256 identities.
 /submission/university_oct28/verification/** -text
+
+# Keep new paper-support evidence and its source hashes byte-identical.
+/paper/overleaf_evidence_20261025/** -text

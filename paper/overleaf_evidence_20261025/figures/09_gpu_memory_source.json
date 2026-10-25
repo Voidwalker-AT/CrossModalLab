@@ -1,0 +1,63 @@
+{
+  "plotted_artists": [
+    {
+      "bars": [],
+      "scatter": [
+        [
+          [
+            1.0,
+            3015.963
+          ],
+          [
+            2.0,
+            3033.665
+          ],
+          [
+            3.0,
+            3019.691
+          ],
+          [
+            4.0,
+            3024.848
+          ],
+          [
+            5.0,
+            3018.531
+          ]
+        ],
+        [
+          [
+            1.0,
+            3232.0
+          ],
+          [
+            2.0,
+            3176.0
+          ],
+          [
+            3.0,
+            3304.0
+          ],
+          [
+            4.0,
+            3178.0
+          ],
+          [
+            5.0,
+            3304.0
+          ]
+        ]
+      ],
+      "lines": [],
+      "matrices": []
+    }
+  ],
+  "original_sources": {
+    "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/train_metrics_append.jsonl": "9787419be094a644bbe6e61332527dff1765a97a78389c3728cd0cf085d6ae43"
+  },
+  "packaged_data": {
+    "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208",
+    "tables/f_five_step_telemetry.csv": "015a550e761e7f66c985c5c1e9ed5b986e8a3cffd3cce27dea56665e260c0ff5"
+  },
+  "classification": "HISTORICAL OBSERVATIONS"
+}

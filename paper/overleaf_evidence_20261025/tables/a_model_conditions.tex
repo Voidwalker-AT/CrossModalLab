@@ -1,0 +1,70 @@
+\begin{longtable}{p{.18\linewidth}p{.72\linewidth}}
+\caption{a model conditions: source-rich supplementary record sheet.}\\
+\hline Field & Value \\ \hline
+\multicolumn{2}{l}{\textbf{Record 1}}\\
+condition & frozen \\
+model & Qwen3-VL-2B \\
+revision & 89644892e4d85e24eaac8bacfd4f463576704203 \\
+steps & 0 \\
+cases & 18 \\
+families & 6 \\
+prompt & standard \\
+source & \path{artifacts/training/phase_2i_a/phase_2i_a_report_v1.json#baseline_standard.raw} \\
+status & VERIFIED historical \\
+\hline
+\multicolumn{2}{l}{\textbf{Record 2}}\\
+condition & prompt \\
+model & Qwen3-VL-2B \\
+revision & 89644892e4d85e24eaac8bacfd4f463576704203 \\
+steps & 0 \\
+cases & 18 \\
+families & 6 \\
+prompt & augmented \\
+source & \path{artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/baseline.json#abstention_prompt.raw} \\
+status & VERIFIED historical \\
+\hline
+\multicolumn{2}{l}{\textbf{Record 3}}\\
+condition & ce5 \\
+model & Qwen3-VL-2B \\
+revision & 89644892e4d85e24eaac8bacfd4f463576704203 \\
+steps & 5 \\
+cases & 18 \\
+families & 6 \\
+prompt & standard \\
+source & \path{artifacts/training/phase_2i_a/phase_2i_a_report_v1.json#val_step_5.raw} \\
+status & VERIFIED historical \\
+\hline
+\multicolumn{2}{l}{\textbf{Record 4}}\\
+condition & es5 \\
+model & Qwen3-VL-2B \\
+revision & 89644892e4d85e24eaac8bacfd4f463576704203 \\
+steps & 5 \\
+cases & 18 \\
+families & 6 \\
+prompt & standard \\
+source & \path{artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json#standard.raw} \\
+status & VERIFIED historical \\
+\hline
+\multicolumn{2}{l}{\textbf{Record 5}}\\
+condition & ce50 \\
+model & Qwen3-VL-2B \\
+revision & 89644892e4d85e24eaac8bacfd4f463576704203 \\
+steps & 50 \\
+cases & 18 \\
+families & 6 \\
+prompt & standard \\
+source & \path{artifacts/training/phase_2i_a/phase_2i_a_report_v1.json#val_final.raw} \\
+status & VERIFIED historical \\
+\hline
+\multicolumn{2}{l}{\textbf{Record 6}}\\
+condition & es5prompt \\
+model & Qwen3-VL-2B \\
+revision & 89644892e4d85e24eaac8bacfd4f463576704203 \\
+steps & 5 \\
+cases & 18 \\
+families & 6 \\
+prompt & augmented \\
+source & \path{artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json#abstention_prompt.raw} \\
+status & VERIFIED historical \\
+\hline
+\end{longtable}

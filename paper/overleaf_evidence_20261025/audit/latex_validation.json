@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED_COMPILER_SANDBOX",
+  "operation": "Built-in LaTeX compilation of a separate snippet-validation project",
+  "project": ".cache/overleaf_evidence/latex_validation",
+  "observed_result": "compile-failed",
+  "diagnostic": "exec failed: unsupported operation: windows unelevated restricted-token sandbox cannot enforce split writable root sets directly; refusing to run unsandboxed",
+  "policy": "No unsandboxed workaround, installation or dependency change attempted.",
+  "full_overleaf_manuscript_compiled": false,
+  "snippet_compilation_verified": false,
+  "fallback": "Structural LaTeX/BibTeX checks only; actual compilation remains UNVERIFIED."
+}

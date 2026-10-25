@@ -1,0 +1,19 @@
+# E. Recorded optimizer/adaptation configuration; updates are not epochs.
+
+| setting | value | scope | source | status |
+|---|---|---|---|---|
+| optimizer | AdamW | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| lr | 0.0001 | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| weight_decay | 0.01 | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| betas | 0.9, 0.999 | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| epsilon | 1e-8 | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| LoRA rank | 2 | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| LoRA alpha | 4 | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| target modules | q_proj, k_proj, v_proj, o_proj | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| trainable parameters | 802816 | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| quantization | NF4 + double quantization | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| compute | BF16; adapters/header dtype separately recorded | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| gradient accumulation | 1 | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| batch size | 1 | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| steps | CE=50; CE+ES=5 paused | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |
+| ES margin / coefficient | 1.0 / 0.25; CE+ES only | historical CE / CE+ES | audit/recomputed.json#training_identity | VERIFIED |

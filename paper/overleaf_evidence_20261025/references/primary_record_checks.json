@@ -1,0 +1,470 @@
+[
+  {
+    "key": "W1",
+    "authors": [
+      "Tristan Thrush",
+      "Ryan Jiang",
+      "Max Bartolo",
+      "Amanpreet Singh",
+      "Adina Williams",
+      "Douwe Kiela",
+      "Candace Ross"
+    ],
+    "title": "Winoground: Probing Vision and Language Models for Visio-Linguistic Compositionality",
+    "year": "2022",
+    "url": "https://arxiv.org/abs/2204.03162",
+    "eprint": "2204.03162",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W2",
+    "authors": [
+      "Amita Kamath",
+      "Jack Hessel",
+      "Kai-Wei Chang"
+    ],
+    "title": "What’s “up” with vision-language models? Investigating their struggle with spatial reasoning",
+    "year": "2023",
+    "url": "https://aclanthology.org/2023.emnlp-main.568/",
+    "eprint": "",
+    "doi": "10.18653/v1/2023.emnlp-main.568",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W3",
+    "authors": [
+      "Yifan Li",
+      "Yifan Du",
+      "Kun Zhou",
+      "Jinpeng Wang",
+      "Wayne Xin Zhao",
+      "Ji-Rong Wen"
+    ],
+    "title": "Evaluating Object Hallucination in Large Vision-Language Models",
+    "year": "2023",
+    "url": "https://aclanthology.org/2023.emnlp-main.20/",
+    "eprint": "",
+    "doi": "10.18653/v1/2023.emnlp-main.20",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W4",
+    "authors": [
+      "Yonatan Geifman",
+      "Ran El-Yaniv"
+    ],
+    "title": "SelectiveNet: A Deep Neural Network with an Integrated Reject Option",
+    "year": "2019",
+    "url": "https://arxiv.org/abs/1901.09192",
+    "eprint": "1901.09192",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W5",
+    "authors": [
+      "Spencer Whitehead",
+      "Suzanne Petryk",
+      "Vedaad Shakib",
+      "Joseph Gonzalez",
+      "Trevor Darrell",
+      "Anna Rohrbach",
+      "Marcus Rohrbach"
+    ],
+    "title": "Reliable Visual Question Answering: Abstain Rather Than Answer Incorrectly",
+    "year": "2022",
+    "url": "https://arxiv.org/abs/2204.13631",
+    "eprint": "2204.13631",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W6",
+    "authors": [
+      "Kevin Wang",
+      "Alexandre Variengien",
+      "Arthur Conmy",
+      "Buck Shlegeris",
+      "Jacob Steinhardt"
+    ],
+    "title": "Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small",
+    "year": "2022",
+    "url": "https://arxiv.org/abs/2211.00593",
+    "eprint": "2211.00593",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W7",
+    "authors": [
+      "Fred Zhang",
+      "Neel Nanda"
+    ],
+    "title": "Towards Best Practices of Activation Patching in Language Models: Metrics and Methods",
+    "year": "2023",
+    "url": "https://arxiv.org/abs/2309.16042",
+    "eprint": "2309.16042",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W8",
+    "authors": [
+      "Tim Dettmers",
+      "Artidoro Pagnoni",
+      "Ari Holtzman",
+      "Luke Zettlemoyer"
+    ],
+    "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+    "year": "2023",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/1feb87871436031bdc0f2beaa62a049b-Abstract.html",
+    "eprint": "2305.14314",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W9",
+    "authors": [
+      "Long Chen",
+      "Xin Yan",
+      "Jun Xiao",
+      "Hanwang Zhang",
+      "Shiliang Pu",
+      "Yueting Zhuang"
+    ],
+    "title": "Counterfactual Samples Synthesizing for Robust Visual Question Answering",
+    "year": "2020",
+    "url": "https://openaccess.thecvf.com/content_CVPR_2020/html/Chen_Counterfactual_Samples_Synthesizing_for_Robust_Visual_Question_Answering_CVPR_2020_paper.html",
+    "eprint": "2003.06576",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W10",
+    "authors": [
+      "Hanning Zhang",
+      "Shizhe Diao",
+      "Yong Lin",
+      "Yi Fung",
+      "Qing Lian",
+      "Xingyao Wang",
+      "Yangyi Chen",
+      "Heng Ji",
+      "Tong Zhang"
+    ],
+    "title": "R-Tuning: Instructing Large Language Models to Say ‘I Don’t Know’",
+    "year": "2024",
+    "url": "https://aclanthology.org/2024.naacl-long.394/",
+    "eprint": "",
+    "doi": "10.18653/v1/2024.naacl-long.394",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W11",
+    "authors": [
+      "Aishwarya Agrawal",
+      "Jiasen Lu",
+      "Stanislaw Antol",
+      "Margaret Mitchell",
+      "C. Lawrence Zitnick",
+      "Dhruv Batra",
+      "Devi Parikh"
+    ],
+    "title": "VQA: Visual Question Answering",
+    "year": "2015",
+    "url": "https://arxiv.org/abs/1505.00468v7",
+    "eprint": "1505.00468v7",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W12",
+    "authors": [
+      "Wenyu Zhang",
+      "Wei En Ng",
+      "Lixin Ma",
+      "Yuwen Wang",
+      "Junqi Zhao",
+      "Allison Koenecke",
+      "Boyang Li",
+      "Lu Wang"
+    ],
+    "title": "SPHERE: Unveiling Spatial Blind Spots in Vision-Language Models Through Hierarchical Evaluation",
+    "year": "2025",
+    "url": "https://aclanthology.org/2025.acl-long.568/",
+    "eprint": "",
+    "doi": "10.18653/v1/2025.acl-long.568",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W13",
+    "authors": [
+      "Amita Kamath",
+      "Jack Hessel",
+      "Khyathi Chandu",
+      "Jena D. Hwang",
+      "Kai-Wei Chang",
+      "Ranjay Krishna"
+    ],
+    "title": "Scale Can’t Overcome Pragmatics: The Impact of Reporting Bias on Vision-Language Reasoning",
+    "year": "2026",
+    "url": "https://aclanthology.org/2026.tacl-1.41/",
+    "eprint": "",
+    "doi": "10.1162/tacl.a.690",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W14",
+    "authors": [
+      "Jialuo He",
+      "Huangxun Chen"
+    ],
+    "title": "From Knowing to Abstaining: Bridging the Representation–Action Gap in Vision–Language Models",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2609.32653v1",
+    "eprint": "2609.32653v1",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W15",
+    "authors": [
+      "Yue Zhang",
+      "Zun Wang",
+      "Han Lin",
+      "Yonatan Bitton",
+      "Idan Szpektor",
+      "Mohit Bansal"
+    ],
+    "title": "Seeing Isn't Knowing: Do VLMs Know When Not to Answer Spatial Questions (and Why)?",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2605.30557v2",
+    "eprint": "2605.30557v2",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W16",
+    "authors": [
+      "Nishanth Madhusudhan",
+      "Vikas Yadav",
+      "Alexandre Lacoste"
+    ],
+    "title": "Knowing When Not to Answer: Evaluating Abstention in Multimodal Reasoning Systems",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2604.14799v1",
+    "eprint": "2604.14799v1",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W17",
+    "authors": [
+      "Nicholas Moratelli",
+      "Christopher Davis",
+      "Leonardo F. R. Ribeiro",
+      "Bill Byrne",
+      "Gonzalo Iglesias"
+    ],
+    "title": "Benchmarking Deflection and Hallucination in Large Vision-Language Models",
+    "year": "2026",
+    "url": "https://aclanthology.org/2026.acl-long.1307/",
+    "eprint": "",
+    "doi": "10.18653/v1/2026.acl-long.1307",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W18",
+    "authors": [
+      "Mert Yuksekgonul",
+      "Federico Bianchi",
+      "Pratyusha Kalluri",
+      "Dan Jurafsky",
+      "James Zou"
+    ],
+    "title": "When and why vision-language models behave like bags-of-words, and what to do about it?",
+    "year": "2022",
+    "url": "https://arxiv.org/abs/2210.01936v3",
+    "eprint": "2210.01936v3",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W19",
+    "authors": [
+      "Tianrui Guan",
+      "Fuxiao Liu",
+      "Xiyang Wu",
+      "Ruiqi Xian",
+      "Zongxia Li",
+      "Xiaoyu Liu",
+      "Xijun Wang",
+      "Lichang Chen",
+      "Furong Huang",
+      "Yaser Yacoob",
+      "Dinesh Manocha",
+      "Tianyi Zhou"
+    ],
+    "title": "HallusionBench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models",
+    "year": "2023",
+    "url": "https://arxiv.org/abs/2310.14566v5",
+    "eprint": "2310.14566v5",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W20",
+    "authors": [
+      "Yanxu Zhu",
+      "Shitong Duan",
+      "Xiangxu Zhang",
+      "Jitao Sang",
+      "Peng Zhang",
+      "Tun Lu",
+      "Xiao Zhou",
+      "Jing Yao",
+      "Xiaoyuan Yi",
+      "Xing Xie"
+    ],
+    "title": "MoHoBench: Assessing Honesty of Multimodal Large Language Models via Unanswerable Visual Questions",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2507.21503v4",
+    "eprint": "2507.21503v4",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W21",
+    "authors": [
+      "Mingrui Wu",
+      "Jiayi Ji",
+      "Oucheng Huang",
+      "Jiale Li",
+      "Yuhang Wu",
+      "Xiaoshuai Sun",
+      "Rongrong Ji"
+    ],
+    "title": "Evaluating and Analyzing Relationship Hallucinations in Large Vision-Language Models",
+    "year": "2024",
+    "url": "https://arxiv.org/abs/2406.16449v4",
+    "eprint": "2406.16449v4",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W22",
+    "authors": [
+      "Cheng-Yu Hsieh",
+      "Jieyu Zhang",
+      "Zixian Ma",
+      "Aniruddha Kembhavi",
+      "Ranjay Krishna"
+    ],
+    "title": "SugarCrepe: Fixing Hackable Benchmarks for Vision-Language Compositionality",
+    "year": "2023",
+    "url": "https://arxiv.org/abs/2306.14610",
+    "eprint": "2306.14610",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W23",
+    "authors": [
+      "Vishaal Udandarao",
+      "Mehdi Cherti",
+      "Shyamgopal Karthik",
+      "Jenia Jitsev",
+      "Samuel Albanie",
+      "Matthias Bethge"
+    ],
+    "title": "A Good CREPE needs more than just Sugar: Investigating Biases in Compositional Vision-Language Benchmarks",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2506.08227v1",
+    "eprint": "2506.08227v1",
+    "doi": "",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "W24",
+    "authors": [
+      "Jasper Kyle Catapang"
+    ],
+    "title": "When Image and Text Disagree: Cross-Modal Evidence Conflict in Multimodal Retrieval-Augmented Generation",
+    "year": "2026",
+    "url": "https://aclanthology.org/2026.magmar-main.3/",
+    "eprint": "",
+    "doi": "10.18653/v1/2026.magmar-main.3",
+    "status": "VERIFIED primary metadata; publication venue omitted unless separately checked",
+    "depth": "Fresh primary record/abstract recheck; inherited selected-full-text audit where mapped"
+  },
+  {
+    "key": "LoRA",
+    "authors": [
+      "Edward J. Hu",
+      "Yelong Shen",
+      "Phillip Wallis",
+      "Zeyuan Allen-Zhu",
+      "Yuanzhi Li",
+      "Shean Wang",
+      "Lu Wang",
+      "Weizhu Chen"
+    ],
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "year": "2021",
+    "url": "https://arxiv.org/abs/2106.09685",
+    "eprint": "2106.09685",
+    "doi": "",
+    "status": "VERIFIED primary metadata",
+    "depth": "Metadata and abstract; cited preprint version"
+  },
+  {
+    "key": "QwenCard",
+    "authors": [
+      "{Qwen Team}"
+    ],
+    "title": "Qwen/Qwen3-VL-2B-Instruct model card",
+    "year": "",
+    "url": "https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct",
+    "eprint": "",
+    "doi": "",
+    "status": "VERIFIED official model documentation; not a peer-reviewed experiment",
+    "depth": "Official model card; exact revision/configuration checked locally: 89644892e4d85e24eaac8bacfd4f463576704203"
+  },
+  {
+    "key": "SmolCard",
+    "authors": [
+      "{HuggingFaceTB}"
+    ],
+    "title": "HuggingFaceTB/SmolVLM2-2.2B-Instruct model card",
+    "year": "",
+    "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+    "eprint": "",
+    "doi": "",
+    "status": "VERIFIED official model documentation; not a peer-reviewed experiment",
+    "depth": "Official model card; exact revision/configuration checked locally: 482adb537c021c86670beed01cd58990d01e72e4"
+  }
+]

@@ -1,0 +1,149 @@
+{
+  "plotted_artists": [
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [],
+      "matrices": [
+        [
+          [
+            1,
+            3,
+            2,
+            0
+          ],
+          [
+            0,
+            4,
+            2,
+            0
+          ],
+          [
+            0,
+            4,
+            2,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [],
+      "matrices": [
+        [
+          [
+            2,
+            2,
+            2,
+            0
+          ],
+          [
+            0,
+            4,
+            2,
+            0
+          ],
+          [
+            0,
+            4,
+            2,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [],
+      "matrices": [
+        [
+          [
+            3,
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            4,
+            0,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [],
+      "matrices": [
+        [
+          [
+            3,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            4,
+            2,
+            0
+          ],
+          [
+            0,
+            4,
+            2,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [],
+      "matrices": [
+        [
+          [
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0,
+            0
+          ]
+        ]
+      ]
+    }
+  ],
+  "original_sources": {
+    "artifacts/training/phase_2i_a/phase_2i_a_report_v1.json": "f73c18fd3dbe65cedb60dba2f9eaa46408f378d5b5b6c5a3bb1d7b9b6f54b13b",
+    "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/baseline.json": "4118d6e08345ae4cdb25471da15bb95be41b226e9646429c08df26841bd4816d",
+    "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json": "c56ce3152101e5f6f3207f024c6b949bbb87984f5d335bcb60be352350abb405"
+  },
+  "packaged_data": {
+    "audit/raw_predictions.json": "d27439fe633147ae42fdec80080aa8ca9b590a9c8dd135bd23b6247a554ac7db",
+    "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208"
+  },
+  "classification": "HISTORICAL OBSERVATIONS"
+}

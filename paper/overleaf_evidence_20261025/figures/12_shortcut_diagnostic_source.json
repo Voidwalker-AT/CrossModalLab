@@ -1,0 +1,70 @@
+{
+  "plotted_artists": [
+    {
+      "bars": [
+        {
+          "x": 0.0,
+          "height": 0.8,
+          "width": 0.33333333333334014
+        },
+        {
+          "x": 0.0,
+          "height": 0.8,
+          "width": 0.3333333333333333
+        },
+        {
+          "x": 0.0,
+          "height": 0.8,
+          "width": 0.3333333333333333
+        },
+        {
+          "x": 0.0,
+          "height": 0.8,
+          "width": 0.3333333333333333
+        },
+        {
+          "x": 0.0,
+          "height": 0.8,
+          "width": 0.3333333333333333
+        },
+        {
+          "x": 0.0,
+          "height": 0.8,
+          "width": 0.6666666666666666
+        },
+        {
+          "x": 0.0,
+          "height": 0.8,
+          "width": 0.6666666666666666
+        },
+        {
+          "x": 0.0,
+          "height": 0.8,
+          "width": 0.3333333333333333
+        }
+      ],
+      "scatter": [],
+      "lines": [
+        {
+          "x": [
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "y": [
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "matrices": []
+    }
+  ],
+  "original_sources": {
+    "artifacts/publication/20261025/benchmark/records.jsonl": "da31199175496e66ebdcd2d7c522c5038dc136cf9700b224138aec3e2bf83e87",
+    "src/benchmark/publication_factorial.py": "80a8adee2dca82c3b54d921b554e88f52275f2d82e2f7584fc898fa365d3c476"
+  },
+  "packaged_data": {
+    "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208"
+  },
+  "classification": "HISTORICAL OBSERVATIONS"
+}

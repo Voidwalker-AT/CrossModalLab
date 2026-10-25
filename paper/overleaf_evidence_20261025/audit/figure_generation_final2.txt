@@ -1,0 +1,1 @@
+{"figures": 12, "formats": ["PNG 320 DPI", "SVG vector"], "status": "GENERATED_FROM_FROZEN_PACKAGE_DATA"}

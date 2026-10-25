@@ -1,0 +1,30 @@
+{
+  "plotted_artists": [
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [],
+      "matrices": []
+    },
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [],
+      "matrices": []
+    },
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [],
+      "matrices": []
+    }
+  ],
+  "original_sources": {
+    "src/symbolic/solver.py": "fcdf88b00e5f0e8250784276cbfcbb11ea3e6bb9fd32df2af11c41631d80edc4",
+    "src/symbolic/relations.py": "50c5f8a6f0eeba9d2e2fe8662c13f93327d5d596d2deebb576c2acfd1dd25b7b"
+  },
+  "packaged_data": {
+    "audit/development_cases.json": "fcf6d8fa7590202205f345d2e094721d2056b2624501cd70044d6ea47e2deeb2"
+  },
+  "classification": "SYMBOLICALLY DERIVED SCHEMATIC"
+}

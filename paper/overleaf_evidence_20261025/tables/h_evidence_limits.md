@@ -1,0 +1,9 @@
+# H. Evidence classification and claim boundaries.
+
+| evidence | cases | meaning | source | status |
+|---|---|---|---|---|
+| Qwen generation | 18 | Behavior only; development reuse | audit/raw_predictions.json | VERIFIED |
+| CE+ES feasibility | 5 | Five updates, not benefit or epochs | audit/recomputed.json#training | VERIFIED historical |
+| Smol probes | 27 | Accessibility, not causal use | audit/recomputed.json#probe | CORRELATIONAL |
+| Intervention recovery | 16 | 10 interventions; 26 missing planned rows; control exceeds target | audit/recomputed.json#causal_audit | UNSUPPORTED mechanism |
+| New replication | 0 | RAM admission failed; zero attempts | audit/replication_admission.json | BLOCKED |

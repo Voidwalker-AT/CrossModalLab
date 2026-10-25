@@ -1,0 +1,251 @@
+# Mechanistic Analysis of Cross-Modal Relational Reasoning and Evidence Insufficiency in Vision-Language Transformers
+
+University preliminary paper, updated 2026-10-25 (publication mission). Scientific status: exploratory development study. The university-approved title is preserved; an external behavioral framing is proposed pending author agreement. Author list and affiliations await the contributors' agreement before submission. No target venue/template is confirmed; this portable single-column review draft asserts neither venue compliance nor acceptance. Evidence IDs refer to the [registry](../evidence_registry.md); W identifiers refer to the [primary-source audit](../references/verified_sources.md).
+
+## Abstract
+
+Vision-language systems can produce definite answers that supplied evidence does not justify. We study entailed, contradicted and underdetermined strict-left-of relations with symbolic ground truth and explicitly separated behavioral, representation and intervention evidence. A legacy audit finds conditional label predictability despite logically insufficient individual premises. We construct 9,216 fully counterbalanced development variants across six families: audited nonsemantic feature ceilings are 1/3 balanced accuracy, single-modality oracle-parsed role ceilings are 2/3, and the joint symbolic oracle reaches 1. These are design diagnostics, not model performance. A process-isolated 12-forward pilot compares two frozen compact VLMs on one fixed No/Undetermined pair. SmolVLM2 selects Yes/Yes; Qwen3-VL selects No/Yes, exactly reproducing earlier Qwen scores. Both give an unsupported definite answer on the fork; candidate-length normalization changes Qwen rankings. Historical CE50 and CE+ES5 development results remain unmatched-budget exploratory evidence, while selected probes and failed negative controls establish no relation-specific mechanism. We provide preserved raw outputs, controlled benchmark sources and CPU audits. The matched pilot is too small for three-class accuracy or generalization claims. Independent evaluation, end-to-end unimodal baselines, causal evidence, objective benefit and material novelty remain unresolved.
+
+## Introduction
+
+A grounded answer must depend on what the available evidence entails. Knowing that A is left of B and that C is left of B leaves the ordering of A and C undetermined. A system that answers “No” has confused insufficient evidence with contradiction. This error is especially relevant when premises are divided between an image and a textual statement: success can require both visual grounding and composition across modalities.
+
+The project asks three separate questions. First, how do compact VLMs behave across logically matched evidence states? Second, what task information is externally accessible in their representations? Third, do controlled interventions support a specific internal computation? These questions cannot be collapsed into a single benchmark score. A probe may decode a label that the model does not use, while a generic perturbation may alter outputs without isolating relational reasoning.
+
+Our current contribution is a reproducible exploratory workflow and bounded observations, not a completed mechanism discovery. Existing work already documents multimodal composition, spatial limitations, selective answering, and counterfactual training (W1–W5, W9–W13). The potential value of this study is a carefully controlled link between evidence-state behavior and internal computation; that link remains to be established. We therefore preserve unsuccessful controls and malformed outputs alongside successful engineering checks.
+
+## Research questions and contribution scope
+
+The primary question is whether definite answers persist when the combined evidence leaves the query open, after accounting for perceptual, role and answer-rule controls. Secondary questions concern accessible versus causally used evidence-state representations. Corrective training is optional and requires matched, independent evidence. The current contribution candidate is a controlled diagnostic study, not a discovered circuit or a new successful loss. Its novelty remains unverified against the collision matrix (W18–W24). The dashboard is reproducibility infrastructure rather than the central novelty claim.
+
+## Formal problem definition
+
+Let R(x,y) mean that x is strictly left of y. On distinct objects with consistent spatial evidence, R is irreflexive, asymmetric, and transitive. Let E be the supplied premises and q=R(A,C). The label is Yes when E entails q; No when E entails not-q; and Undetermined when E entails neither q nor not-q. Inconsistent premise sets require a separate rejection policy and are outside this three-state formalization.
+
+Forward chains R(A,B) and R(B,C) entail q. Reverse chains R(B,A) and R(C,B) entail R(C,A), hence not-q by asymmetry. Forks R(A,B) and R(C,B) admit models with either ordering of A and C. Underdetermined thus describes logical insufficiency of E, not the model’s confidence and not a false query. A model may also be uncertain about an entailed relation because it fails to perceive a premise; this is a different source of uncertainty.
+
+The benchmark supplies one premise visually and another textually in controlled families. The intended test is whether the queried relation follows jointly. Single-modality controls and matched evidence changes are needed to distinguish joint composition from shortcuts. The dashboard checks the selected 18 records against two independent symbolic algorithms and verifies image/prompt hashes. This is not an exhaustive perceptual or generator audit; identity collisions, overlap, inconsistent premises and ambiguous renderings require broader validation before extending the task.
+
+### Comparative evidence audit
+
+The source-grounded [prior-art evidence matrix](../prior_art_evidence_matrix.md) now records 21 papers, with selected full-text methods/results/appendix inspection and explicit unknown counts. Its comparison separates independent units, baselines, uncertainty and causal scope. MoHoBench's AAAI 2026 publication is verified by DOI 10.1609/aaai.v40i34.40159; R-Bench is ICML 2024. Rep2Act, SpatialUncertain and MM-AQA are treated as preprints, not assumed peer-reviewed. Winoground's matched-group evaluation and What'sUp's controlled physical arrangements motivate family-consistency and visual-validity requirements. IOI shows why explicit interventions can carry more causal weight than a large behavioral leaderboard. CMC-Bench itself reports missing unimodal/trivial controls and unvalidated judging; publication status does not make those omissions practices to copy. Our [gap assessment](../publication_evidence_gap_report.md) and [role-based skeptical reviews](../reviewer_objections_and_responses.md) identify independent validity and modality controls as prerequisites for stronger claims.
+
+## Related work
+
+Winoground controls lexical inventory to probe image-language composition (W1). What’sUp and SPHERE diagnose spatial understanding at different levels of complexity (W2/W12). Reporting-bias work provides a competing data-based explanation for weak reasoning (W13), which is not automatically the explanation for our checkpoints. POPE evaluates object hallucination (W3); a logically open relation is distinct from an absent object.
+
+SelectiveNet and reliable VQA formalize rejection, risk, and coverage (W4/W5). R-Tuning teaches refusal around parametric knowledge boundaries (W10). Our proposed margin targets sufficiency of supplied premises, but neither a rejection objective nor uncertainty-aware tuning is a new idea on its own. Counterfactual VQA training provides another direct overlap in controlled evidence variation (W9). QLoRA supplies our memory-efficient adaptation method (W8).
+
+Circuit studies and patching methodology motivate careful interventions and control choices (W6/W7). They do not license transferring a language-model circuit to our VLMs. These comparisons establish relevant prior art rather than a novelty clearance. The source audit records abstract/metadata inspection; full-text methodological comparison and a systematic collision review remain incomplete. Novelty of the exact three-state task/objective combination is UNVERIFIED. Recent work creates direct collisions: VAD-R/Rep2Act studies shortcut-filtered answerability representations and margin-based answer/abstain alignment (W14); SpatialUncertain studies spatial observation insufficiency (W15); MM-AQA varies modality dependency and sufficiency (W16); DeflectionBench studies insufficient/conflicting retrieved evidence (W17). Our formal 2D premise graphs are narrower and do not by themselves establish a novel mechanism or objective.
+
+## Experimental methodology
+
+Experiment identity includes model revision, quantization, source hashes, runtime versions, configuration and manifest hashes, ordered example IDs, source prompt and image hashes, parser version, optimizer settings, and validation membership. Runs use unique directories. Immutable checkpoints contain the adapter, AdamW state, Python/NumPy/CPU/CUDA RNG, and hashed metadata linked to the previous checkpoint. The journal is append-only; missing state never silently restarts training. Historical artifacts are retained.
+
+The Phase 2I-B pilot uses the existing frozen 50-example schedule but executes only its first five entries. This avoids changing sample order when changing the stopping budget. Each of the five belongs to a different training family, and IDs/labels match CE’s first five. Evaluation uses six disjoint validation families with three primary variants each. Source-prompt hashes for the optional abstention instruction identify original records; the augmentation rule is recorded separately. No final-holdout model evaluation was performed in this mission. The historical runner read/hashed its complete mixed manifest before selecting development records; final-holdout images were not used. Phase 3 applies a stricter rule: original mixed and final record files remain closed, and only exact selected development records are reconstructed. The current complete manifest hash is therefore not freshly certified in Phase 3.
+
+For development uncertainty we resample whole families 2,000 times with a fixed analysis seed and retain all three variants. Paired method comparisons use identical sampled families. These descriptive intervals do not correct repeated inspection, model/layer selection, or dependence induced by a narrow generator. No confirmatory significance test is reported. A future independent evaluation requires preregistered endpoints, sample size, effect-size targets and a multiple-comparison policy, with separate authorization for restricted data access.
+
+## Model architectures and hardware
+
+The pilot uses Qwen/Qwen3-VL-2B-Instruct at revision `89644892e4d85e24eaac8bacfd4f463576704203`. Historical probing and intervention artifacts use HuggingFaceTB/SmolVLM2-2.2B-Instruct at `482adb537c021c86670beed01cd58990d01e72e4`. Results are never pooled across revisions or prompts. Quantization is four-bit NF4 with double quantization and BF16 compute. Model files are reused offline; no new weights were downloaded.
+
+The primary machine has an RTX 2050 Laptop GPU with 4,096 MiB dedicated VRAM and approximately 15.65 GiB physical RAM, running Windows 11. The pilot records Python 3.11.16, PyTorch 2.6.0+cu124, Transformers 5.20.1, PEFT 0.21.2, and bitsandbytes 0.50.2. Driver capability and bundled CUDA are separate. A CUDA matrix operation passed before loading. ULVO manages the primary runtime; scientific modules remain portable to ordinary Python.
+
+## Benchmark construction
+
+The current manifest is `datasets/cross_modal_contrast_v2/cross_modal_contrast_v2.jsonl` with SHA-256 `cda6379bc841a4dad4bf839d59c6ca4b61d7d90d014be20a599f64bf30bad1d6`. Selected prompts and images are hash-checked. Training/validation family overlap is rejected. The frozen training schedule maximizes family coverage with balanced class exposure, seed 20261111; its 50 entries span 50 families with 17 Yes, 17 No, and 16 Undetermined examples. The five-step prefix contains two Yes, two No, and one Undetermined examples.
+
+Controlled rendered scientific data are distinct from illustrative synthetic demos. Demo records are quarantined and cannot enter empirical runs. A family may share logical or visual structure while using independent canvas jitter; “same visual structure” must not be reported as pixel-identical. The presentation distribution contains only the 18 validation records and their byte-identical images, so its startup does not need the full manifest or any final-holdout image. These selected artifacts do not constitute a complete dataset release: exhaustive split accounting, a manual perceptual audit and author-reviewed asset/license documentation remain publication requirements. Do not infer actual split membership from an `ho` substring in a family ID; manifest split fields govern selection.
+
+## Behavioral evaluation
+
+With class support n_c and true-positive count TP_c, balanced accuracy is `BA = (1/3) sum_c TP_c/n_c`; macro-F1 averages `2 TP_c/(n_c + predicted_c)` over the three labels. Invalid predictions add to the relevant support and never count as true positives. We report balanced accuracy over all three labels, per-class recall, invalid-output rate, abstention frequency, inappropriate abstention on sufficient evidence, and definite responses on underdetermined evidence. Invalid/missing/conflicting outputs remain incorrect rather than being coerced to No or Undetermined. The historical parser `strict_answer_v1` recognizes label prefixes and detects multiple label words; despite its name it accepts some non-label suffixes. Exact-label output counts are therefore reported separately.
+
+Greedy generation uses at most 16 new tokens. The standard and explicit-abstention prompts are separate conditions. Logical underdetermination is a ground-truth class, whereas selective prediction is an action policy; an Undetermined frequency is not by itself a calibrated risk-coverage curve. We therefore make no calibration or selective-risk claim. A calibrated selection study and a preregistered output-format sensitivity analysis remain future work.
+
+## Representation analysis
+
+Representation probes quantify external accessibility of labels in a chosen hidden-state readout. The selected Phase 1F Smol layer-18 last-token probe reports BA 0.777778 on nine validation families, with stored family-bootstrap interval [0.592593,0.962963]. Layer/token/L2 selection used development outcomes, so this is correlational and potentially optimistic. It does not show that the decoder causally uses that representation (E7).
+
+The surviving Phase 2B intervention file has 16 records over two families and only ten intervention rows. Its controls produce larger absolute margin changes than targeted patches in the completed subset. The stored recovery audit reports 26 missing planned records and a prior evidence-loss incident. These observations prevent a confirmatory relation-specific circuit claim (E8). No new causal patching was run here.
+
+Any future causal study must distinguish mediation at the tested site from necessity, sufficiency, or uniqueness. Negative controls, valid corruption pairs, alternate paths, and held-out families are essential. Attention weights are routing measurements; logit-lens vocabulary readouts are correlational; residual dimensions are not automatically neurons or monosemantic features. The present mechanistic investigation is an audit of evidence and failed controls. It establishes neither a neuron-level explanation nor a unique necessary or sufficient relational computation. The title states the research program, not a completed mechanistic discovery.
+
+## Causal intervention analysis
+
+The historical Phase 2B audit does not establish a mechanism: unrelated-token absolute effects exceed targeted effects, and planned records are missing. The new two-model pair also fails the prespecified opposed No/U-margin eligibility screen in both models (E19). Exact-anchor alignment and no-op replacement are CPU-tested infrastructure, not live-model causal evidence. No GPU intervention was authorized or executed. An eligible matched pair, validated hooks and effects beyond frozen negative controls remain required; the [control audit](../../docs/publication_methods_and_controls.md) preserves raw margins and design limits.
+
+## Evidence-aware parameter-efficient training
+
+Language attention q/k/v/o projections receive rank-2 LoRA with alpha 4. Vision and multimodal projector parameters remain frozen. Batch size and gradient accumulation are both one. AdamW uses learning rate 0.0001, betas (0.9,0.999), epsilon 1e-8, weight decay 0.01, no scheduler; gradient checkpointing is enabled and generation cache disabled in training. CE supervises only the exact gold answer span: one token for Yes/No and two for Undetermined under this tokenizer.
+
+For candidate answer a with tokens a_1,...,a_m, define
+
+`s_a(x) = sum_{t=1}^m log p_theta(a_t | image, prompt, a_<t)`.
+
+For candidate a, s_a is the sum of teacher-forced log probabilities of its complete token sequence given the image/prompt and preceding answer tokens. Candidate strings include the leading space: ` Yes`, ` No`, ` Undetermined`. Scores are not length-normalized. Qwen multimodal token types align with appended text, and positions are recomputed to preserve multimodal rotary alignment. Multi-token answers are never reduced to their first token.
+
+For insufficient evidence, ES=max(0,1+max(s_Yes,s_No)-s_Undetermined). For sufficient evidence, ES=max(0,1+s_Undetermined-s_gold). The frozen objective is CE+0.25 ES. This margin encourages the appropriate side of abstention while retaining CE supervision. Its effect is a hypothesis; different candidate lengths and CE averaging versus summed score margins remain confounds. No coefficient or margin was tuned during this pilot. Numerical audits compare all frozen tensors exactly, allowing only verified equivalent dtype changes, and separately require finite changed LoRA weights. Five optimizer calls were executed; further training requires explicit authorization.
+
+## Interactive research workbench
+
+The React/TypeScript frontend and Python standard-library backend expose five read-only views: architecture, evidence and reasoning, failure investigation, analytics and reproducibility. The interface uses original stored development images and generations; no model, GPU, ULVO or network service is required for runtime. Fixed allowlists and image/prompt hashes constrain the evidence paths. Architecture diagrams are conceptual, and the symbolic graph is an independently checked oracle rather than a neural reasoning trace. Logical countermodels are compatible orderings, not additional observed scenes. This separation prevents attractive visualizations from being mistaken for causal evidence.
+
+For `xc_ho_0011::underdetermined`, visual A < B and textual C < B leave the query A < C open. Both frozen Qwen and CE+ES step five generated exactly `No`. The interface displays this as an unsupported No, while retaining exact-format compliance. On `xc_ho_0011::contradicted`, CE step 50 has a correct parsed No but a malformed raw suffix; the two quality axes are displayed independently. The [exact demonstration records](../../submission/2026-10-28/demo_examples.json) preserve prompts, outputs and image hashes.
+
+## Preliminary results
+
+| Development condition | BA | Recall Yes / No / Undetermined | Invalid outputs | Exact-label outputs |
+|---|---:|---|---:|---:|
+| Frozen Qwen, standard prompt | 0.388889 | 1/6, 4/6, 2/6 | 0/18 | 18/18 |
+| CE step five | 0.388889 | 3/6, 4/6, 0/6 | 6/18 | 0/18 |
+| CE+ES step five | 0.500000 | 3/6, 4/6, 2/6 | 0/18 | 18/18 |
+| CE step 50, historical | 0.666667 | 6/6, 6/6, 0/6 | 0/18 | 0/18 |
+
+Each row uses the same 18 cases/six families. Source outputs and per-family predictions are in [derived tables](../tables/development_summary.json) and [CSV](../tables/family_predictions.csv). The step-five CE+ES minus CE BA difference is 0.111111, descriptive paired family CI [0,0.222222]. Only two additional cases are correct. Four of six forks remain wrong in the pilot. Six Undetermined predictions include four on sufficient cases, showing that correct abstention cannot be inferred from abstention frequency alone. With the explicit abstention prompt, frozen and step-five CE+ES BA are both 0.444444; a matched CE step-five augmented condition is unavailable.
+
+The five CE+ES CE/ES/total loss triplets are (14.891876,0,14.891876), (16.306824,1.114895,16.585548), (7.565945,0,7.565945), (16.695772,3.702376,17.621367), and (17.152073,2.037066,17.661339). These are different examples, so the sequence is not a learning curve on a fixed input. Step runtimes sum to 22.2652 seconds, excluding baseline/evaluation, parameter audits, and checkpoint writes; the complete execution took 286.972 seconds. All five checkpoints plus initialization validate. No frozen numerical difference was found; all 224 adapter tensors changed relative to initialization. Peak step allocator usage was 3033.665 MiB, peak reserved 3304 MiB, maximum sampled NVIDIA usage 3795 MiB, and minimum sampled available RAM 2912.504 MiB. Sampled usage is not a continuous physical peak guarantee.
+
+Earlier paired data report Smol 8/18 and Qwen 10/18 correct with zero correct forks each, on a different development slice (E6). These counts motivate follow-up but are not pooled with the present slice. The current evidence supports bounded feasibility and preliminary behavioral observations; lower loss or higher development BA does not establish better reasoning.
+
+## Phase 3 validity and behavioral findings
+
+The [selected-data audit](../../artifacts/phase3/20261024_v2/audit.json) reconstructs 50 scheduled training records and 18 displayed validation records and requires exact historical prompt/image/label agreement (E13). All 68 labels pass reachability and linear-extension verification; neither individual modality logically settles the query. Train/validation families, exact prompts/images and unordered entity triples are disjoint in this selected scope, but eleven entity names overlap and the grammar/renderer are shared. The mixed source and frozen final rows remain closed; complete final independence is not established.
+
+Despite this logical validity, each modality contains a deterministic label stratum in the restricted three-variant construction. A text-role or image-role lookup fitted on the scheduled training records reaches validation BA 2/3. These are oracle-parsed features, not VLM perception or evidence of actual shortcut use. The result demonstrates that absence of single-premise entailment does not ensure absence of conditional-label shortcuts. Legacy visual names also use geometric proxies, including a violet star rendered as a diamond. Historical stimuli remain unchanged.
+
+A new development design varies both premise directions and the query direction, reusing exact images for text/query counterfactuals and naming literal 2D shapes. It contains 12 mixed-pool families, 96 cases and 24 images: Yes/No/Undetermined supports 24/24/48. The [design manifest](../../artifacts/phase3/20261024_v2/factorial_development/manifest.json) records seed, alias mappings and provenance. There are zero deterministic role groups and maximum conditional-label purity 1/2; role-lookup BA remains 2/3 because one premise can exclude a class without determining truth. This is exposed development preparation, not independent confirmation or proof of chance-level unimodal prediction.
+
+A separately bounded pilot preregistered two same-image/query No/U cases from one new family, three complete-answer candidates and two pinned frozen models (E14). It completed only Qwen's six forwards. The [raw score file](../../artifacts/phase3/20261024_v2/pilot/candidate_scores.jsonl) preserves token IDs and full-precision scores; the table below rounds to six decimals.
+
+| New development case | Gold | Sum LL Yes | Sum LL No | Sum LL Undetermined | Summed-LL choice | LL/token choice |
+|---|---|---:|---:|---:|---|---|
+| p3dev2_2026102403_000::v1t1q0 | No | -15.440173 | -14.690173 | -20.440187 | No | Undetermined |
+| p3dev2_2026102403_000::v1t0q0 | Undetermined | -14.200110 | -15.325110 | -20.325121 | Yes | Undetermined |
+
+These are candidate decisions, not generated completions or calibrated confidence. LL/token changes both rankings, including making the contradicted case incorrect; no improved decision rule is established and the frozen training objective is unchanged. All 625 Qwen parameter comparisons pass. Sampled available RAM remains at least 5422.375 MiB; peak allocated memory is 1575.535 MiB and maximum sampled physical GPU use is 1961 MiB. The [execution report](../../artifacts/phase3/20261024_v2/pilot/execution.json) exits FAILED at the next model's free-VRAM gate: 1468 MiB remains reserved with 8.126 MiB allocated. Process exit releases the GPU use; the residual owner is unverified. Smol is not loaded, the pilot is incomplete, and no retry or optimizer step follows.
+
+The historical paired 18-case/six-family slice is reanalyzed separately (E15), retaining identical image/prompt identities and uniform parser checks. Smol BA is 0.444444 and Qwen BA 0.555556; both miss all six forks. The paired descriptive difference is 0.111111 with 95% family interval [-0.111111, 0.277778]. Exact-format counts are Smol 0/18 (punctuated outputs) and Qwen 18/18. The [versioned table](../tables/phase3_20261024/historical_cross_model.csv) is a reanalysis of old outputs, not new replication; no superiority claim follows.
+
+## Publication mission: controlled benchmark and matched pilot
+
+The October 25 benchmark (E17) fully crosses role permutations, premise/query directions, modality assignment, two layouts and prompt/content/choice ordering: 9,216 variants in six families, with Yes/No/U counts 2,304/2,304/4,608. Three complete families fit lookup baselines and three evaluate them. Nonsemantic metadata ceiling BA is 1/3; each single-modality oracle-parsed role feature reaches 2/3, while the combined symbolic oracle reaches 1. This quantified information gain is a property of the task, not evidence that a VLM composes premises. The [dataset card](../../docs/publication_benchmark_card.md) reports exact feature definitions and counterfactual tests.
+
+### Shortcut and leakage controls
+
+Zero exact prompt/image or unordered-triple overlaps occur between these new families and the permitted 68 legacy/96 earlier-development records (E17). This selected-source audit does not certify full training/holdout independence. The new benchmark's partitions are exposed development; shared renderer/grammar/entities and untested perceptual cues remain. Inspected-stratum ceilings supplement held-family lookups so unseen feature keys do not conceal label predictability. The six families, not their thousands of variants, are the independence units. No VLM evaluation of this larger benchmark has occurred.
+
+The new isolated pilot (E18) spends exactly 12 additional forwards on the previously fixed two cases, six per model, in separate processes. It succeeds where the October 24 same-process model switch failed. Smol scores Yes/No/U as [-0.661376, -0.908472, -2.633977] on the No case and [-0.164178, -2.128262, -3.627348] on U, selecting Yes in both. Qwen repeats the earlier full scores exactly and selects No/Yes. Qwen LL/token selects U/U; Smol LL/token remains Yes/Yes. Neither normalization nor this small comparison establishes model superiority. These are likelihood decisions, not generated completions.
+
+Exact before/after comparisons pass for 657 Smol and 625 Qwen parameters. Process exit is observed, actual worker PIDs are absent at analysis, and physical VRAM returns before admitting the second worker. Peak allocated/sampled physical GPU use is 3,330.529/3,876 MiB for Smol and 1,575.535/1,905 MiB for Qwen; minimum sampled available RAM is 4,748.219/4,803.25 MiB. No optimizer, model backward, causal intervention or holdout access occurs. Resource sampling cannot rule out brief transients. Raw outputs, input/token identities, timing and telemetry remain in [the isolated pilot](../../artifacts/publication/20261025/pilot/execution.json).
+
+The [independent evaluation protocol](../../docs/publication_independent_evaluation.md) defines family units, endpoint/exclusion freezes, descriptive versus confirmatory analysis and an explicit precision/cost tradeoff. The [real-world protocol](../../docs/publication_real_world_protocol.md) verifies 60 existing candidate image hashes but admits none for evaluation before individual rights and human annotation checks. A photograph revealing both queried objects cannot be labeled cross-modally underdetermined by ignoring visible evidence (E20).
+
+## Statistical analysis
+
+The separately authorized 108-forward development screen (E21) stopped after one attempted Smol forward and produced zero completed score rows. Qwen never started; no retry was performed. The original parent reported a RAM/VRAM safety-gate failure without retaining its triggering sample, so the precise resource is UNVERIFIED. Termination also prevented the final parameter comparison. The original executed source and partial ledger are preserved; a subsequent telemetry repair has CPU tests only. This failed screen contributes no model-performance estimate, confidence interval or causal result. The complete-screen CPU validator rejects failed status and missing, duplicated, misaligned or nonfinite rows rather than silently analyzing survivors.
+
+The original and historical paired tables use B=2000 family-cluster percentile resamples with fixed analysis seed 20261023. Every family retains all of its matched variants and comparisons resample the same family IDs. These intervals describe the inspected development families and do not correct adaptive model/layer/prompt selection. The one-family, two-label new pilot receives no three-class BA, inferential confidence interval or confirmatory p-value. Its complete-vs-partial status is part of the result.
+
+For an expanded approved evaluation, freeze class-sensitive endpoints, counterfactual consistency, format/parser sensitivity, an effect-size target and a simulation-based family count before accessing independent outcomes. Use a prespecified paired family contrast and Holm correction for the registered secondary comparisons. Candidate scores are not calibrated probabilities; logical Undetermined is not a selective-rejection confidence policy. The [evaluation protocol](../../docs/phase_3_evaluation_protocol.md) specifies the larger battery and approval boundary.
+
+## Discussion and reproducibility
+
+The strongest supported interpretation is a diagnostic limitation: correct symbolic supervision, family-disjoint selected IDs and a plausible aggregate score can coexist with predictable generator strata, malformed output and score-definition sensitivity. Neither a probe nor this behavioral audit establishes a failure mechanism. Recent representation/action and spatial-abstention work further narrows potential differentiation; the present work should be framed as an exploratory reproducible diagnostic study until independent evidence supports more (C10–C15).
+
+Six saved CE+ES boundaries, including initialization, passed the October 24 CPU component hashes, metadata/journal checks, AdamW moment reloads and required RNG-state validation with unchanged historical run files (E16). This is not fresh real-model restoration or resumed optimization. Ordinary-Python/core data checks remain available; the optional checkpoint check needs the existing Torch layer and trusted local binaries. The frozen October 28 gallery/ZIP remain unchanged. The live dashboard adds an explicitly separated stored two-model development update. See the [research roadmap](../../docs/phase_3_research_plan.md) and [publication progress](../../docs/publication_progress.md) for resource-gated next experiments; no causal patching, further training, new model download or final-holdout access occurred.
+
+## Figures and reproducible tables
+
+![Figure 1. Logical schematic: forward chain, reverse chain and fork under strict left-of. Arrows are supplied relations; no measured neural trace is depicted.](../figures/01_evidence_states.png)
+
+![Figure 2. Conceptual CrossModalLab research pipeline. Probes and surviving interventions do not establish a relation-specific mechanism.](../figures/02_research_pipeline.png)
+
+![Figure 3. Recorded checkpoint comparison on 18 development cases. Unequal step budgets and permissive semantic parsing prevent a method-superiority interpretation. Exact formatting is a separate measure.](../figures/03_checkpoint_comparison.png)
+
+![Figure 4. Per-class recall on six examples per label. These descriptive development proportions are not independent generalization estimates.](../figures/04_class_recall.png)
+
+![Figure 5. Original recorded fork image and exact unsupported answers. The logical countermodels are formal witnesses, not observed additional scenes.](../figures/05_recorded_failure.png)
+
+Vector SVG companions, PNGs and source hashes are in the [figure inventory](../figures/inventory.md). The [six-condition metrics CSV](../tables/submission_metrics.csv), [raw family predictions](../tables/family_predictions.csv) and [family-bootstrap analysis](../tables/development_summary.json) retain exact condition identities. The evidence and claims registries remain the controlling interpretation of all results.
+
+![Figure 6. Oracle-parsed role-pattern audit: deterministic strata in the displayed v2 slice and their removal in the new factorial development design. Both lookup balanced accuracies remain 2/3; this is a dataset diagnostic, not a neural or VLM result.](../figures/phase3_20261024/01_role_shortcuts.png)
+
+![Figure 7. Frozen Qwen candidate scoring on the new matched No/U pair. Sum and mean log-likelihood use different score definitions and change both rankings. Only six Qwen forwards completed; Smol was not loaded.](../figures/phase3_20261024/02_candidate_length_sensitivity.png)
+
+![Figure 8. Reanalysis of historical matched development recall. Both models miss six forks; paired uncertainty includes zero. This is distinct from the incomplete new pilot.](../figures/phase3_20261024/03_historical_cross_model.png)
+
+Phase 3 figure data identities and SHA-256 provenance are in the [versioned figure manifest](../figures/phase3_20261024/manifest.json). These are observed/derived diagnostics, not fabricated activation traces.
+
+![Figure 9. Inspected feature-stratum ceilings in the new factorial development design. Single-modality oracle roles retain 2/3 BA; audited nonsemantic metadata reaches 1/3 and the joint symbolic oracle 1. This is a task diagnostic, not measured VLM performance.](../figures/publication_20261025/01_controlled_feature_ceilings.png)
+
+![Figure 10. Raw No-minus-Undetermined margins for the fixed matched development pair. Both models have positive margins in both conditions and fail the proposed opposed-margin causal screen. Separate score axes are not calibrated cross-model confidence.](../figures/publication_20261025/02_matched_pair_margins.png)
+
+## Limitations
+
+There is no independent generalization result, multi-seed estimate, validated relation-specific causal mechanism, or exhaustive novelty clearance. Development sets have been reused for decisions. Six evaluation families yield fragile uncertainty estimates; the degenerate CE step-50 bootstrap reflects identical observed family scores, not population certainty. Rendered tasks cover a narrow domain. Candidate token lengths differ, generation can behave differently from teacher-forced scores, and the parser accepts malformed suffixes. A subsequent read-only real-model audit verified exact adapter, optimizer and RNG restoration at step five with zero optimizer calls and unchanged run files. This establishes restoration at that saved boundary, not equality of resumed optimization trajectories; no additional optimizer step was authorized. Windows sampled memory telemetry does not establish behavior on other hardware. Historical interrupted/deleted evidence cannot be reconstructed from surviving summaries.
+
+## Ethics and real-world relevance
+
+Unsupported confident relations can be harmful in assistive descriptions, navigation, or other systems that act on spatial information. The controlled benchmark is not evidence of deployment readiness, safety, or performance on medical or navigation tasks. Logical abstention must not be confused with broad safety refusal. Document model/data licenses, computation limits, and the role of AI assistance; preserve raw evidence and failed attempts. The demonstration package excludes model weights and third-party caches. Author-reviewed model/asset license statements, complete compute accounting and publication-policy disclosures are still required before public archival release. This manuscript was prepared with AI assistance; the contributors must review all claims, calculations, authorship and applicable disclosure rules. No human-subject study or deployment evaluation is claimed.
+
+## Future experiments
+
+First, have an independent contributor reproduce the saved-state and parser audit using ordinary Python and review the pilot’s exact source/configuration. Next, preregister a family-disjoint evaluation and matched training replication after explicit authorization, with output-format and token-length analyses planned before outcomes. Evaluate sufficient-case errors and unsupported definite answers jointly. Pursue causal interventions only after repairing the experimental design and receiving separate phase authorization. If causal evidence remains insufficient by the manuscript freeze, narrow the mechanistic claims with the authors. The [submission plan](../submission_plan.md) sets internal milestones without promising acceptance or inventing a venue deadline.
+
+## Conclusion
+
+CrossModalLab links controlled multimodal inputs, formal three-state ground truth, raw model generations, class-sensitive evaluation and explicit provenance in a working five-view research dashboard. On the stored development slice, a higher overall CE score coexists with complete fork failure and malformed outputs. A bounded five-step evidence-margin pilot demonstrates local engineering feasibility, while its small descriptive difference does not establish scientific benefit. Existing probe and intervention evidence does not identify a relation-specific causal mechanism. The next research milestone is independent, preregistered validation and stronger controls; the present university deliverable is a transparent, reproducible preliminary investigation.
+
+## References
+
+[W1] Tristan Thrush, Ryan Jiang, Max Bartolo, Amanpreet Singh, Adina Williams, Douwe Kiela, Candace Ross. **Winoground: Probing Vision and Language Models for Visio-Linguistic Compositionality**. 2022 / CVPR. arXiv:2204.03162; [CVF](https://openaccess.thecvf.com/content/CVPR2022/html/Thrush_Winoground_Probing_Vision_and_Language_Models_for_Visio-Linguistic_Compositionality_CVPR_2022_paper.html), [arXiv](https://arxiv.org/abs/2204.03162).
+
+[W2] Amita Kamath, Jack Hessel, Kai-Wei Chang. **What’s “up” with vision-language models? Investigating their struggle with spatial reasoning**. 2023 / EMNLP. DOI:10.18653/v1/2023.emnlp-main.568; [ACL](https://aclanthology.org/2023.emnlp-main.568/).
+
+[W3] Yifan Li, Yifan Du, Kun Zhou, Jinpeng Wang, Wayne Xin Zhao, Ji-Rong Wen. **Evaluating Object Hallucination in Large Vision-Language Models**. 2023 / EMNLP. DOI:10.18653/v1/2023.emnlp-main.20; [ACL](https://aclanthology.org/2023.emnlp-main.20/).
+
+[W4] Yonatan Geifman, Ran El-Yaniv. **SelectiveNet: A Deep Neural Network with an Integrated Reject Option**. 2019 / ICML, PMLR 97. arXiv:1901.09192; [PMLR](https://proceedings.mlr.press/v97/geifman19a.html), [arXiv](https://arxiv.org/abs/1901.09192).
+
+[W5] Spencer Whitehead, Suzanne Petryk, Vedaad Shakib, Joseph Gonzalez, Trevor Darrell, Anna Rohrbach, Marcus Rohrbach. **Reliable Visual Question Answering: Abstain Rather Than Answer Incorrectly**. 2022 / ECCV. arXiv:2204.13631; [arXiv](https://arxiv.org/abs/2204.13631).
+
+[W6] Kevin Wang, Alexandre Variengien, Arthur Conmy, Buck Shlegeris, Jacob Steinhardt. **Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small**. 2023 / ICLR; preprint 2022. arXiv:2211.00593; [arXiv](https://arxiv.org/abs/2211.00593), [OpenReview paper](https://openreview.net/pdf?id=NpsVSN6o4ul).
+
+[W7] Fred Zhang, Neel Nanda. **Towards Best Practices of Activation Patching in Language Models: Metrics and Methods**. 2024 / ICLR; preprint 2023. arXiv:2309.16042; [arXiv](https://arxiv.org/abs/2309.16042).
+
+[W8] Tim Dettmers, Artidoro Pagnoni, Ari Holtzman, Luke Zettlemoyer. **QLoRA: Efficient Finetuning of Quantized LLMs**. 2023 / NeurIPS 36. arXiv:2305.14314; [NeurIPS](https://proceedings.neurips.cc/paper_files/paper/2023/hash/1feb87871436031bdc0f2beaa62a049b-Abstract.html).
+
+[W9] Long Chen, Xin Yan, Jun Xiao, Hanwang Zhang, Shiliang Pu, Yueting Zhuang. **Counterfactual Samples Synthesizing for Robust Visual Question Answering**. 2020 / CVPR. arXiv:2003.06576; [CVF](https://openaccess.thecvf.com/content_CVPR_2020/html/Chen_Counterfactual_Samples_Synthesizing_for_Robust_Visual_Question_Answering_CVPR_2020_paper.html).
+
+[W10] Hanning Zhang, Shizhe Diao, Yong Lin, Yi Fung, Qing Lian, Xingyao Wang, Yangyi Chen, Heng Ji, Tong Zhang. **R-Tuning: Instructing Large Language Models to Say ‘I Don’t Know’**. 2024 / NAACL. DOI:10.18653/v1/2024.naacl-long.394; [ACL](https://aclanthology.org/2024.naacl-long.394/).
+
+[W11] Aishwarya Agrawal, Jiasen Lu, Stanislaw Antol, Margaret Mitchell, C. Lawrence Zitnick, Dhruv Batra, Devi Parikh (arXiv v7 order). **VQA: Visual Question Answering**. 2015 / ICCV. arXiv:1505.00468v7; [arXiv](https://arxiv.org/abs/1505.00468v7).
+
+[W12] Wenyu Zhang, Wei En Ng, Lixin Ma, Yuwen Wang, Junqi Zhao, Allison Koenecke, Boyang Li, Lu Wang. **SPHERE: Unveiling Spatial Blind Spots in Vision-Language Models Through Hierarchical Evaluation**. 2025 / ACL. DOI:10.18653/v1/2025.acl-long.568; [ACL](https://aclanthology.org/2025.acl-long.568/).
+
+[W13] Amita Kamath, Jack Hessel, Khyathi Chandu, Jena D. Hwang, Kai-Wei Chang, Ranjay Krishna. **Scale Can’t Overcome Pragmatics: The Impact of Reporting Bias on Vision-Language Reasoning**. 2026 / TACL 14. DOI:10.1162/tacl.a.690; [ACL](https://aclanthology.org/2026.tacl-1.41/).
+
+Reference summaries are limited to the inspection depth in the [source audit](../references/verified_sources.md). Final venue normalization and exhaustive collision clearance remain pending; the linked 21-paper audit discloses selected full-text inspection depth.
+
+[W14] Jialuo He, Huangxun Chen. **From Knowing to Abstaining: Bridging the Representation–Action Gap in Vision–Language Models**. 2026, arXiv:2609.32653v1 (preprint). [Primary record](https://arxiv.org/abs/2609.32653v1).
+
+[W15] Yue Zhang, Zun Wang, Han Lin, Yonatan Bitton, Idan Szpektor, Mohit Bansal. **Seeing Isn't Knowing: Do VLMs Know When Not to Answer Spatial Questions (and Why)?** 2026, arXiv:2605.30557v2 (preprint). [Primary record](https://arxiv.org/abs/2605.30557v2).
+
+[W16] Nishanth Madhusudhan, Vikas Yadav, Alexandre Lacoste. **Knowing When Not to Answer: Evaluating Abstention in Multimodal Reasoning Systems**. 2026, arXiv:2604.14799v1 (preprint). [Primary record](https://arxiv.org/abs/2604.14799v1).
+
+[W17] Nicholas Moratelli, Christopher Davis, Leonardo F. R. Ribeiro, Bill Byrne, Gonzalo Iglesias. **Benchmarking Deflection and Hallucination in Large Vision-Language Models**. ACL 2026. DOI:10.18653/v1/2026.acl-long.1307. [ACL](https://aclanthology.org/2026.acl-long.1307/).
+
+[W18] Mert Yuksekgonul, Federico Bianchi, Pratyusha Kalluri, Dan Jurafsky, James Zou. *When and why vision-language models behave like bags-of-words, and what to do about it?* ICLR 2023; [arXiv 2210.01936v3](https://arxiv.org/abs/2210.01936v3), [conference PDF](https://openreview.net/pdf?id=KRLUvxh8uaX).
+
+[W19] Tianrui Guan, Fuxiao Liu, Xiyang Wu, Ruiqi Xian, Zongxia Li, Xiaoyu Liu, Xijun Wang, Lichang Chen, Furong Huang, Yaser Yacoob, Dinesh Manocha, Tianyi Zhou. *HallusionBench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models*. CVPR 2024; [arXiv 2310.14566v5](https://arxiv.org/abs/2310.14566v5), [CVF PDF](https://openaccess.thecvf.com/content/CVPR2024/papers/Guan_HallusionBench_An_Advanced_Diagnostic_Suite_for_Entangled_Language_Hallucination_and_CVPR_2024_paper.pdf).
+
+[W20] Yanxu Zhu, Shitong Duan, Xiangxu Zhang, Jitao Sang, Peng Zhang, Tun Lu, Xiao Zhou, Jing Yao, Xiaoyuan Yi, Xing Xie. *MoHoBench: Assessing Honesty of Multimodal Large Language Models via Unanswerable Visual Questions*. [arXiv 2507.21503v4](https://arxiv.org/abs/2507.21503v4).
+
+[W21] Mingrui Wu, Jiayi Ji, Oucheng Huang, Jiale Li, Yuhang Wu, Xiaoshuai Sun, Rongrong Ji. *Evaluating and Analyzing Relationship Hallucinations in Large Vision-Language Models*. [arXiv 2406.16449v4](https://arxiv.org/abs/2406.16449v4), [OpenReview PDF](https://openreview.net/pdf?id=xpSlt67vxQ).
+
+[W22] Cheng-Yu Hsieh, Jieyu Zhang, Zixian Ma, Aniruddha Kembhavi, Ranjay Krishna. *SugarCrepe: Fixing Hackable Benchmarks for Vision-Language Compositionality*. NeurIPS Datasets and Benchmarks 2023; [arXiv 2306.14610](https://arxiv.org/abs/2306.14610), [proceedings PDF](https://papers.neurips.cc/paper_files/paper/2023/file/63461de0b4cb760fc498e85b18a7fe81-Paper-Datasets_and_Benchmarks.pdf).
+
+[W23] Vishaal Udandarao, Mehdi Cherti, Shyamgopal Karthik, Jenia Jitsev, Samuel Albanie, Matthias Bethge. *A Good CREPE needs more than just Sugar: Investigating Biases in Compositional Vision-Language Benchmarks*. [arXiv 2506.08227v1](https://arxiv.org/abs/2506.08227v1).
+
+[W24] Jasper Kyle Catapang. *When Image and Text Disagree: Cross-Modal Evidence Conflict in Multimodal Retrieval-Augmented Generation*. MAGMaR 2026, pp. 1–10; [ACL](https://aclanthology.org/2026.magmar-main.3/), DOI 10.18653/v1/2026.magmar-main.3.

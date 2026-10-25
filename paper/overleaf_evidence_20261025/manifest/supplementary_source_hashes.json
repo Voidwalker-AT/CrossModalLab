@@ -1,0 +1,16 @@
+{
+  "artifacts/phase3/20261024_v2/selected_development_records.jsonl": "eef0ac25b24212b097f5ee83404fc42ecb17a94534bdb8b2e6fe676dabd89c16",
+  "artifacts/phase3/20261024_v2/factorial_development/records.jsonl": "34d53f087edcfc875f65e99a8287e2ca946a52338cf7df0bd9295d22e65c8842",
+  "artifacts/paired/phase_2c_c/paired_evaluations_v1.jsonl": "3144e162def2a2d8dfd8781d258255a5d8e8fa92bde320063c750a086ab9c273",
+  "artifacts/phase3/20261024_v2/pilot/candidate_scores.jsonl": "444f37b2618960c8727128aa7526149aa94bdeef47d1df0810eb67c8d14ea451",
+  "artifacts/publication/20261025/pilot/smol/candidate_scores.jsonl": "f0eb664bd744c0efb49189c55249ca34219d95ce33546a55ea40e216ce3a2adf",
+  "artifacts/publication/20261025/pilot/smol/execution.json": "6435f9644f862aceda8d812a825c167f16b754fa8b74ab3da4188c7dce305683",
+  "artifacts/publication/20261025/pilot/qwen/candidate_scores.jsonl": "26aa01ee6102405be1148831c351a74dcb5ed237bacd1059755197f897e7fed5",
+  "artifacts/publication/20261025/pilot/qwen/execution.json": "9ba0d27f0198bad1f2c4e098291c42ccacac57370aaa037af0f5159529fddafa",
+  "artifacts/publication/20261025/screen108/execution.json": "a660321f945108e4ebf8172e9d02bfbfd52df1ae6f22dd5441ab8061f5bfd445",
+  "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/parameter_audit_step_0001.json": "88f4dbb16f7650e1f1c4fd4e8f3e0de3f8fc4167a262effb472f3e5ec0f825b2",
+  "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/parameter_audit_step_0002.json": "1e112c586332e7fef0753b11ff10ce6d251acdb4591db53480dc3c303eb6a437",
+  "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/parameter_audit_step_0003.json": "e80deb9f91e355580c1ee0472dcefe0714db9d25bad2720ee4d687c0e5668781",
+  "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/parameter_audit_step_0004.json": "b8e847163001b3b6b8973014effacf4f07c5eb9b2c943ac83d0e6a18041f3344",
+  "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/parameter_audit_step_0005.json": "f946205700a561e7c1cda1bcf7bc2206186e40e3c73092c3591ca51b0f2c3518"
+}

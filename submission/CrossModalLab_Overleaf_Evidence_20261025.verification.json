@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "zip": "submission/CrossModalLab_Overleaf_Evidence_20261025.zip",
+  "sha256": "dd83fcc4b48d0d532d088ea92999a39ed7fe1c62a4ae07c0a65aa09e54141459",
+  "bytes": 1242206,
+  "members": 155,
+  "crc": "PASS",
+  "extraction_hashes": "PASS",
+  "extracted_png_svg_decode": "PASS",
+  "complete_original_manuscript_compiled": false,
+  "new_model_forwards": 0,
+  "new_optimizer_steps": 0
+}

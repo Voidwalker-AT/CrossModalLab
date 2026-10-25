@@ -1,0 +1,19 @@
+{
+  "plotted_artists": [
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [],
+      "matrices": []
+    }
+  ],
+  "original_sources": {
+    "README.md": "8c90fe47df8a5bde89d1fd479f12a7ab9e8cc8ebb5ba4c742eb0c52d78c14079",
+    "docs/REPOSITORY_MAP.md": "a1a93ec0129bbc03eaee33c0d26bc4acbad615f29e0cf085da8fff90aeaf26dc"
+  },
+  "packaged_data": {
+    "audit/development_cases.json": "fcf6d8fa7590202205f345d2e094721d2056b2624501cd70044d6ea47e2deeb2",
+    "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208"
+  },
+  "classification": "CONCEPTUAL SYSTEM DIAGRAM"
+}

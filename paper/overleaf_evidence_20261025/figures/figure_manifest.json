@@ -1,0 +1,957 @@
+{
+  "01_system_architecture": {
+    "files": {
+      "01_system_architecture.png": "38627a677731510d58c058de68679aa0d65b2351410c8e6a1144fc52cd73e9cf",
+      "01_system_architecture.svg": "78ca4d32ee7b1c8f87f946bf3de8cbdb358894adc9e8aa2e05c087ebec1cfc15"
+    },
+    "width_inches": 7.16,
+    "height_inches": 2.5,
+    "raster_dpi": 320,
+    "caption": "Conceptual CrossModalLab workflow. Stored predictions and symbolic ground truth feed a read-only dashboard; historical Smol representation analysis is a separate evidence stream.",
+    "interpretation": "Separates behavior, logical ground truth and representation analysis.",
+    "limitations": "Conceptual engineering diagram, not measured neural pathways or activations.",
+    "classification": "CONCEPTUAL SYSTEM DIAGRAM",
+    "packaged_source_data": [
+      "audit/development_cases.json",
+      "audit/recomputed.json"
+    ],
+    "source_data_sha256": {
+      "audit/development_cases.json": "fcf6d8fa7590202205f345d2e094721d2056b2624501cd70044d6ea47e2deeb2",
+      "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208"
+    },
+    "original_sources": "See manifest/source_hashes.json and audit/raw_predictions.json; copied research sources in audit/source_records/.",
+    "generation_script": "figures/generate_figures.py",
+    "plotted_artists": [
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [],
+        "matrices": []
+      }
+    ],
+    "original_source_hashes": {
+      "README.md": "8c90fe47df8a5bde89d1fd479f12a7ab9e8cc8ebb5ba4c742eb0c52d78c14079",
+      "docs/REPOSITORY_MAP.md": "a1a93ec0129bbc03eaee33c0d26bc4acbad615f29e0cf085da8fff90aeaf26dc"
+    }
+  },
+  "02_three_evidence_states": {
+    "files": {
+      "02_three_evidence_states.png": "1d718ca330de045d715c1eacdce8a06854eaeb363079614efc8f8b1ef2f741e1",
+      "02_three_evidence_states.svg": "d1b3d1181126c86dc131467d84c4dfcbea25c5e7c21834c69849c7d32de567db"
+    },
+    "width_inches": 7.16,
+    "height_inches": 2.55,
+    "raster_dpi": 320,
+    "caption": "Three strict-left-of premise sets for the same query R(A,C). Chains entail the query or its negation; a fork admits both query orderings.",
+    "interpretation": "Undetermined is insufficient evidence, not false.",
+    "limitations": "Symbolic illustration derived from verified logical definitions; not an empirical measurement or neural graph.",
+    "classification": "SYMBOLICALLY DERIVED SCHEMATIC",
+    "packaged_source_data": [
+      "audit/development_cases.json"
+    ],
+    "source_data_sha256": {
+      "audit/development_cases.json": "fcf6d8fa7590202205f345d2e094721d2056b2624501cd70044d6ea47e2deeb2"
+    },
+    "original_sources": "See manifest/source_hashes.json and audit/raw_predictions.json; copied research sources in audit/source_records/.",
+    "generation_script": "figures/generate_figures.py",
+    "plotted_artists": [
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [],
+        "matrices": []
+      },
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [],
+        "matrices": []
+      },
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [],
+        "matrices": []
+      }
+    ],
+    "original_source_hashes": {
+      "src/symbolic/solver.py": "fcdf88b00e5f0e8250784276cbfcbb11ea3e6bb9fd32df2af11c41631d80edc4",
+      "src/symbolic/relations.py": "50c5f8a6f0eeba9d2e2fe8662c13f93327d5d596d2deebb576c2acfd1dd25b7b"
+    }
+  },
+  "03_recorded_failure_examples": {
+    "files": {
+      "03_recorded_failure_examples.png": "dc92df365f029ce1ffc1521d9e798a01aebc1001801ef0e3ffe2b6acac429a1f",
+      "03_recorded_failure_examples.svg": "8319a434d73bf913d3192cc766796d434cab741edd589041ccced6de47ae5a8b"
+    },
+    "width_inches": 7.16,
+    "height_inches": 3.0,
+    "raster_dpi": 320,
+    "caption": "Original, hash-verified stimuli for xc_ho_0011 entailed, contradicted and underdetermined development variants. Historical Qwen CE+ES5 generated Yes, No and No, respectively. Text premises are printed under each image.",
+    "interpretation": "The fork answer No is unsupported despite being correctly formatted.",
+    "limitations": "One exposed development family, not independent generalization. Images are original controlled benchmark stimuli; literal 2D shapes are disc and wedge.",
+    "classification": "HISTORICAL OBSERVATIONS",
+    "packaged_source_data": [
+      "audit/raw_predictions.json",
+      "audit/development_cases.json"
+    ],
+    "source_data_sha256": {
+      "audit/raw_predictions.json": "d27439fe633147ae42fdec80080aa8ca9b590a9c8dd135bd23b6247a554ac7db",
+      "audit/development_cases.json": "fcf6d8fa7590202205f345d2e094721d2056b2624501cd70044d6ea47e2deeb2"
+    },
+    "original_sources": "See manifest/source_hashes.json and audit/raw_predictions.json; copied research sources in audit/source_records/.",
+    "generation_script": "figures/generate_figures.py",
+    "plotted_artists": [
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [],
+        "matrices": []
+      },
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [],
+        "matrices": []
+      },
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [],
+        "matrices": []
+      }
+    ],
+    "original_source_hashes": {
+      "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json": "c56ce3152101e5f6f3207f024c6b949bbb87984f5d335bcb60be352350abb405"
+    }
+  },
+  "04_checkpoint_comparison": {
+    "files": {
+      "04_checkpoint_comparison.png": "cc50c06ad28744b9aa97143eadbb59e996e6e3a2b2cf085d102aef299b436e79",
+      "04_checkpoint_comparison.svg": "532edd98e8f0145d8dcea0cc84251de04d8f72833a7ae3c7cefd3aaf50d7ce68"
+    },
+    "width_inches": 3.5,
+    "height_inches": 2.75,
+    "raster_dpi": 320,
+    "caption": "Recomputed Qwen balanced accuracy on the same 18 development cases/six families. Prompt is frozen Qwen with augmented abstention instructions; CE50 and CE+ES5 have different update budgets.",
+    "interpretation": "Descriptive checkpoint differences; CE50 has zero Undetermined recall.",
+    "limitations": "Repeated development inspection; no superiority claim. Paired CE+ES5 minus CE5 interval includes zero; no uncertainty bars are invented here.",
+    "classification": "HISTORICAL OBSERVATIONS",
+    "packaged_source_data": [
+      "audit/raw_predictions.json",
+      "audit/recomputed.json"
+    ],
+    "source_data_sha256": {
+      "audit/raw_predictions.json": "d27439fe633147ae42fdec80080aa8ca9b590a9c8dd135bd23b6247a554ac7db",
+      "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208"
+    },
+    "original_sources": "See manifest/source_hashes.json and audit/raw_predictions.json; copied research sources in audit/source_records/.",
+    "generation_script": "figures/generate_figures.py",
+    "plotted_artists": [
+      {
+        "bars": [
+          {
+            "x": -0.4,
+            "height": 0.38888888888888884,
+            "width": 0.8
+          },
+          {
+            "x": 0.6,
+            "height": 0.4444444444444444,
+            "width": 0.8
+          },
+          {
+            "x": 1.6,
+            "height": 0.38888888888888884,
+            "width": 0.8
+          },
+          {
+            "x": 2.6,
+            "height": 0.49999999999999994,
+            "width": 0.8
+          },
+          {
+            "x": 3.6,
+            "height": 0.6666666666666666,
+            "width": 0.8
+          }
+        ],
+        "scatter": [],
+        "lines": [],
+        "matrices": []
+      }
+    ],
+    "original_source_hashes": {
+      "artifacts/training/phase_2i_a/phase_2i_a_report_v1.json": "f73c18fd3dbe65cedb60dba2f9eaa46408f378d5b5b6c5a3bb1d7b9b6f54b13b",
+      "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/baseline.json": "4118d6e08345ae4cdb25471da15bb95be41b226e9646429c08df26841bd4816d",
+      "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json": "c56ce3152101e5f6f3207f024c6b949bbb87984f5d335bcb60be352350abb405"
+    }
+  },
+  "05_class_recall": {
+    "files": {
+      "05_class_recall.png": "d88e5497e266e00875afb0727113b3a2bc1e43a918027c0a91c86cf4171d973f",
+      "05_class_recall.svg": "102b1240459a210d0a45667001c6ad24770e5bb2faccf228549db03921a4b300"
+    },
+    "width_inches": 7.16,
+    "height_inches": 2.8,
+    "raster_dpi": 320,
+    "caption": "Class-specific recall recomputed from raw historical generations; every class has six development cases.",
+    "interpretation": "Overall accuracy can hide failure to recognize insufficient evidence.",
+    "limitations": "All classes share six dependent families; no independent sample or causal interpretation.",
+    "classification": "HISTORICAL OBSERVATIONS",
+    "packaged_source_data": [
+      "audit/raw_predictions.json",
+      "audit/recomputed.json"
+    ],
+    "source_data_sha256": {
+      "audit/raw_predictions.json": "d27439fe633147ae42fdec80080aa8ca9b590a9c8dd135bd23b6247a554ac7db",
+      "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208"
+    },
+    "original_sources": "See manifest/source_hashes.json and audit/raw_predictions.json; copied research sources in audit/source_records/.",
+    "generation_script": "figures/generate_figures.py",
+    "plotted_artists": [
+      {
+        "bars": [
+          {
+            "x": -0.36,
+            "height": 0.16666666666666666,
+            "width": 0.24
+          },
+          {
+            "x": 0.64,
+            "height": 0.3333333333333333,
+            "width": 0.24
+          },
+          {
+            "x": 1.6400000000000001,
+            "height": 0.5,
+            "width": 0.24
+          },
+          {
+            "x": 2.6399999999999997,
+            "height": 0.5,
+            "width": 0.24
+          },
+          {
+            "x": 3.6399999999999997,
+            "height": 1.0,
+            "width": 0.24
+          },
+          {
+            "x": -0.12,
+            "height": 0.6666666666666666,
+            "width": 0.24
+          },
+          {
+            "x": 0.88,
+            "height": 0.6666666666666666,
+            "width": 0.24
+          },
+          {
+            "x": 1.88,
+            "height": 0.6666666666666666,
+            "width": 0.24
+          },
+          {
+            "x": 2.88,
+            "height": 0.6666666666666666,
+            "width": 0.24
+          },
+          {
+            "x": 3.88,
+            "height": 1.0,
+            "width": 0.24
+          },
+          {
+            "x": 0.12,
+            "height": 0.3333333333333333,
+            "width": 0.24
+          },
+          {
+            "x": 1.12,
+            "height": 0.3333333333333333,
+            "width": 0.24
+          },
+          {
+            "x": 2.12,
+            "height": 0.0,
+            "width": 0.24
+          },
+          {
+            "x": 3.12,
+            "height": 0.3333333333333333,
+            "width": 0.24
+          },
+          {
+            "x": 4.12,
+            "height": 0.0,
+            "width": 0.24
+          }
+        ],
+        "scatter": [],
+        "lines": [],
+        "matrices": []
+      }
+    ],
+    "original_source_hashes": {
+      "artifacts/training/phase_2i_a/phase_2i_a_report_v1.json": "f73c18fd3dbe65cedb60dba2f9eaa46408f378d5b5b6c5a3bb1d7b9b6f54b13b",
+      "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/baseline.json": "4118d6e08345ae4cdb25471da15bb95be41b226e9646429c08df26841bd4816d",
+      "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json": "c56ce3152101e5f6f3207f024c6b949bbb87984f5d335bcb60be352350abb405"
+    }
+  },
+  "06_confusion_matrices": {
+    "files": {
+      "06_confusion_matrices.png": "b249e7a138f106e15dffe1eac05894ca59e81bada14c84696fee69ed82a625b7",
+      "06_confusion_matrices.svg": "5da91be74ac8649ce32feb2435feb079945fce6a5f1faa1185b3fdb9681fb75d"
+    },
+    "width_inches": 7.16,
+    "height_inches": 2.25,
+    "raster_dpi": 320,
+    "caption": "Qwen confusion counts: rows are gold classes, columns are parsed predictions including Invalid. Each row sums to six; color scale is fixed at 0–6.",
+    "interpretation": "Invalid outputs remain errors; CE50 parses all outputs but misses every fork.",
+    "limitations": "Color represents counts, not confidence. These are prefix-parser outcomes, not exact-format acceptance.",
+    "classification": "HISTORICAL OBSERVATIONS",
+    "packaged_source_data": [
+      "audit/raw_predictions.json",
+      "audit/recomputed.json"
+    ],
+    "source_data_sha256": {
+      "audit/raw_predictions.json": "d27439fe633147ae42fdec80080aa8ca9b590a9c8dd135bd23b6247a554ac7db",
+      "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208"
+    },
+    "original_sources": "See manifest/source_hashes.json and audit/raw_predictions.json; copied research sources in audit/source_records/.",
+    "generation_script": "figures/generate_figures.py",
+    "plotted_artists": [
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [],
+        "matrices": [
+          [
+            [
+              1,
+              3,
+              2,
+              0
+            ],
+            [
+              0,
+              4,
+              2,
+              0
+            ],
+            [
+              0,
+              4,
+              2,
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [],
+        "matrices": [
+          [
+            [
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              4,
+              2,
+              0
+            ],
+            [
+              0,
+              4,
+              2,
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [],
+        "matrices": [
+          [
+            [
+              3,
+              1,
+              0,
+              2
+            ],
+            [
+              0,
+              4,
+              0,
+              2
+            ],
+            [
+              0,
+              4,
+              0,
+              2
+            ]
+          ]
+        ]
+      },
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [],
+        "matrices": [
+          [
+            [
+              3,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              4,
+              2,
+              0
+            ],
+            [
+              0,
+              4,
+              2,
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [],
+        "matrices": [
+          [
+            [
+              6,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              6,
+              0,
+              0
+            ]
+          ]
+        ]
+      }
+    ],
+    "original_source_hashes": {
+      "artifacts/training/phase_2i_a/phase_2i_a_report_v1.json": "f73c18fd3dbe65cedb60dba2f9eaa46408f378d5b5b6c5a3bb1d7b9b6f54b13b",
+      "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/baseline.json": "4118d6e08345ae4cdb25471da15bb95be41b226e9646429c08df26841bd4816d",
+      "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json": "c56ce3152101e5f6f3207f024c6b949bbb87984f5d335bcb60be352350abb405"
+    }
+  },
+  "07_format_vs_correctness": {
+    "files": {
+      "07_format_vs_correctness.png": "67b63fed2f3b660fc863d910c946888417f85e6aee2290f24d63f2cd00077b7f",
+      "07_format_vs_correctness.svg": "e733d550e6b7fac61bc0b7c4f4bdecec82960783e58f9856d125d37059af90cb"
+    },
+    "width_inches": 3.5,
+    "height_inches": 2.8,
+    "raster_dpi": 320,
+    "caption": "Semantic accuracy and exact-label compliance are recomputed separately. CE50 is 12/18 correct under the historical parser, 0/18 semantic-invalid and 0/18 exact-label compliant.",
+    "interpretation": "Malformed outputs and incorrect answers are distinct failures.",
+    "limitations": "Exact-label check trims outer whitespace only for classification; raw strings remain unchanged in the evidence.",
+    "classification": "HISTORICAL OBSERVATIONS",
+    "packaged_source_data": [
+      "audit/raw_predictions.json",
+      "audit/recomputed.json"
+    ],
+    "source_data_sha256": {
+      "audit/raw_predictions.json": "d27439fe633147ae42fdec80080aa8ca9b590a9c8dd135bd23b6247a554ac7db",
+      "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208"
+    },
+    "original_sources": "See manifest/source_hashes.json and audit/raw_predictions.json; copied research sources in audit/source_records/.",
+    "generation_script": "figures/generate_figures.py",
+    "plotted_artists": [
+      {
+        "bars": [
+          {
+            "x": -0.36,
+            "height": 0.3888888888888889,
+            "width": 0.36
+          },
+          {
+            "x": 0.6400000000000001,
+            "height": 0.4444444444444444,
+            "width": 0.36
+          },
+          {
+            "x": 1.6400000000000001,
+            "height": 0.3888888888888889,
+            "width": 0.36
+          },
+          {
+            "x": 2.6399999999999997,
+            "height": 0.5,
+            "width": 0.36
+          },
+          {
+            "x": 3.6399999999999997,
+            "height": 0.6666666666666666,
+            "width": 0.36
+          },
+          {
+            "x": -2.7755575615628914e-17,
+            "height": 1.0,
+            "width": 0.36000000000000004
+          },
+          {
+            "x": 0.9999999999999999,
+            "height": 1.0,
+            "width": 0.36000000000000004
+          },
+          {
+            "x": 2.0,
+            "height": 0.0,
+            "width": 0.36000000000000004
+          },
+          {
+            "x": 3.0,
+            "height": 1.0,
+            "width": 0.36000000000000004
+          },
+          {
+            "x": 3.9999999999999996,
+            "height": 0.0,
+            "width": 0.36000000000000004
+          }
+        ],
+        "scatter": [],
+        "lines": [],
+        "matrices": []
+      }
+    ],
+    "original_source_hashes": {
+      "artifacts/training/phase_2i_a/phase_2i_a_report_v1.json": "f73c18fd3dbe65cedb60dba2f9eaa46408f378d5b5b6c5a3bb1d7b9b6f54b13b",
+      "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/baseline.json": "4118d6e08345ae4cdb25471da15bb95be41b226e9646429c08df26841bd4816d",
+      "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json": "c56ce3152101e5f6f3207f024c6b949bbb87984f5d335bcb60be352350abb405"
+    }
+  },
+  "08_five_step_losses": {
+    "files": {
+      "08_five_step_losses.png": "c4e6cb4445d8a5d17be0b2be72d21ad585fee3c95a481d81018b4ec971e35db7",
+      "08_five_step_losses.svg": "99007bea01c6f6ac716a731fd8bae1799637dc26fd49cad2f4386263fcbf1be9"
+    },
+    "width_inches": 3.5,
+    "height_inches": 2.65,
+    "raster_dpi": 320,
+    "caption": "Exact observed CE, ES and CE+0.25 ES at five updates. No lines, smoothing or interpolated points are added.",
+    "interpretation": "Each example supplies a different loss; this is a feasibility record, not a fixed-input learning curve.",
+    "limitations": "Five selected updates cannot establish optimization convergence, method benefit or generalization.",
+    "classification": "HISTORICAL OBSERVATIONS",
+    "packaged_source_data": [
+      "audit/recomputed.json",
+      "tables/f_five_step_telemetry.csv"
+    ],
+    "source_data_sha256": {
+      "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208",
+      "tables/f_five_step_telemetry.csv": "015a550e761e7f66c985c5c1e9ed5b986e8a3cffd3cce27dea56665e260c0ff5"
+    },
+    "original_sources": "See manifest/source_hashes.json and audit/raw_predictions.json; copied research sources in audit/source_records/.",
+    "generation_script": "figures/generate_figures.py",
+    "plotted_artists": [
+      {
+        "bars": [],
+        "scatter": [
+          [
+            [
+              1.0,
+              14.891876220703125
+            ],
+            [
+              2.0,
+              16.30682373046875
+            ],
+            [
+              3.0,
+              7.565945148468018
+            ],
+            [
+              4.0,
+              16.695772171020508
+            ],
+            [
+              5.0,
+              17.15207290649414
+            ]
+          ],
+          [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              2.0,
+              1.1148948669433594
+            ],
+            [
+              3.0,
+              0.0
+            ],
+            [
+              4.0,
+              3.702376365661621
+            ],
+            [
+              5.0,
+              2.0370655059814453
+            ]
+          ],
+          [
+            [
+              1.0,
+              14.891876220703125
+            ],
+            [
+              2.0,
+              16.585548400878906
+            ],
+            [
+              3.0,
+              7.565945148468018
+            ],
+            [
+              4.0,
+              17.621366500854492
+            ],
+            [
+              5.0,
+              17.661338806152344
+            ]
+          ]
+        ],
+        "lines": [],
+        "matrices": []
+      }
+    ],
+    "original_source_hashes": {
+      "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/train_metrics_append.jsonl": "9787419be094a644bbe6e61332527dff1765a97a78389c3728cd0cf085d6ae43"
+    }
+  },
+  "09_gpu_memory": {
+    "files": {
+      "09_gpu_memory.png": "f1a6cb1a3fd9c9782fde0f8a6752d62b38bcb7e48fd633cc34294f50fe441eb8",
+      "09_gpu_memory.svg": "ac4af129846aefe06538f09d1a6c6181ff6f73f6a15523d4402e6bc999eb89cd"
+    },
+    "width_inches": 3.5,
+    "height_inches": 2.8,
+    "raster_dpi": 320,
+    "caption": "Per-update allocator maxima during the historical five-update pilot. Dedicated device capacity is 4096 MiB; allocator usage is distinct from sampled NVIDIA physical usage.",
+    "interpretation": "Shows bounded observed allocator demand, not present admission or guaranteed safe future capacity.",
+    "limitations": "Sampled physical memory peaks can miss transient allocations. This mission made zero new model forwards and passed no replication RAM admission.",
+    "classification": "HISTORICAL OBSERVATIONS",
+    "packaged_source_data": [
+      "audit/recomputed.json",
+      "tables/f_five_step_telemetry.csv"
+    ],
+    "source_data_sha256": {
+      "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208",
+      "tables/f_five_step_telemetry.csv": "015a550e761e7f66c985c5c1e9ed5b986e8a3cffd3cce27dea56665e260c0ff5"
+    },
+    "original_sources": "See manifest/source_hashes.json and audit/raw_predictions.json; copied research sources in audit/source_records/.",
+    "generation_script": "figures/generate_figures.py",
+    "plotted_artists": [
+      {
+        "bars": [],
+        "scatter": [
+          [
+            [
+              1.0,
+              3015.963
+            ],
+            [
+              2.0,
+              3033.665
+            ],
+            [
+              3.0,
+              3019.691
+            ],
+            [
+              4.0,
+              3024.848
+            ],
+            [
+              5.0,
+              3018.531
+            ]
+          ],
+          [
+            [
+              1.0,
+              3232.0
+            ],
+            [
+              2.0,
+              3176.0
+            ],
+            [
+              3.0,
+              3304.0
+            ],
+            [
+              4.0,
+              3178.0
+            ],
+            [
+              5.0,
+              3304.0
+            ]
+          ]
+        ],
+        "lines": [],
+        "matrices": []
+      }
+    ],
+    "original_source_hashes": {
+      "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/train_metrics_append.jsonl": "9787419be094a644bbe6e61332527dff1765a97a78389c3728cd0cf085d6ae43"
+    }
+  },
+  "10_historical_smol_probes": {
+    "files": {
+      "10_historical_smol_probes.png": "5c8a8c0944330ddebd954aa96cab2f57a3a32bb70f181714d90e1724c1204d35",
+      "10_historical_smol_probes.svg": "4b1c55ddfba8abcd4c6c797ab5816e422376ac137f262655a1ca5e5a60e61bb4"
+    },
+    "width_inches": 3.5,
+    "height_inches": 3.0,
+    "raster_dpi": 320,
+    "caption": "Historical SmolVLM2 last-token probe BA: layers 3/12/18/23 = 0.333333/0.518519/0.777778/0.740741. External probes used 81 training cases/27 families and 27 validation cases/nine families. Bars retain stored descriptive B=2000 family intervals.",
+    "interpretation": "Label accessibility to an external probe, not evidence the VLM causally used that information.",
+    "limitations": "Layer/selector/L2 selected on development data. BA independently checked from confusion counts; stored CI endpoints were not independently resampled in this mission. Separate from Qwen.",
+    "classification": "HISTORICAL OBSERVATIONS",
+    "packaged_source_data": [
+      "audit/recomputed.json",
+      "audit/neural_evidence_checked.json"
+    ],
+    "source_data_sha256": {
+      "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208",
+      "audit/neural_evidence_checked.json": "1607ca756d0b98ee3a5644a02fcaa2d73b92dae65ec9e8d902a411414ee38b4f"
+    },
+    "original_sources": "See manifest/source_hashes.json and audit/raw_predictions.json; copied research sources in audit/source_records/.",
+    "generation_script": "figures/generate_figures.py",
+    "plotted_artists": [
+      {
+        "bars": [],
+        "scatter": [],
+        "lines": [
+          {
+            "x": [
+              3.0,
+              12.0,
+              18.0,
+              23.0
+            ],
+            "y": [
+              0.333333,
+              0.518519,
+              0.777778,
+              0.740741
+            ]
+          },
+          {
+            "x": [
+              3.0,
+              12.0,
+              18.0,
+              23.0
+            ],
+            "y": [
+              0.222222,
+              0.37037,
+              0.592593,
+              0.592593
+            ]
+          },
+          {
+            "x": [
+              3.0,
+              12.0,
+              18.0,
+              23.0
+            ],
+            "y": [
+              0.444444,
+              0.666667,
+              0.962963,
+              0.888889
+            ]
+          },
+          {
+            "x": [
+              0.0,
+              1.0
+            ],
+            "y": [
+              0.3333333333333333,
+              0.3333333333333333
+            ]
+          }
+        ],
+        "matrices": []
+      }
+    ],
+    "original_source_hashes": {
+      "artifacts/probes/phase_1f/probe_reliability_summary_v1.json": "5055e7a55c234e1b8d8fd095e606d3f1997cfdd98ca5b23c0d46c23730cfafae"
+    }
+  },
+  "11_historical_activation_norms": {
+    "files": {
+      "11_historical_activation_norms.png": "5968088845a0fec5255f282edb8d9d8abdbc656c9cca4ab03cad0b134b56df7a",
+      "11_historical_activation_norms.svg": "0bf0dab901fbb09d5bc7d7446d734d59a5a40345490e1e0b17e909eb198fe4c8"
+    },
+    "width_inches": 3.5,
+    "height_inches": 2.65,
+    "raster_dpi": 320,
+    "caption": "Stored residual-row L2 norms for p0d2_ctrl_forward_chain_0010_forward_chain; four sampled layers, last-token selector, 2048 coordinates per row. Norms were rechecked against saved vectors.",
+    "interpretation": "Magnitude of a vector in a recorded representation, not confidence, evidence flow or neuron importance.",
+    "limitations": "One historical capture; separate Smol model, no Qwen attribution, no intervening or unmeasured layers.",
+    "classification": "HISTORICAL OBSERVATIONS",
+    "packaged_source_data": [
+      "audit/neural_evidence_checked.json"
+    ],
+    "source_data_sha256": {
+      "audit/neural_evidence_checked.json": "1607ca756d0b98ee3a5644a02fcaa2d73b92dae65ec9e8d902a411414ee38b4f"
+    },
+    "original_sources": "See manifest/source_hashes.json and audit/raw_predictions.json; copied research sources in audit/source_records/.",
+    "generation_script": "figures/generate_figures.py",
+    "plotted_artists": [
+      {
+        "bars": [],
+        "scatter": [
+          [
+            [
+              3.0,
+              32.653416
+            ],
+            [
+              12.0,
+              95.102928
+            ],
+            [
+              18.0,
+              296.469025
+            ],
+            [
+              23.0,
+              1248.702271
+            ]
+          ]
+        ],
+        "lines": [],
+        "matrices": []
+      }
+    ],
+    "original_source_hashes": {
+      "artifacts/instrumentation/phase_1a/vectors/p0d2_ctrl_forward_chain_0010_forward_chain.json": "3ae5ffedf48384a6ea7bfd3f9e14f1b2702abe07ee5121e4f32e3a1d6ceb8f33"
+    }
+  },
+  "12_shortcut_diagnostic": {
+    "files": {
+      "12_shortcut_diagnostic.png": "79cd57e2aa08d353266f605adaefd4466b80de23764594aaccbadac2fff97d08",
+      "12_shortcut_diagnostic.svg": "3b32f1bf080029de6216367b008300ccf31c3e4ff8047fa1f21977fd334b9258"
+    },
+    "width_inches": 3.5,
+    "height_inches": 3.15,
+    "raster_dpi": 320,
+    "caption": "CPU feature-stratum balanced-accuracy ceilings on 9216 variants/six dependent families: audited nuisance features 1/3, single-modality oracle-parsed roles 2/3; joint symbolic oracle 1. Asterisks identify oracle-parsed role features.",
+    "interpretation": "Logical non-entailment by one premise does not imply statistical label unpredictability.",
+    "limitations": "Only listed features audited. These are design diagnostics, not VLM scores, exhaustive shortcut clearance or independent samples.",
+    "classification": "HISTORICAL OBSERVATIONS",
+    "packaged_source_data": [
+      "audit/recomputed.json"
+    ],
+    "source_data_sha256": {
+      "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208"
+    },
+    "original_sources": "See manifest/source_hashes.json and audit/raw_predictions.json; copied research sources in audit/source_records/.",
+    "generation_script": "figures/generate_figures.py",
+    "plotted_artists": [
+      {
+        "bars": [
+          {
+            "x": 0.0,
+            "height": 0.8,
+            "width": 0.33333333333334014
+          },
+          {
+            "x": 0.0,
+            "height": 0.8,
+            "width": 0.3333333333333333
+          },
+          {
+            "x": 0.0,
+            "height": 0.8,
+            "width": 0.3333333333333333
+          },
+          {
+            "x": 0.0,
+            "height": 0.8,
+            "width": 0.3333333333333333
+          },
+          {
+            "x": 0.0,
+            "height": 0.8,
+            "width": 0.3333333333333333
+          },
+          {
+            "x": 0.0,
+            "height": 0.8,
+            "width": 0.6666666666666666
+          },
+          {
+            "x": 0.0,
+            "height": 0.8,
+            "width": 0.6666666666666666
+          },
+          {
+            "x": 0.0,
+            "height": 0.8,
+            "width": 0.3333333333333333
+          }
+        ],
+        "scatter": [],
+        "lines": [
+          {
+            "x": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "y": [
+              0.0,
+              1.0
+            ]
+          }
+        ],
+        "matrices": []
+      }
+    ],
+    "original_source_hashes": {
+      "artifacts/publication/20261025/benchmark/records.jsonl": "da31199175496e66ebdcd2d7c522c5038dc136cf9700b224138aec3e2bf83e87",
+      "src/benchmark/publication_factorial.py": "80a8adee2dca82c3b54d921b554e88f52275f2d82e2f7584fc898fa365d3c476"
+    }
+  }
+}

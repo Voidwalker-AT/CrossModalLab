@@ -1,0 +1,36 @@
+{
+  "plotted_artists": [
+    {
+      "bars": [],
+      "scatter": [
+        [
+          [
+            3.0,
+            32.653416
+          ],
+          [
+            12.0,
+            95.102928
+          ],
+          [
+            18.0,
+            296.469025
+          ],
+          [
+            23.0,
+            1248.702271
+          ]
+        ]
+      ],
+      "lines": [],
+      "matrices": []
+    }
+  ],
+  "original_sources": {
+    "artifacts/instrumentation/phase_1a/vectors/p0d2_ctrl_forward_chain_0010_forward_chain.json": "3ae5ffedf48384a6ea7bfd3f9e14f1b2702abe07ee5121e4f32e3a1d6ceb8f33"
+  },
+  "packaged_data": {
+    "audit/neural_evidence_checked.json": "1607ca756d0b98ee3a5644a02fcaa2d73b92dae65ec9e8d902a411414ee38b4f"
+  },
+  "classification": "HISTORICAL OBSERVATIONS"
+}

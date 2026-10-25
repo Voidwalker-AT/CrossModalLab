@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-25",
+  "status": "BLOCKED",
+  "first_observed_available_ram_kib": 4068044,
+  "available_ram_gib": 3.879589080810547,
+  "minimum_ram_gib": 4,
+  "dedicated_vram_total_mib": 4096,
+  "dedicated_vram_free_mib": 3636,
+  "gpu": "NVIDIA GeForce RTX 2050 Laptop GPU",
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "hard_forward_cap": 12,
+  "attempted_forwards": 0,
+  "optimizer_steps": 0,
+  "no_retry": true,
+  "reason": "First admission RAM gate below 4 GiB; no model loaded. Other CPU audit proceeds.",
+  "observed_python_processes": []
+}

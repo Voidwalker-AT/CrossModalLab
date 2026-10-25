@@ -1,0 +1,10 @@
+# A. Pinned Qwen conditions; greedy generation, max 16 new tokens; not candidate argmax.
+
+| condition | model | revision | steps | cases | families | prompt | source | status |
+|---|---|---|---|---|---|---|---|---|
+| frozen | Qwen3-VL-2B | 89644892e4d85e24eaac8bacfd4f463576704203 | 0 | 18 | 6 | standard | artifacts/training/phase_2i_a/phase_2i_a_report_v1.json#baseline_standard.raw | VERIFIED historical |
+| prompt | Qwen3-VL-2B | 89644892e4d85e24eaac8bacfd4f463576704203 | 0 | 18 | 6 | augmented | artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/baseline.json#abstention_prompt.raw | VERIFIED historical |
+| ce5 | Qwen3-VL-2B | 89644892e4d85e24eaac8bacfd4f463576704203 | 5 | 18 | 6 | standard | artifacts/training/phase_2i_a/phase_2i_a_report_v1.json#val_step_5.raw | VERIFIED historical |
+| es5 | Qwen3-VL-2B | 89644892e4d85e24eaac8bacfd4f463576704203 | 5 | 18 | 6 | standard | artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json#standard.raw | VERIFIED historical |
+| ce50 | Qwen3-VL-2B | 89644892e4d85e24eaac8bacfd4f463576704203 | 50 | 18 | 6 | standard | artifacts/training/phase_2i_a/phase_2i_a_report_v1.json#val_final.raw | VERIFIED historical |
+| es5prompt | Qwen3-VL-2B | 89644892e4d85e24eaac8bacfd4f463576704203 | 5 | 18 | 6 | augmented | artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json#abstention_prompt.raw | VERIFIED historical |

@@ -1,0 +1,6 @@
+{
+  "denied_opens": [],
+  "scope": "per-process Python open guard",
+  "model_forwards": 0,
+  "optimizer_steps": 0
+}

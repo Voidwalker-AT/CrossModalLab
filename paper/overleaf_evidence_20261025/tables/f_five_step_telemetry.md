@@ -1,0 +1,9 @@
+# F. Five observed updates on different examples; allocator peaks are not physical-device peaks.
+
+| step | sample | CE | ES | total | grad_L2 | seconds | peak_allocated_MiB | peak_reserved_MiB | source | status |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | xc_id_0094::entailed | 14.891876220703125 | 0.0 | 14.891876220703125 | 17.18075342825568 | 4.7116 | 3015.963 | 3232.0 | artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/train_metrics_append.jsonl | VERIFIED historical |
+| 2 | xc_id_0069::contradicted | 16.30682373046875 | 1.1148948669433594 | 16.585548400878906 | 16.1149279414898 | 4.6998 | 3033.665 | 3176.0 | artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/train_metrics_append.jsonl | VERIFIED historical |
+| 3 | xc_id_0001::underdetermined | 7.565945148468018 | 0.0 | 7.565945148468018 | 11.032014416217555 | 4.2458 | 3019.691 | 3304.0 | artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/train_metrics_append.jsonl | VERIFIED historical |
+| 4 | xc_id_0160::entailed | 16.695772171020508 | 3.702376365661621 | 17.621366500854492 | 33.80662629198056 | 4.1869 | 3024.848 | 3178.0 | artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/train_metrics_append.jsonl | VERIFIED historical |
+| 5 | xc_id_0156::contradicted | 17.15207290649414 | 2.0370655059814453 | 17.661338806152344 | 23.537222749070366 | 4.4211 | 3018.531 | 3304.0 | artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/train_metrics_append.jsonl | VERIFIED historical |

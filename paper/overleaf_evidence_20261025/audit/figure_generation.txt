@@ -1,0 +1,2 @@
+Matplotlib is building the font cache; this may take a moment.
+{"figures": 12, "formats": ["PNG 320 DPI", "SVG vector"], "status": "GENERATED_FROM_FROZEN_PACKAGE_DATA"}

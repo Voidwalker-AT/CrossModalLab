@@ -1,0 +1,1 @@
+{"status": "PASS", "conditions": 6, "records": 108, "new_forwards": 0, "trainable_parameters": 802816, "checkpoint_steps": 6, "probe_points": 4}

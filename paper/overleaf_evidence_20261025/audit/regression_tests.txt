@@ -1,0 +1,9 @@
+test_cross_python_reduction_roundoff_does_not_hide_count_changes (test_overleaf_evidence.OverleafEvidenceTests.test_cross_python_reduction_roundoff_does_not_hide_count_changes) ... ok
+test_duplicate_missing_class_and_demo_records_rejected (test_overleaf_evidence.OverleafEvidenceTests.test_duplicate_missing_class_and_demo_records_rejected) ... ok
+test_invalid_predictions_remain_in_recall_and_f1_denominators (test_overleaf_evidence.OverleafEvidenceTests.test_invalid_predictions_remain_in_recall_and_f1_denominators) ... ok
+test_malformed_correct_prefix_is_not_format_compliance (test_overleaf_evidence.OverleafEvidenceTests.test_malformed_correct_prefix_is_not_format_compliance) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK

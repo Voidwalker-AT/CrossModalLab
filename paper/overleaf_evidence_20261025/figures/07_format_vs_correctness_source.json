@@ -1,0 +1,71 @@
+{
+  "plotted_artists": [
+    {
+      "bars": [
+        {
+          "x": -0.36,
+          "height": 0.3888888888888889,
+          "width": 0.36
+        },
+        {
+          "x": 0.6400000000000001,
+          "height": 0.4444444444444444,
+          "width": 0.36
+        },
+        {
+          "x": 1.6400000000000001,
+          "height": 0.3888888888888889,
+          "width": 0.36
+        },
+        {
+          "x": 2.6399999999999997,
+          "height": 0.5,
+          "width": 0.36
+        },
+        {
+          "x": 3.6399999999999997,
+          "height": 0.6666666666666666,
+          "width": 0.36
+        },
+        {
+          "x": -2.7755575615628914e-17,
+          "height": 1.0,
+          "width": 0.36000000000000004
+        },
+        {
+          "x": 0.9999999999999999,
+          "height": 1.0,
+          "width": 0.36000000000000004
+        },
+        {
+          "x": 2.0,
+          "height": 0.0,
+          "width": 0.36000000000000004
+        },
+        {
+          "x": 3.0,
+          "height": 1.0,
+          "width": 0.36000000000000004
+        },
+        {
+          "x": 3.9999999999999996,
+          "height": 0.0,
+          "width": 0.36000000000000004
+        }
+      ],
+      "scatter": [],
+      "lines": [],
+      "matrices": []
+    }
+  ],
+  "original_sources": {
+    "artifacts/training/phase_2i_a/phase_2i_a_report_v1.json": "f73c18fd3dbe65cedb60dba2f9eaa46408f378d5b5b6c5a3bb1d7b9b6f54b13b",
+    "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/baseline.json": "4118d6e08345ae4cdb25471da15bb95be41b226e9646429c08df26841bd4816d",
+    "artifacts/training/phase_2i_b/runs/56e277e421e442b08d33b107fc934494/evaluation_step_0005.json": "c56ce3152101e5f6f3207f024c6b949bbb87984f5d335bcb60be352350abb405"
+  },
+  "packaged_data": {
+    "audit/raw_predictions.json": "d27439fe633147ae42fdec80080aa8ca9b590a9c8dd135bd23b6247a554ac7db",
+    "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208"
+  },
+  "classification": "HISTORICAL OBSERVATIONS"
+}

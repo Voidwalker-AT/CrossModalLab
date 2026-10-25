@@ -1,0 +1,420 @@
+{
+  "schema": "phase3_cpu_research_audit_v1",
+  "audit_scope": "50 frozen scheduled train examples + 18 displayed validation cases; original mixed manifests and final-holdout records not opened",
+  "source_run_identity": "800898e1515a7f828cd5a94f2aac9651a5a7a0bad14934bdeb7817d3433525fc",
+  "selected": {
+    "cases": 68,
+    "families": 56,
+    "labels": {
+      "Undetermined": 22,
+      "Yes": 23,
+      "No": 23
+    },
+    "dual_oracle_verified": true,
+    "family_split_disjoint": true,
+    "unique_prompt_hashes": 68,
+    "unique_image_hashes": 68
+  },
+  "train": {
+    "cases": 50,
+    "families": 50,
+    "labels": {
+      "Undetermined": 16,
+      "Yes": 17,
+      "No": 17
+    },
+    "dual_oracle_verified": true,
+    "family_split_disjoint": true,
+    "unique_prompt_hashes": 50,
+    "unique_image_hashes": 50
+  },
+  "validation": {
+    "cases": 18,
+    "families": 6,
+    "labels": {
+      "Yes": 6,
+      "No": 6,
+      "Undetermined": 6
+    },
+    "dual_oracle_verified": true,
+    "family_split_disjoint": true,
+    "unique_prompt_hashes": 18,
+    "unique_image_hashes": 18
+  },
+  "text_role_lookup": {
+    "balanced_accuracy": 0.6666666666666666,
+    "predictions": [
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "No",
+      "No"
+    ],
+    "train_cases": 50,
+    "evaluation_cases": 18,
+    "feature": "oracle-parsed single-modality entity roles; no gold label in feature",
+    "interpretation": "Dataset predictability diagnostic, not a VLM result or proof of model shortcut use"
+  },
+  "image_role_lookup": {
+    "balanced_accuracy": 0.6666666666666666,
+    "predictions": [
+      "Yes",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "Yes"
+    ],
+    "train_cases": 50,
+    "evaluation_cases": 18,
+    "feature": "oracle-parsed single-modality entity roles; no gold label in feature",
+    "interpretation": "Dataset predictability diagnostic, not a VLM result or proof of model shortcut use"
+  },
+  "text_role_ambiguity": {
+    "groups": 2,
+    "deterministic_groups": 1,
+    "maximum_label_purity": 1.0,
+    "label_sets": [
+      [
+        "No",
+        "Undetermined"
+      ],
+      [
+        "Yes"
+      ]
+    ]
+  },
+  "image_role_ambiguity": {
+    "groups": 2,
+    "deterministic_groups": 1,
+    "maximum_label_purity": 1.0,
+    "label_sets": [
+      [
+        "No"
+      ],
+      [
+        "Undetermined",
+        "Yes"
+      ]
+    ]
+  },
+  "entity_overlap_train_validation": [
+    "blue_cube",
+    "crimson_block",
+    "cyan_box",
+    "emerald_oval",
+    "golden_disc",
+    "green_cylinder",
+    "orange_torus",
+    "purple_pyramid",
+    "red_sphere",
+    "teal_wedge",
+    "yellow_cone"
+  ],
+  "cross_split_identical_image_hashes": [],
+  "cross_split_identical_prompt_hashes": [],
+  "unordered_entity_set_overlap": [],
+  "source_hash_checks": {
+    "scripts/run_phase_2i_b_es_ablation.py": true,
+    "src/models/qwen3vl2_loader.py": true,
+    "src/training/answer_parser.py": true,
+    "src/training/differentiable_scoring.py": true,
+    "src/training/lora_config.py": true,
+    "src/training/phase_2i_b_protocol.py": true,
+    "src/training/run_state.py": true,
+    "src/training/sampling_and_masking.py": true,
+    "src/training/scorer_verification.py": true
+  },
+  "config_hash_valid": true,
+  "schedule_hash_valid": true,
+  "dataset_combined_hash_status": "NOT RECOMPUTED: mixed train/validation/test source kept closed; historical identity retained; selected records independently matched",
+  "holdout_records_opened": false,
+  "new_model_forwards": 0,
+  "new_optimizer_steps": 0,
+  "frozen_parameter_integrity": "All five stored exact parameter audits pass; no new model load or fresh parameter comparison claimed",
+  "checkpoint_audit": {
+    "status": "PASS",
+    "checkpoints": [
+      {
+        "step": 0,
+        "components_sha256_verified": true,
+        "optimizer_state_valid": true,
+        "cpu_optimizer_moments_reloaded_exactly": true,
+        "rng_state_valid": true,
+        "cuda_rng_states": 1,
+        "trainable_tensors": 224
+      },
+      {
+        "step": 1,
+        "components_sha256_verified": true,
+        "optimizer_state_valid": true,
+        "cpu_optimizer_moments_reloaded_exactly": true,
+        "rng_state_valid": true,
+        "cuda_rng_states": 1,
+        "trainable_tensors": 224
+      },
+      {
+        "step": 2,
+        "components_sha256_verified": true,
+        "optimizer_state_valid": true,
+        "cpu_optimizer_moments_reloaded_exactly": true,
+        "rng_state_valid": true,
+        "cuda_rng_states": 1,
+        "trainable_tensors": 224
+      },
+      {
+        "step": 3,
+        "components_sha256_verified": true,
+        "optimizer_state_valid": true,
+        "cpu_optimizer_moments_reloaded_exactly": true,
+        "rng_state_valid": true,
+        "cuda_rng_states": 1,
+        "trainable_tensors": 224
+      },
+      {
+        "step": 4,
+        "components_sha256_verified": true,
+        "optimizer_state_valid": true,
+        "cpu_optimizer_moments_reloaded_exactly": true,
+        "rng_state_valid": true,
+        "cuda_rng_states": 1,
+        "trainable_tensors": 224
+      },
+      {
+        "step": 5,
+        "components_sha256_verified": true,
+        "optimizer_state_valid": true,
+        "cpu_optimizer_moments_reloaded_exactly": true,
+        "rng_state_valid": true,
+        "cuda_rng_states": 1,
+        "trainable_tensors": 224
+      }
+    ],
+    "historical_files_unchanged": true,
+    "optimizer_steps": 0,
+    "restoration_limit": "CPU state reload/validation only. No fresh real-model adapter or CUDA RNG restoration; prior GPU restoration remains historical evidence."
+  },
+  "pilot_step_seconds": [
+    4.7116,
+    4.6998,
+    4.2458,
+    4.1869,
+    4.4211
+  ],
+  "remaining_45_train_steps_seconds_linear_projection": 200.38679999999997,
+  "factorial": {
+    "cases": 96,
+    "families": 12,
+    "labels": {
+      "Yes": 24,
+      "No": 24,
+      "Undetermined": 48
+    },
+    "dual_oracle_verified": true,
+    "family_split_disjoint": true,
+    "unique_prompt_hashes": 48,
+    "unique_image_hashes": 24
+  },
+  "factorial_text_ambiguity": {
+    "groups": 4,
+    "deterministic_groups": 0,
+    "maximum_label_purity": 0.5,
+    "label_sets": [
+      [
+        "No",
+        "Undetermined"
+      ],
+      [
+        "No",
+        "Undetermined"
+      ],
+      [
+        "Undetermined",
+        "Yes"
+      ],
+      [
+        "Undetermined",
+        "Yes"
+      ]
+    ]
+  },
+  "factorial_image_ambiguity": {
+    "groups": 4,
+    "deterministic_groups": 0,
+    "maximum_label_purity": 0.5,
+    "label_sets": [
+      [
+        "No",
+        "Undetermined"
+      ],
+      [
+        "No",
+        "Undetermined"
+      ],
+      [
+        "Undetermined",
+        "Yes"
+      ],
+      [
+        "Undetermined",
+        "Yes"
+      ]
+    ]
+  },
+  "factorial_text_lookup": {
+    "balanced_accuracy": 0.6666666666666666,
+    "predictions": [
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "No",
+      "Yes"
+    ],
+    "train_cases": 48,
+    "evaluation_cases": 48,
+    "feature": "oracle-parsed single-modality entity roles; no gold label in feature",
+    "interpretation": "Dataset predictability diagnostic, not a VLM result or proof of model shortcut use"
+  },
+  "factorial_image_lookup": {
+    "balanced_accuracy": 0.6666666666666666,
+    "predictions": [
+      "Yes",
+      "No",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "Yes",
+      "No",
+      "No",
+      "Yes",
+      "No",
+      "Yes"
+    ],
+    "train_cases": 48,
+    "evaluation_cases": 48,
+    "feature": "oracle-parsed single-modality entity roles; no gold label in feature",
+    "interpretation": "Dataset predictability diagnostic, not a VLM result or proof of model shortcut use"
+  },
+  "historical_cross_model": {
+    "qwen3vl2": {
+      "cases": 18,
+      "correct": 10,
+      "unsupported_definite_forks": 6,
+      "strict_format_compliant": 18,
+      "mean_generation_latency_sec": 0.4252500000000001
+    },
+    "smolvlm2": {
+      "cases": 18,
+      "correct": 8,
+      "unsupported_definite_forks": 6,
+      "strict_format_compliant": 0,
+      "mean_generation_latency_sec": 20.806222222222218
+    },
+    "paired_identity_valid": true
+  }
+}

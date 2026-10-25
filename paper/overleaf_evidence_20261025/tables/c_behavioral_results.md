@@ -1,0 +1,10 @@
+# C. Recomputed historical behavior on identical development cases; no superiority claim.
+
+| condition | correct | BA | macro_F1 | recall_Y_N_U | unsupported | wrong_abstention | source | status |
+|---|---|---|---|---|---|---|---|---|
+| frozen | 7/18 | 0.388889 | 0.363212 | 1/6/4/6/2/6 | 4/6 | 4/12 | audit/raw_predictions.json#frozen | VERIFIED |
+| prompt | 8/18 | 0.444444 | 0.444444 | 2/6/4/6/2/6 | 4/6 | 4/12 | audit/raw_predictions.json#prompt | VERIFIED |
+| ce5 | 7/18 | 0.388889 | 0.400000 | 3/6/4/6/0/6 | 4/6 | 0/12 | audit/raw_predictions.json#ce5 | VERIFIED |
+| es5 | 9/18 | 0.500000 | 0.511111 | 3/6/4/6/2/6 | 4/6 | 4/12 | audit/raw_predictions.json#es5 | VERIFIED |
+| ce50 | 12/18 | 0.666667 | 0.555556 | 6/6/6/6/0/6 | 6/6 | 0/12 | audit/raw_predictions.json#ce50 | VERIFIED |
+| es5prompt | 8/18 | 0.444444 | 0.444444 | 2/6/4/6/2/6 | 4/6 | 4/12 | audit/raw_predictions.json#es5prompt | VERIFIED |

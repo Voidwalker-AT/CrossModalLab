@@ -1,0 +1,88 @@
+{
+  "cuda_available": true,
+  "torch_cuda_runtime": "12.4",
+  "packages": {
+    "torch": "2.6.0+cu124",
+    "transformers": "5.20.1",
+    "peft": "0.21.2",
+    "bitsandbytes": "0.50.2",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.2",
+    "safetensors": "0.8.0"
+  },
+  "snapshot_revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "snapshot_found": true,
+  "model_loaded": false,
+  "forwards": 0,
+  "local_weight_shards": [
+    {
+      "file": "model.safetensors",
+      "exists": true,
+      "bytes": 4255140312
+    }
+  ],
+  "configuration": {
+    "architectures": [
+      "Qwen3VLForConditionalGeneration"
+    ],
+    "image_token_id": 151655,
+    "model_type": "qwen3_vl",
+    "text_config": {
+      "attention_bias": false,
+      "attention_dropout": 0.0,
+      "bos_token_id": 151643,
+      "dtype": "bfloat16",
+      "eos_token_id": 151645,
+      "head_dim": 128,
+      "hidden_act": "silu",
+      "hidden_size": 2048,
+      "initializer_range": 0.02,
+      "intermediate_size": 6144,
+      "max_position_embeddings": 262144,
+      "model_type": "qwen3_vl_text",
+      "num_attention_heads": 16,
+      "num_hidden_layers": 28,
+      "num_key_value_heads": 8,
+      "rms_norm_eps": 1e-06,
+      "rope_scaling": {
+        "mrope_interleaved": true,
+        "mrope_section": [
+          24,
+          20,
+          20
+        ],
+        "rope_type": "default"
+      },
+      "rope_theta": 5000000,
+      "tie_word_embeddings": true,
+      "use_cache": true,
+      "vocab_size": 151936
+    },
+    "tie_word_embeddings": true,
+    "transformers_version": "4.57.0.dev0",
+    "video_token_id": 151656,
+    "vision_config": {
+      "deepstack_visual_indexes": [
+        5,
+        11,
+        17
+      ],
+      "depth": 24,
+      "hidden_act": "gelu_pytorch_tanh",
+      "hidden_size": 1024,
+      "in_channels": 3,
+      "initializer_range": 0.02,
+      "intermediate_size": 4096,
+      "model_type": "qwen3_vl",
+      "num_heads": 16,
+      "num_position_embeddings": 2304,
+      "out_hidden_size": 2048,
+      "patch_size": 16,
+      "spatial_merge_size": 2,
+      "temporal_patch_size": 2
+    },
+    "vision_end_token_id": 151653,
+    "vision_start_token_id": 151652
+  },
+  "compute_processes_nvidia_smi": "pid, process_name, used_gpu_memory [MiB]\n10656, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe, [N/A]\n12312, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe, [N/A]\n12360, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe, [N/A]\n1920, [Insufficient Permissions], [N/A]\n13672, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.62\\msedgewebview2.exe, [N/A]\n17108, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe, [N/A]\n36220, E:\\vivaldi\\Application\\vivaldi.exe, [N/A]\n26808, E:\\vivaldi\\Application\\vivaldi.exe, [N/A]\n17864, C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1016.8120.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe, [N/A]\n17024, C:\\Users\\hp\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\b2c4f0c90eadfac4\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe, [N/A]\n"
+}

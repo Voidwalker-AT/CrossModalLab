@@ -1,0 +1,9 @@
+{
+  "status": "VERIFIED_STATIC_HEADER_AND_FILE_EXTENT",
+  "tensors": 625,
+  "bytes": 4255140312,
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "weights_loaded": false,
+  "new_model_forwards": 0,
+  "limit": "Header/file-extent check only; whole-weight cryptographic hash not recomputed."
+}

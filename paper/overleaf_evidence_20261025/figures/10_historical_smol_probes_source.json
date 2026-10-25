@@ -1,0 +1,71 @@
+{
+  "plotted_artists": [
+    {
+      "bars": [],
+      "scatter": [],
+      "lines": [
+        {
+          "x": [
+            3.0,
+            12.0,
+            18.0,
+            23.0
+          ],
+          "y": [
+            0.333333,
+            0.518519,
+            0.777778,
+            0.740741
+          ]
+        },
+        {
+          "x": [
+            3.0,
+            12.0,
+            18.0,
+            23.0
+          ],
+          "y": [
+            0.222222,
+            0.37037,
+            0.592593,
+            0.592593
+          ]
+        },
+        {
+          "x": [
+            3.0,
+            12.0,
+            18.0,
+            23.0
+          ],
+          "y": [
+            0.444444,
+            0.666667,
+            0.962963,
+            0.888889
+          ]
+        },
+        {
+          "x": [
+            0.0,
+            1.0
+          ],
+          "y": [
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        }
+      ],
+      "matrices": []
+    }
+  ],
+  "original_sources": {
+    "artifacts/probes/phase_1f/probe_reliability_summary_v1.json": "5055e7a55c234e1b8d8fd095e606d3f1997cfdd98ca5b23c0d46c23730cfafae"
+  },
+  "packaged_data": {
+    "audit/recomputed.json": "be68c961dc96f042dc38bcc7e41d0d651e853ab3e0d8808de2748b4f4359c208",
+    "audit/neural_evidence_checked.json": "1607ca756d0b98ee3a5644a02fcaa2d73b92dae65ec9e8d902a411414ee38b4f"
+  },
+  "classification": "HISTORICAL OBSERVATIONS"
+}

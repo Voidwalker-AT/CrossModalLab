@@ -1,0 +1,7 @@
+# Revision plan for the separate writing stage
+
+Obtain the exact Overleaf main.tex/PDF first; reconcile its fifteen-reference list against this library, retaining the registered project title. Keep the behavioral manuscript title an explicit framing proposal. Resolve author order/affiliations and university requirements with the contributors.
+
+Abstract/contributions: narrow to a development behavioral and training-feasibility study. Formal section: insert verified three-state and executed abstention-specific ES equations. Dataset: explain legacy versus factorial designs and family dependence. Methods: exact model/revision/prompt/tokenization/parser/training identities and offline/no-new-replication status. Results: recomputed C/D raw counts, family uncertainty, separate CE50 and CE+ES5 budgets. Mechanistic section: optional historical Smol probes and failed-control audit; no Qwen circuit claim. Limitations: developmental selection, missing modality/perceptual controls, uncertainty, sample dependence, unmatched budgets, blocked replication. Conclusion: reproducible observations and unresolved questions, not superiority or novelty.
+
+Use audit/manuscript_claim_audit.md and results_reconciliation.csv line locators. Treat every UNVERIFIED compound paragraph as requiring exact source reconciliation. Do not rewrite/replace old evidence or merge the historical pilots into the new blocked replication. Do not modify the frozen October 28 demonstration distribution.

@@ -1,0 +1,47 @@
+{
+  "schema": "overleaf_replication_v1",
+  "status": "NOT_EXECUTED_ADMISSION_BLOCKED",
+  "selection_rule": "Lexicographically first allowlisted family, one case per gold class in Yes/No/Undetermined order; fixed without observing any new model output",
+  "model": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "adapter": "none; frozen base",
+  "quantization": "NF4 double quant; BF16 compute; SDPA",
+  "candidates": [
+    " Yes",
+    " No",
+    " Undetermined"
+  ],
+  "score": "Full summed teacher-forced candidate log-likelihood; not free generation; one top-level VLM forward per candidate",
+  "cases": [
+    {
+      "sample_id": "xc_ho_0011::entailed",
+      "prompt": "Notice that the teal wedge appears left of the crimson block.\n\nQuestion: Based on the image and statement, Is the golden disc left of the crimson block?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "prompt_sha256": "7c7d14351635c51df5d9a2c2d784890b9d2d84470cccd355a78b3bc34e8a8782",
+      "image_sha256": "07765bb13c2ea439db2677e95ddabb048ae39ea197f98aafd301c1b16544a35d",
+      "ground_truth_label": "Yes"
+    },
+    {
+      "sample_id": "xc_ho_0011::contradicted",
+      "prompt": "Spatially, crimson block is left of teal wedge.\n\nQuestion: Based on the image and statement, Is the golden disc left of the crimson block?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "prompt_sha256": "9469c9be400610000aa05fdf50e6448582433b90dbf6cc9afb51361a70ba1ef9",
+      "image_sha256": "d1c94c7c6ec9dfab9a6c5c0f10d3ca063e123086c2e6a4b1d37e3edd8a9f4f05",
+      "ground_truth_label": "No"
+    },
+    {
+      "sample_id": "xc_ho_0011::underdetermined",
+      "prompt": "The crimson block is to the left of the teal wedge.\n\nQuestion: Based on the image and statement, Is the golden disc left of the crimson block?\nCarefully evaluate whether the question is entailed (Yes), contradicted (No), or underdetermined from the evidence (Undetermined).\nAnswer directly with: Yes, No, or Undetermined.",
+      "prompt_sha256": "386b1aaaae76b56e66288e241e8f149c763cccc46f87d69b76753c946474055d",
+      "image_sha256": "100944c66694a46b17306f524670ac978275e63e4852c309eb110fdd36395836",
+      "ground_truth_label": "Undetermined"
+    }
+  ],
+  "planned_forwards": 9,
+  "hard_total_cap": 12,
+  "attempted_forwards": 0,
+  "failure_policy": "Stop without retry; unused authorization is not automatically recycled",
+  "minimum_available_ram_gib": 4,
+  "minimum_free_dedicated_vram_mib": 3500,
+  "no_training": true,
+  "no_holdout": true,
+  "no_downloads": true
+}

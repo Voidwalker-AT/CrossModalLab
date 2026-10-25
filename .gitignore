@@ -307,3 +307,6 @@ _tmp_*.py
 # Locally generated publication evidence distributions (manifest remains tracked).
 /submission/CrossModalLab_Publication_Research_*/
 /submission/CrossModalLab_Publication_Research_*.zip
+
+# New verified paper-support distribution; sources and manifest remain tracked.
+/submission/CrossModalLab_Overleaf_Evidence_20261025.zip

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="515.52pt" height="180pt" viewBox="0 0 515.52 180" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 180 
+L 515.52 180 
+L 515.52 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <g id="patch_2">
+     <path d="M 19.5264 96.2684 
+L 88.1289 96.2684 
+Q 93.7289 96.2684 93.7289 90.6684 
+L 93.7289 71.464025 
+Q 93.7289 65.864025 88.1289 65.864025 
+L 19.5264 65.864025 
+Q 13.9264 65.864025 13.9264 71.464025 
+L 13.9264 90.6684 
+Q 13.9264 96.2684 19.5264 96.2684 
+z
+" style="fill: #f1f5f7; stroke: #536977; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(19.5264 78.343556)">Controlled image</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(19.5264 87.945744)">+ text premise</text>
+   </g>
+   <g id="text_2">
+    <g id="patch_3">
+     <path d="M 188.2752 96.2684 
+L 270.6252 96.2684 
+Q 276.2252 96.2684 276.2252 90.6684 
+L 276.2252 71.464025 
+Q 276.2252 65.864025 270.6252 65.864025 
+L 188.2752 65.864025 
+Q 182.6752 65.864025 182.6752 71.464025 
+L 182.6752 90.6684 
+Q 182.6752 96.2684 188.2752 96.2684 
+z
+" style="fill: #f1f5f7; stroke: #536977; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(188.2752 78.343556)">Pinned Qwen VLM</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(188.2752 87.945744)">NF4 + optional LoRA</text>
+   </g>
+   <g id="text_3">
+    <g id="patch_4">
+     <path d="M 357.024 96.2684 
+L 429.62775 96.2684 
+Q 435.22775 96.2684 435.22775 90.6684 
+L 435.22775 71.464025 
+Q 435.22775 65.864025 429.62775 65.864025 
+L 357.024 65.864025 
+Q 351.424 65.864025 351.424 71.464025 
+L 351.424 90.6684 
+Q 351.424 96.2684 357.024 96.2684 
+z
+" style="fill: #f1f5f7; stroke: #536977; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(357.024 78.343556)">Recorded outputs</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(357.024 87.945744)">+ parser / metrics</text>
+   </g>
+   <g id="text_4">
+    <g id="patch_5">
+     <path d="M 19.5264 164.8096 
+L 103.74265 164.8096 
+Q 109.34265 164.8096 109.34265 159.2096 
+L 109.34265 140.005225 
+Q 109.34265 134.405225 103.74265 134.405225 
+L 19.5264 134.405225 
+Q 13.9264 134.405225 13.9264 140.005225 
+L 13.9264 159.2096 
+Q 13.9264 164.8096 19.5264 164.8096 
+z
+" style="fill: #f1f5f7; stroke: #536977; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(19.5264 146.884756)">Dual symbolic oracle</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(19.5264 156.486944)">reachability + orders</text>
+   </g>
+   <g id="text_5">
+    <g id="patch_6">
+     <path d="M 188.2752 164.8096 
+L 280.6302 164.8096 
+Q 286.2302 164.8096 286.2302 159.2096 
+L 286.2302 140.005225 
+Q 286.2302 134.405225 280.6302 134.405225 
+L 188.2752 134.405225 
+Q 182.6752 134.405225 182.6752 140.005225 
+L 182.6752 159.2096 
+Q 182.6752 164.8096 188.2752 164.8096 
+z
+" style="fill: #f1f5f7; stroke: #536977; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(188.2752 146.884756)">Separate historical</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(188.2752 156.486944)">Smol captures / probes</text>
+   </g>
+   <g id="text_6">
+    <g id="patch_7">
+     <path d="M 357.024 164.8096 
+L 441.95025 164.8096 
+Q 447.55025 164.8096 447.55025 159.2096 
+L 447.55025 140.005225 
+Q 447.55025 134.405225 441.95025 134.405225 
+L 357.024 134.405225 
+Q 351.424 134.405225 351.424 140.005225 
+L 351.424 159.2096 
+Q 351.424 164.8096 357.024 164.8096 
+z
+" style="fill: #f1f5f7; stroke: #536977; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(357.024 146.884756)">Read-only dashboard</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'" transform="translate(357.024 156.486944)">+ evidence package</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 145.603918 75.2816 
+Q 160.975066 75.2816 175.22818 75.2816 
+" style="fill: none; stroke: #444444; stroke-linecap: round"/>
+    <path d="M 172.02818 73.6816 
+L 175.22818 75.2816 
+L 172.02818 76.8816 
+" style="fill: none; stroke: #444444; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 314.352718 75.2816 
+Q 329.723866 75.2816 343.97698 75.2816 
+" style="fill: none; stroke: #444444; stroke-linecap: round"/>
+    <path d="M 340.77698 73.6816 
+L 343.97698 75.2816 
+L 340.77698 76.8816 
+" style="fill: none; stroke: #444444; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 421.5456 95.467725 
+Q 421.5456 106.754984 421.5456 116.924209 
+" style="fill: none; stroke: #444444; stroke-linecap: round"/>
+    <path d="M 423.1456 113.724209 
+L 421.5456 116.924209 
+L 419.9456 113.724209 
+" style="fill: none; stroke: #444444; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 81.018463 120.922433 
+Q 245.621919 76.891315 413.489462 98.6579 
+" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #666666; stroke-linecap: round"/>
+    <path d="M 410.52177 96.659699 
+L 413.489462 98.6579 
+L 410.110286 99.833133 
+" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #666666; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 314.352718 143.8228 
+Q 329.723866 143.8228 343.97698 143.8228 
+" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #666666; stroke-linecap: round"/>
+    <path d="M 340.77698 142.2228 
+L 343.97698 143.8228 
+L 340.77698 145.4228 
+" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #666666; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="257.76" y="17.52" transform="rotate(-0 257.76 17.52)">Research workflow — conceptual system diagram</text>
+   </g>
+  </g>
+ </g>
+</svg>

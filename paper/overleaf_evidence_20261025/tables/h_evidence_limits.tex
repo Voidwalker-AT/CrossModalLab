@@ -1,0 +1,39 @@
+\begin{longtable}{p{.18\linewidth}p{.72\linewidth}}
+\caption{h evidence limits: source-rich supplementary record sheet.}\\
+\hline Field & Value \\ \hline
+\multicolumn{2}{l}{\textbf{Record 1}}\\
+evidence & Qwen generation \\
+cases & 18 \\
+meaning & Behavior only; development reuse \\
+source & \path{audit/raw_predictions.json} \\
+status & VERIFIED \\
+\hline
+\multicolumn{2}{l}{\textbf{Record 2}}\\
+evidence & CE+ES feasibility \\
+cases & 5 \\
+meaning & Five updates, not benefit or epochs \\
+source & \path{audit/recomputed.json#training} \\
+status & VERIFIED historical \\
+\hline
+\multicolumn{2}{l}{\textbf{Record 3}}\\
+evidence & Smol probes \\
+cases & 27 \\
+meaning & Accessibility, not causal use \\
+source & \path{audit/recomputed.json#probe} \\
+status & CORRELATIONAL \\
+\hline
+\multicolumn{2}{l}{\textbf{Record 4}}\\
+evidence & Intervention recovery \\
+cases & 16 \\
+meaning & 10 interventions; 26 missing planned rows; control exceeds target \\
+source & \path{audit/recomputed.json#causal_audit} \\
+status & UNSUPPORTED mechanism \\
+\hline
+\multicolumn{2}{l}{\textbf{Record 5}}\\
+evidence & New replication \\
+cases & 0 \\
+meaning & RAM admission failed; zero attempts \\
+source & \path{audit/replication_admission.json} \\
+status & BLOCKED \\
+\hline
+\end{longtable}
